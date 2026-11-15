@@ -20,7 +20,7 @@ Correct math, faithful presentation and reliable physical operation need differe
 
 Use the command in [payouts](payouts.md#regenerating-the-reference). The exporter includes zero-pay entries, both Base/Free modes and internal compatibility profiles. Check its metadata and hashes against the source you actually built.
 
-Do not relabel an old CSV as the current version. A table generated from the current code is an implementation reference, not a PAR sheet.
+Generate the CSVs from the exact current source. A table generated from the current code is an implementation reference, not a PAR sheet.
 
 ## Deterministic visual fixtures
 
@@ -35,14 +35,14 @@ For future comparisons, preserve native 240 × 135 frames and actual timestamps 
 - Initial/retrigger/final Free state, both Twin pairs and nested Hold return.
 - Natural/meter/chained Hold, zero-new revival, named awards and full-board settlement.
 - Same-wager meter continuity across funding, wager switches, save and restart.
-- Old owed contexts, unknown preferences, storage failures, numeric capacity and wraparound clocks.
+- Compatible owed records, unknown preferences, storage failures, numeric capacity and wraparound clocks.
 - Audio start/stop/mute, independent reel switches, finite tails and missing assets.
 
 ## Checkpoint barrier testing
 
-Version 102 retains the synchronous Main-owned outcome barrier introduced in 93. Standalone UI tests explicitly register a volatile fixture owner so their presentation can run; that acknowledgement is not durable storage. Joined tests retain Main's actual callback and simulate write/commit/readback failures, old/new durable cuts and cold restarts.
+The current game uses a synchronous Main-owned outcome barrier. Standalone UI tests explicitly register a volatile fixture owner so their presentation can run; that acknowledgement is not durable storage. Joined tests retain Main's actual callback and simulate write/commit/readback failures, old/new durable cuts and cold restarts.
 
-That separation keeps renderer checks distinct from persistence evidence. Actual accepted100 Main/UI qualification exercises 130 processes and 5,097 assertions with hardware/storage mocks. The full renderer, transport, credit/audio and target builds are checked separately; physical power-cut/endurance and acoustic identity remain unproven.
+That separation keeps renderer checks distinct from persistence evidence. Current accepted-source Main/UI qualification covers 130 cases and 5,097 assertions with hardware/storage mocks. The full renderer, transport, credit/audio and target builds are checked separately; physical power-cut/endurance and acoustic identity remain unproven.
 
 ## A short hardware acceptance pass
 
@@ -50,8 +50,8 @@ After a deliberate update, check version, startup autoplay off, controls, one or
 
 Readback, native frames, audio auditions and saved-data continuity should be recorded separately. No test in this wiki makes the reconstruction a licensed or casino-calibrated machine.
 
-## Version 102 qualification
+## Current release qualification
 
-The accepted source was previously tested with 192 focused startup/restore cases, 130 actual Main cases / 5097 assertions, the UI/USB/credit-audio/target suites, and a 1015-frame native rendering benchmark. Those hardware/source results are reused only after byte-for-byte source binding; public staging does not repeat a physical flash. The added 80 repeated-flight samples are offscreen raster plus saved LCD transfer, not full-game FPS.
+The accepted native source has startup/restore, actual Main/UI, renderer, USB, credit/audio and target-build checks. Its native rendering benchmark covers 1,015 scene frames, including 80 same-cell repeated-flight samples. Those samples are offscreen raster work plus transfer of the saved LCD image, not full-game FPS. Source identity binds the published code to the validated application; preparing the public tree does not itself repeat a physical flash.
 
-The browser and synthetic gallery are rebuilt separately for this public102 tree. Their new results are stated in the browser guide and gallery manifest; earlier100 tests remain historical evidence, not automatically new102 tests. Native Main/NVS is not compiled into WebAssembly.
+The matching browser bundle has 439 Chromium assertions and 12 native canonical/paid-record pair checks, including exact seed and cold-restore checks. Its synthetic gallery is rendered from the same current UI source. See the [browser guide](browser-play.md) and [gallery manifest](gallery-manifest.json) for their scopes. Native Main/NVS is not compiled into WebAssembly.

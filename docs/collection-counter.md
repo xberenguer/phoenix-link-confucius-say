@@ -26,9 +26,9 @@ The current small-screen menu offers a subset of the internal compatibility prof
 
 ## Continuity
 
-Adding credits, using automatic refill or resetting the cash bank to $1,000 must retain the collection progress. Switching away from a wager and back should restore its bucket. A compatible canonical save contains every initialized bucket and any queued Holds, not just the number currently visible.
+Adding credits and using automatic refill preserve collection progress. Switching away from a wager and back should restore its bucket. A compatible canonical save contains every initialized bucket and any queued Holds, not just the number currently visible.
 
-Opening a menu does not reset the meter. A full fresh-session reset, incompatible or missing save, or a deliberate maintenance operation is a different action. See [saving and recovery](saving.md) for how the program distinguishes an absent record from a record it cannot safely trust.
+Opening a menu does not reset the meter. A deliberately initialized fresh game starts new meter state. Missing-record initialization is separate from recovery: an unsupported or unreadable record does not authorize an automatic reset. See [saving and recovery](saving.md) for that distinction.
 
 ## The hidden model is still an assumption
 

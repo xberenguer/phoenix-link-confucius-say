@@ -13,7 +13,7 @@ The top bar shows the game title, selected line/bet information and active colle
 | First spin, reading the display and recognizing feature routes | [Getting started](getting-started.md) |
 | Actual offered denomination, line and multiplier combinations | [Wagers](wagers.md) |
 | All twelve symbols, Wild substitution and combination categories | [Symbols and combinations](symbols-and-combinations.md) |
-| All implemented line-pay entries and scoped corrections | [Payouts](payouts.md) |
+| All implemented line-pay entries and their evidence scopes | [Payouts](payouts.md) |
 | Wisdom trigger, Twin outer pairs, retriggers and nested bonuses | [Free games](free-games.md) |
 | Locked Phoenix values, respin reset, revival and 15-cell Grand | [Hold & Spin](hold-and-spin.md) |
 | Which meter is active, what increments it and what persists | [Collection counter](collection-counter.md) |
@@ -29,13 +29,13 @@ The top bar shows the game title, selected line/bet information and active colle
 | Short definitions of meter, Free, Hold, RTP and other terms | [Glossary](glossary.md) |
 | Public references and their configuration limits | [Sources](sources.md) |
 | Third-party art, audio, code and licenses | [Attribution](attribution.md) |
-| Implemented releases versus pending work | [Version history](../CHANGELOG.md) |
+| Release history | [Version history](../CHANGELOG.md) |
 
 ## Evidence labels
 
 **Source-observed** means the behavior or number was read in identified footage or operator material. **Configuration-specific** restricts that observation to its visible denomination, line count, bet multiplier and program context. **Simulator rule** describes what this source actually does. **Unresolved** means the original value or behavior has not been established.
 
-The documentation will keep those distinctions next to the relevant rules and numbers. An animation match does not prove a probability match.
+The documentation keeps those distinctions next to the relevant rules and numbers. An animation match does not prove a probability match.
 
 ## Two meanings of “free feature”
 

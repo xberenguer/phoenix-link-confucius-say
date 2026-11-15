@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Start with the version shown in Game Menu. These notes describe 0.2.102; future releases may have different recovery wiring. The [controls](controls.md), [audio guide](audio.md) and [save guide](saving.md) contain the intended behavior.
+Check the version shown in Game Menu against the included [release identity](../RELEASE.json). The [controls](controls.md), [audio guide](audio.md) and [save guide](saving.md) contain the intended behavior.
 
 ## Buttons and autoplay
 
@@ -17,7 +17,7 @@ Use the large grey game-control button for menus. The small power key has the ha
 
 ## Wagers and credits
 
-“SELECT PLAY 5” on the $1/10-line draft means that visible control's red bet row is not qualified; choose PLAY 5. It is not a fabricated $1/10-line pay deck. Other unavailable custom/legacy contexts can require service rather than silently repricing an owed game.
+The current menu offers both $1/5-line and $1/10-line play. The $1/10-line row has multipliers 1, 2, 3, 4 and 5; its source scope is the [family adaptation](wagers.md) described in the wager guide. A compatible saved wager outside the menu, or an unsupported math context, can require service rather than silent repricing of an owed game.
 
 With auto-refill off, an unaffordable red BET choice cannot create a paid spin. Add supported play money at a safe boundary. Funding controls can be unavailable while a Free/Hold session remains owed. Changing the cash display or bankroll must not clear the meter.
 
@@ -45,4 +45,4 @@ A checkpoint pause or service page protects a record it cannot safely advance. D
 
 If USB status is silent but animations and buttons still work, distinguish transport trouble from an application freeze. Reconnect with a known USB data cable and verify the expected board before flashing. Avoid opening several serial readers at once.
 
-If a fresh build fails with “Bad CPU type” from a filesystem tool on an Apple-silicon host, use the staged portable `scripts/build_assets.py` described in [build and flash](build-and-flash.md). Version 92's historical [deferred-save limitation](saving.md#version-92s-save-timing-limit) was addressed for outcomes by version 93's storage barrier. For later versions, inspect the exact release's storage diagnostics and canonical record. A visual or RNG change does not resolve an unacknowledged storage operation.
+If a build fails with “Bad CPU type” from a filesystem tool on an Apple-silicon host, use the portable `scripts/build_assets.py` described in [build and flash](build-and-flash.md). For a storage warning, inspect the current [outcome acknowledgement and deferred-settings rules](saving.md). A visual or RNG change does not resolve an unacknowledged storage operation.

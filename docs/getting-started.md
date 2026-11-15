@@ -1,6 +1,6 @@
 # Your first game
 
-This guide describes simulator version **0.2.102**. Images are current deterministic demonstration states; see [version history](../CHANGELOG.md).
+This guide describes the current simulator. Images are deterministic demonstrations of the current game.
 
 The game starts directly at the reels. Once installed, play requires no Wi-Fi, phone, browser or computer. The credits are play money and remain on the device. A new game begins with $1,000; credit controls can add more without clearing the collection meter.
 
@@ -24,7 +24,7 @@ The stake is `denomination × selected lines × bet multiplier`. The red buttons
 | WIN | The amount being shown for the current result or feature |
 | Lower-right denomination | Value of one credit; qualified cabinet profiles also show MIN BET |
 
-The simulation commits the financial outcome before its count-up is drawn. A rising WIN display is an animation of that result, not a second payment. See [saves](saving.md) for version-specific durability limits.
+The simulation commits the financial outcome before its count-up is drawn. A rising WIN display is an animation of that result, not a second payment. See [saves](saving.md) for its acknowledgement and durability limits.
 
 ## Recognize the three main feature routes
 

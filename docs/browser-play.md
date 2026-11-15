@@ -16,11 +16,9 @@ Browser progress lives in that browser's IndexedDB storage and is separate from 
 
 Reload starts with autoplay off. Clearing site data, changing the page path or using a different browser profile changes which saved bank is available. The download control exports the last acknowledged canonical bank. Browser storage can be removed by the user or browser; it is not a hardware NVS backup.
 
-After the first complete online load, the static bundle can reload offline from its service-worker cache. The actual version 100 bundle passed a cold page/Wasm reload with Chromium network disabled under a repository subpath. A first visit still needs the game files to be downloaded.
+After the first complete online load, the static bundle can reload offline from its service-worker cache. The current bundle passed a cold page/Wasm reload with Chromium network disabled under a repository subpath. A first visit still needs the game files to be downloaded.
 
 ## Current evidence and remaining checks
-
-An earlier version 96 port passed 12,000 deterministic Engine actions byte for byte against native C++, including Base, Free and Hold actions. That checks the port against the local simulator, not against original casino probabilities.
 
 Real-browser checks cover initial boot, native grey-button gestures, autoplay start/stop, reload and a complete selected Hold. A selected six-Free session, including nested Holds, completed across a cold restore with autoplay off. The selected feature cases are private tests, not frequency measurements or forced outcomes included in the public game.
 
@@ -34,8 +32,8 @@ The audio adapter follows the pinned Stick speaker driver's digital volume law a
 
 GitHub Pages serves the static HTML, JavaScript, WebAssembly and asset files. The repository README can show an image or animation linked to that page; its markup renderer removes scripts, so the interactive game belongs on the Pages site. [GitHub Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages), [GitHub markup rendering](https://github.com/github/markup).
 
-Historical version 100 qualification passed 421 Chromium assertions and 12 fresh native record-pair checks, including oldG/currentH records, both corrected paid outcomes, durable retry, process restart, repository-path offline loading and exact saved-game download. Native Main/NVS is not compiled into the browser; the canonical IndexedDB owner is validated separately.
+The current bundle passed 439 Chromium assertions and 12 native canonical/paid-record pair checks. Coverage includes recognized compatible and current-model records, two scoped paid-price fixtures, durable retry, process restart, repository-path offline loading, saved-game download, and zero/high-word/maximum 64-bit WebCrypto seeds with exact cold restore. These are simulator transport and persistence checks, not casino-probability measurements. Native Main/NVS is not compiled into the browser; its IndexedDB owner is validated separately.
 
 The build toolchain, private saved banks, raw research footage and internal test artifacts are excluded from the public payload. Local source and browser checks are separate from hosted verification. The release commit passed the [fresh GitHub firmware build and payout-table checks](https://github.com/xberenguer/phoenix-link-confucius-say/actions/runs/43743990417) and [Pages deployment](https://github.com/xberenguer/phoenix-link-confucius-say/actions/runs/43744089473); the deployed game then passed 17 Chromium smoke checks.
 
-Version 102 is rebuilt from the accepted102 C++ source, not a relabeled100 Wasm bundle. The actual102 bundle passed the six existing Chromium suites (421 assertions), 12 current-header native canonical/paid-record pairs, and 18 additional checks for zero, high-word and maximum64-bit WebCrypto seeds plus exact cold restore. These are isolated browser/source checks, not physical phone, speaker or native NVS certification. WebCrypto seed material and restored canonical PCG continuation are different operations; saved progress is not replaced by a fresh seed.
+The browser is built from the accepted current C++ source. Its checks do not certify physical phones, speakers or native NVS. WebCrypto initializes fresh play; a valid saved game restores its canonical PCG continuation instead of receiving a replacement seed.

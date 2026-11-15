@@ -41,8 +41,8 @@ The bottom-right version mark appears in Game Menu. Some compact hints call the 
 
 ## Credit refill
 
-The funding page lists **Add $1,000**, **Add $10,000**, **Add $100,000**, Auto Refill and Return to Menu, in that order. A successful addition returns directly to the game with autoplay off. Every choice adds to the current balance; the first choice no longer resets the bank to $1,000.
+The funding page lists **Add $1,000**, **Add $10,000**, **Add $100,000**, Auto Refill and Return to Menu, in that order. A successful addition returns directly to the game with autoplay off. Every choice adds to the current balance.
 
-Automatic refill uses the last supported amount added, now including $1,000, when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding preserves collection-meter buckets, RNG state, wager and statistics. Owed features and blocked storage protect the bank from an unsafe addition. See [saving](saving.md) for the version-specific continuity rules.
+Automatic refill uses the last supported $1,000, $10,000 or $100,000 amount added when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding preserves collection-meter buckets, RNG state, wager and statistics. Owed features and blocked storage protect the bank from an unsafe addition. See [saving](saving.md) for its continuity and acknowledgement rules.
 
 Implementation: [button timing/dispatch](../firmware/src/main.cpp), [single/double-grey helper](../firmware/src/game_black_tap.h), [UI control behavior](../firmware/src/ui.cpp).

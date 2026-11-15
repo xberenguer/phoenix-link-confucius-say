@@ -89,11 +89,11 @@ This is a curated account of implemented changes and clearly labeled candidates.
 - Exact prepared result must be acknowledged before presentation proceeds; storage latency freezes presentation time and immutable retry paths preserve the result.
 - Standalone UI test fixtures explicitly register volatile test ownership; real Main/UI persistence checks keep the actual storage callback.
 
-These changes ship after version 92's historical [save timing limit](docs/saving.md#version-92s-save-timing-limit). Native boot preservation and renderer checks passed; exhaustive physical power-cut testing and flash endurance remain unproven.
+Version 92 used deferred checkpointing and could expose a paid outcome before its save committed. Sudden power loss could return to the prior saved bank and RNG position. Version 93 added acknowledged outcome ownership; the [current saving guide](docs/saving.md#outcome-ownership) describes today's behavior. Native boot preservation and renderer checks passed; exhaustive physical power-cut testing and flash endurance remain unproven.
 
 ## 0.2.92 — scoped Base prices and neutral saved preferences
 
-- Five Base prices corrected at two filmed profiles: 1¢/50/10× and 10¢/100/1×. The [payout reference](docs/payouts.md#version-92s-five-scoped-corrections) lists exact before/after values.
+- Five Base prices corrected at two filmed profiles: 1¢/50/10× and 10¢/100/1×. Bell2 changed 0→2 and Jack3 changed 8→5 at both profiles; Queen4 changed 20→10 at 10¢/100/1×. The [current payout reference](docs/payouts.md#version-92s-five-scoped-corrections) lists the implemented awards.
 - No reel/feature generation-law retune and no Free-price change in this release; retained Grand amounts stay unchanged.
 - Saved math preferences use neutral schedule slots. Known older owed features remain exact through continuation/restart and normalize only at safe qualified Base boundaries.
 - Unknown valid contexts remain exportable and can block future paid Base instead of being silently repriced.

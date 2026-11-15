@@ -1,6 +1,6 @@
 # Sources, evidence labels and version scope
 
-This guide accompanies version 102 source, tables and deterministic gallery. It distinguishes official material, first-hand machine footage, independent commentary and local implementation. Similar theme names or software numbers do not prove identical casino settings. Unknown original probabilities and source-specific configuration limits remain explicit.
+This guide accompanies the current source, tables and deterministic gallery. It distinguishes official material, first-hand machine footage, independent commentary and local implementation. Similar theme names or software numbers do not prove identical casino settings. Unknown original probabilities and source-specific configuration limits remain explicit.
 
 ## Public primary references
 
@@ -13,7 +13,7 @@ This guide accompanies version 102 source, tables and deterministic gallery. It 
 | [Maryland October 2024 listing](https://www.mdgaming.com/wp-content/uploads/2024/10/Commission-Spreadsheet-October-2024-Final.pdf) | Listing context for a named/versioned game | Approval of this independent reconstruction or matching property settings |
 | [M5Stack StickS3 documentation](https://docs.m5stack.com/en/core/StickS3) | Hardware, download-mode procedure and speaker power notes | Performance or validation of this particular game |
 | [Espressif ESP32-S3 random API, IDF 4.4.7](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32s3/api-reference/system/random.html) | Conditions for hardware entropy in the pinned-generation platform | A recovered casino RNG or cryptographic qualification of PCG |
-| [PlatformIO installation](https://docs.platformio.org/en/stable/core/installation/index.html) | Development environment setup | A prebuilt or published version-100 game |
+| [PlatformIO installation](https://docs.platformio.org/en/stable/core/installation/index.html) | Development environment setup | A prebuilt game or validation of this project |
 
 The Québec PDF was reviewed as complete pages, including its symbol illustrations. It explicitly distinguishes Base and Free paytables, wager-specific counters, revival and queued meter Holds. It specifies +6 Free retriggers, while the targeted US implementation uses +3 from US observations. It also acknowledges version-dependent Phoenix prize rules. Those differences are retained instead of treating the PDF as a complete US PAR sheet.
 
@@ -23,17 +23,17 @@ These are original machine recordings used for specific visible facts. Source ti
 
 | Recording | Scope used in this guide/source |
 |---|---|
-| [mBcjPK63KW4](https://www.youtube.com/watch?v=mBcjPK63KW4) | Recorded Palms denomination/line/BET deck; $1 PLAY 10 red row remains unqualified |
+| [mBcjPK63KW4](https://www.youtube.com/watch?v=mBcjPK63KW4) | Recorded Palms denomination/line/BET deck; $1 PLAY 10 control is visible; its selectable paid row uses the family adaptation documented in the wager guide |
 | [HzpqxpE-Ht8](https://www.youtube.com/watch?v=HzpqxpE-Ht8) | Original Confucius symbol layout and configuration-specific line captions; 5¢/25/5× and 10¢/25/3× examples stay scoped |
 | [5BUJOWxIBN4 near 10:10](https://www.youtube.com/watch?v=5BUJOWxIBN4&t=610s) | Initial three-Wisdom announcement, START/Twin transition and lower-WIN timing at its visible configuration |
-| [3pfZnZUWGhI](https://www.youtube.com/watch?v=3pfZnZUWGhI) | Independent Wisdom entries and active Twin audio; meter entry around 22:10 |
+| [3pfZnZUWGhI](https://www.youtube.com/watch?v=3pfZnZUWGhI) | Wisdom entries, active Twin audio and scoped 2¢/50/3× Bell/King Base prices; meter entry around 22:10 |
 | [hmyKdYjMjAQ at 8:29](https://www.youtube.com/watch?v=hmyKdYjMjAQ&t=509s) | New queued meter Hold begins empty after the preceding feature |
 | [hmyKdYjMjAQ at 25:40](https://www.youtube.com/watch?v=hmyKdYjMjAQ&t=1540s) | Twin symbol stops can carry different Phoenix amounts/prizes |
 | [mQZbc-_wjO4](https://www.youtube.com/watch?v=mQZbc-_wjO4) | Target US Free/Hold observations and visible meter increments/wager switching |
 | [YfbaaFXhln0](https://www.youtube.com/watch?v=YfbaaFXhln0) | Scoped 50¢/25/1× line chart, prices and Free/collection sequences; no blanket extension to every profile |
-| [wO4wC7v3Ouw](https://www.youtube.com/watch?v=wO4wC7v3Ouw) | Chronological raw-board audit across four visible wager profiles; two 10¢/25/1× Base-price corrections are retained from version 99 in version 102, scoped to native Line 11/Line 22 captions |
-| [GclIM2tutCg](https://www.youtube.com/watch?v=GclIM2tutCg) | Version-92 Base price corrections at 1¢/50/10× |
-| [Zfc-LBjwXQA](https://www.youtube.com/watch?v=Zfc-LBjwXQA) | Version-92 Base price corrections at 10¢/100/1× |
+| [wO4wC7v3Ouw](https://www.youtube.com/watch?v=wO4wC7v3Ouw) | Chronological raw-board audit across four visible wager profiles; current 10¢/25/1× King/Book Base prices are scoped to native Line 11/Line 22 captions |
+| [GclIM2tutCg](https://www.youtube.com/watch?v=GclIM2tutCg) | Current source-scoped Bell/Jack Base prices at 1¢/50/10× |
+| [Zfc-LBjwXQA](https://www.youtube.com/watch?v=Zfc-LBjwXQA) | Current source-scoped Bell/Jack/Queen Base prices at 10¢/100/1× |
 | [qQ4gPanpkdU near 1:27](https://www.youtube.com/watch?v=qQ4gPanpkdU&t=87s) | Clean reference program/celebration passage; timestamp is not a universal feature-event rule |
 
 Price annotations remain next to their exact branches in the [Engine](../firmware/src/phoenix_engine.h). The [compiled tables](payouts.md) record what the software does, including unresolved local fallback values. A visible payout establishes a price at its observed context; it does not estimate the event's underlying probability.

@@ -1,6 +1,6 @@
 # Sounds, music and event order
 
-Audio belongs to game events, not to a generic jingle on every stopped reel. Version 0.2.102 contains reconstructed common cues, dedicated feature-entry material, a long Hold/award stream and a separate reconstructed Twin phrase. These are not a recovered original manufacturer soundbank, and acoustic identity has not been established.
+Audio belongs to game events, not to a generic jingle on every stopped reel. The game includes reconstructed common cues, dedicated feature-entry material, a long Hold/award stream and a separate reconstructed Twin phrase. These are not a recovered original manufacturer soundbank, and acoustic identity has not been established.
 
 The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/audio_cues.cpp), [UI routing](../firmware/src/ui.cpp) and [music worker](../firmware/src/audio_music.cpp) are the implementation authority. A cue enum existing does not mean that it is registered or dispatched in every state.
 
@@ -18,7 +18,7 @@ The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/
 
 The Phoenix families are **not** a random rising scale and not simply one note for every Phoenix. Current selection examines which presented reel group contains arrivals, how many Phoenixes have already appeared and whether the natural trigger remains possible. The Third-family branch is limited to separately presented ordinary columns; quick-stop/coalesced, Twin and Hold cases retain their scoped behavior. This logic remains a partial reconstruction, not a recovered original event table. See [landing_cues.h](../firmware/src/landing_cues.h).
 
-The bank includes analytically generated material and fresh-phase spectral reconstructions from repeated machine events. The longer clean-reference feature stream has a different provenance. Clearer reconstructed audio can still have an imperfect timbre, envelope or melody; no single “procedural” label describes every later addition.
+The bank includes analytically generated material and fresh-phase spectral reconstructions from repeated machine events. The longer clean-reference feature stream has a different provenance. Clearer reconstructed audio can still have an imperfect timbre, envelope or melody; no single “procedural” label describes the entire current bank.
 
 ## Feature music programs
 
@@ -57,7 +57,7 @@ PLAY TEST JINGLE auditions the dedicated Wisdom entry; PLAY FEATURE MUSIC auditi
 
 The spin bed and Initial arrival PCM reproduce from analytic recipes; they do not contain a sampled crowd recording. Finite landing submissions retain their queued tails in bounded backend tests, without a fixed added half-second delay. That checks digital routing, not the physical speaker's onset or acoustic cleanliness. MP3 completion/award and the direct Twin bank have separate cache/decoder checks.
 
-Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free branches still use the older reconstructed FreeStart; their exact original melody and timing remain under investigation. Registered compatibility cues are not evidence that normal Hold dispatches those cues.
+Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation. Registered compatibility cues are not evidence that normal Hold dispatches those cues.
 
 ## Remaining work
 

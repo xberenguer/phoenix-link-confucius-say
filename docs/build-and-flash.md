@@ -1,10 +1,10 @@
 # Build and flash
 
-This page describes the version **0.2.102** source layout. Firmware, runtime assets, implemented tables and gallery belong to the same release source. Build the application and required filesystem below; browser-building instructions are in [browser play](browser-play.md).
+This page describes the current source layout. Firmware, runtime assets, implemented tables and gallery belong to the same release source. Build the application and required filesystem below; browser-building instructions are in [browser play](browser-play.md).
 
 ## Hardware and toolchain
 
-The target is M5Stack **StickS3**, an ESP32-S3 device with 8 MB flash, 8 MB PSRAM and a 135 × 240 display used here in landscape. It is not the earlier ESP32-based StickC. See the [official hardware page](https://docs.m5stack.com/en/core/StickS3).
+The target is M5Stack **StickS3**, an ESP32-S3 device with 8 MB flash, 8 MB PSRAM and a 135 × 240 display used here in landscape. The ESP32-based StickC is a different target. See the [official hardware page](https://docs.m5stack.com/en/core/StickS3).
 
 Install [PlatformIO Core](https://docs.platformio.org/en/stable/core/installation/index.html). The [project configuration](../firmware/platformio.ini) pins Espressif32 6.12.0, M5GFX 0.3.0 and explicit M5Unified/M5PM1 revisions. The first build needs internet to obtain those development dependencies. The installed game itself uses no network.
 
@@ -46,7 +46,7 @@ python3 -m esptool --chip esp32s3 --port PORT write_flash \
   0x670000 release/feature-assets.bin
 ```
 
-Replace `PORT` with the discovered port and invoke esptool from an environment in which it is installed. The older pinned tool uses underscore command names such as `write_flash`.
+Replace `PORT` with the discovered port and invoke esptool from an environment in which it is installed. The pinned tool uses underscore command names such as `write_flash`.
 
 **The merged fresh-install image is not a save-preserving update.** Its covered erased-fill ranges include the NVS area. Existing game data must be backed up and handled explicitly before using it on a device that already has a bank.
 

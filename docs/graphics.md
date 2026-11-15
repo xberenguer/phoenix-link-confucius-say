@@ -1,6 +1,6 @@
 # Graphics, animation and native gallery
 
-These images are deterministic renders of the **0.2.102 game**, not screenshots of a user's bank or crops from gameplay footage. The display is 240 × 135 pixels in landscape. Rendering an animation accurately at that size is a separate problem from recovering the original cabinet's high-resolution assets.
+These images are deterministic renders of the **current game**, not screenshots of a user's bank or crops from gameplay footage. The display is 240 × 135 pixels in landscape. Rendering an animation accurately at that size is a separate problem from recovering the original cabinet's high-resolution assets.
 
 ## Screen layout
 
@@ -74,6 +74,6 @@ The [gallery manifest](gallery-manifest.json) records dimensions, synthetic seed
 
 ## Repeated named-prize flights
 
-![Three pickups from one TripleMini cell, source-fitted101 presentation rerendered in102](media/multiplied-mini101.gif)
+![Three pickups from one TripleMini cell in the current renderer](media/multiplied-mini101.gif)
 
 The outgoing flight and sampled ribbon finish behind the next same-cell flight. This 4880 ms excerpt repeats for viewing; it is a synthetic current-source demonstration, not source footage or a probability sample. Engine payment, audio bytes and phase eligibility are unchanged.

@@ -37,7 +37,7 @@ Mini/Minor values and restrictions on named/high-cash combinations are configura
 
 Double and Triple Mini/Minor prizes collect in separate visible increments, with a new Phoenix flight from the same physical cell for each unit. The stacked label stays intact. The payout is already settled once; these graphical steps add no extra Engine payment. Existing audio remains once per physical cell, without an invented ordinary count-up tone for each unit. The fitted interval between units is 1067 ms; normal between-cell timing remains 1333 ms. Those are local presentation fits, not recovered universal manufacturer timing or named-prize audio.
 
-![TripleMini repeated pickups, actual102 renderer in a synthetic state](media/multiplied-mini101.gif)
+![TripleMini repeated pickups, current renderer in a synthetic state](media/multiplied-mini101.gif)
 
 ## Fifteen Phoenixes and Grand
 
@@ -49,7 +49,7 @@ Grand and Major celebrations have dedicated presentation paths. The small-screen
 
 The source-inspired sequence includes a collected announcement, fire/bird effects, collection of eligible individual values, a WIN transfer and return fire. Major/Grand, ordinary cash and large cash can take different branches. The centered WINNER field reads the existing collection amount; it does not add earlier line wins or a separate named award again.
 
-Coins launch upward from below the screen, spread, then fall. A coin/award phrase is not assigned to every Hold indiscriminately. In 0.2.102, the cash fountain uses a **provisional 50× stake presentation threshold**, with named/Grand cases and a qualifying final-Free combined round handled separately. That threshold is a local visual/audio policy, not a recovered universal casino rule. A 14-Phoenix board alone therefore does not prove a fountain or that particular jingle should play.
+Coins launch upward from below the screen, spread, then fall. A coin/award phrase is not assigned to every Hold indiscriminately. The cash fountain uses a **provisional 50× stake presentation threshold**, with named/Grand cases and a qualifying final-Free combined round handled separately. That threshold is a local visual/audio policy, not a recovered universal casino rule. A 14-Phoenix board alone therefore does not prove a fountain or that particular jingle should play.
 
 Autoplay and manual play use the same award-event routing. Muting, a skipped presentation or a different award branch can affect what is heard; autoplay is not intended to remove an otherwise eligible jingle. See [audio](audio.md) for cue order and outstanding limits.
 

@@ -1,6 +1,6 @@
 # Developer reference
 
-The public tree contains the offline embedded game, required runtime assets, browser adapter and gameplay reference. These notes describe version 102. Source identity covers 133 runtime files; generated schedule/identity headers are checked separately to avoid a hash cycle. It is an independent reconstruction, not a manufacturer machine emulator or recovered casino program.
+The public tree contains the offline embedded game, required runtime assets, browser adapter and gameplay reference. Source identity covers 133 runtime files; generated schedule/identity headers are checked separately to avoid a hash cycle. It is an independent reconstruction, not a manufacturer machine emulator or recovered casino program.
 
 ## Runtime map
 
@@ -49,8 +49,8 @@ The firmware exposes read-only status/metadata and explicit developer test APIs.
 
 The game-only public package does not include the private NVS exports, device receipts, video archive, desktop artifacts or full private validation harnesses. The public [table exporter](../tools/export_wiki_tables.cpp) regenerates the documented evaluator tables; its metadata must match the actual release source.
 
-The Main-owned outcome checkpoint barrier introduced in 93 is present in100. Prepared outcomes wait for an exact canonical write, commit and readback acknowledgement before presentation continues. Standalone rendering fixtures explicitly use volatile test ownership; storage tests retain the real Main callback. Browser persistence has its own IndexedDB owner around the same financial/scene encoding.
+The Main-owned outcome checkpoint barrier protects the current native game. Prepared outcomes wait for an exact canonical write, commit and readback acknowledgement before presentation continues. Standalone rendering fixtures explicitly use volatile test ownership; storage tests retain the real Main callback. Browser persistence has its own IndexedDB owner around the same financial/scene encoding.
 
 See [testing](testing.md), [math](math-and-evidence.md), [saving](saving.md) and [build](build-and-flash.md) before changing those boundaries.
 
-Version 101 adds `collection_steps101.h` for visual Mini/Minor unit pickups; settlement remains in the Engine. Version 102 gives `uiInit` a full-width exact seed API. Native Main captures eight offline entropy bytes before application peripherals and passes the exact value; browser initialization gets its own seed through WebCrypto. Restored PCG state wins over provisional fresh initialization.
+`collection_steps101.h` controls visual Mini/Minor unit pickups; settlement remains in the Engine. `uiInit` accepts a full-width exact seed. Native Main captures eight offline entropy bytes before application peripherals and passes the exact value; browser initialization gets its own seed through WebCrypto. Restored PCG state wins over provisional fresh initialization.

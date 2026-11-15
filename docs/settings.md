@@ -28,7 +28,7 @@ Master sound, reel-bed sound and stops/landings have separate controls. Fine vol
 
 ## Credits
 
-Game Menu → ADD CREDITS opens the funding submenu. Its choices, retained since version96, are:
+Game Menu → ADD CREDITS opens the funding submenu. Its choices are:
 
 | Choice | Behavior |
 |---|---|
@@ -40,7 +40,7 @@ Game Menu → ADD CREDITS opens the funding submenu. Its choices, retained since
 
 Auto-refill remembers the last supported $1,000/$10,000/$100,000 selection; its initial default remains $10,000. It acts when another paid spin is unaffordable, including a positive balance smaller than the wager. It restores the remembered amount or the current stake, whichever is larger. The $1 million option is absent.
 
-Funding is available at safe Ready/Base boundaries. It preserves the meter buckets, wager, game RNG and statistics. The former reset-to-$1,000 menu action is now additive. Successful additions clear stale status text, return to gameplay and leave autoplay off. Earned awards and queued features remain part of the saved game.
+Funding is available at safe Ready/Base boundaries. It preserves the meter buckets, wager, game RNG and statistics. Each funding choice adds to the existing balance. Successful additions clear stale status text, return to gameplay and leave autoplay off. Earned awards and queued features remain part of the saved game.
 
 ## Battery display
 
@@ -48,12 +48,12 @@ There is no battery percentage in this build. The StickS3 API returns fine-grain
 
 ## Simulator Return
 
-Version 98 replaces the read-only Game Math page with SIMULATOR RETURN. Six choices show the current wager profile's local-model return range. Option 3 is the inherited default. Select a choice to review its return range, complementary model house-edge range and future Grand, then press blue to apply or grey to go back. Values depend on the current denomination, lines, multiplier and prize-cap profile; changing that context requires another review.
+SIMULATOR RETURN shows six local-model choices for the current wager profile's return range. Option 3 is the default. Select a choice to review its return range, complementary model house-edge range and future Grand, then press blue to apply or grey to go back. Values depend on the current denomination, lines, multiplier and prize-cap profile; changing that context requires another review.
 
 These choices change the future Grand amount. Reels, hit probabilities, other prizes and ordinary line prices remain unchanged. The ranges describe the simulator's fixed-bet, fixed-option, always-funded model without Lucky Chance. They are not recovered casino RTP, promises about a short session or bounds for every wager-switching strategy. The [math guide](math-and-evidence.md) explains the assumptions.
 
 Changing the choice requires a closed Ready/Base boundary. An unfinished Free/Hold feature, queued work or storage/service block locks the setting and preserves existing prizes. Browsing, help and cancellation do not change the financial game or normalize an old saved intent.
 
-Main confirms the exact canonical saved record before returning to manual gameplay. Identical owned choices are verified without a gratuitous generation. Failed or ambiguous saves retain one exact pending record for retry; release the controls before playing after recovery. See [saving](saving.md) for older owed rounds and persistence limits.
+Main confirms the exact canonical saved record before returning to manual gameplay. Identical owned choices are verified without a gratuitous generation. Failed or ambiguous saves retain one exact pending record for retry; release the controls before playing after recovery. See [saving](saving.md) for compatible owed rounds and persistence limits.
 
 Implementation: [menus, funding and credit revisions](../firmware/src/ui.cpp), [persisted device options](../firmware/src/main.cpp).

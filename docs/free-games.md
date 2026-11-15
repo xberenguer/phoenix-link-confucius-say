@@ -4,7 +4,7 @@ The initial red-Wisdom feature is distinct from the Phoenix counter's free Hold 
 
 ## Trigger and entry
 
-Three, four or five Wisdom scatters in Base award six free games. The scatter award and any line awards from the triggering spin also count; the free games are an additional result.
+Three or more Wisdom scatters in Base award six free games in the current model. The scatter award and any line awards from the triggering spin also count; the free games are an additional result.
 
 The initial three-Wisdom entry uses a dedicated announcement and jingle. The final reel settles, the six-free announcement appears above the board and START continues the feature. Accepting START commits the displayed existing win, exposes the paired reel frames and begins the first free motion after a roughly half-second preparation. This display preparation does not spend a second bet or draw an extra outcome.
 

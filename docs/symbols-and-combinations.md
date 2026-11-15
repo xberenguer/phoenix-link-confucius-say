@@ -1,6 +1,6 @@
 # Symbols and combination categories
 
-This is the complete symbol inventory in the 0.2.102 [Engine](../firmware/src/phoenix_engine.h). The numeric payouts are in the separate [compiled payout reference](payouts.md); this page explains how to interpret them.
+This is the complete symbol inventory in the current [Engine](../firmware/src/phoenix_engine.h). The numeric payouts are in the separate [compiled payout reference](payouts.md); this page explains how to interpret them.
 
 ![Deterministic display fixture containing all twelve symbol types](media/symbols.png)
 
@@ -54,6 +54,6 @@ The regional operator rulebook supports left-to-right line evaluation, Wild excl
 
 ## The tall gold Confucius
 
-Adjacent awarded Confucius faces in one column can join visually into a two- or three-position gold figure. In 0.2.102, both neighboring faces must be included in the awarded mask; a nearby nonwinning face does not automatically join. A separated pair with another symbol between it stays separated.
+Adjacent awarded Confucius faces in one column can join visually into a two- or three-position gold figure. Both neighboring faces must be included in the awarded mask; a nearby nonwinning face does not automatically join. A separated pair with another symbol between it stays separated.
 
 This is presentation geometry. It adds no Wilds, replaces no unrelated symbol and recalculates no award. The original universal eligibility rule is not fully recovered. See the animated example and remaining limits in [graphics](graphics.md).

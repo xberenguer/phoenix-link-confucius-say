@@ -1,6 +1,6 @@
 # Symbols, winning combinations and payouts
 
-This page describes version **0.2.102**, local model H (`0x00020011`). The complete lookup tables are freshly exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
+The current game uses local model H (`0x00020011`). The complete lookup tables are freshly exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
 
 ## Symbol roles
 
@@ -16,7 +16,7 @@ This page describes version **0.2.102**, local model H (`0x00020011`). The compl
 
 A line win starts on the leftmost reel and continues through adjacent reels on a selected active path. Wilds substitute for regular symbols. Phoenix and Wisdom do not act as regular line-pay substitutes. The highest compatible award pays once on a line; awards on different lines are added.
 
-The prototype lookup takes the symbol, match count, Base/Free mode and exact denomination/line/multiplier configuration. Some source-observed corrections currently apply only to the filmed configuration; other lookups retain local fallback prices. These coverage boundaries do **not** establish that a real machine changes a symbol's unit price when only its multiplier changes. The operator rules state that line awards are multiplied by the bet multiplier, while the full numeric tables and matching US program identities remain incomplete.
+The implemented lookup takes the symbol, match count, Base/Free mode and exact denomination/line/multiplier configuration. Some source-observed corrections currently apply only to the filmed configuration; other lookups retain local fallback prices. These coverage boundaries do **not** establish that a real machine changes a symbol's unit price when only its multiplier changes. The operator rules state that line awards are multiplied by the bet multiplier, while the full numeric tables and matching US program identities remain incomplete.
 
 **Line award in credits = unit-credit price × bet multiplier.**
 
@@ -33,7 +33,7 @@ The number of active lines is already used to select and evaluate the paths. Do 
 
 The compatibility engine can represent more profiles than the wager menu offers. The CSV marks whether each profile is currently selectable. Its complete internal data must not be mistaken for additional real-machine buttons.
 
-A positive evaluator entry does not prove that every compatible board can naturally occur. Wild placement, correlated reels and the prototype generator constrain which patterns can be drawn. The original joint reel law remains under study.
+A positive evaluator entry does not prove that every compatible board can naturally occur. Wild placement, correlated reels and the local generator constrain which patterns can be drawn. The original joint reel law remains under study.
 
 ### Reading a row
 
@@ -41,37 +41,47 @@ For Base, 1¢ / 50 lines / 10×, a three-Jack line has unit price 5. Its award i
 
 An entry with unit price 0 does not pay that combination in that particular implemented profile.
 
-## Version 92's five scoped corrections
+## Observed Base prices
 
-| Exact Base configuration | Combination | Previous unit credits | Current unit credits |
-|---|---|---:|---:|
-| 1¢ / 50 lines / 10× | Two Bells | 0 | 2 |
-| 1¢ / 50 lines / 10× | Three Jacks | 8 | 5 |
-| 10¢ / 100 lines / 1× | Two Bells | 0 | 2 |
-| 10¢ / 100 lines / 1× | Three Jacks | 8 | 5 |
-| 10¢ / 100 lines / 1× | Four Queens | 20 | 10 |
+These entries are implemented at the exact filmed Base configurations below. Unit credits are multiplied by the selected bet multiplier, then by the denomination to obtain money.
 
-These corrections do not establish the same price for another denomination, line count, multiplier, regional program or Free Games table. The annotated [engine source](../firmware/src/phoenix_engine.h) retains the individual source contexts.
+<a id="version-92s-five-scoped-corrections"></a>
 
-## Accepted version 97's two scoped corrections
+### Bell, Jack and Queen prices
 
-| Exact Base configuration | Combination | Previous unit credits | Accepted unit credits | Award after multiplier |
-|---|---|---:|---:|---:|
-| 2¢ / 50 lines / 3× | Two Bells | 0 | 2 | 6 credits / $0.12 |
-| 2¢ / 50 lines / 3× | Three Kings | 10 | 5 | 15 credits / $0.30 |
+| Exact Base configuration | Combination | Unit credits | Award after multiplier |
+|---|---|---:|---|
+| 1¢ / 50 lines / 10× | Two Bells | 2 | 20 credits / $0.20 |
+| 1¢ / 50 lines / 10× | Three Jacks | 5 | 50 credits / $0.50 |
+| 10¢ / 100 lines / 1× | Two Bells | 2 | 2 credits / $0.20 |
+| 10¢ / 100 lines / 1× | Three Jacks | 5 | 5 credits / $0.50 |
+| 10¢ / 100 lines / 1× | Four Queens | 10 | 10 credits / $1.00 |
 
-The amounts come from explicit line-win captions in identified Confucius Say footage. They do not change symbol weights, feature probabilities, Free prices or retained Grand integers. The version-97 export differed from the version-92 numeric lookup in exactly those two rows. Menu availability also includes the five $1/10-line choices added in version 95; selected-line paths are unchanged. These earlier corrections are retained in version 102 tables; installation history is separate from recovery of the original probability model.
+The source contexts are the [1¢/50/10× recording](https://www.youtube.com/watch?v=GclIM2tutCg) and [10¢/100/1× recording](https://www.youtube.com/watch?v=Zfc-LBjwXQA). The annotated [Engine lookup](../firmware/src/phoenix_engine.h) preserves their individual caption evidence.
 
-## Version 99's two scoped corrections
+<a id="accepted-version-97s-two-scoped-corrections"></a>
 
-| Exact Base configuration | Combination | Previous unit credits | Current unit credits | Award after multiplier |
-|---|---|---:|---:|---:|
-| 10¢ / 25 lines / 1× | Three Kings, including Wild substitutes | 10 | 5 | 5 credits / $0.50 |
-| 10¢ / 25 lines / 1× | Five Books | 250 | 100 | 100 credits / $10.00 |
+### Two-cent, 50-line prices
 
-The original [King line caption near 4:50](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=290s) shows “Line 11 wins 5”; the [Book caption at 5:03](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=303s) shows “Line 22 wins 100”. These captions establish line prices at that filmed configuration, not the terminal round totals. They do not qualify another denomination, line count, multiplier, regional program or Free Games table.
+| Exact Base configuration | Combination | Unit credits | Award after multiplier |
+|---|---|---:|---|
+| 2¢ / 50 lines / 3× | Two Bells | 2 | 6 credits / $0.12 |
+| 2¢ / 50 lines / 3× | Three Kings | 5 | 15 credits / $0.30 |
 
-Compared with version 98, exactly these two rows change in the 48,000-row export. Paths, menu availability, symbol/feature probabilities, Free prices and all retained Grand integers are unchanged. Version99 was built, installed and native-verified; version 102 retains these same two corrections. The generator remains a local reconstruction, without recovered casino calibration.
+The [Confucius Say recording](https://www.youtube.com/watch?v=3pfZnZUWGhI) contains Bell-prefix line captions paying six credits and three-King captions paying fifteen at this configuration. These are line awards, not inferred terminal round totals.
+
+<a id="version-99s-two-scoped-corrections"></a>
+
+### Ten-cent, 25-line prices
+
+| Exact Base configuration | Combination | Unit credits | Award after multiplier |
+|---|---|---:|---|
+| 10¢ / 25 lines / 1× | Three Kings, including Wild substitutes | 5 | 5 credits / $0.50 |
+| 10¢ / 25 lines / 1× | Five Books | 100 | 100 credits / $10.00 |
+
+The original [King line caption near 4:50](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=290s) shows “Line 11 wins 5”; the [Book caption at 5:03](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=303s) shows “Line 22 wins 100”. These establish the individual line prices, not the complete round totals.
+
+None of these observations qualifies the same price at another denomination, line count, multiplier, regional program or Free Games table. They do not determine the random generator or Grand schedule. Other current lookup rows remain subject to their own [source annotations and evidence limits](math-and-evidence.md).
 
 ## Wisdom scatter awards
 
@@ -84,7 +94,7 @@ Scatter awards use the **total stake**, rather than a line's bet multiplier alon
 | 4 | 10× | 15× |
 | 5 | 75× | 50× |
 
-Some entries are observed, and others remain local assumptions; consult the source annotations before treating a number as a machine fact. The prototype caps its numeric lookup at the five-symbol row. The natural generator's support is a separate unresolved issue.
+Some entries are observed, and others remain local assumptions; consult the source annotations before treating a number as a machine fact. The implemented numeric lookup uses the five-symbol row for five or more Wisdoms. The natural generator's support is a separate unresolved issue.
 
 The scatter win and the award of Free Games are separate effects. See [Free Games](free-games.md) for entry, retrigger and continuation rules.
 
@@ -103,4 +113,4 @@ c++ -std=c++17 -O2 -Ifirmware/src tools/export_wiki_tables.cpp -o /tmp/export-wi
 /tmp/export-wiki docs/data
 ```
 
-Regenerate and verify the metadata against the actual release source. Never copy a table from an older release and relabel it as a newer one.
+Regenerate the tables and verify every input and dataset hash against the current release source.
