@@ -1,6 +1,6 @@
 # Confucius Say for StickS3
 
-An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5Stack StickS3. The installed game runs without Wi-Fi, a phone or a server.
+An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5Stack StickS3.
 
 **Get a StickS3:** [Official M5Stack shop](https://shop.m5stack.com/products/m5sticks3-esp32s3-mini-iot-dev-kit) · [Amazon](https://www.amazon.com/dp/B0GWHN8HK3)
 
