@@ -2,7 +2,7 @@
 
 An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5Stack StickS3. The game runs on the device without Wi-Fi, a phone or a server.
 
-[**Play in your browser**](https://xberenguer.github.io/phoenix-link-confucius-say/) — deployment is pending verification by the release owner. No hardware or installation is needed.
+[**Play in your browser**](https://xberenguer.github.io/phoenix-link-confucius-say/) No hardware or installation is needed.
 
 Start with [your first game](docs/getting-started.md), the [full game guide](docs/README.md), or [rules and payouts](docs/payouts.md).
 

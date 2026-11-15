@@ -1,6 +1,6 @@
 # Playing in a browser
 
-This package includes the version **0.2.102** browser game in `demo/` and its portable build adapter in `browser/`. The intended [playable Pages URL](https://xberenguer.github.io/phoenix-link-confucius-say/) is pending live deployment verification; deployment status also appears in the repository's Pages environment. You can also serve `demo/` locally with `python3 -m http.server --directory demo 8080`.
+This package includes the version **0.2.102** browser game in `demo/` and its portable build adapter in `browser/`. [Play the live browser game](https://xberenguer.github.io/phoenix-link-confucius-say/). Its version 102 runtime, all ten hosted files, one paid action and saved-game restoration were checked after deployment. You can also serve `demo/` locally with `python3 -m http.server --directory demo 8080`.
 
 The browser build compiles the same C++ Engine, UI renderer and audio programs to WebAssembly. It displays the firmware's 240 × 135 game, scaled to the available window. The surrounding buttons represent the Stick's controls. It needs no connected Stick, account or game server.
 
@@ -36,6 +36,6 @@ GitHub Pages serves the static HTML, JavaScript, WebAssembly and asset files. Th
 
 Historical version 100 qualification passed 421 Chromium assertions and 12 fresh native record-pair checks, including oldG/currentH records, both corrected paid outcomes, durable retry, process restart, repository-path offline loading and exact saved-game download. Native Main/NVS is not compiled into the browser; the canonical IndexedDB owner is validated separately.
 
-The build toolchain, private saved banks, raw research footage and internal test artifacts are excluded from the public payload. The local source build and browser tests are not a claim that the GitHub Actions workflows or hosted site have already run.
+The build toolchain, private saved banks, raw research footage and internal test artifacts are excluded from the public payload. Local source and browser checks are separate from hosted verification. The release commit passed the [fresh GitHub firmware build and payout-table checks](https://github.com/xberenguer/phoenix-link-confucius-say/actions/runs/43743990417) and [Pages deployment](https://github.com/xberenguer/phoenix-link-confucius-say/actions/runs/43744089473); the deployed game then passed 17 Chromium smoke checks.
 
 Version 102 is rebuilt from the accepted102 C++ source, not a relabeled100 Wasm bundle. The actual102 bundle passed the six existing Chromium suites (421 assertions), 12 current-header native canonical/paid-record pairs, and 18 additional checks for zero, high-word and maximum64-bit WebCrypto seeds plus exact cold restore. These are isolated browser/source checks, not physical phone, speaker or native NVS certification. WebCrypto seed material and restored canonical PCG continuation are different operations; saved progress is not replaced by a fresh seed.
