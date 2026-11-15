@@ -1,0 +1,27 @@
+{
+  "version": "0.2.102",
+  "runtime": "4b51c8a82804917c5d678f421de4e938abbb5167b1b1e896d5b8d66c7f8519c2",
+  "runtimeMeaning": "Accepted firmware source fingerprint; browser adapter is separately bound",
+  "mathFamily": "6aa2818743a87f83efe8fa331d78b5de35273830f769168d88f7eacd1401b711",
+  "acceptedSource": true,
+  "EngineSHA256": "300ff9a18cd464d2d6f1a9d8e56aefffe10d2e08a8212fc25c2937ec8bf59ca9",
+  "UISHA256": "fb6458ef89c7ebf0681ebce38e3e6bd3422efdcaaaa24707e5d0a01c1fb2d4d1",
+  "tableSHA256": "71d852994bb8081d074e19ff39e388bb13ad2d9a1ceb61ff8cd82a0892bdfd3e",
+  "identitySHA256": "e8a9677a51fffd3995689c5bc3c15e9a696c25448cdc87818d071e1b5e0a64b3",
+  "browserAdapterSHA256": "9e53ed0ed00d67d33c1af77e04f3a9df8317faf6060d46abf42b5646619dbffa",
+  "adapter": "C++ browser platform; noUI_HOST_TEST orPHOENIX_ENGINE_TESTING",
+  "gameRules": "Actual local C++ model; no casino-PAR or calibrated-odds claim",
+  "assets": {
+    "feature_music.mp3": {
+      "sha256": "ff6fb76c36e0b08779a1fa864ac1495cf43c19cada1bb5c70f8bdef85ea5ad01",
+      "bytes": 1202511
+    },
+    "phoenix_atlas.zlib": {
+      "sha256": "d446eed1663db531ac8dbe927d41e32f262d0c445a323085e76b4bfd25f24d3c",
+      "bytes": 199677
+    }
+  },
+  "persistence": "Canonical C++checkpoint; awaitedIndexedDBtransaction andbyte-for-bytereadback beforeoutcomeframe",
+  "audio": "OriginalC++PCM/MP3decoder+worker;WebAudiooutputdiffersfromphysicalspeaker/DMA",
+  "build": "Emscripten7.0.0"
+}

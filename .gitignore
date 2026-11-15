@@ -1,0 +1,10 @@
+**/.DS_Store
+**/__pycache__/
+*.pyc
+firmware/.pio/
+firmware/release/
+browser/build/
+browser/dist/
+browser/BUILD*
+*.pck
+*.nvs

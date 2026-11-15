@@ -1,0 +1,244 @@
+{
+  "describes_version": "0.2.102",
+  "target_public_version": "0.2.102",
+  "renderer_source": "../firmware/src/ui.cpp",
+  "renderer_sha256": "fb6458ef89c7ebf0681ebce38e3e6bd3422efdcaaaa24707e5d0a01c1fb2d4d1",
+  "engine_source": "../firmware/src/phoenix_engine.h",
+  "engine_sha256": "300ff9a18cd464d2d6f1a9d8e56aefffe10d2e08a8212fc25c2937ec8bf59ca9",
+  "generator_sha256": "81e4bc28dede7b58323eb9078a431b5ee617af5468ac9d32b4d4f56b65e5a82a",
+  "original_gallery_fixture_sha256": "b0854397f2f7fe0d8116e36b87e54d4819f360b2fde776df32670223ace21be7",
+  "media_builder_sha256": "f10d6214f628e13fd93fadb983128959c271f235e5d6ce647414116b1f8cef30",
+  "personal_or_native_device_frames": false,
+  "raw_footage_or_user_attachment_copied_into_gallery": false,
+  "financial_state": "synthetic fixed-seed examples; each captured render preserves its Engine/PCG snapshot",
+  "images": [
+    {
+      "file": "media/game.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640001",
+      "frames": 1,
+      "sha256": "bf338b90c8385d446df087bbf238b0e45abef99c864f00370336be84cbea2e1c",
+      "bytes": 26427,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/wagers.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640001",
+      "frames": 1,
+      "sha256": "ba67edef31eb7b32074b63284ff26bb2204fa85e6d310dd9a7d7ee1cba05e93b",
+      "bytes": 19327,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/menu.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640002",
+      "frames": 1,
+      "sha256": "d4c744acf180fe903dfb1d3f8ad31db5e62ffaf0e9c1a26b9a7b23d71f023ccb",
+      "bytes": 7773,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/sound.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640002",
+      "frames": 1,
+      "sha256": "dbe17f3dd64cccfea6a3badf047240f314cbde66fb117fe9d702d19393e87acb",
+      "bytes": 8881,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/volume.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640002",
+      "frames": 1,
+      "sha256": "471a3adf3b18ef0702734cedb073d5f13241c7613193da39be8694b654846e2c",
+      "bytes": 6650,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/wisdom-entry.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640003",
+      "frames": 1,
+      "sha256": "280b23d3c1f055e378758f834a130629afa5246509eea7af3b2159537467dc3c",
+      "bytes": 18975,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/hold.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640004",
+      "frames": 1,
+      "sha256": "15e0028b3cad1d46bbc651f750a7af4430c4afce5b4414de248a330f82fef8d5",
+      "bytes": 19831,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/collection.png",
+      "kind": "scripted deterministic game/UI render",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640004",
+      "frames": 1,
+      "sha256": "79cd8eb0652616ed18e01a810f6a232a36fb884d51755ff6f6bc567110f11f56",
+      "bytes": 31334,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/symbols.png",
+      "kind": "all-twelve-symbol display fixture; not a natural spin",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x987654",
+      "frames": 1,
+      "sha256": "aafcb31c5fdbf1e935bef5887e25d1c1206e4f6fa6bccf44128e2cf5d690db49",
+      "bytes": 31407,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/wisdom.gif",
+      "kind": "four-second Wisdom display loop",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x987654",
+      "input_frames": 100,
+      "duration_ms": 4000,
+      "sha256": "78f895eec93ade66f134cd4cd41a5c1ddeeb4ac85f8e9fdfe34dc56787c9f2fc",
+      "bytes": 2032962,
+      "palette": "256-color preview; native still PNGs retain RGB data",
+      "preview_repeats_event": true,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/sage.gif",
+      "kind": "single joined-Sage display event; preview restarts the event",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x987654",
+      "input_frames": 31,
+      "duration_ms": 3700,
+      "sha256": "f2325ac062ed6c25a58e81d38c9e26e1291a35ba1607a748c735c11bab7387b7",
+      "bytes": 700925,
+      "palette": "256-color preview; native still PNGs retain RGB data",
+      "preview_repeats_event": true,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/phoenix.gif",
+      "kind": "one 2500ms asset loop in a scripted display fixture",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640005",
+      "input_frames": 60,
+      "duration_ms": 2500,
+      "sha256": "c23a715e5112d39d30a0410c68ece8408aabb2bd6ea121f86e8e9bbb07731aa1",
+      "bytes": 1376861,
+      "palette": "256-color preview; native still PNGs retain RGB data",
+      "preview_repeats_event": true,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/coins.gif",
+      "kind": "6080ms upward fountain display excerpt; preview restarts the excerpt",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640006",
+      "input_frames": 76,
+      "duration_ms": 6080,
+      "sha256": "c974789e1c9c44b844de0a9df61825b4cd5b0195b20001885a50e4134cebb765",
+      "bytes": 1722873,
+      "palette": "256-color preview; native still PNGs retain RGB data",
+      "preview_repeats_event": true,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/counter.gif",
+      "kind": "four-second calm gold number-rim treatment in full UI",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640007",
+      "input_frames": 40,
+      "duration_ms": 4000,
+      "sha256": "ef59d4f81bf24a8e8f9c849620f17355bf441cc2f4429a6d73e348da4b9b9827",
+      "bytes": 885883,
+      "palette": "256-color preview; native still PNGs retain RGB data",
+      "preview_repeats_event": true,
+      "raw_camera_or_user_screenshot": false
+    },
+    {
+      "file": "media/multiplied-mini101.gif",
+      "kind": "TripleMini same-cell repeated flights and $95 / $105 / $115 / $125 plateaus; synthetic v0.2.102 render with the source-fitted v0.2.101 cadence",
+      "source_version": "0.2.102",
+      "dimensions": [
+        240,
+        135
+      ],
+      "synthetic_seed": "0x640008",
+      "input_frames": 61,
+      "duration_ms": 4880,
+      "sha256": "35f94225bd99e81acf965451c1a45f51766648495327e0350379d8bc5791af1d",
+      "bytes": 1330508,
+      "palette": "256-color preview; native still PNGs retain RGB data",
+      "preview_repeats_event": true,
+      "raw_camera_or_user_screenshot": false
+    }
+  ]
+}

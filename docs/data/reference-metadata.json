@@ -1,0 +1,34 @@
+{
+  "source_version": "0.2.102-accepted-source",
+  "engine_model": "0x00020011",
+  "source_engine_sha256": "300ff9a18cd464d2d6f1a9d8e56aefffe10d2e08a8212fc25c2937ec8bf59ca9",
+  "source_cabinet_profile_sha256": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
+  "exporter_sha256": "574239b487f40b56ed0607b355b4d64c0a4687430d6b2d8d59d90db0b511a6f0",
+  "scope": "Implemented simulator lookup, not original casino PAR. All600 internal compatibility profiles;55menu offers. Exact source-observed cells and remaining local fallbacks are annotated in the Engine.",
+  "rows": {
+    "line_pay_entries": 48000,
+    "selected_line_paths": 205,
+    "offered_wagers": 55
+  },
+  "datasets": {
+    "implemented-line-pays.csv": {
+      "bytes": 1758010,
+      "sha256": "58e9e1b604eabb9a3fc06302e1fd6c5d3dfe14d8d99ae288b185316144b1d5af"
+    },
+    "implemented-paylines.csv": {
+      "bytes": 6935,
+      "sha256": "04147acd76eb2605a8a37b88e52a971ae992a37f4a36b768516b28c5e1bab15a"
+    },
+    "offered-wagers.csv": {
+      "bytes": 956,
+      "sha256": "22f6032a156d0aeca86c6c18df320344761b3a147f14b128265b15c2ccb644b8"
+    }
+  },
+  "row_numbering": "top0,middle1,bottom2",
+  "status": "Version 102 source-synchronized implementation reference",
+  "no_personal_state_or_device_identifiers": true,
+  "source_qualification": "Accepted version 102 source; local simulator maths, not casino calibration",
+  "installation_claimed": false,
+  "runtime_fingerprint": "4b51c8a82804917c5d678f421de4e938abbb5167b1b1e896d5b8d66c7f8519c2",
+  "mathematical_family": "6aa2818743a87f83efe8fa331d78b5de35273830f769168d88f7eacd1401b711"
+}

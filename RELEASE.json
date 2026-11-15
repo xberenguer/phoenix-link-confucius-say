@@ -1,0 +1,23 @@
+{
+  "version": "0.2.102",
+  "runtime_fingerprint": "4b51c8a82804917c5d678f421de4e938abbb5167b1b1e896d5b8d66c7f8519c2",
+  "mathematical_family": "6aa2818743a87f83efe8fa331d78b5de35273830f769168d88f7eacd1401b711",
+  "local_model": "0x00020011",
+  "source_file_count": 133,
+  "gameplay_equivalent_to": null,
+  "original_casino_calibration": false,
+  "credits": "Play money only",
+  "required_offline_assets": [
+    "feature_music.mp3",
+    "phoenix_atlas.zlib"
+  ],
+  "public_update_cadence": "First public snapshot: 0.2.102; then 0.2.110, 0.2.120 and subsequent ten-version milestones.",
+  "status": "Validated local v0.2.102 public source package; GitHub and Pages publication will be verified separately.",
+  "changes_vs100": [
+    "0.2.101: separate visual pickups for multiplied Mini and Minor awards",
+    "0.2.102: full 64-bit offline initial entropy seed"
+  ],
+  "source_total_files": 135,
+  "browser_version": "0.2.102",
+  "native_status_version": "0.2.102-candidate"
+}

@@ -1,0 +1,66 @@
+{
+  "images": [
+    {
+      "file": "media/king-payout99.png",
+      "sha256": "4cf3d5f383c106a992b5d95d12a3e28af0fec02f375d67b512c8e8fcdce34651",
+      "source_versions": [
+        "0.2.98",
+        "0.2.99"
+      ],
+      "retained_by_version": "0.2.102",
+      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
+      "scope": "10c/25lines/1x Base three-King unit price10\u21925",
+      "personal_or_native_device_frame": false
+    },
+    {
+      "file": "media/book-payout99.png",
+      "sha256": "deddab38aa5b6fe386dd483d27dfbdcb578cbf403ff08a2ad2227ec5769c8c23",
+      "source_versions": [
+        "0.2.98",
+        "0.2.99"
+      ],
+      "retained_by_version": "0.2.102",
+      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
+      "scope": "10c/25lines/1x Base five-Book unit price250\u2192100",
+      "personal_or_native_device_frame": false
+    },
+    {
+      "file": "media/return-selector98.png",
+      "sha256": "4211edd462c8722f72b431a7e1bbfffea97eec43fc3c39afaa6742af1c0e7cbf",
+      "source_versions": [
+        "0.2.97",
+        "0.2.98"
+      ],
+      "retained_by_version": "0.2.102",
+      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
+      "scope": "Six model return options replace the read-only menu entry",
+      "personal_or_native_device_frame": false
+    },
+    {
+      "file": "media/numeral-bank98.png",
+      "sha256": "d3d2da6bfecbe88b503a21c7ed7c633b07be5b25ef1cede5cab3181d2a657af6",
+      "source_versions": [
+        "0.2.97",
+        "0.2.98"
+      ],
+      "retained_by_version": "0.2.102",
+      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
+      "scope": "Clean numeral3/4/6 and provisional8/9 improvements",
+      "personal_or_native_device_frame": false
+    },
+    {
+      "file": "media/multiplied-mini101.gif",
+      "sha256": "35f94225bd99e81acf965451c1a45f51766648495327e0350379d8bc5791af1d",
+      "source_versions": [
+        "0.2.102"
+      ],
+      "introduced_in": "0.2.101",
+      "retained_by_version": "0.2.102",
+      "kind": "Actual v0.2.102 UI render of a synthetic TripleMini repeated-flight sequence; no source footage",
+      "scope": "Separate $95 / $105 / $115 / $125 display plateaus; committed payment happens once, using the local v0.2.101 timing fit",
+      "personal_or_native_device_frame": false
+    }
+  ],
+  "not_current100_gallery_frames": true,
+  "user_photographs_or_attachments_used": false
+}
