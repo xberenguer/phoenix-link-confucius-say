@@ -10,8 +10,6 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
   <img src="docs/media/gameplay104-spin.webp" alt="Spinning reels land on Confucius, merge into gold, then show Bell and Book wins" width="720">
 </a>
 
-Start with [your first game](docs/getting-started.md), the [full game guide](docs/README.md), or [rules and payouts](docs/payouts.md).
-
 ## Game reference
 
 - [Controls and menus](docs/controls.md)
