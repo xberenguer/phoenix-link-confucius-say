@@ -30,4 +30,4 @@ Current checks cover real WebCrypto startup, controls, fresh reload and random-s
 
 GitHub Pages serves the static HTML, JavaScript, Wasm and assets. The README's preview links to this page because GitHub Markdown does not run the game scripts. See [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) and the [browser build README](../browser/README.md).
 
-The bundle's `PROVENANCE.json` records its code/asset identity. Match it to the current release rather than inferring a version from an older browser cache. Build validation and hosted deployment are separate steps. No research footage, personal game record or private test packet is required in the public bundle.
+The bundle's `PROVENANCE.json` records its code/asset identity. Match it to the current release rather than inferring a version from an older browser cache. Build validation and hosted deployment are separate steps.

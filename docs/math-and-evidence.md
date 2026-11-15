@@ -49,4 +49,4 @@ The current UI asks for added credits when a paid wager is unaffordable. The Eng
 
 RTP is expected paid amount divided by expected stake under a specified process and policy. A short observed return, an EV conditional on a high counter and a fixed-profile long-run reference are different quantities. County denomination averages do not identify this game's pay program. Grand amounts are local schedules, not live casino progressive values.
 
-Current price and weight code is unchanged by the random-service integration. Replacing the modeled reel/feature law would require new Base/Free/Hold/meter/prize calculations, independent evidence and new source qualification; these ranges cannot simply be relabeled for a different law.
+Replacing the modeled reel/feature law would require new Base/Free/Hold/meter/prize calculations, independent evidence and new source qualification; these ranges cannot simply be relabeled for a different law.

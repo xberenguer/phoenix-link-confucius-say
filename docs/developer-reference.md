@@ -41,4 +41,4 @@ Immutable audio submitted to a worker stays valid until consumption. Finite comp
 
 The public [table exporter](../tools/export_wiki_tables.cpp) documents the actual evaluator. Regenerate data from the current source and check its metadata. Status/frame diagnostics and scripted synthetic fixtures have different side effects; a USB timeout alone does not show an application freeze.
 
-The package excludes personal records, raw research footage and private validation packets. See [testing](testing.md), [build](build-and-flash.md), [sources](sources.md) and [attribution](attribution.md).
+See [testing](testing.md), [build](build-and-flash.md), [sources](sources.md) and [attribution](attribution.md).

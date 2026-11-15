@@ -1,6 +1,6 @@
 # Graphics, animation and native gallery
 
-These images are deterministic renders of the **current game**, not screenshots of a user's bank or crops from gameplay footage. The display is 240 × 135 pixels in landscape. Screenshots and animations are published at 720 × 405 with exact nearest-neighbor enlargement; each native pixel becomes a solid 3 × 3 block. Rendering an animation accurately at that size is a separate problem from recovering the original cabinet's high-resolution assets.
+Gallery of the **current game**. The native display is 240 × 135 pixels. Images and animations are enlarged to 720 × 405 with nearest-neighbor scaling, preserving the pixel grid.
 
 ## Screen layout
 
@@ -8,7 +8,7 @@ These images are deterministic renders of the **current game**, not screenshots 
 
 The reel area uses five 47 × 35 symbol cells across three rows. A compact top strip carries title/feature information and the aligned meter; the footer carries CREDIT, BET, WIN and denomination. The side LEDs and cabinet surround are intentionally omitted. Larger second-display events are retargeted over the reels.
 
-The cabinet wager menu combines observed denomination, line and red BET controls on one screen. Its digital portrait and clean authored button artwork are adaptations of a recorded layout, not a photograph used as a whole-screen UI. The [wager guide](wagers.md) distinguishes actual observed choices from internal compatibility settings.
+The cabinet wager menu combines observed denomination, line and red BET controls on one screen. Its digital portrait and button artwork adapt the recorded cabinet layout. The [wager guide](wagers.md) distinguishes actual observed choices from internal compatibility settings.
 
 <img src="media/wagers.png" alt="Cabinet wager selection" width="720">
 
@@ -18,7 +18,7 @@ The cabinet wager menu combines observed denomination, line and red BET controls
 |---|---|
 | 9 | Ten-frame whole-glyph win blink |
 | 10 | Eight-frame win cycle, including uniform fade/blank states |
-| J, Q, K | Static symbol sprites with the surrounding win/highlight presentation; no recovered unique factory motion sequence is claimed |
+| J, Q, K | Static symbol sprites with the surrounding win/highlight presentation |
 | Bell | Dedicated winning-frame sequence |
 | Abacus | 32-frame winning cycle |
 | Book | 102-frame winning sequence |
@@ -27,7 +27,7 @@ The cabinet wager menu combines observed denomination, line and red BET controls
 | Wisdom | Initial hold followed by a 100-frame erase/write/gold cycle |
 | Phoenix | 60-frame animated asset, independently phased for visible positions |
 
-The frame counts describe the compiled assets, not an assertion that these are the manufacturer's original frame counts. Their selection is implemented in [generated assets](../firmware/src/generated_assets.cpp) and [Phoenix artwork](../firmware/src/phoenix_art.cpp).
+Animation frames are selected by [generated assets](../firmware/src/generated_assets.cpp) and [Phoenix artwork](../firmware/src/phoenix_art.cpp).
 
 <img src="media/wisdom.webp" alt="Wisdom animation display fixture" width="720">
 
@@ -41,7 +41,7 @@ Base, Twin and individual Hold strips move downward, overrun their final positio
 
 Ordinary artwork stays clipped to its reel viewport. Phoenix flame/wing effects can cross cell edges where their oversized treatment requires it; the grid is drawn with its own layer priority. Twin pairs share a larger opening during the feature and keep it on the completed board. Hold restores the individual-cell grid.
 
-The recoil fit and stagger are reconstructed from footage. The game does not claim a pixel-perfect vendor strip engine. Code: [reel motion](../firmware/src/reel_motion.h), [UI draw/phase flow](../firmware/src/ui.cpp).
+Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../firmware/src/reel_motion.h), [UI draw/phase flow](../firmware/src/ui.cpp).
 
 ## Feature effects
 
@@ -68,9 +68,9 @@ Confucius topknots extend into the grey header during reel motion, landings and 
 
 ## What remains approximate
 
-The original complete artwork, font and animation banks are unrecovered. The current game mixes authored shapes, vector rerenders, reconstructed/restored symbol material, deterministic effects and a compact digital portrait treatment. Its [Sage crown](../firmware/src/sage_crown122.h) and [Major artwork](../firmware/src/authored_major112.h) are separate current-renderer assets. A clean game render is not proof that every underlying asset is a recovered factory render.
+The original complete artwork, font and animation banks are unrecovered. The current game mixes authored shapes, vector rerenders, reconstructed/restored symbol material, deterministic effects and a compact digital portrait treatment. Its [Sage crown](../firmware/src/sage_crown122.h) and [Major artwork](../firmware/src/authored_major112.h) are separate current-renderer assets.
 
-Camera-fitted timings, flame geometry, wing contours, exact symbol placement, palette, source-dependent screen lighting and unobserved transition branches remain areas for comparison. The gallery demonstrates current behavior honestly; it is not a certificate of 1:1 visual identity.
+Camera-fitted timings, flame geometry, wing contours, exact symbol placement, palette, source-dependent screen lighting and unobserved transition branches remain areas for comparison.
 
 The [gallery manifest](gallery-manifest.json) records dimensions, fixture identity, source version, generator and content hashes. See [testing](testing.md) for pixel comparisons versus source-fidelity evidence, and [attribution](attribution.md) for third-party material.
 
@@ -78,4 +78,4 @@ The [gallery manifest](gallery-manifest.json) records dimensions, fixture identi
 
 <img src="media/multiplied-mini101.webp" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
 
-The outgoing flight and sampled ribbon finish behind the next same-cell flight. This 4880 ms excerpt repeats for viewing; it is a synthetic current-source demonstration, not source footage or a probability sample. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.
+The outgoing flight and sampled ribbon finish behind the next same-cell flight. The animation loops after 4.88 seconds. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.

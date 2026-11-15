@@ -1,6 +1,6 @@
 # Sounds, music and event order
 
-Audio belongs to game events, not to a generic jingle on every stopped reel. The game includes reconstructed common cues, dedicated feature-entry material, a long Hold/award stream and a separate reconstructed Twin phrase. These are not a recovered original manufacturer soundbank, and acoustic identity has not been established.
+Sounds are triggered by reel and feature events. The game includes reconstructed common cues, dedicated feature-entry material, a long Hold/award stream and a separate reconstructed Twin phrase. These are not a recovered original manufacturer soundbank, and acoustic identity has not been established.
 
 The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/audio_cues.cpp), [UI routing](../firmware/src/ui.cpp) and [music worker](../firmware/src/audio_music.cpp) are the implementation authority. A cue enum existing does not mean that it is registered or dispatched in every state.
 
@@ -18,7 +18,7 @@ The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/
 
 The Phoenix families are **not** a random rising scale and not simply one note for every Phoenix. Current selection examines which presented reel group contains arrivals, how many Phoenixes have already appeared and whether the natural trigger remains possible. The Third-family branch is limited to separately presented ordinary columns; quick-stop/coalesced, Twin and Hold cases retain their scoped behavior. This logic remains a partial reconstruction, not a recovered original event table. See [landing_cues.h](../firmware/src/landing_cues.h).
 
-The bank includes analytically generated material and fresh-phase spectral reconstructions from repeated machine events. The longer clean-reference feature stream has a different provenance. Clearer reconstructed audio can still have an imperfect timbre, envelope or melody; no single “procedural” label describes the entire current bank.
+The bank includes analytically generated material and fresh-phase spectral reconstructions from repeated machine events. The longer clean-reference feature stream has a different provenance. Clearer reconstructed audio can still have an imperfect timbre, envelope or melody.
 
 ## Feature music programs
 
@@ -35,11 +35,11 @@ Twin uses immutable mono PCM at 22,050 Hz. START requests its phrase before the 
 
 The longer program is stored in [feature_music.mp3](../firmware/data/feature_music.mp3); the Twin bank is compiled in [twin_music42.cpp](../firmware/src/twin_music42.cpp). Source reconstruction and playback streaming are separate from any perceptual claim of exact vendor identity.
 
-## The reference video's “1:27” passage
+## Celebration programs
 
-The clean [qQ4gPanpkdU reference around 1:27](https://www.youtube.com/watch?v=qQ4gPanpkdU&t=87s) helped identify a celebration program. Its timestamp is not a rule saying every Hold should play that phrase 87 seconds after entry.
+The [qQ4gPanpkdU recording](https://www.youtube.com/watch?v=qQ4gPanpkdU&t=87s) provides a reference for the celebration program.
 
-In the simulator, ordinary collection, named awards, large-cash preludes and a qualifying final-Free combined result have separate routes. A qualifying coin fountain is coordinated with its award program. The cash threshold is still a provisional presentation policy; having fourteen Phoenixes does not by itself select the coin phrase. See [Hold endings](hold-and-spin.md#count-up-and-ending-order).
+In the simulator, ordinary collection, named awards, large-cash preludes and a qualifying final-Free combined result have separate routes. A qualifying coin fountain is coordinated with its award program. The cash threshold is a provisional presentation policy. See [Hold endings](hold-and-spin.md#count-up-and-ending-order).
 
 Manual play and autoplay share those event routes. Backend queue acceptance proves software submission, not the speaker's acoustic onset. Software diagnostics cannot alone establish that all audible stops are aligned to a camera frame.
 
@@ -51,13 +51,13 @@ Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clam
 
 <img src="media/volume.png" alt="Fine-volume page, synthetic demonstration state" width="720">
 
-PLAY TEST JINGLE auditions the dedicated Wisdom entry; PLAY FEATURE MUSIC auditions the feature program; PLAY AWARD JINGLE auditions the award program. An audition is not a paid spin and must not change the meter, bank or RNG. Twin has an explicit developer audition path; no extra invented player button is implied by that API.
+PLAY TEST JINGLE auditions the dedicated Wisdom entry; PLAY FEATURE MUSIC auditions the feature program; PLAY AWARD JINGLE auditions the award program. An audition is not a paid spin and must not change the meter, bank or RNG. Twin music also has a developer audition API.
 
 ## Bank and playback checks
 
-The spin bed and Initial arrival PCM reproduce from analytic recipes; they do not contain a sampled crowd recording. Finite landing submissions retain their queued tails in bounded backend tests, without a fixed added half-second delay. That checks digital routing, not the physical speaker's onset or acoustic cleanliness. MP3 completion/award and the direct Twin bank have separate cache/decoder checks.
+The reel bed and initial Phoenix arrival cues are synthesized from analytic recipes. Backend tests check that landing sounds finish playing. MP3 completion/award music and Twin PCM have separate cache and decoder checks.
 
-Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation. Registered compatibility cues are not evidence that normal Hold dispatches those cues.
+Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation.
 
 ## Remaining work
 

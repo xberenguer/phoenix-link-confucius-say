@@ -21,8 +21,6 @@ This is the complete symbol inventory in the current [Engine](../firmware/src/ph
 | Wisdom | Scatter | Any-position award and free-games trigger; does not require a selected payline |
 | Phoenix | Held value / named prize | Its displayed value belongs to the Phoenix feature, not the line-pay table |
 
-The simulator does not include General Tso soldiers, Queen Chiu wild multipliers or Sensei Master symbols as extra Confucius reel symbols. Those are other titles or mechanics. The official [US family page](https://www.aristocratgaming.com/us/games/us-phoenix-link) distinguishes the four themes.
-
 ## Regular line wins
 
 Each selected line chooses one row from each of the five columns. The evaluator checks a matching prefix starting on column 1. A gap ends that prefix; a match on columns 3–5 alone is not a line win. Confucius can fill a regular-symbol position.

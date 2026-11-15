@@ -26,7 +26,7 @@ Free spins use their own paytable. Confucius may occur only on columns 3–5 in 
 
 ## Retriggers and nested Hold features
 
-The simulator awards **three additional free games** for three or more Wisdoms during Free. This follows the targeted US observations. The Québec document instead specifies six extra games: that regional difference is retained in the evidence, not silently merged into the US target.
+The simulator awards **three additional free games** for three or more Wisdoms during Free. This follows the targeted US observations. The Québec program specifies six additional games instead.
 
 A free result can also enter Hold & Spin. The free-game session and its remaining games stay owed while the Hold runs. On return, Twin music starts a new phrase at the source-fitted fire-return event and the remaining free games continue without another paid stake. Meter-generated Holds can also queue during either part of the sequence.
 

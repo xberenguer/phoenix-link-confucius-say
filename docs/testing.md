@@ -38,7 +38,7 @@ After an installation, verify the intended board and written bytes, current menu
 
 From the repository root, run `python3 tools/test_rng.py --sanitize`. A C99 compiler and a C++17 compiler are required. The script builds the included Mbed TLS source and exercises published known-answer vectors, rejection boundaries, source failures, reentry, reservoir exhaustion and failed-action atomicity. Deterministic entropy and test hooks are compiled only into the temporary test program.
 
-The [current RNG validation summary](data/rng-validation.json) records the first full NIST study and separates host results, native startup checks and unmeasured physical entropy quality. The raw random stream and private device evidence are not part of this package.
+The [current RNG validation summary](data/rng-validation.json) records the first full NIST study and separates host results, native startup checks and unmeasured physical entropy quality.
 
 ## Release documentation and media check
 
