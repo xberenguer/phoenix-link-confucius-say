@@ -4,7 +4,7 @@
 
 - Confucius topknots extend into the grey header during reel motion, landings and joined wins.
 - Every documentation screenshot and animation displays at 720 pixels wide. Current gallery captures use exact 3× nearest-neighbor enlargement from 240 × 135.
-- The 19.84-second preview shows three distinct reel results, credit updates and complete WIN count-ups. It is a scripted source render with demonstration credits.
+- The 19.84-second preview opens mid-spin, lands on Confucius and shows the gold merge before two more results, credit updates and complete WIN count-ups. It is a scripted source render with demonstration credits.
 - AES-256 CTR_DRBG, fresh sessions with 1,000 denomination credits and fail-closed outcome handling remain the current game contract.
 - Model I (`0x00020012`) retains its implemented prices, weights and numerical Grand schedules. Return ranges are ideal-model references, with original casino odds unrecovered.
 

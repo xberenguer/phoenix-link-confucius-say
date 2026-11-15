@@ -185,11 +185,11 @@
       "kind": "current TripleMini same-cell flights; synthetic 95/105/115/125-dollar plateaus"
     },
     {
-      "file": "media/gameplay104.webp",
+      "file": "media/gameplay104-spin.webp",
       "source_version": "0.2.104",
       "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
-      "sha256": "9f7ac1dc180aff749d64aa6016d1dcfd7867b4f2c7e1f2816eef1e3b05ce4b50",
-      "bytes": 4785912,
+      "sha256": "8ab38bb06bd83d46b6b41f6790c08a713646aba261801f9e1cf48bfeb8ad4a04",
+      "bytes": 4797132,
       "dimensions": [
         720,
         405
@@ -199,56 +199,60 @@
       "frames": 496,
       "fps": 25,
       "reel_settle_times_ms": [
-        7340,
-        13040,
-        19820
+        2380,
+        9740,
+        15440
       ],
       "countup_windows_ms": [
         {
           "result": "Sage A",
           "credit": [
-            2700,
-            2700
+            5100,
+            5100
           ],
           "win": [
-            2020,
-            4300
+            4420,
+            6700
           ]
         },
         {
           "result": "Bell B",
           "credit": [
-            8340,
-            8340
+            10740,
+            10740
           ],
           "win": [
-            7360,
-            9940
+            9760,
+            12340
           ]
         },
         {
           "result": "Book C",
           "credit": [
-            14040,
-            14040
+            16440,
+            16440
           ],
           "win": [
-            13060,
-            15640
+            15460,
+            18040
           ]
         }
       ],
       "temporal_resolution_ms": 20,
       "encoded_frame_ms": 40,
       "credit_semantics": "Observed displayBank update events, not a gradual credit animation; WIN continues after ready()",
-      "source_fact_receipt_sha256": "ff91b0d173575fc8920f49a4bd4de88021c5ec501272a468e953f1ca64745831"
+      "source_fact_receipt_sha256": "ff91b0d173575fc8920f49a4bd4de88021c5ec501272a468e953f1ca64745831",
+      "first_frame_phase": "spinning",
+      "presentation_rotation_ms": 17440,
+      "parent_unrotated_sha256": "9f7ac1dc180aff749d64aa6016d1dcfd7867b4f2c7e1f2816eef1e3b05ce4b50",
+      "first_full_gold_still_ms": 3200
     },
     {
-      "file": "media/gameplay104.gif",
+      "file": "media/gameplay104-spin.gif",
       "source_version": "0.2.104",
       "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
-      "sha256": "28b4dfbb7a331561989568522beb0070cc48795fa0eff56f2a870c483f6d49fe",
-      "bytes": 13105702,
+      "sha256": "8bd327991e41d853c9928c93c23c3f6ae275b529b5d23ae84ccead9bc0b0f736",
+      "bytes": 13049298,
       "dimensions": [
         720,
         405
@@ -258,49 +262,53 @@
       "frames": 496,
       "fps": 25,
       "reel_settle_times_ms": [
-        7340,
-        13040,
-        19820
+        2380,
+        9740,
+        15440
       ],
       "countup_windows_ms": [
         {
           "result": "Sage A",
           "credit": [
-            2700,
-            2700
+            5100,
+            5100
           ],
           "win": [
-            2020,
-            4300
+            4420,
+            6700
           ]
         },
         {
           "result": "Bell B",
           "credit": [
-            8340,
-            8340
+            10740,
+            10740
           ],
           "win": [
-            7360,
-            9940
+            9760,
+            12340
           ]
         },
         {
           "result": "Book C",
           "credit": [
-            14040,
-            14040
+            16440,
+            16440
           ],
           "win": [
-            13060,
-            15640
+            15460,
+            18040
           ]
         }
       ],
       "temporal_resolution_ms": 20,
       "encoded_frame_ms": 40,
       "credit_semantics": "Observed displayBank update events, not a gradual credit animation; WIN continues after ready()",
-      "source_fact_receipt_sha256": "ff91b0d173575fc8920f49a4bd4de88021c5ec501272a468e953f1ca64745831"
+      "source_fact_receipt_sha256": "ff91b0d173575fc8920f49a4bd4de88021c5ec501272a468e953f1ca64745831",
+      "first_frame_phase": "spinning",
+      "presentation_rotation_ms": 17440,
+      "parent_unrotated_sha256": "28b4dfbb7a331561989568522beb0070cc48795fa0eff56f2a870c483f6d49fe",
+      "first_full_gold_still_ms": 3200
     },
     {
       "file": "media/hero-tiled-104.png",

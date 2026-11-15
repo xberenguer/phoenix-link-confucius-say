@@ -7,8 +7,10 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
 [**Play in your browser**](https://xberenguer.github.io/phoenix-link-confucius-say/) — no hardware or installation needed.
 
 <a href="https://xberenguer.github.io/phoenix-link-confucius-say/">
-  <img src="docs/media/gameplay104.webp" alt="Confucius Say: reel spins and joined Sage wins" width="720">
+  <img src="docs/media/gameplay104-spin.webp" alt="Spinning reels land on Confucius, merge into gold, then show Bell and Book wins" width="720">
 </a>
+
+Three-spin loop: Confucius merge → Bell win → Book win, with credits returning to the start. [GIF version](docs/media/gameplay104-spin.gif).
 
 **Current release: 0.2.104.** Each boot, page reload or flash starts a fresh manual session with **1,000 credits at the default $1 denomination ($1,000)**. Progress is session-only; there is no saved-game import or restore. Changing denomination during play changes the credit units, not the money balance.
 
