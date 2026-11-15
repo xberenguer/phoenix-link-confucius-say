@@ -10,8 +10,6 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
   <img src="docs/media/gameplay104-spin.webp" alt="Spinning reels land on Confucius, merge into gold, then show Bell and Book wins" width="720">
 </a>
 
-Three-spin loop: Confucius merge → Bell win → Book win, with credits returning to the start. [GIF version](docs/media/gameplay104-spin.gif).
-
 **Current release: 0.2.104.** Each boot, page reload or flash starts a fresh manual session with **1,000 credits at the default $1 denomination ($1,000)**. Progress is session-only; there is no saved-game import or restore. Changing denomination during play changes the credit units, not the money balance.
 
 Outcomes use AES-256 CTR_DRBG with fresh entropy and fail-closed action handling. The local model is **I (`0x00020012`)**. Its prices, feature probabilities and Simulator Return ranges are implementation references; original casino odds remain unrecovered. See [math and evidence](docs/math-and-evidence.md).
