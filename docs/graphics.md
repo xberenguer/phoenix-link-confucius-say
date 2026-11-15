@@ -4,13 +4,13 @@ These images are deterministic renders of the **current game**, not screenshots 
 
 ## Screen layout
 
-![Regular game, synthetic demo state](media/game.png)
+<img src="media/game.png" alt="Regular game, synthetic demo state" width="720">
 
 The reel area uses five 47 × 35 symbol cells across three rows. A compact top strip carries title/feature information and the aligned meter; the footer carries CREDIT, BET, WIN and denomination. The side LEDs and cabinet surround are intentionally omitted. Larger second-display events are retargeted over the reels.
 
 The cabinet wager menu combines observed denomination, line and red BET controls on one screen. Its digital portrait and clean authored button artwork are adaptations of a recorded layout, not a photograph used as a whole-screen UI. The [wager guide](wagers.md) distinguishes actual observed choices from internal compatibility settings.
 
-![Cabinet wager selection](media/wagers.png)
+<img src="media/wagers.png" alt="Cabinet wager selection" width="720">
 
 ## Every symbol's implemented motion
 
@@ -29,9 +29,9 @@ The cabinet wager menu combines observed denomination, line and red BET controls
 
 The frame counts describe the compiled assets, not an assertion that these are the manufacturer's original frame counts. Their selection is implemented in [generated assets](../firmware/src/generated_assets.cpp) and [Phoenix artwork](../firmware/src/phoenix_art.cpp).
 
-![Wisdom animation display fixture](media/wisdom.gif)
+<img src="media/wisdom.gif" alt="Wisdom animation display fixture" width="720">
 
-![Awarded adjacent Sage demonstration](media/sage.gif)
+<img src="media/sage.gif" alt="Awarded adjacent Sage demonstration" width="720">
 
 A joined Sage fills the qualifying two- or three-position region, including its internal seams. It does not stretch a non-Wild into a Wild. Unawarded or separated faces stay separate under the current [joining policy](symbols-and-combinations.md#the-tall-gold-confucius).
 
@@ -58,9 +58,9 @@ The recoil fit and stagger are reconstructed from footage. The game does not cla
 | Return fire | Separate exit/reveal geometry returning to Free or Base |
 | Counter border | Calm four-second moving gold rim around the small number box; green digits and padding are independent |
 
-![Phoenix animation display fixture](media/phoenix.gif)
+<img src="media/phoenix.gif" alt="Phoenix animation display fixture" width="720">
 
-![Coin fountain display fixture](media/coins.gif)
+<img src="media/coins.gif" alt="Coin fountain display fixture" width="720">
 
 Particle paths and visual phase offsets do not draw from the game's PCG state. Replaying a display frame cannot change the next financial outcome.
 
@@ -74,6 +74,6 @@ The [gallery manifest](gallery-manifest.json) records dimensions, synthetic seed
 
 ## Repeated named-prize flights
 
-![Three pickups from one TripleMini cell in the current renderer](media/multiplied-mini101.gif)
+<img src="media/multiplied-mini101.gif" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
 
 The outgoing flight and sampled ribbon finish behind the next same-cell flight. This 4880 ms excerpt repeats for viewing; it is a synthetic current-source demonstration, not source footage or a probability sample. Engine payment, audio bytes and phase eligibility are unchanged.

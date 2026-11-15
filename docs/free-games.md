@@ -8,7 +8,7 @@ Three or more Wisdom scatters in Base award six free games in the current model.
 
 The initial three-Wisdom entry uses a dedicated announcement and jingle. The final reel settles, the six-free announcement appears above the board and START continues the feature. Accepting START commits the displayed existing win, exposes the paired reel frames and begins the first free motion after a roughly half-second preparation. This display preparation does not spend a second bet or draw an extra outcome.
 
-![Scripted Wisdom entry on the simulator](media/wisdom-entry.png)
+<img src="media/wisdom-entry.png" alt="Scripted Wisdom entry on the simulator" width="720">
 
 The first free-game caption can count from 1 OF 1 to 1 OF 6 as a presentation. The Engine has already awarded six games; the caption does not generate them one at a time. Source-timed entry work is based on identified three-Wisdom sequences, including [5BUJOWxIBN4 near 10:10](https://www.youtube.com/watch?v=5BUJOWxIBN4&t=610s), rather than a universal timer for every scatter count.
 

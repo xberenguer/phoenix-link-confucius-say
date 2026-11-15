@@ -10,7 +10,7 @@ Each action consumes one remaining respin. Any new Phoenix locks and resets the 
 
 The large top-of-cabinet information is adapted to the small screen: a live collected count appears above the reels, and collection WINNER/currency announcements can occupy the center. The count includes existing locks and new symbols whose visual impact has occurred, rather than revealing every precommitted landing at the start of motion.
 
-![Scripted Hold scene with synthetic demonstration credits](media/hold.png)
+<img src="media/hold.png" alt="Scripted Hold scene with synthetic demonstration credits" width="720">
 
 ## Revival
 
@@ -37,7 +37,7 @@ Mini/Minor values and restrictions on named/high-cash combinations are configura
 
 Double and Triple Mini/Minor prizes collect in separate visible increments, with a new Phoenix flight from the same physical cell for each unit. The stacked label stays intact. The payout is already settled once; these graphical steps add no extra Engine payment. Existing audio remains once per physical cell, without an invented ordinary count-up tone for each unit. The fitted interval between units is 1067 ms; normal between-cell timing remains 1333 ms. Those are local presentation fits, not recovered universal manufacturer timing or named-prize audio.
 
-![TripleMini repeated pickups, current renderer in a synthetic state](media/multiplied-mini101.gif)
+<img src="media/multiplied-mini101.gif" alt="TripleMini repeated pickups, current renderer in a synthetic state" width="720">
 
 ## Fifteen Phoenixes and Grand
 

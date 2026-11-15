@@ -2,7 +2,7 @@
 
 This is the complete symbol inventory in the current [Engine](../firmware/src/phoenix_engine.h). The numeric payouts are in the separate [compiled payout reference](payouts.md); this page explains how to interpret them.
 
-![Deterministic display fixture containing all twelve symbol types](media/symbols.png)
+<img src="media/symbols.png" alt="Deterministic display fixture containing all twelve symbol types" width="720">
 
 ## The twelve symbols
 

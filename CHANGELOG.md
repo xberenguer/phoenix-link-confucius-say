@@ -17,7 +17,7 @@ This is a curated account of implemented changes and clearly labeled candidates.
 - Source-fitted unit spacing1067ms and ordinary spacing 1333 ms remain local timing fits; universal manufacturer timing and original repeated named-prize sound are not established.
 - The native offscreen benchmark adds 80 repeated-flight frames. Prices, probabilities, numerical Grand schedule, audio bytes, RNG and save format stay unchanged from 100.
 
-![TripleMini collection introduced in101, actual102 renderer and synthetic credits](docs/media/multiplied-mini101.gif)
+<img src="docs/media/multiplied-mini101.gif" alt="TripleMini collection introduced in101, actual102 renderer and synthetic credits" width="720">
 
 ## 0.2.100 — prepared local snapshot, not published
 
@@ -30,17 +30,17 @@ This is a curated account of implemented changes and clearly labeled candidates.
 - Compared with 99, the device's gameplay, art, audio, RNG, probabilities and numerical Grand schedule are unchanged. The source label/runtime identity advance to 100.
 - Public snapshots continue at 110, 120 and subsequent ten-version milestones. Local development and validated flashes continue between snapshots.
 
-![Current102 cabinet selection; the interface was retained from the prepared100 snapshot](docs/media/wagers.png)
+<img src="docs/media/wagers.png" alt="Current102 cabinet selection; the interface was retained from the prepared100 snapshot" width="720">
 
 ## 0.2.99 — installed and native verified
 
 - At 10¢ / 25 lines / 1× paid Base, three Kings change from 10 to 5 unit credits ($1.00→$0.50). The [scoped payout reference](docs/payouts.md#version-99s-two-scoped-corrections) identifies the original Line11 caption.
 
-![Actual98/99 three-King payout comparison](docs/media/king-payout99.png)
+<img src="docs/media/king-payout99.png" alt="Actual98/99 three-King payout comparison" width="720">
 
 - At the same configuration, five Books change from250 to 100 unit credits ($25.00→$10.00), verified by the original Line22 caption.
 
-![Actual98/99 five-Book payout comparison](docs/media/book-payout99.png)
+<img src="docs/media/book-payout99.png" alt="Actual98/99 five-Book payout comparison" width="720">
 
 - Model H (`0x00020011`) retains probabilities, Free prices and all 7,200 Grand integers. Known G/F/D/E saved liabilities continue through existing canonical Main checkpoints; qualified future paid play adopts the new model at a safe boundary.
 - Diagnostic model identification derives from the actual Engine constant. Controls, graphics and audio remain otherwise unchanged from 98.
@@ -51,9 +51,9 @@ This is a curated account of implemented changes and clearly labeled candidates.
 - SIMULATOR RETURN offers six neutral model choices with current-profile return/edge ranges and future Grand. Only future Grand changes, at a qualified closed Base boundary. Original casino RTP remains unrecovered.
 - The real Main owner verifies the canonical record before returning to manual Game. Immutable retries and physical-release/USB-drain fences prevent stale input from becoming a paid action after recovery.
 - Phoenix digits 3/4/6 use clean vector reconstructions; matching provisional 8/9 glyphs replace whole-value missing-glyph fallback. Approved 0/1/2/5/7 and existing metrics stay exact. Original 8/9 artwork remains unrecovered.
-![Return selector introduced in98, actual before/after renderer comparison](docs/media/return-selector98.png)
+<img src="docs/media/return-selector98.png" alt="Return selector introduced in98, actual before/after renderer comparison" width="720">
 
-![Numeral bank introduced in98, actual before/after renderer comparison](docs/media/numeral-bank98.png)
+<img src="docs/media/numeral-bank98.png" alt="Numeral bank introduced in98, actual before/after renderer comparison" width="720">
 
 - Full renderer/transport/target checks, 326 actual accepted-header Main cases with 165 cold processes and 108 unchanged credit/audio assertions pass. Native app/prefix/assets readback, current-bank restoration and frame capture pass; the renderer benchmark was skipped while a Hold feature was owed.
 - Version 97's Engine, prices, probabilities, Grand table, audio bank and save schema remain unchanged.
@@ -105,7 +105,7 @@ Version 92 used deferred checkpointing and could expose a paid outcome before it
 - Green numerals, padding and border geometry remain unchanged; this is not a larger new panel around the entire top strip.
 - No payout, reel/feature probability, Grand schedule or audio-bank change.
 
-![Version-92 deterministic render of the retained calm gold counter treatment](docs/media/counter.gif)
+<img src="docs/media/counter.gif" alt="Version-92 deterministic render of the retained calm gold counter treatment" width="720">
 
 ## 0.2.90 — live count, MIN BET and renderer work
 
@@ -123,7 +123,7 @@ Version 92 used deferred checkpointing and could expose a paid outcome before it
 - Remove an unsupported automatic FreeEnd cue dispatch; keep legacy bank compatibility without claiming that cue belongs on every completion.
 - Improve the specific nested-Hold-to-Free return timing without consuming an extra outcome or wager.
 
-![Version-92 deterministic render of the retained centered collection treatment](docs/media/collection.png)
+<img src="docs/media/collection.png" alt="Version-92 deterministic render of the retained centered collection treatment" width="720">
 
 ## Earlier development summarized
 

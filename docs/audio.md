@@ -49,7 +49,7 @@ Hold grey → Sound provides master mute, separate spin and stop/landing switche
 
 Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clamps at either end instead of wrapping a quiet setting to full volume. In the volume page, blue raises and grey lowers it.
 
-![Fine-volume page, synthetic demonstration state](media/volume.png)
+<img src="media/volume.png" alt="Fine-volume page, synthetic demonstration state" width="720">
 
 PLAY TEST JINGLE auditions the dedicated Wisdom entry; PLAY FEATURE MUSIC auditions the feature program; PLAY AWARD JINGLE auditions the award program. An audition is not a paid spin and must not change the meter, bank or RNG. Twin has an explicit developer audition path; no extra invented player button is implied by that API.
 

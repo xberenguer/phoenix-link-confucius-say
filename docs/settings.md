@@ -2,7 +2,7 @@
 
 Hold the large grey button to open Game Menu. Grey moves through entries; blue selects. Menu labels use “black” in some compact hints for the same large grey game-control button. The small power key is separate.
 
-![Game Menu with the version in its corner](media/menu.png)
+<img src="media/menu.png" alt="Game Menu with the version in its corner" width="720">
 
 ## Rules and wagers
 
@@ -24,7 +24,7 @@ The normal game-view grey double press also flips the screen. It does not spend 
 
 Master sound, reel-bed sound and stops/landings have separate controls. Fine volume and three test entries make it possible to compare music without waiting for a bonus. See the complete [audio guide](audio.md) for event routing and limits.
 
-![Sound menu](media/sound.png)
+<img src="media/sound.png" alt="Sound menu" width="720">
 
 ## Credits
 
