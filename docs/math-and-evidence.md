@@ -1,71 +1,52 @@
 # Math, RNG and what the evidence establishes
 
-The current release uses local model H, ID `0x00020011`. Numeric tables are compiled from the included [Engine](../firmware/src/phoenix_engine.h); [static_grand.h](../firmware/src/static_grand.h), [static_grand_table.h](../firmware/src/static_grand_table.h) and [math_runtime_identity.h](../firmware/src/math_runtime_identity.h) bind its 7,200 Grand schedule entries and actual source.
+Release 0.2.104 uses local model **I, `0x00020012`**, mathematical family `52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
 
-**This is a local simulator model, not a recovered casino pay program.** Its results are reproducible and inspectable, but original reel strips, virtual stops, complete paysets, prize weights, meter distributions and authentic configured RTP remain unrecovered. Source acceptance qualifies this implementation; it does not establish original casino odds.
+## Evidence labels
 
-## Four different kinds of fact
+| Category | Meaning |
+|---|---|
+| Official rule | A manufacturer/operator description, scoped to its named program and region |
+| Source-observed value | A visible caption at an exact theme, denomination, line count, multiplier and mode |
+| Local assumption | A weight, probability or hidden process chosen for this simulator |
+| Engineering protection | A capacity, entropy or failure guard in this implementation |
 
-| Category | Example | Scope |
-|---|---|---|
-| Official rule | Separate Twin Free and Hold features | Named regional/operator or manufacturer source |
-| Source-observed value | A visible line caption pays a particular amount | Exact theme, denomination, lines, multiplier and mode |
-| Local model assumption | Symbol weights or uniform hidden meter threshold | What this simulator does; no original-odds claim |
-| Engineering protection | Capacity checks and unknown-save service | Protects this implementation; not a casino rule |
-
-The [compiled payout reference](payouts.md) includes both observed corrections and fallback values. More table rows do not mean more original data has been recovered.
+The [payout reference](payouts.md) distinguishes scoped observations from fallback values. A verified line price does not identify its frequency or a complete return model.
 
 ## What generates outcomes?
 
-The Engine uses PCG32 with a 64-bit internal state and an odd stream increment. A bounded draw rejects the small overhang before applying the remainder, avoiding ordinary modulo bias. A weighted draw then walks an integer cumulative distribution.
+An opaque external service runs **MbedTLS 3.6.7 AES-256 CTR_DRBG**. Prediction resistance is enabled: fresh strong entropy is requested before every action's generation request. The service requests 48 entropy bytes and generates at most 1,024 action-local output bytes. Unused output is erased instead of carrying into another action. [MbedTLS documents prediction resistance and its entropy requirement](https://mbed-tls.readthedocs.io/en/latest/kb/how-to/add-a-random-generator/).
 
-This is deterministic pseudorandom generation, useful for exact replay and regression checks. It is not a CSPRNG, a recovered Aristocrat RNG or proof of unpredictable licensed operation. Native startup temporarily enables the offline hardware entropy source, captures eight bytes, disables it, then starts the application M5 peripherals. The full 64-bit value, including zero, reaches the exact UI seed API. This happens after framework startup, not before every SDK subsystem. Saved Engine state includes the PCG state and increment, so restored owed sessions continue without reseeding. The browser uses WebCrypto instead of emulating the hardware entropy source. Statistical draw law and seed unpredictability are different questions. Espressif documents the conditions for hardware entropy in its [ESP32-S3 random API](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32s3/api-reference/system/random.html).
+Native startup and reseeding use bounded internal-entropy leases under the pinned ESP32-S3 configuration. Browser entropy comes from `crypto.getRandomValues`. Neither platform substitutes a clock, public seed or weak fallback when the source is unavailable. The [Espressif S3 documentation](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32s3/api-reference/system/random.html) describes the hardware-source prerequisites; this project does not claim a native min-entropy measurement.
 
-Rendering, coin particles, flame phases and audio do not consume the game's outcome RNG. An animation skip therefore cannot choose a different committed outcome.
+Integer bounded draws reject the overhang before applying the remainder. Rejection attempts and the action reservoir have finite limits. Any source, exhaustion or mapping fault stops play and discards the scratch action without a partial debit or award. Rendering, particle motion and audio do not consume outcome randomness. Generator state is not exported or restored.
 
-## The current reel and feature model
+Code: [service API](../firmware/src/phoenix_random.h), [provider](../firmware/src/phoenix_random.cpp), [private crypto config](../firmware/src/phoenix_crypto124/config.h), [platform entropy](../firmware/src/platform_entropy125.h).
 
-Ordinary symbols are selected from local weights, with column-specific Wild eligibility. A correlated three-position Sage-run construction increases adjacent Sage runs while preserving the modeled per-row Wild marginal. Free games additionally copy symbol stops across the two outer pairs; Phoenix prizes on those matching stops are generated separately.
+## Standards and statistical testing
 
-This is not a recovered physical or virtual strip model. Equal per-row symbol percentages would not establish the correct joint reel distribution: adjacent repeats, stacks, cross-reel correlation and rare combinations also matter. Current model calculations must not be presented as measured casino hit rates.
+[Nevada Technical Standard 1](https://www.gaming.nv.gov/siteassets/content/regs/technical-standard-1.pdf), revision February 26, 2026, defines CSPRNG in §1.010(9). Its §1.400(2)(b) applies to approvals on or after January 1, 2027 and requires a CSPRNG plus a recognized randomness-test battery. The 100Hz clause is in the earlier-approval branch, §1.400(2)(a).
 
-Hold uses a local 950/10,000 chance per vacant cell per respin. Phoenix prize weights, named-prize chances and named multiplier chances are also local. The collection counter uses a persistent hidden threshold with local uniform reset/threshold laws; only its limit/support and broad rules have operator evidence.
+The first official **NIST STS 2.1.2** run used 1,000 sequences of 1,000,000 bits from the host provider. All 15 test families produced 188 report rows, with no aggregate proportion/uniformity flags and no inapplicable rows. Excursion rows use 608 applicable sequences. This is one retained first sample, not a search for a favorable seed. Individual sequence failures are part of the complete result.
 
-Those parameters are local modeling choices, constrained by observations where evidence is available. They were **not fitted from a complete unbiased Vegas spin census**. The current source does not adapt results to a player's recent wins or losses.
+That is software test evidence. It does not establish physical entropy quality, resistance to every side channel, original casino odds or Nevada approval. [NIST explicitly distinguishes statistical testing from cryptanalysis](https://www.nist.gov/publications/statistical-test-suite-random-and-pseudorandom-number-generators-cryptographic). The portable AES path is not presented as a qualified constant-time or hardware-AES implementation. [Upstream maintenance scope](https://github.com/Mbed-TLS/mbedtls/blob/development/BRANCHES.md) must also be considered when updating the crypto dependency.
 
-The compatibility Engine also contains Lucky Chance: an unaffordable remaining bank can be risked with success probability equal to remaining credits divided by the full stake. The regional rulebook describes that feature, but the current custom-schedule player UI disables this route and requests added credits instead. Its presence in an Engine API or test fixture is not a claim that Lucky Chance is available in the shipped default menu. The local return-bound scope explicitly excludes it.
+## The local reel and feature law
+
+Ordinary symbols use local integer weights and column-specific Wild eligibility. A correlated three-position Sage-run construction controls adjacent Wild runs. Free games pair the two outer reel groups; Phoenix values on paired stops are generated separately. These rules do not recover the original physical or virtual strips.
+
+Hold uses a local 950/10,000 arrival gate per vacancy. Prize weights, named-prize chances and multipliers are local assumptions. The session's collection counter uses uniform reset/threshold laws; the published operator description supplies support/limits, not those distributions. These choices are not a fit to an unbiased casino spin census and do not adapt to the player's recent wins or losses.
+
+Readable continuous recordings can expose a rule, shape or price mismatch. Edited gaps, profile changes, fast stops and bonus-selected uploads must remain visible in the denominators. More symbol cells do not create more independent spins. Rare Grand/prize behavior and meter cycles need their own complete feature exposure. The [source guide](sources.md) keeps program/theme restrictions explicit.
 
 ## Return and house edge
 
-RTP is expected paid amount divided by expected stake over a defined long-run model. A short sample return is a random observation. Counter-conditioned EV, a fixed-profile long-run return and a casino's reported denomination-wide return are different quantities.
+SIMULATOR RETURN offers six options. Applying an option at a closed Ready/Base boundary changes **future Grand only**. It does not change reel weights, hit probabilities, ordinary prices or other prizes.
 
-The current source retains locally reviewed schedule slots whose bound qualification is below 100% under stated **fixed-profile, fixed-option, always-funded, no-Lucky, ideal-draw** assumptions. That is a model-specific bound, not measured casino RTP, certification, a bound for every possible wager-switching strategy or a guarantee against short-term house loss. Simulator Return exposes these choices as neutral Options 1–6 with the current profile's outward-rounded model ranges; it does not label them as authentic casino settings.
+The displayed return/edge ranges are **ideal-reference-only** enclosures under a fixed profile, fixed option, always-funded play and no Lucky Chance. They assume ideal uniform draws in the unchanged local stochastic game. They do not include every source/runtime fault, restart rule, adaptive wager strategy or short-session fluctuation. Finite draw caps have nonzero failure mass and fail closed; their implementation is not silently equated with unlimited sampling.
 
-Public Clark County or Strip denomination averages are useful context. They cannot identify a particular Confucius cabinet's configured return or determine this game's individual symbol/feature probabilities. No official aggregate percentage is used as if it were an exact Phoenix Link PAR sheet.
+The current UI asks for added credits when a paid wager is unaffordable. The Engine's separately callable Lucky Chance rule is outside the return-reference scope and is not offered as ordinary custom-schedule play.
 
-Grand schedules are local simulator amounts. The current Base lookup includes source-observed Bell, Jack, Queen, King and Book prices at explicitly qualified configurations. The [scoped payout reference](payouts.md#observed-base-prices) gives their unit credits, multiplied awards and source limits. Other entries can remain local fallbacks. A verified price does not establish symbol frequencies, feature probabilities or a full casino return model.
+RTP is expected paid amount divided by expected stake under a specified process and policy. A short observed return, an EV conditional on a high counter and a fixed-profile long-run reference are different quantities. County denomination averages do not identify this game's pay program. Grand amounts are local schedules, not live casino progressive values.
 
-## What footage can and cannot estimate
-
-A continuous, unselected recording with readable wager, mode, meter and outcomes can support a spin ledger. Useful fields include source time, denomination, lines, multiplier, visible stop window, scatter/Phoenix count, line captions, final win, feature entry/exit and counter movements. Edited gaps, bonus-only compilations and changing profiles require separate strata or exclusions.
-
-Two entertaining videos can expose a rule or payout error. They are not enough to tightly estimate a rare full-board Grand or the complete hidden prize distribution. Sample requirements depend on event frequency and desired uncertainty, not only hours of video. Confidence intervals, independent sessions and held-out checks must accompany any future fitted estimate.
-
-### Completed raw-board audit
-
-A further audit retained the first 50 witnessed paid starts in each of two registered recording windows: [wO4wC7v3Ouw](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=205s) and [YfbaaFXhln0](https://www.youtube.com/watch?v=YfbaaFXhln0&t=970s). All 100 raw boards and 1,500 cells were recovered from native frames, including losing starts. Five visible wager configurations remain separate. An independent reader checked 24 boards; two cell transcription errors were corrected with both original readings retained. The other 76 boards have one reader.
-
-These recordings were published entertainment footage, screened earlier for readability, with edits and outcome-oriented titles. They are not an unbiased casino sample. Terminal award amounts are known for only 71 starts, so this audit does not report a source RTP.
-
-| Event per raw board | First recording, 50 starts | Second recording, 50 starts | Analytic prediction of the current local generator |
-|---|---:|---:|---:|
-| Ordinary symbol repeats within one reel | 0/50 | 0/50 | 77.66% |
-| At least one full three-Sage reel | 8/50 | 4/50 | 2.73% |
-| At least one Sage/Wild | 17/50 | 17/50 | 13.08% |
-| At least one Phoenix | 31/50 | 23/50 | 86.35% |
-
-The current generator differs substantially from those recordings. In particular, its 86.35% Phoenix-bearing-board prediction exceeds the observed window fractions of 62% and 46%. The limited and selected recordings do not establish the true casino rate, but they do show why the current probabilities must remain labeled as local assumptions.
-
-Replacing the generator requires an integer sampler checked against its declared window law, fresh Base/Free/Hold/meter/prize return calculations, further independent sessions and safe continuation of recognized saved obligations. Existing return bounds cannot be relabeled for a changed generator. The raw Base-board audit supplies no vacant-position Hold denominator; that feature has a separate chronological exposure audit.
-
-The [source ledger](sources.md) lists the specific evidence used here. AP commentary and paid community guides may suggest hypotheses, but are not authenticated manufacturer math. There is no claim of access to a private casino server or vendor PAR data.
+Current price and weight code is unchanged by the random-service integration. Replacing the modeled reel/feature law would require new Base/Free/Hold/meter/prize calculations, independent evidence and new source qualification; these ranges cannot simply be relabeled for a different law.

@@ -3,14 +3,13 @@
 #include <stddef.h>
 #include <stdint.h>
 
-// Native Confucius Say UI / engine contract. The renderer owns presentation;
-// uiSave returns the required length when destination is null or too small.
-// uiRestore validates its own game magic/version/size/hash before mutation.
-// Main detects action-count changes for autosave; no radio is initialized.
-// Exact startup seeds include zero; the legacy zero shorthand stays supported.
-void uiInit(uint64_t seed = 0, bool seedIsExact = false);
+// Fresh RAM session only. RNG state is owned externally and never serialized.
+namespace phoenix {namespace random {class Service;}}
+bool uiInitFresh(phoenix::random::Service& source);
+bool uiRandomHealthy();
+uint8_t uiRandomFault();
 struct UiEffectCache {bool ready;uint32_t bytes,fireFrames,birdFrames,rate,buildUs;bool alphaReady=false;uint32_t alphaChecks=0,alphaBoundaryFNV=0;bool pickupReady=false;uint32_t pickupBytes=0,pickupHits=0,pickupMisses=0;};
-// Prime immutable PSRAM once, after the restored game is visible and the
+// Prime immutable PSRAM once, after the fresh game is visible and the
 // audio source has its memory. No game/audio action or LCD transfer occurs.
 bool uiPrepareEffects();
 UiEffectCache uiEffectCache();
@@ -45,6 +44,20 @@ struct UiEntryBench {
  uint32_t pickupParityFrames=0,pickupParityMismatchPixels=0,pickupReferenceUs=0,pickupPreparedUs=0;
  uint32_t alphaParityFrames=0,alphaParityMismatchPixels=0,alphaReferenceUs=0,alphaPreparedUs=0;
  uint32_t bookRecords=0,bookPixelPairs=0,bookFNV=2166136261u,bookInvalidRecords=0;
+ // Measurement-only append; the original1015frames/16fixtures stay separate.
+ struct BackdropAB {
+  bool ran=false,oom=false;
+  uint32_t pairs=0,fullFirstPairs=0,fastFirstPairs=0,comparedPixels=0,mismatchPixels=0,mismatchPairs=0;
+  uint64_t fullTotalUs=0,fastTotalUs=0,panelTotalUs=0;
+  uint32_t fullMaxUs=0,fastMaxUs=0,panelMaxUs=0;
+  int32_t firstMismatchSample=-1,firstMismatchAt=-1;
+ } backdropAB;
+ // Separate Major full-raster measurement; not an original fixture or AB pair.
+ struct MajorTiming {
+  bool ran=false;uint32_t frames=0;
+  uint64_t rendererTotalUs=0,panelTotalUs=0;
+  uint32_t rendererMaxUs=0,panelMaxUs=0;
+ } majorTiming;
  bool rendererUnchanged=false;uint32_t rendererBeforeHash=0,rendererAfterHash=0;
  int32_t mismatchEffect=-1,mismatchMs=-1,mismatchAt=-1;
 };
@@ -80,21 +93,14 @@ struct UiMathProfileTest {
  uint32_t baseKing3=0,freeKing5=0,baseCandle5=0,baseJack4=0,linePathFNV=0;
  uint32_t baseQueen4=0,freeBell3=0,freeBook3=0,freeJack3=0,freeJack5=0,freeTen5=0,freeCandle5=0;
 };
-// Clone-only diagnostic of the observed wager and stale imported prize cache.
-// The live game, wager, every progress bank and PCG remain untouched.
+// Unsupported legacy profile diagnostic: returns ran=false; it cannot clone
+// or rewind the external RNG service. Use the independent pure-math audit.
 UiMathProfileTest uiTestMathProfile();
 uint64_t uiActionCount();
 const uint16_t* uiFramePixels();
-size_t uiSave(void* destination, size_t capacity);
-bool uiRestore(const void* source, size_t length);
-// Optional source-board/flame-phase sidecar, bound to the game checkpoint.
-// Reads the prior200-byte format as well; the financial snapshot is unchanged.
-constexpr size_t kUiSceneCapacity=230;
-size_t uiSaveScene(void* target,size_t capacity,const void* game,size_t gameLength);
-bool uiRestoreScene(const void* source,size_t length,const void* game,size_t gameLength);
 String uiSnapshot();
 
-// Presentation preference: stored separately from the game/RNG snapshot.
+// Session presentation preference; no game or RNG state is persisted.
 void uiSetCreditsDisplay(bool credits);
 bool uiCreditsDisplay();
 
@@ -107,32 +113,29 @@ bool uiAddCredits(uint32_t amountMinor);
 void uiSetCreditPreferences(bool autoRefill,uint32_t lastAddedMinor);
 bool uiAutoRefillEnabled();
 uint32_t uiLastAddedMinor();
-// Funding can change a save without advancing the game's action/RNG count.
+// Funding changes the RAM balance independently of paid-action count.
 uint32_t uiCreditRevision();
 
-// Atomic canonical bank/scene/custom/service checkpoint. Legacy uiRestore stays supported.
-constexpr size_t kUiCheckpointCapacity=3106;
-size_t uiSaveCheckpoint(void*target,size_t capacity,uint64_t generation);
-bool uiRestoreCheckpoint(const void*source,size_t length,uint64_t&generation);
+// RAM-session owner/stop diagnostics. Import/export/recovery APIs are removed.
 uint32_t uiRuntimeRevision();
 bool uiCheckpointBlocked();
 void uiBlockCheckpoint();
 String uiMathDiagnostic();
 
-// Main owns durable-storage authority; pausing never changes the game bank.
+// Historical pause names now only block the current RAM session. No recovery
+// or durable-storage guarantee exists; a restart begins a fresh game.
 enum class UiCheckpointPause:uint8_t {None,UnknownBank,UndurableRecord};
 void uiSetCheckpointPause(UiCheckpointPause reason);
 bool uiCheckpointPaused();
-// Main installs this after uiInit. A real action must be checkpointed before
-// its presentation can be exposed. Missing ownership fails before a draw.
+// Main installs this after uiInitFresh. A real action requires a live session
+// owner before its presentation is exposed. Missing ownership blocks draws.
 using UiOutcomeCheckpointHandler=bool(*)();
 void uiSetOutcomeCheckpointHandler(UiOutcomeCheckpointHandler handler);
-bool uiRestoreLegacyCheckpoint(const void*game,size_t length,const void*scene,size_t sceneLength,bool scenePresent);
 
 // Separate bounded eligibility/geometry report; not a pixel measurement.
 String uiSageDiagnostic();
 
 // Adapter must discard/reset input while fenced; uiFrame acknowledges release.
 bool uiReturnSelectionInputFenced();
-// Ownership signal only: the real Main callback still compares/commits tuples.
+// RAM-session ownership signal; no persisted tuple is read or written.
 bool uiReturnSelectionCheckpointPending();

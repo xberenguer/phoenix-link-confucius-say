@@ -1,98 +1,18 @@
 /* Platform I/O only. Outcomes, payouts, reels, UI and PCM come from C++/Wasm. */
 import { CONTROL } from './control-config.js';
+import { SOURCE } from './source-config.js';
 const $ = selector => document.querySelector(selector);
 const status = $('#status');
 const canvas = $('#game');
 const context = canvas.getContext('2d', { alpha: false });
 const frame = context.createImageData(240, 135);
-let module, running = false, busy = false, failed = false, database, storageInFlight = false, startupNeedsRetry = false;
+let module, running = false, busy = false, failed = false;
 let hiddenAt = document.hidden ? performance.now() : null, hiddenElapsed = 0;
-let lastRecord = null, lastSnapshot = {}, commits = 0, lastStorageError = '';
+let lastSnapshot = {};
 const inputQueue = [];
 let selectorReleaseFence = false;
-function beginOwnership(selector) { storageInFlight = true; inputQueue.length = 0; if (selector) { selectorReleaseFence = true; consumeSelectorInputs(); } }
 function consumeSelectorInputs() { blue?.consume(); black?.consume(); }
-const sameRecord = (a,b) => { if (!a || !b) return !a && !b; const aa=new Uint8Array(a.bytes),bb=new Uint8Array(b.bytes);return aa.length===bb.length&&aa.every((v,i)=>v===bb[i])&&JSON.stringify(a.preferences)===JSON.stringify(b.preferences); };
 const formatError = error => error?.message || String(error);
-
-function openDatabase() {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open('phoenix-link-cpp-demo-v1:' + new URL('.', import.meta.url).pathname, 1);
-    request.onupgradeneeded = () => request.result.createObjectStore('records');
-    request.onsuccess = () => resolve(request.result);
-    request.onerror = () => reject(request.error);
-    request.onblocked = () => reject(new Error('Close other preview tabs, then reload.'));
-  });
-}
-
-function readRecord() {
-  return new Promise((resolve, reject) => {
-    const transaction = database.transaction('records', 'readonly');
-    const request = transaction.objectStore('records').get('current');
-    let record;
-    request.onsuccess = () => { record = request.result || null; };
-    transaction.oncomplete = () => resolve(record);
-    transaction.onerror = transaction.onabort = () => reject(transaction.error || new Error('Cannot read the saved game.'));
-  });
-}
-
-async function persist(bytes, preferences, selector = false) {
-  beginOwnership(selector);
-  try {
-  // Own a copy before Wasm resumes or its memory grows. Keep one exact record
-  // per transaction; never replace a failed attempt with a new RNG outcome.
-  const record = { bytes: bytes.slice(), preferences: JSON.parse(preferences), format: 1 };
-  await new Promise((resolve, reject) => {
-    let transaction;
-    try { transaction = database.transaction('records', 'readwrite', { durability: 'strict' }); }
-    catch (error) {
-      if (!(error instanceof TypeError)) throw error;
-      transaction = database.transaction('records', 'readwrite');
-    }
-    const store = transaction.objectStore('records');
-    const currentRequest = store.get('current');
-    let conflict = false;
-    const same = (a, b) => {
-      if (!a || !b) return !a && !b;
-      const aa = new Uint8Array(a.bytes), bb = new Uint8Array(b.bytes);
-      return aa.length === bb.length && aa.every((value, i) => value === bb[i]) &&
-        JSON.stringify(a.preferences) === JSON.stringify(b.preferences);
-    };
-    currentRequest.onsuccess = () => {
-      // Compare-and-swap inside the same write transaction. A second tab may
-      // not silently replace a newer bank; an ambiguous retry is idempotent.
-      const current = currentRequest.result || null;
-      if (!same(current, lastRecord) && !same(current, record)) {
-        conflict = true; transaction.abort(); return;
-      }
-      store.put(record, 'current');
-    };
-    transaction.oncomplete = resolve;
-    transaction.onerror = transaction.onabort = () => reject(conflict ? new Error('Another tab updated this game. Reload before playing here.') : transaction.error || new Error('The game could not be saved.'));
-  });
-  const actual = await readRecord();
-  const restored = actual?.bytes instanceof Uint8Array ? actual.bytes : new Uint8Array(actual?.bytes || []);
-  if (restored.length !== bytes.length || !restored.every((value, i) => value === bytes[i]) ||
-      JSON.stringify(actual.preferences) !== JSON.stringify(record.preferences)) {
-    throw new Error('Saved-game readback did not match. Play remains paused.');
-  }
-  lastRecord = actual;
-  commits++;
-  return true;
-  } finally { storageInFlight = false; }
-}
-
-
-async function verifyOwned(bytes, preferences) {
-  beginOwnership(true);
-  try {
-    const expected={bytes:bytes.slice(),preferences:JSON.parse(preferences),format:1};
-    const actual=await readRecord();
-    if(!sameRecord(actual,lastRecord)||!sameRecord(actual,expected))throw new Error('The owned saved game changed. Reload before playing here.');
-    lastRecord=actual;
-    return true;
-  } finally { storageInFlight=false; }
-}
 
 class BrowserAudio {
   constructor() { this.context = null; this.channels = []; this.masterValue = 192; this.magnification = 1; }
@@ -178,15 +98,6 @@ const bridge = {
   audio,
   heldButtons: 0,
   clock: () => (hiddenAt === null ? performance.now() : hiddenAt) - hiddenElapsed,
-  persist,
-  verifyOwned,
-  ownedPreferences: () => lastRecord ? JSON.stringify(lastRecord.preferences) : null,
-  storageFailure(error) {
-    lastStorageError = formatError(error);
-    failed = true;
-    status.textContent = `${formatError(error)} Your current game is preserved; retry saving to continue.`;
-    $('#retry').hidden = false;
-  },
   present(buffer, pointer, width, height, rotation, brightness) {
     const pixels = new Uint16Array(buffer, pointer, width * height);
     for (let i = 0, j = 0; i < pixels.length; i++, j += 4) {
@@ -207,22 +118,19 @@ async function call(name, result = null, types = [], args = []) {
 }
 
 function queueInput(code) {
-  if (!running || failed || busy || storageInFlight || selectorReleaseFence || hiddenAt !== null) return;
+  if (!running || failed || busy || selectorReleaseFence || hiddenAt !== null) return;
   inputQueue.push(code);
 }
 
 function finishStartup() {
-  if (lastRecord?.preferences) {
-    const p = lastRecord.preferences;
-    module._pl_preferences(!!p.spin, !!p.landings, p.volume, !!p.muted, !!p.credits, !!p.flipped, !!p.autoRefill, p.lastAddedMinor, p.brightness);
-  }
   const info = JSON.parse(module.UTF8ToString(module._pl_info()));
+  if (!info.accepted || info.version !== SOURCE.version || info.runtime !== SOURCE.runtime || info.mathFamily !== SOURCE.mathFamily || info.statePersistence !== 'session-only' || info.freshCredits !== 1000) throw new Error('Browser bundle source identity mismatch. Reload the current release.');
   $('#version').textContent = info.version;
-  status.textContent = info.accepted ? 'Saved on this browser. Play money only.' : 'Private unaccepted source review. Play money only; not a released build.';
+  status.textContent = 'Fresh 1,000-credit session. Reload starts fresh; play money only.';
   $('#cover').hidden = true;
   running = true;
   // Read-only diagnostics; no scripted-result, forced-feature or testEngine API.
-  window.phoenixDemo = { snapshot: () => ({ ...lastSnapshot }), commits: () => commits, info: () => info, ready: () => running && !busy && !failed && !selectorReleaseFence };
+  window.phoenixDemo = { snapshot: () => ({ ...lastSnapshot }), sessionOnly: true, info: () => info, ready: () => running && !busy && !failed && !selectorReleaseFence };
   requestAnimationFrame(animationFrame);
 }
 
@@ -234,6 +142,7 @@ async function animationFrame() {
       if (!failed) {
         await call('pl_frame', null, ['number'], [inputQueue.length ? inputQueue.shift() : -1]);
         lastSnapshot = JSON.parse(module.UTF8ToString(module._pl_snapshot()));
+        if(!module._pl_random_healthy()){failed=true;inputQueue.length=0;status.textContent="Random source unavailable. Play stopped; reload starts a new session.";}
         selectorReleaseFence = !!module._pl_return_input_fenced();
         if (selectorReleaseFence) { inputQueue.length=0; consumeSelectorInputs(); }
       }
@@ -249,44 +158,14 @@ $('#start').addEventListener('click', async () => {
   status.textContent = 'Loading game…';
   try {
     await audio.enable();
-    database = await openDatabase();
-    lastRecord = await readRecord();
     module = await window.PhoenixModule({ locateFile: file => new URL(file, import.meta.url).href });
     module.browserBridge = bridge;
-    let bytes = null;
-    if (lastRecord) {
-      bytes = lastRecord.bytes instanceof Uint8Array ? lastRecord.bytes : new Uint8Array(lastRecord.bytes);
-      if (!bytes.length || bytes.length > module._pl_checkpoint_capacity()) throw new Error('The stored game has an invalid size. It has been kept intact.');
-    }
-    const boot = bytes ? await call('pl_boot', 'number', ['array', 'number'], [bytes, bytes.length]) : await call('pl_boot', 'number', ['number', 'number'], [0, 0]);
-    if (boot !== 1) {
-      console.error('Browser startup diagnostics', module.UTF8ToString(module._pl_info()));
-      if (boot === -2) { startupNeedsRetry = true; failed = true; $('#retry').hidden = false; status.textContent = `The initial game is waiting for a durable save. ${lastStorageError}`; return; }
-      throw new Error(boot === -1 ? 'The stored game could not be validated. It has been kept intact.' : `The initial game could not be saved. ${lastStorageError}`);
-    }
+    const boot = await call('pl_boot', 'number');
+    if(boot!==1)throw new Error('Secure random source unavailable. No play is allowed; reload to begin a new session.');
     finishStartup();
   } catch (error) {
     failed = true; status.textContent = formatError(error); $('#start').disabled = false;
   }
-});
-
-$('#retry').addEventListener('click', async () => {
-  if (busy || !module) return;
-  busy = true;
-  try {
-    if (await call('pl_retry_storage', 'number')) {
-      failed = false; $('#retry').hidden = true; status.textContent = 'Game saved. Press blue to resume.';
-      if (startupNeedsRetry) { startupNeedsRetry = false; finishStartup(); }
-    }
-  } catch (error) { bridge.storageFailure(error); }
-  finally { busy = false; }
-});
-
-$('#download').addEventListener('click', () => {
-  if (!lastRecord) return;
-  const url = URL.createObjectURL(new Blob([lastRecord.bytes], { type: 'application/octet-stream' }));
-  const link = document.createElement('a'); link.href = url; link.download = 'phoenix-browser-game.pck'; link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 
 let chord = false;
@@ -296,7 +175,7 @@ function bindButton(element, short, long) {
   const press = event => {
     if (event.repeat || down) return;
     if (!running || hiddenAt !== null) { event.preventDefault(); return; }
-    event.preventDefault(); down = true; held = false; consumed = failed || busy || storageInFlight || selectorReleaseFence; bridge.heldButtons |= mask;
+    event.preventDefault(); down = true; held = false; consumed = failed || busy || selectorReleaseFence; bridge.heldButtons |= mask;
     if (bridge.heldButtons === 3) chord = true;
     if (event.pointerId !== undefined) element.setPointerCapture(event.pointerId);
     element.classList.add('pressed');
@@ -305,7 +184,7 @@ function bindButton(element, short, long) {
       if (!down) return;
       held = true;
       if (chord || failed || selectorReleaseFence || consumed) { consumed=true; return; }
-      if (busy || storageInFlight) { timer = setTimeout(longWhenAvailable, 16); return; }
+      if (busy) { timer = setTimeout(longWhenAvailable, 16); return; }
       long();
     };
     timer = setTimeout(longWhenAvailable, CONTROL.holdMs);

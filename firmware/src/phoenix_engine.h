@@ -6,6 +6,9 @@
 #include <type_traits>
 #include <array>
 #include <limits>
+#include <memory>
+#include <new>
+#include "phoenix_random.h"
 
 // Independent, offline recreation of the documented Phoenix Link presentation.
 // ALL probabilities, reel weights, line paths and payouts below are LOCAL model
@@ -47,30 +50,20 @@ struct Cell {
 
 namespace local {
 // Version identifies this local, deliberately approximate math configuration.
-constexpr uint32_t modelId = 0x00020011u;
-// Scoped H revision: exact WO10c/25/M1 future Base prices only.
+constexpr uint32_t modelId = 0x00020012u;
+// Historical price-version identifiers for analytic/reference includes only.
+// No backward-compatible game restore or saved-bank import is implemented.
 constexpr uint32_t previousGPriceModelId = 0x00020010u;
-// Scoped G revision: source68 exact-profile future Base prices only.
 constexpr uint32_t previousFPriceModelId = 0x0002000fu;
-// Private F candidate: five future Base cells; E/D owed bodies stay exact.
 constexpr uint32_t previousEPriceModelId = 0x0002000eu;
-// Future source-caption Jack4/King3 prices; imported D bodies stay exact.
 constexpr uint32_t previousPlazaPriceModelId = 0x0002000du;
-// Future scoped Jack3/Abacus5 price revision; C/B bodies stay exact.
 constexpr uint32_t previousBellPriceModelId = 0x0002000cu;
-// Future scoped2c/100/M3 Bell2 price; importedB bodies and prizes stay exact.
 constexpr uint32_t previousVegasPriceModelId = 0x0002000bu;
-// Future source-scoped Vegas Base prices; importedA bodies stay exact.
 constexpr uint32_t previousSevenPriceModelId = 0x0002000au;
-// Future observed seven-price batch; imported09 bodies and awards stay exact.
 constexpr uint32_t previousContextualPayModelId = 0x00020009u;
-// Future observed Base4Jack price changes; imported schema4 bodies stay exact.
 constexpr uint32_t previousJackPayModelId = 0x00020008u;
-// Future observed25-line paths/three scoped pays change; saved bodies stay exact.
 constexpr uint32_t previousPaylineModelId = 0x00020007u;
-// Future observed named values change; imported schema4 bodies remain exact.
 constexpr uint32_t previousNamedProfileModelId = 0x00020006u;
-// Future Free3 Wisdom/Abacus pays changed; committed schema4 bodies stay exact.
 constexpr uint32_t previousFreePayModelId = 0x00020005u;
 constexpr uint32_t precedingObservedPayModelId = 0x00020004u;
 constexpr uint32_t olderObservedPayModelId = 0x00020003u;
@@ -80,11 +73,10 @@ constexpr uint32_t firstSchema4ModelId = 0x00020000u;
 constexpr uint32_t legacyModelId = 0x00010004u;
 constexpr size_t legacySaveBytes = 1874;
 constexpr int64_t maximumBankMinor = 1000000000000000LL;  // external play-money funding limit.
-// Earned/committed awards need not fit the external funding limit. Wire money
-// fields have always been signed64; accepting their full nonnegative range is
-// lossless for every old bank and also recovers old over-funding-limit awards.
+// Earned awards may exceed the external funding limit. Current-session
+// accounting stores nonnegative signed64 amounts without award clamping.
 constexpr int64_t maximumStoredMinor = std::numeric_limits<int64_t>::max();
-constexpr int64_t maximumCreditPrize = 3000000000LL;  // permits lossless old3x-credit prize migration.
+constexpr int64_t maximumCreditPrize = 3000000000LL;  // defensive locked-prize capacity, not an original casino award limit.
 constexpr int64_t newBankMinor = 100000;  // $1,000.00 play bank.
 constexpr int64_t denominations[] = {1, 2, 5, 10, 25, 50, 100, 200, 500, 1000};
 constexpr size_t denominationCount = sizeof(denominations) / sizeof(denominations[0]);
@@ -275,8 +267,8 @@ inline constexpr uint16_t linePay(unsigned symbol,unsigned count,unsigned multip
      symbol==unsigned(Symbol::Bell)&&count==2)return 2;
   // Original Confucius, Cannery YoyplGW4DPM: f30525/30180/30575/30215
   // Base Jack3 wins15credits, and f29360 Abacus5 wins300 at2c/100/M3.
-  // These are future prices only. Keep every LOCAL100-line path/ID and
-  // every imported committed award, cached prize, meter and PCG byte exact.
+  // Future evaluation only; LOCAL100-line paths/IDs remain unchanged.
+  // Current-session committed awards and cached prizes are not repriced.
   if(!free&&denominationMinor==2&&lineCount==100&&multiplier==3){
     if(symbol==unsigned(Symbol::Jack)&&count==3)return 5;
     if(symbol==unsigned(Symbol::Abacus)&&count==5)return 100;
@@ -294,7 +286,7 @@ inline constexpr uint16_t linePay(unsigned symbol,unsigned count,unsigned multip
     // (719.5s), Book3=5 (530s), Jack3=5 (203.5s), Ten5=35
     // (704.5s), Candle5=70 (713.5s). FreeJack5=35 is independently
     // forced by both530s and713.5s full-board/cash equations. Future
-    // line evaluation only; no imported/committed award is repriced.
+    // line evaluation only; no current-session committed award is repriced.
     if(!free&&symbol==unsigned(Symbol::Queen)&&count==4)return 10;
     if(free){
       if(symbol==unsigned(Symbol::Bell)&&count==3)return 10;
@@ -393,27 +385,10 @@ constexpr uint8_t meterHoldSeedCount = 0;  // retain current only; no invented f
 constexpr uint16_t maximumFreeGames = 1000;  // defensive persistence bound.
 }  // namespace local
 
-class Pcg32 {
- public:
-  uint64_t state = 0, increment = 1;
-  explicit Pcg32(uint64_t seed = 1, uint64_t stream = 54) { reseed(seed, stream); }
-  void reseed(uint64_t seed, uint64_t stream = 54) {
-    state = 0; increment = (stream << 1u) | 1u;
-    next(); state += seed; next();
-  }
-  uint32_t next() {
-    const uint64_t old = state;
-    state = old * 6364136223846793005ULL + increment;
-    const uint32_t shifted = uint32_t(((old >> 18u) ^ old) >> 27u);
-    const uint32_t rotation = uint32_t(old >> 59u);
-    return (shifted >> rotation) | (shifted << ((-rotation) & 31));
-  }
-  uint32_t bounded(uint32_t bound) {
-    if (!bound) return 0;
-    const uint32_t threshold = uint32_t(-bound) % bound;
-    for (;;) { const uint32_t value = next(); if (value >= threshold) return value % bound; }
-  }
-};
+// Finite action-draw proof is bound to these unchanged H configuration flags.
+static_assert(!local::expandingSageEnabled, "requalify draw budget for Sage expansion");
+static_assert(local::meterHoldSeedCount == 0, "requalify finite meter seed generation");
+static_assert(!local::meterCountsPhoenixMultiplier, "requalify per-arrival draw budget");
 
 struct LineWin {
   uint8_t line = 0, count = 0;
@@ -435,7 +410,7 @@ struct State {
   int64_t balance = local::newBankMinor, win = 0, featureWin = 0, roundPayout = 0;
   int64_t coinValue = 100, betCoins = 10;
   int64_t jackpotCoins[4] = {80,200,2000,20000};  // Mini, Minor, Major, Grand.
-  uint64_t seed = 1, rounds = 0, actions = 0;
+  uint64_t rounds = 0, actions = 0;
   uint16_t freeLeft = 0, freePlayed = 0, meter = 0, meterThreshold = 300;
   MeterBank meterBanks[local::meterBucketCount];
   uint8_t respinsLeft = 0, lineCount = 5, betMultiplier = 2, wagerIndex = 0;
@@ -488,34 +463,26 @@ class Engine {
   State state;
   Presentation presentation;
 
-  explicit Engine(uint64_t seed = 1, int64_t bankMinor = local::newBankMinor) { reset(seed, bankMinor); }
-
-  void reset(uint64_t seed, int64_t bankMinor = local::newBankMinor) {
-    state = State{}; presentation = Presentation{};
-    capacityFaults_ = 0;
-    state.seed = seed;
-    state.balance = bankMinor >= 0 && bankMinor <= local::maximumBankMinor ? bankMinor : local::newBankMinor;
-    rng_.reseed(seed);
-    resetActiveMeter();
-    const Symbol initial[kCells] = {
-      Symbol::Bell,Symbol::King,Symbol::Queen, Symbol::Ten,Symbol::Book,Symbol::Jack,
-      Symbol::Candle,Symbol::Nine,Symbol::Abacus, Symbol::Queen,Symbol::Bell,Symbol::Ten,
-      Symbol::King,Symbol::Abacus,Symbol::Book
-    };
-    for (size_t i = 0; i < kCells; ++i) state.cells[i].symbol = initial[i];
-    setJackpots();
+  Engine() { freshState(1000); }
+  // The caller initializes the external service from strong entropy first.
+  // Failed initialization leaves the old game and presentation unchanged.
+  bool initializeFresh(random::Service& source, int64_t credits = 1000) {
+    if (credits < 0 || credits > local::maximumBankMinor / 100) return false;
+    service_ = &source; rng_.bind(service_);
+    const bool ok = transact([credits](Engine& work) {
+      work.freshState(credits); work.resetActiveMeter();
+      work.initialized_ = true; return true;
+    }, false);
+    return ok;
   }
-  void newBank() {
-    // Explicit fresh-session helper for simulation/test callers. UI credit
-    // controls must use setCredits/addCredits to preserve progressive state.
-    const uint64_t actions = state.actions + 1;
-    const uint64_t high = rng_.next(), low = rng_.next();
-    const uint64_t seed = (high << 32) | low;
-    reset(seed); state.actions = actions;
+  bool newBank() { return service_ && initializeFresh(*service_, 1000); }
+  bool randomHealthy() const { return initialized_ && service_ && service_->healthy(); }
+  random::Fault randomFault() const {
+    return service_ ? service_->fault() : random::Fault::NotInitialized;
   }
   int64_t betMinor() const { return state.betCoins * state.coinValue; }
   bool canChangeBet() const { return state.mode == Mode::Base && !state.roundOpen; }
-  bool ready() const { return state.mode != Mode::Base || state.balance >= betMinor(); }
+  bool ready() const { return randomHealthy() && (state.mode != Mode::Base || state.balance >= betMinor()); }
   // Transient result of the latest action attempt; not a saved math setting.
   // At finite storage exhaustion a feature remains owed, byte-for-byte. The
   // caller must stop retries and surface/export that liability, never reset it.
@@ -527,19 +494,25 @@ class Engine {
     return actionCapacityFaults(state.mode,lucky ? state.balance : betMinor(),lucky);
   }
   bool setCredits(int64_t amountMinor) {
-    if (!canChangeBet() || amountMinor < 0 || amountMinor > local::maximumBankMinor) return false;
+    if (!randomHealthy() || !canChangeBet() || amountMinor < 0 || amountMinor > local::maximumBankMinor) return false;
     state.balance=amountMinor;
     return true;
   }
   // External play-money funding is separate from game outcomes. Preserve
-  // RNG, meter buckets, wagers, wins and statistics byte-for-byte.
+  // Meter buckets, wagers, wins and statistics remain unchanged; no draw occurs.
   bool addCredits(int64_t amountMinor) {
-    if (!canChangeBet() || amountMinor <= 0 || amountMinor > local::maximumBankMinor-state.balance) return false;
+    if (!randomHealthy() || !canChangeBet() || amountMinor <= 0 || amountMinor > local::maximumBankMinor-state.balance) return false;
     state.balance += amountMinor;
     return true;
   }
 
   bool setWager(int64_t denominationMinor, uint8_t lineCount, uint8_t betMultiplier) {
+    if (!randomHealthy() || !canChangeBet() || !validWager(denominationMinor, lineCount, betMultiplier)) return false;
+    if (state.coinValue == denominationMinor && state.lineCount == lineCount && state.betMultiplier == betMultiplier) return true;
+    return transact([=](Engine& work) { return work.setWagerImpl(denominationMinor, lineCount, betMultiplier); });
+  }
+ private:
+  bool setWagerImpl(int64_t denominationMinor, uint8_t lineCount, uint8_t betMultiplier) {
     if (!canChangeBet() || !validWager(denominationMinor, lineCount, betMultiplier)) return false;
     if (state.coinValue == denominationMinor && state.lineCount == lineCount && state.betMultiplier == betMultiplier) return true;
     syncMeterBucket();
@@ -553,20 +526,27 @@ class Engine {
     activateMeterBucket(); setJackpots(); ++state.actions;
     return true;
   }
+ public:
   void nextBet() {
     if (!canChangeBet()) return;
     const size_t index = state.wagerIndex < wagerCount() ? (state.wagerIndex + 1) % wagerCount() : 0;
     const auto& wager = local::wagers[index];
     setWager(wager.denomination, wager.lines, wager.multiplier);
   }
-  bool action() { return actionImpl(nullptr); }
+  bool action() {
+    if (!actionAdmitted(false)) return false;
+    return transact([](Engine& work) { return work.actionImpl(nullptr); });
+  }
   bool step() { return action(); }
   bool canLuckyChance() const {
     return canChangeBet() && state.balance >= 1 && state.balance < betMinor();
   }
   // True means an eligible wager was processed, whether it won or lost.
   // The published probability is remaining cents/full configured wager cents.
-  bool tryLuckyChance() { return luckyChanceImpl(nullptr); }
+  bool tryLuckyChance() {
+    if (!actionAdmitted(true)) return false;
+    return transact([](Engine& work) { return work.luckyChanceImpl(nullptr); });
+  }
 
   // Only adjacent awarded faces join. Independent base-game frames at110s
   // and176s show neighbouring unawarded faces remaining separate and blue.
@@ -613,8 +593,8 @@ class Engine {
       if(tier==0)return local::observed25c15MiniCredits;
       if(tier==1)return local::observed25c15MinorCredits;
     }
-    // An imported active cache may still hold the old local40/100 credits.
-    // Resolve future landings without rewriting any committed cache or Cell.
+    // Resolve observed profile-specific future landings without rewriting
+    // any current-session committed cache or Cell.
     if(state.coinValue==50&&state.lineCount==25&&state.betMultiplier==1){
       if(tier==0)return local::observed50c25x1MiniCredits;
       if(tier==1)return local::observed50c25x1MinorCredits;
@@ -638,8 +618,8 @@ class Engine {
     uint8_t buffer[kSaveCapacity] = {};
     Writer out(buffer, sizeof(buffer));
     out.u32(0x46434c50u);  // "PLCF", independent Phoenix Confucius bank.
-    out.u16(4); out.u16(16); out.u32(0); out.u32(local::modelId);
-    writeState(out, state); out.u64(rng_.state); out.u64(rng_.increment);
+    out.u16(5); out.u16(16); out.u32(0); out.u32(local::modelId);
+    writeState(out, state); // no RNG state or unread output is exported
     const size_t length = out.position + 4;
     if (!out.good || length > sizeof(buffer)) return 0;
     writeU32(buffer + 8, uint32_t(length));
@@ -652,43 +632,82 @@ class Engine {
   }
   bool restore(const Snapshot& snapshot) { return restore(snapshot.data, snapshot.length); }
   bool load(const void* source, size_t length) { return restore(source, length); }
-  bool restore(const void* source, size_t length) {
-    if (!source || length < 20 || length > kSaveCapacity) return false;
-    const auto* bytes = static_cast<const uint8_t*>(source);
-    Reader in(bytes, length);
-    const uint32_t magic = in.u32(); const uint16_t version = in.u16(), header = in.u16();
-    const uint32_t size = in.u32(), model = in.u32();
-    const bool legacy = version == 3 && model == local::legacyModelId && length == local::legacySaveBytes;
-    // Previous schema4 models have the same wire layout. Already committed
-    // bank/feature/prize/RNG bytes survive unchanged. A new pay revision only
-    // changes future awards; stored prizes, wins and all meter buckets retain
-    // their exact committed values, without resampling or retrospective pays.
-    const bool current = version == 4 && (model == local::modelId || model == local::previousGPriceModelId || model == local::previousFPriceModelId || model == local::previousEPriceModelId || model == local::previousPlazaPriceModelId || model == local::previousBellPriceModelId || model == local::previousVegasPriceModelId || model == local::previousSevenPriceModelId || model == local::previousContextualPayModelId || model == local::previousJackPayModelId || model == local::previousPaylineModelId || model == local::previousNamedProfileModelId || model == local::previousFreePayModelId || model == local::precedingObservedPayModelId || model == local::olderObservedPayModelId || model == local::previousSchema4ModelId || model == local::olderSchema4ModelId || model == local::firstSchema4ModelId);
-    if (magic != 0x46434c50u || (!legacy && !current) || header != 16 || size != length) return false;
-    if (readU32(bytes + length - 4) != checksum(bytes, length - 4)) return false;
-    State candidate; readState(in, candidate, legacy);
-    const uint64_t rngState = in.u64(), rngIncrement = in.u64();
-    in.u32();
-    if (!in.good || in.position != length || !(rngIncrement & 1u) || !validState(candidate)) return false;
-    state = candidate; rng_.state = rngState; rng_.increment = rngIncrement;
-    presentation = Presentation{};  // checkpoint is already a fully settled action.
-    capacityFaults_ = 0;
-    return true;
+  bool restore(const void*, size_t) {
+    // Fresh-session contract: no saved game, bank, old law or RNG import.
+    // A live transaction uses a private Engine copy, never this wire codec.
+    return false;
   }
 
 #ifdef PHOENIX_ENGINE_TESTING
   // Tests inject complete visible outcomes through the same financial/feature
   // transition path, without depending on rare random events. Not in firmware.
-  bool testActionWithResult(const Cell cells[kCells]) { return actionImpl(cells); }
-  bool testLuckyChanceWithResult(const Cell cells[kCells]) { return luckyChanceImpl(cells); }
-  void testSetRng(uint64_t seed) { rng_.reseed(seed); }
-  void testGenerateSpin(bool free) { generateSpin(free); }
-  Cell testPhoenixCell(const Cell existing[kCells]) { return phoenixCell(existing); }
+  bool testActionWithResult(const Cell cells[kCells]) {
+    if (!actionAdmitted(false)) return false;
+    return transact([=](Engine& work) { return work.actionImpl(cells); });
+  }
+  bool testLuckyChanceWithResult(const Cell cells[kCells]) {
+    if (!actionAdmitted(true)) return false;
+    return transact([=](Engine& work) { return work.luckyChanceImpl(cells); });
+  }
+  bool testGenerateSpin(bool free) {
+    return transact([=](Engine& work) { work.generateSpin(free); return true; });
+  }
+  bool testPhoenixCell(const Cell existing[kCells], Cell& result) {
+    Cell candidate;
+    const bool ok = transact([&](Engine& work) { candidate = work.phoenixCell(existing); return true; });
+    if (ok) result = candidate;
+    return ok;
+  }
   int64_t testMaximumActionAwardMinor(Mode before) const { return maximumActionAwardMinor(before); }
 #endif
 
  private:
-  Pcg32 rng_;
+  random::Service* service_ = nullptr;
+  random::Draws rng_;
+  bool initialized_ = false;
+
+  void freshState(int64_t credits) {
+    state = State{}; presentation = Presentation{}; capacityFaults_ = 0;
+    // Fresh default denomination is $1:1000credits means$1000, not1000cents.
+    state.balance = credits * state.coinValue;
+    const Symbol initial[kCells] = {
+      Symbol::Bell,Symbol::King,Symbol::Queen, Symbol::Ten,Symbol::Book,Symbol::Jack,
+      Symbol::Candle,Symbol::Nine,Symbol::Abacus, Symbol::Queen,Symbol::Bell,Symbol::Ten,
+      Symbol::King,Symbol::Abacus,Symbol::Book
+    };
+    for (size_t i = 0; i < kCells; ++i) state.cells[i].symbol = initial[i];
+    setJackpots();
+  }
+  bool actionAdmitted(bool lucky) {
+    capacityFaults_ = 0;
+    if (!randomHealthy()) return false;
+    if (lucky) {
+      if (!canLuckyChance()) return false;
+      capacityFaults_ = actionCapacityFaults(Mode::Base, state.balance, true);
+    } else {
+      if ((state.mode == Mode::Base && state.balance < betMinor()) ||
+          (state.mode == Mode::Free && !state.freeLeft) ||
+          (state.mode == Mode::Hold && !state.respinsLeft)) return false;
+      capacityFaults_ = actionCapacityFaults(state.mode, betMinor());
+    }
+    return capacityFaults_ == 0;
+  }
+  template <typename Operation> bool transact(Operation operation, bool requireInitialized = true) {
+    if (!service_ || !service_->healthy() || (requireInitialized && !initialized_)) return false;
+    // Heap scratch keeps two full game/presentation copies off the8K loop
+    // stack. No secret state is copied: only a handle to the external service.
+    std::unique_ptr<Engine> work(new (std::nothrow) Engine(*this));
+    if (!work) { service_->latchFault(random::Fault::Allocation); return false; }
+    if (!service_->beginAction()) return false;
+    const bool applied = operation(*work);
+    const bool healthy = service_->healthy();
+    service_->endAction(); // erase all unused output even on rejection/fault
+    capacityFaults_ = work->capacityFaults_;
+    if (!applied || !healthy) return false;
+    state = work->state; presentation = work->presentation;
+    initialized_ = work->initialized_;
+    return true;
+  }
   uint32_t capacityFaults_ = 0;
 
   struct Writer {
@@ -700,21 +719,9 @@ class Engine {
     void u64(uint64_t value) { for (unsigned i = 0; i < 8; ++i) u8(uint8_t(value >> (i * 8))); }
     void i64(int64_t value) { u64(uint64_t(value)); }
   };
-  struct Reader {
-    const uint8_t* bytes; size_t capacity, position = 0; bool good = true;
-    Reader(const uint8_t* b, size_t c) : bytes(b), capacity(c) {}
-    uint8_t u8() { if (position >= capacity) { good = false; ++position; return 0; } return bytes[position++]; }
-    uint16_t u16() { uint16_t result = 0; for (unsigned i = 0; i < 2; ++i) result |= uint16_t(u8()) << (i * 8); return result; }
-    uint32_t u32() { uint32_t result = 0; for (unsigned i = 0; i < 4; ++i) result |= uint32_t(u8()) << (i * 8); return result; }
-    uint64_t u64() { uint64_t result = 0; for (unsigned i = 0; i < 8; ++i) result |= uint64_t(u8()) << (i * 8); return result; }
-    int64_t i64() { return int64_t(u64()); }
-  };
 
   static void writeU32(uint8_t* bytes, uint32_t value) {
     for (unsigned i = 0; i < 4; ++i) bytes[i] = uint8_t(value >> (8 * i));
-  }
-  static uint32_t readU32(const uint8_t* bytes) {
-    uint32_t value = 0; for (unsigned i = 0; i < 4; ++i) value |= uint32_t(bytes[i]) << (8 * i); return value;
   }
   static uint32_t checksum(const uint8_t* bytes, size_t length) {
     uint32_t result = 2166136261u;
@@ -725,18 +732,13 @@ class Engine {
     out.u8(uint8_t(cell.symbol)); out.u8(uint8_t(cell.kind)); out.u8(cell.multiplier);
     out.u8(cell.highlight ? 1 : 0); out.i64(cell.prize);
   }
-  static void readCell(Reader& in, Cell& cell) {
-    cell.symbol = Symbol(in.u8()); cell.kind = PrizeKind(in.u8()); cell.multiplier = in.u8();
-    const uint8_t highlight = in.u8(); if (highlight > 1) in.good = false;
-    cell.highlight = highlight != 0; cell.prize = in.i64();
-  }
   static void writeState(Writer& out, const State& s) {
     for (const Cell& c : s.cells) writeCell(out, c);
     for (const Cell& c : s.holdCells) writeCell(out, c);
     out.i64(s.balance); out.i64(s.win); out.i64(s.featureWin); out.i64(s.roundPayout);
     out.i64(s.coinValue); out.i64(s.betCoins);
     for (int64_t jackpot : s.jackpotCoins) out.i64(jackpot);
-    out.u64(s.seed); out.u64(s.rounds); out.u64(s.actions);
+    out.u64(s.rounds); out.u64(s.actions);
     out.u16(s.freeLeft); out.u16(s.freePlayed); out.u16(s.meter); out.u16(s.meterThreshold);
     for (const MeterBank& bank : s.meterBanks) { out.u16(bank.counter); out.u16(bank.threshold); }
     out.u8(s.respinsLeft); out.u8(s.lineCount); out.u8(s.betMultiplier); out.u8(s.wagerIndex);
@@ -747,58 +749,6 @@ class Engine {
     out.u64(t.paidRounds); out.u64(t.paidHits); out.u64(t.freeAwards); out.u64(t.freeSpins);
     out.u64(t.holdAwards); out.u64(t.meterAwards); out.u64(t.grandAwards); out.u64(t.stakedMinor); out.u64(t.paidMinor);
     out.u64(t.luckyAttempts); out.u64(t.luckyWins);
-  }
-  static void readState(Reader& in, State& s, bool legacy) {
-    for (Cell& c : s.cells) readCell(in, c);
-    for (Cell& c : s.holdCells) readCell(in, c);
-    s.balance = in.i64(); s.win = in.i64(); s.featureWin = in.i64(); s.roundPayout = in.i64();
-    s.coinValue = in.i64(); s.betCoins = in.i64();
-    for (int64_t& jackpot : s.jackpotCoins) jackpot = in.i64();
-    s.seed = in.u64(); s.rounds = in.u64(); s.actions = in.u64();
-    s.freeLeft = in.u16(); s.freePlayed = in.u16(); s.meter = in.u16(); s.meterThreshold = in.u16();
-    if (legacy) {
-      // Remap by actual credit bet, never array offset:15line options added
-      //105/120/135-credit buckets. No random draw occurs during migration.
-      for (size_t denomination = 0; denomination < local::denominationCount; ++denomination)
-        for (size_t oldBet = 0; oldBet < local::legacyMeterBetCount; ++oldBet) {
-          const uint16_t counter = in.u16(), threshold = in.u16();
-          for (size_t newBet = 0; newBet < local::meterBetCount; ++newBet)
-            if (local::meterBetCredits[newBet] == local::legacyMeterBetCredits[oldBet])
-              s.meterBanks[denomination * local::meterBetCount + newBet] = MeterBank{counter,threshold};
-        }
-    } else for (MeterBank& bank : s.meterBanks) { bank.counter = in.u16(); bank.threshold = in.u16(); }
-    s.respinsLeft = in.u8(); s.lineCount = in.u8(); s.betMultiplier = in.u8(); s.wagerIndex = in.u8();
-    s.holdStartCount = in.u8(); s.holdNewCount = in.u8(); s.holdRevivals = in.u16();
-    s.mode = Mode(in.u8());
-    const uint8_t free = in.u8(), round = in.u8(), grand = in.u8();
-    uint8_t meterHold = 0;
-    if (legacy) {
-      const uint8_t pending = in.u8(); meterHold = in.u8();
-      if (pending > 1 || s.lineCount == 15 || (s.wagerIndex != 255 && s.wagerIndex >= 40)) in.good = false;
-      s.pendingMeterHolds = pending;
-    } else {
-      meterHold = in.u8(); s.pendingMeterHolds = in.u16(); s.prizeCapProfile = PrizeCapProfile(in.u8());
-    }
-    if (free > 1 || round > 1 || grand > 1 || meterHold > 1) in.good = false;
-    s.freeSession = free != 0; s.roundOpen = round != 0; s.grandAwarded = grand != 0;
-    s.holdFromMeter = meterHold != 0;
-    Statistics& t = s.stats;
-    t.paidRounds = in.u64(); t.paidHits = in.u64(); t.freeAwards = in.u64(); t.freeSpins = in.u64();
-    t.holdAwards = in.u64(); t.meterAwards = in.u64(); t.grandAwards = in.u64(); t.stakedMinor = in.u64(); t.paidMinor = in.u64();
-    if (!legacy) { t.luckyAttempts = in.u64(); t.luckyWins = in.u64(); }
-    else {
-      // Locked old ordinary-credit multipliers must retain their financial
-      // value after named-only multipliers are enforced in the new model.
-      for (Cell* board : {s.cells,s.holdCells}) for (size_t i = 0; i < kCells; ++i) {
-        Cell& c = board[i];
-        const bool validLegacyPrize = c.prize >= 0 && c.prize <= 1000000000LL && c.multiplier >= 1 && c.multiplier <= 3;
-        if (!validLegacyPrize) in.good = false;
-        if (validLegacyPrize && c.symbol == Symbol::Phoenix && c.kind == PrizeKind::Credits) {
-          c.prize *= c.multiplier; c.multiplier = 1;
-        }
-      }
-      for (int64_t jackpot : s.jackpotCoins) if (jackpot < 1 || jackpot > 1000000000LL) in.good = false;
-    }
   }
   static bool validWager(int64_t denomination, uint8_t lines, uint8_t multiplier) {
     bool validDenomination = false;
@@ -913,8 +863,8 @@ class Engine {
         draw -= weight;
       }
     } else {
-      // Old saves retain locked cell values. This getter also supplies the
-      // corrected future Mini/Minor values when an old cache is restored.
+      // Named values lock at landing and are never paid again by animation.
+      // Resolve the configured profile-specific Mini/Minor unit amount here.
       result.prize = jackpotValueCoins(uint8_t(result.kind) - 1);
       const uint32_t multiplierRoll = rng_.bounded(10000);
       result.multiplier = multiplierRoll < local::tripleChance ? 3 : multiplierRoll < local::tripleChance + local::doubleChance ? 2 : 1;
@@ -1015,7 +965,7 @@ class Engine {
     static_assert(local::meterHoldSeedCount < kCells, "Revisit capacity bound if queued Holds can enter full");
     // At most one15-cell Phoenix/Grand collection can settle in one action.
     // Queued Holds start empty; later actions collect them independently.
-    // Three is the largest valid named multiplier, including imported prizes.
+    // Three is the largest valid named multiplier, for current-session prizes.
     int64_t credits = int64_t(kCells) * local::maximumCreditPrize * 3 + state.jackpotCoins[3];
     if (before != Mode::Hold) {
       const bool free = before == Mode::Free;

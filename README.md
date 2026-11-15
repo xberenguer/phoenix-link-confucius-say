@@ -1,42 +1,42 @@
 # Confucius Say for StickS3
 
-An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5Stack StickS3. The game runs on the device without Wi-Fi, a phone or a server.
+An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5Stack StickS3. The installed game runs without Wi-Fi, a phone or a server.
 
-[**Play in your browser**](https://xberenguer.github.io/phoenix-link-confucius-say/) No hardware or installation is needed.
+**Get a StickS3:** [Official M5Stack shop](https://shop.m5stack.com/products/m5sticks3-esp32s3-mini-iot-dev-kit) · [Amazon](https://www.amazon.com/dp/B0GWHN8HK3)
 
-Start with [your first game](docs/getting-started.md), the [full game guide](docs/README.md), or [rules and payouts](docs/payouts.md).
+[**Play in your browser**](https://xberenguer.github.io/phoenix-link-confucius-say/) — no hardware or installation needed.
 
 <a href="https://xberenguer.github.io/phoenix-link-confucius-say/">
-  <img src="docs/media/gameplay102.gif" alt="Confucius Say gameplay: spinning reels, Phoenix symbols and line wins" width="720">
+  <img src="docs/media/gameplay104.webp" alt="Confucius Say: reel spins and joined Sage wins" width="720">
 </a>
 
-The animated preview shows the actual 240 × 135 game enlarged 3×, recorded during ordinary browser autoplay. The linked gallery uses deterministic desktop renders. All demonstration credits are synthetic; no player's saved bank or device photographs are included.
+**Current release: 0.2.104.** Each boot, page reload or flash starts a fresh manual session with **1,000 credits at the default $1 denomination ($1,000)**. Progress is session-only; there is no saved-game import or restore. Changing denomination during play changes the credit units, not the money balance.
 
-This package uses version **0.2.102**, local model H (`0x00020011`). The game source, numeric tables and deterministic gallery are synchronized to that source. The browser compiles the same Engine, renderer and audio programs. Original casino probabilities and complete original artwork/audio banks remain unrecovered; see [math and evidence](docs/math-and-evidence.md).
+Outcomes use AES-256 CTR_DRBG with fresh entropy and fail-closed action handling. The local model is **I (`0x00020012`)**. Its prices, feature probabilities and Simulator Return ranges are implementation references; original casino odds remain unrecovered. See [math and evidence](docs/math-and-evidence.md).
 
-The first public snapshot is 0.2.102, followed by 0.2.110, 0.2.120 and subsequent ten-version milestones. Development and validated local device updates continue between public snapshots.
+Start with [your first game](docs/getting-started.md), the [full game guide](docs/README.md), or [rules and payouts](docs/payouts.md).
 
 ## Game reference
 
 - [Controls and menus](docs/controls.md)
-- [Browser play without hardware](docs/browser-play.md)
+- [Browser play](docs/browser-play.md)
 - [Wagers, denominations and lines](docs/wagers.md)
-- [Every symbol and combination category](docs/symbols-and-combinations.md)
-- [Symbols, combinations and payouts](docs/payouts.md)
+- [Symbols and combinations](docs/symbols-and-combinations.md)
+- [Payouts](docs/payouts.md)
 - [Free games and Twin Reels](docs/free-games.md)
-- [Phoenix Hold & Spin, revival and jackpots](docs/hold-and-spin.md)
+- [Phoenix Hold & Spin](docs/hold-and-spin.md)
 - [The 1888 collection counter](docs/collection-counter.md)
-- [Graphics and animation gallery](docs/graphics.md)
+- [Graphics gallery](docs/graphics.md)
 - [Sounds and music events](docs/audio.md)
-- [Math, RNG and evidence](docs/math-and-evidence.md)
-- [Saving and recovery](docs/saving.md)
+- [Fresh sessions and funding](docs/saving.md)
+- [Settings and Simulator Return](docs/settings.md)
 - [Build and flash](docs/build-and-flash.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [Developer reference](docs/developer-reference.md)
-- [Testing and reproducible evidence](docs/testing.md)
+- [Testing](docs/testing.md)
 - [Sources and attribution](docs/sources.md)
-- [Version history](CHANGELOG.md)
+- [Current release notes](CHANGELOG.md)
 
-Source comments and documentation distinguish source-observed rules, configuration-specific payouts, local model assumptions and unresolved details. A supported control or payout does not establish that every regional casino version uses the same program.
+The browser compiles the same C++ game, renderer and audio programs. Preview media uses synthetic demonstration credits. Source, build, browser and physical-device checks have separate scopes in [testing](docs/testing.md).
 
-This repository is the game and its required assets. It is an independent reconstruction; it does not include a casino server, payment system, licensed machine software, recovered PAR sheet or certification. See [math and evidence](docs/math-and-evidence.md) for the precise limits and [attribution](docs/attribution.md) for third-party material.
+This independent project includes no casino payment service or recovered manufacturer PAR sheet. Artwork, audio and code rights are described in [attribution](docs/attribution.md).

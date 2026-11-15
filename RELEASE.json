@@ -1,26 +1,37 @@
 {
-  "version": "0.2.102",
-  "runtime_fingerprint": "4b51c8a82804917c5d678f421de4e938abbb5167b1b1e896d5b8d66c7f8519c2",
-  "mathematical_family": "6aa2818743a87f83efe8fa331d78b5de35273830f769168d88f7eacd1401b711",
-  "local_model": "0x00020011",
-  "source_file_count": 133,
-  "gameplay_equivalent_to": null,
+  "version": "0.2.104",
+  "runtime_fingerprint": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "mathematical_family": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03",
+  "local_model": "0x00020012",
+  "source_body_files": 160,
+  "source_total_files": 163,
+  "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
   "original_casino_calibration": false,
-  "credits": "Play money only",
+  "actual_CSPRNG_infinite_horizon_return_qualified": false,
+  "credits": "Play money only; fresh 1,000 denomination credits each boot/reload/flash; session-only",
+  "rng": {
+    "algorithm": "AES-256 CTR-DRBG",
+    "backend": "Mbed TLS 3.6.7",
+    "predictionResistance": true,
+    "freshEntropyPerAction": true,
+    "NISTFirstStudyFamilies": 15,
+    "NISTFirstStudyRows": 188,
+    "NISTFirstStudyFlags": 0
+  },
   "required_offline_assets": [
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "public_update_cadence": "First public snapshot: 0.2.102; then 0.2.110, 0.2.120 and subsequent ten-version milestones.",
-  "status": "Published on GitHub; browser demo deployed and verified",
-  "changes_vs100": [
-    "0.2.101: separate visual pickups for multiplied Mini and Minor awards",
-    "0.2.102: full 64-bit offline initial entropy seed"
-  ],
-  "source_total_files": 135,
-  "browser_version": "0.2.102",
-  "native_status_version": "0.2.102-candidate",
+  "native_validation": "Firmware and assets passed full write/readback verification. Fresh boot confirmed version 0.2.104, a healthy random service with no source/lease fault, all 60 atlas frames, 1,000 credits, zero actions and autoplay off. Two entropy captures were observed at startup. Later USB synchronization remains unavailable; no spin was sent and per-action native entropy, physical buttons and a full playthrough are not verified by these checks.",
+  "browser_version": "0.2.104",
+  "native_status_version": "0.2.104",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "verified_release_commit": "8c04ef657829bbf65913e79aad7248ff440fbc5b"
+  "status": "Current source-bound release package",
+  "changes": [
+    "Sage topknots extend into grey header during reel motion, landings and joined wins",
+    "Current-source nearest-neighbor 720px documentation gallery",
+    "Three-result preview with credit updates and complete WIN counts",
+    "Fresh 1,000-credit sessions and AES-256 CTR_DRBG outcome service"
+  ]
 }

@@ -15,14 +15,14 @@
   <header><div><p class="eyebrow">PHOENIX LINK RECREATION</p><h1>Confucius Say</h1></div><span class="version" id="version">Browser demo</span></header>
   <section class="cabinet" aria-label="Playable game">
     <div class="display"><canvas id="game" width="240" height="135" aria-label="Confucius Say game screen"></canvas>
-      <div id="cover"><p>Play Confucius Say.</p><button id="start">Play with sound</button><small>Your progress stays on this browser.</small></div>
+      <div id="cover"><p>Play Confucius Say.</p><button id="start">Play with sound</button><small>Every reload starts with 1,000 credits.</small></div>
     </div>
     <div class="controls"><button id="blue" class="blue" aria-label="Blue button: spin or select; hold for autoplay"><span>SPIN / SELECT</span><small>Hold for autoplay</small></button><button id="black" class="black" aria-label="Grey button: bet menu or next; hold for settings"><span>BET / NEXT</span><small>Hold for settings</small></button></div>
   </section>
-  <p id="status" role="status">No hardware or installation. Progress is saved locally.</p>
-  <button id="retry" hidden>Retry saving</button>
-  <details><summary>Controls and saved game</summary><p>Blue spins, stops reels or selects. Hold blue to toggle autoplay. Grey opens the bet screen or moves through a menu; hold it for settings. Double-press grey in the game to flip the screen.</p><p>Keyboard: Space for blue, Enter or → for grey, Escape for the menu. The game pauses while this tab is hidden.</p><button id="download">Download saved game</button></details>
-  <footer>Play-money recreation with a local estimated model. Casino odds are not reproduced. Browser audio and timing depend on your device.</footer>
+  <p id="status" role="status">No hardware or installation. Reload starts a fresh 1,000-credit session.</p>
+  
+  <details><summary>Controls</summary><p>Blue spins, stops reels or selects. Hold blue to toggle autoplay. Grey opens the bet screen or moves through a menu; hold it for settings. Double-press grey in the game to flip the screen.</p><p>Keyboard: Space for blue, Enter or → for grey, Escape for the menu. The game pauses while this tab is hidden.</p></details>
+  <footer>Play-money recreation with a local estimated model and CSPRNG. Casino odds are not reproduced. Browser audio and timing depend on your device.</footer>
 </main>
 </body>
 </html>

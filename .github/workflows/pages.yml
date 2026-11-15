@@ -1,4 +1,4 @@
-name: Publish playable demo
+name: Publish source-bound playable demo
 on:
   push:
     branches: [main]
@@ -18,6 +18,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
+      # Reject stale WASM, code, runtime assets or adapter before upload.
+      # The pinned source binding changes only with a reviewed release.
+      - name: Verify accepted source and browser provenance
+        run: python3 browser/verify_bundle.py --source firmware/src --assets firmware/data --bundle demo
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

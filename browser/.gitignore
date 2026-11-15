@@ -1,6 +1,6 @@
 build/
 dist/
 BUILD.log
-BUILD_COMMAND.json
 BUILD_RESULT.json
+BUILD_COMMAND.json
 __pycache__/

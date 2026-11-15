@@ -1,6 +1,6 @@
 # Symbols, winning combinations and payouts
 
-The current game uses local model H (`0x00020011`). The complete lookup tables are freshly exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
+The current game uses local model I (`0x00020012`). The complete lookup tables are freshly exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
 
 ## Symbol roles
 
@@ -31,7 +31,7 @@ The number of active lines is already used to select and evaluate the paths. Do 
 - [The current menu's 55 offered wagers](data/offered-wagers.csv): denomination, lines, multiplier, stake credits and stake money.
 - [Export metadata](data/reference-metadata.json): source version, input hashes, exporter hash and dataset hashes.
 
-The compatibility engine can represent more profiles than the wager menu offers. The CSV marks whether each profile is currently selectable. Its complete internal data must not be mistaken for additional real-machine buttons.
+The internal evaluator can represent more profiles than the wager menu offers. The CSV marks whether each profile is currently selectable. Its complete internal data must not be mistaken for additional real-machine buttons.
 
 A positive evaluator entry does not prove that every compatible board can naturally occur. Wild placement, correlated reels and the local generator constrain which patterns can be drawn. The original joint reel law remains under study.
 
@@ -45,8 +45,6 @@ An entry with unit price 0 does not pay that combination in that particular impl
 
 These entries are implemented at the exact filmed Base configurations below. Unit credits are multiplied by the selected bet multiplier, then by the denomination to obtain money.
 
-<a id="version-92s-five-scoped-corrections"></a>
-
 ### Bell, Jack and Queen prices
 
 | Exact Base configuration | Combination | Unit credits | Award after multiplier |
@@ -59,8 +57,6 @@ These entries are implemented at the exact filmed Base configurations below. Uni
 
 The source contexts are the [1¢/50/10× recording](https://www.youtube.com/watch?v=GclIM2tutCg) and [10¢/100/1× recording](https://www.youtube.com/watch?v=Zfc-LBjwXQA). The annotated [Engine lookup](../firmware/src/phoenix_engine.h) preserves their individual caption evidence.
 
-<a id="accepted-version-97s-two-scoped-corrections"></a>
-
 ### Two-cent, 50-line prices
 
 | Exact Base configuration | Combination | Unit credits | Award after multiplier |
@@ -69,8 +65,6 @@ The source contexts are the [1¢/50/10× recording](https://www.youtube.com/watc
 | 2¢ / 50 lines / 3× | Three Kings | 5 | 15 credits / $0.30 |
 
 The [Confucius Say recording](https://www.youtube.com/watch?v=3pfZnZUWGhI) contains Bell-prefix line captions paying six credits and three-King captions paying fifteen at this configuration. These are line awards, not inferred terminal round totals.
-
-<a id="version-99s-two-scoped-corrections"></a>
 
 ### Ten-cent, 25-line prices
 
@@ -102,7 +96,7 @@ The scatter win and the award of Free Games are separate effects. See [Free Game
 
 Phoenix values are collected under the feature rules, separately from ordinary line wins. Named Mini, Minor and Major symbols can carry their own multipliers. In the current implementation, these named multipliers do not multiply a plain cash Phoenix. A full 15-cell board can award Grand **in addition to** the displayed Phoenix values.
 
-The actual amount and applicable prize rules depend on the active configuration and any cached award owed by a saved feature. Grand amounts are local simulator schedules, not live casino progressive values. See [Hold & Spin](hold-and-spin.md), [the collection counter](collection-counter.md) and [math and evidence](math-and-evidence.md).
+The actual amount and applicable prize rules depend on the active configuration and any prize already locked in the live feature. Grand amounts are local simulator schedules, not live casino progressive values. See [Hold & Spin](hold-and-spin.md), [the collection counter](collection-counter.md) and [math and evidence](math-and-evidence.md).
 
 ## Regenerating the reference
 

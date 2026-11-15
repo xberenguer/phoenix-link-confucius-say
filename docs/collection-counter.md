@@ -1,4 +1,4 @@
-# The persistent 1888 collection counter
+# The 1888 collection counter
 
 The upper-right green number tracks collected Phoenixes for the active wager context. It can award a free Hold & Spin before 1888; it is separate from the red Wisdom free-games trigger.
 
@@ -22,13 +22,13 @@ The model keys the bucket by **denomination and total bet in credits**. Total be
 
 For example, 1¢ / 50 lines / 2× and 1¢ / 100 lines / 1× both use a 100-credit stake and the same modeled counter. This is the implemented rule; a particular casino's internal storage identity is not independently recovered from a menu photograph.
 
-The current small-screen menu offers a subset of the internal compatibility profiles. See [wagers](wagers.md) before treating every Engine-valid configuration as an available cabinet control.
+The current small-screen menu offers a subset of the internal evaluator profiles. See [wagers](wagers.md) before treating every Engine-valid configuration as an available cabinet control.
 
 ## Continuity
 
-Adding credits and using automatic refill preserve collection progress. Switching away from a wager and back should restore its bucket. A compatible canonical save contains every initialized bucket and any queued Holds, not just the number currently visible.
+Adding credits and using automatic refill do not reset collection progress during the live session. Switching away from a wager and back selects its current bucket again. All initialized buckets and queued Holds belong to that live game.
 
-Opening a menu does not reset the meter. A deliberately initialized fresh game starts new meter state. Missing-record initialization is separate from recovery: an unsupported or unreadable record does not authorize an automatic reset. See [saving and recovery](saving.md) for that distinction.
+Opening a menu does not reset the meter. Each boot or page reload starts fresh meter state with a new game; no prior record is loaded. See [fresh sessions](saving.md).
 
 ## The hidden model is still an assumption
 

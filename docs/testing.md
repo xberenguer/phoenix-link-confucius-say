@@ -1,57 +1,47 @@
-# Testing and evidence
+# Testing and evidence boundaries
 
-Correct math, faithful presentation and reliable physical operation need different evidence. This guide describes the checks used during development and the public reproduction paths; it does not claim certification or ship the private research harnesses as game data.
+Current tests qualify specific software paths and source identities. They do not establish original casino odds or complete hardware approval. The current [release status](../CHANGELOG.md#validation-status) separates host/target results from physical validation.
 
-## What each kind of check proves
-
-| Check | Useful conclusion | Practical limit |
+| Check | Establishes | Limit |
 |---|---|---|
-| C++ evaluator export | Exact implemented price/path/deck rows | Does not recover original casino probabilities |
-| Fixed-seed Engine replay | Same inputs produce the same saved result/PCG | Predictable replay is not cryptographic security |
-| Engine/UI joined action | Real result reaches the expected presentation without extra draws | Does not prove durable NVS unless the real storage owner participates |
-| Main/UI with simulated NVS failures | Retry, commit/readback and restore logic follow the exercised paths | Not physical flash latency, power-cut or endurance measurement |
-| ASAN/UBSAN runtime checks | Exercised code paths avoid detected memory/undefined-behavior errors | Not proof that every possible path is safe |
-| Exact raster comparison | An optimized path matches its reference pixels | The reference can still differ from the original machine |
-| Source frame/event comparison | A stated observation matches a filmed configuration | Does not establish universal rules or unseen frames |
-| Native build and readback | Target image builds/fits and the written bytes match | Not proof of audible output or restored saved data |
-| Native frame and control test | Actual hardware renders/responds | A single still does not verify every animation or acoustic event |
+| Published AES/CTR_DRBG vectors | Exercised primitive agrees with the known vectors | Does not measure platform entropy |
+| Independent DRBG byte oracle | Seed/reseed/request/discard behavior agrees | Test entropy is not a production seed interface |
+| Rejection mapping and price/path comparison | Mapping counts and implemented evaluator behavior | Does not recover casino strips/probabilities |
+| Atomic Engine fault cases | Failed Base/Free/Hold/Lucky/wager/init actions commit no partial state | Does not prove every possible fault |
+| Actual Main/UI cases | Fresh startup, controls and post-fault dispatch follow exercised paths | Hardware APIs are mocked in host tests |
+| ASAN/UBSAN | No detected errors on exercised paths | Not a universal memory-safety proof |
+| Exact raster comparison | Optimized drawing agrees with its reference | Reference fidelity is a separate question |
+| Host/Wasm parity | Same specified fixture gives the same output | Browser/device environments still differ |
+| Target build | Code links/fits the target configuration | Does not prove a flash, physical entropy or speaker output |
 
-## Reproduce the public tables
+## Recognized randomness battery
 
-Use the command in [payouts](payouts.md#regenerating-the-reference). The exporter includes zero-pay entries, both Base/Free modes and internal compatibility profiles. Check its metadata and hashes against the source you actually built.
+The first official NIST STS 2.1.2 run used 1,000 × 1,000,000 bits, all 15 default test families and 188 report rows. No aggregate uniformity/proportion flags or inapplicable rows were reported. Individual sequence results were retained, with no seed search or replacement run. This host output test is distinct from native entropy qualification and from game-return calculations. See [NIST's scope](https://www.nist.gov/publications/statistical-test-suite-random-and-pseudorandom-number-generators-cryptographic) and [math](math-and-evidence.md).
 
-Generate the CSVs from the exact current source. A table generated from the current code is an implementation reference, not a PAR sheet.
+The production crypto build excludes deterministic self-test/input helpers. Those exist only in explicit test builds. Source/protocol/output hashes and the final API/configuration equivalence are reviewed separately from the statistical results.
 
-## Deterministic visual fixtures
+## Reproduce public tables
 
-The [gallery](graphics.md) is rendered from a fixed version and explicit synthetic fixtures. Its [manifest](gallery-manifest.json) distinguishes scripted display examples from naturally generated spins. Render-time snapshots are checked to remain financially unchanged. These images are suitable for UI documentation; they are not observations of a casino's event frequency.
+Use [the exporter command](payouts.md#regenerating-the-reference) against the current source. Verify its source version, input hashes and dataset hashes. The internal evaluator includes more profiles than the 55 offered wager choices.
 
-For future comparisons, preserve native 240 × 135 frames and actual timestamps before resizing. Inspect crop edges, transparent alpha, row margins, title/number alignment, Gold/Sage seams, cell crossing, final stop identity, fire coverage and particle layers. A GIF's frame cadence is only a preview, not proof of physical refresh timing.
+## Visual and audio fixtures
 
-## Regression groups worth retaining
+The [gallery](graphics.md) uses synthetic states from the renderer. Inspect its [provenance](gallery-manifest.json) with the included assets. A short loop illustrates presentation and does not measure full-game FPS, casino frequency or physical audio identity.
 
-- Every symbol, win-animation state and partial reel-strip boundary.
-- Manual, autoplay, quick-stop and delayed-frame presentation of the same financial result.
-- Initial/retrigger/final Free state, both Twin pairs and nested Hold return.
-- Natural/meter/chained Hold, zero-new revival, named awards and full-board settlement.
-- Same-wager meter continuity across funding, wager switches, save and restart.
-- Compatible owed records, unknown preferences, storage failures, numeric capacity and wraparound clocks.
-- Audio start/stop/mute, independent reel switches, finite tails and missing assets.
+Useful cases include partial reel stops, awarded Sage joins, Twin pairs, natural/meter/chained Hold, initial zero-new revival, named collection, direct 15, source-failure UI, manual/autoplay quick-stop and wrapped clocks. Funding/wager changes and meter continuity are checked within a live session. Reload/boot checks require a new 1,000-credit game with autoplay off.
 
-## Checkpoint barrier testing
+## Physical acceptance
 
-The current game uses a synchronous Main-owned outcome barrier. Standalone UI tests explicitly register a volatile fixture owner so their presentation can run; that acknowledgement is not durable storage. Joined tests retain Main's actual callback and simulate write/commit/readback failures, old/new durable cuts and cold restarts.
+After an installation, verify the intended board and written bytes, current menu version, fresh 1,000 denomination credits, autoplay off, controls, an ordinary action and one audio audition. Record physical display, stack/timing, entropy-source behavior and audible output separately. Never infer physical operation from a build or a desktop frame.
 
-That separation keeps renderer checks distinct from persistence evidence. Current accepted-source Main/UI qualification covers 130 cases and 5,097 assertions with hardware/storage mocks. The full renderer, transport, credit/audio and target builds are checked separately; physical power-cut/endurance and acoustic identity remain unproven.
+## Run the CSPRNG source tests
 
-## A short hardware acceptance pass
+From the repository root, run `python3 tools/test_rng.py --sanitize`. A C99 compiler and a C++17 compiler are required. The script builds the included Mbed TLS source and exercises published known-answer vectors, rejection boundaries, source failures, reentry, reservoir exhaustion and failed-action atomicity. Deterministic entropy and test hooks are compiled only into the temporary test program.
 
-After a deliberate update, check version, startup autoplay off, controls, one ordinary spin, one sound audition and a saved-state comparison. Exercise feature fixtures only through a test path that preserves/restores the player's state or clearly uses a separate synthetic bank.
+The [current RNG validation summary](data/rng-validation.json) records the first full NIST study and separates host results, native startup checks and unmeasured physical entropy quality. The raw random stream and private device evidence are not part of this package.
 
-Readback, native frames, audio auditions and saved-data continuity should be recorded separately. No test in this wiki makes the reconstruction a licensed or casino-calibrated machine.
+## Release documentation and media check
 
-## Current release qualification
+Run `python3 tools/verify_release.py` before publishing. CI runs the same check. It rejects mismatched release/data/demo versions, changed or stale gallery source pins, missing or altered images, unreadably small image files, broken local links and private development paths. The gallery and showcase media are catalogued with current source versions and SHA-256 hashes.
 
-The accepted native source has startup/restore, actual Main/UI, renderer, USB, credit/audio and target-build checks. Its native rendering benchmark covers 1,015 scene frames, including 80 same-cell repeated-flight samples. Those samples are offscreen raster work plus transfer of the saved LCD image, not full-game FPS. Source identity binds the published code to the validated application; preparing the public tree does not itself repeat a physical flash.
-
-The matching browser bundle has 439 Chromium assertions and 12 native canonical/paid-record pair checks, including exact seed and cold-restore checks. Its synthetic gallery is rendered from the same current UI source. See the [browser guide](browser-play.md) and [gallery manifest](gallery-manifest.json) for their scopes. Native Main/NVS is not compiled into WebAssembly.
+This catches synchronization errors; it does not establish original-machine fidelity. Review the new renders, animation timing and guide wording as well.

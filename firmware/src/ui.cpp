@@ -2,14 +2,13 @@
 #include "build_version.h"
 #include "phoenix_engine.h"
 #include "cabinet_profile.h"
-#include "scene_checkpoint.h"
 #include "static_grand_table.h"
 #include "return_selector86.h"
 #include "math_runtime_identity.h"
-#include "checkpoint_bundle.h"
 #include "capacity_service.h"
 #include "money_math.h"
 #include "generated_assets.h"
+#include "sage_crown122.h"
 #include "pdf_assets.h"
 #include "phoenix_numerals.h"
 #include "phoenix_effects.h"
@@ -50,6 +49,7 @@
 #include "wisdom_lower_win88.h"
 #include "wisdom_entry_timing29.h"
 #include "award_art.h"
+#include "authored_major112.h"
 #include "gold_burn.h"
 #include "reference_gold_v0265.h"
 #include "audio.h"
@@ -122,7 +122,6 @@ uint32_t lineDisplayAt=0;bool lineClockValid=false;
 uint32_t reelMs[5]={},phoenixClockAt=0;
 uint16_t phoenixPhases[15]={};
 bool phoenixPhasesRestored=false,spinQuickStopped=false,spinLandingCoalesced=false;
-static_assert(kUiSceneCapacity==phoenix_scene::kBytes,"Scene buffers must fit the current codec");
 int displayRespins=0;
 // The upper-screen collected announcement precedes the existing pickup
 // director. On the Stick it temporarily occupies the centre of the reels.
@@ -160,6 +159,7 @@ int creditItem=0;
 bool autoRefill=false;
 uint32_t lastAddedMinor=1000000,creditRevision=0;
 constexpr uint32_t creditAmounts[]={100000,1000000,10000000};
+bool randomFailureShown125=false;
 bool initialized=false,dirty=true,autoPlay=false,holdView=false,pendingFree=false,pendingHold=false,pendingOutro=false,pendingChained=false,introChained=false;
 uint16_t heldMask=0,landedMask=0,pendingFreeCount=0,displayMeter=0,displayQueuedHolds=0;
 int64_t displayBank=0,displayWin=0,winFrom=0,winTo=0;
@@ -172,8 +172,6 @@ bool winCuePending=false;
 bool awaitingBonusResume=false;
 static_grand::Preference mathSelection;
 const static_grand::Family* mathFamily=&static_grand_table::family;
-phoenix::Engine checkpointProbe;
-uint8_t checkpointGame[phoenix::kSaveCapacity],checkpointScene[kUiSceneCapacity],checkpointService[phoenix_capacity::recordBytes];
 uint8_t mathPreference[static_grand::selectionBytes]{};
 uint32_t mathStoredModel=phoenix::local::modelId,runtimeRevision=0;
 phoenix_capacity::Latch capacityService;
@@ -208,7 +206,7 @@ static_grand::Selection effectiveMathChoice(){
  if(!static_grand::effective(mathSelection,mathStoredModel,*mathFamily,selection))return {};
  return selection;
 }
-bool runtimeFinancialBlocked(){return checkpointBlocked||capacityService.active()||storagePause!=UiCheckpointPause::None;}
+bool runtimeFinancialBlocked(){return !engine.randomHealthy()||checkpointBlocked||capacityService.active()||storagePause!=UiCheckpointPause::None;}
 // Volatile drafts are never persisted or normalized by browsing.
 return_selector86::State returnSelector86;
 bool returnChoiceRecognized86(){static_grand::Selection selected;return static_grand::effective(mathSelection,mathStoredModel,*mathFamily,selected);}
@@ -837,6 +835,30 @@ int reelOffset(int c,uint32_t elapsed){return reel_motion::offset(reelMs[c],reel
 constexpr uint32_t holdReelDuration(int c){return kHoldFirstMs+unsigned(c)*kHoldColumnMs;}
 int holdReelSteps(int c){return reel_motion::steps(holdReelDuration(c),TH);}
 int holdReelOffset(int c,uint32_t elapsed){return reel_motion::offset(reelMs[c],holdReelSteps(c),TH,elapsed);}
+void paintSageCrown133(int x,int y,uint16_t color,unsigned alpha){
+ if(x<RX||x>=RX+RW||y<RY-4||y>=RY+RH)return;
+ // Preserve bright/coloured header ink; permit overhang over neutral
+ // charcoal matte/grain. This palette guard is not a recovered glyph mask.
+ if(y<14){const auto under=pixels[y*W+x];const int r=(under>>11)&31,g=(under>>5)&63,b=under&31;
+  if(r>7||g>14||b>7||std::abs(r-b)>2||std::abs(g-r-b)>4)return;
+ }
+ dot(x,y,color,alpha);
+}
+void drawTopSageOutside133(int x,unsigned rows,uint32_t clock){
+ const auto paint=[](int xx,int yy,uint16_t color,unsigned alpha){if(yy<RY)paintSageCrown133(xx,yy,color,alpha);};
+ // Outside RGBA is immutable and independent of canonical profile. One
+ // reference suffices; ignored inside pixels cannot alias the crown cache.
+ const auto& cap=pa::sageCrown(1,0,false);
+ if(rows<2||clock>=667){sage_crown122::draw(cap,x,RY,[](int){return 255u;},paint);return;}
+ constexpr unsigned times[]={0,167,292,333,375,417,458,500,542,583,625,667};unsigned frame=0;while(frame+1<12&&clock>=times[frame+1])++frame;
+ const unsigned sample=times[frame],motion=sample>(rows==2?42u:0u)?sample-(rows==2?42u:0u):0u;
+ constexpr unsigned motionTimes[]={292,333,375,417,458,500,542,583,625};constexpr float positions[]={70,70,62,49,37,20,7,0,0};
+ float position=70;if(motion>=625)position=0;else for(unsigned k=0;k+1<9;++k)if(motion>=motionTimes[k]&&motion<motionTimes[k+1]){const float t=float(motion-motionTimes[k])/float(motionTimes[k+1]-motionTimes[k]);position=positions[k]+t*(positions[k+1]-positions[k]);break;}
+ position*=float(rows-1)/2.f;
+ const auto mix=[&](int yy){if(motion<=310)return 0u;if(motion>=583)return 255u;const float v=(float(yy-RY)-position+7.f)/14.f;return unsigned(std::lround(std::max(0.f,std::min(1.f,v))*255.f));};
+ if(motion<=310)sage_crown122::draw(cap,x,RY,[](int){return 255u;},paint);
+ else sage_crown122::transition(cap,cap,x,RY,rows,RY+int(std::lround(position)),RY-4,mix,paint);
+}
 void drawReels(uint32_t now){
   uint32_t e=now-phaseAt;
   if(phase==Phase::Spin){
@@ -889,9 +911,8 @@ void drawReels(uint32_t now){
     }
   }
   frameBorder();
-  // C's canonical banks keep each internal head inside its destination.
-  // Only a top-of-board Sage receives the compact rail crown; header0..13
-  // and the R5 counter stay outside this alpha layer.
+  // Retain the exact canonical inside rows. The separate outside-only
+  // cap follows the same merge-head position/reveal into the grey header.
   if(phase!=Phase::Spin&&!holdView){
     uint16_t awarded=0;for(unsigned i=0;i<15;++i)if(visible[i].highlight)awarded|=uint16_t(1u<<i);
     const uint16_t joins=phoenix::Engine::joinedSageMask(visible,awarded);
@@ -903,7 +924,47 @@ void drawReels(uint32_t now){
 #ifdef UI_SAGE_REGISTRATION_TEST_HOOK
       if(!sageCrownTestEnabled)continue;
 #endif
-      image(pa::sageCrown(rows,clock,winning),RX+c*TW,RY-2,RX,14,RX+RW,RY+3);
+      image(pa::sageCrown(rows,clock,winning),RX+c*TW,RY-2,RX,RY,RX+RW,RY+3);
+      drawTopSageOutside133(RX+c*TW,rows,clock);
+    }
+  }
+  // One full passing cap also owns stopped earlier reels. Internal
+  // settled/merging caps retain their existing registration.
+  if(!holdView&&phase==Phase::Spin){
+    // Read the SAME passing strip tile and scroll coordinate as drawCell.
+    // This is physical artwork visibility, never the future target mask.
+    for(int c=0;c<5;++c){const auto split122=reel_motion::split(reelOffset(c,e),TH);
+      for(int r=0;r<4;++r){const int index122=split122.first+r,yy122=RY+r*TH-int(split122.remainder);if(index122< -1||index122>=int(kReelStripCells))continue;
+        const auto& passing122=strips[c][index122<0?kReelStripCells-1:unsigned(index122)];if(passing122.symbol!=Symbol::Wild)continue;
+        sage_crown122::draw(pa::sageCrown(1,0,false),RX+c*TW,yy122,[](int){return 255u;},paintSageCrown133);
+      }
+    }
+  }else if(!holdView){
+    uint16_t awarded122=0;for(unsigned i=0;i<15;++i)if(visible[i].highlight)awarded122|=uint16_t(1u<<i);
+    const uint16_t joins122=phoenix::Engine::joinedSageMask(visible,awarded122);
+    const auto paint122=[&](int x,int y,uint16_t c,unsigned a){if(x>=RX&&x<RX+RW&&y>=RY&&y<RY+RH)dot(x,y,c,a);};
+    for(int c=0;c<5;++c)for(int r=0;r<3;++r){const int i=c*3+r;
+      const Cell& cell122=visible[i];
+      if(cell122.symbol!=Symbol::Wild)continue;
+      if(r&&((joins122&(3u<<(i-1)))==(3u<<(i-1))))continue;
+      const unsigned rows122=r<2&&((joins122&(3u<<i))==(3u<<i))?(r==0&&(joins122&(1u<<(i+2)))?3:2):1;
+      uint32_t clock122=0;bool winning122=false;
+      if(rows122>1)clock122=phase==Phase::Expand?now-phaseAt:lineClockValid?lineElapsed(now):667;
+      else {winning122=cell122.highlight&&(phase!=Phase::Expand||now-phaseAt>=650);clock122=winning122?((phase==Phase::FreeIntro||phase==Phase::FreeCounter||spinAwardPhase()||(phase==Phase::Ready&&spinAward.finished))?now-lineDisplayAt:activeLineIndex(now)>=0?lineElapsed(now)%kPaylinePeriodMs:now-readyAt):now;if(winning122&&lineDisplayPhase())clock122=lineElapsed(now);}
+      const int x122=RX+c*TW,y122=RY+r*TH;
+      if(rows122==1||clock122>=667){if(r)sage_crown122::draw(pa::sageCrown(rows122,clock122,winning122),x122,y122,[](int){return 255u;},paint122);continue;}
+      // Match the CURRENT reconstructed merge bank's sampled position/reveal.
+      // This is not a new claim about vendor transition alpha/timers.
+      constexpr unsigned times122[]={0,167,292,333,375,417,458,500,542,583,625,667};unsigned frame122=0;while(frame122+1<12&&clock122>=times122[frame122+1])++frame122;
+      const unsigned sample122=times122[frame122],motion122=sample122>(rows122==2?42u:0u)?sample122-(rows122==2?42u:0u):0u;
+      constexpr unsigned motionTimes122[]={292,333,375,417,458,500,542,583,625};constexpr float positions122[]={70,70,62,49,37,20,7,0,0};
+      float position122=70;if(motion122>=625)position122=0;else for(unsigned k=0;k+1<9;++k)if(motion122>=motionTimes122[k]&&motion122<motionTimes122[k+1]){const float t=float(motion122-motionTimes122[k])/float(motionTimes122[k+1]-motionTimes122[k]);position122=positions122[k]+t*(positions122[k+1]-positions122[k]);break;}
+      position122*=float(rows122-1)/2.f;
+      const auto mix122=[&](int yy){if(motion122<=310)return 0u;if(motion122>=583)return 255u;const float v=(float(yy-y122)-position122+7.f)/14.f;return unsigned(std::lround(std::max(0.f,std::min(1.f,v))*255.f));};
+      if(motion122<=310){for(unsigned old122=0;old122<rows122;++old122)if(r+int(old122)>0)sage_crown122::draw(pa::sageCrown(1,0,false),x122,y122+int(old122)*TH,[](int){return 255u;},paint122);}
+      else {uint16_t oldRgb122[235];const auto& oldImage122=pa::sageCrown(1,0,false);std::memcpy(oldRgb122,oldImage122.rgb,sizeof(oldRgb122));const pa::Image oldCap122{47,5,oldRgb122,oldImage122.alpha,0};const auto& newCap122=position122<=0.f?pa::sageCrown(rows122,clock122,false):pa::sageCrown(1,0,true);
+        sage_crown122::transition(oldCap122,newCap122,x122,y122,rows122,y122+int(std::lround(position122)),r?RY:RY+3,mix122,paint122);
+      }
     }
   }
   // Measured winning Bell silhouettes cross both gold dividers. Submit the
@@ -1591,7 +1652,7 @@ void fullCollectionSweep(uint32_t elapsed,uint32_t fireDuration){
  entryBird(elapsed);
  if(elapsed>=feature_entry::fireDelayMs)fireWipe(elapsed-feature_entry::fireDelayMs,fireDuration);
 }
-void awardPanel(uint32_t elapsed){
+void legacyAwardPanel112(uint32_t elapsed){
  fill(18,29,204,76,BLACK,238);rect(20,31,200,72,0x9800);rect(22,33,196,68,0xfcc5);
  const bool green=elapsed>=feature_award::revealBurnAt+700;
  if(elapsed>=500){if(engine.presentation.grandAwarded)text("GRAND",120,41,16,green?0xf900:BRIGHT,1);
@@ -1605,6 +1666,45 @@ void awardPanel(uint32_t elapsed){
   drawPickupFlight(elapsed-feature_award::pickupAt,RX+(cell/3+.5f)*TW,RY+(cell%3+.5f)*TH,120,83);
  }
 }
+int wideCashWidth112(const char* value,unsigned size){int width=0;for(auto p=(const unsigned char*)value;*p;++p)width+=(pmoney::glyph(size,*p).advance*15+4)/8;return width;}
+void wideCashText112(const char* value,int right,int y,unsigned size,uint16_t color){
+ int x=right-wideCashWidth112(value,size);const auto* alpha=pmoney::pixels(size);
+ for(auto p=(const unsigned char*)value;*p;++p){const auto& g=pmoney::glyph(size,*p);const unsigned width=(g.w*15+7)/8;
+  for(unsigned row=0;row<g.h;++row)for(unsigned col=0;col<width;++col){
+   const int q=int((col*2+1)*8*128/15)-128;int source=q/256;if(q<0&&q%256)--source;const unsigned f=unsigned(q-source*256);
+   auto at=[&](int column){return column>=0&&column<int(g.w)?alpha[g.offset+row*g.w+unsigned(column)]:0;};
+   const unsigned a=(unsigned(at(source))*(256-f)+unsigned(at(source+1))*f+128)>>8;if(a)dot(x+int(col),y+int(row),color,a);
+  }
+  x+=(g.advance*15+4)/8;
+ }
+}
+// Major-only authored layout study. Grand deliberately retains the exact old
+// path: its winning title/transition was not qualified in source104.
+void awardPanel(uint32_t elapsed){
+ if(engine.presentation.grandAwarded){legacyAwardPanel112(elapsed);return;}
+ auto paint=[](int x,int y,uint16_t color,unsigned alpha){dot(x,y,color,alpha);};
+ authored_major112::vignette(paint);
+ if(elapsed>=500)authored_major112::title(elapsed,elapsed>=feature_award::revealBurnAt+700,paint);
+ authored_major112::amountFrame(elapsed,paint);
+ if(elapsed>=feature_award::amountAt){
+  const auto amount=money(namedAward());unsigned size=20;
+  for(unsigned candidate:{20u,16u,10u,7u}){size=candidate;if(wideCashWidth112(amount.c_str(),size)<=184)break;}
+  const int right=120+wideCashWidth112(amount.c_str(),size)/2,y=86-int(size)/2;
+  wideCashText112(amount.c_str(),right+1,y+2,size,BLACK);
+  for(int dx=-1;dx<=1;++dx)for(int dy=-1;dy<=1;++dy)if(dx||dy)wideCashText112(amount.c_str(),right+dx,y+dy,size,0xcdca);
+  wideCashText112(amount.c_str(),right,y,size,0x2548);
+ }
+ // Existing phase clocks and moving Phoenix paths remain untouched. The
+ // amount is green when it first appears, independently of the title fill.
+ if(elapsed>=feature_award::revealBurnAt&&elapsed<feature_award::revealEnd)fireBand(22,34,196,66,elapsed-feature_award::revealBurnAt,feature_award::revealEnd-feature_award::revealBurnAt);
+ if(elapsed>=feature_award::exitBurnAt)fireBand(22,34,196,66,elapsed-feature_award::exitBurnAt,feature_award::durationMs-feature_award::exitBurnAt);
+ if(elapsed>=feature_award::birdAt&&elapsed<feature_award::pickupAt)collectBird(elapsed-feature_award::birdAt);
+ if(elapsed>=feature_award::pickupAt&&elapsed<feature_award::pickupAt+collection_pickup::flightMs){
+  int cell=7;for(int i=0;i<15;++i)if(phoenixCell(visible[i])&&visible[i].kind==phoenix::PrizeKind::Major){cell=i;break;}
+  drawPickupFlight(elapsed-feature_award::pickupAt,RX+(cell/3+.5f)*TW,RY+(cell%3+.5f)*TH,120,83);
+ }
+}
+
 void drawHoldWinner(uint32_t now){
  const auto& im=pa::awardWinner();if(!im.rgb)return;
  // One existing collection epoch spans Collect, WinTransfer and ReturnWipe.
@@ -1683,9 +1783,14 @@ void drawMath(){
    text(range,214,y,8,focused?BRIGHT:WHITE,2);
   }else text(i==6?"ABOUT MODEL RETURN":"BACK",24,y,8,focused?BRIGHT:WHITE);
  }
- text("* SAVED; LOCAL MODEL; CASINO RTP UNKNOWN",120,113,6,BRIGHT,1);text("BLACK: NEXT   BLUE: SELECT",120,121,6,WHITE,1);
+ text("* SESSION; LOCAL MODEL; CASINO RTP UNKNOWN",120,113,6,BRIGHT,1);text("BLACK: NEXT   BLUE: SELECT",120,121,6,WHITE,1);
 }
-void drawService(){if(storagePause!=UiCheckpointPause::None){panel("CHECKPOINT PAUSED");text(storagePause==UiCheckpointPause::UnknownBank?"READING STORED GAME":"SAVING EXACT GAME RECORD",120,48,8,WHITE,1);text("PLAY PAUSED - NO RESET",120,65,8,BRIGHT,1);text("RETRYING STORAGE SAFELY",120,81,7,WHITE,1);text("USB STATUS / EXPORT AVAILABLE",120,100,7,BRIGHT,1);return;}panel(checkpointBlocked?"CHECKPOINT SERVICE":"CAPACITY SERVICE");text(checkpointBlocked&&!outcomeCheckpointHandler?"STORAGE SETUP INCOMPLETE":"GAME RECORD PRESERVED",120,48,9,WHITE,1);text("EXPORT CHECKPOINT BY USB",120,65,8,BRIGHT,1);text("NO RESET OR AUTOMATIC RETRY",120,81,7,WHITE,1);text("SERVICE REQUIRED TO CONTINUE",120,100,7,BRIGHT,1);}
+void drawService(){
+ if(!engine.randomHealthy()){panel("RANDOM SOURCE ERROR");text("PLAY STOPPED",120,49,10,BRIGHT,1);text("NO OUTCOME WAS COMMITTED",120,69,7,WHITE,1);text("RESTART FOR A NEW SESSION",120,93,7,WHITE,1);return;}
+ panel(checkpointBlocked||storagePause!=UiCheckpointPause::None?"SESSION SETUP ERROR":"GAME CAPACITY LIMIT");
+ text("PLAY STOPPED",120,49,10,BRIGHT,1);text("THIS SESSION IS IN MEMORY ONLY",120,70,7,WHITE,1);text("RESTART FOR A NEW SESSION",120,94,7,WHITE,1);
+}
+
 #include "cabinet_wager.inc"
 void drawBet(){
  const auto& coin=cabinetCoin();const auto& row=cabinetRow();
@@ -1820,6 +1925,32 @@ bool opaqueSceneFire(uint32_t now){
  // AFTER the transition (coins and menus) still compose in their old order.
  memcpy(pixels,preparedEffects.fireAt(age),sizeof(pixels));return true;
 }
+// Diagnostic-only alternate pipeline. Normal rasterScene below stays byte-exact.
+void drawSceneBackdrop103(){
+ const auto& bg=pa::backdrop;
+ const bool opaque=[](const pa::Image& image){return image.rgb&&!image.alpha&&!image.key;}(bg);
+ if(phase==Phase::Spin||dotClipTop!=0||dotClipBottom!=H||!opaque||bg.w!=W||bg.h!=H||
+    RW!=5*TW||RH!=3*TH||RY<14||RY+RH>122||RX<0||RX+RW>W||
+    !pa::background.rgb||pa::background.alpha||pa::background.key||pa::background.w!=TW||pa::background.h!=TH||
+    !pa::holdBackground.rgb||pa::holdBackground.alpha||pa::holdBackground.key||pa::holdBackground.w!=TW||pa::holdBackground.h!=TH||
+    !pa::footer.rgb||pa::footer.alpha||pa::footer.key||pa::footer.w!=W||pa::footer.h!=H-122){image(bg,0,0);return;}
+ for(int y=14;y<RY;++y)memcpy(pixels+y*W,bg.rgb+y*W,W*sizeof(uint16_t));
+ for(int y=RY;y<RY+RH;++y){
+  memcpy(pixels+y*W,bg.rgb+y*W,size_t(RX)*sizeof(uint16_t));
+  memcpy(pixels+y*W+RX+RW,bg.rgb+y*W+RX+RW,size_t(W-RX-RW)*sizeof(uint16_t));
+ }
+ for(int y=RY+RH;y<122;++y)memcpy(pixels+y*W,bg.rgb+y*W,W*sizeof(uint16_t));
+}
+#if defined(UI_HOST_TEST) && defined(UI_BACKDROP_AB_TEST_HOOK)
+enum class BackdropABTestStage115:uint8_t {Before,After};
+void (*backdropABTestObserver115)(unsigned,bool,uint32_t,BackdropABTestStage115)=nullptr;
+void* (*backdropABTestAlloc115)(size_t)=nullptr;
+#endif
+#if defined(UI_HOST_TEST) && defined(UI_MAJOR_BENCH_TEST_HOOK)
+enum class MajorBenchStage119:uint8_t {Before,After};
+void (*majorBenchObserver119)(unsigned,uint32_t,uint32_t,MajorBenchStage119)=nullptr;
+#endif
+void rasterSceneBackend103(uint32_t now,bool fastBackdrop){if(storagePause!=UiCheckpointPause::None){fill(0,0,W,H,native_title::background);drawService();return;}if(!opaqueSceneFire(now)){if(fastBackdrop)drawSceneBackdrop103();else image(pa::backdrop,0,0);drawHeader(now);drawReels(now);drawFooter();drawTransition(now);}if(fountainActive&&view==View::Game)coinShower(now-fountainAt);if(view==View::Menu)drawMenu();else if(view==View::Bet)drawBet();else if(view==View::Rules)drawRules();else if(view==View::Options)drawOptions();else if(view==View::Reset)drawReset();else if(view==View::Lucky)drawLucky();else if(view==View::Sound)drawSound();else if(view==View::Volume)drawVolume();else if(view==View::Math)drawMath();else if(view==View::Service)drawService();if(storagePause!=UiCheckpointPause::None)drawService();if(*statusLine&&storagePause==UiCheckpointPause::None&&view==View::Game&&phase==Phase::Ready){fill(33,109,174,11,0x0000,225);text(statusLine,120,111,7,BRIGHT,1);}}
 void rasterScene(uint32_t now){if(storagePause!=UiCheckpointPause::None){fill(0,0,W,H,native_title::background);drawService();return;}if(!opaqueSceneFire(now)){image(pa::backdrop,0,0);drawHeader(now);drawReels(now);drawFooter();drawTransition(now);}if(fountainActive&&view==View::Game)coinShower(now-fountainAt);if(view==View::Menu)drawMenu();else if(view==View::Bet)drawBet();else if(view==View::Rules)drawRules();else if(view==View::Options)drawOptions();else if(view==View::Reset)drawReset();else if(view==View::Lucky)drawLucky();else if(view==View::Sound)drawSound();else if(view==View::Volume)drawVolume();else if(view==View::Math)drawMath();else if(view==View::Service)drawService();if(storagePause!=UiCheckpointPause::None)drawService();if(*statusLine&&storagePause==UiCheckpointPause::None&&view==View::Game&&phase==Phase::Ready){fill(33,109,174,11,0x0000,225);text(statusLine,120,111,7,BRIGHT,1);}}
 #include "reference_effect_v0258.h"
 void render(uint32_t now){uint32_t begin=micros();rasterScene(now);M5.Display.pushImage(0,0,W,H,pixels);lastDraw=now;dirty=false;lastDrawUs=micros()-begin;maxDrawUs=std::max(maxDrawUs,lastDrawUs);++frameCount;}
@@ -2018,7 +2149,8 @@ void finishPhase(){switch(phase){
 ready();break;
   default:ready();break;}}
 void prepareStrips(){
- uint32_t seed=uint32_t(engine.state.actions*0x9e3779b9u)^uint32_t(engine.state.seed)^0x12345678;
+ // Public deterministic cosmetic salt only. Financial draws never use this stream.
+ uint32_t seed=uint32_t(engine.state.actions*0x9e3779b9u)^0x12345678;
  const bool twin=engine.presentation.twinSpin;
  for(int c=0;c<5;++c){
   // Native Twin stops are left pair, centre, right pair,900ms apart.
@@ -2075,7 +2207,7 @@ const auto& p=engine.presentation;displayMeter=p.meterBefore;displayQueuedHolds=
     // stagger than the base game's170ms. This500ms camera-fitted cadence is
     // presentation only, not a recovered vendor timer or weighted reel.
     for(int c=0;c<5;++c)reelMs[c]=holdReelDuration(c);
-    uint32_t seed=uint32_t(engine.state.seed)^uint32_t(engine.state.actions*0x85ebca6bu)^0x484f4c44u;
+    uint32_t seed=uint32_t(engine.state.actions*0x85ebca6bu)^0x484f4c44u; // Cosmetic passing symbols only.
     for(int i=0;i<15;++i){
       const Cell initial=phoenixCell(previous[i])||!holdBackdropCaptured?previous[i]:holdBase[i];
       for(auto& cell:holdStrips[i]){
@@ -2106,8 +2238,8 @@ bool outcomeCheckpointOwned59(){
  uiBlockCheckpoint();return false; // wiring fault: service, not a retry claim
 }
 bool checkpointPresentedOutcome59(){
- // No frame is rendered here. The prepared scene is bound to the already
- // committed Engine result; synthetic QA presentAction calls do not enter.
+ // No frame is rendered here. The RAM session owner acknowledges the already
+ // committed Engine result; no durable-storage claim is made.
  const uint32_t wallAt=uiWallMillis(),gameAt=wallAt-uiClockOffset;
  const bool durable=outcomeCheckpointHandler&&outcomeCheckpointHandler();
  if(storagePause==UiCheckpointPause::None)uiClockOffset+=uint32_t(uiWallMillis()-wallAt);
@@ -2146,6 +2278,10 @@ void applyReturnSelection86(){
  if(durable&&!runtimeFinancialBlocked()&&returnSelector86.pending)finishReturnSelection86();
 }
 
+void enterRandomFault125(){
+ if(!randomFailureShown125){autoPlay=false;winCuePending=false;stopReelSound();requestFeatureMusic(FeatureMusicPart::Off);audioStop();randomFailureShown125=true;}
+ view=View::Service;statusLine[0]=0;dirty=true;
+}
 void action(){if(!initialized||runtimeFinancialBlocked()||phase!=Phase::Ready||view!=View::Game)return;
   if(!outcomeCheckpointOwned59())return;
   if(wisdomEntry30.stage==wisdom_ctrl30::Stage::Accepted)awaitingBonusResume=false;
@@ -2163,13 +2299,13 @@ void action(){if(!initialized||runtimeFinancialBlocked()||phase!=Phase::Ready||v
   if(engine.canLuckyChance()){if(!referenceLocalMath()){autoPlay=false;snprintf(statusLine,sizeof(statusLine),"ADD CREDITS FOR CUSTOM PLAY");dirty=true;}else offerLucky();return;}
   if(engine.state.mode==Mode::Free)requestFeatureMusic(FeatureMusicPart::TwinFree);
   copy(previous,visible);const bool wasHold=engine.state.mode==Mode::Hold;
-  if(!engine.action()){noteCapacityFailure(phoenix_capacity::Attempt::Normal);autoPlay=false;snprintf(statusLine,sizeof(statusLine),"NOT ENOUGH CREDITS - HOLD BLACK FOR MENU");dirty=true;return;}
+  if(!engine.action()){if(!engine.randomHealthy()){enterRandomFault125();return;}noteCapacityFailure(phoenix_capacity::Attempt::Normal);autoPlay=false;snprintf(statusLine,sizeof(statusLine),"NOT ENOUGH CREDITS - HOLD BLACK FOR MENU");dirty=true;return;}
   if(wasHold)holdOpening31.clear();
   holdView=wasHold;
   presentAction();
   checkpointPresentedOutcome59();
 }
-void playLucky(){if(runtimeFinancialBlocked()||!referenceLocalMath()||!outcomeCheckpointOwned59())return;copy(previous,visible);view=View::Game;statusLine[0]=0;if(!engine.tryLuckyChance()){noteCapacityFailure(phoenix_capacity::Attempt::Lucky);dirty=true;return;}if(engine.presentation.luckyWon)holdView=false;presentAction();checkpointPresentedOutcome59();}
+void playLucky(){if(runtimeFinancialBlocked()||!referenceLocalMath()||!outcomeCheckpointOwned59())return;copy(previous,visible);view=View::Game;statusLine[0]=0;if(!engine.tryLuckyChance()){if(!engine.randomHealthy()){enterRandomFault125();return;}noteCapacityFailure(phoenix_capacity::Attempt::Lucky);dirty=true;return;}if(engine.presentation.luckyWon)holdView=false;presentAction();checkpointPresentedOutcome59();}
 
 void openCabinetWager(){
  cabinetMenuRequested=false;cabinetDenom=engine.state.coinValue;cabinetLines=engine.state.lineCount;cabinetFocus=0;
@@ -2183,13 +2319,18 @@ void chooseMenu(){cueButton();switch(menuItem){case 0:rulesPage=0;view=View::Rul
 }
 
 void uiSetOutcomeCheckpointHandler(UiOutcomeCheckpointHandler handler){outcomeCheckpointHandler=handler;}
-void uiInit(uint64_t seed,bool seedIsExact){returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;holdBackdropCaptured=false;holdStripStartsBlank=false;spinSounds=landingSounds=true;soundVolume=192;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;if(!seed&&!seedIsExact)seed=(uint64_t(esp_random())<<32)|esp_random();engine.reset(seed);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
+bool uiInitFresh(phoenix::random::Service& source){randomFailureShown125=false;returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;holdBackdropCaptured=false;holdStripStartsBlank=false;spinSounds=landingSounds=true;soundVolume=192;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;const bool randomReady125=engine.initializeFresh(source,1000);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
  fire_alpha::init();
  initHoldMaterial();
 #ifndef UI_HOST_TEST
   audioRegisterReferenceCues();
 #endif
+ if(randomReady125)prepareCustomRound(); // Own the default future-Grand tuple at the fresh closed boundary.
+ if(!randomReady125){autoPlay=false;view=View::Service;dirty=true;}
+ return randomReady125;
 }
+bool uiRandomHealthy(){return initialized&&engine.randomHealthy();}
+uint8_t uiRandomFault(){return uint8_t(engine.randomFault());}
 bool uiPrepareEffects(){preparePickupSamples();const bool ready=prepareEffectFrames();if(!coin_sampler::info().ready){const uint32_t begin=micros();coin_sampler::prepare();coinMapsBuildUs=micros()-begin;}return ready;}
 UiEffectCache uiEffectCache(){return {effectsCacheReady,effectsCacheReady?uint32_t(effect_frames::bytes):0,effect_frames::fireCount,effect_frames::birdCount,effect_frames::rate,effectsCacheBuildUs,fire_alpha::verified,fire_alpha::verificationChecks,fire_alpha::data::boundaryFNV,pickupSamples.ready(),pickupSamples.ready()?uint32_t(pickup_frames::bytes):0,pickupSamples.hitCount(),pickupSamples.missCount()};}
 UiEntryBench uiBenchmarkEntry(){
@@ -2225,6 +2366,8 @@ UiEntryBench uiBenchmarkEntry(){
  held->captured=holdBackdropCaptured;held->startsBlank=holdStripStartsBlank;held->stopped=lastArrived;held->quickStopped=spinQuickStopped;held->landingCoalesced=spinLandingCoalesced;
  memcpy(shown,pixels,sizeof(pixels));Cell kept[15];memcpy(kept,visible,sizeof(visible));
  const auto priorPhase=phase;const uint32_t priorAt=phaseAt;const bool priorMeter=holdEntryMeter;
+ const int priorClipTop=dotClipTop,priorClipBottom=dotClipBottom;
+ const bool priorGrandAwarded119=engine.presentation.grandAwarded;
  const bool priorNamed=collectionNamedDone,priorFountain=fountainActive,priorContinuous=fountainContinuous,priorFountainMusic=fountainAwardMusic,priorRetrigger=freeIntroIsRetrigger;const uint32_t priorFountainAt=fountainAt,priorStop=fountainStopMs,priorMusicAt=fountainMusicAt;const uint16_t priorFreeTotal=freeIntroOldTotal;const auto priorSpinAward=spinAward;const auto priorHoldOpening=holdOpening31;const auto priorWisdom=wisdomEntry30;const auto priorReturnSelector=returnSelector86;
  auto engineHash=[](){const auto* b=reinterpret_cast<const uint8_t*>(&engine);uint32_t h=2166136261u;for(size_t i=0;i<sizeof(engine);++i)h=(h^b[i])*16777619u;return h;};
  auto rendererHash=[](){uint32_t h=2166136261u;auto add=[&](const void* p,size_t n){const auto* b=static_cast<const uint8_t*>(p);while(n--)h=(h^*b++)*16777619u;};
@@ -2475,19 +2618,86 @@ UiEntryBench uiBenchmarkEntry(){
   auto& timing=result.fixtures[15];++timing.frames;timing.totalUs+=used;
   if(used>timing.maxUs){timing.maxUs=used;timing.maxElapsedMs=sample*40;}
  }
+ // Append80paired measurements after the unchanged1015fixtures and their
+ //1171saved-panel transfers. Only these diagnostic calls can select fastBackdrop.
+ // Each pair freezes one scene/now and restarts both paths from the saved RAM.
+ uint16_t* backdropReference=nullptr;
+#if defined(UI_HOST_TEST) && defined(UI_BACKDROP_AB_TEST_HOOK)
+ if(backdropABTestAlloc115)backdropReference=static_cast<uint16_t*>(backdropABTestAlloc115(sizeof(pixels)));
+ else backdropReference=static_cast<uint16_t*>(std::malloc(sizeof(pixels)));
+#elif defined(UI_HOST_TEST)
+ backdropReference=static_cast<uint16_t*>(std::malloc(sizeof(pixels)));
+#else
+ backdropReference=static_cast<uint16_t*>(ps_malloc(sizeof(pixels)));
+#endif
+ if(!backdropReference)result.backdropAB.oom=true;
+ else {
+  auto& ab=result.backdropAB;
+  for(unsigned sample=0;sample<80;++sample){
+   const uint32_t now=millis();const unsigned elapsed=collectionLead()+sample*40;phaseAt=now-elapsed;
+   auto pass=[&](bool fast){
+    memcpy(pixels,shown,sizeof(pixels));dotClipTop=0;dotClipBottom=H;
+#if defined(UI_HOST_TEST) && defined(UI_BACKDROP_AB_TEST_HOOK)
+    if(backdropABTestObserver115)backdropABTestObserver115(sample,fast,now,BackdropABTestStage115::Before);
+#endif
+    const uint32_t begin=micros();rasterSceneBackend103(now,fast);const uint32_t used=micros()-begin;
+    if(fast){ab.fastTotalUs+=used;ab.fastMaxUs=std::max(ab.fastMaxUs,used);}
+    else {ab.fullTotalUs+=used;ab.fullMaxUs=std::max(ab.fullMaxUs,used);}
+#if defined(UI_HOST_TEST) && defined(UI_BACKDROP_AB_TEST_HOOK)
+    if(backdropABTestObserver115)backdropABTestObserver115(sample,fast,now,BackdropABTestStage115::After);
+#endif
+   };
+   const bool fastFirst=bool(sample&1u);
+   if(fastFirst)++ab.fastFirstPairs;else ++ab.fullFirstPairs;
+   pass(fastFirst);memcpy(backdropReference,pixels,sizeof(pixels));pass(!fastFirst);
+   bool mismatch=false;
+   for(unsigned i=0;i<W*H;++i)if(pixels[i]!=backdropReference[i]){
+    ++ab.mismatchPixels;mismatch=true;
+    if(ab.firstMismatchSample<0){ab.firstMismatchSample=int(sample);ab.firstMismatchAt=int(i);}
+   }
+   ab.comparedPixels+=W*H;ab.mismatchPairs+=mismatch;++ab.pairs;
+   const uint32_t panelBegin=micros();M5.Display.pushImage(0,0,W,H,shown);const uint32_t panelUsed=micros()-panelBegin;
+   ab.panelTotalUs+=panelUsed;ab.panelMaxUs=std::max(ab.panelMaxUs,panelUsed);
+  }
+  ab.ran=true;std::free(backdropReference);
+ }
+ // Measure the new Major panel separately after the original fixture and AB
+ // prefixes. Only presentation cells and the Grand-routing bit are temporary;
+ // no action, wager, financial award, audio request or save is submitted.
+ constexpr unsigned majorPoses119[]={0,499,500,1000,5000,5100,6500,7899,7900,8500,8600,9500,10000,10699,10700,11400,12699,12700,13000,15000,16899,16900,18000,18399};
+ constexpr unsigned cash119[]={50,50,50,25,125,0,25,25,25,50,0,50,0,0,25};
+ for(unsigned i=0;i<15;++i){visible[i]=Cell{};visible[i].symbol=cash119[i]?Symbol::Phoenix:Symbol::Nine;if(cash119[i])visible[i].prize=int64_t(cash119[i])*5;}
+ visible[10].symbol=Symbol::Phoenix;visible[10].kind=phoenix::PrizeKind::Major;visible[10].prize=57204;
+ engine.presentation.grandAwarded=false;phase=Phase::Jackpot;holdView=true;fountainContinuous=false;
+ for(unsigned sample=0;sample<sizeof(majorPoses119)/sizeof(*majorPoses119);++sample){
+  const uint32_t elapsed=majorPoses119[sample],now=millis();phaseAt=now-elapsed;
+  fountainActive=elapsed>=feature_award::fountainAt;fountainAt=phaseAt+feature_award::fountainAt;
+  memcpy(pixels,shown,sizeof(pixels));dotClipTop=0;dotClipBottom=H;
+#if defined(UI_HOST_TEST) && defined(UI_MAJOR_BENCH_TEST_HOOK)
+  if(majorBenchObserver119)majorBenchObserver119(sample,elapsed,now,MajorBenchStage119::Before);
+#endif
+  const uint32_t begin=micros();rasterScene(now);const uint32_t used=micros()-begin;
+  auto& timing=result.majorTiming;++timing.frames;timing.rendererTotalUs+=used;timing.rendererMaxUs=std::max(timing.rendererMaxUs,used);
+#if defined(UI_HOST_TEST) && defined(UI_MAJOR_BENCH_TEST_HOOK)
+  if(majorBenchObserver119)majorBenchObserver119(sample,elapsed,now,MajorBenchStage119::After);
+#endif
+  const uint32_t panelBegin=micros();M5.Display.pushImage(0,0,W,H,shown);const uint32_t panelUsed=micros()-panelBegin;
+  timing.panelTotalUs+=panelUsed;timing.panelMaxUs=std::max(timing.panelMaxUs,panelUsed);
+ }
+ result.majorTiming.ran=true;engine.presentation.grandAwarded=priorGrandAwarded119;
  memcpy(target,held->target,sizeof(target));memcpy(previous,held->previous,sizeof(previous));
  memcpy(holdBase,held->backdrop,sizeof(holdBase));memcpy(holdStrips,held->strips,sizeof(holdStrips));
  memcpy(reelMs,held->reelMs,sizeof(reelMs));heldMask=held->heldMask;holdView=held->holdView;
  lastArrived=held->stopped;spinQuickStopped=held->quickStopped;spinLandingCoalesced=held->landingCoalesced;
  holdBackdropCaptured=held->captured;holdStripStartsBlank=held->startsBlank;held->~HoldRenderBackup();std::free(held);
  memcpy(visible,kept,sizeof(visible));phase=priorPhase;phaseAt=priorAt;holdEntryMeter=priorMeter;
- memcpy(pixels,shown,sizeof(pixels));std::free(shown);dirty=true;
+ memcpy(pixels,shown,sizeof(pixels));std::free(shown);dirty=true;dotClipTop=priorClipTop;dotClipBottom=priorClipBottom;
  result.afterHash=engineHash();result.unchanged=result.beforeHash==result.afterHash;
  holdOpening31=priorHoldOpening;wisdomEntry30=priorWisdom;returnSelector86=priorReturnSelector;collectionNamedDone=priorNamed;fountainActive=priorFountain;fountainAt=priorFountainAt;fountainContinuous=priorContinuous;fountainAwardMusic=priorFountainMusic;fountainMusicAt=priorMusicAt;fountainStopMs=priorStop;spinAward=priorSpinAward;freeIntroIsRetrigger=priorRetrigger;freeIntroOldTotal=priorFreeTotal;
  result.rendererAfterHash=rendererHash();result.rendererUnchanged=result.rendererBeforeHash==result.rendererAfterHash;
  result.ran=true;return result;
 }
-void uiFrame(){uint32_t now=millis();
+void uiFrame(){if(initialized&&!engine.randomHealthy()){enterRandomFault125();if(dirty)render(millis());return;}uint32_t now=millis();
  if(storagePause==UiCheckpointPause::None&&!returnSelector86.pending&&returnSelector86.recoveryFence&&!M5.BtnA.isPressed()&&!M5.BtnB.isPressed())returnSelector86.recoveryFence=false;
   if(storagePause!=UiCheckpointPause::None){if(dirty)render(now);return;}
   updateFeatureSounds(now);
@@ -2746,21 +2956,6 @@ void uiSetScreenFlipped(bool flipped){screenFlipped=flipped;M5.Display.setRotati
 void uiFlipScreen(){if(uiReturnSelectionInputFenced())return;uiSetScreenFlipped(!screenFlipped);}
 bool uiScreenFlipped(){return screenFlipped;}
 void uiToggleAuto(){if(uiReturnSelectionInputFenced())return;if(!initialized||runtimeFinancialBlocked())return;if(view==View::Volume){auditionSound(false);return;}if(view!=View::Game)return;autoPlay=!autoPlay;if(autoPlay){awaitingBonusResume=false;view=View::Game;autoAt=millis()+250;}cueButton();dirty=true;}
-size_t uiSave(void* destination,size_t capacity){return engine.save(destination,capacity);}
-size_t uiSaveScene(void* destination,size_t capacity,const void* game,size_t gameLength){
- phoenix_scene::Scene scene;scene.holdGrid=holdView;scene.backdropCaptured=holdBackdropCaptured;
- if(holdBackdropCaptured)copy(scene.backdrop,holdBase);
- const uint32_t now=millis();for(unsigned i=0;i<15;++i)scene.phoenixPhases[i]=uint16_t(phoenixRenderClock(i,now));
- return phoenix_scene::encode(scene,game,gameLength,destination,capacity);
-}
-bool uiRestoreScene(const void* source,size_t length,const void* game,size_t gameLength){
- phoenix_scene::Scene scene;if(!phoenix_scene::decode(source,length,game,gameLength,scene))return false;
- wisdomEntry30={};
- holdView=engine.state.mode==Mode::Hold||scene.holdGrid;holdBackdropCaptured=scene.backdropCaptured;copy(holdBase,scene.backdrop);
- if(scene.hasPhoenixPhases){memcpy(phoenixPhases,scene.phoenixPhases,sizeof(phoenixPhases));phoenixClockAt=millis();phoenixPhasesRestored=true;}else{memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixClockAt=0;phoenixPhasesRestored=false;}
- dirty=true;return true;
-}
-bool uiRestore(const void* source,size_t length){if(!engine.restore(source,length))return false;returnSelector86={};wisdomEntry30={};holdOpening31.clear();if(engine.state.mode==Mode::Hold)holdOpening31.resume();cabinetMenuRequested=false;initializeMathPreference();capacityService.clear();checkpointBlocked=false;collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lastArrived=-1;lineClockValid=false;readyAt=millis();holdBackdropCaptured=false;copy(visible,engine.state.mode==Mode::Hold?engine.state.holdCells:engine.state.cells);copy(target,visible);copy(previous,visible);holdView=engine.state.mode==Mode::Hold;displayBank=engine.state.roundOpen?engine.state.balance-engine.state.roundPayout:engine.state.balance;displayWin=engine.state.roundPayout;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;winFrom=winTo=displayWin;view=View::Game;phase=Phase::Ready;autoPlay=false;awaitingBonusResume=engine.state.mode!=Mode::Base;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;autoAt=millis()+1800;dirty=true;return true;}
 void uiSetSoundPreferences(bool spin,bool landings,uint8_t volume){spinSounds=spin;landingSounds=landings;soundVolume=volume;
 #ifndef UI_HOST_TEST
  audioSetSpinEnabled(spin);audioSetLandingsEnabled(landings);audioSetVolume(volume);
@@ -2792,25 +2987,6 @@ String uiSnapshot(){char b[1500];snprintf(b,sizeof(b),"{\"theme\":\"Confucius Sa
 uint32_t uiRuntimeRevision(){return runtimeRevision;}
 bool uiCheckpointBlocked(){return checkpointBlocked;}
 void uiBlockCheckpoint(){checkpointBlocked=true;enterService();}
-size_t uiSaveCheckpoint(void*target,size_t capacity,uint64_t generation){
- auto&game=checkpointGame;auto&scene=checkpointScene;auto&service=checkpointService;
- const size_t gn=engine.save(game,sizeof(game));if(!gn)return 0;
- if(!checkpointProbe.restore(game,gn))return 0;
- const size_t sn=uiSaveScene(scene,sizeof(scene),game,gn);if(!sn||sn>sizeof(scene))return 0;
- const size_t cn=capacityService.active()?capacityService.encode(game,gn,service,sizeof(service)):0;if(capacityService.active()&&cn!=phoenix_capacity::recordBytes)return 0;
- return checkpoint_bundle::encode({{game,gn},{scene,sn},{mathPreference,sizeof(mathPreference)},{service,cn},generation},target,capacity);
-}
-bool uiRestoreCheckpoint(const void*source,size_t length,uint64_t&generation){
- checkpoint_bundle::View record;if(!checkpoint_bundle::decode(source,length,record))return false;
- auto&candidate=checkpointProbe;if(!candidate.restore(record.game.bytes,record.game.length))return false;
- phoenix_scene::Scene scene;if(record.scene.length&&!phoenix_scene::decode(record.scene.bytes,record.scene.length,record.game.bytes,record.game.length,scene))return false;
- static_grand::Preference selection;uint32_t storedModel=0;if(!static_grand::parsePreference(record.preference.bytes,record.preference.length,selection,storedModel))return false;
- phoenix_capacity::Latch service;if(record.service.length&&!phoenix_capacity::Latch::decode(record.service.bytes,record.service.length,record.game.bytes,record.game.length,candidate,service))return false;
- if(!uiRestore(record.game.bytes,record.game.length))return false;
- if(record.scene.length&&!uiRestoreScene(record.scene.bytes,record.scene.length,record.game.bytes,record.game.length))return false;
- mathSelection=selection;mathStoredModel=storedModel;memcpy(mathPreference,record.preference.bytes,sizeof(mathPreference));capacityService=service;runtimeRevision=0;generation=record.generation;
- if(capacityService.active())enterService();return true;
-}
 String uiMathDiagnostic(){
  const auto selected=effectiveMathChoice();const static_grand::Entry*row=nullptr;
  const auto status=static_grand::resolve(*mathFamily,selected,static_grand::profile(engine),row);
@@ -2827,7 +3003,7 @@ String uiMathDiagnostic(){
  if(row){out+=String(",\"futureChosenGrandCredits\":")+integer(row->grandCredits).c_str();out+=String(",\"futureLocalLowerPpm\":")+row->lowReturnPpm+",\"futureLocalNumericalPointPpm\":"+row->estimateReturnPpm+",\"futureLocalUpperPpm\":"+row->highReturnPpm;}
  if(mathSelection.wire==static_grand::Wire::Legacy1){out+=String(",\"legacySelectorProvenanceOnly\":true,\"legacySelectorBps\":")+mathSelection.legacy.requestedBps+",\"legacySelectorWasCeiling\":"+(mathSelection.legacy.setting==legacy_static_grand::Setting::UpperCeiling?"true":"false");}
  out+=String(",\"capacityService\":")+(capacityService.active()?"true":"false")+",\"capacityMask\":"+capacityService.reasonMask()+",\"checkpointBlocked\":"+(checkpointBlocked?"true":"false");
- out+=",\"mathFamily\":\"";out+=math_runtime_identity::mathematicalFamily;out+="\",\"runtimeFingerprint\":\"";out+=math_runtime_identity::fingerprint;out+="\",\"runtimeAccepted\":";out+=math_runtime_identity::accepted?"true":"false";out+=",\"originalCasinoCalibration\":false}";return out;
+ out+=",\"mathFamily\":\"";out+=math_runtime_identity::mathematicalFamily;out+="\",\"runtimeFingerprint\":\"";out+=math_runtime_identity::fingerprint;out+="\",\"runtimeAccepted\":";out+=math_runtime_identity::accepted?"true":"false";out+=",\"returnEvidence\":\"ideal-uniform-local-model-only\",\"actualCSPRNGInfiniteHorizonReturnQualified\":false,\"originalCasinoCalibration\":false}";return out;
 }
 
 bool uiReturnSelectionInputFenced(){return returnSelector86.pending||returnSelector86.recoveryFence;}
@@ -2846,13 +3022,6 @@ void uiSetCheckpointPause(UiCheckpointPause reason){
  }else if(storagePause!=UiCheckpointPause::None){uiClockOffset+=uint32_t(wall-uiPauseWallAt);storagePause=reason;autoPlay=false;awaitingBonusResume=true;}
  if(reason==UiCheckpointPause::None&&returnSelector86.pending&&!runtimeFinancialBlocked())finishReturnSelection86();
  dirty=true;
-}
-bool uiRestoreLegacyCheckpoint(const void*game,size_t length,const void*scene,size_t sceneLength,bool scenePresent){
- if(!checkpointProbe.restore(game,length))return false;
- phoenix_scene::Scene decoded;
- if(scenePresent&&(!scene||!sceneLength||!phoenix_scene::decode(scene,sceneLength,game,length,decoded)))return false;
- if(!uiRestore(game,length))return false;
- return !scenePresent||uiRestoreScene(scene,sceneLength,game,length);
 }
 #pragma pop_macro("millis")
 

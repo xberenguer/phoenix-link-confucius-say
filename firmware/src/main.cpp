@@ -1,8 +1,5 @@
 #include <M5Unified.h>
-#include <Preferences.h>
 #include <esp_system.h>
-#include <esp_random.h>
-#include <bootloader_random.h>
 #include <esp_timer.h>
 #include <esp32-hal-psram.h>
 #include <driver/usb_serial_jtag.h>
@@ -12,12 +9,12 @@
 #include <cstring>
 
 #include "ui.h"
+#include "phoenix_random.h"
+#include "platform_entropy125.h"
 #include "sage_qa_api.h"
 #include <esp_heap_caps.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
-#include "checkpoint_store.h"
-#include "startup_nvs_guard.h"
 #include "build_version.h"
 #include "audio.h"
 #include "audio_music.h"
@@ -27,36 +24,16 @@
 
 namespace {
 constexpr uint32_t kHoldMs = 850;
-constexpr uint32_t kSaveDelayMs = 1000;
-constexpr uint32_t kCheckpointMs = 30000;
-constexpr size_t kMaxSnapshot = 3072;
 constexpr size_t kFrameBytes = 240u * 135u * sizeof(uint16_t);
 constexpr size_t kUsbPacketBytes = 64;
 constexpr size_t kUsbBudgetBytes = 512;
 constexpr size_t kPullChunkBytes = 512;
 constexpr uint32_t kFrameIdleMs = 2000;
 constexpr uint32_t kFrameDeadlineMs = 15000;
-Preferences preferences;
-uint8_t savedState[kMaxSnapshot];
-uint8_t savedCheckpoint[kUiCheckpointCapacity],nextCheckpoint[kUiCheckpointCapacity],checkpointReadback[kUiCheckpointCapacity];
-size_t savedCheckpointLength=0;uint64_t checkpointGeneration=0;
-bool checkpointRecordPresent=false,checkpointSaveBlocked=false;
-uint32_t seenRuntimeRevision=0;
-uint8_t checkpointExport[kUiCheckpointCapacity];size_t checkpointExportLength=0;uint32_t checkpointExportId=0;
-constexpr size_t kSceneBytes=kUiSceneCapacity;
-uint8_t savedScene[kSceneBytes];
-size_t savedSceneLength=0,storedSceneBytes=0;
-bool sceneRestoredAtBoot=false,sceneSaveFailed=false;
-size_t savedLength = 0;
-size_t storedSnapshotBytes = 0;
-bool restoredAtBoot = false;
 bool statusLedDisabled = false;
 bool powerButtonDefault=false;
 uint8_t powerButtonConfigBefore=0,powerButtonConfigAfter=0;
 uint8_t statusLedCfgBefore = 0, statusLedCfgAfter = 0;
-bool preferencesReady = false;
-bool pendingSave = false;
-bool saveFailed = false;
 bool aLongUsed = false;
 bool bLongUsed = false;
 bool chordSeen = false;
@@ -66,21 +43,8 @@ bool returnUsbDrain86=false;
 UiSageSceneTest lastSageTest;
 uint32_t lastSageJob=0,sageLargestBefore=0,sageLargestAfter=0,sageEntryHeadroom=0,sageMinimumBefore=0,sageMinimumAfter=0;
 GameBlackTap blackTap;
-uint8_t savedBrightness = 100;
-bool savedMuted = false;
-bool savedCreditsDisplay = false;
-bool savedScreenFlipped = false;
-bool savedSpinSounds = true, savedLandingSounds = true;
-uint8_t savedVolume = 192;
-bool savedAutoRefill=false;
-uint32_t savedLastAddedMinor=1000000,seenCreditRevision=0;
 uint32_t aStarted = 0;
 uint32_t bStarted = 0;
-uint32_t changedAt = 0;
-uint32_t lastSaveAt = 0;
-uint32_t lastSaveAttemptAt = 0;
-uint32_t lastOptionsAt = 0;
-uint64_t seenActionCount = 0;
 String usbOutput;
 size_t usbOutputSent = 0;
 char usbInput[32];
@@ -110,184 +74,16 @@ bool rebootPending = false;
 uint32_t rebootRequestedAt = 0;
 uint32_t rebootDrainedAt = 0;
 
-// Stored state is trusted only after error-distinguishing read and validation.
-// The existing nextCheckpoint/readback buffers are the immutable pending record.
-enum class StoragePhase:uint8_t {StartupRead,StartupWriter,Ready,Pending,InvalidStored,Conflict,Exhausted};
-StoragePhase storagePhase=StoragePhase::StartupRead;
-nvs_handle_t financialHandle=0;
-bool bankTrusted=false,pendingRecordReady=false,sawCanonical=false,sawStoredRecord=false,legacySceneMissing=false;
-size_t pendingCheckpointLength=0;
-esp_err_t lastStorageError=ESP_OK;
-uint32_t lastStorageRetryAt=0;
-const char*storageDetail="startup read required";
-
-void storageHold(StoragePhase phase,esp_err_t error,const char*detail){
- storagePhase=phase;lastStorageError=error;storageDetail=detail;
- uiSetCheckpointPause(bankTrusted?UiCheckpointPause::UndurableRecord:UiCheckpointPause::UnknownBank);
-}
-void saveState();
-void applyStoredOptions(){
- const uint8_t brightness=preferences.getUChar("brightness",100);if(brightness>=20)savedBrightness=brightness;
- savedMuted=preferences.getBool("muted",false);savedCreditsDisplay=preferences.getBool("credits",false);savedScreenFlipped=preferences.getBool("flipped",false);
- savedSpinSounds=preferences.getBool("spin-sfx",true);savedLandingSounds=preferences.getBool("land-sfx",true);savedVolume=preferences.getUChar("volume",192);
- savedAutoRefill=preferences.getBool("auto-refill",false);savedLastAddedMinor=preferences.getUInt("topup-amt",1000000);
- M5.Display.setBrightness(savedBrightness);audioSetMuted(savedMuted);uiSetScreenFlipped(savedScreenFlipped);uiSetCreditPreferences(savedAutoRefill,savedLastAddedMinor);uiSetCreditsDisplay(savedCreditsDisplay);uiSetSoundPreferences(savedSpinSounds,savedLandingSounds,savedVolume);
-}
-void observeLoadedCounters(){seenActionCount=uiActionCount();seenCreditRevision=uiCreditRevision();seenRuntimeRevision=uiRuntimeRevision();}
-
-bool recoverStoredBank(){
- // Once actions have produced a pending record, never reload an older bank.
- if(storagePhase==StoragePhase::Pending||storagePhase==StoragePhase::Conflict||storagePhase==StoragePhase::Exhausted)return false;
- lastStorageRetryAt=millis();nvs_handle_t reader=0;const auto opened=nvs_open("pl_confucius",NVS_READONLY,&reader);
- bool canonicalAbsent=false,fresh=false,legacy=false;size_t canonicalLength=0,legacyLength=0,sceneLength=0;bool scenePresent=false;
- checkpoint_store::Result canonical;
- if(opened==ESP_ERR_NVS_NOT_FOUND){canonicalAbsent=true;fresh=true;}
- else if(opened!=ESP_OK){storageHold(StoragePhase::StartupRead,opened,"storage open/read unavailable");return false;}
- else{
-  canonical=checkpoint_store::read(reader,checkpointReadback,sizeof(checkpointReadback));canonicalLength=canonical.length;
-  sawCanonical=sawCanonical||canonical.observedPresent;sawStoredRecord=sawStoredRecord||canonical.observedPresent;
-  if(canonical.state==checkpoint_store::Read::Error){nvs_close(reader);storageHold(StoragePhase::StartupRead,canonical.error,"canonical read unavailable");return false;}
-  if(canonical.state==checkpoint_store::Read::Invalid){nvs_close(reader);checkpointRecordPresent=true;checkpointSaveBlocked=true;storageHold(StoragePhase::InvalidStored,canonical.error,"invalid present canonical");return false;}
-  canonicalAbsent=canonical.state==checkpoint_store::Read::Absent;
-  if(canonicalAbsent){
-   if(sawCanonical){nvs_close(reader);checkpointSaveBlocked=true;storageHold(StoragePhase::InvalidStored,ESP_OK,"observed canonical disappeared");return false;}
-   const auto old=checkpoint_store::readBlob(reader,"state",checkpointReadback,sizeof(savedState));sawStoredRecord=sawStoredRecord||old.observedPresent;
-   if(old.state==checkpoint_store::Read::Error||old.state==checkpoint_store::Read::Invalid){nvs_close(reader);storageHold(old.state==checkpoint_store::Read::Error?StoragePhase::StartupRead:StoragePhase::InvalidStored,old.error,"legacy bank unreadable/invalid");return false;}
-   const auto visual=checkpoint_store::readBlob(reader,"scene",nextCheckpoint,sizeof(savedScene));sawStoredRecord=sawStoredRecord||visual.observedPresent;
-   if(visual.state==checkpoint_store::Read::Error||visual.state==checkpoint_store::Read::Invalid){nvs_close(reader);storageHold(visual.state==checkpoint_store::Read::Error?StoragePhase::StartupRead:StoragePhase::InvalidStored,visual.error,"legacy scene unreadable/invalid");return false;}
-   scenePresent=visual.state==checkpoint_store::Read::Valid;sceneLength=scenePresent?visual.length:0;
-   if(old.state==checkpoint_store::Read::Absent){if(scenePresent||sawStoredRecord){nvs_close(reader);storageHold(StoragePhase::InvalidStored,ESP_OK,"stored material without bank");return false;}fresh=true;}
-   else{legacy=true;legacyLength=old.length;}
-  }
-  nvs_close(reader);
- }
- if(fresh&&sawStoredRecord){storageHold(StoragePhase::InvalidStored,ESP_OK,"known stored bank cannot become fresh");return false;}
- if(!canonicalAbsent){
-  if(!uiRestoreCheckpoint(checkpointReadback,canonicalLength,checkpointGeneration)){checkpointSaveBlocked=true;checkpointRecordPresent=true;storageHold(StoragePhase::InvalidStored,ESP_OK,"canonical financial binding invalid");return false;}
-  memcpy(savedCheckpoint,checkpointReadback,canonicalLength);checkpoint_bundle::View record;checkpoint_bundle::decode(savedCheckpoint,canonicalLength,record);
-  savedCheckpointLength=canonicalLength;memcpy(savedState,record.game.bytes,record.game.length);savedLength=storedSnapshotBytes=record.game.length;
-  savedSceneLength=storedSceneBytes=record.scene.length;if(record.scene.length)memcpy(savedScene,record.scene.bytes,record.scene.length);
-  sceneRestoredAtBoot=record.scene.length!=0;restoredAtBoot=true;checkpointRecordPresent=true;legacySceneMissing=false;
- }else if(legacy){
-  if(!uiRestoreLegacyCheckpoint(checkpointReadback,legacyLength,nextCheckpoint,sceneLength,scenePresent)){checkpointSaveBlocked=true;storageHold(StoragePhase::InvalidStored,ESP_OK,"legacy bank/scene binding invalid");return false;}
-  memcpy(savedState,checkpointReadback,legacyLength);if(sceneLength)memcpy(savedScene,nextCheckpoint,sceneLength);savedLength=storedSnapshotBytes=legacyLength;savedSceneLength=storedSceneBytes=sceneLength;sceneRestoredAtBoot=scenePresent;legacySceneMissing=!scenePresent;restoredAtBoot=true;checkpointRecordPresent=false;savedCheckpointLength=0;checkpointGeneration=0;
- }else{restoredAtBoot=false;sceneRestoredAtBoot=false;checkpointRecordPresent=false;savedCheckpointLength=savedLength=savedSceneLength=0;checkpointGeneration=0;legacySceneMissing=false;}
- bankTrusted=true;checkpointSaveBlocked=false;observeLoadedCounters();
- if(checkpointGeneration==UINT64_MAX){checkpointSaveBlocked=true;uiBlockCheckpoint();storageHold(StoragePhase::Exhausted,ESP_OK,"checkpoint generation exhausted");return false;}
- if(!preferencesReady)preferencesReady=preferences.begin("pl_confucius",false);
- if(!preferencesReady){storageHold(StoragePhase::StartupWriter,ESP_FAIL,"preferences writer unavailable");return false;}
- if(!financialHandle){lastStorageError=nvs_open("pl_confucius",NVS_READWRITE,&financialHandle);if(lastStorageError!=ESP_OK){financialHandle=0;storageHold(StoragePhase::StartupWriter,lastStorageError,"financial writer unavailable");return false;}}
- applyStoredOptions();observeLoadedCounters();
- if(canonicalAbsent){pendingSave=true;pendingRecordReady=false;pendingCheckpointLength=0;saveFailed=false;storagePhase=StoragePhase::Pending;saveState();return storagePhase==StoragePhase::Ready;}
- pendingSave=saveFailed=false;storagePhase=StoragePhase::Ready;lastStorageError=ESP_OK;storageDetail="validated stored bank";uiSetCheckpointPause(UiCheckpointPause::None);return true;
-}
-
-uint64_t bootSeed() {
-  // Capture offline entropy before application ADC/RF peripherals start.
-  // PCG continuation is restored from a valid saved bank independently.
-  uint64_t seed = 0;
-  bootloader_random_enable();
-  esp_fill_random(&seed, sizeof(seed));
-  bootloader_random_disable();
-  return seed;
-}
-
-void markChanged() {
-  if(!bankTrusted||pendingRecordReady)return;
-  pendingSave=true;changedAt=millis();
-}
-
-void saveOptions();
-void noticeEngineActions() {
-  const auto runtime=uiRuntimeRevision();if(runtime!=seenRuntimeRevision){seenRuntimeRevision=runtime;markChanged();}
-  const auto credit=uiCreditRevision();
-  if(credit!=seenCreditRevision){seenCreditRevision=credit;saveOptions();markChanged();}
-  const uint64_t actions = uiActionCount();
-  if (actions != seenActionCount) {
-    seenActionCount = actions;
-    markChanged();
-  }
-}
-
-void dispatchUiInput59(void(*input)()){
- input();
- // A completed outcome has already been acknowledged by the synchronous
- // barrier. Cosmetic skips/menu navigation must not queue a duplicate write.
- noticeEngineActions();
-}
-
-void saveState() {
- if(!bankTrusted||!preferencesReady||!pendingSave||checkpointSaveBlocked)return;
- if(!financialHandle){lastStorageError=nvs_open("pl_confucius",NVS_READWRITE,&financialHandle);if(lastStorageError!=ESP_OK){financialHandle=0;saveFailed=true;storageHold(StoragePhase::Pending,lastStorageError,"pending financial writer unavailable");return;}}
- if(saveFailed&&uint32_t(millis()-lastSaveAttemptAt)<5000)return;
- if(checkpointGeneration==UINT64_MAX){checkpointSaveBlocked=true;uiBlockCheckpoint();storageHold(StoragePhase::Exhausted,ESP_OK,"checkpoint generation exhausted");return;}
- lastSaveAttemptAt=millis();
- if(!pendingRecordReady){
-  pendingCheckpointLength=uiSaveCheckpoint(nextCheckpoint,sizeof(nextCheckpoint),checkpointGeneration+1);
-  if(!pendingCheckpointLength||pendingCheckpointLength>sizeof(nextCheckpoint)){saveFailed=true;storageHold(StoragePhase::Pending,ESP_ERR_INVALID_ARG,"cannot encode trusted RAM bank");return;}
-  pendingRecordReady=true;
- }
- // A valid unexpected canonical is preserved alongside the pending RAM bank.
- const auto onDisk=checkpoint_store::read(financialHandle,checkpointReadback,sizeof(checkpointReadback));
- if(onDisk.state==checkpoint_store::Read::Valid){
-  const bool isPending=onDisk.length==pendingCheckpointLength&&!memcmp(checkpointReadback,nextCheckpoint,onDisk.length);
-  const bool isPrior=onDisk.length==savedCheckpointLength&&savedCheckpointLength&&!memcmp(checkpointReadback,savedCheckpoint,onDisk.length);
-  if(!isPending&&!isPrior){checkpointSaveBlocked=true;saveFailed=true;storageHold(StoragePhase::Conflict,ESP_OK,"conflicting canonical preserved");return;}
- }
- if(!checkpoint_store::commit(financialHandle,nextCheckpoint,pendingCheckpointLength,checkpointReadback,sizeof(checkpointReadback),lastStorageError)){
-  saveFailed=true;if(lastStorageError==ESP_ERR_NVS_INVALID_HANDLE||lastStorageError==ESP_ERR_NVS_NOT_INITIALIZED){nvs_close(financialHandle);financialHandle=0;}storageHold(StoragePhase::Pending,lastStorageError,"exact pending record undurable");return;
- }
- memcpy(savedCheckpoint,nextCheckpoint,pendingCheckpointLength);savedCheckpointLength=pendingCheckpointLength;
- checkpoint_bundle::View record;checkpoint_bundle::decode(savedCheckpoint,savedCheckpointLength,record);checkpointGeneration=record.generation;checkpointRecordPresent=sawCanonical=sawStoredRecord=true;
- memcpy(savedState,record.game.bytes,record.game.length);savedLength=storedSnapshotBytes=record.game.length;
- savedSceneLength=storedSceneBytes=record.scene.length;if(record.scene.length)memcpy(savedScene,record.scene.bytes,record.scene.length);
- pendingSave=saveFailed=sceneSaveFailed=pendingRecordReady=false;pendingCheckpointLength=0;lastSaveAt=millis();storagePhase=StoragePhase::Ready;lastStorageError=ESP_OK;storageDetail="exact record committed/read back";uiSetCheckpointPause(UiCheckpointPause::None);
- if(checkpointGeneration==UINT64_MAX){checkpointSaveBlocked=true;uiBlockCheckpoint();storageHold(StoragePhase::Exhausted,ESP_OK,"checkpoint generation exhausted");}
-}
-
-bool currentReturnTupleOwned86(){
- if(!savedCheckpointLength||!checkpointRecordPresent||pendingSave||pendingRecordReady||!financialHandle)return false;
- const auto disk=checkpoint_store::read(financialHandle,checkpointReadback,sizeof(checkpointReadback));
- if(disk.state!=checkpoint_store::Read::Valid||disk.length!=savedCheckpointLength||memcmp(checkpointReadback,savedCheckpoint,savedCheckpointLength))return false;
- checkpoint_bundle::View saved,current;
- if(!checkpoint_bundle::decode(savedCheckpoint,savedCheckpointLength,saved))return false;
- const auto n=uiSaveCheckpoint(nextCheckpoint,sizeof(nextCheckpoint),checkpointGeneration);
- if(!n||!checkpoint_bundle::decode(nextCheckpoint,n,current))return false;
- auto same=[](checkpoint_bundle::Part a,checkpoint_bundle::Part b){return a.length==b.length&&(!a.length||!memcmp(a.bytes,b.bytes,a.length));};
- // Cosmetic phases may advance; the owned financial/raw-intent/service tuple
- // must already match exactly, with no pending funding or immutable record.
- return same(saved.game,current.game)&&same(saved.preference,current.preference)&&same(saved.service,current.service);
-}
-bool checkpointOutcome59(){
+// A new process is a new, nonpersistent game. No NVS bank/scene reads,
+// writes or imports exist here; the RNG service never enters a snapshot.
+phoenix::random::Service outcomeRandom125;
+platform_entropy125::Source entropySource125(platform_entropy125::nativeHooks(),platform_entropy125::pinnedSdk);
+bool sessionReady125=false;
+void saveOptions(){} // Deliberately session-only, including cosmetic options.
+void dispatchUiInput59(void(*input)()){input();}
+bool sessionOutcome125(){
  if(uiReturnSelectionCheckpointPending())returnUsbDrain86=true;
- noticeEngineActions();
- if(!bankTrusted||!preferencesReady||checkpointSaveBlocked)return false;
- if(uiReturnSelectionCheckpointPending()&&storagePhase==StoragePhase::Ready&&currentReturnTupleOwned86())return true;
- pendingSave=true;saveState();
- return storagePhase==StoragePhase::Ready&&!pendingSave&&!pendingRecordReady&&
-        !checkpointSaveBlocked&&!uiCheckpointPaused();
-}
-
-void saveOptions() {
-  if(!preferencesReady||!bankTrusted||uiCheckpointPaused())return;
-  const uint8_t level = M5.Display.getBrightness();
-  if (level != savedBrightness && level >= 20) {
-    if (preferences.putUChar("brightness", level) == sizeof(level)) savedBrightness = level;
-  }
-  if(uiAutoRefillEnabled()!=savedAutoRefill){const bool value=uiAutoRefillEnabled();if(preferences.putBool("auto-refill",value)==sizeof(value))savedAutoRefill=value;}
-  if(uiLastAddedMinor()!=savedLastAddedMinor){const auto value=uiLastAddedMinor();if(preferences.putUInt("topup-amt",value)==sizeof(value))savedLastAddedMinor=value;}
-  if(uiSpinSoundEnabled()!=savedSpinSounds){bool value=uiSpinSoundEnabled();if(preferences.putBool("spin-sfx",value)==sizeof(value))savedSpinSounds=value;}
-  if(uiLandingSoundEnabled()!=savedLandingSounds){bool value=uiLandingSoundEnabled();if(preferences.putBool("land-sfx",value)==sizeof(value))savedLandingSounds=value;}
-  if(uiSoundVolume()!=savedVolume){uint8_t value=uiSoundVolume();if(preferences.putUChar("volume",value)==sizeof(value))savedVolume=value;}
-  if(uiScreenFlipped()!=savedScreenFlipped){const bool value=uiScreenFlipped();if(preferences.putBool("flipped",value)==sizeof(value))savedScreenFlipped=value;}
-  if (uiCreditsDisplay() != savedCreditsDisplay) {
-    const bool value=uiCreditsDisplay();
-    if(preferences.putBool("credits",value)==sizeof(value))savedCreditsDisplay=value;
-  }
-  if (audioMuted() != savedMuted) {
-    const bool muted = audioMuted();
-    if (preferences.putBool("muted", muted) == sizeof(muted)) savedMuted = muted;
-  }
+ return sessionReady125&&outcomeRandom125.healthy()&&uiRandomHealthy();
 }
 
 void queueUsb(const String& line) {
@@ -314,13 +110,9 @@ void reportStatus() {
   line += String(",\"minFreeHeapBytes\":") + ESP.getMinFreeHeap();
   line += String(",\"uptimeMs\":")+millis()+",\"resetReason\":"+unsigned(esp_reset_reason())+",\"lastBenchJob\":"+lastEffectBenchJob+",\"lastBenchFrames\":"+lastEffectBench.frames;
   line += String(",\"loopStackHighWaterMark\":") + unsigned(uxTaskGetStackHighWaterMark(nullptr));
-  line += String(",\"snapshotBytes\":") + uiSave(nullptr, 0);
-  line += String(",\"storedSnapshotBytes\":") + storedSnapshotBytes;
-  line += ",\"restoredAtBoot\":"; line += restoredAtBoot ? "true" : "false";
-  line += ",\"savePending\":"; line += pendingSave ? "true" : "false";
-  line += ",\"saveAvailable\":"; line += preferencesReady&&bankTrusted&&!uiCheckpointPaused()&&!saveFailed&&!checkpointSaveBlocked?"true":"false";
-  line += String(",\"bankTrusted\":")+(bankTrusted?"true":"false")+",\"checkpointPaused\":"+(uiCheckpointPaused()?"true":"false");
-  line += ",\"startupNvsFullEraseBlocked\":"; line += startupNvsFullEraseBlocked() ? "true" : "false";
+  line += ",\"statePersistence\":\"session-only\",\"freshCredits\":1000,\"restoredAtBoot\":false,\"saveAvailable\":false";
+  line += String(",\"rngHealthy\":")+(uiRandomHealthy()?"true":"false")+",\"rngFault\":"+unsigned(uiRandomFault())+",\"entropyLeaseFault\":"+unsigned(entropySource125.fault());
+  char leases125[64];snprintf(leases125,sizeof(leases125),",\"entropyCaptures\":%llu",(unsigned long long)entropySource125.captures());line+=leases125;
   line += ",\"overlay\":"; line += uiOverlayVisible() ? "true" : "false";
   line += ",\"audioReady\":"; line += audioReady() ? "true" : "false";
   line += String(",\"audioConfiguredCues\":") + unsigned(audioConfiguredCount());
@@ -367,9 +159,6 @@ void reportStatus() {
   line += String(",\"framesCompleted\":") + framesCompleted;
   line += String(",\"framesAborted\":") + framesAborted;
   line += String(",\"usbQueueDrops\":") + usbQueueDrops;
-  line += String(",\"sceneBytes\":") + unsigned(savedSceneLength);
-  line += ",\"sceneRestoredAtBoot\":";line += sceneRestoredAtBoot?"true":"false";
-  line += ",\"sceneSaveFailed\":";line += sceneSaveFailed?"true":"false";
   line += ",\"entryArtReady\":"; line += entry_art::ready() ? "true" : "false";
   line += ",\"entryArtBytes\":"; line += entry_art::storageBytes();
    line += ",\"collectArtReady\":"; line += collect_art::ready() ? "true" : "false";
@@ -377,7 +166,7 @@ void reportStatus() {
    line += ",\"effectBenchFrames\":"; line += kUiEffectBenchmarkFrames;
    line += ",\"effectParityFrames\":"; line += kUiEffectParityFrames;
   line += ",\"entryArtDecodedFNV\":"; line += entry_art::decodedHash();
-  char checkpointInfo[180];snprintf(checkpointInfo,sizeof(checkpointInfo),",\"checkpointBytes\":%u,\"checkpointGeneration\":%llu,\"checkpointBlocked\":%s",unsigned(savedCheckpointLength),(unsigned long long)checkpointGeneration,checkpointSaveBlocked?"true":"false");line+=checkpointInfo;
+  line += ",\"legacyStateImports\":false,\"rngStateExport\":false";
   line += ",\"game\":"; line += uiSnapshot(); line += '}';
   queueUsb(line);
 }
@@ -444,11 +233,27 @@ void beginFrameChunk(const char* command) {
   frameActive = true;
 }
 
+// Cold diagnostic append; not on active game/input paths.
+__attribute__((noinline)) void appendBackdropABReport103(String& report,const UiEntryBench::BackdropAB& ab){
+ char part[512];
+ const int used=snprintf(part,sizeof(part),",\"backdropAB\":{\"ran\":%s,\"oom\":%s,\"pairs\":%u,\"fullFirstPairs\":%u,\"fastFirstPairs\":%u,\"comparedPixels\":%u,\"mismatchPixels\":%u,\"mismatchPairs\":%u,\"full\":{\"totalUs\":%llu,\"maxUs\":%u},\"fast\":{\"totalUs\":%llu,\"maxUs\":%u},\"panel\":{\"totalUs\":%llu,\"maxUs\":%u},\"firstMismatchSample\":%d,\"firstMismatchAt\":%d}",ab.ran?"true":"false",ab.oom?"true":"false",unsigned(ab.pairs),unsigned(ab.fullFirstPairs),unsigned(ab.fastFirstPairs),unsigned(ab.comparedPixels),unsigned(ab.mismatchPixels),unsigned(ab.mismatchPairs),(unsigned long long)ab.fullTotalUs,unsigned(ab.fullMaxUs),(unsigned long long)ab.fastTotalUs,unsigned(ab.fastMaxUs),(unsigned long long)ab.panelTotalUs,unsigned(ab.panelMaxUs),int(ab.firstMismatchSample),int(ab.firstMismatchAt));
+ if(used>0&&size_t(used)<sizeof(part))report+=part;
+ else report+=",\"backdropAB\":{\"ran\":false,\"formatError\":true}";
+}
+
+// Major timing is independent from the old fixture/AB counters.
+__attribute__((noinline)) void appendMajorTimingReport119(String& report,const UiEntryBench::MajorTiming& timing){
+ char part[240];
+ const int used=snprintf(part,sizeof(part),",\"majorTiming\":{\"ran\":%s,\"frames\":%u,\"renderer\":{\"totalUs\":%llu,\"maxUs\":%u},\"panel\":{\"totalUs\":%llu,\"maxUs\":%u}}",timing.ran?"true":"false",unsigned(timing.frames),(unsigned long long)timing.rendererTotalUs,unsigned(timing.rendererMaxUs),(unsigned long long)timing.panelTotalUs,unsigned(timing.panelMaxUs));
+ if(used>0&&size_t(used)<sizeof(part))report+=part;
+ else report+=",\"majorTiming\":{\"ran\":false,\"formatError\":true}";
+}
+
 // Keep the cold768-byte report formatter off active command/USB stack frames.
 __attribute__((noinline)) String effectBenchReport(const UiEntryBench& bench) {
   char result[768];
     snprintf(result,sizeof(result),"{\"command\":\"fx_bench\",\"requested\":%s,\"frames\":%u,\"maxUs\":%u,\"totalUs\":%u,\"engineUnchanged\":%s,\"beforeHash\":%u,\"afterHash\":%u,\"parityFrames\":%u,\"parityMismatchPixels\":%u,\"parityLegacyUs\":%u,\"parityOptimizedUs\":%u,\"mismatchEffect\":%d,\"mismatchMs\":%d,\"mismatchAt\":%d,\"fixtures\":[",bench.ran?"true":"false",unsigned(bench.frames),unsigned(bench.maxUs),unsigned(bench.totalUs),bench.unchanged?"true":"false",unsigned(bench.beforeHash),unsigned(bench.afterHash),unsigned(bench.parityFrames),unsigned(bench.parityMismatchPixels),unsigned(bench.parityLegacyUs),unsigned(bench.parityOptimizedUs),int(bench.mismatchEffect),int(bench.mismatchMs),int(bench.mismatchAt));
-    String report(result);for(unsigned i=0;i<kUiEffectBenchmarkFixtures;++i){const auto& f=bench.fixtures[i];char part[128];snprintf(part,sizeof(part),"%s{\"frames\":%u,\"maxUs\":%u,\"totalUs\":%u,\"maxElapsedMs\":%u}",i?",":"",unsigned(f.frames),unsigned(f.maxUs),unsigned(f.totalUs),unsigned(f.maxElapsedMs));report+=part;}report+=String("],\"holdParityFrames\":")+bench.holdParityFrames+",\"holdParityMismatchPixels\":"+bench.holdParityMismatchPixels+",\"holdParityLegacyUs\":"+bench.holdParityLegacyUs+",\"holdParityOptimizedUs\":"+bench.holdParityOptimizedUs;report+=String(",\"cacheParityFrames\":")+bench.cacheParityFrames+",\"cacheParityMismatchPixels\":"+bench.cacheParityMismatchPixels+",\"cacheReferenceUs\":"+bench.cacheReferenceUs+",\"cachePreparedUs\":"+bench.cachePreparedUs+",\"entryPoseRateHz\":30,\"entryLegacyParityReelInteriorOnly\":true";report+=String(",\"sceneParityFrames\":")+bench.sceneParityFrames+",\"sceneParityMismatchPixels\":"+bench.sceneParityMismatchPixels+",\"sceneReferenceUs\":"+bench.sceneReferenceUs+",\"sceneOptimizedUs\":"+bench.sceneOptimizedUs;report+=String(",\"coinParityFrames\":")+bench.coinParityFrames+",\"coinParityMismatchPixels\":"+bench.coinParityMismatchPixels+",\"coinReferenceUs\":"+bench.coinReferenceUs+",\"coinPreparedUs\":"+bench.coinPreparedUs;report+=String(",\"goldParityFrames\":")+bench.goldParityFrames+",\"goldParityMismatchPixels\":"+bench.goldParityMismatchPixels+",\"goldReferenceUs\":"+bench.goldReferenceUs+",\"goldPreparedUs\":"+bench.goldPreparedUs;report+=String(",\"pickupParityFrames\":")+bench.pickupParityFrames+",\"pickupParityMismatchPixels\":"+bench.pickupParityMismatchPixels+",\"pickupReferenceUs\":"+bench.pickupReferenceUs+",\"pickupPreparedUs\":"+bench.pickupPreparedUs;report+=String(",\"alphaParityFrames\":")+bench.alphaParityFrames+",\"alphaParityMismatchPixels\":"+bench.alphaParityMismatchPixels+",\"alphaReferenceUs\":"+bench.alphaReferenceUs+",\"alphaPreparedUs\":"+bench.alphaPreparedUs;report+=String(",\"bookRecords\":")+bench.bookRecords+",\"bookPixelPairs\":"+bench.bookPixelPairs+",\"bookFNV\":"+bench.bookFNV+",\"bookInvalidRecords\":"+bench.bookInvalidRecords;report+=String(",\"rendererUnchanged\":")+(bench.rendererUnchanged?"true":"false")+",\"rendererBeforeHash\":"+unsigned(bench.rendererBeforeHash)+",\"rendererAfterHash\":"+unsigned(bench.rendererAfterHash);report+=String(",\"job\":")+lastEffectBenchJob+"}";return report;
+    String report(result);for(unsigned i=0;i<kUiEffectBenchmarkFixtures;++i){const auto& f=bench.fixtures[i];char part[128];snprintf(part,sizeof(part),"%s{\"frames\":%u,\"maxUs\":%u,\"totalUs\":%u,\"maxElapsedMs\":%u}",i?",":"",unsigned(f.frames),unsigned(f.maxUs),unsigned(f.totalUs),unsigned(f.maxElapsedMs));report+=part;}report+=String("],\"holdParityFrames\":")+bench.holdParityFrames+",\"holdParityMismatchPixels\":"+bench.holdParityMismatchPixels+",\"holdParityLegacyUs\":"+bench.holdParityLegacyUs+",\"holdParityOptimizedUs\":"+bench.holdParityOptimizedUs;report+=String(",\"cacheParityFrames\":")+bench.cacheParityFrames+",\"cacheParityMismatchPixels\":"+bench.cacheParityMismatchPixels+",\"cacheReferenceUs\":"+bench.cacheReferenceUs+",\"cachePreparedUs\":"+bench.cachePreparedUs+",\"entryPoseRateHz\":30,\"entryLegacyParityReelInteriorOnly\":true";report+=String(",\"sceneParityFrames\":")+bench.sceneParityFrames+",\"sceneParityMismatchPixels\":"+bench.sceneParityMismatchPixels+",\"sceneReferenceUs\":"+bench.sceneReferenceUs+",\"sceneOptimizedUs\":"+bench.sceneOptimizedUs;report+=String(",\"coinParityFrames\":")+bench.coinParityFrames+",\"coinParityMismatchPixels\":"+bench.coinParityMismatchPixels+",\"coinReferenceUs\":"+bench.coinReferenceUs+",\"coinPreparedUs\":"+bench.coinPreparedUs;report+=String(",\"goldParityFrames\":")+bench.goldParityFrames+",\"goldParityMismatchPixels\":"+bench.goldParityMismatchPixels+",\"goldReferenceUs\":"+bench.goldReferenceUs+",\"goldPreparedUs\":"+bench.goldPreparedUs;report+=String(",\"pickupParityFrames\":")+bench.pickupParityFrames+",\"pickupParityMismatchPixels\":"+bench.pickupParityMismatchPixels+",\"pickupReferenceUs\":"+bench.pickupReferenceUs+",\"pickupPreparedUs\":"+bench.pickupPreparedUs;report+=String(",\"alphaParityFrames\":")+bench.alphaParityFrames+",\"alphaParityMismatchPixels\":"+bench.alphaParityMismatchPixels+",\"alphaReferenceUs\":"+bench.alphaReferenceUs+",\"alphaPreparedUs\":"+bench.alphaPreparedUs;report+=String(",\"bookRecords\":")+bench.bookRecords+",\"bookPixelPairs\":"+bench.bookPixelPairs+",\"bookFNV\":"+bench.bookFNV+",\"bookInvalidRecords\":"+bench.bookInvalidRecords;report+=String(",\"rendererUnchanged\":")+(bench.rendererUnchanged?"true":"false")+",\"rendererBeforeHash\":"+unsigned(bench.rendererBeforeHash)+",\"rendererAfterHash\":"+unsigned(bench.rendererAfterHash);appendBackdropABReport103(report,bench.backdropAB);appendMajorTimingReport119(report,bench.majorTiming);report+=String(",\"job\":")+lastEffectBenchJob+"}";return report;
 
 }
 
@@ -483,7 +288,7 @@ String sageTestReport(const char* command){
 }
 void requestSageTest(const char* command,unsigned rows){
  const char* rejected=nullptr;
- if(!bankTrusted||storagePhase!=StoragePhase::Ready||pendingSave||saveFailed||checkpointSaveBlocked||uiCheckpointPaused())rejected="durable idle bank required";
+ if(!sessionReady125||!uiRandomHealthy()||uiCheckpointPaused())rejected="healthy idle session required";
  else if(!uiReady()||blackTap.pending||qaInputFence||M5.BtnA.isPressed()||M5.BtnB.isPressed())rejected="release buttons in idle game";
  else if(frameActive||!usbOutput.isEmpty())rejected="USB output busy";
  else if(M5.Speaker.isPlaying()||audioFeatureBusy()||audioLandingsBusy()||audioDiagnostics().pending)rejected="audio must be idle";
@@ -561,27 +366,11 @@ void usbCommand(const char* command) {
     report+=String(",\"backendStarts\":")+music.awardStarts+",\"musicLevel\":"+unsigned(audioMusicOutputLevel())+",\"volume\":"+unsigned(audioVolume())+",\"muted\":"+(audioMuted()?"true":"false");report+=String(",\"twinReady\":")+(music.twinSourceReady?"true":"false")+",\"twinRootAccepted\":"+(music.twinRootAcceptedForDevice?"true":"false")+",\"twinFrames\":"+music.twinFrames+",\"twinRate\":"+music.twinSampleRate+",\"twinFNV\":"+music.twinFNV+"}";
     queueUsb(report);
   } else if(!strcmp(command,"storage_status")||!strcmp(command,"storage_retry")){
-    if(!strcmp(command,"storage_retry")){
-      if(storagePhase==StoragePhase::Pending){lastSaveAttemptAt=millis()-5000;saveState();}
-      else if(storagePhase!=StoragePhase::Ready&&storagePhase!=StoragePhase::Conflict&&storagePhase!=StoragePhase::Exhausted)recoverStoredBank();
-    }
-    char reply[480];snprintf(reply,sizeof(reply),"{\"type\":\"storage-status\",\"phase\":%u,\"bankTrusted\":%s,\"paused\":%s,\"detail\":\"%s\",\"nvsError\":%d,\"pendingBytes\":%u,\"generation\":%llu,\"legacySceneMissingCompatible\":%s,\"lastCommitAttemptWallMs\":%u,\"lastCommitFinishedWallMs\":%u}",unsigned(storagePhase),bankTrusted?"true":"false",uiCheckpointPaused()?"true":"false",storageDetail,int(lastStorageError),unsigned(pendingCheckpointLength),(unsigned long long)checkpointGeneration,legacySceneMissing?"true":"false",unsigned(lastSaveAttemptAt),unsigned(lastSaveAt));queueUsb(reply);
+    queueUsb("{\"type\":\"storage-status\",\"policy\":\"session-only\",\"persistentGame\":false,\"retryAvailable\":false}");
   } else if(!strcmp(command,"math_status")){queueUsb(uiMathDiagnostic());
   } else if(!strcmp(command,"wager_menu")){uiCabinetMenu();queueUsb("{\"command\":\"wager_menu\",\"requested\":true}");
-  } else if(!strcmp(command,"ckpt_begin")){
-    checkpointExportLength=0;
-    if(!bankTrusted){queueUsb("{\"type\":\"checkpoint-export\",\"ok\":false,\"bankTrusted\":false,\"reason\":\"stored bank not validated; read-only storage retry required\"}");return;}
-    noticeEngineActions();if(storagePhase==StoragePhase::Ready&&pendingSave)saveState();
-    bool durable=false;const char*key="ram";size_t length=0;
-    if(pendingRecordReady){length=pendingCheckpointLength;memcpy(checkpointExport,nextCheckpoint,length);}
-    else if(savedCheckpointLength){length=savedCheckpointLength;memcpy(checkpointExport,savedCheckpoint,length);durable=true;key="checkpoint";}
-    else if(storagePhase==StoragePhase::StartupWriter&&savedLength){length=savedLength;memcpy(checkpointExport,savedState,length);durable=true;key="state";}
-    if(!length||length>sizeof(checkpointExport)){queueUsb("{\"type\":\"checkpoint-export\",\"ok\":false,\"reason\":\"no validated canonical export available\"}");return;}
-    checkpointExportLength=length;++checkpointExportId;if(!checkpointExportId)++checkpointExportId;
-    char reply[230];snprintf(reply,sizeof(reply),"{\"type\":\"checkpoint-export\",\"ok\":true,\"id\":%u,\"bytes\":%u,\"fnv1a32\":%u,\"key\":\"%s\",\"durable\":%s,\"bankTrusted\":true}",checkpointExportId,unsigned(length),checkpoint_bundle::checksum(checkpointExport,length),key,durable?"true":"false");queueUsb(reply);
-  } else if(!strncmp(command,"ckpt_chunk ",11)){
-    unsigned id=0,offset=0;if(sscanf(command,"ckpt_chunk %u %u",&id,&offset)!=2||id!=checkpointExportId||!checkpointExportLength||offset>=checkpointExportLength)queueUsb("{\"type\":\"checkpoint-chunk\",\"ok\":false}");
-    else {const size_t n=std::min<size_t>(256,checkpointExportLength-offset);char head[150];snprintf(head,sizeof(head),"{\"type\":\"checkpoint-chunk\",\"id\":%u,\"offset\":%u,\"bytes\":%u,\"hex\":\"",id,offset,unsigned(n));String reply(head);const char*digits="0123456789abcdef";for(size_t i=0;i<n;++i){const auto b=checkpointExport[offset+i];reply+=digits[b>>4];reply+=digits[b&15];}reply+="\"}";queueUsb(reply);}
+  } else if(!strcmp(command,"ckpt_begin")||!strncmp(command,"ckpt_chunk ",11)){
+    queueUsb("{\"type\":\"checkpoint-export\",\"ok\":false,\"reason\":\"session-only; game import/export disabled\"}");
   } else if (!strcmp(command, "award_scene_test")||!strcmp(command,"spin_award_scene_test")||!strcmp(command,"award_auto_scene_test")) {
     const bool automatic=!strcmp(command,"award_auto_scene_test");
     const auto before=audioMusicDiagnostics();const auto scene=uiTestAwardScene(!strcmp(command,"spin_award_scene_test"),automatic);const auto after=audioMusicDiagnostics();
@@ -590,10 +379,7 @@ void usbCommand(const char* command) {
     char counted[32];snprintf(counted,sizeof(counted),"%lld",(long long)scene.countedMinor);
     report+=String(",\"cueFirstMs\":")+scene.cueFirstMs+",\"fountainFirstMs\":"+scene.fountainFirstMs+",\"maxMusicLevel\":"+scene.maxMusicLevel+",\"counterMask\":"+scene.counterMask+",\"countedMinor\":"+counted+",\"awardStartsDelta\":"+uint32_t(after.awardStarts-before.awardStarts)+",\"queuedFramesDelta\":"+uint32_t(after.queuedFrames-before.queuedFrames)+",\"underrunsDelta\":"+uint32_t(after.underruns-before.underruns)+"}";queueUsb(report);
   } else if (!strcmp(command,"profile_scene_test")) {
-    const auto p=uiTestMathProfile();
-    String report=String("{\"command\":\"profile_scene_test\",\"requested\":")+(p.ran?"true":"false")+",\"engineUnchanged\":"+(p.unchanged?"true":"false");
-    report+=String(",\"beforeHash\":")+p.beforeHash+",\"afterHash\":"+p.afterHash+",\"model\":"+p.model+",\"miniCredits\":"+p.miniCredits+",\"minorCredits\":"+p.minorCredits+",\"betMinor\":"+p.betMinor+",\"holdMinor\":"+p.holdMinor+",\"roundMinor\":"+p.roundMinor;
-    report+=String(",\"baseKing3\":")+p.baseKing3+",\"freeKing5\":"+p.freeKing5+",\"baseCandle5\":"+p.baseCandle5+",\"baseJack4\":"+p.baseJack4+",\"linePathFNV\":"+p.linePathFNV+",\"baseQueen4\":"+p.baseQueen4+",\"freeBell3\":"+p.freeBell3+",\"freeBook3\":"+p.freeBook3+",\"freeJack3\":"+p.freeJack3+",\"freeJack5\":"+p.freeJack5+",\"freeTen5\":"+p.freeTen5+",\"freeCandle5\":"+p.freeCandle5+"}";queueUsb(report);
+    queueUsb("{\"command\":\"profile_scene_test\",\"requested\":false,\"reason\":\"state-only diagnostic required with external RNG service\"}");
   } else if (!strcmp(command,"arrival_scene_test")) {
     const auto scene=uiTestArrivalScene();
     String report=String("{\"command\":\"arrival_scene_test\",\"requested\":")+(scene.ran?"true":"false")+",\"engineUnchanged\":"+(scene.unchanged?"true":"false");
@@ -611,15 +397,8 @@ void usbCommand(const char* command) {
       queueUsb("{\"command\":\"reboot\",\"saved\":false,\"reason\":\"USB busy\"}");
       return;
     }
-    markChanged();
-    saveState();
-    saveOptions();
-    if (!preferencesReady || !bankTrusted || uiCheckpointPaused() || pendingSave || saveFailed) {
-      queueUsb("{\"command\":\"reboot\",\"saved\":false,\"reason\":\"bank save failed\"}");
-      return;
-    }
     audioStop();
-    queueUsb("{\"command\":\"reboot\",\"saved\":true}");
+    queueUsb("{\"command\":\"reboot\",\"saved\":false,\"freshOnRestart\":true}");
     rebootPending = true;
     rebootRequestedAt = millis();
     rebootDrainedAt = 0;
@@ -638,7 +417,7 @@ void usbCommand(const char* command) {
     if(!lastEffectBenchJob)queueUsb("{\"command\":\"bench_result\",\"requested\":false,\"reason\":\"no completed benchmark\"}");
     else effectBenchReportPending=true;
   } else if (!strcmp(command, "help")) {
-    queueUsb("Commands: status, storage_status, storage_retry, math_status, ckpt_begin, ckpt_chunk ID OFFSET, frame, frame_begin, frame_chunk ID OFFSET, frame_abort, sync, spin, a, b, menu, wager_menu, auto, flip, fx_bench, bench_result, feature_music, twin_music, award_music, award_status, sage_status, sage_scene_test, sage_two_scene_test, sage_result, award_scene_test, award_auto_scene_test, spin_award_scene_test, arrival_scene_test, profile_scene_test, jingle, reboot, help. Pull chunks are retryable reads of one immutable snapshot.");
+    queueUsb("Commands: status, storage_status, math_status, frame, frame_begin, frame_chunk ID OFFSET, frame_abort, sync, spin, a, b, menu, wager_menu, auto, flip, fx_bench, bench_result, feature_music, twin_music, award_music, award_status, sage_status, sage_scene_test, sage_two_scene_test, sage_result, award_scene_test, award_auto_scene_test, spin_award_scene_test, arrival_scene_test, profile_scene_test, jingle, reboot, help. Pull chunks are retryable reads of one immutable snapshot.");
   } else queueUsb("{\"error\":\"unknown command\"}");
 }
 
@@ -749,7 +528,7 @@ void restorePowerButton(){
 }
 
 void setup() {
-  const uint64_t initialSeed = bootSeed();
+  const bool seeded125=outcomeRandom125.initialize(platform_entropy125::Source::callback,&entropySource125);
   auto config = M5.config();
   // Keep Arduino HWCDC uninitialized: exactly one ISR owns USB Serial/JTAG.
   config.serial_baudrate = 0;
@@ -775,25 +554,18 @@ void setup() {
   M5.Display.setRotation(1);
   M5.BtnA.setDebounceThresh(30);
   M5.BtnB.setDebounceThresh(30);
-  // Separate game namespace: preserve the installed Money Gong bank. Phoenix
-  // owns its own versioned snapshot schema; uiRestore validates that schema.
-  uiInit(initialSeed, true);
-  uiSetOutcomeCheckpointHandler(checkpointOutcome59);
-  uiSetCheckpointPause(UiCheckpointPause::UnknownBank);
-  recoverStoredBank();
-
-  // The first screen is gameplay. There is no splash, custom intro or delay.
-  seenActionCount = uiActionCount();
-  seenCreditRevision=uiCreditRevision();
-  seenRuntimeRevision=uiRuntimeRevision();
+  const bool profile125=platform_entropy125::pinnedSdk&&M5.getBoard()==m5::board_t::board_M5StickS3&&
+    !config.internal_mic&&!config.internal_imu&&!config.internal_rtc&&!config.external_imu&&!config.external_rtc&&!config.external_spk;
+  const bool qualified125=entropySource125.qualifyRuntime(profile125);
+  const bool fresh125=uiInitFresh(outcomeRandom125);
+  sessionReady125=seeded125&&qualified125&&fresh125;
+  uiSetOutcomeCheckpointHandler(sessionOutcome125);
+  // No old bank is read and no RNG state is restored. Autoplay starts off.
   uiRedraw();
   uiFrame();
-  noticeEngineActions();
-  // Bring up the audio mixer after the saved game has reached the LCD.
-  audioInit(savedMuted);
+  // Bring up the audio mixer after the fresh session/error screen reaches LCD.
+  audioInit(false);
   uiPrepareEffects();
-  // Initial fresh/legacy records commit in recoverStoredBank before play.
-  // An unknown or invalid startup bank is never written from fresh RAM.
   reportStatus();
 }
 
@@ -801,11 +573,8 @@ void loop() {
   M5.update();
   audioUpdate(millis());
   const uint32_t now = millis();
-  if(storagePhase!=StoragePhase::Ready&&storagePhase!=StoragePhase::Pending&&storagePhase!=StoragePhase::Conflict&&storagePhase!=StoragePhase::Exhausted&&uint32_t(now-lastStorageRetryAt)>=5000)recoverStoredBank();
-  if(storagePhase==StoragePhase::Pending)saveState();
   if (rebootPending) {
-    // The saved engine is frozen during acknowledgment/flush. In particular,
-    // automatic bonus play cannot advance after the checkpoint being tested.
+    // Do not advance the current session while reboot acknowledgment drains.
     serviceUsb();
     if (usbOutput.isEmpty() && !rebootDrainedAt) rebootDrainedAt = millis();
     if ((rebootDrainedAt && millis() - rebootDrainedAt >= 150) ||
@@ -857,12 +626,8 @@ void loop() {
     aStarted = bStarted = 0;
     blackTap.reset();
   }
-  const uint32_t saveNow = millis();
-  if (pendingSave && (saveNow - changedAt >= kSaveDelayMs || saveNow - lastSaveAt >= kCheckpointMs)) saveState();
   // UI owns all scene transitions and source-art overlays.
   uiFrame();
-  noticeEngineActions();
   serviceUsb();
-  if (saveNow - lastOptionsAt >= 1000) { lastOptionsAt = saveNow; saveOptions(); }
   delay(2);
 }

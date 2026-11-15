@@ -1,6 +1,6 @@
 # Phoenix Hold & Spin, revival and jackpots
 
-The simulator can enter this feature from a natural Phoenix result or the persistent collection meter. Those routes can occur together, so more than one Hold may be owed. The official [US description](https://www.aristocratgaming.com/us/games/us-phoenix-link) identifies Hold & Spin and the separate mystery counter; the [operator rules, pages 1–3](https://casinos.lotoquebec.com/dam/jcr:4add9be1-336a-4efc-b4c9-e41696b876b2/Phoenix%20Link%20Confucius%20Say.pdf) supply the regional lock/reset/revival rules. Current financial behavior is in the [Engine](../firmware/src/phoenix_engine.h).
+The simulator can enter this feature from a natural Phoenix result or the session’s collection meter. Those routes can occur together, so more than one Hold may be owed. The official [US description](https://www.aristocratgaming.com/us/games/us-phoenix-link) identifies Hold & Spin and the separate mystery counter; the [operator rules, pages 1–3](https://casinos.lotoquebec.com/dam/jcr:4add9be1-336a-4efc-b4c9-e41696b876b2/Phoenix%20Link%20Confucius%20Say.pdf) supply the regional lock/reset/revival rules. Current financial behavior is in the [Engine](../firmware/src/phoenix_engine.h).
 
 ## Natural entry and respins
 
@@ -37,7 +37,7 @@ Mini/Minor values and restrictions on named/high-cash combinations are configura
 
 Double and Triple Mini/Minor prizes collect in separate visible increments, with a new Phoenix flight from the same physical cell for each unit. The stacked label stays intact. The payout is already settled once; these graphical steps add no extra Engine payment. Existing audio remains once per physical cell, without an invented ordinary count-up tone for each unit. The fitted interval between units is 1067 ms; normal between-cell timing remains 1333 ms. Those are local presentation fits, not recovered universal manufacturer timing or named-prize audio.
 
-<img src="media/multiplied-mini101.gif" alt="TripleMini repeated pickups, current renderer in a synthetic state" width="720">
+<img src="media/multiplied-mini101.webp" alt="TripleMini repeated pickups, current renderer in a synthetic state" width="720">
 
 ## Fifteen Phoenixes and Grand
 
@@ -57,6 +57,6 @@ Autoplay and manual play use the same award-event routing. Muting, a skipped pre
 
 If the meter triggers with fewer than six Phoenixes, the currently visible Phoenixes lock for its free Hold. If a natural Hold already takes priority, the extra meter award queues. A later queued Hold starts with a new empty bonus board, rather than copying the first Hold's prizes into a second payment. Multiple owed meter awards are counted separately.
 
-This order is supported by [hmyKdYjMjAQ around 8:29](https://www.youtube.com/watch?v=hmyKdYjMjAQ&t=509s) and the regional queueing description. Details of actual casino hidden distributions remain unresolved. Read [the collection counter](collection-counter.md) for the persistent state behind the feature.
+This order is supported by [hmyKdYjMjAQ around 8:29](https://www.youtube.com/watch?v=hmyKdYjMjAQ&t=509s) and the regional queueing description. Details of actual casino hidden distributions remain unresolved. Read [the collection counter](collection-counter.md) for the session’s meter and queue behavior.
 
 Code: [award director](../firmware/src/feature_award_director.h), [collection flight](../firmware/src/collection_motion.h), [center treatment](../firmware/src/center_render49.inc), [opening music gate](../firmware/src/hold_opening31.h), [coin motion](../firmware/src/coin_motion.h).

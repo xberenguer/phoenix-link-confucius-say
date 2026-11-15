@@ -1,10 +1,10 @@
 {
-  "source_version": "0.2.102-accepted-source",
-  "engine_model": "0x00020011",
-  "source_engine_sha256": "300ff9a18cd464d2d6f1a9d8e56aefffe10d2e08a8212fc25c2937ec8bf59ca9",
+  "source_version": "0.2.104",
+  "engine_model": "0x00020012",
+  "source_engine_sha256": "774684fa06f1b3f50758d5ce642d4d1ad64de71d4b91042e34266a45392d7007",
   "source_cabinet_profile_sha256": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
   "exporter_sha256": "574239b487f40b56ed0607b355b4d64c0a4687430d6b2d8d59d90db0b511a6f0",
-  "scope": "Implemented simulator lookup, not original casino PAR. All600 internal compatibility profiles;55menu offers. Exact source-observed cells and remaining local fallbacks are annotated in the Engine.",
+  "scope": "Current implemented local simulator lookup, not original casino PAR.600 internal profiles;55 menu offers. Source-observed price cells and local fallbacks are annotated in the Engine.179 of205 paths remain local fallbacks.",
   "rows": {
     "line_pay_entries": 48000,
     "selected_line_paths": 205,
@@ -25,10 +25,9 @@
     }
   },
   "row_numbering": "top0,middle1,bottom2",
-  "status": "Version 102 source-synchronized implementation reference",
+  "status": "Current release source-synchronized implementation reference",
   "no_personal_state_or_device_identifiers": true,
-  "source_qualification": "Accepted version 102 source; local simulator maths, not casino calibration",
-  "installation_claimed": false,
-  "runtime_fingerprint": "4b51c8a82804917c5d678f421de4e938abbb5167b1b1e896d5b8d66c7f8519c2",
-  "mathematical_family": "6aa2818743a87f83efe8fa331d78b5de35273830f769168d88f7eacd1401b711"
+  "source_qualification": "Engineering accepted source; numeric return enclosures apply only to stated ideal-uniform local-model assumptions, not actual-CSPRNG infinite-horizon return or casino calibration.",
+  "runtime_fingerprint": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "mathematical_family": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03"
 }

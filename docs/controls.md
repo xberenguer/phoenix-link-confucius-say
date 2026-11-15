@@ -10,7 +10,7 @@
 | Hold large grey | Open Game Menu |
 | Double-press large grey | Flip the screen orientation |
 
-There is no on-screen autoplay marker. A new flash or restored game starts with autoplay off. The small power button is separate from the large grey game-control button.
+There is no on-screen autoplay marker. Each boot, reload or flash starts a fresh game with autoplay off. The small power button is separate from the large grey game-control button.
 
 Stopping autoplay stops further paid automatic play; it does not discard the current result or an already owed Free/Hold session.
 
@@ -35,7 +35,7 @@ An unavailable row cannot start a paid spin. Owed features protect their existin
 | Simulator Return | Review and apply six local-model choices affecting future Grand |
 | Return to Game | Resume the game view |
 
-On menu pages, grey moves and blue selects. Simulator Return offers six local-model options at a qualified closed Base boundary. Applying a choice changes future Grand only and waits for the canonical save acknowledgement; it does not select an authentic casino RTP. See [Simulator Return](settings.md#simulator-return).
+On menu pages, grey moves and blue selects. Simulator Return offers six local-model options at a qualified closed Base boundary. Applying a choice changes future Grand only for this live session. Displayed ranges are ideal-model references. See [Simulator Return](settings.md#simulator-return).
 
 The bottom-right version mark appears in Game Menu. Some compact hints call the large grey game button BLACK; they do not mean the separate power key. See [settings](settings.md) for the full option list and [troubleshooting](troubleshooting.md) for apparent input delays.
 
@@ -43,6 +43,6 @@ The bottom-right version mark appears in Game Menu. Some compact hints call the 
 
 The funding page lists **Add $1,000**, **Add $10,000**, **Add $100,000**, Auto Refill and Return to Menu, in that order. A successful addition returns directly to the game with autoplay off. Every choice adds to the current balance.
 
-Automatic refill uses the last supported $1,000, $10,000 or $100,000 amount added when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding preserves collection-meter buckets, RNG state, wager and statistics. Owed features and blocked storage protect the bank from an unsafe addition. See [saving](saving.md) for its continuity and acknowledgement rules.
+Automatic refill uses the last supported $1,000, $10,000 or $100,000 amount added when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding changes the money balance without resetting this session’s meter buckets, wager or statistics. Unfinished features and source/capacity faults can block funding. See [session rules](saving.md).
 
 Implementation: [button timing/dispatch](../firmware/src/main.cpp), [single/double-grey helper](../firmware/src/game_black_tap.h), [UI control behavior](../firmware/src/ui.cpp).

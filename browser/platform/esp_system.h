@@ -1,4 +1,3 @@
 #pragma once
-#include <cstdint>
-// A fresh seed comes from browser crypto; restored PCG state comes from C++.
-uint32_t esp_random();
+// No hardware-PRNG or saved-seed adapter exists in the browser. Financial
+// entropy must enter through the explicit Web Crypto callback and service.

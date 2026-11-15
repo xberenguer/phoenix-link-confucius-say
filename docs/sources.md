@@ -1,4 +1,4 @@
-# Sources, evidence labels and version scope
+# Sources and evidence scope
 
 This guide accompanies the current source, tables and deterministic gallery. It distinguishes official material, first-hand machine footage, independent commentary and local implementation. Similar theme names or software numbers do not prove identical casino settings. Unknown original probabilities and source-specific configuration limits remain explicit.
 
@@ -12,7 +12,10 @@ This guide accompanies the current source, tables and deterministic gallery. It 
 | [Royal River Casino feature description](https://www.royalrivercasino.com/blog/new-slot-feature-phoenix-link-brings-the-fire) | Operator description of the four themes, six-game scatter entry and the mystery feature | Precise event frequencies or this simulator's certification |
 | [Maryland October 2024 listing](https://www.mdgaming.com/wp-content/uploads/2024/10/Commission-Spreadsheet-October-2024-Final.pdf) | Listing context for a named/versioned game | Approval of this independent reconstruction or matching property settings |
 | [M5Stack StickS3 documentation](https://docs.m5stack.com/en/core/StickS3) | Hardware, download-mode procedure and speaker power notes | Performance or validation of this particular game |
-| [Espressif ESP32-S3 random API, IDF 4.4.7](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32s3/api-reference/system/random.html) | Conditions for hardware entropy in the pinned-generation platform | A recovered casino RNG or cryptographic qualification of PCG |
+| [Espressif ESP32-S3 random API, IDF 4.4.7](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32s3/api-reference/system/random.html) | Conditions for hardware entropy in the pinned-generation platform | A physical entropy-quality measurement or approval of this implementation |
+| [Nevada Technical Standard 1](https://www.gaming.nv.gov/siteassets/content/regs/technical-standard-1.pdf) | CSPRNG definition and software-RNG testing branch for approvals from January 1, 2027 | Nevada approval of this project |
+| [NIST statistical-test scope](https://www.nist.gov/publications/statistical-test-suite-random-and-pseudorandom-number-generators-cryptographic) | Recognized test methodology and its limits | A substitute for cryptanalysis or native entropy assessment |
+| [MbedTLS random-data guide](https://mbed-tls.readthedocs.io/en/latest/kb/how-to/add-a-random-generator/) | CTR_DRBG setup and prediction-resistant reseeding | This game’s original casino law |
 | [PlatformIO installation](https://docs.platformio.org/en/stable/core/installation/index.html) | Development environment setup | A prebuilt game or validation of this project |
 
 The Québec PDF was reviewed as complete pages, including its symbol illustrations. It explicitly distinguishes Base and Free paytables, wager-specific counters, revival and queued meter Holds. It specifies +6 Free retriggers, while the targeted US implementation uses +3 from US observations. It also acknowledges version-dependent Phoenix prize rules. Those differences are retained instead of treating the PDF as a complete US PAR sheet.
@@ -24,7 +27,7 @@ These are original machine recordings used for specific visible facts. Source ti
 | Recording | Scope used in this guide/source |
 |---|---|
 | [mBcjPK63KW4](https://www.youtube.com/watch?v=mBcjPK63KW4) | Recorded Palms denomination/line/BET deck; $1 PLAY 10 control is visible; its selectable paid row uses the family adaptation documented in the wager guide |
-| [HzpqxpE-Ht8](https://www.youtube.com/watch?v=HzpqxpE-Ht8) | Original Confucius symbol layout and configuration-specific line captions; 5¢/25/5× and 10¢/25/3× examples stay scoped |
+| [HzpqxpE-Ht8](https://www.youtube.com/watch?v=HzpqxpE-Ht8) | Multiple themed segments require per-segment identity checks; a linked recording is not permission to transfer General Tso prices or rules to Confucius |
 | [5BUJOWxIBN4 near 10:10](https://www.youtube.com/watch?v=5BUJOWxIBN4&t=610s) | Initial three-Wisdom announcement, START/Twin transition and lower-WIN timing at its visible configuration |
 | [3pfZnZUWGhI](https://www.youtube.com/watch?v=3pfZnZUWGhI) | Wisdom entries, active Twin audio and scoped 2¢/50/3× Bell/King Base prices; meter entry around 22:10 |
 | [hmyKdYjMjAQ at 8:29](https://www.youtube.com/watch?v=hmyKdYjMjAQ&t=509s) | New queued meter Hold begins empty after the preceding feature |
@@ -48,4 +51,4 @@ The original joint reel/stop law, virtual weights, full pay programs, prize/mult
 
 ## Documentation media
 
-All included screenshots/GIFs are synthetic, deterministic renders from the game's own renderer. The [gallery manifest](gallery-manifest.json) binds their version, dimensions and hashes. They are display demonstrations, not casino frequency samples or a player's device state. Third-party attribution is in [attribution](attribution.md).
+Included media comes from the simulator with demonstration credits. Scripted gallery fixtures and live-session previews are identified by their [provenance](gallery-manifest.json), version, dimensions and hashes. They are display demonstrations, not casino frequency samples or player records. Third-party attribution is in [attribution](attribution.md).

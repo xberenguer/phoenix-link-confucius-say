@@ -2,7 +2,7 @@
 
 This guide describes the current simulator. Images are deterministic demonstrations of the current game.
 
-The game starts directly at the reels. Once installed, play requires no Wi-Fi, phone, browser or computer. The credits are play money and remain on the device. A new game begins with $1,000; credit controls can add more without clearing the collection meter.
+The game starts directly at the reels. Once installed, play requires no Wi-Fi, phone, browser or computer. Each boot or browser reload starts manual play with 1,000 credits at the default $1 denomination ($1,000). Progress lasts for the live session. Credit controls add funds without clearing that session’s collection meter.
 
 ## Start a paid spin
 
@@ -10,21 +10,21 @@ The game starts directly at the reels. Once installed, play requires no Wi-Fi, p
 2. Grey moves the focus and blue selects. Choose a denomination, a line control and a red bet button. **Selecting a funded red bet button starts a spin immediately.** Merely browsing a denomination or line does not stake credits.
 3. During ordinary play, short-press blue for the next spin. A press during motion can accelerate the presentation; it cannot select a different result.
 
-The stake is `denomination × selected lines × bet multiplier`. The red buttons show the resulting credit amount. See [wagers](wagers.md) for the actual offered rows and an unavailable $1 row that is intentionally left unfilled.
+The stake is `denomination × selected lines × bet multiplier`. The red buttons show the resulting credit amount. See [wagers](wagers.md) for the actual offered rows, including $1/5-line and $1/10-line choices.
 
 ## Read the screen
 
 | Area | Meaning |
 |---|---|
 | Five columns, three rows | The reel window; line wins start at the leftmost column |
-| Upper-right green number | The active persistent Phoenix collection meter |
+| Upper-right green number | The active Phoenix collection meter for this session |
 | Upper announcements | Free-game progress, remaining Hold spins or collection information |
 | CREDIT | Current bankroll; a presentation may still be transferring a committed win |
 | BET | The current full stake, not the amount per individual line |
 | WIN | The amount being shown for the current result or feature |
 | Lower-right denomination | Value of one credit; qualified cabinet profiles also show MIN BET |
 
-The simulation commits the financial outcome before its count-up is drawn. A rising WIN display is an animation of that result, not a second payment. See [saves](saving.md) for its acknowledgement and durability limits.
+A successful action commits before its count-up is drawn. A rising WIN display is an animation of that result, not a second payment. A random-source failure commits no new action; see [session and action safety](saving.md).
 
 ## Recognize the three main feature routes
 
@@ -36,7 +36,7 @@ Fifteen Phoenixes award the Grand plus their displayed prizes in the simulator. 
 
 ## Autoplay and settings
 
-Hold blue for about 0.85 seconds to toggle autoplay. Hold it again to stop. A short blue press while autoplay is running also turns autoplay off. There is no on-screen autoplay badge. A restored game starts with autoplay off.
+Hold blue for about 0.85 seconds to toggle autoplay. Hold it again to stop. A short blue press while autoplay is running also turns autoplay off. There is no on-screen autoplay badge. Every new session starts with autoplay off.
 
 Hold the large grey button for Game Menu. Sound, fine volume, display, credit funding and game-rule pages are there. Double-press grey in the normal game view to rotate the screen. Full details are in [controls](controls.md) and [settings](settings.md).
 

@@ -1,12 +1,26 @@
 # Build and flash
 
-This page describes the current source layout. Firmware, runtime assets, implemented tables and gallery belong to the same release source. Build the application and required filesystem below; browser-building instructions are in [browser play](browser-play.md).
+Build the current firmware and its required asset filesystem. Browser instructions are in [browser play](browser-play.md). Every boot after installation starts a new 1,000-credit manual game at the default $1 denomination; existing game progress is not imported.
+
+## Install the prebuilt game
+
+Download `phoenix-confucius-sticks3.bin`, `feature-assets.bin` and `SHA256SUMS.txt` from the [current GitHub release](https://github.com/xberenguer/phoenix-link-confucius-say/releases/latest). These are the game image and its required offline graphics/music filesystem; no previous installation is required.
+
+Install esptool in a Python environment (`python3 -m pip install esptool==4.9.0`), enter download mode as described below, then run from the download directory:
+
+```sh
+python3 -m esptool --chip esp32s3 --port PORT write_flash \
+  0x0 phoenix-confucius-sticks3.bin \
+  0x670000 feature-assets.bin
+```
+
+Replace `PORT` with your Stick's USB port. The checksums describe the exact release files. The source-build route below produces the same two image types.
 
 ## Hardware and toolchain
 
-The target is M5Stack **StickS3**, an ESP32-S3 device with 8 MB flash, 8 MB PSRAM and a 135 × 240 display used here in landscape. The ESP32-based StickC is a different target. See the [official hardware page](https://docs.m5stack.com/en/core/StickS3).
+The target is M5Stack **StickS3**, with ESP32-S3, 8 MB flash, 8 MB PSRAM and a 135 × 240 display used in landscape. [Official hardware documentation](https://docs.m5stack.com/en/core/StickS3) describes the board and download mode. Purchase links: [M5Stack shop](https://shop.m5stack.com/products/m5sticks3-esp32s3-mini-iot-dev-kit), [Amazon](https://www.amazon.com/dp/B0GWHN8HK3).
 
-Install [PlatformIO Core](https://docs.platformio.org/en/stable/core/installation/index.html). The [project configuration](../firmware/platformio.ini) pins Espressif32 6.12.0, M5GFX 0.3.0 and explicit M5Unified/M5PM1 revisions. The first build needs internet to obtain those development dependencies. The installed game itself uses no network.
+Install [PlatformIO Core](https://docs.platformio.org/en/stable/core/installation/index.html). The [project configuration](../firmware/platformio.ini) pins the target/dependencies. The first build may download development tools; the installed game runs offline. The CSPRNG's private maintained MbedTLS subset is included in the source.
 
 ## Build both required images
 
@@ -18,27 +32,23 @@ pio run -e m5stack-sticks3
 python3 scripts/build_assets.py
 ```
 
-The application contains the Engine, UI, compiled art and audio banks. The filesystem supplies exactly `feature_music.mp3` and `phoenix_atlas.zlib`. A successful app build does not replace a missing filesystem.
+The app contains the game, compiled art/audio and random service. The filesystem supplies `feature_music.mp3` and `phoenix_atlas.zlib`. An app build cannot replace a missing filesystem.
 
-The portable [asset builder](../firmware/scripts/build_assets.py) uses bundled Espressif [spiffsgen.py](../firmware/scripts/vendor/spiffsgen.py). It avoids relying on an incompatible host `mkspiffs` executable. It rejects symlinks, missing files and unexpected data entries rather than packaging arbitrary personal files.
+The portable [asset builder](../firmware/scripts/build_assets.py) uses bundled [spiffsgen.py](../firmware/scripts/vendor/spiffsgen.py) and checks the allowed files. The [merge script](../firmware/scripts/merge_firmware.py) validates image headers, bounds and overlaps.
 
-| Output under `firmware/release/` | Purpose | Flash offset |
+| Output under `firmware/release/` | Purpose | Offset |
 |---|---|---|
-| `phoenix-confucius-sticks3.bin` | Verified merged boot/application image for a fresh installation | `0x0` |
-| `phoenix-confucius-app.bin` | Separate application image for a reviewed compatible app update | `0x10000` |
-| `feature-assets.bin` | Required runtime filesystem | `0x670000` |
-
-The [merge script](../firmware/scripts/merge_firmware.py) validates chip/image headers, partition bounds, overlap, merged bytes and erased OTA selection before installing its output filename.
+| `phoenix-confucius-sticks3.bin` | Merged boot/application installation image | `0x0` |
+| `phoenix-confucius-app.bin` | Application image when layout/assets already match | `0x10000` |
+| `feature-assets.bin` | Required asset filesystem | `0x670000` |
 
 ## Enter download mode
 
-Connect a USB data cable, hold the small power button until the green LED blinks, then release it. This is the procedure in the [M5Stack download-mode instructions](https://docs.m5stack.com/en/core/StickS3). The large grey game-control button is not the small power key.
+Use a USB data cable. Hold the small power button until the green LED blinks, then release, following [M5Stack's instructions](https://docs.m5stack.com/en/core/StickS3). The large grey gameplay button is a different control. Discover the actual port with `pio device list` and confirm the intended board.
 
-Discover the serial port with `pio device list`; use that actual port in the commands below. Do not copy a developer's device identifier or assume any connected S3 board is the intended StickS3.
+## Installation
 
-## Fresh installation
-
-With the esptool version provided by the pinned toolchain, and while inside `firmware/`:
+From `firmware/`, with the pinned esptool available:
 
 ```sh
 python3 -m esptool --chip esp32s3 --port PORT write_flash \
@@ -46,29 +56,21 @@ python3 -m esptool --chip esp32s3 --port PORT write_flash \
   0x670000 release/feature-assets.bin
 ```
 
-Replace `PORT` with the discovered port and invoke esptool from an environment in which it is installed. The pinned tool uses underscore command names such as `write_flash`.
+Replace `PORT` with the discovered port. The installation writes those image ranges; there is no game-bank recovery step.
 
-**The merged fresh-install image is not a save-preserving update.** Its covered erased-fill ranges include the NVS area. Existing game data must be backed up and handled explicitly before using it on a device that already has a bank.
+## Application-only write
 
-## Compatible app-only update
-
-If the partition map and asset filesystem are already compatible, write only:
+When the partition layout and asset filesystem already match:
 
 ```sh
 python3 -m esptool --chip esp32s3 --port PORT write_flash \
   0x10000 release/phoenix-confucius-app.bin
 ```
 
-This range excludes NVS and the filesystem. A new layout or incompatible assets require a separate reviewed migration; an app-only write cannot fix a missing Phoenix atlas or music file. Do not use `erase_flash` as a routine update step.
+This excludes the filesystem; it cannot repair missing/mismatched assets. Use the [partition map](../firmware/partitions-offline.csv) as authority. Both installation methods boot into the same fresh-session policy.
 
 ## Verify the result
 
-Check the expected chip/model and image hash before writing. Afterward, verify written bytes, boot the game, check the version in Game Menu, test both controls, check one sound audition and confirm that the expected saved bank/meter survived if this was a preserving update. Autoplay should be off after startup.
+Verify image hashes/written bytes, current menu version, 1,000 default denomination credits and autoplay off. Exercise controls, an ordinary action and an audio audition. A build, a verified write, a native frame and physical sound/entropy behavior establish different things. Current completed validation is in [release notes](../CHANGELOG.md#validation-status).
 
-Those checks answer different questions: compiling proves a build, flash verification proves stored bytes, a frame proves rendering, and a restored checkpoint comparison proves data continuity. None establishes that the original machine's casino odds have been recovered.
-
-Partition authority: [partitions-offline.csv](../firmware/partitions-offline.csv). Game data and recovery: [saving](saving.md). Common failures: [troubleshooting](troubleshooting.md).
-
-## Repository checks and browser hosting
-
-The build workflow compiles this firmware, creates the offline filesystem and compares freshly exported C++ tables with the documented CSVs. The Pages workflow deploys only `demo/`; choose GitHub Actions as the repository's Pages publishing source. See [GitHub's custom workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages). Local validation is recorded separately from a successful hosted workflow run.
+See [troubleshooting](troubleshooting.md) for assets, USB and random-source errors. The firmware workflow and [table exporter](payouts.md#regenerating-the-reference) check current-source builds/data. A Pages workflow publishes the static `demo/` folder; [GitHub documents custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).

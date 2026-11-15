@@ -1,59 +1,49 @@
 # Settings and play-money funding
 
-Hold the large grey button to open Game Menu. Grey moves through entries; blue selects. Menu labels use “black” in some compact hints for the same large grey game-control button. The small power key is separate.
+Hold the large grey button during gameplay for Game Menu. Grey moves and blue selects. Compact hints may call that grey control “black”; the small power key is separate. Inside the wager panel, hold-grey returns directly to Game.
 
-<img src="media/menu.png" alt="Game Menu with the version in its corner" width="720">
+<img src="media/menu.png" alt="Game Menu" width="720">
 
 ## Rules and wagers
 
-Game Rules has six pages: how to play, features, Base symbol pays, Free symbol pays, win units and Phoenix awards. The in-game numeric pay pages use the currently active configuration and show unit credits before the bet multiplier. They should agree with the matching [compiled reference](payouts.md).
+Game Rules has six pages covering play, features, Base pays, Free pays, units and Phoenix awards. Pay pages use the current configuration and show unit credits before the bet multiplier. See [payouts](payouts.md).
 
-Select Bet opens the same cabinet screen as a short grey press in normal play. Drafting and cancelling are read-only; a red BET choice can commit and spin. Owed features prevent changing their wager.
+Select Bet opens the cabinet panel. Browsing/cancelling does not stake money. Selecting a funded red BET choice commits its wager and starts immediately. Unfinished features prevent changing their wager.
 
 ## Display
 
-| Option | Effect |
-|---|---|
-| Brightness | Cycles the implemented display brightness levels |
-| Display | Changes cash/credits presentation, not the financial amount |
-| Flip Screen | Rotates the game by 180 degrees |
-
-The normal game-view grey double press also flips the screen. It does not spend a spin. The single grey opening waits through a 400 ms double-click window; the blue spin control remains immediate. Saved display preferences are restored independently from the game bank.
+Brightness cycles the implemented levels. Display changes cash/credit presentation, not the money balance. Flip Screen rotates 180 degrees; double-grey also flips normal gameplay without spending a spin. A new session starts with its default display state.
 
 ## Sound
 
-Master sound, reel-bed sound and stops/landings have separate controls. Fine volume and three test entries make it possible to compare music without waiting for a bonus. See the complete [audio guide](audio.md) for event routing and limits.
+Master sound, reel bed and stops/landings have separate controls. Fine volume and the three test entries let you audition the existing programs. See [audio](audio.md) for current routing and acoustic limits.
 
 <img src="media/sound.png" alt="Sound menu" width="720">
 
 ## Credits
 
-Game Menu → ADD CREDITS opens the funding submenu. Its choices are:
+Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the default $1 denomination. Game Menu → ADD CREDITS offers:
 
-| Choice | Behavior |
+| Choice | Effect |
 |---|---|
-| Add $1,000 | Add to the current bankroll and return to the game |
-| Add $10,000 | Add to the current bankroll and return to the game |
-| Add $100,000 | Add to the current bankroll and return to the game |
-| Auto Refill | Toggle restoring an unaffordable bankroll to the last supported added amount |
-| Return to Menu | Leave the funding page |
+| Add $1,000 | Add to the current money balance, return to Game with autoplay off |
+| Add $10,000 | Add to the current money balance, return to Game with autoplay off |
+| Add $100,000 | Add to the current money balance, return to Game with autoplay off |
+| Auto Refill | Toggle refill when another paid spin is unaffordable |
+| Return to Menu | Leave this submenu |
 
-Auto-refill remembers the last supported $1,000/$10,000/$100,000 selection; its initial default remains $10,000. It acts when another paid spin is unaffordable, including a positive balance smaller than the wager. It restores the remembered amount or the current stake, whichever is larger. The $1 million option is absent.
-
-Funding is available at safe Ready/Base boundaries. It preserves the meter buckets, wager, game RNG and statistics. Each funding choice adds to the existing balance. Successful additions clear stale status text, return to gameplay and leave autoplay off. Earned awards and queued features remain part of the saved game.
+Auto Refill uses the last supported addition size for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Funding is available only at safe Ready/Base boundaries and does not reset the live session's wager, meters or statistics. There is no $1 million choice.
 
 ## Battery display
 
-There is no battery percentage in this build. The StickS3 API returns fine-grained integers calculated from battery voltage; it is not a measured remaining-charge counter. A one-percent numerical step does not establish the requested five-percentage-point state-of-charge accuracy. The [pinned M5Unified implementation](https://github.com/m5stack/M5Unified/blob/96576a14247ddc935149145aa6b51943464120f1/src/utility/Power_Class.inl) and [StickS3 battery example](https://docs.m5stack.com/en/arduino/m5sticks3/battery) describe the available reading without providing that error bound.
+There is no battery percentage in this build. The available voltage-derived reading does not establish a five-percentage-point charge-accuracy guarantee. See the [M5Unified implementation](https://github.com/m5stack/M5Unified/blob/96576a14247ddc935149145aa6b51943464120f1/src/utility/Power_Class.inl) and [StickS3 battery example](https://docs.m5stack.com/en/arduino/m5sticks3/battery).
 
 ## Simulator Return
 
-SIMULATOR RETURN shows six local-model choices for the current wager profile's return range. Option 3 is the default. Select a choice to review its return range, complementary model house-edge range and future Grand, then press blue to apply or grey to go back. Values depend on the current denomination, lines, multiplier and prize-cap profile; changing that context requires another review.
+SIMULATOR RETURN shows six options for the current profile; **Option 3 is the default**. Review the ideal-model return range, complementary edge range and future Grand, then press blue to apply or grey to go back. Context includes denomination, lines, multiplier and prize-cap profile.
 
-These choices change the future Grand amount. Reels, hit probabilities, other prizes and ordinary line prices remain unchanged. The ranges describe the simulator's fixed-bet, fixed-option, always-funded model without Lucky Chance. They are not recovered casino RTP, promises about a short session or bounds for every wager-switching strategy. The [math guide](math-and-evidence.md) explains the assumptions.
+Applying a choice changes future Grand only. Reel/hit probabilities, ordinary prices and other prizes do not change. The ranges are ideal-reference-only under fixed-profile, fixed-option, always-funded, no-Lucky play. They do not establish original casino RTP or cover arbitrary wager switching, faults or short-session results. See [math](math-and-evidence.md#return-and-house-edge).
 
-Changing the choice requires a closed Ready/Base boundary. An unfinished Free/Hold feature, queued work or storage/service block locks the setting and preserves existing prizes. Browsing, help and cancellation do not change the financial game or normalize an old saved intent.
+A closed Ready/Base boundary is required. Free/Hold/queued work and service/capacity faults lock the choice. Browsing/help/cancellation do not alter the live round. Applied choices belong to this session; boot or reload starts fresh.
 
-Main confirms the exact canonical saved record before returning to manual gameplay. Identical owned choices are verified without a gratuitous generation. Failed or ambiguous saves retain one exact pending record for retry; release the controls before playing after recovery. See [saving](saving.md) for compatible owed rounds and persistence limits.
-
-Implementation: [menus, funding and credit revisions](../firmware/src/ui.cpp), [persisted device options](../firmware/src/main.cpp).
+Implementation: [UI](../firmware/src/ui.cpp), [selector](../firmware/src/return_selector86.h), [native startup](../firmware/src/main.cpp).

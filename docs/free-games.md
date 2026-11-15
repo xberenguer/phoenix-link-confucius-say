@@ -30,7 +30,7 @@ The simulator awards **three additional free games** for three or more Wisdoms d
 
 A free result can also enter Hold & Spin. The free-game session and its remaining games stay owed while the Hold runs. On return, Twin music starts a new phrase at the source-fitted fire-return event and the remaining free games continue without another paid stake. Meter-generated Holds can also queue during either part of the sequence.
 
-Feature WIN is cumulative across the session. A Hold's values and a line/scatter award are not meant to be counted twice when their animations transfer to CREDIT. The [saving guide](saving.md) explains how an owed session survives a compatible restore.
+Feature WIN is cumulative across the session. A Hold's values and a line/scatter award are not meant to be counted twice when their animations transfer to CREDIT. The [session guide](saving.md) explains live action safety and the fresh-game behavior on restart.
 
 ## Completion and approximations
 

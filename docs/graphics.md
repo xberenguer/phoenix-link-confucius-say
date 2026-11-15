@@ -1,6 +1,6 @@
 # Graphics, animation and native gallery
 
-These images are deterministic renders of the **current game**, not screenshots of a user's bank or crops from gameplay footage. The display is 240 × 135 pixels in landscape. Rendering an animation accurately at that size is a separate problem from recovering the original cabinet's high-resolution assets.
+These images are deterministic renders of the **current game**, not screenshots of a user's bank or crops from gameplay footage. The display is 240 × 135 pixels in landscape. Screenshots and animations are published at 720 × 405 with exact nearest-neighbor enlargement; each native pixel becomes a solid 3 × 3 block. Rendering an animation accurately at that size is a separate problem from recovering the original cabinet's high-resolution assets.
 
 ## Screen layout
 
@@ -29,9 +29,9 @@ The cabinet wager menu combines observed denomination, line and red BET controls
 
 The frame counts describe the compiled assets, not an assertion that these are the manufacturer's original frame counts. Their selection is implemented in [generated assets](../firmware/src/generated_assets.cpp) and [Phoenix artwork](../firmware/src/phoenix_art.cpp).
 
-<img src="media/wisdom.gif" alt="Wisdom animation display fixture" width="720">
+<img src="media/wisdom.webp" alt="Wisdom animation display fixture" width="720">
 
-<img src="media/sage.gif" alt="Awarded adjacent Sage demonstration" width="720">
+<img src="media/sage.webp" alt="Awarded adjacent Sage demonstration" width="720">
 
 A joined Sage fills the qualifying two- or three-position region, including its internal seams. It does not stretch a non-Wild into a Wild. Unawarded or separated faces stay separate under the current [joining policy](symbols-and-combinations.md#the-tall-gold-confucius).
 
@@ -58,22 +58,24 @@ The recoil fit and stagger are reconstructed from footage. The game does not cla
 | Return fire | Separate exit/reveal geometry returning to Free or Base |
 | Counter border | Calm four-second moving gold rim around the small number box; green digits and padding are independent |
 
-<img src="media/phoenix.gif" alt="Phoenix animation display fixture" width="720">
+<img src="media/phoenix.webp" alt="Phoenix animation display fixture" width="720">
 
-<img src="media/coins.gif" alt="Coin fountain display fixture" width="720">
+<img src="media/coins.webp" alt="Coin fountain display fixture" width="720">
 
-Particle paths and visual phase offsets do not draw from the game's PCG state. Replaying a display frame cannot change the next financial outcome.
+Particle paths and visual phase offsets do not draw from the game’s outcome service. Replaying a display frame cannot change the next financial outcome.
+
+Confucius topknots extend into the grey header during reel motion, landings and joined wins. Hold keeps its individual-cell presentation.
 
 ## What remains approximate
 
-The original complete artwork, font and animation banks are unrecovered. The current game mixes authored shapes, vector rerenders, reconstructed/restored symbol material, deterministic effects and a compact digital portrait treatment. A clean game render is not proof that every underlying asset is a recovered factory render.
+The original complete artwork, font and animation banks are unrecovered. The current game mixes authored shapes, vector rerenders, reconstructed/restored symbol material, deterministic effects and a compact digital portrait treatment. Its [Sage crown](../firmware/src/sage_crown122.h) and [Major artwork](../firmware/src/authored_major112.h) are separate current-renderer assets. A clean game render is not proof that every underlying asset is a recovered factory render.
 
 Camera-fitted timings, flame geometry, wing contours, exact symbol placement, palette, source-dependent screen lighting and unobserved transition branches remain areas for comparison. The gallery demonstrates current behavior honestly; it is not a certificate of 1:1 visual identity.
 
-The [gallery manifest](gallery-manifest.json) records dimensions, synthetic seeds, source version, generator and content hashes. See [testing](testing.md) for pixel comparisons versus source-fidelity evidence, and [attribution](attribution.md) for third-party material.
+The [gallery manifest](gallery-manifest.json) records dimensions, fixture identity, source version, generator and content hashes. See [testing](testing.md) for pixel comparisons versus source-fidelity evidence, and [attribution](attribution.md) for third-party material.
 
 ## Repeated named-prize flights
 
-<img src="media/multiplied-mini101.gif" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
+<img src="media/multiplied-mini101.webp" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
 
-The outgoing flight and sampled ribbon finish behind the next same-cell flight. This 4880 ms excerpt repeats for viewing; it is a synthetic current-source demonstration, not source footage or a probability sample. Engine payment, audio bytes and phase eligibility are unchanged.
+The outgoing flight and sampled ribbon finish behind the next same-cell flight. This 4880 ms excerpt repeats for viewing; it is a synthetic current-source demonstration, not source footage or a probability sample. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.

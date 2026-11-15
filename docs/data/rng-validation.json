@@ -1,0 +1,46 @@
+{
+  "version": "0.2.104",
+  "runtime_fingerprint": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "algorithm": "AES-256 CTR-DRBG",
+  "backend": "Mbed TLS3.6.7 minimal private-symbol subset",
+  "prediction_resistance": true,
+  "entropy_bytes_per_request": 48,
+  "action_reservoir_bytes": 1024,
+  "rejection_attempt_limit": 64,
+  "first_statistical_study": {
+    "suite": "Official NIST STS2.1.2, unmodified algorithms/default parameters",
+    "sequences": 1000,
+    "bits_per_sequence": 1000000,
+    "test_families": 15,
+    "subtest_rows": 188,
+    "flagged_rows": 0,
+    "raw_stream_sha256": "ec3791c126980044c103daed9e76d483e5bffe2cf119f8fca13f71d186cc025e",
+    "official_report_sha256": "64b017642a22cc64bb0cbed0233794da222e29728d30587f79e7e045afe7a748",
+    "excursion_applicable_sequences": 608,
+    "rerolls": 0,
+    "scope": "Host OS entropy; frozen production provider with independently reviewed mechanical API/configuration port to final source. Does not measure physical ESP32 entropy or prove cryptographic security/approval/RTP.",
+    "current_source_basis": "The statistical sample belongs to the unchanged production AES-256 CTR-DRBG provider;104 changes only UI/version/source-identity. It is not a new physical-device entropy or statistical study."
+  },
+  "source_tests": {
+    "command": "python3 tools/test_rng.py --sanitize",
+    "scope": "Known-answer, bounded-draw, entropy/reentry/exhaustion and Engine failure tests; deterministic entropy injection enabled only for tests.",
+    "checks": 47905,
+    "ASAN_UBSAN": true
+  },
+  "native_validation": {
+    "flash_readback": true,
+    "healthy_startup": true,
+    "fresh_credits": 1000,
+    "autoplay_off_at_boot": true,
+    "atlas_frames_verified": 60,
+    "user_confirmed_animations_and_buttons": false,
+    "live_USB_spin_probe_verified": false,
+    "USB_reconnect_diagnostics": "Open investigation; subsequent commands did not return replies in this validation session.",
+    "physical_entropy_strength_measured": false,
+    "validation_scope": "Current104 firmware/assets full readback and healthy fresh startup. No current104 physical-button confirmation; later USB sync unavailable before any spin command.",
+    "startup_entropy_captures": 2
+  },
+  "casino_calibrated": false,
+  "Nevada_approved": false,
+  "actual_CSPRNG_infinite_horizon_return_qualified": false
+}

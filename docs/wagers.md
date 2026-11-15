@@ -1,6 +1,6 @@
 # Denominations, line counts and bets
 
-The current wager menu offers these denomination, line and multiplier choices. Most controls follow a recorded Confucius Say cabinet; the $1/10-line paid row uses the separately qualified family adaptation described below. The menu is narrower than every configuration the internal compatibility model can represent.
+The current wager menu offers these denomination, line and multiplier choices. Most controls follow a recorded Confucius Say cabinet; the $1/10-line paid row uses the separately qualified family adaptation described below. The menu is narrower than every configuration the internal evaluator can represent.
 
 | Denomination | Line controls | Bet multipliers offered |
 |---|---|---|
@@ -29,8 +29,8 @@ The exact implemented availability is defined by [cabinet_profile.h](../firmware
 
 The lower-right badge shows the value of a credit. For this source-qualified cabinet profile, MIN BET is the minimum **credit** wager associated with the denomination: 50 for 1¢/2¢, 25 for 5¢/10¢ and 5 for $1/$2. It is not simply the currently selected line count. Choosing 100 lines at 1¢ does not turn its source-profile MIN BET into 100.
 
-The caption is a tiny above/below adaptation for the 240 × 135 display; physical readability remains a limitation. Compatible unoffered saved configurations keep their own badge treatment rather than borrowing an unverified minimum. Code: [denomination badge rules](../firmware/src/denomination_minbet46.h).
+The caption is a tiny above/below adaptation for the 240 × 135 display; physical readability remains a limitation. Internal profiles outside the offered menu are not extra selectable controls. Code: [denomination badge rules](../firmware/src/denomination_minbet46.h).
 
-A compatible saved record may contain a wager that is not in this menu. Viewing or cancelling the wager screen must preserve that saved game. Unsupported controls are not invented to make every internal setting appear selectable.
+Viewing or cancelling the wager screen does not change the live wager or spend credits. A new session starts at its default wager; no previous game is imported.
 
-The [payout reference](payouts.md) exports the wider internal evaluator support with a selectable flag. Those compatibility rows must not be read as extra live cabinet buttons. See [controls](controls.md) for focus/navigation and [saving](saving.md) for owed legacy sessions.
+The [payout reference](payouts.md) exports the wider internal evaluator support with a selectable flag. Those internal rows must not be read as extra live cabinet buttons. See [controls](controls.md) for focus/navigation and [session rules](saving.md) for live feature/funding boundaries.

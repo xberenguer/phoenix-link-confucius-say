@@ -1,6 +1,8 @@
 #pragma once
-// Private F proposal: neutral retained schedule, never a requested RTP.
-// The strict historical UpperCeiling contract remains in the import helper.
+// Current-session local Grand schedule. Numeric enclosures describe only the
+// ideal uniform-draw local model under its stated fixed-profile assumptions.
+// They do not qualify physical entropy, actual implementation aborts, casino
+// odds, arbitrary wager switching, or an infinite-horizon CSPRNG return.
 #include "static_grand_legacy.h"
 namespace static_grand {
 using Fingerprint=legacy_static_grand::Fingerprint;
@@ -11,6 +13,9 @@ using legacy_static_grand::checksum;
 using legacy_static_grand::u32;
 constexpr size_t selectionBytes=48;
 constexpr uint8_t analyticalBound=1,independentValidation=2;
+// Both evidence bits concern the ideal reference model, separately from source
+// and CSPRNG engineering acceptance. A failed action commits no replacement.
+constexpr bool idealReferenceOnly=true;
 enum class Mode:uint8_t { RetainedStaticGrand=1 };
 enum class Wire:uint8_t { Legacy1=1,Neutral2=2 };
 enum class Proof:uint8_t { LocalAnalyticEnclosure=1 };

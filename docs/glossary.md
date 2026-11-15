@@ -14,16 +14,16 @@
 | Sage / Confucius | The Wild character symbol; adjacent awarded faces can join visually |
 | Named prize | Mini, Minor or Major; its 2×/3× applies to that named value |
 | Grand | Full-board extra award in addition to the Phoenix values |
-| Bucket | Persistent meter context keyed by denomination and total bet credits |
+| Bucket | Live-session meter context keyed by denomination and total bet credits |
 | Owed action | A Free/Hold/chained action still belonging to an already committed round |
 | Presentation | Animation instructions derived from a committed Engine result |
-| RNG / PCG | Deterministic outcome generator; separate from visual particle timing |
+| CSPRNG / DRBG | Cryptographic outcome generator with fresh entropy; separate from visual timing |
 | RTP | Expected long-run return under a specified model and play policy |
 | Sample return | What a finite observed session actually paid; can differ greatly from expectation |
 | Conditional EV | Expected value from a particular meter/owed state and policy |
 | PAR data | Manufacturer mathematical program data; not recovered for this project |
-| Canonical checkpoint | Bound financial, scene and preference record owned by the storage layer |
-| NVS | ESP32 nonvolatile key/value storage used for records/options |
+| Session | Live game state; boot or page reload starts fresh with 1,000 default denomination credits |
+| NVS | ESP32 nonvolatile storage; current game progress is session-only |
 | SPIFFS | Asset filesystem holding runtime music and the Phoenix atlas |
 | Source-observed | Directly visible in identified footage/material, with its configuration scope |
 | Local | Chosen or inferred for this simulator; not authenticated original machine data |

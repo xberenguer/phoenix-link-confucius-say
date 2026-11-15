@@ -1,48 +1,43 @@
 # Troubleshooting
 
-Check the version shown in Game Menu against the included [release identity](../RELEASE.json). The [controls](controls.md), [audio guide](audio.md) and [save guide](saving.md) contain the intended behavior.
+Match Game Menu's version to the current [release identity](../RELEASE.json). [Controls](controls.md), [audio](audio.md) and [fresh-session rules](saving.md) describe the intended behavior.
 
-## Buttons and autoplay
+## Progress disappeared after restart
 
-| Symptom | Check |
-|---|---|
-| Grey single press seems delayed | It waits through a 400 ms double-click window in the game view |
-| Grey key does not open the panel immediately during a feature | Entry can be queued until the running sequence permits it; owed wager changes remain protected |
-| Blue appears to stop autoplay rather than spin | A short blue press while autoplay is active turns it off |
-| Holding blue is not toggling | Hold for about 850 ms; a chord or another held button is a different input path |
-| Screen orientation changed | Double grey in normal play flips it; Display → Flip Screen also controls it |
-| Green LED blinks | In the documented power-key download mode this is expected; release the power key and finish/exit download mode |
+Every device boot, flash and browser reload starts a fresh manual session with 1,000 default denomination credits. There is no restore/import flow. A hidden browser tab can continue its still-live session when shown again; reloading it creates a new one.
 
-Use the large grey game-control button for menus. The small power key has the hardware power/download role; the game does not map it to wager selection.
+## Grey opens wagers instead of settings
 
-## Wagers and credits
+Short-grey opens the cabinet panel. Hold-grey exits that panel directly to Game, or opens settings from gameplay. Double-grey flips the normal game screen. The short action waits through the 400 ms double-click window. See [controls](controls.md).
 
-The current menu offers both $1/5-line and $1/10-line play. The $1/10-line row has multipliers 1, 2, 3, 4 and 5; its source scope is the [family adaptation](wagers.md) described in the wager guide. A compatible saved wager outside the menu, or an unsupported math context, can require service rather than silent repricing of an owed game.
+## Unavailable wager or funding
 
-With auto-refill off, an unaffordable red BET choice cannot create a paid spin. Add supported play money at a safe boundary. Funding controls can be unavailable while a Free/Hold session remains owed. Changing the cash display or bankroll must not clear the meter.
+The menu offers both $1/5-line and $1/10-line play; the latter has multipliers 1, 2, 3, 4, 5 and the [documented family-adaptation scope](wagers.md). A funded red BET button starts immediately. Merely browsing/cancelling does not stake credits.
 
-Two outer reels showing matching results during Wisdom free games is the intended Twin mechanic. Matching Phoenix stops may carry different amounts. It is not evidence that all ordinary Base reels should duplicate one another.
+An unaffordable wager asks for play money. ADD CREDITS is available at safe Ready/Base boundaries; an unfinished feature or service/capacity fault can block it. Funding does not clear the session's meters. See [settings](settings.md#credits).
 
-## Audio
+## Random source error
 
-For no sound, check master sound, nonzero volume and the separate spin/landing switches. Then try the menu's test jingle and feature/award auditions. A submitted or queued audio diagnostic does not prove the physical speaker made sound.
+The page says **RANDOM SOURCE ERROR / PLAY STOPPED / NO OUTCOME WAS COMMITTED**. A random-source action failed; no partial new stake or prize was committed. Repeated presses do not re-deal it. Restart for a new session. If it recurs, verify the intended build/board or browser WebCrypto support rather than enabling a weak fallback.
 
-For missing Hold/Twin music with functioning small cues, verify that both required filesystem files were installed and that the app matches them. An app-only update cannot create missing runtime data.
+Host randomness tests do not establish physical entropy quality. The supported native build relies on its pinned offline S3 entropy prerequisites; changing ADC/RF/microphone ownership requires another review.
 
-For crackle or unexpected resets at high volume, test at a lower level, compare USB and battery power, and consult the official [StickS3 speaker note](https://docs.m5stack.com/en/core/StickS3). The device maker recommends below 75% on battery. The reconstruction's loudness and exact source identity still need perceptual checking.
+<a id="audio"></a>
 
-Not every Phoenix landing selects an arrival note, and not every Hold ending selects a coin celebration. Compare the actual event branch and award basis before assuming that autoplay suppressed a jingle. See [audio event order](audio.md).
+## No sound or crackle
 
-## Graphics or missing animation
+Use the Sound menu's master/reel/landing switches, fine volume and test entries. Browsers may require an initial gesture. A missing required music file is different from a muted channel. Browser and Stick speakers/mixing have different timing and acoustic behavior; no audio improvement is implied by the RNG work.
 
-A missing Phoenix atlas can cause a fallback or unavailable artwork even when static UI text works. Both runtime assets are required. Verify the filesystem rather than replacing it with arbitrary images from a reference video.
+For crackle/resets on battery, lower volume and consult [M5Stack's speaker guidance](https://docs.m5stack.com/en/core/StickS3). Check USB and battery behavior separately; source fidelity remains a listening question.
 
-Adjacent Confucius faces do not always join under the current policy: awarded adjacency is required. J/Q/K are currently static sprites rather than recovered unique factory sequences. The [graphics inventory](graphics.md) makes those limits explicit.
+## Paused feature or missing artwork
 
-## Storage and USB
+Free and Hold use their own START/continuation phases. A moving or collecting board need not be ready for a new paid spin. Hold/Free work stays in its live round; a restart intentionally ends that session.
 
-A checkpoint pause or service page protects a record it cannot safely advance. Do not erase it merely to make the warning disappear. Use read-only status/export, identify the exact version and retain the record for investigation.
+The application needs both the Phoenix atlas and feature music filesystem. Check the [image roles and offsets](build-and-flash.md) when files are missing. Source qualification and asset failure messages should be investigated with current status/build hashes.
 
-If USB status is silent but animations and buttons still work, distinguish transport trouble from an application freeze. Reconnect with a known USB data cable and verify the expected board before flashing. Avoid opening several serial readers at once.
+## USB and build tools
 
-If a build fails with “Bad CPU type” from a filesystem tool on an Apple-silicon host, use the portable `scripts/build_assets.py` described in [build and flash](build-and-flash.md). For a storage warning, inspect the current [outcome acknowledgement and deferred-settings rules](saving.md). A visual or RNG change does not resolve an unacknowledged storage operation.
+If buttons/animation work but USB status is silent, check the data cable, actual port and competing serial readers. A timeout alone does not identify a game freeze. Verify the intended board before any flash.
+
+For an Apple-silicon “Bad CPU type” filesystem-tool error, use the portable asset builder in [build and flash](build-and-flash.md). It does not require an incompatible host mkspiffs executable.

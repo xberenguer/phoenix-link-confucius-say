@@ -1,66 +1,438 @@
 {
+  "version": "0.2.104",
+  "runtime_fingerprint": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "curated_presentation_not_frequency_measurement": true,
+  "raw_source_footage_or_user_attachments_included": false,
   "images": [
     {
-      "file": "media/king-payout99.png",
-      "sha256": "4cf3d5f383c106a992b5d95d12a3e28af0fec02f375d67b512c8e8fcdce34651",
-      "source_versions": [
-        "0.2.98",
-        "0.2.99"
+      "file": "media/game.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "b93475af6552850d190c39b2abd2a216d86f6e093abf4791f4269874915c9e4e",
+      "bytes": 45692,
+      "dimensions": [
+        720,
+        405
       ],
-      "retained_by_version": "0.2.102",
-      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
-      "scope": "10c/25lines/1x Base three-King unit price10\u21925",
-      "personal_or_native_device_frame": false
+      "kind": "fresh default-denomination 1000-credit game"
     },
     {
-      "file": "media/book-payout99.png",
-      "sha256": "deddab38aa5b6fe386dd483d27dfbdcb578cbf403ff08a2ad2227ec5769c8c23",
-      "source_versions": [
-        "0.2.98",
-        "0.2.99"
+      "file": "media/wagers.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "ba53a514676de3c9379a1eab32f4d27c8b90382e34dc1051218f12b3e3afecae",
+      "bytes": 27689,
+      "dimensions": [
+        720,
+        405
       ],
-      "retained_by_version": "0.2.102",
-      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
-      "scope": "10c/25lines/1x Base five-Book unit price250\u2192100",
-      "personal_or_native_device_frame": false
+      "kind": "cabinet wager panel in fresh synthetic session"
     },
     {
-      "file": "media/return-selector98.png",
-      "sha256": "4211edd462c8722f72b431a7e1bbfffea97eec43fc3c39afaa6742af1c0e7cbf",
-      "source_versions": [
-        "0.2.97",
-        "0.2.98"
+      "file": "media/menu.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "9f46a955feb7d9af9620d7770e663585eff426bfdaa42b80d742324691b8d8fe",
+      "bytes": 14499,
+      "dimensions": [
+        720,
+        405
       ],
-      "retained_by_version": "0.2.102",
-      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
-      "scope": "Six model return options replace the read-only menu entry",
-      "personal_or_native_device_frame": false
+      "kind": "current Game Menu"
     },
     {
-      "file": "media/numeral-bank98.png",
-      "sha256": "d3d2da6bfecbe88b503a21c7ed7c633b07be5b25ef1cede5cab3181d2a657af6",
-      "source_versions": [
-        "0.2.97",
-        "0.2.98"
+      "file": "media/sound.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "f8abf4ed123b768eb032e0870413547774b5cd94b274c60b5eff3c0b42ee963c",
+      "bytes": 16347,
+      "dimensions": [
+        720,
+        405
       ],
-      "retained_by_version": "0.2.102",
-      "kind": "Labeled before/after actual UI renderer crops with explanatory annotations",
-      "scope": "Clean numeral3/4/6 and provisional8/9 improvements",
-      "personal_or_native_device_frame": false
+      "kind": "current Sound menu"
     },
     {
-      "file": "media/multiplied-mini101.gif",
-      "sha256": "35f94225bd99e81acf965451c1a45f51766648495327e0350379d8bc5791af1d",
-      "source_versions": [
-        "0.2.102"
+      "file": "media/volume.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "acc9d82170c22b34cf7df7c28e5999a2b9e382aa6ac208479420e56a07cedca4",
+      "bytes": 10759,
+      "dimensions": [
+        720,
+        405
       ],
-      "introduced_in": "0.2.101",
-      "retained_by_version": "0.2.102",
-      "kind": "Actual v0.2.102 UI render of a synthetic TripleMini repeated-flight sequence; no source footage",
-      "scope": "Separate $95 / $105 / $115 / $125 display plateaus; committed payment happens once, using the local v0.2.101 timing fit",
-      "personal_or_native_device_frame": false
+      "kind": "current volume panel"
+    },
+    {
+      "file": "media/wisdom-entry.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "0723b2eebd2c8c081953c4e49081ac03119901c5bbea9f5e64dc6732f0c58c44",
+      "bytes": 46011,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "complete three-Scatter fixture through actual feature-entry presentation"
+    },
+    {
+      "file": "media/hold.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "258bf314611dacd6a044aa9020e1d6ad368e7ed61329189acbc2a2b206d29ce1",
+      "bytes": 52618,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "complete Phoenix fixture through actual Hold-entry presentation"
+    },
+    {
+      "file": "media/collection.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "ce6644bfd64a552cedb4788025007eb772190f6c8155bc10eb9893e873a1f6ca",
+      "bytes": 54132,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "complete synthetic Hold settlement through actual centered collection"
+    },
+    {
+      "file": "media/symbols.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "8e8975f974c19943827827a7e013d6a5f192903a560c0b487057797f181bc596",
+      "bytes": 45451,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "all twelve symbols in an explicit display fixture"
+    },
+    {
+      "file": "media/wisdom.webp",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "ff5c4941c4d6321f24f11e7826d04d3bedc91e47a4f8662d00783dd94061ae7a",
+      "bytes": 143238,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "four-second Wisdom display loop"
+    },
+    {
+      "file": "media/sage.webp",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "de6e554d031f7a94e07d00d2ca62161dcc08e637a25ea8ea5e852dbb274644e8",
+      "bytes": 87374,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "single awarded joined-Sage event; preview restarts event"
+    },
+    {
+      "file": "media/phoenix.webp",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "58c7fc94842033fab7cda1506271f4277e02dba1adf8ebf56aa9ff34aecc5a53",
+      "bytes": 175686,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "one 2500 ms asset cycle in explicit all-Phoenix display fixture"
+    },
+    {
+      "file": "media/coins.webp",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "ea8deae99deb7bcfa0e9f4d37f4e31abf2cfd2827c031590105edcac6b888983",
+      "bytes": 514126,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "6080ms current coin-fountain presentation excerpt; no launch-threshold inference"
+    },
+    {
+      "file": "media/counter.webp",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "ecf48fa5bb4c38d50207582dc3ea779aed059d4ffe668422c5c532e6913eeb33",
+      "bytes": 72332,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "four-second number-rim treatment in current UI"
+    },
+    {
+      "file": "media/multiplied-mini101.webp",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "7eaa1280c80452ab81939cbabacea1d6db77b12d387441d8e7524800f7f0bb94",
+      "bytes": 548470,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "current TripleMini same-cell flights; synthetic 95/105/115/125-dollar plateaus"
+    },
+    {
+      "file": "media/gameplay104.webp",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "9f7ac1dc180aff749d64aa6016d1dcfd7867b4f2c7e1f2816eef1e3b05ce4b50",
+      "bytes": 4785912,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data",
+      "duration_ms": 19840,
+      "frames": 496,
+      "fps": 25,
+      "reel_settle_times_ms": [
+        7340,
+        13040,
+        19820
+      ],
+      "countup_windows_ms": [
+        {
+          "result": "Sage A",
+          "credit": [
+            2700,
+            2700
+          ],
+          "win": [
+            2020,
+            4300
+          ]
+        },
+        {
+          "result": "Bell B",
+          "credit": [
+            8340,
+            8340
+          ],
+          "win": [
+            7360,
+            9940
+          ]
+        },
+        {
+          "result": "Book C",
+          "credit": [
+            14040,
+            14040
+          ],
+          "win": [
+            13060,
+            15640
+          ]
+        }
+      ],
+      "temporal_resolution_ms": 20,
+      "encoded_frame_ms": 40,
+      "credit_semantics": "Observed displayBank update events, not a gradual credit animation; WIN continues after ready()",
+      "source_fact_receipt_sha256": "ff91b0d173575fc8920f49a4bd4de88021c5ec501272a468e953f1ca64745831"
+    },
+    {
+      "file": "media/gameplay104.gif",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "28b4dfbb7a331561989568522beb0070cc48795fa0eff56f2a870c483f6d49fe",
+      "bytes": 13105702,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data",
+      "duration_ms": 19840,
+      "frames": 496,
+      "fps": 25,
+      "reel_settle_times_ms": [
+        7340,
+        13040,
+        19820
+      ],
+      "countup_windows_ms": [
+        {
+          "result": "Sage A",
+          "credit": [
+            2700,
+            2700
+          ],
+          "win": [
+            2020,
+            4300
+          ]
+        },
+        {
+          "result": "Bell B",
+          "credit": [
+            8340,
+            8340
+          ],
+          "win": [
+            7360,
+            9940
+          ]
+        },
+        {
+          "result": "Book C",
+          "credit": [
+            14040,
+            14040
+          ],
+          "win": [
+            13060,
+            15640
+          ]
+        }
+      ],
+      "temporal_resolution_ms": 20,
+      "encoded_frame_ms": 40,
+      "credit_semantics": "Observed displayBank update events, not a gradual credit animation; WIN continues after ready()",
+      "source_fact_receipt_sha256": "ff91b0d173575fc8920f49a4bd4de88021c5ec501272a468e953f1ca64745831"
+    },
+    {
+      "file": "media/hero-tiled-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "80a1a6dc0b0763ffd3b99829732251b9c13547719b6846c40b0c897270fbaeb2",
+      "bytes": 49374,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/hero-full-gold-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "bdccecde826ddfc1ffe0579c827b22bdb40688ceedb6fdf32024e13c65dbe7e7",
+      "bytes": 49721,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/hero-sage-full-win-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "4694550d29149f1d1bd39be4c8ae713dc7cae2cf5ed108e5d589e4d5353e832e",
+      "bytes": 49681,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/hero-bell-win-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "2e803cc8ee769ed628350129443192c592e24c4fd4d0a62e1aee4ef1b7455f4f",
+      "bytes": 41404,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/hero-book-win-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "67aaf5a1f53db86ccbc0f9c6ca48e7552ff655fc3f681e75296d257451bcf649",
+      "bytes": 37259,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/topknots-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "df45c16b8988f10749aba11d7bc8916c5df3e53141dceaa9ca9af64944825739",
+      "bytes": 40517,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/topknots-104-header-detail.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "78a7b6d347d6d89829de9918e1e45dc47f0a062cf5f5803700a462cba6772b62",
+      "bytes": 12146,
+      "dimensions": [
+        1440,
+        222
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/major-5000-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "8a55ac07d3f88f522306f330028536c1dc74c1564edb2875c05749af21913e3e",
+      "bytes": 32726,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/major-10000-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "75441d28a8d1bab5613fa69d4420d06e301d98e28e30fb1e1d16c7e272287b21",
+      "bytes": 36783,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/major-12700-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "398eed82295936bcd1617e28ee12b4b3ed4a720f9224f2355426e4c0c98f3dbb",
+      "bytes": 37714,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
+    },
+    {
+      "file": "media/major-15000-104.png",
+      "source_version": "0.2.104",
+      "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+      "sha256": "1531cb6dcf93bfd7f93d9bef8e89b8a6e60213f8e63f283f3507d24d1399da07",
+      "bytes": 37701,
+      "dimensions": [
+        720,
+        405
+      ],
+      "kind": "Current-source curated hero/still; synthetic demonstration, not frequency data"
     }
-  ],
-  "not_current100_gallery_frames": true,
-  "user_photographs_or_attachments_used": false
+  ]
 }
