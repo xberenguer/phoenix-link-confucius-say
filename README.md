@@ -6,9 +6,11 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
 
 Start with [your first game](docs/getting-started.md), the [full game guide](docs/README.md), or [rules and payouts](docs/payouts.md).
 
-![Scripted simulator demonstration of the regular game](docs/media/game.png)
+<a href="https://xberenguer.github.io/phoenix-link-confucius-say/">
+  <img src="docs/media/gameplay102.gif" alt="Confucius Say gameplay: spinning reels, Phoenix symbols and line wins" width="720">
+</a>
 
-The gallery uses deterministic desktop renders of the actual 240 × 135 game, with synthetic demonstration credits. It contains no player's saved bank or photographs of a physical device.
+The animated preview shows the actual 240 × 135 game enlarged 3×, recorded during ordinary browser autoplay. The linked gallery uses deterministic desktop renders. All demonstration credits are synthetic; no player's saved bank or device photographs are included.
 
 This package uses version **0.2.102**, local model H (`0x00020011`). The game source, numeric tables and deterministic gallery are synchronized to that source. The browser compiles the same Engine, renderer and audio programs. Original casino probabilities and complete original artwork/audio banks remain unrecovered; see [math and evidence](docs/math-and-evidence.md).
 
