@@ -97,9 +97,51 @@ adapter_files = [D / 'build.py', D / 'verify_bundle.py', D / 'SOURCE_BINDING.jso
 adapter_pins = {p.relative_to(D).as_posix(): H(p) for p in adapter_files if p.is_file()}
 public = {'version': version, 'runtime': runtime, 'runtimeMeaning': 'Engineering-accepted firmware source fingerprint; browser platform is separately bound.', 'mathFamily': family, 'acceptedSource': True, 'acceptanceMeaning': binding['acceptanceMeaning'], 'sourcePins': pins, 'browserAdapterPins': adapter_pins, 'browserAdapterSHA256': hashlib.sha256(canonical(adapter_pins)).hexdigest(), 'sourceAcceptanceReceiptSHA256': binding['sourceAcceptanceReceiptSHA256'], 'assets': assets, 'persistence': 'Session only. Every reload starts with 1,000 denomination credits. No bank imports, exports or saved RNG state.', 'randomness': 'Maintained private Mbed TLS 3.6.7 AES-256 CTR_DRBG; fresh WebCrypto entropy for every financial action; no fallback.', 'gameRules': 'Actual local C++ model. Original casino PAR probabilities and actual-CSPRNG infinite-horizon RTP are unqualified.', 'audio': 'Actual C++ PCM, MP3 decoder and worker through WebAudio. Browser output is not physical speaker/DMA equivalence.', 'build': 'Emscripten ' + toolchain_version}
 (dist / 'PROVENANCE.json').write_text(json.dumps(public, indent=2) + '\n')
-cache = hashlib.sha256(b''.join(p.name.encode() + hashlib.sha256(p.read_bytes()).digest() for p in sorted(dist.iterdir()) if p.is_file())).hexdigest()[:20]
 files = ['./', './index.html', './app.js', './style.css', './control-config.js', './source-config.js', './phoenix.js', './phoenix.wasm', './phoenix.data', './PROVENANCE.json', './BUNDLE_MANIFEST.json', './THIRD_PARTY_LICENSES.txt']
-(dist / 'sw.js').write_text("const PREFIX='phoenix-cpp-demo:'+self.registration.scope+':';const CACHE=PREFIX+" + json.dumps(cache) + ";const FILES=" + json.dumps(files) + ";self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k))))));self.addEventListener('fetch',e=>{if(e.request.method==='GET'&&new URL(e.request.url).origin===location.origin)e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)));});\n")
+worker = """const PREFIX = 'phoenix-cpp-demo:' + self.registration.scope + ':';
+const CACHE = PREFIX + __CACHE_ID__;
+const FILES = __FILES__;
+self.addEventListener('install', event => {
+  event.waitUntil((async () => {
+    try {
+      const cache = await caches.open(CACHE);
+      await cache.addAll(FILES.map(file => new Request(new URL(file, self.registration.scope), { cache: 'reload' })));
+      await self.skipWaiting();
+    } catch (error) {
+      await caches.delete(CACHE);
+      throw error;
+    }
+  })());
+});
+self.addEventListener('activate', event => {
+  event.waitUntil((async () => {
+    const old = (await caches.keys()).filter(key => key.startsWith(PREFIX) && key !== CACHE);
+    await Promise.all(old.map(key => caches.delete(key)));
+    await self.clients.claim();
+    if (old.length) {
+      const windows = await self.clients.matchAll({ type: 'window' });
+      for (const client of windows) {
+        if (client.url.startsWith(self.registration.scope)) {
+          // Starting navigation without awaiting it lets activation finish;
+          // navigation fetches are held until this event has settled.
+          client.navigate(client.url).catch(() => {});
+        }
+      }
+    }
+  })());
+});
+self.addEventListener('fetch', event => {
+  if (event.request.method === 'GET' && event.request.url.startsWith(self.registration.scope)) {
+    event.respondWith((async () => {
+      const cache = await caches.open(CACHE);
+      return (await cache.match(event.request)) || fetch(event.request);
+    })());
+  }
+});
+"""
+# Worker changes also create a new cache identity, including a logic-only fix.
+cache = hashlib.sha256(worker.encode() + b''.join(p.name.encode() + hashlib.sha256(p.read_bytes()).digest() for p in sorted(dist.iterdir()) if p.is_file())).hexdigest()[:20]
+(dist / 'sw.js').write_text(worker.replace('__CACHE_ID__', json.dumps(cache)).replace('__FILES__', json.dumps(files)))
 for p in dist.iterdir():
     if p.is_file():
         data = p.read_bytes()

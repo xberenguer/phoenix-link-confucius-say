@@ -6,7 +6,7 @@
 - Removed the looping reel rumble and its Sound-menu setting. Reel stops, Phoenix cues, win jingles and feature music remain available.
 - Added CLEAR BALANCE to Add Credits. It returns to the game at zero; enabled auto-refill applies when another spin is requested.
 - Free Game progress remains visible during nested Phoenix Hold features and their fire transitions.
-- The browser game uses the same current source and includes a GitHub link.
+- The browser game uses the same current source and includes a GitHub link. Completed browser updates now refresh older cached game tabs automatically.
 
 <img src="docs/media/wagers-lines.png" alt="Selected line count remains focused" width="720">
 

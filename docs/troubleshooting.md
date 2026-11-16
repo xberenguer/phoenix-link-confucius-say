@@ -41,3 +41,7 @@ The application needs both the Phoenix atlas and feature music filesystem. Check
 If buttons/animation work but USB status is silent, check the data cable, actual port and competing serial readers. A timeout alone does not identify a game freeze. Verify the intended board before any flash.
 
 For an Apple-silicon “Bad CPU type” filesystem-tool error, use the portable asset builder in [build and flash](build-and-flash.md). It does not require an incompatible host mkspiffs executable.
+
+## Browser version
+
+Reload the game while online to check for a new release. Once its complete bundle is available, older game tabs refresh automatically. Offline play uses the last complete cached release.

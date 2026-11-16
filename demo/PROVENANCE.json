@@ -171,7 +171,7 @@
     "wisdom_lower_win88.h": "8808489a9a09700b55d32a729c9c14ec08d48eff29e4f2afdb517efa21764dec"
   },
   "browserAdapterPins": {
-    "build.py": "b4cec577ed81025c3ab758a46eed11bcd11101975bcf7aa80ac9a2a1f6960c5a",
+    "build.py": "15c332b79348bd83181a46adfbaf099b839120434077397c4843e9a51edbdb26",
     "verify_bundle.py": "c9d119476070264f7ae8a77e4cbf78b0b84649300965783fe46366a72c025187",
     "SOURCE_BINDING.json": "9f1c7ef4acd4c7d5297d83294290fd6f5197d0d80af387d3d00a67dd90845681",
     "bridge.cpp": "21e7e04919ad47a8e0f622cc0eccb5a77d4ecf5fd27f0b391c1562304be8c9e0",
@@ -183,11 +183,11 @@
     "platform/esp_system.h": "c230b4f52aa9f13ad00472cb1b42539a0c67f171cf3088c3ff61fd431626e4a2",
     "platform/mbedtls/sha256.h": "d1c8fbb3ad5895d9b3387c7309c1aae5e84add8e2bcc0fe9282871ab63ab227c",
     "site/THIRD_PARTY_LICENSES.txt": "d3552ae6793c05c5fe68199ab03a24fb6ff4a4a08c4bde5eb3108176cba184a1",
-    "site/app.js": "96b4e6abf7d22a5b5b81289cbdeba8c13e05a864b22da93c92e16a41a9ddc00a",
+    "site/app.js": "882241f48eff2280e2b33e92a781593838579a7ffe31f962576560544e7d05ae",
     "site/index.html": "93756cf2f137288ca5607c4b7f829f08eaf18edb9a7c293aa47f3c75d610038e",
     "site/style.css": "f8ebbcbfeda52cd1f6ac003073d5fa632ae288d965b4c9c369c7515dff0a322e"
   },
-  "browserAdapterSHA256": "1ca2c5f68a62d1192f528aca180dfc405c3eb3b203c14d17d35ced22b915ea84",
+  "browserAdapterSHA256": "5d4fa487f6a4378dbfaea92c0c1dafc1592e292f750f648cbaef5ea9436360bc",
   "sourceAcceptanceReceiptSHA256": "ff8930b817153f9075d417b1cd52d1c3147c0235e5c253098769681cf989b1ab",
   "assets": {
     "feature_music.mp3": {

@@ -4,15 +4,15 @@
   "artifacts": {
     "PROVENANCE.json": {
       "bytes": 18569,
-      "sha256": "37313b7482283436b983900dc849d52651bf9ff572176e776e9f673c3b5679d1"
+      "sha256": "6b57517e322baf2b68a72fa3589f49e2c25221765b7360f711a909b9f8cd31f0"
     },
     "THIRD_PARTY_LICENSES.txt": {
       "bytes": 32527,
       "sha256": "d3552ae6793c05c5fe68199ab03a24fb6ff4a4a08c4bde5eb3108176cba184a1"
     },
     "app.js": {
-      "bytes": 11089,
-      "sha256": "96b4e6abf7d22a5b5b81289cbdeba8c13e05a864b22da93c92e16a41a9ddc00a"
+      "bytes": 11172,
+      "sha256": "882241f48eff2280e2b33e92a781593838579a7ffe31f962576560544e7d05ae"
     },
     "control-config.js": {
       "bytes": 70,
@@ -43,8 +43,8 @@
       "sha256": "f8ebbcbfeda52cd1f6ac003073d5fa632ae288d965b4c9c369c7515dff0a322e"
     },
     "sw.js": {
-      "bytes": 777,
-      "sha256": "14b1089208369bdc4244cb44a6e403f3c832a943b0645eca7430ff626bb33d7f"
+      "bytes": 1742,
+      "sha256": "eb3b6569f532cc1ff4f0704d9e08560dfd577a2443450da61ee658150b43d5e0"
     }
   },
   "note": "This manifest excludes itself to avoid a circular digest. The deployment gate verifies all other bundle files and source/adapter pins."

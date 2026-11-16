@@ -33,6 +33,7 @@
     "Synthesized reel rumble and its Sound-menu setting removed",
     "CLEAR BALANCE returns to the game at zero; enabled auto-refill applies on the next spin",
     "Free Game progress remains visible during nested Hold and fire",
-    "Browser and native game share current source; browser page links to GitHub"
+    "Browser and native game share current source; browser page links to GitHub",
+    "Completed browser updates activate and refresh older cached game tabs"
   ]
 }

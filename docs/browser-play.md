@@ -14,7 +14,7 @@ A click or tap may be required before browser sound can start. The Sound menu co
 
 Each reload, new page instance or new build starts manual play with **1,000 credits at the default $1 denomination ($1,000)**. Progress is held in that live page only. There is no saved-game upload, download or restore and no shared bank with a Stick or another tab.
 
-Static asset caching is separate from game state. Once the complete bundle is cached, its files can be available offline; reloading those files still creates a new game. The first load needs the bundle to be available.
+Static asset caching is separate from game state. Once the complete bundle is cached, its files can be available offline; reloading those files still creates a new game. The first load needs the bundle to be available. Online updates install a complete new bundle, then refresh older game tabs. Offline play retains the last complete cached release.
 
 ## Randomness and errors
 
