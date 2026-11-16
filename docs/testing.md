@@ -9,7 +9,8 @@ Current tests qualify specific software paths and source identities. They do not
 | Rejection mapping and price/path comparison | Mapping counts and implemented evaluator behavior | Does not recover casino strips/probabilities |
 | Atomic Engine fault cases | Failed Base/Free/Hold/Lucky/wager/init actions commit no partial state | Does not prove every possible fault |
 | Balance and outcome-history pairs | Matching test inputs produce matching results across different funded balances and past win/loss totals | Disclosed meter/feature state and admission limits can legitimately change behavior |
-| Actual Main/UI cases | Fresh startup, controls and post-fault dispatch follow exercised paths | Hardware APIs are mocked in host tests |
+| Actual Main/UI cases | Fresh startup, controls, menu pauses and post-fault dispatch follow exercised paths | Hardware APIs are mocked in host tests |
+| Music pause/context cases | Decoded PCM continues across pauses and Sound auditions without replaying the intro | Does not prove physical acoustic identity |
 | ASAN/UBSAN | No detected errors on exercised paths | Not a universal memory-safety proof |
 | Exact raster comparison | Optimized drawing agrees with its reference | Reference fidelity is a separate question |
 | Host/Wasm parity | Same specified fixture gives the same output | Browser/device environments still differ |
@@ -28,6 +29,8 @@ Use [the exporter command](payouts.md#regenerating-the-reference) against the cu
 ## Visual and audio fixtures
 
 The [gallery](graphics.md) uses synthetic states from the renderer. Inspect its [provenance](gallery-manifest.json) with the included assets. A short loop illustrates presentation and does not measure full-game FPS, casino frequency or physical audio identity.
+
+Menu checks pause real feature presentations, keep the phase, money, meter and outcome-generator state fixed while browsing, and resume the existing music context. Browser checks also cover a real Hold respin, Sound auditions and automatic cached-build upgrades followed by offline play.
 
 Useful cases include partial reel stops, awarded Sage joins, Twin pairs, natural/meter/chained Hold, initial zero-new revival, named collection, direct 15, source-failure UI, manual/autoplay quick-stop and wrapped clocks. Funding/wager changes and meter continuity are checked within a live session. Reload/boot checks require a new 1,000-credit game with autoplay off.
 

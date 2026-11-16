@@ -7,6 +7,7 @@
 #include <atomic>
 #include <algorithm>
 #include <cstring>
+#include <new>
 #include "music_asset.h"
 #include "music_seek_data.h"
 #include "collected_music_seek.h"
@@ -23,8 +24,8 @@ MusicStream stream;
 // Worker-owned scalar cursor only; immutable PCM stays in flash, never copied.
 ImmutablePcmLoop89 twinStream;
 // One atomic snapshot binds the requested part to its event identity.
-// Equality handles29-bit wrap; no chronological ordering comparison is used.
-constexpr uint32_t requestPartBits=3,requestPartMask=7,requestEpochMask=UINT32_MAX>>requestPartBits;
+// Equality handles27-bit wrap; no chronological ordering comparison is used.
+constexpr uint32_t requestPartBits=5,requestPartMask=7,requestPauseBit=8,requestAuditionBit=16,requestEpochMask=UINT32_MAX>>requestPartBits;
 static_assert(unsigned(FeatureMusicPart::TwinFree)<=requestPartMask,"Music parts must fit the command word");
 static_assert(std::atomic<uint32_t>::is_always_lock_free,"Music request publication must remain lock-free");
 std::atomic<uint32_t> requestWord{0};
@@ -62,7 +63,7 @@ bool twinSourceAvailable39(){
  if constexpr(!twin_music_bank39::enabled)return false;
  else return twin_music_bank39::metadataValid&&!(reinterpret_cast<uintptr_t>(twin_music_bank39::data())&1u);
 }
-bool configure(FeatureMusicPart part){
+bool configure(FeatureMusicPart part,MusicStream& stream=::stream,ImmutablePcmLoop89& twinStream=::twinStream){
  if(part==FeatureMusicPart::TwinFree){
   if constexpr(!twin_music_bank39::enabled)return false;
   else{
@@ -89,20 +90,63 @@ class Sink final:public MusicSink {
  public:unsigned queued()const override{return unsigned(M5.Speaker.isPlaying(kChannel));}
  bool play(const int16_t* data,size_t count,uint32_t rate)override{return M5.Speaker.playRaw(data,count,rate,false,1,kChannel,false);}
 } sink;
+struct Playback141 {
+ MusicStream* decoder=nullptr;ImmutablePcmLoop89 twin;
+ FeatureMusicPart active=FeatureMusicPart::Off,configured=FeatureMusicPart::Hold;
+ bool everQueued=false,cached=false;uint32_t mayRestartAt=0;
+ size_t cachedAt=0,cachedEnd=0;uint64_t beforeFrames=0;uint32_t beforeRetries=0,seenAwardEpoch=0;
+};
 void worker(void*){
- FeatureMusicPart active=FeatureMusicPart::Off,configured=FeatureMusicPart::Hold;bool everQueued=false;uint32_t mayRestartAt=0;
- bool cached=false;size_t cachedAt=0,cachedEnd=0;uint32_t seenStop=stopGeneration.load();
- uint64_t beforeFrames=0;uint32_t beforeRetries=0;
- uint32_t seenAwardEpoch=requestWord.load(std::memory_order_acquire)>>requestPartBits;
+ Playback141 game;game.decoder=&::stream;game.twin=::twinStream;
+ Playback141 test;test.configured=FeatureMusicPart::Off;
+ Playback141* selected=&game;bool selectedTest=false;
+ uint32_t seenStop=stopGeneration.load();
  if(!M5.Speaker.isPlaying(kChannel))stopAcknowledged.store(seenStop,std::memory_order_release);
  for(;;){
   const uint32_t command=requestWord.load(std::memory_order_acquire);
   const auto wanted=requestPart(command);const uint32_t epoch=command>>requestPartBits;
+  const bool audition=command&requestAuditionBit,paused=command&requestPauseBit;
+  const bool contextChanged=audition!=selectedTest;
+  if(contextChanged){
+   // The speaker borrows PCM. Release the old lane before changing decoders;
+   // neither the parked game stream nor its queued buffers are overwritten.
+   if(M5.Speaker.isPlaying(kChannel)){vTaskDelay(1);continue;}
+   if(audition&&!test.decoder){
+    void* memory=heap_caps_malloc(sizeof(MusicStream),MALLOC_CAP_SPIRAM|MALLOC_CAP_8BIT);
+    if(!memory){publishRequest(FeatureMusicPart::Off);vTaskDelay(1);continue;}
+    test.decoder=new(memory)MusicStream;
+   }
+   selected=audition?&test:&game;selectedTest=audition;
+   if(audition){test.active=FeatureMusicPart::Off;test.cached=false;}
+   selected->everQueued=false;selected->seenAwardEpoch=epoch;
+  }
+  auto& active=selected->active;auto& configured=selected->configured;
+  auto& everQueued=selected->everQueued;auto& mayRestartAt=selected->mayRestartAt;
+  auto& cached=selected->cached;auto& cachedAt=selected->cachedAt;auto& cachedEnd=selected->cachedEnd;
+  auto& beforeFrames=selected->beforeFrames;auto& beforeRetries=selected->beforeRetries;
+  auto& seenAwardEpoch=selected->seenAwardEpoch;auto& stream=*selected->decoder;auto& twinStream=selected->twin;
+  currentPart=active;
+  if(contextChanged){
+   // Diagnostics describe the restored game, not the last menu audition.
+   playing=false;
+   if(cached){rangeBegin=feature_music::awardBeginFrame;rangeEnd=feature_music::awardBeginFrame+cachedEnd;fastPoint=false;sourceFinished=cachedAt==cachedEnd;finiteDraining=cachedAt<cachedEnd;}
+   else if(active==FeatureMusicPart::TwinFree){rangeBegin=twin_music_bank39::loopBegin;rangeEnd=twin_music_bank39::loopEnd;fastPoint=false;sourceFinished=finiteDraining=false;}
+   else{rangeBegin=uint32_t(stream.loopBegin());rangeEnd=uint32_t(stream.loopEnd());fastPoint=stream.loopSeekReady();sourceFinished=active!=FeatureMusicPart::Off&&stream.finished();finiteDraining=isAwardPart(active)&&!stream.finished();}
+  }
   const uint32_t stop=stopGeneration.load(std::memory_order_acquire);
-  if(stop!=seenStop){M5.Speaker.stop(kChannel);seenStop=stop;active=FeatureMusicPart::Off;currentPart=active;playing=finiteDraining=false;everQueued=cached=false;mayRestartAt=millis()+40;}
+  if(stop!=seenStop){
+   M5.Speaker.stop(kChannel);seenStop=stop;
+   // A true stop/fault cancels both the live audition and the parked game.
+   // Otherwise a protected parked award could resurrect after cancellation.
+   for(auto* context:{&game,&test}){context->active=FeatureMusicPart::Off;context->everQueued=context->cached=false;context->mayRestartAt=millis()+40;}
+   currentPart=FeatureMusicPart::Off;playing=finiteDraining=false;
+  }
   // stop() publishes a mixer marker; it need not consume it synchronously.
   // Never acknowledge while a stopped buffer is still borrowed by lane6.
   if(!M5.Speaker.isPlaying(kChannel))stopAcknowledged.store(seenStop,std::memory_order_release);
+  // An ordinary menu does not publish Off and never restarts a source.
+  // Drain borrowed buffers, then retain every decoder/pending/loop cursor.
+  if(paused){everQueued=false;playing=bool(sink.queued());vTaskDelay(pdMS_TO_TICKS(4));continue;}
   const bool newAward=epoch!=seenAwardEpoch;seenAwardEpoch=epoch;
   // Consume every epoch, including one cancelled by Off/Hold. An unrelated
   // later scope must never resurrect a stale event. Only a new award event
@@ -124,7 +168,7 @@ void worker(void*){
    cached=awardBlock&&(wanted==FeatureMusicPart::MajorAward||wanted==FeatureMusicPart::BigAward);
    if(!cached&&configured!=wanted){
     const uint32_t began=micros();
-    if(!configure(wanted)){ready=false;publishRequest(FeatureMusicPart::Off);vTaskDelay(1);continue;}
+    if(!configure(wanted,stream,twinStream)){ready=false;publishRequest(FeatureMusicPart::Off);vTaskDelay(1);continue;}
     const uint32_t used=micros()-began;if(used>maxConfigureUs)maxConfigureUs=used;
     configured=wanted;beforeFrames=beforeRetries=0;
    }
@@ -208,7 +252,7 @@ void publishRequest(FeatureMusicPart part,bool newAward){
  uint32_t previous=requestWord.load(std::memory_order_relaxed);
  for(;;){
   const uint32_t epoch=((previous>>requestPartBits)+unsigned(newAward))&requestEpochMask;
-  const uint32_t next=(epoch<<requestPartBits)|uint32_t(part);
+  const uint32_t next=(epoch<<requestPartBits)|(previous&(requestPauseBit|requestAuditionBit))|uint32_t(part);
   if(isAwardPart(part)&&(newAward||part!=requestPart(previous)))awardRequestedAt=millis();
   if(requestWord.compare_exchange_weak(previous,next,std::memory_order_release,std::memory_order_relaxed))return;
  }
@@ -218,6 +262,13 @@ void audioMusicRequest(FeatureMusicPart part){
  const bool award=isAwardPart(part);
  const auto wanted=ready&&(part!=FeatureMusicPart::Collected||collectedSourceReady)&&(!award||awardSourceReady)&&(part!=FeatureMusicPart::TwinFree||twinSourceAvailable39())?part:FeatureMusicPart::Off;
  publishRequest(wanted);
+}
+void audioMusicRoute(FeatureMusicPart part,bool paused,bool audition){
+ uint32_t previous=requestWord.load(std::memory_order_relaxed);
+ for(;;){
+  const uint32_t next=(previous&~uint32_t(31))|uint32_t(part)|(paused?requestPauseBit:0)|(audition?requestAuditionBit:0);
+  if(requestWord.compare_exchange_weak(previous,next,std::memory_order_release,std::memory_order_relaxed))return;
+ }
 }
 void audioMusicBeginAward(FeatureMusicPart part){
  if(!isAwardPart(part)){audioMusicRequest(part);return;}
@@ -234,6 +285,7 @@ twin_music_bank39::sampleRate,twin_music_bank39::frames,twin_music_bank39::pcmBy
 #else
 bool audioMusicInit(){return false;}
 void audioMusicRequest(FeatureMusicPart){}
+void audioMusicRoute(FeatureMusicPart,bool,bool){}
 void audioMusicBeginAward(FeatureMusicPart){}
 void audioMusicStop(){}
 uint32_t audioMusicStopFence(){return 0;}

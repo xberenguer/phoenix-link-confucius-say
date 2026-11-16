@@ -1,6 +1,6 @@
 {
-  "version": "0.2.140",
-  "runtime_fingerprint": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+  "version": "0.2.141",
+  "runtime_fingerprint": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
   "mathematical_family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
   "local_model": "0x0002001d",
   "source_body_files": 165,
@@ -22,18 +22,17 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Final 0.2.140 firmware and offline assets passed complete byte-exact readback on the original StickS3. Fresh startup confirmed a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
-  "browser_version": "0.2.140",
-  "native_status_version": "0.2.140",
+  "native_validation": "Final 0.2.141 firmware and offline assets passed complete byte-exact readback on the original StickS3. Fresh startup confirmed the current version, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
+  "browser_version": "0.2.141",
+  "native_status_version": "0.2.141",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Current final source-bound release package",
+  "status": "Current source-bound hotfix release package",
   "changes": [
-    "Seven-item Game Menu with Sound and Display grouped under Settings; existing button shortcuts retained.",
-    "In-game Paylines viewer opens the current layout first and browses all six implemented line counts without changing the wager.",
-    "Additional source-observed payline geometry and scoped payout corrections, with compiled reference tables and explicit remaining fallback routes.",
-    "Grand awards use the existing WINNER artwork and a continuous checked jackpot-plus-Phoenix collection total; the unsupported Grand lettering is removed.",
-    "The actual current source, browser executable, guide, complete gallery, looping preview and signed hardware flasher are synchronized."
+    "Opening menus pauses the feature and its tune; returning resumes the same playback position.",
+    "Sound-menu auditions use an independent decoder context, preserving the paused game music.",
+    "Stick firmware and browser use the same menu-pause behavior.",
+    "Probability weights, payouts, jackpots and RNG provider are unchanged."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -41,25 +40,30 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 5735648,
-      "sha256": "5598cbc54dcbce722ba9495644a92ec36e31bc8d67a309b2572672013dac5380"
+      "bytes": 5736992,
+      "sha256": "09db77b2ef58e8b4ed20aa544ec6c89505dbe4bb208e7a1f3eac53a9b989828a"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 5670112,
-      "sha256": "dc22acc2fed6bfd364199588213959d1cda05571cb30766cba6aa4a8c1879e18"
+      "bytes": 5671456,
+      "sha256": "b720a24bb20e0e3715abe2eda3930273bdc576951b9576eff6eca30f355530db"
     }
   },
   "validation": {
-    "browser_functional_checks": 327,
-    "browser_cache_offline_checks": 62,
-    "CSPRNG_known_answer_and_fault_checks": 47905,
-    "source_return_rows_checked": 7200,
-    "menu_wagers_checked": 110,
-    "return_selector_details_checked": 660,
-    "payline_routes_checked": 1230,
-    "payline_viewer_pages_checked": 222,
+    "native_target_build": true,
+    "menu_UI_sanitizer_cases": 15,
+    "music_PCM_pause_context_cases": 19,
+    "audio_producer_checks": 357,
+    "explicit_stop_cases": 2,
+    "source_return_rows_unchanged": 7200,
     "full_native_readback": true,
     "fresh_native_startup": true,
-    "original_machine_fidelity_certified": false
+    "original_machine_fidelity_certified": false,
+    "browser_menu_feature_audio_checks": 122,
+    "browser_cache_offline_checks": 62,
+    "browser_page_errors": 0,
+    "browser_console_errors": 0,
+    "browser_real_Hold_respin_pause_resume": true,
+    "browser_audio_context_running": true,
+    "native_boot_checks": 10
   }
 }

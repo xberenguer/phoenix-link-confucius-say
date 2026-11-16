@@ -1,27 +1,27 @@
 {
-  "describes_version": "0.2.140",
-  "target_public_version": "0.2.140",
+  "describes_version": "0.2.141",
+  "target_public_version": "0.2.141",
   "model": "0x0002001d",
   "family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
-  "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+  "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
   "renderer_source": "../firmware/src/ui.cpp",
-  "renderer_sha256": "922fa8492618583d0d4aa81517b111eed9c2ed3049a80cc1335ac76da7dc5ec6",
+  "renderer_sha256": "d5cfebd7811b2c5de17209b9a5c15d4ec7008a0642fdcc0149ed7d70b427b36c",
   "engine_source": "../firmware/src/phoenix_engine.h",
   "engine_sha256": "56b5b0e34e17cf25f6f036d6320f681a5f93132fb139779e6aabb292b3acfa79",
   "renderer_fixture_sha256": "b60a39060f0dbe712bb6ac821c103437afc9ecb90d7234cdce5bd80362e28b91",
   "numeric_phoenix_prizes_checked_against_current_generator_support": true,
   "media_builder_sha256": "74c414ea8481acb9199f0938de3902e9f40ef59e41638f4d1517c7dfed2989a8",
-  "source_aggregate_sha256": "16baff78c4332d91c3105aaf2e5aa3421520738ae58a5716a5957fab2fa95dbe",
+  "source_aggregate_sha256": "8d7676b44ef12e2b02c2686832f4ba16a12327f08221cbe8d6d35ca2bb88eace",
   "source_files_sha256": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
-    "audio.cpp": "6ea8323e0537ce4b44eb16d132cdcd88eb1206d4ed024e058c1c9f41b65d1bb5",
-    "audio.h": "64796182260ab480c136c98f3462ffbb378a45cc0f137ae232fe3a2fe6949d71",
+    "audio.cpp": "002d028edb82da2d212771d7f03237e96296fdaa6aeab3cf7c375c0fe8d3ffbf",
+    "audio.h": "d10be072c3bed8642ff1afbb6390a6f643855d0c6e0a0abe9c60f6df37b5b83c",
     "audio_cash_in_generated.inc": "a562d427f3305062796d67b07fecbd6bcd88d5f590f300784fe57fda58d7ea5c",
     "audio_cues.cpp": "fdbf7cbe8c00493af24d5d6870959dd486b317ab710250de829c0583c63c7d03",
     "audio_cues.h": "b66bec19d19dee5abd75350b78b4cee49a78af9775284dcce90bd2f7922ca859",
     "audio_free_start_generated.inc": "17ac2020672d0d7c4c7f80cedf58ff409fcd8fa36360ab7048d03968696f9ba1",
-    "audio_music.cpp": "2632723dd98694aa3bf39f0a63ae9d05a3ef4d629db9061726e12126579025e4",
-    "audio_music.h": "de8962f3972db9f060d6b5f1df158847b894941f8b2acd82fa88d05b36c9353a",
+    "audio_music.cpp": "6c425f97f12adcb7e4f9152db649cbc9c0152666186da1069d0061f1ed1f36c2",
+    "audio_music.h": "a20063f44da33c1f2e4d23799706038ff1a9b4091c41ffc735e253ac3fb425cb",
     "audio_third_generated.inc": "170cf2fc6a4df6abcbf566a3ef826868fd7ff43392357b080933f510732334a1",
     "authored_major112.h": "064a2f6b4b878f768325a6ed2cbdfae673b37eef73975af7e0451a0808c7d1e3",
     "award_art.cpp": "6ee57f2e7f840562484397584e4b3178c29f21cc4129a91a49a98012206d09c1",
@@ -30,7 +30,7 @@
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
     "bounded_decimal_editor121.h": "1c477b5355b62a71f2b8751b4ee2d40b11fd33b189013e252cdd29d0bbcc9821",
-    "build_version.h": "85efe5f40705ccb536169fa5dbd22ba175b289b1831259300e1acc9ea9a7299f",
+    "build_version.h": "3452816430f9f3efa1b89bbc9c8cf52ff4ddbea0ae10a6b30033ef425cbe27eb",
     "cabinet_profile.h": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
     "cabinet_sage_large28.h": "b0ce6e39112497d3b7ae0e99a32a3e577c90b5c3580d2fc4ba22e3b91f76e815",
@@ -93,7 +93,7 @@
     "live_hold_count48.inc": "4afd9a28fb8027d2d05ecd23cbe842bc060c71cd1ac6a403e737f715b52bd503",
     "main.cpp": "3b04162a39a0d7409d28537d5ff8c0c7dfee7268a22f2b855529bf1c2cebf9f4",
     "major_title112_data.h": "83eb58d9c28e7aab85a08836af8892ec39cf0422433cfd95c701d5d6dd1d3c17",
-    "math_runtime_identity.h": "66b6b86b251a06b57ef4ad5b480ea3d7acfc56ca5735469ee7456755820db841",
+    "math_runtime_identity.h": "4fb74b9d25889d1699e90f2fc0c1a9b29f8bc83739e0d4feb5bdc2fe46a1165e",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "f69ef75b554ed2ee33e04fc8ddb77bdac565dcbf7bdd9bd431e053c67bce6c68",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -166,7 +166,7 @@
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "922fa8492618583d0d4aa81517b111eed9c2ed3049a80cc1335ac76da7dc5ec6",
+    "ui.cpp": "d5cfebd7811b2c5de17209b9a5c15d4ec7008a0642fdcc0149ed7d70b427b36c",
     "ui.h": "cbdeb199ee49bc83424c84f314fd47b50542dfbc6b4984fd828f52a8086e90c2",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -197,13 +197,13 @@
     "financial_presentation_and_source_guard_each_frame": true
   },
   "hero": {
-    "source_version": "0.2.140",
-    "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+    "source_version": "0.2.141",
+    "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
     "images": [
       {
         "file": "media/gameplay140-spin.webp",
-        "source_version": "0.2.140",
-        "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+        "source_version": "0.2.141",
+        "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
         "sha256": "187a67ea36d80c40dfb5215e8a3f94857505a8a3190aef12f40e1fb8af99c5f2",
         "bytes": 4789862,
         "dimensions": [
@@ -262,12 +262,13 @@
         "encoded_frame_ms": 40,
         "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
         "first_full_gold_still_ms": 3200,
-        "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff"
+        "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff",
+        "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
       },
       {
         "file": "media/gameplay140-spin.gif",
-        "source_version": "0.2.140",
-        "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+        "source_version": "0.2.141",
+        "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
         "sha256": "cafe6be14976996b1023bd27d36dd3f3516cd0950a4271793f1157a66393fa03",
         "bytes": 13118681,
         "dimensions": [
@@ -326,12 +327,13 @@
         "encoded_frame_ms": 40,
         "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
         "first_full_gold_still_ms": 3200,
-        "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff"
+        "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff",
+        "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
       },
       {
         "file": "media/hero-full-gold140.png",
-        "source_version": "0.2.140",
-        "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+        "source_version": "0.2.141",
+        "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
         "sha256": "bdccecde826ddfc1ffe0579c827b22bdb40688ceedb6fdf32024e13c65dbe7e7",
         "bytes": 49721,
         "dimensions": [
@@ -339,7 +341,8 @@
           405
         ],
         "kind": "Full three-row gold Sage in current source, synthetic credits",
-        "source_unrotated_clock_ms": 800
+        "source_unrotated_clock_ms": 800,
+        "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
       }
     ],
     "recipe_unchanged": true,
@@ -361,8 +364,8 @@
     {
       "file": "media/settings.png",
       "kind": "Settings groups Sound and Display",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -394,13 +397,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/paylines.png",
       "kind": "Current selected payline layout, six diagrams per page",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -432,13 +436,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/paylines-all.png",
       "kind": "Read-only browsing of another implemented payline layout",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -470,13 +475,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/line22-jack3.png",
       "kind": "Observed US50Line22 path and exact10c50M1Jack3 five-credit payout",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -508,13 +514,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/pickup-flight.png",
       "kind": "Middle-row collection bird visible before unchanged700ms arrival",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -546,13 +553,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/cash25-burst.png",
       "kind": "Current numeric-only25x Hold burst through actualEngine andUI",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -584,13 +592,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/game.png",
       "kind": "Fresh default-denomination1000-credit game",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -622,13 +631,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/wagers.png",
       "kind": "Cabinet wager panel",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -660,13 +670,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/menu.png",
       "kind": "Current seven-item Main menu with grouped Settings",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -675,36 +686,25 @@
         240,
         135
       ],
-      "sha256": "285fd91f0873f57db54104cf09ddb8267d16daac45d2f1f5f35254db1e797069",
-      "bytes": 14419,
-      "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
+      "sha256": "b7d2342f2367da07f26a300f9035ea5f75355b5e0b0e02cf9666a22c5c80cc30",
+      "bytes": 14465,
+      "fixture_kind": "Synthetic current Main/UI session; actual Game Menu navigation with no personal state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        2
-      ],
-      "input_frame_rgb565_sha256": [
-        "fc874f8d88e6ce9735467af43b27fafd3e34fe2d0839835d94cd9dfad0fefcd1"
-      ],
-      "input_frame_clock_ms": [
-        1000
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 100,
-          "lines": 5,
-          "multiplier": 2
-        }
+        "actual-main-menu141"
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1",
+      "input_frame_ppm_sha256": "e0405a5a740318a09fdb70956f0eb02df839b900b50ec65d3a87b9a53e29002b"
     },
     {
       "file": "media/sound.png",
       "kind": "Current Sound menu, with stops/landings and no reel-bed control",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -736,13 +736,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/volume.png",
       "kind": "Fine volume panel",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -774,13 +775,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/wisdom-entry.png",
       "kind": "Three-Wisdom initial entry",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -812,13 +814,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/hold.png",
       "kind": "Natural Phoenix Hold entry",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -850,13 +853,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/collection.png",
       "kind": "Centered running collection amount",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -888,13 +892,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/symbols.png",
       "kind": "All twelve display symbols",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -926,13 +931,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/credits.png",
       "kind": "Funding-only Credits panel with Clear Balance selected",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -964,13 +970,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/wagers-lines.png",
       "kind": "Focus moves from denomination to PLAY LINES",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1002,13 +1009,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/wagers-bets.png",
       "kind": "Selecting lines moves focus to red BET choices",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1040,13 +1048,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/nested-free.png",
       "kind": "Nested Hold with actualFreeGame1of6 and existingHold counts",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1078,13 +1087,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/nested-free-fire.png",
       "kind": "ActualFreeGame1of6 stays readable through the fire",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1116,13 +1126,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/pickup-flight.webp",
       "kind": "Current broad collection curl with late center retarget",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1258,13 +1269,14 @@
       "encoded_frames": 51,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/cash25-burst.webp",
       "kind": "Current short25x cash-only Hold event excerpt; not a universalthreshold",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1420,13 +1432,14 @@
       "encoded_frames": 61,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/wisdom.webp",
       "kind": "Wisdom four-second display loop",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1660,13 +1673,14 @@
       "encoded_frames": 100,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/sage.webp",
       "kind": "Awarded two-/three-row Sage event, then preview restarts",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1762,13 +1776,14 @@
       "encoded_frames": 31,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/phoenix.webp",
       "kind": "One Phoenix asset cycle",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -1922,13 +1937,14 @@
       "encoded_frames": 60,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/coins.webp",
       "kind": "Current coin-fountain excerpt; no threshold inference",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2114,13 +2130,14 @@
       "encoded_frames": 76,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/counter.webp",
       "kind": "Four-second calm counter rim",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2234,13 +2251,14 @@
       "encoded_frames": 40,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/multiplied-mini101.webp",
       "kind": "Current Triple Mini same-cell repeated pickups; stable filename",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2396,13 +2414,14 @@
       "encoded_frames": 61,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true
+      "preview_repeats_event": true,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/jackpots.png",
       "kind": "Actual Main/UI live-session page: jackpots",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2435,13 +2454,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0
+      "custom_jackpot_mask": 0,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/game-values.png",
       "kind": "Actual Main/UI live-session page: Counter & Jackpots parent",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2474,13 +2494,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0
+      "custom_jackpot_mask": 0,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/counter-editor.png",
       "kind": "Actual Main/UI live-session page: counter-editor",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2513,13 +2534,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0
+      "custom_jackpot_mask": 0,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/jackpot-values.png",
       "kind": "Actual Main/UI live-session page: jackpot-values",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2552,13 +2574,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0
+      "custom_jackpot_mask": 0,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/jackpot-editor.png",
       "kind": "Actual Main/UI live-session page: jackpot-editor",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2591,13 +2614,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0
+      "custom_jackpot_mask": 0,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/jackpots-custom.png",
       "kind": "Actual Main/UI live-session page: jackpots-custom",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2630,13 +2654,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 4
+      "custom_jackpot_mask": 4,
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/maximum-counter140.png",
       "kind": "Bounded counter draft at maximum1886; live counter remains unchanged until Apply",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2655,13 +2680,14 @@
       "frames": 1,
       "input_frame_rgb565_sha256": [
         "9055e5274bb8df00a6bbee09a6c3feab99b9bf2ba64ab8ce38c7e8eb4b2545c3"
-      ]
+      ],
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     },
     {
       "file": "media/counter-editor140.webp",
       "kind": "Blue/grey digit presses:0886 to1886 and back, then lower-digit6 to0; no Apply",
-      "source_version": "0.2.140",
-      "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+      "source_version": "0.2.141",
+      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
       "dimensions": [
         720,
         405
@@ -2987,7 +3013,8 @@
           1880,
           3
         ]
-      ]
+      ],
+      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
     }
   ],
   "publication_enlargement": {
@@ -3005,50 +3032,18 @@
     "game_clock_or_renderer_changes": false
   },
   "animation_encoding": "Lossless animated WebP; all logical RGB frames and durations checked.",
-  "actualMainEditorAndBoardCaptures": {
-    "status": "PASS_ACTUAL_MAIN_CURRENT_PANELS",
-    "version": "0.2.140",
-    "pictures": 6,
-    "counter": 1800,
-    "major_minor": 57204,
-    "custom_mask": 4,
-    "atlas_frames": 60,
-    "alpha_ready": true,
-    "fresh_session": true,
-    "actual_UI_edits": true,
-    "capture_entropy_calls": 0,
-    "administrative_entropy_captures": 1,
-    "sourceAggregateSHA256": "16baff78c4332d91c3105aaf2e5aa3421520738ae58a5716a5957fab2fa95dbe",
-    "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
-    "sourceBeforeAfterExact": true,
-    "qualificationOverrides": []
-  },
   "source_acceptance": {
-    "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+    "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
     "family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
-    "receipt_sha256": "aeaef71dcfdb68fe9334e261fba246fe4c7c326efd6b8da0ae5c21c191d3095b",
+    "receipt_sha256": "0de8617f3711a4e28e634f03d7fcacfbea0125b7a30d64b8a3e7401a549f5d5a",
     "all168source_files_match_accepted_source": true
   },
-  "actualMainCounterEditor": {
-    "status": "PASS_ACTUAL_MAIN_UI_COUNTER_EDITOR",
-    "version": "0.2.140",
-    "checks": 2487,
-    "initialMeter": 1246,
-    "appliedMeter": 1886,
-    "thresholdAfterApply": 1887,
-    "animationFrames": 85,
-    "browsingCancelAnimationEntropyDelta": 0,
-    "applyEntropyDelta": 1,
-    "moneyDigitBehaviorUnchanged": true,
-    "atlasFrames": 60,
-    "sourceQualificationOverrides": [],
-    "prebindingComponentProof": false,
-    "final140BoundSource": true,
-    "sourceAggregateSHA256": "16baff78c4332d91c3105aaf2e5aa3421520738ae58a5716a5957fab2fa95dbe",
-    "runtime": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
-    "sourceBeforeAfterExact": true,
-    "qualificationOverrides": []
-  },
   "numeric_prize_guard": "Current-bet generator support for scripted paid/feature boards; unchanged unpaid opening boards before any paid round are checked against their recorded original wager, including when the real UI retains them after a wager change.",
-  "unpaid_opening_board": "Generated by the actual fresh initializer; never evaluated or credited as a paid win."
+  "unpaid_opening_board": "Generated by the actual fresh initializer; never evaluated or credited as a paid win.",
+  "current_render_validation": {
+    "method": "Current-source rendering equivalence for unchanged artwork and render routines; new version-bearing Game Menu captured from actual current Main/UI.",
+    "review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1",
+    "renderer_sha256": "d5cfebd7811b2c5de17209b9a5c15d4ec7008a0642fdcc0149ed7d70b427b36c",
+    "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6"
+  }
 }

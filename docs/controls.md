@@ -38,6 +38,8 @@ In **Paylines**, grey advances through six diagrams per page, blue switches line
 
 On menu pages, grey moves and blue selects. Simulator Return offers six local-model options at a qualified closed Base boundary. Applying a choice changes future Grand only for this live session. Displayed ranges are ideal-model references. See [Simulator Return](settings.md#simulator-return).
 
+Opening a menu pauses the current feature and its music. Returning to Game resumes them; paid autoplay remains stopped.
+
 Hold grey to return to the parent menu. Credits and Counter & Jackpots return to their selected Game Menu entry. Sound and Display return to Settings; Settings returns to its selected Game Menu entry. Editors return to their parent without applying. The wager screen returns directly to play; closing the jackpot board also returns to play without spinning.
 
 <img src="media/menu.png" alt="Game Menu with separate Credits and Counter & Jackpots entries" width="720">

@@ -11,7 +11,7 @@ struct Clip {
   uint32_t rate = 16000;
 };
 Clip clips[kCueCount];
-bool muted = false, available = false;
+bool muted = false, available = false,gameplayPaused141=false;
 bool landingsEnabled = true;
 uint8_t volume = 192;
 uint8_t gainMagnification = 0;
@@ -161,7 +161,7 @@ void pumpExclusiveCompletion(uint32_t nowMs){
 }
 
 void audioInit(bool value) {
-  muted = value;
+  muted = value;gameplayPaused141=false;
   landingTiming={};
   completionActive=completionDelivered=false;completionElapsed=0;completionFencePending=false;completionClock=clockMs;
   clearPending();
@@ -194,7 +194,13 @@ void audioInit(bool value) {
 void audioSetMuted(bool value) {
   muted = value;
   M5.Speaker.setVolume(muted ? 0 : volume);
-  if (muted) audioStop();
+  if(muted){clearPending();if(available)for(uint8_t channel=0;channel<8;++channel)if(channel!=6)M5.Speaker.stop(channel);}
+  audioMusicRoute(musicTesting?musicTestPart:featureMusicScope,muted||(gameplayPaused141&&!musicTesting),musicTesting);
+}
+void audioSetGameplayPaused(bool paused){
+ gameplayPaused141=paused;
+ if(!paused){musicTesting=false;musicSuppressed=false;}
+ audioMusicRoute(musicTesting?musicTestPart:featureMusicScope,muted||(paused&&!musicTesting),musicTesting);
 }
 bool audioMuted() { return muted; }
 bool audioReady() { return available; }
@@ -237,15 +243,16 @@ const char* audioResultName(AudioResult result) {
   }
   return "unknown";
 }
+void stopAuditionVoices141(){clearPending();if(available)for(uint8_t channel=0;channel<8;++channel)if(channel!=6)M5.Speaker.stop(channel);}
 bool audioTestJingle() {
-  audioStop();
+  stopAuditionVoices141();musicTesting=false;
   musicSuppressUntil=clockMs+audioCueDurationMs(AudioCue::WisdomThreeStart)+500;
   musicSuppressed=true;
   return audioPlay(AudioCue::WisdomThreeStart);
 }
 void audioSetFeatureMusic(FeatureMusicPart part,bool beginAward){
  featureMusicScope=part;
- if(available&&!muted&&!musicSuppressed&&!musicTesting&&!completionFencePending&&part!=FeatureMusicPart::Off){
+ if(available&&!muted&&!gameplayPaused141&&!musicSuppressed&&!musicTesting&&!completionFencePending&&part!=FeatureMusicPart::Off){
   // Both programs begin with a scored attack. Preserve that opening and
   // submit the requested stage before an expensive transition render.
   const auto live=audioMusicDiagnostics();const auto level=audioMusicProgramLevel(live.finiteDraining?live.part:part);
@@ -267,7 +274,7 @@ void audioSetCompletionCue(bool active,uint32_t elapsed,bool finishHoldMusic){
  if(!active){completionActive=completionDelivered=false;completionElapsed=0;completionFencePending=false;return;}
  if(!completionActive||elapsed<completionElapsed){completionDelivered=false;completionFencePending=false;}
  completionActive=true;completionElapsed=elapsed;
- if(completionDelivered||!available||muted||musicSuppressed||!audioCompletionReady())return;
+ if(completionDelivered||!available||muted||gameplayPaused141||musicSuppressed||!audioCompletionReady())return;
  const auto& timedClip=clips[static_cast<size_t>(AudioCue::CollectedComplete)];
  if(uint64_t(elapsed)*timedClip.rate/1000>=timedClip.count){completionDelivered=true;completionFencePending=false;return;}
  // An already-triggered finite award keeps its existing protected tail.
@@ -285,8 +292,8 @@ void audioSetCompletionCue(bool active,uint32_t elapsed,bool finishHoldMusic){
  if(play(AudioCue::CollectedComplete,1,false,uint32_t(offset)))completionDelivered=true;
 }
 bool audioTestFeatureMusic(){if(!available||muted||!audioMusicDiagnostics().ready)return false;musicTestPart=FeatureMusicPart::Hold;musicTestUntil=clockMs+15000;musicTesting=true;musicSuppressed=false;return true;}
-bool audioTestTwinMusic(){if(!available||muted||!audioMusicDiagnostics().twinSourceReady)return false;audioStop();musicTestPart=FeatureMusicPart::TwinFree;musicTestUntil=clockMs+29000;musicTesting=true;musicSuppressed=false;return true;}
-bool audioTestAwardMusic(){if(!available||muted||!audioMusicDiagnostics().awardSourceReady)return false;audioStop();musicTestPart=FeatureMusicPart::BigAward;musicTestUntil=clockMs+8000;musicTesting=true;musicSuppressed=false;return true;}
+bool audioTestTwinMusic(){if(!available||muted||!audioMusicDiagnostics().twinSourceReady)return false;stopAuditionVoices141();musicTestPart=FeatureMusicPart::TwinFree;musicTestUntil=clockMs+29000;musicTesting=true;musicSuppressed=false;return true;}
+bool audioTestAwardMusic(){if(!available||muted||!audioMusicDiagnostics().awardSourceReady)return false;stopAuditionVoices141();musicTestPart=FeatureMusicPart::BigAward;musicTestUntil=clockMs+8000;musicTesting=true;musicSuppressed=false;return true;}
 size_t audioConfiguredCount() {
   size_t count = 0;
   for (const Clip& clip : clips) count += clip.samples && clip.count;
@@ -331,7 +338,9 @@ void audioUpdate(uint32_t nowMs) {
   else {const unsigned down=std::min(elapsed,250u)*musicFadeLevel*256/250;musicGainQ8=down>=musicGainQ8?0:uint16_t(musicGainQ8-down);}
   musicLevel=musicGainQ8/256;
   audioMusicVolume(musicLevel);
-  if(wants)audioMusicRequest(part);else if(!musicGainQ8)audioMusicRequest(FeatureMusicPart::Off);
+  const bool paused=muted||(gameplayPaused141&&!musicTesting);
+  audioMusicRoute(paused?featureMusicScope:wants?part:FeatureMusicPart::Off,paused,musicTesting);
+  if(gameplayPaused141&&!musicTesting)return;
   if(!available||muted)return;
   pumpExclusiveCompletion(nowMs);
   pumpLandings(nowMs);
@@ -356,5 +365,6 @@ void audioStopCue(AudioCue cue) {
   }
 }
 void audioStop() {
+  featureMusicScope=FeatureMusicPart::Off;
   completionDelivered=false;completionFencePending=false;
   audioMusicStop();musicTesting=false;musicLevel=0;musicGainQ8=0;audioMusicVolume(0); clearPending();if (available) M5.Speaker.stop(); }

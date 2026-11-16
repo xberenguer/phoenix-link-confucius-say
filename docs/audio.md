@@ -43,9 +43,13 @@ In the simulator, ordinary collection, named awards, large-cash preludes and a q
 
 Manual play and autoplay share those event routes. Backend queue acceptance proves software submission, not the speaker's acoustic onset. Software diagnostics cannot alone establish that all audible stops are aligned to a camera frame.
 
+## Menu pause and resume
+
+Opening a menu pauses the current feature and its music. Returning to the game continues from that position. Sound-menu tests have their own playback context, so an audition does not rewind the paused feature tune. Short audio buffers already submitted to the output may finish as the pause begins.
+
 ## Settings and auditions
 
-Hold grey → Sound provides master sound, a stops/landings switch, fine volume and test playback. Master mute covers cues and feature music.
+Hold grey → Settings → Sound provides master sound, a stops/landings switch, fine volume and test playback. Master mute covers cues and feature music.
 
 Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clamps at either end instead of wrapping a quiet setting to full volume. In the volume page, blue raises and grey lowers it.
 

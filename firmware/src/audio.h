@@ -40,6 +40,7 @@ void audioInit(bool muted = false);
 // allocation, or render/game callbacks.
 void audioUpdate(uint32_t nowMs);
 void audioSetMuted(bool muted);
+void audioSetGameplayPaused(bool paused);
 bool audioMuted();
 bool audioReady();
 uint32_t audioCueDurationMs(AudioCue cue);

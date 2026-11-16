@@ -11,6 +11,9 @@ bool audioMusicInit();
 // for active respin music:6.05dB more gain, with unchanged source samples.
 inline uint8_t audioMusicProgramLevel(FeatureMusicPart part){return part==FeatureMusicPart::MajorAward||part==FeatureMusicPart::BigAward?255:180;}
 void audioMusicRequest(FeatureMusicPart part);
+// A menu pause retains the game decoder/cursor. Auditions use an independent
+// worker context so listening to a test cannot rewind the paused feature.
+void audioMusicRoute(FeatureMusicPart part,bool paused,bool audition);
 // Explicit new award event. Repeated audioMusicRequest is idempotent; only
 // this call can restart the same award part for a distinct action.
 void audioMusicBeginAward(FeatureMusicPart part);

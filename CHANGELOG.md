@@ -1,5 +1,11 @@
 # Current release notes
 
+## 0.2.141
+
+- Opening a menu pauses the feature and its music. Returning to play continues the tune from its paused position instead of replaying the opening bells.
+- Sound-menu auditions use a separate playback context, preserving the paused game's music position.
+- The same menu behavior is included in the Stick firmware and browser game.
+
 ## 0.2.140
 
 - Seven-row Game Menu with Settings grouping Sound and Display. Button shortcuts for wagers, autoplay and the live Jackpots board remain available; rumble is not used.
