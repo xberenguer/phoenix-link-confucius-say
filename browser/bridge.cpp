@@ -92,11 +92,11 @@ EMSCRIPTEN_KEEPALIVE void pl_preferences(int spin,int landings,int volume,int mu
 int pl_input(int code);
 // Native Main: audioUpdate, physical input, deferred grey tap, then uiFrame.
 // The RAM session owner acknowledges synchronously; no game state persists.
-EMSCRIPTEN_KEEPALIVE void pl_frame(int code){if(!initialized)return;serviceMusic();audioUpdate(millis());const bool fenced=uiReturnSelectionInputFenced();if(fenced||M5.BtnA.isPressed())blackTap.reset();if(code>=0&&!fenced)pl_input(code);if(!uiReturnSelectionInputFenced()&&blackTap.poll(millis(),uiIsGameView(),M5.BtnA.isPressed()||M5.BtnB.isPressed()))uiCabinetMenu();uiFrame();}
+EMSCRIPTEN_KEEPALIVE void pl_frame(int code){if(!initialized)return;serviceMusic();audioUpdate(millis());const bool fenced=uiReturnSelectionInputFenced();if(fenced||M5.BtnA.isPressed())blackTap.reset();if(!fenced&&M5.BtnB.isPressed()&&uiIsGameView())uiPreparePanelInput();if(code>=0&&!fenced)pl_input(code);if(!uiReturnSelectionInputFenced()&&blackTap.poll(millis(),uiIsGameView(),M5.BtnA.isPressed()||M5.BtnB.isPressed()))uiCabinetMenu();uiFrame();}
 EMSCRIPTEN_KEEPALIVE void pl_tick(){pl_frame(-1);}
 EMSCRIPTEN_KEEPALIVE int pl_input(int code){
  if(!initialized||!uiRandomHealthy()||uiCheckpointPaused()||uiReturnSelectionInputFenced()){blackTap.reset();return 0;}
- switch(code){case 0:blackTap.reset();uiButtonA();break;case 1:if(uiIsGameView()){if(blackTap.released(millis()))uiFlipScreen();else return 1;}else{blackTap.reset();uiButtonB();}break;case 2:blackTap.reset();uiButtonBHold();break;case 3:blackTap.reset();uiToggleAuto();break;case 4:blackTap.reset();uiFlipScreen();break;case 5:blackTap.reset();uiMenu();break;default:return 0;}
+ switch(code){case 0:blackTap.reset();uiButtonA();break;case 1:if(uiIsGameView()){uiPreparePanelInput();if(blackTap.released(millis()))uiJackpots();else return 1;}else{blackTap.reset();uiButtonB();}break;case 2:blackTap.reset();uiButtonBHold();break;case 3:blackTap.reset();uiToggleAuto();break;case 4:blackTap.reset();uiFlipScreen();break;case 5:blackTap.reset();uiMenu();break;default:return 0;}
  return 1;
 }
 EMSCRIPTEN_KEEPALIVE const char*pl_snapshot(){static String s;s=uiSnapshot();return s.c_str();}

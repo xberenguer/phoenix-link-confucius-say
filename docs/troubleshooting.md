@@ -8,13 +8,13 @@ Every device boot, flash and browser reload starts a fresh manual session with 1
 
 ## Grey opens wagers instead of settings
 
-Short-grey opens the cabinet panel. Hold-grey exits that panel directly to Game, or opens settings from gameplay. Double-grey flips the normal game screen. The short action waits through the 400 ms double-click window. See [controls](controls.md).
+Short-grey opens the cabinet panel. Hold-grey exits that panel directly to Game, or opens settings from gameplay. Double-grey opens the live Jackpots board; use Display → Flip Screen for rotation. The short action waits through the 400 ms double-click window. See [controls](controls.md).
 
 ## Unavailable wager or funding
 
 The menu offers both $1/5-line and $1/10-line play; the latter has multipliers 1, 2, 3, 4, 5 and the [documented family-adaptation scope](wagers.md). A funded red BET button starts immediately. Merely browsing/cancelling does not stake credits.
 
-An unaffordable wager asks for play money. ADD CREDITS is available at safe Ready/Base boundaries; an unfinished feature or service/capacity fault can block it. Funding does not clear the session's meters. See [settings](settings.md#credits).
+An unaffordable wager asks for play money. Credit additions are available at safe Ready/Base boundaries; an unfinished feature or service/capacity fault can block it. Funding does not clear the session's meters. See [settings](settings.md#credits).
 
 ## Random source error
 

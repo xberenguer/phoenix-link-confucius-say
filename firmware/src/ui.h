@@ -25,6 +25,9 @@ void uiButtonB();
 void uiButtonBHold();
 void uiMenu();
 void uiCabinetMenu();
+// Grey panel gestures pause automatic continuation before their click window.
+void uiPreparePanelInput();
+void uiJackpots();
 void uiToggleAuto();
 bool uiOverlayVisible();
 bool uiIsGameView();

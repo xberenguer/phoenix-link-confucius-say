@@ -2,7 +2,7 @@
 #include <cstdint>
 
 // The larger side key opens the wager panel after one short release. Wait
-// out the double-click window so a screen flip never opens that panel first.
+// out the double-click window before choosing the wager or jackpot panel.
 // Menu navigation and the blue spin key remain immediate.
 struct GameBlackTap {
   static constexpr uint32_t windowMs=400;

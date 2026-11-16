@@ -38,9 +38,40 @@ struct Reentry {
     return Tape::get(&r.tape,out,n);
   }
 };
+static bool sameCell(const Cell&a,const Cell&b) {
+ return a.symbol==b.symbol&&a.kind==b.kind&&a.multiplier==b.multiplier&&
+        a.highlight==b.highlight&&a.prizeUnit==b.prizeUnit&&a.prize==b.prize;
+}
+static bool samePresentation(const Presentation&a,const Presentation&b) {
+ for(size_t i=0;i<kCells;++i){
+  if(!sameCell(a.before[i],b.before[i])||!sameCell(a.beforeExpansion[i],b.beforeExpansion[i])||
+     !sameCell(a.spinResult[i],b.spinResult[i])||!sameCell(a.heldBefore[i],b.heldBefore[i])||
+     !sameCell(a.heldResult[i],b.heldResult[i])||!sameCell(a.nextHeldResult[i],b.nextHeldResult[i])||
+     a.meterAfterCell[i]!=b.meterAfterCell[i]||a.queuedAfterCell[i]!=b.queuedAfterCell[i])return false;
+ }
+#define SAME(name) if(a.name!=b.name)return false;
+ SAME(beforeMode) SAME(afterMode) SAME(valid) SAME(paidSpin) SAME(freeSpin) SAME(holdRespin)
+ SAME(freeAwarded) SAME(freeEnded) SAME(holdEntered) SAME(holdSettled) SAME(meterTriggered)
+ SAME(grandAwarded) SAME(roundCompleted) SAME(chainedHoldEntered) SAME(holdFromMeter)
+ SAME(holdRevived) SAME(revived) SAME(luckyAttempt) SAME(luckyWon) SAME(twinSpin)
+ SAME(hasSpinResult) SAME(hasHeldResult) SAME(expandedWild) SAME(expandedReelsMask)
+ SAME(freeAwardedCount) SAME(scatterCount) SAME(phoenixCount) SAME(respinsBefore)
+ SAME(respinsAfter) SAME(lineWinCount) SAME(freeBefore) SAME(freeAfter) SAME(meterBefore)
+ SAME(meterAfter) SAME(meterAwardsCount) SAME(meterArrivalMask) SAME(pendingHoldsBefore)
+ SAME(pendingHoldsAfter) SAME(landedMask) SAME(heldMask) SAME(winMask) SAME(scatterMask)
+ SAME(expandedMask) SAME(balanceBefore) SAME(balanceAfter) SAME(stakeMinor)
+ SAME(lineWinMinor) SAME(scatterWinMinor) SAME(holdWinMinor) SAME(phoenixWinMinor)
+ SAME(actionWinMinor) SAME(grandWinMinor) SAME(actionNumber)
+#undef SAME
+ for(size_t i=0;i<kMaxLines;++i){const auto&x=a.lineWins[i];const auto&y=b.lineWins[i];
+  if(x.line!=y.line||x.count!=y.count||x.symbol!=y.symbol||x.mask!=y.mask||x.credits!=y.credits)return false;
+ }
+ return true;
+}
 static bool same(const Engine& a,const Engine& b) {
-  return !std::memcmp(&a.state,&b.state,sizeof(State)) &&
-         !std::memcmp(&a.presentation,&b.presentation,sizeof(Presentation));
+ const auto x=a.snapshot(),y=b.snapshot();
+ return x.length>0&&x.length==y.length&&!std::memcmp(x.data,y.data,x.length)&&
+        samePresentation(a.presentation,b.presentation);
 }
 static void init(Engine& e,random::Service& s,Tape& t) {
   verify(s.initialize(Tape::get,&t));verify(t.calls==1&&t.bytes==48);

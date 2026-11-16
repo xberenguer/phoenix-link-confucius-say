@@ -1,10 +1,10 @@
 {
-  "version": "0.2.110",
-  "runtime_fingerprint": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
-  "mathematical_family": "9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937",
-  "local_model": "0x00020013",
-  "source_body_files": 160,
-  "source_total_files": 163,
+  "version": "0.2.120",
+  "runtime_fingerprint": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+  "mathematical_family": "018e98afb631925eeec261655f7056d03d2128cb1a3ef615769f30217dcea6f6",
+  "local_model": "0x00020017",
+  "source_body_files": 164,
+  "source_total_files": 167,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
   "original_casino_calibration": false,
   "actual_CSPRNG_infinite_horizon_return_qualified": false,
@@ -22,16 +22,31 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Firmware and offline assets passed full write/readback verification. Fresh startup confirmed version 0.2.110, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength are unqualified.",
-  "browser_version": "0.2.110",
-  "native_status_version": "0.2.110",
+  "native_validation": "Final firmware links and fits StickS3. The polished source has not yet been installed: full readback and startup verification of this exact image are pending. Physical acoustic fidelity and entropy strength remain unqualified.",
+  "browser_version": "0.2.120",
+  "native_status_version": null,
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Current source-bound release package",
+  "status": "Current source-bound release package; final physical installation pending",
   "changes": [
-    "50-line Line22 now follows the directly observed top/top/bottom/top/top path; Line18 retains the displaced local fallback, preserving the active path set.",
-    "Exact Base10-cent/50-line/1x three-Jack price is5 credits, with only12 ideal-reference return intervals adjusted; all Grand integers retained.",
-    "Middle/bottom Phoenix pickup birds stay visible on their existing broad collection curl, with unchanged money, arrival clocks and audio.",
-    "Current-source browser, tables, gallery and three-spin hero; fresh1000credits and manual boot retained."
-  ]
+    "Live jackpot board on double-grey, with manufacturer wordmark, animated Phoenix tier badges and exact grouped cash amounts.",
+    "Counter & Jackpots is a separate Game Menu entry; Credits contains funding, clear balance and auto-refill only. Parent navigation and sound/display labels are consistent.",
+    "Edit the active feature counter or any jackpot amount during a closed Base boundary; edits apply to future play without changing landed prizes. Custom prices hide preset return ranges until defaults are restored.",
+    "Typed exact-cent prize settlement and pre-entropy queue capacity guards; observed 1-cent/50-line/10x Mini corrected to $10, with affected ideal-return intervals recalculated.",
+    "Current-source browser, wiki, payout reference and gallery, with fresh 1,000-credit manual sessions."
+  ],
+  "native_images": {
+    "phoenix-confucius-sticks3.bin": {
+      "sha256": "9cddad31ecf6bea17b1db8220400decff6108a914f321b5ab68cfa69002e2272",
+      "bytes": 5751888
+    },
+    "phoenix-confucius-app.bin": {
+      "sha256": "9f72f380cf2e959cca56769fe502dd065ff783b7640c6c817321ed3004f41d5c",
+      "bytes": 5686352
+    },
+    "feature-assets.bin": {
+      "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181",
+      "bytes": 1572864
+    }
+  }
 }

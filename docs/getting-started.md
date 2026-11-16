@@ -38,6 +38,6 @@ Fifteen Phoenixes award the Grand plus their displayed prizes in the simulator. 
 
 Hold blue for about 0.85 seconds to toggle autoplay. Hold it again to stop. A short blue press while autoplay is running also turns autoplay off. There is no on-screen autoplay badge. Every new session starts with autoplay off.
 
-Hold the large grey button for Game Menu. Sound, fine volume, display, credit funding and game-rule pages are there. Double-press grey in the normal game view to rotate the screen. Full details are in [controls](controls.md) and [settings](settings.md).
+Hold the large grey button for Game Menu. Sound, fine volume, display, credit funding and game-rule pages are there. Double-press grey in the normal game view to open the live Jackpots board. Screen rotation is in Game Menu → Display → Flip Screen. Full details are in [controls](controls.md) and [settings](settings.md).
 
 Implementation: [Main button dispatch](../firmware/src/main.cpp), [UI](../firmware/src/ui.cpp), [Engine](../firmware/src/phoenix_engine.h).

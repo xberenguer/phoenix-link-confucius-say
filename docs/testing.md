@@ -1,6 +1,6 @@
 # Testing and evidence boundaries
 
-Current tests qualify specific software paths and source identities. They do not establish original casino odds or complete hardware approval. The current [release status](../CHANGELOG.md#validation-status) separates host/target results from physical validation.
+Current tests qualify specific software paths and source identities. They do not establish original casino odds or complete hardware approval. The current [release status](../CHANGELOG.md#validation) separates host/target results from physical validation.
 
 | Check | Establishes | Limit |
 |---|---|---|

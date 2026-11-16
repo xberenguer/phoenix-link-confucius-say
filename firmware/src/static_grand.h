@@ -47,8 +47,8 @@ inline Result selectFuture(phoenix::Engine&e,Selection&active,const Selection&re
  if(!uiReady)return Result::UiBusy;
  if(!e.canChangeBet())return Result::ActiveRound;
  const Entry*row=nullptr;const auto result=resolve(f,requested,profile(e),row);if(result!=Result::Applied)return result;
- const bool changed=e.state.jackpotCoins[3]!=row->grandCredits||!same(active,requested);
- e.state.jackpotCoins[3]=row->grandCredits;active=requested;
+ const bool changed=(!e.isCustomJackpot(3)&&(e.state.jackpotUnits[3]!=phoenix::money::Unit::Credits||e.state.jackpotCoins[3]!=row->grandCredits))||!same(active,requested);
+ if(!e.isCustomJackpot(3)){e.state.jackpotCoins[3]=row->grandCredits;e.state.jackpotUnits[3]=phoenix::money::Unit::Credits;}active=requested;
  return changed?Result::Applied:Result::NoChange;
 }
 inline Result setWager(phoenix::Engine&e,const Selection&s,const Family&f,int64_t coin,uint8_t lines,uint8_t multiplier,bool uiReady){
@@ -56,7 +56,7 @@ inline Result setWager(phoenix::Engine&e,const Selection&s,const Family&f,int64_
  if(!e.canChangeBet())return Result::ActiveRound;
  const Entry*row=nullptr;const auto result=resolve(f,s,{coin,lines,multiplier,e.state.prizeCapProfile},row);if(result!=Result::Applied)return result;
  if(!e.setWager(coin,lines,multiplier))return Result::InvalidWager;
- e.state.jackpotCoins[3]=row->grandCredits;return Result::Applied;
+ if(!e.isCustomJackpot(3)){e.state.jackpotCoins[3]=row->grandCredits;e.state.jackpotUnits[3]=phoenix::money::Unit::Credits;}return Result::Applied;
 }
 inline size_t encode(const Selection&s,uint8_t*out,size_t capacity){
  if(s.mode!=Mode::RetainedStaticGrand||s.slot>=6||s.family==Fingerprint{})return 0;

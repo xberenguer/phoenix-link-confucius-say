@@ -1,6 +1,6 @@
 # Math, RNG and what the evidence establishes
 
-Release 0.2.110 uses local model **J, `0x00020013`**, mathematical family `9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
+The included [release identity](../RELEASE.json), [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) identify the current local model and its reference calculations. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
 
 ## Evidence labels
 
@@ -13,7 +13,9 @@ Release 0.2.110 uses local model **J, `0x00020013`**, mathematical family `9f5c0
 
 The [payout reference](payouts.md) distinguishes scoped observations from fallback values. A verified line price does not identify its frequency or a complete return model.
 
-## What generates outcomes?
+<a id="what-generates-outcomes"></a>
+
+## Outcome generation
 
 An opaque external service runs **MbedTLS 3.6.7 AES-256 CTR_DRBG**. Prediction resistance is enabled: fresh strong entropy is requested before every action's generation request. The service requests 48 entropy bytes and generates at most 1,024 action-local output bytes. Unused output is erased instead of carrying into another action. [MbedTLS documents prediction resistance and its entropy requirement](https://mbed-tls.readthedocs.io/en/latest/kb/how-to/add-a-random-generator/).
 
@@ -49,12 +51,14 @@ SIMULATOR RETURN offers six options. Applying an option at a closed Ready/Base b
 
 The displayed return/edge ranges are **ideal-reference-only** enclosures under a fixed profile, fixed option, always-funded play and no Lucky Chance. They assume ideal uniform draws in the unchanged local stochastic game. They do not include every source/runtime fault, restart rule, adaptive wager strategy or short-session fluctuation. Finite draw caps have nonzero failure mass and fail closed; their implementation is not silently equated with unlimited sampling.
 
-For example, at **10¢ / 50 lines / 1×**, the High Cash Only prize-cap profile and default **Option 3** use a current table enclosure of **92.7183–94.2599%** ideal return. This is the full implemented paid-round process under the stated ideal-uniform assumptions, including its triggered Free/Hold/meter/Grand continuations; it is not a casino measurement or just a Base-line estimate. The tiny display rounds the enclosure outward further. A short sample can exceed 100% because rare awards fluctuate.
+These ranges require the default prize schedule. Edited jackpot amounts change payments while leaving arrival probabilities unchanged, so the return selector hides and locks its preset ranges until defaults are restored. Setting the feature counter changes the starting condition; the fixed-profile full-cycle range is not an estimate of the next spin's conditional value or repeated manual counter edits.
+
+Use the range shown for the selected denomination, lines, multiplier, option and prize-cap context. Its reference calculation covers the complete local paid-round process, including triggered Free/Hold/meter/Grand continuations, under the stated ideal-uniform assumptions. It is not a casino measurement or just a Base-line estimate. The tiny display rounds the enclosure outward. A short sample can exceed 100% because rare awards fluctuate.
 
 The current UI asks for added credits when a paid wager is unaffordable. The Engine's separately callable Lucky Chance rule is outside the return-reference scope and is not offered as ordinary custom-schedule play.
 
 RTP is expected paid amount divided by expected stake under a specified process and policy. A short observed return, an EV conditional on a high counter and a fixed-profile long-run reference are different quantities. County denomination averages do not identify this game's pay program. Grand amounts are local schedules, not live casino progressive values.
 
-The exact 10¢/50-line/1× Base Jack price is five credits. Its reference calculation shifts only that profile's twelve cap/Grand-option enclosures; all 7,200 scheduled Grand integers are retained. The observed Line 22 relabeling preserves the active-path multiset, so it changes labels rather than the sum of line awards. Neither correction estimates or changes symbol weights, Hold arrivals, meter distributions or other probabilities.
+Visible line captions and named-prize increments constrain individual prices at their filmed configurations. Numbered line markers constrain geometry. Neither type of observation identifies outcome frequencies. A price, route or probability-law change requires fresh return calculations for every affected profile; unchanged Grand amounts alone do not preserve a return bound. The [payout guide](payouts.md) separates observed prices, partial chart coverage and local fallbacks.
 
 Replacing the modeled reel/feature law would require new Base/Free/Hold/meter/prize calculations, independent evidence and new source qualification; these ranges cannot simply be relabeled for a different law.

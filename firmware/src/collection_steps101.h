@@ -12,7 +12,7 @@ struct Step {
   int cell=-1;
   unsigned repetition=0;
   unsigned repetitions=0;
-  int64_t credits=0;
+  phoenix::money::Amount amount{};
   explicit operator bool()const{return cell>=0;}
 };
 inline unsigned repetitions(const phoenix::Cell& cell){
@@ -29,27 +29,25 @@ inline Step at(const phoenix::Cell* cells,int number){
     const auto repeats=repetitions(cells[i]);
     if(unsigned(number)<repeats){
       const auto& cell=cells[i];
-      const auto unit=cell.kind==phoenix::PrizeKind::Mini||cell.kind==phoenix::PrizeKind::Minor?
-                      cell.prize:phoenix::Engine::cellCredits(cell);
-      return {int(i),unsigned(number),repeats,unit};
+      return {int(i),unsigned(number),repeats,{cell.prize,cell.prizeUnit}};
     }
     number-=int(repeats);
   }
   return {};
 }
-inline int64_t creditsAfter(const phoenix::Cell* cells,unsigned completed){
+inline bool minorAfter(const phoenix::Cell* cells,unsigned completed,int64_t denomination,int64_t& out){
+  if(!cells)return false;
   int64_t amount=0;
-  for(unsigned i=0;i<cellCount&&completed;++i){
+  for(unsigned i=0;i<cellCount;++i){
+    int64_t validated=0;if(!phoenix::Engine::cellBaseAmountMinor(cells[i],denomination,validated))return false;
     const auto repeats=repetitions(cells[i]);
     const auto take=completed<repeats?completed:repeats;
-    if(take){
-      const auto& cell=cells[i];
-      amount+=(cell.kind==phoenix::PrizeKind::Mini||cell.kind==phoenix::PrizeKind::Minor)?
-               cell.prize*take:phoenix::Engine::cellCredits(cell);
+    if(take){auto cell=cells[i];cell.multiplier=uint8_t(take);int64_t minor=0;
+      if(!phoenix::Engine::cellAmountMinor(cell,denomination,minor)||!phoenix::money::add(amount,minor,amount))return false;
       completed-=take;
     }
   }
-  return amount;
+  out=amount;return true;
 }
 // The duration after an intermediate subaward is the shorter repeat interval;
 // the last subaward retains the normal pause before the next physical cell.

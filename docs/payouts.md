@@ -1,6 +1,6 @@
 # Symbols, winning combinations and payouts
 
-The current game uses local model J (`0x00020013`). The complete lookup tables are freshly exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
+The complete implemented lookup tables are exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
 
 ## Symbol roles
 
@@ -33,7 +33,9 @@ The number of active lines is already used to select and evaluate the paths. Do 
 
 The internal evaluator can represent more profiles than the wager menu offers. The CSV marks whether each profile is currently selectable. Its complete internal data must not be mistaken for additional real-machine buttons.
 
-A positive evaluator entry does not prove that every compatible board can naturally occur. Wild placement, correlated reels and the local generator constrain which patterns can be drawn. The original joint reel law remains under study.
+A positive evaluator entry does not prove that every compatible board can naturally occur. Wild placement, correlated reels and the local generator constrain which patterns can be drawn. The original joint reel law remains unrecovered.
+
+Numbered geometry has been read for **40 of the 50 line IDs** across identified Base and Free recordings. The ten unresolved IDs are **8, 29, 31, 33, 37, 39, 45, 48, 49 and 50**. Some observations are available only in Free; applying one shared chart across modes, wagers or unidentified programs remains conditional. The CSV describes the implemented chart, including local fallbacks, rather than a completely recovered factory chart.
 
 ### Reading a row
 
@@ -81,7 +83,7 @@ None of these observations qualifies the same price at another denomination, lin
 
 At **10¢ / 50 lines / 1× in Base**, three Jacks pay **5 unit credits**, or **$0.50** for that line. The [Confucius recording near 1:45](https://www.youtube.com/watch?v=nmcPHvRQYDE&t=105s) shows a numbered Line 22 caption paying five. The numbered endpoints and divider markers identify its path as **top, top, bottom, top, top**. The publisher labels the recording Las Vegas; the exact property and software program are unreadable.
 
-The current 50-line evaluator assigns that observed path to Line 22. The displaced path is retained as the local Line 18 fallback, so relabeling preserves the active geometry set and total payout on every board. Line 18's reassigned geometry is not source-proven. This one observed path does not recover the complete 50- or 100-line chart.
+The current 50-line evaluator assigns that observed path to Line 22. This observation establishes that numbered route at the filmed configuration; it does not qualify a complete 50- or 100-line chart.
 
 The five-credit Jack price is scoped to this exact Base configuration. Other denominations, line counts, multipliers and Free prices retain their own observations or local fallbacks. A line caption establishes its individual award, not an unobserved terminal round total or random frequency.
 
@@ -107,6 +109,10 @@ The scatter win and the award of Free Games are separate effects. See [Free Game
 Phoenix values are collected under the feature rules, separately from ordinary line wins. Named Mini, Minor and Major symbols can carry their own multipliers. In the current implementation, these named multipliers do not multiply a plain cash Phoenix. A full 15-cell board can award Grand **in addition to** the displayed Phoenix values.
 
 The actual amount and applicable prize rules depend on the active configuration and any prize already locked in the live feature. Grand amounts are local simulator schedules, not live casino progressive values. See [Hold & Spin](hold-and-spin.md), [the collection counter](collection-counter.md) and [math and evidence](math-and-evidence.md).
+
+The jackpot board opens with double-grey. All four future amounts can be edited under [Counter & Jackpots](settings.md#feature-counter-and-jackpot-amounts). A custom amount stays fixed in cash across wager changes until restored or the session restarts. Already landed prizes keep their committed values. Default-profile examples in this guide assume no custom override.
+
+Money is settled in integer cents. Credit-valued prizes are converted at the denomination; explicit cash amounts retain their exact cents, including amounts that are not a whole denomination credit. Named 2×/3× prizes apply the multiplier once.
 
 ## Regenerating the reference
 

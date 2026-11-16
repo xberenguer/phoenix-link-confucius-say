@@ -37,6 +37,21 @@ inline DecimalParts split(int64_t value,uint32_t divisor){
  const uint64_t n=magnitude(value);
  return {n/divisor,uint32_t((n%divisor)*100/divisor)};
 }
+// Exact terminating credit fraction. All supported denominations divide1000.
+// Keep at least two places for a nonzero fraction to preserve existing labels;
+// retain a third place when required instead of flooring it.
+struct ExactParts{uint64_t whole=0;uint32_t fraction=0;unsigned places=0;};
+inline bool splitExact(int64_t value,uint32_t divisor,ExactParts& out){
+ if(!divisor)return false;
+ uint32_t scale=1;unsigned places=0;
+ while(scale%divisor&&places<3){scale*=10;++places;}
+ if(scale%divisor)return false;
+ const uint64_t n=magnitude(value);uint32_t fraction=uint32_t((n%divisor)*scale/divisor);
+ if(!fraction){out={n/divisor,0,0};return true;}
+ while(places<2){fraction*=10;++places;}
+ while(places>2&&fraction%10==0){fraction/=10;--places;}
+ out={n/divisor,fraction,places};return true;
+}
 struct CompactParts{bool abbreviated=false;uint64_t whole=0;uint32_t tenth=0;char unit=0;};
 inline CompactParts compact(uint64_t whole){
  const uint64_t scales[]={1000000000000ULL,1000000000ULL,1000000ULL,1000ULL};

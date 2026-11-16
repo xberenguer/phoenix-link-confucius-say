@@ -1,6 +1,6 @@
 {
-  "version": "0.2.110",
-  "runtime_fingerprint": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+  "version": "0.2.120",
+  "runtime_fingerprint": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
   "algorithm": "AES-256 CTR-DRBG",
   "backend": "Mbed TLS3.6.7 minimal private-symbol subset",
   "prediction_resistance": true,
@@ -28,16 +28,17 @@
     "ASAN_UBSAN": true
   },
   "native_validation": {
-    "flash_readback": true,
-    "healthy_startup": true,
+    "target_build": true,
+    "flash_readback": false,
+    "healthy_startup": false,
     "fresh_credits": 1000,
     "autoplay_off_at_boot": true,
-    "atlas_frames_verified": 60,
-    "startup_entropy_captures": 2,
+    "atlas_frames_verified": null,
+    "startup_entropy_captures": null,
     "user_confirmed_animations_and_buttons": false,
     "live_USB_spin_probe_verified": false,
     "physical_entropy_strength_measured": false,
-    "validation_scope": "Current110 firmware/assets full readback and healthy fresh startup; no physical speaker or entropy-strength measurement."
+    "validation_scope": "Final polished source: target build passed; physical installation/readback/startup pending. Fresh credits and autoplay defaults are source/host verified; no final physical speaker or entropy-strength measurement."
   },
   "casino_calibrated": false,
   "Nevada_approved": false,

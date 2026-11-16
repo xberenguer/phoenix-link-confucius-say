@@ -1,16 +1,17 @@
 {
-  "describes_version": "0.2.110",
-  "target_public_version": "0.2.110",
-  "model": "0x00020013",
-  "family": "9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937",
-  "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+  "describes_version": "0.2.120",
+  "target_public_version": "0.2.120",
+  "model": "0x00020017",
+  "family": "018e98afb631925eeec261655f7056d03d2128cb1a3ef615769f30217dcea6f6",
+  "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
   "renderer_source": "../firmware/src/ui.cpp",
-  "renderer_sha256": "4bf662db3609fbfea4ce83407e24d5614b29bc52e504d7f0124ae43dd50c83b5",
+  "renderer_sha256": "fdf3cf4e0b11168d94b8c8e8e0a2ce344f35a8785af9a7831453d7d9c4587384",
   "engine_source": "../firmware/src/phoenix_engine.h",
-  "engine_sha256": "93b70039aaa3bad224f9ffb7e8ea36399234731f3f080a531e8da9df585f067a",
-  "renderer_fixture_sha256": "2562423523919e608279de4cddfddfcfff9278e5dcce3ee11f364444ba2a0d61",
-  "media_builder_sha256": "2b7af61c194df6d2b5f5e87bef0a786a617c87d2eb587ad5f6add7c665371a57",
-  "source_aggregate_sha256": "1c09f7e1dc26bd1fe049a09697837bf4eaca91bd199ca196544a8998c9c5a84e",
+  "engine_sha256": "5fc452995bffa119c98a3d0939dfe98589ee3f11fb8939242f0480f9549f6fd6",
+  "renderer_fixture_sha256": "308e98bd3b85d09e5369660b38af076d09ba8dfde8c7f4cac0addf0e8f474bbd",
+  "numeric_phoenix_prizes_checked_against_current_generator_support": true,
+  "media_builder_sha256": "e98291ccf651e7e7d8c10df7caf4d3811e7208bd4dd9c63fa358fc64f126ea0f",
+  "source_aggregate_sha256": "2f81f0a3147e78785a629563b22887c3e80a4596c3f3e8e74a9ef2ad3cab64d6",
   "source_files_sha256": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
     "audio.cpp": "6ea8323e0537ce4b44eb16d132cdcd88eb1206d4ed024e058c1c9f41b65d1bb5",
@@ -28,7 +29,7 @@
     "award_cache.h": "804b13efba7ad91c78039948ba2bf471b90f90e85665894d4946fce3578e442e",
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
-    "build_version.h": "5358e9953f4d1c0b3c4ff107b3a7a260f9ff8d9a5a1700cf119bf9d91930e7c8",
+    "build_version.h": "a7a8813d4a4002d04067dc68035fddde421457c10d93158c8db0d281f3b665e8",
     "cabinet_profile.h": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
     "cabinet_sage_large28.h": "b0ce6e39112497d3b7ae0e99a32a3e577c90b5c3580d2fc4ba22e3b91f76e815",
@@ -52,7 +53,7 @@
     "collected_music_seek.h": "14b6d18e273048666e5a5b4265092dc6d49174e1303a433c23c6358f8d99f4b8",
     "collection_motion.h": "deb3f143fb8a9d942e9e15faec427aec04f10427a60a3361c4122736734f8827",
     "collection_pickup.h": "31ab5558076e4dc87d4e95f1c413c204b041f4d384e5f8376a37f7f3032546d4",
-    "collection_steps101.h": "bc850b22e7ba6d2f4ce8f7f26f7ddf91648ec755e3d507f58f69f72e5f088f76",
+    "collection_steps101.h": "952e1a4de7bf040d76bef4095e8a9f5b63eb8feb7087017bfe2edb9c7e042d42",
     "completion_cache.h": "0552f9f59df6681b0291acf49736270009b274fd56251c73187a41ed5450f77d",
     "counter_calm90.h": "d959254092080aa20b6f0909a7fd7b517a534f3cba1912f3f7e3536423a49dce",
     "counter_fire89.h": "3c00b86a5a909195d866a8f875d668bce03bcbc28db7d9ccb3f9f6d8bc7da556",
@@ -73,7 +74,8 @@
     "fire_field.cpp": "dceb39ddae3cfd589518259b275f413a421415a026c8f34dcd1f5a8d80fd04ac",
     "fire_field.h": "fbf11814ef5ce08961b3adbc1279946a191e3df85d1e1688c5df0396c5c519d1",
     "fire_field_data.h": "6f854c98987d41f11c145f92b4caf3b693fb0c4d88dc158368b16dfcdc64ddd5",
-    "game_black_tap.h": "0ce1cddb26e53bbcbbfe4a14f35c349738d8361ffc4d2ceb68b384ce0770d37e",
+    "game_black_tap.h": "54584b4ba0c8e6f81f7cf378693c4756d681a22705d22d65e14f0c90f9ba9457",
+    "game_values_editor201.inc": "6c9917feb2fc602f50cc7f164ab5b0dbec2b3f764826adefaf24776fc244f48f",
     "generated_assets.cpp": "6e713d75a40b4324bc8a94d2f1b73a676c93e021c8dc19caf23cb54030be8331",
     "generated_assets.h": "4a6ee515ff05d86da6abfdc9755e776b4f4d7672eb74dae9610931bc40d41c1f",
     "gold_burn.h": "f808a860a36bd59571cc51adbb0b15c4a053b24d72fa79f3736eed57de60c553",
@@ -84,13 +86,15 @@
     "hold_opening31.h": "1841465cc75e100df406ad3e66b6a5e75cfd2985b34fd5f69f2469719da76626",
     "hold_winner.h": "edd30ad6fef38e322909b8acef95660c6b91fd3ed5c6a16830a18eaf7f538ced",
     "immutable_pcm_loop89.h": "5a174565bb958b98bc97e45f058680b0091a541349a99db61827fcb85ffc7166",
+    "jackpot_board198.inc": "9b106aed092c5beca4e65dd69b64c447ca45f0a40f80d5adcd3c09da2b13141b",
+    "jackpot_brand207.h": "dd01d7c21bd7bcd40a85198ba29858aa371ca7f8b6ff58fcdac1be3e77dca8c6",
     "landing_cues.h": "8e978c9b3409b051cd1e8a9f091a93b86c2acf5df3fb75cec15d5c5460afb506",
     "live_hold_count48.inc": "4afd9a28fb8027d2d05ecd23cbe842bc060c71cd1ac6a403e737f715b52bd503",
-    "main.cpp": "b791e37d4c8e96830e8cf3bbbff4e870832014647ebab37c5a085f868cac036c",
+    "main.cpp": "3b04162a39a0d7409d28537d5ff8c0c7dfee7268a22f2b855529bf1c2cebf9f4",
     "major_title112_data.h": "83eb58d9c28e7aab85a08836af8892ec39cf0422433cfd95c701d5d6dd1d3c17",
-    "math_runtime_identity.h": "53f3757035e74a6d3c9f96acdd0485416e6d55a2bad6cc689cc0a06b1416a98c",
+    "math_runtime_identity.h": "4f2658361b179686a4cca177007375c80b41af4e9b23161c9425e6334c73e2bb",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
-    "money_math.h": "437859f2903793dec34f2c13e9c1013a616a5715f058ffdb1a00b68db71367c4",
+    "money_math.h": "f69ef75b554ed2ee33e04fc8ddb77bdac565dcbf7bdd9bd431e053c67bce6c68",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
     "music_asset.h": "7fd72a3c979a14d8d1c48d8a0dbd41654467007fb35a1d06232d90a73e10dee0",
     "music_seek_data.h": "93c44dc160dbd6f99ef36def13775a7a36cae084ae16adcb63de40235b05970c",
@@ -129,7 +133,7 @@
     "phoenix_crypto124/prefix.h": "c45e0fbd64269d9a4dcd3c803449732f664839697ccfa7abe66490db84cc3635",
     "phoenix_effects.cpp": "aa8360b6aeb27ec5367ce22f9cf2be8b784929592584e0d4b13ce4c73689e97f",
     "phoenix_effects.h": "7db8dd0a9cb547b681ddd956408f56482203369a678bc169d70e3e6600009731",
-    "phoenix_engine.h": "93b70039aaa3bad224f9ffb7e8ea36399234731f3f080a531e8da9df585f067a",
+    "phoenix_engine.h": "5fc452995bffa119c98a3d0939dfe98589ee3f11fb8939242f0480f9549f6fd6",
     "phoenix_numerals.cpp": "3a7824cc5b5ce818b7538a6e5cffee50afd9d7d86629afed9cd8556fe341f33a",
     "phoenix_numerals.h": "4f25d3dd2a67ce371c9d03b33b7798d03e6ed8dad0f67fd5fc04a84a1f547fa2",
     "phoenix_random.cpp": "5c7d988e8ea5e3ac137558ee673db8a882cb2cbc3fae05852db8ce3ba8765393",
@@ -138,6 +142,7 @@
     "pickup_frame_cache.h": "3be900a958fe9d249c0021df191beb19c1a6a50b82630d3f3ccf975cb91a19f6",
     "pixel_blend.h": "2b642051dc02b237de2b8f0019a78b9bc79f14dc405c2d9455a5e208f6532857",
     "platform_entropy125.h": "a80b7dd162ec1e3ad0fe49c66fedf05c8654a7d17ff6020c15c8a87c2b08c41e",
+    "prize_amount190.h": "53c2792e46e877f2ceef989e3cb0d53727c3c893efff33c9222e1172340502da",
     "profile_scene_qa.h": "176a4550eb97c545188010b5d31cc88df97e8efce8bc0f3e364adaefd4f06aeb",
     "reel_motion.h": "5caf454f3df89846e52d7158a88f2df1c28e39d6b8a74f267cfc20e74dcadbb3",
     "reference_effect_v0238.h": "7df9e864a6fe64586d3ad64cb7afadff309aca0396c22bd7c7f065934bb86beb",
@@ -151,17 +156,17 @@
     "sage_scene_qa.h": "a39b7dc656d07c11345b330f262736c63b2a0451612f5436bf51cd980a0c7bfa",
     "scene_checkpoint.h": "63b03e3b8b308e2f2f392ea9de2430f9713df7c0fe717ce942f278d33a2e018f",
     "spin_award_timing.h": "d0c2f9dae63eed4d75d2a1aea2b2cab63e2655efce1f04c4f9cae4783f743a93",
-    "static_grand.h": "f8448b8d5b4eb777f9993b42009572c2f18451ebfcc5bee7adb66b1d786236c0",
+    "static_grand.h": "3e745b3d0d70a6fd6283a9f76c87ade4bcec413c922c0fe733082249af8293ff",
     "static_grand_legacy.h": "2f98397c1be3c3107dfcd5e3e06fd71613194380478f8f09131e22f10e2db5f0",
-    "static_grand_table.h": "446b998a019bd741144f0b68b906059c9ca7fbc14f8f921e2ca76a0b3de339e4",
+    "static_grand_table.h": "7419b54dd75c098283840fdb8e2010c0934cefe24fb521e8b8c1149d4dfbc50f",
     "third_party/dr_mp3.h": "7a6cc38b0afdb55cfc9eec991d9169d67beb8fd910be2995121510cdaa99c356",
     "twin_free_scope89.inc": "42834a2043a38ca856f30873a76cbe9ea9e7ddb5c32507ea75091529c0a87604",
     "twin_music42.cpp": "54ef49c00d2511b516a6231069c487a93a059a25d7bee9003db7f3e68aaf5519",
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "4bf662db3609fbfea4ce83407e24d5614b29bc52e504d7f0124ae43dd50c83b5",
-    "ui.h": "b9cb1e10efdee7140a38e2b5fec42b3d02be94133180a409a1fc9241f057cbb2",
+    "ui.cpp": "fdf3cf4e0b11168d94b8c8e8e0a2ce344f35a8785af9a7831453d7d9c4587384",
+    "ui.h": "cbdeb199ee49bc83424c84f314fd47b50542dfbc6b4984fd828f52a8086e90c2",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
     "upper_win_data.h": "766cef91a5ce38f8a75e01048010460ef718053816f1461eb15b1e71a1bc3b78",
@@ -170,7 +175,7 @@
     "winner_wordmark89.h": "76d4db3613e1ab083cdfde14be5be8ebb78b31946f743dbab43af540f08ef6c6",
     "wisdom_accepted29.inc": "140bc00ce840ceb8a8e0c363028e46875484508d058ed9b6bcc2a2b21853800b",
     "wisdom_entry29.h": "171666376d3bb50e5062fb04e97b779bdac7eab42dc0afe4d8b19ed05e2f1d28",
-    "wisdom_entry29.inc": "a3f22bf5c4459acfcd6ec5b3bff0fe3e445fedc27c6a67ed6a03ec22f218b8e0",
+    "wisdom_entry29.inc": "8a77308f9c4a3235e40a4b1e1c2d8e94508c690a20b7edb28d3c1901b15ffa68",
     "wisdom_entry_controller30.h": "4aa471e36d1521a9734aff74e54360ac6347798424853c6c6b4420006abf55de",
     "wisdom_entry_timing29.h": "7b2705120949b4fdc427828bc877151a4c24f981809ca5c4d7dc72dcea608ae1",
     "wisdom_free_caption29.inc": "7e54425d7ac004b84194e3f1cc0cc9bd95fd339a99e86c85804c5f383e099bf7",
@@ -191,13 +196,13 @@
     "financial_presentation_and_source_guard_each_frame": true
   },
   "hero": {
-    "source_version": "0.2.110",
-    "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+    "source_version": "0.2.120",
+    "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
     "images": [
       {
-        "file": "media/gameplay110-spin.webp",
-        "source_version": "0.2.110",
-        "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+        "file": "media/gameplay120-spin.webp",
+        "source_version": "0.2.120",
+        "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
         "sha256": "8ab38bb06bd83d46b6b41f6790c08a713646aba261801f9e1cf48bfeb8ad4a04",
         "bytes": 4797132,
         "dimensions": [
@@ -232,8 +237,8 @@
           {
             "result": "Bell B",
             "credit": [
-              11040,
-              11040
+              12040,
+              12040
             ],
             "win": [
               9760,
@@ -256,12 +261,12 @@
         "encoded_frame_ms": 40,
         "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
         "first_full_gold_still_ms": 3200,
-        "source_fact_receipt_sha256": "9222cdffca1cefae03e7fcc04cca763bee3f4f3654b511874abeb4027a617a50"
+        "source_fact_receipt_sha256": "635eb807b7be9d629435a82f2a85d543865936a9d4b80fb363336e403f39f9ee"
       },
       {
-        "file": "media/gameplay110-spin.gif",
-        "source_version": "0.2.110",
-        "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+        "file": "media/gameplay120-spin.gif",
+        "source_version": "0.2.120",
+        "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
         "sha256": "8bd327991e41d853c9928c93c23c3f6ae275b529b5d23ae84ccead9bc0b0f736",
         "bytes": 13049298,
         "dimensions": [
@@ -296,8 +301,8 @@
           {
             "result": "Bell B",
             "credit": [
-              11040,
-              11040
+              12040,
+              12040
             ],
             "win": [
               9760,
@@ -320,12 +325,12 @@
         "encoded_frame_ms": 40,
         "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
         "first_full_gold_still_ms": 3200,
-        "source_fact_receipt_sha256": "9222cdffca1cefae03e7fcc04cca763bee3f4f3654b511874abeb4027a617a50"
+        "source_fact_receipt_sha256": "635eb807b7be9d629435a82f2a85d543865936a9d4b80fb363336e403f39f9ee"
       },
       {
-        "file": "media/hero-full-gold110.png",
-        "source_version": "0.2.110",
-        "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+        "file": "media/hero-full-gold120.png",
+        "source_version": "0.2.120",
+        "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
         "sha256": "bdccecde826ddfc1ffe0579c827b22bdb40688ceedb6fdf32024e13c65dbe7e7",
         "bytes": 49721,
         "dimensions": [
@@ -355,8 +360,8 @@
     {
       "file": "media/line22-jack3.png",
       "kind": "Observed US50Line22 path and exact10c50M1Jack3 five-credit payout",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -393,8 +398,8 @@
     {
       "file": "media/pickup-flight.png",
       "kind": "Middle-row collection bird visible before unchanged700ms arrival",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -403,8 +408,8 @@
         240,
         135
       ],
-      "sha256": "bdf5a4213e19a09b575edcc253304a8229d0774ed6a2bdcb8896f7e04be36098",
-      "bytes": 39462,
+      "sha256": "c915c12934aeef6994f4700334baea77c1481a1343aa93dc1aeba6b5d533bd15",
+      "bytes": 39419,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -412,7 +417,7 @@
         15
       ],
       "input_frame_rgb565_sha256": [
-        "da07258903c1d7f2f40043e7f549705b08ad3f4bf8d253da94b7f0e171360737"
+        "f5f0105724e764406a12a1905f4f2a56c165808198cb06b5f2b88e3b726ca343"
       ],
       "input_frame_clock_ms": [
         11213
@@ -431,8 +436,8 @@
     {
       "file": "media/cash25-burst.png",
       "kind": "Current numeric-only25x Hold burst through actualEngine andUI",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -469,8 +474,8 @@
     {
       "file": "media/game.png",
       "kind": "Fresh default-denomination1000-credit game",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -507,8 +512,8 @@
     {
       "file": "media/wagers.png",
       "kind": "Cabinet wager panel",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -544,9 +549,9 @@
     },
     {
       "file": "media/menu.png",
-      "kind": "Current Game Menu",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "kind": "Current nine-item Main menu with direct Counter & Jackpots",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -555,8 +560,8 @@
         240,
         135
       ],
-      "sha256": "d66a4bb73e730d6d0b22b5a059ea4d74bc96ada67e47a5f164e55777f7950dd8",
-      "bytes": 14390,
+      "sha256": "c4fb9dabb53d887d51c58d7614146b0995e8734cf10d4b2912df9538a1cd73e8",
+      "bytes": 15408,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -564,7 +569,7 @@
         2
       ],
       "input_frame_rgb565_sha256": [
-        "517c2e6edd7a1a8cb7216928b855394f5ba728395cf946258098173a2b6851ba"
+        "24f873f68fcc31b7e4390183713a39e641a7f5f8af83490ab6341d4fe62f9d2d"
       ],
       "input_frame_clock_ms": [
         1000
@@ -583,8 +588,8 @@
     {
       "file": "media/sound.png",
       "kind": "Current Sound menu, with stops/landings and no reel-bed control",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -593,8 +598,8 @@
         240,
         135
       ],
-      "sha256": "a82e8bdcd86679042159fe9f99496d54f779b9138574d8326e4583ed9aa6dc5f",
-      "bytes": 15438,
+      "sha256": "3a60ee64934dd92881a9a8362f448e64838effebffcd76888ddfbaf1efb9237e",
+      "bytes": 15869,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -602,7 +607,7 @@
         2
       ],
       "input_frame_rgb565_sha256": [
-        "47466538e1b05bd8bf116524f4b706136a966a03cf9dffb223bc61d0d5aed1be"
+        "aaf5eab4933af1b816ed0dc699ca54a75d3e85f7e8688a487fb67b0705c7c651"
       ],
       "input_frame_clock_ms": [
         1000
@@ -621,8 +626,8 @@
     {
       "file": "media/volume.png",
       "kind": "Fine volume panel",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -631,8 +636,8 @@
         240,
         135
       ],
-      "sha256": "77dfe8d3895cf5263221473406865949d2d952b7c3297524f98f0ebd87b7598b",
-      "bytes": 10726,
+      "sha256": "f1bfeff54b7ecc37cdb82ede23e9ad7175cb690f4df360d5ee2153f0949ef834",
+      "bytes": 10859,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -640,7 +645,7 @@
         2
       ],
       "input_frame_rgb565_sha256": [
-        "4077812d2c93ec9d4cc149259f4b4de4dcce53715308387728e55ddf66f4536e"
+        "599a07e52363c9d9da3643baccd4d891349caabb7cd1305f801690335fcbbbd5"
       ],
       "input_frame_clock_ms": [
         1000
@@ -659,8 +664,8 @@
     {
       "file": "media/wisdom-entry.png",
       "kind": "Three-Wisdom initial entry",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -669,8 +674,8 @@
         240,
         135
       ],
-      "sha256": "2c0b480c54a23054140309321d4f8827423982c4a2cd6e7b6d5f40170557142f",
-      "bytes": 45829,
+      "sha256": "36015d971d0f620ada3947c41e7d9dc82543f915b3a9d3615d19d5f9778daf1e",
+      "bytes": 45612,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -678,7 +683,7 @@
         3
       ],
       "input_frame_rgb565_sha256": [
-        "70cf3e67aace879daefe54e675ea1e11da3ec123b9a6d7fd46a83adaed9be8ae"
+        "e62a09e2009408394fa9de712571616ea5ea2dd8be7f36faf2ac91c3b847ae76"
       ],
       "input_frame_clock_ms": [
         3920
@@ -697,8 +702,8 @@
     {
       "file": "media/hold.png",
       "kind": "Natural Phoenix Hold entry",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -735,8 +740,8 @@
     {
       "file": "media/collection.png",
       "kind": "Centered running collection amount",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -773,8 +778,8 @@
     {
       "file": "media/symbols.png",
       "kind": "All twelve display symbols",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -810,9 +815,9 @@
     },
     {
       "file": "media/credits.png",
-      "kind": "Add Credits panel with Clear Balance selected",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "kind": "Funding-only Credits panel with Clear Balance selected",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -821,8 +826,8 @@
         240,
         135
       ],
-      "sha256": "ee17c917e0fd204e2bc098ec6f5a355b45b44460dae979669661a5dc0f66c6ba",
-      "bytes": 13801,
+      "sha256": "309cfe4b5a01ecce1259645593a36d125fbc356aa443f35f54304bcdf3962db1",
+      "bytes": 14189,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -830,7 +835,7 @@
         10
       ],
       "input_frame_rgb565_sha256": [
-        "302a661c21caaa899d94a8fbd43ea8a9a77b9b919778b7302bb9a29b367183cf"
+        "17536ffc33700bf5e8f7c2aabba9b8b5b09be7e057355748a8b8cd6020746f5d"
       ],
       "input_frame_clock_ms": [
         1000
@@ -849,8 +854,8 @@
     {
       "file": "media/wagers-lines.png",
       "kind": "Focus moves from denomination to PLAY LINES",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -887,8 +892,8 @@
     {
       "file": "media/wagers-bets.png",
       "kind": "Selecting lines moves focus to red BET choices",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -925,8 +930,8 @@
     {
       "file": "media/nested-free.png",
       "kind": "Nested Hold with actualFreeGame1of6 and existingHold counts",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -935,8 +940,8 @@
         240,
         135
       ],
-      "sha256": "03fbc02f728b752b5549b416d850c44a435bbc583b6fc5c7bb7f9811abe7de6b",
-      "bytes": 32234,
+      "sha256": "c130bceda5bbdd739d4ef7edc887f8f213995acd0671fe190713ff56ec506e0a",
+      "bytes": 32530,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -944,7 +949,7 @@
         12
       ],
       "input_frame_rgb565_sha256": [
-        "390bb8893da0f38b32f27ba3005922635c750165d1a0580d827f1bc18fdfa4c5"
+        "f62c41fe95393f0ac0ee43c2f9b59f60e4658876628a96f6de5dfc70d634c3de"
       ],
       "input_frame_clock_ms": [
         11120
@@ -963,8 +968,8 @@
     {
       "file": "media/nested-free-fire.png",
       "kind": "ActualFreeGame1of6 stays readable through the fire",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -1001,8 +1006,8 @@
     {
       "file": "media/pickup-flight.webp",
       "kind": "Current broad collection curl with late center retarget",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -1011,8 +1016,8 @@
         240,
         135
       ],
-      "sha256": "f0a11d34dd81eac0ceb41587c7a2cb9409a86df3e2bd5bd6e2029e081fad0445",
-      "bytes": 700458,
+      "sha256": "dda8daf4a2bffb9f9506cf7eccae9b6de6e680c8fb14c88cad35e0ce157020b9",
+      "bytes": 695878,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -1020,57 +1025,57 @@
         15
       ],
       "input_frame_rgb565_sha256": [
-        "d30c7240962fcc5c701ed35e75bcc260498dc59ea9943c5bbf71abf9e9c370c4",
-        "c54390273af9a0781b8dc2d9cddbc5eda81d9d5a87beb9f1c672feb9b61d31dd",
-        "d317f58b5f74dd261e0e62d1270756be249ced14f8acb141869a1ddd20edc0ef",
-        "472a4334b64d5da16c022dc126367e5fde8a9327cdfed4e94f2f9342e486e61f",
-        "b732d67206bd7ad83b387c20bc1fb1afbaebd8cf1501bca1e06ba801ef91d662",
-        "5678b7808c7b4bcaaefc119186b615ae4ace810c39f3de3857fce56827940f2f",
-        "d28847311788663e4cfe6494c6291ecf48ded00ee3a2f72f24ca69aa2291a64c",
-        "5a116cfa41226953d1d2a042586f3e59a8940a5bb0d5d994b8b2ddea94d20816",
-        "ec5472f980f3ce8e9f6e7cc0fb51895106de63237a50d0c5e1895e08619528c7",
-        "89a64bd0803348d63fcabbd733267b37f450c3c95fea6952933ce30f7470802e",
-        "7fcdb4a5d99f99128d9cc126a4ef6999cdd430b860f683de82fb9c8a3f22ff25",
-        "da6a1b26a8ee8d5a1aa9854fb6b6cf846ff4b0843ebdefe3ed9e6b60ccb75a38",
-        "e8f34cfdf635e656d828e216f82668695761abf623717d5ffeaeafa26f96719d",
-        "76ddb19725125c0b5232fc6213009180f7fd557c083be162238f049f183e1632",
-        "8c366ffa6b359069d9ba6d5b55f526649cff554d0fa81e7fa14e32e39d586fe7",
-        "da07258903c1d7f2f40043e7f549705b08ad3f4bf8d253da94b7f0e171360737",
-        "c3bbd68942cef914aed95bd38e0972daaa99d8ee582dc3d798f4295ea60014ae",
-        "6187b0b1c7b3d510f00d34d1d8749eee520c1ecdf774f418ae3ea3b8c5f1b5f2",
-        "b1f6cf69c0aa022a577a1bf25666cb9a797f4ca9defa4ca8e6166b522134a887",
-        "77f3fd8f8ffe79e9d3432efacbabef7bbae7e30d9557350057a7e54f701b65f8",
-        "75daa198899df032987029f6baf5d652be12c9bac4ebf721e92b66829b91bc65",
-        "8e9a30ce51b692b4243d945cdc0bbaeb135b42fee1dc57c59d10c496a1fa7e29",
-        "87fd46c321e3a90b51d7b6025af327b0ca5a80dbc45f8ad021c7d97e4e2f6ed5",
-        "f28da7c8496553de0e65fa04bab918f3088e157ae6326b8a3e17e3cafa69c7ce",
-        "022b2a8e7fb8710bbc7da422f385b4b9dae5d843d346244141ff316aec0d6c0d",
-        "83a9a1c02b5cb40d98b051423e41325234a7443ce2222345d5fa5b82d3166d73",
-        "f8f65e9496860dd5e439e6389be8e37cea1ebac2c4e3ed452368ccc087543453",
-        "a3ac59f2d201026184528a651bd3dd44302b6ae3d63cba171457ef9036f0a44c",
-        "e089b9bbeaf3bdd2f96cc166369d2cae91626602fc884cff1becfa36c5c277f5",
-        "c58e85d20eea70c12a96e8314362ade89f294835c95c40e30303e63345780315",
-        "57cb926abb3420f1005e9150e57fc099fd893b9df495ffe76db1d200a6bf9cff",
-        "42539a26336cf4e014c92b3ec16bce4c8117f9a83465a10901eb89170e6bce85",
-        "be9e21b20aff014c877bc0bc7e0796135c4cb98673fef39bfa68a6711c6925f5",
-        "d57a852ca6561dd813ac9e323c24e4432da6035e6a9a30d833805101dc413b81",
-        "fc6dc81864a672d727d77959bcc050dce045a7065fa03ba7edcd25f7c1c7a410",
-        "2c0299903b31a9e9c58fbcc2e3119e5d6c20b2fc9397d0e9a888ecc812f98d04",
-        "5c773969d31503f04864c22e2aea9613070311aa06308ad4a6d880e91d91571b",
-        "014ecd17fbed75656f53b6bdbbe8c365cb0ac9e0cf51a321510989e71d43444d",
-        "0b071a6ed4b2c100f69b3688ae8add02c0fcee204173392510f7cf3d26a3efc1",
-        "47a57a9758839fb5c37f9fde7be8d5291b5d4db9ba4a718fb0b35b0c2a44c471",
-        "f2f0c94cbe544ba228db20a5c912f8acc5e8d69f30be7c3d78b56cae5caaa790",
-        "bdb1cbb9c0d251f63abc0bf510282a96513ef7ace9c9786243d8b5f25377b183",
-        "a734714ddae32bfeedd9bf01ebf809548cdc06ab324ea36ceae9a7a1822ca4bc",
-        "11d66a21efd7309893af664288ca6a8372b8cb20bfbc22eef56b61e6402bfec3",
-        "6aad81fa1ca16fc8207cdfe217af289ae0797b6329a6e45d34957ff09e1e8eb7",
-        "6466dafd36f896ab1178dc7544c4f22d05f5904da9ad9adcf783aefab76d0ad0",
-        "e0fdcbcb6abfb25e4e5b53d9dd3a6d193d9b6a5736ead4084741f5fb66fcf0fd",
-        "b39da9991de781080176fb3d45de47694dcefce6f00bcaadff7551b63a86ef94",
-        "128026e6f8089959c4abb9b6a3fae21448cb967769993d15d2cc7220f7ead00a",
-        "69dbeaec78dc60abc387175aaa15d0524a14c7c373b250a09e9498356d300c02",
-        "5707ad26ac0d5471c2cac0957ea75d57619199175407466c2b9a8747368fc246"
+        "518d9542b6900d49f81758106d7e13d94463f8c514dc8219d6561579b1b487ae",
+        "82b5b88977ffcd3e94d6f2cd3e57b94cf23d4a204ba08dabc0db28919d25078c",
+        "dc2b9e18b21d043acb6b282e021c944e351d1f7bfce1ed9044e3713d2bf3429e",
+        "d2019ffa664edfc6b3f67d59414f03a251b95c7a9472ded845bd82acfd97345a",
+        "ff72109afa4003bc17a36980b5cd7d1ce23f12a8637d56b26091c56db4cd4552",
+        "d057c003046afa6701d6357e44581445deefeb2e2634e4d8b8c536a50d209e63",
+        "bb54f85e5b35312f04e5392da9c456ca863d0d617236511b0c7ba94b696181a5",
+        "9629b385181826555f4c9f923d5472f85128a453268e9dd20a2ca24601099a96",
+        "2cc9f662ca8132b75dfed03112253d62ddf35248a2e4dc45e12e660534085417",
+        "bad22ae2ee2140a1e5af1e64d998322d72bca939ead7ccfa1136413481a31de1",
+        "85345bb37447a3e0ccc62e4df1d6d68c3e639645b4a10c1d075c7c518ed2fe0a",
+        "9d88b953b28da9d3ec0d6adc593b848953e70ed9fb320e7773d611774ecb2060",
+        "96bdc271657e4f29e4b72cb657115319cd092a53638e96d0c0253efbee64e8bf",
+        "1b5d6053fcc33fd23f97d557802bfb5b6658c6ff6cca31653b24639ba98c8e84",
+        "c4aecb01025a7895b65a8d33a2b1fd40a708ceaae877640b4abbbc966f0f03cf",
+        "f5f0105724e764406a12a1905f4f2a56c165808198cb06b5f2b88e3b726ca343",
+        "8a30b980a5b4346c9d9b31f706263add51cd53b44a7b1d4293dd3f811028966b",
+        "257383beb4649cb6dd828ea69b012e10cd1e045a9344d51cf12d8b5831c4e7a7",
+        "587cb1e6d68fb14b2468adbbea03318f300f4e4371e640079cd245b9831d8f9f",
+        "586ee58136f354a8e0ddc108b8cd9644b548f78d832402ebbea77af66cea19ba",
+        "bb0ebb1e4c67202b4da69ce29c7570c5efe43f2ce06156e2d16415b6007079c5",
+        "26fc4d1159f698b2e099b164ae28bfcde826f1ce8748bfbdd2adf4d2aeb33d96",
+        "9b933666827e734b91cf95460cc841efe619735c71d41f7f5cf428d601dcd411",
+        "bef0c6e6c2b735896c37b554d7939f14af2f875f81b3d3ae72af242c83792dad",
+        "4ffee902e629d6e9c60427a3e4254ee1a3139e2f15843dcd0ac636078b6b8d38",
+        "c4fc81324189dfcccf372a9ad6b9a7d498abe772156cc5d81c755a5073cf18e8",
+        "70599351b3b760c5edb815e3b3e5022ca8c306969bc53679ed2053d0b420a494",
+        "0a8f6a1634a3aaf443f9a9d332d3c8ad13e05fdc817a6429452d042ca7d7d784",
+        "177c1c27b5b6e16b0f849e660867fe558d0a87e2ea854f9b7086fb9b77ec4fb4",
+        "0b5edc9592b57e3636f0ff623af2d90b40fd1aceffe59ae4b753ad649209d867",
+        "fea3da843a37f40830df01b4d19c0aad611f46f9c89e06477092342068a779ed",
+        "44d224c52162020e4d83dc0db6cc612a26b45651a71e70c8402c39ed34b6fda6",
+        "291fb13717d3c005f87046be2a1beb4c6bac3e30c750233e89dbd71590657fc2",
+        "bb60abdf2bedbdc2b5ad09c9298796d7343d20906b669c9212886189ae271255",
+        "d50eb37346944ce2d9864b42ac82e210dd23fa955a60a948934ce6ef5e66d8f7",
+        "88b1ae2e114b882d484a524b2459a2cbbffa83a1a337d724715a4895460c2d00",
+        "e72c9ade67e3debc5800d8d49de60700f3f460778edfe28c6fc37106bebec2f0",
+        "09f22988ad21c198872f25c35393699df1dd75d79ca37c16662966e07b39cefb",
+        "645e328c6c432feee9aa6f52ed8fd1a01a6ad933c11f9c3111de4f130014df62",
+        "f01ad0816ac72840f14676b4d51e7c0542d8014bd4ed020f1ef73ea047a616cf",
+        "f314f8c4e9a7afee336c44b19611cab4aea762756a892614a59d014fbc1dc361",
+        "3ab8cd4625332f0d54fa8150c34ab75f20e2efdb680a88cbb6f252eaba901035",
+        "c3c2b761009739792a9a17b1949dae22df381398eb64d50d0eb3c488080ac6d0",
+        "9b9d5cec011e054761d7783408471a5876ec40f8421a2e9a7f6a1f7d34895014",
+        "637f908f9dc778f7d591b06f2e393f6dd2aff3138231473313bab3eef7929c0c",
+        "87d2c2886bc51ed0f656293b8d26614ea9889ecdafe70dc5a8fc7c929300eb3d",
+        "f4025640bcb18fe340f2b5ac5a3bd44ecd8598d1a32f7b486ea3659b27c6eb8a",
+        "8efce16d8f587f7ac6feb2854505303779427eae3b8b1935b107a9d1591cf877",
+        "ce1604a5ee1b3939f7bbdf6e6bf16dd0db63df7fa420f5cfe0f37bd45ab616d7",
+        "7470889210223073df2cbc8ca53f0914ead73454dcd6093692c4dd580e193d20",
+        "d06e63106d2f0e949f659919b9ac21c7bb0fa17fac37703cb98868c2cca59014"
       ],
       "input_frame_clock_ms": [
         10613,
@@ -1143,8 +1148,8 @@
     {
       "file": "media/cash25-burst.webp",
       "kind": "Current short25x cash-only Hold event excerpt; not a universalthreshold",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -1305,8 +1310,8 @@
     {
       "file": "media/wisdom.webp",
       "kind": "Wisdom four-second display loop",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -1315,8 +1320,8 @@
         240,
         135
       ],
-      "sha256": "61abb095eedeb9d98d21cdfb3e6b3140e0ef0acaefab198a5fbc53a2c51aa662",
-      "bytes": 230326,
+      "sha256": "9fddbfd05e83e56b5e4668c021b4829a0fbbebe18f42dde087c340fd034f8e44",
+      "bytes": 228552,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -1324,106 +1329,106 @@
         9
       ],
       "input_frame_rgb565_sha256": [
-        "d3c2f5ba76eff3853a61040d001a351192dd55d492d88e2f6ac32b0692564e76",
-        "51e64b3dfe8a62e7d8685b3c8d286df199adc2c429023cd81c093b7b1d040930",
-        "e100e5489e1eb550e214ae6999cf60eee5d27313c22c69265827d88e0a899e45",
-        "46c2dccdad1766e45ad9365c1feccdb1672ec3956f82ac4c2cac7280cd179dba",
-        "ac45eee082372ad070201e2493a20fb997edf3e76f047cbdd13376122e493b5b",
-        "21ee2299b404f8c97bb10c16d1a897f9ec7cb65a6cf0e6587a9547c3faf52677",
-        "733c7e13f691bfbe57411ebd992372322753c69219f5ae229920e58e47201276",
-        "42ab342d7558d00fcf3188e21330ada7bac1a675bb05f22aab9053dc0c0e2c40",
-        "a81d646e48e0acd07e0b2accda4c8386b716c70e8568a414e8032bca4ca41500",
-        "45312bb3cd8ce0ead982bae4d806aa8b2dbebeab105a0dbc18373919c780be5f",
-        "5f5b8bdfbec09c45a141dba72770f501e87ec43c21f2d4190be2f34a3a5ceb9c",
-        "d8ab6e9c2b45082c0f9961a6ff9468e63a3a7dd83d3d79c63ab834be138a0693",
-        "26a518ac4a1e7d03611645537562c8c202964d54f4317ec4e908c89d38f003ed",
-        "9327d76e7240a64c68cc63b8c5baa8e1f952b9338d2ca466aee907b053282623",
-        "cd36dd4fddb1003dc4cc9d168a307f84fded3ba81675cf64a67fbfdd5dfd7456",
-        "4687fa1f69ec4132657c3255ec74b958afb693fb5e73a650abea4f46edfb46ee",
-        "141d5a32c6b5f70830affd4f82a29c23e07de365925893e55a22e8d64b9bbcec",
-        "0419da0994dba81585134d4c4e533440cd8aa8774fb9822f9509e6d5d32a9a05",
-        "3e15e7d97f4cf58813e5bfb5678241f57902f44b54b2412aa5c16f75503c7df0",
-        "8b5bcae22bbf7c40899eae6cdd20143bb14c33c83cfde0403142490589bf141d",
-        "1c9d3bff41443ca7474436fc767bf0b065d563c037cce2982204a8769eef925f",
-        "eb4c50f2fe7037d5bb8ce0b381615d7d898016319edd7455d7617241ba5d49a8",
-        "e93ad3fd3337c19430c5961923506ba26aa4d15ef6a43939eb54fd4fcb0e60dc",
-        "cdc9ce089a15c7edc73820ae35ce25e3a0dfe08eb65e284c4ba5046c12cea31c",
-        "da46c4afaebdf084feec1fcc6b22df45404342541c8fcc067ac9a539f94029b5",
-        "7e86ad05c60cf8fe37a64ec06ef5da3c1a9fd928bac78b8c90e7f3b7850768a9",
-        "6f3c72b8d12b0ca5ed9bf2faf5ca807b7df6a5ef4a0fa128e5b21c333c912245",
-        "9cc53400e4900b4550099cd74e6351b53b0be524dff052f467a6261cb2565245",
-        "49fd987baec53b62bf2ae638882e4349f6c194858bd328e5acdb8752fdfd0ee8",
-        "db1367f4df2f18b09eadae0dc7190533989f6ed274597c74efb40f9bff12790c",
-        "8299917a4471c6ca44c8518c9c9339dd62b65690d71115d2855a9a4a148ad327",
-        "b899c7268fa70030307c17a412b1b22b41e27b8b2b774a050ae3f272bd3e9dae",
-        "cafff26f2be3dbbf8b79e93ce09016a5118a34cf05ee44c19a7689ae92d42c3a",
-        "a189ebb778214423e228002554ca1c8de93161719d66dfb79d8d0082656d511f",
-        "3338b3c995f221220409abc1cd7603d5e45b9dfb1fad22cae2bfd04fe83f5ecd",
-        "9837ba62213d94c275bd91b63f8cea1123b687c9ded9cb0d0d1947aacc763301",
-        "838913e3db1e5c5480d997a1e2dc9b460c83d94e0436baa6b0451a2fc3019f48",
-        "26f9b6f1334fec9c67f337f30aef6627df31d1494c3cd7bd326aa3cc73625db7",
-        "adf2e7ebc0fd59a2a0c03a572a68ce517bbaa3cf561f4003378c013a52875a5f",
-        "8e3f4e18ec958d92d041916e81f87ea4aca3e4d13ba8e1ba17323c55a6243cdc",
-        "b2f8aa6f521c623bc57b0dfae1ec325af787287565342acc768f6e5ed9ab77ff",
-        "58c1273545056eb5c9271c35b440937a36dae604d87e6b58598f6be5f9fb2903",
-        "cd43edb05ae79b88bd893d59c2d8b37d1391e1dbc06963301305f80beb9f55f5",
-        "65ce715479f2b754c6ad8eefd7a5ab5a54da6ce4095a3cf0bfeb84154fbadb38",
-        "06bd8b70b4d0a68464b4e994a865f83e4bab6cfcc1ffb3f5f0ba5e97679ab5d2",
-        "73c7ea58c741b61f7b7ee051bf3e22fa55d91f5d451859a6489d2f78f2fe75d3",
-        "ef97201cfe63f21619cf840a568232d28a268dec82fc7cd2274924393680275b",
-        "f3eb931ab33f1a77a4b01a1f1b8999197772de8247ebb4ebad4f5881043921da",
-        "eb198d062c1d38df34a46a2c1d9521695e9837e168519afa19a4b6deba5a1dce",
-        "c81b4aba446f5a04aed95f8fd812d59f54d7329d8ed0d32c9f3e7f2501215fd3",
-        "f601b860f2d3dc2b2c74d176b8940722a5ced0cd52ca9ed016bbc73fecc4682e",
-        "9ef218b39631bdadef68d1e1e50b9163c4b5fcf6dd97df2cbbb06b96877c4e10",
-        "7d8a1d1bf6437a5499c787e41fb3944970a00ac18cd3aeddcf8311fd756e99f6",
-        "77cf32826657a92f0d7bd1dc5b5dcf9c8c085d5968213ac27e72231c39d66628",
-        "06ad4d045a69e07b406146165e41e2bcccd5006e134bdfee175b0b2380e473bf",
-        "5890064c11aed22a93e3546bf24727d79ca9a19a0764c66dc94fa0cd0c3b133d",
-        "109613c0ada6433c25856d3d98101f3d1afdfad9117e5cbf4aae457763e30c09",
-        "c89db7e4c3316e1ec5ba02aaf5ac399f126deac87d4003060d7dd580b6c947e5",
-        "da3dce428bc1b7d708fc98fc48aa9170788da9e3211c6483bb31fd376fb373f4",
-        "824ff0be7589c18e30f8b6f45dae7b632ef1b66614c2030e880dc054602f0989",
-        "2c9996405189310e3cd23136bc237b05a97c7a241ec552ce1f66726c896f4a3d",
-        "24b39210c78a3504942a14c5d15dc6452da2c616086784585b6db78dfbed5b69",
-        "02edadf78ca13a923910b7c7b074f07801058e77847e558ffb6c6256c6390d83",
-        "e24aebfaaf049590e395634bc2538ff210a5d16506093a6d7bd47a00dce0a015",
-        "fc60f4379d879c76839dc2399ab3d5dc580409672b2332442d307342f111df4e",
-        "480a65175ace07ae26190922f4a0af2869f6b1d7e2d66c89a43af0f2d2722f7a",
-        "7bba38bdc68a18b29d2de3b88750025b6e92cb494ade6246ce5db4e0731f9412",
-        "2b6cacdbdfa570067b8fe6e7fc1363c3c9ceaafc90f5a2568582eed7792673e3",
-        "dde55b08b0bfac3d31b6aaef598f2830e27b4f53c5b8c069d4442153da54352e",
-        "ce9d12d77ada356b6cec1f6fcc3f92902339b4c285e22a2c26148a13b127ab3d",
-        "f3d7b2575f7f7ce6cc3f50655d73ec22d6f170b47070cf190714efd495097987",
-        "c7ec56e7b8aa9edefed4f64c680f8aa2d869ff5d287ae24fe0ff314a20c4898c",
-        "bff87975bcf7c680f6f4fb3b9051cf7ff618c84c6a2fffa18bb7443b83db1361",
-        "3be3b31d16fb8a46c51281874c92abf624fc10e09eff481aa5f3e60e72ed0577",
-        "391241b24a3a7349a7361215c3fecdc103ae2e5805e767756be17d4366dc6358",
-        "8a0df8fd404fff14e0eee9bdc44cc02f9de493bdbaa8c2d5d9f5f47179611f55",
-        "f7a7d76ed338bea04ea19da847752400d8c0465a939cff873f2a3b6586e9bcfd",
-        "974effa0b21c1b350974fc57e29362937bef4c71774d8f2bd914803bbb52e3c6",
-        "6e4a141e9f95142e670bc1928a4f8c1bfcdb661367806d96c434d776a857789a",
-        "77942637d921c6d923b51c5c792abddd4653238cbbdbaf9705c59dc84ed6a5f4",
-        "0003de6b19782adf69a1c5b7eb14fd77ef95e095b432b16e76e9250350c21e28",
-        "d119d5800db225106a8a7ebc75855285439a7efb8f9a5881b12ef69873969d77",
-        "2979ddbd482f79396cd7b98e249c5ed331381667020e06ab169c8eb75cd9af48",
-        "2d5abb769dac9eb4c6fd0408f308dc8403217d205c0b296e4fc71d48b91b2ba9",
-        "0ca19787e064fc5238fcbcb5a09d5b2e494f6208a7ba8f2bb0b90d3af306d35f",
-        "05ac058fc24e5221c8a2a63b12797ac70e2934149bb468a28629b0f81c773971",
-        "085b58f7c7b628e2ac251465503d143f4c4ae3bc0ddd1944146505280bff4afa",
-        "a88eaf70a7a904aa2b72f5cff454686a897a6879648f447217b69e7455ef7e33",
-        "da085b7e38701e033cd297df368c48ce9f0eb49901dd6507dace11e979134f83",
-        "151c3e238c3587eb962ca2b4ef96b0ee36bdaf093e83b5627d5fa8e9c5d011f0",
-        "8827b73ab36bca6a04e78dd4ea39eac290eb309b837ea7e54029053cdb7a4873",
-        "b8db005d91f21f928f3356e51ab45d9dc33197ac737d271b055c131ef78a8a10",
-        "51dd39925d59f394d545fd28663bfbb2b52109711762e1fedf6eff6b2e98a648",
-        "ab9926c9062c0578efa5bd9c3663dc0a3d89b128bae37dfc5cae565902eefa44",
-        "4924cc51518850f36f5aa9884d6a320f59704fb57a6d9443a02abfd7b74bb49e",
-        "0428c2e6f0a47fa501cb77e1c31bbd6b748ac44e2f84ffcce4cbb8e443b7f64a",
-        "7d25e6155300f56a03cc89616cf7f5462f1a0569956b4854611867db158df44c",
-        "d75d9b1fffa7f475701a196be0e33b2a5f767074098122e9ee24304d1dbab982",
-        "aeb6dcac9c83f20aaec4f11178e22349dfca66f75108e13a9737a069492ca9ef",
-        "3f4bd40e0f48e735b1c9293d55ee52663d841785dd92685e3d27c41b4a575622"
+        "0e57fd28bca775ed0f384232cf786322b23e7d7349f19d731703bfabe6e62d68",
+        "7be8079941e2bd9944c721a791e6abf3ddc13a519bd9d6d260659c347be18517",
+        "d3e6f08423a77adead8268bf7f126b8ced91e5cf40338f69ac543e8a756c3e45",
+        "c1494f0879ac08de950a78b1a5285529291b2ab5a982805af2211b31b71a8920",
+        "adb73e0a3fc3953d8f40c430ccbf8d8090b7d3358b34b2da82fb7b6ebd311403",
+        "cf948ad35892899033cb72d6dde379ad6deb58b0e0cd343cb8070e17b23c5243",
+        "5b08c57e8f7f1aab3ccacf6e27d6f7891dd696af85ede9110dc65ddf49e6aed6",
+        "bb1c1da29807ed1699fd6e26d2405adab6c6c9bc2ca0920475108f4ff9167df6",
+        "86cdc07476d55b1ea95a7a77a27ec07c8c6e33946abeba9451adf5c8990e873e",
+        "a777abed08109acfe932e98b28ebe3785ba9899ae8042105513dd0e19b2982d5",
+        "9eb374af2e7b92caea2672394c079dd3b6c77ea0c554dcf72f1727ac5ab2d3f6",
+        "833fee116520a524ef93179785abdd3fc7f0617b8e869aea28497100e233f7d2",
+        "4adfec6598f736deafcd1eb2273cd4af3fb4077c487e47c25af592a67214bdeb",
+        "e7d0b22919d2228922fe1b4703102a9277c993a2f96ceb25f44207b99d8ad7b5",
+        "e1082cf42538b973d9885e0ec138f84abd071e6de8715002f5e1f3939e61122a",
+        "c537366605711767e413d67d2e0600f2bc543053594d2c28bad39be9b89908a2",
+        "ca6675743c4e33a9577fc8d3a0a9d47cd78304d6d369b87baddaa39ef4ac6f1f",
+        "aade846f67eda0fa018036cf779cd9145230750f135036d1fe38d4b3ca360bc3",
+        "a09dfc305c6bee7031f5d9a4e9a5154659d122b01c508f5db1d6ef952a601e38",
+        "a136acbebccc424beb21d2ca759c437a6b31f8bad706d8883dd06c9ec229dfcf",
+        "9b6bcc74aae5f9f64ee49d0494552dc538cfe49864391372b3adce01433e240c",
+        "f0fa60a02be86f4ee8e5aa5e02a222715eb7a0c03e4d46b83d7bc9df27ec9e44",
+        "18b68a746ea96a012c412e36e2bcec1dc836f33e2a737f116c7bbfa8ce0fb4c0",
+        "dff19801477bb85c4c7e97ec5a1359d2b2ecc1a4bee14b85dd5b53cacdfd8dfe",
+        "f8880ebb24fd59bcf45f5bbc19afae2c99760154cf93163fbc77e9e42f4981e9",
+        "1feae88c3cb343cf7b1d96d63aa6190a76b7c51f8e417e865ec8abe14d2f4e5c",
+        "c61630f2a5308ac95f78491d09b72f222c97ac49ec108647b8f3638902b9b85a",
+        "e00a5b3a11380134caea4a995d2c4b656037900d4bb2ba7399324460efacc4f8",
+        "98e1f865713d823bcbeb84e6a657d385457e9f61285eb72ad0670e2be0ec1585",
+        "8c8be2f8afc9278bb3ea79707b7940b124927ce5679b7dbcd438fb5711297ac4",
+        "36eecc94e858b20f2bbe9071cec8b05dc3947ff20df5528f718e2eaa5c9cbd03",
+        "955c00b896d7b009dd70788ee181aadf49715de56667802373fd34b2a2149fea",
+        "8f1aa5616afb06bf071d5170cb347195ac6a49cc8d8fc6ec0730ce0e89f37f6b",
+        "ac4eb9fb15b54912a193924a23f7a416eac5c6af7fe79beeab84f9ed1a3b8e24",
+        "1be30a72344b9e42c2b9acfb2ba8a41508b71a2a57728b82945d1d59d66569a4",
+        "0b531a97ba884b185b4edf63f4b79f6477b2609aa84d1b3f5e63b7f8acf7a0c6",
+        "675fe83a3d972724e8ea46e0df62e4e4984cb076b614428af7462cc3eddf978f",
+        "0e10b5825a2681ad3564fb9a8c0656878e2ab568d70e92efbd0cdbd93202525f",
+        "99553160272c065e30c21351379906e4098a6df152cfc4aa4528c971b7251d64",
+        "13a230bfcc2821cb8b99c5497c054cbd6da63493b71aeb2622e8e1aa9f4b826f",
+        "ae3610168356e732e256c0d2ce0997357d51f4467846621fbb8effba635000c2",
+        "69a87fbccefd29b7cb8f44d14e90b41cecabeb88a433a329f415861559518cb5",
+        "fe82ee09b75ccd1dc1a650fe4cb0726048380bc3a820e3d8e9de40e21bffb718",
+        "d423786d7dd0a80e372d81ac8939abc34421a0605d150567b3325d5cd88e3510",
+        "8911bb573ed8f7485ebc0804dc6f4a19c7336934538a4ada6e21b3f018aa95e5",
+        "5f0b928a8ac93ab472e3064e08562a6c43423635ccc14e33e56189e4f010d00d",
+        "0b83b3cdd77e4c2450aeb3149af06799ca494c0dd23a0a911596eaecbb3a29ab",
+        "f0fce450cde410645a211a94ac54a11b16f4e25de247b0d285e2b19160276a85",
+        "c6d8cea559fb2b002171390f40f2574de82f38603eed1e081134a12b73c615d6",
+        "38af7bdf9ab2b5f6f4e82efb1fcb6b3e867cd7daab08695da976db0c8a21f1ec",
+        "ad7b2f30c05ed79c5d80931bda766fc0909619b4c7e13834c8913d7ae4c8a3ac",
+        "af296363a936f4ad9bc9f61bb1b906f9ebed2bfa42551ce4da665df8681433d7",
+        "64becab59e6dd9cc6a511a5da19c57f54c529754ca11fa2a7a80294a9fb40053",
+        "51045040b80237efe895abd9ad80a361808cf76ce7bb8fed953bfa0bbbd7336a",
+        "028a174fe969533685b832ed134855fe72f7c0911a6080d3d0a2c04cfb9b1aa7",
+        "dbaf49ceba7b7da7d3e0a01f0d947546aa0ea826a516c3d875e61745db4c25b5",
+        "22ec0a063d31eeb355b41e2db97015006f76edcc3a9161edf6d1513ae371822b",
+        "da8e2d1e758af6da7d7d17efc142b1321f7838b1de084f39855c5ad4dbbbc382",
+        "67baf38e96418111b2c8a7ebb475f22293fc65e95ea1728fd6fe88cecdbe904a",
+        "da4038b99ca4374116c7cea0464bb0b5a81e9c9afd69a2e9b8d677b41c46350a",
+        "5b1287c7ee86d60f112ee6ddb30d50848b4b9bf4199e7547ab0eb26bc9d70e5d",
+        "344520f0dacf3adbf5161da50219b14c9a97c4753b33be3835fa38fd5e8b8263",
+        "7b132e99774ea649e722a8a420c006930796dea3cadda6150cb5eef4effb0c06",
+        "15db026730a64554bbf7c322ac8dd774f8e1b8dab830259f13a1726db04b5f45",
+        "82e405dac0072b0291d6b96f0f21587ac8ed87744d27fb890f3978c030a3f9f0",
+        "8a743d374e65ccfdf2c477e5e1f12af4bd5c34c17137b0c8ca6c7845a53a960e",
+        "474f31f09264289e0aab72c6fffa97d560d4da00a20404c3310474acdc2bfa7f",
+        "696a357dd4ef1a11f4a924563b943f0725954356b29c1c956d8181b840a6e866",
+        "73b113d1255ae43af88176f3ab285f86806d773e9753844f386a43add3a94c54",
+        "d8c21230bf1deb543e5e7f48b23cf5d53f953cde249a303989f4245f36dbe449",
+        "f06fb6014fecc10136fd50c29763de1dd830aa473ce04a473be116f37564bbeb",
+        "f74f85897f8ff9b740fd6ba5e75667a4cc066884ebe614b60424a991872ce7ba",
+        "898bec00c9a57dd27fd5b30643b55f2660ff33d5b179b34f1a85a461f8095293",
+        "25fdb87ea55ebee468cd1da021af9df19742e9a1bf707057772fb82c3db34f9b",
+        "0f3a9c1f1299cc01c0a84b408727ca092867969c51bb030facc0cf0dd3920c51",
+        "0e1eed3ef0d1832b83b12ba32c1fb8c0118610bf0f94f035b3d1ae8247c1b514",
+        "7fdf7f84985f4c766f8cc85167591b932610703a6b4aa1c85a37cd9fa43e0a98",
+        "f89158f59667ffdf400912f2690e4519a9a7c4bb0973bb2d8179fefd1bc442a7",
+        "e91dfc7f7b995e54fe661fb682a8435b0ac914c1d73bcfae8cceef00208ee187",
+        "abf331a704b972f1d58e152387b7048ba3dfef4ce4ea7f885eb0cf273976b68e",
+        "714b7a54fcee91c9f13f17dee90c5e4b439e29f58721fb62b1fa630045037d6d",
+        "ddc6b0e035ba63d93ad80c7568aff1805f5fdc879617ac14188f70c2438f5215",
+        "1ca4ca6aebeacee26b47acb85ea846baaa56868473e3ae9ae9613902e51ab2b1",
+        "08efcb636697447ab162248631b604ac5141b6c13006f4baa66f92988a453558",
+        "5ff4cc44eb684b3e998324bd523b984269961b3f9d5c55ccc52b8ca1f0e829d3",
+        "658563008f87acc99f20a70a24b3d5fb0c7d2ef11517c51b1a955cc21665f554",
+        "5b96f844150f30d7892c8541bdaa75e0f7d83767c500d7db63090b25494cda9a",
+        "f3aa0faffcf21ce62c4dd7ddbeaa48ca31ea6130b99cdee5c18af46a00524575",
+        "0b023fd03d7d93bb45df976930d641fcfd029f497a432adb3cae7e7dc4357c0c",
+        "18afc3012c6304893c6668e501eba326f86479fb7fa54d8b7507f73a4c628a79",
+        "cafcb932ab3d3566c0fed8af088f800fb65880f3d395af0e93c308f5d1fb6554",
+        "1fee4c3124cf3975a3c1ce194a03bc64e6434640775936cdb043ae24cf9dee1e",
+        "ce1cfe7fae635e8c379e1871c49b6170564b4ae44596e23746f73461be4c1ba1",
+        "659e97d891014ca7f33a189678a9c89fcd7c830e2915e545548e3c3f5a2d9848",
+        "bfe8d8e79128a89989436a9be57a15d65437953a34ea2f618bc0cec41e99c6d1",
+        "c3786a6bdccac9bb2c013e305e9c68834c5be5ab70c1ae17def8d2672c78d085",
+        "b214708063bb09978ed0f952a4e7e1ef967be1f03d39d4cb453863620a65692b",
+        "7fcc1b155c1cc4a662b05b19416c2accb879e36a539d9097d8dfc352b9e6f58b",
+        "ac587769820551aa1801adfe2bc8e03323f2f67a8c341843830008d90813efbd",
+        "2d8d599d036767884dc0ea4c586c26883e7afbf1b75f8749a5811a684c4835d6"
       ],
       "input_frame_clock_ms": [
         3000,
@@ -1545,8 +1550,8 @@
     {
       "file": "media/sage.webp",
       "kind": "Awarded two-/three-row Sage event, then preview restarts",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -1647,8 +1652,8 @@
     {
       "file": "media/phoenix.webp",
       "kind": "One Phoenix asset cycle",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -1657,8 +1662,8 @@
         240,
         135
       ],
-      "sha256": "12f9310e2664739b835844bae4d3f591de52ffcae6f6e252666081b4b583c966",
-      "bytes": 252920,
+      "sha256": "084f64f15487100f86890abc0eacc229d17806ec513c8e6c540930bfd04d81b3",
+      "bytes": 251230,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -1666,66 +1671,66 @@
         5
       ],
       "input_frame_rgb565_sha256": [
-        "62da698d4a2c349f026a5c9f1dc209f7b942a0ce8e04883d9bc52a75ca577321",
-        "046ef273be8a16e23c4c75d988139b31b925470ff1b0427598e7213ee7a1e26d",
-        "2f1d8f6e444a0331739b518af66faeb3245573e6b046afa53439f11d7d713f9e",
-        "58864559fe9f1913c7ee28df3860a54b03d1ed36ddd8533571393e0bf7faa80f",
-        "26266e89d283cbd6bd2243f46a6b14e560390e66ae11a3926401b305e0ca0c14",
-        "058ca4a681ca359e38a6c4879aa07503860c5cb8170e1af22abebf73bec99b36",
-        "9dd43d8618bd14a479dd9007792740c7a620c47e37ec08a30db79ff1c737e9a6",
-        "9c4c1d4ede7fbb38909cad1563d1ca0fce46a3c9567ffec0ff68acefa70df8f9",
-        "1f2f2fe0b03b2f85988e4a859482c4d16669c68a39783881d66837f0509627a2",
-        "922762d09e7a6b03b8d4288e8a120f63cedc5ec305d884ce2b42469dbc70d859",
-        "a7962bd39363a79a415d291bf0eeaa48ea14645d20d03ed3efeeb304af96d48b",
-        "ad63e01934395134a9bba77ebc958592b097fad3e09000c850ba5f06bd41b04b",
-        "5c52e9863a2ab054360f6ca8c4e09851ec26140f54f6c47de49d3b59deb75f9d",
-        "477742229e78345f985857aec3334d2a4821e42673785bbbbe54aaeceb5c5cef",
-        "40e35dff6ebde192aeb010910713f0d0adea98b356170bfc13cea7c4c2b72b55",
-        "fe4f5d0d00256ba8f6e593b705c34c061e0bbac824a0d1a5f5b07247ead53cb6",
-        "991a1837439d4cece7d9e96b5a3b230c009b8dfa70e3915539c18b7c6aab5ef0",
-        "5ab8494affe85c2535f250da43d0d5d7633fe5734cc6571866700a0616cf51bb",
-        "b0e21240390a3c5ee58bea7214e7d2fb42b11884f8ecca61faf6dbf95f936994",
-        "6e9098d67e0988729703934a4902eb258fd1470a3d1546e79fd6f6b7653c4fce",
-        "43c7b58a63b0ac149bc9620eaec2ab1b13c86f2bde97aa4d472b5252359b6f5d",
-        "94764f74845302869ae39b8f92956b55842b20b25741ff544915732291132215",
-        "5aeff6f4e4bed7481957026f8018c635fa96e3fd60e8963e0a9dde8843bc0c71",
-        "f2be93912bd330a2356579db6ec86ddc357607637a207b6a2f66db609244d5a8",
-        "3431e76bc8642aedab5ff1111a992b2a7eee0229779750a09d4349fd83df7da7",
-        "11b512f743029fa9f15cc6b051088237f4c876a92775ecfe63137b8a5b8db665",
-        "1ee3ef054d591cc794b4e03cd55aea8dde8732af261cf9e445bbdf60c6699b1e",
-        "b12ca62d423e965ec94af30b649518cb09a57b5695aa6652cb4484298f29bf7a",
-        "4f6dd6d56a890cf47dd06e84977828a91ec6213d9d7c3a0cdca65955fc8ef86f",
-        "794487130e16676c84d63bf937a35e2cd103e760f1896cae29158dbb680dc0c0",
-        "6529b06882e286b435d84c9b16c1e66a9672b3a42d4205beab40c6e014516a72",
-        "df7d1659d99deff5d1228f5713d38bc167f6c70b8c9ebe115d9dbbb48081302e",
-        "ebf14de99ac7bed01572a8ed4e9879390b8f50fbc4fd3919b21cd42e47fa1c4e",
-        "b4cae9b26e5bb0c600d291d350c0f51903728cb7d2bc3b1ecf9c94ca653a054d",
-        "5a2a01996df2380f0ed97528c1a3d38b2d252972af03f98dd405b63a307c9634",
-        "b5a23df1a2a2f34ca73d63c2fa88b135170a9108fc878ea12b8f0895b0c9ea4b",
-        "217131da74532d68529605a39138c943c066cd9e2f70827385b56754887e69d5",
-        "70e1071cff43c0c1e9474fd695b1c2a60ef572a332d1d1f40c77e6686464b792",
-        "7fb61aeb10f3b9511a74c3098e125026b6ae529d540925168c8402f89ff1c6bf",
-        "fa6337cac6e9142fff95d0346e6a8129f314b57988e4be23e2430acac86d8c8b",
-        "5bc1f4bc01289eda3bee624b24a1c7af557080dd1cb9f012a52b3c9b34ca94d1",
-        "f6bd1e6fb01ed0a9a8f900cb1665b27fe758d71b2a24fd51f1cabb1a4448d504",
-        "618afa74c2c94f7850d29225ca4151431f689607da732056b9d677f01f0102de",
-        "2ea210ddd468c0609c92491b7aebad8d5e244244859ae4f1ca3e20f2e5edd761",
-        "e3b5efddeb88a2cf1ac6559a77b5c6d510b03f7799b575cc33f5ebc23d045e5c",
-        "3f29d91460e75cf58cb361b4c6cf7d6fef14892a040af2588d47311c29438b21",
-        "91afc0b8746dd8d3f95cf47627bc35373ba09ae3c65a4d708bb73598616bacc0",
-        "81bcfa95d10ed146b5d0cfb1fcdd1191c30bc62c56736e3fe4ef134c030940f7",
-        "2e551bd54dfb4d5be4766c61a82813fd1e3ba5f98eaf9bb34e3a5cd23d80a3c6",
-        "767b14d548701cfe199773cecdd33b1d10804ab2cd933bc186969ee6e2c23438",
-        "06666f6b8d0a7fcb6f1c0d5c872fd309fed39734677f97455b92fde02a913f7a",
-        "651d7ce111c93d12983468ededd49ef7b1e2df95baa923069fcae9759cd223cf",
-        "7d12df4a096bc6f2a85701dd80e776ae2a577c107490064db7013bd3eb0850f5",
-        "adb00694f0ebaec64257dbec4326edd2c74d9294db1a91ebb0e9e7c76924fb5b",
-        "163ba0b9ebf54a5dcb7071410192ee4268790ca629f029577171a0b4af0ae2b4",
-        "6578a0737a37c6d02fcceac15f7b4dd3133876475ff82025f8ab69c5d150937a",
-        "da320ffd4f016ab2502002afb90b1ad1538c35dcaefafc0ed6b92f5bdc989572",
-        "56cfad42c167d38d033be5af839fe228ff1e93e460eec33cc514e9f0164b7c75",
-        "a88f49418ccc0cfcdbef75ee75bb7f4a094b6993cb411bac9d9dc397708791b9",
-        "4def11031304c9a217b4bbc4eb8fdea1b6d9394c27891faf22128a4af3739b80"
+        "8561492baacb2913d99bc3b66abfe246b8c2ee856f5fd16d967fa2ae06ab914f",
+        "4b5322b3a531c80b729e9dcbadd97e9f277839708abf79fcf7c99525fd9cfb75",
+        "5dafe7fa4cda6664a79dfed68e84825625eae1c5e07024fbd4ebbb720941fe6d",
+        "b2b472e0030ad1601a18eb331864806f1d716f2442db922f31b74dbcf632ed35",
+        "adc5e3db251b2a87c265531009445b50123555df9266c70ac689dbd07f69f564",
+        "a23f4a314125a0e197215e73678b4c2f194ed3b143e2a96779e12fd0f6dcd458",
+        "b1359ef95d5a90ca0897eff3d8cd8af5362bb7c56b661ecb964c05f45d359616",
+        "ee02dd764b399a41c93d5eeed4b4de8293d249b6783a676b4779476dd5faa792",
+        "6afbbed4b441d50a2584b8a41a839b9a18d22102f106892adc09b5ff9d61bc02",
+        "a69e940d691dd9d3507783f525a24a0bea607b17e96aea6a922c42032661dce0",
+        "9e5b2391167af1da98c84f5c3b76746749bba40897edb1a47a67b7c681acf8fb",
+        "7e0d75b6610b1bb85141960dacd68b94e5eedbf9b113093721c94185063c41fc",
+        "0c6a0630dea78f29ec049f82505c19d690a96611e2fd2483fe5a6fc3339be32c",
+        "ced144653e9b5fd704e0498e246e320c091eb2c83df60597da0e2b05fe9a4b48",
+        "24d53d0359eeaaa22992554c891065eb3d56ff520f0729aff2ddd692c5275178",
+        "e7969ed240dc4e0a133648d7bc3ff49649f2eb6672f9b4ed9386ba95c8eb27bc",
+        "98e4d228a4a353e1c1d6540b3d06f6e3ecf7110917e4824edc7317174f78ff59",
+        "dd1bdd0026b0dc64cb03a41352345613497e9a1c1084c49af168a55307e49405",
+        "049edff3ded27375dd6f2487653dd16339e6cbe145ef3f05348371ea9837daeb",
+        "5f359509c8e331b394f6fe20ed4d4fba428de0770b4c54dc07ed8650a1d688cf",
+        "65045e43ac2669b80259c7d311b3ebd1bcb119da1f7b5f1494c4059e368dbc72",
+        "abb88562140786ac26fc49400af5f562eebbfd51e60847c9a86bd9ea65a21ffe",
+        "c729378d00909f1d23e51c5d1884166499ef5baf3e0c0d3efd3e1bb07f04de83",
+        "9cb240fd755f6e630f5c210854c9631c39bb2a52132c3797b6433cdb7aca2cf7",
+        "c2f2e2604432c5efefa7d3ebabc908d573d6fb02e34f62ae82f4dd603d24dcbe",
+        "7b745744a6faa2cda51daabc29b6b3abdcb357bdfee9d442cdc1ac51bacf3016",
+        "19c3f78597724c5e7be3cba681649ecc6159f30a4bcb512ba8706cf57b018bea",
+        "7ef8453b3a7c00ecd4a75eb8541d7787c9a20b2cf92743bf60eb40c59bad70e7",
+        "01759634a2e93b53cf97f1c10eedcb95140c41c463b4e6ca682d9cd82b621baf",
+        "9fdbde5f76247a7b4dddee93f6577d7538308c20e607f6b1579d7ed14d0c7118",
+        "a11e0540ed2565091701d5ff1b3dc1025a8f745f7c7e67752a47688558fe77aa",
+        "c5fc3067bb8efedbb4a7f4ec4ea1f7fc0a94d78823292b611071c8bb4a10d6cc",
+        "3749076844fe2bfad1249b05e4231d277bf92af8cb1f04f9b41df5acbec8edbb",
+        "f230cc2fe1c7b4ce0ee83b2933ce06cca0896863a21085da31c7222b43d51916",
+        "13edbc8201990edb1beed5c5c4f0af9e03fe53a9463f7c65a51a52afd51ee91c",
+        "cf0277f4b47ce332dcf701298d559e61b5ec83b46c298315eb980644888a29bf",
+        "0264a4804adeaee693c1d9f40c08acf03a48ec3ae23884f1b09972a1b637bf73",
+        "6034b4d7d0efd909c3e01394da2eba6a0cf4ed1e7d8d2e6f7c143c0a8543fdd8",
+        "4753affc06251b6ed5bf3ab57a9ef91ec49f9f2e1ec589b4cda198db35d2792e",
+        "622271cae779dd66330c045949f49511cbdc064a0af485042d1a2e980f50581e",
+        "1d7a492e250e7eb3a43a36c29ad9f094828bf1172fcd14ba62752b331256160f",
+        "2f94009a7ca27b9c4573a9d3916a6ef69c3bcbfbd6c374ec720c6af799051831",
+        "addd4d202f6842ba12511e08877b6d3613081c8c70eb68c30e0f3843f6ba49a3",
+        "b9aac90a2773952b45a11dc468d42e31fb543a07bccf0642efdc19560fc55d24",
+        "d86b8de7f3863c301ec3e28b59b6c3cd45f00971f4c75173a67d7901e2a08f65",
+        "ccc31888bf535fca23c11c8d570c965a3859272f7b637b61e7a5112c7e49c734",
+        "91ca7e7d597ce49652a98e607c8135bff5659648a27276f1241d7dc63e03f2f3",
+        "062bf60ce8100948f820a8064091bd55c2fcd6c5b02a47b4b7da5328fbc8130e",
+        "40be003f3086ee9c52f0fd5024e015f0f31d2a1a64119e390eb0b1038a4e50db",
+        "50703f030cb80fdd4bd4bb2e8cda9e7c231006f3a5ce854b0a3e86f6a5b1466d",
+        "2f3b311e761e4df4569a045d84ef1431838e7d22626e0638f9586d53a65ab1cc",
+        "a8e579039ed23c3f92a3c704540753938ed7280a674efce1f0bc02d745d7b4af",
+        "e1f6f7f8508140cf37af7a5a837cad1b9bf4b462d11171b7722e0d81b08d8e7b",
+        "386e48a4345e9fca40b4c8a790baec1e8ce82a7887b10626fde2a67e382372e5",
+        "6ba012f4f7a2c2b1c3b30b87325580cc61be886a8a0e01f70b225fb32018a2c7",
+        "6085ab84c5180bcce427c31f06fd43ed492cf2cb0b054027c64915b40f3d6ae0",
+        "e98c98bbb85e0c84c506d894c3f2afc3bf4d4b38e8c27d34ff47f53d623a0c1d",
+        "e0d00496b092c5614ec8f23dce6baf0ba1fa06982a40e1930dce31da4675540b",
+        "fda6e3694d1ed89727109a4c1c1f2e1aa282361f5f37f2e878babce5773e2538",
+        "c0a22b1106ad977aa805d22dc86d9acd81cf1c8f5386863d2b0d5515c87a8422"
       ],
       "input_frame_clock_ms": [
         1000,
@@ -1807,8 +1812,8 @@
     {
       "file": "media/coins.webp",
       "kind": "Current coin-fountain excerpt; no threshold inference",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -1999,8 +2004,8 @@
     {
       "file": "media/counter.webp",
       "kind": "Four-second calm counter rim",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -2119,8 +2124,8 @@
     {
       "file": "media/multiplied-mini101.webp",
       "kind": "Current Triple Mini same-cell repeated pickups; stable filename",
-      "source_version": "0.2.110",
-      "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
       "dimensions": [
         720,
         405
@@ -2277,6 +2282,240 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true
+    },
+    {
+      "file": "media/jackpots.png",
+      "kind": "Actual Main/UI live-session page: jackpots",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "18c38af4d16940ecb7a3c046734405be16b62b0bea06440e7e65ae9deb18acbc",
+      "bytes": 33819,
+      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "actual-main-panels210"
+      ],
+      "input_frame_rgb565_sha256": [
+        "7d42085052f3a175503e753477b14cb68af28c34c39185e405138d0e10b07064"
+      ],
+      "input_frame_clock_ms": [
+        1190
+      ],
+      "profiles": [
+        {
+          "denomination_minor": 1,
+          "lines": 50,
+          "multiplier": 10
+        }
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "custom_jackpot_mask": 0
+    },
+    {
+      "file": "media/game-values.png",
+      "kind": "Actual Main/UI live-session page: Counter & Jackpots parent",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "1439531d443f6338b5847523ad2c2d3167d8881b0508c51cfd91ab04672f0fd9",
+      "bytes": 14734,
+      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "actual-main-panels210"
+      ],
+      "input_frame_rgb565_sha256": [
+        "e6b82991566d9d467219d7046ff3231956a5b9daf063f3234053d54da53c8ae2"
+      ],
+      "input_frame_clock_ms": [
+        1454
+      ],
+      "profiles": [
+        {
+          "denomination_minor": 1,
+          "lines": 50,
+          "multiplier": 10
+        }
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "custom_jackpot_mask": 0
+    },
+    {
+      "file": "media/counter-editor.png",
+      "kind": "Actual Main/UI live-session page: counter-editor",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "86e98e9a5993def39b73a226f337cc9495557191fb2f871772c06405fb310049",
+      "bytes": 12459,
+      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "actual-main-panels210"
+      ],
+      "input_frame_rgb565_sha256": [
+        "ff996f7eb54f44feab5d1393e791cf7a481d2af1b631086d2d08b591bcc1e85e"
+      ],
+      "input_frame_clock_ms": [
+        2334
+      ],
+      "profiles": [
+        {
+          "denomination_minor": 1,
+          "lines": 50,
+          "multiplier": 10
+        }
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "custom_jackpot_mask": 0
+    },
+    {
+      "file": "media/jackpot-values.png",
+      "kind": "Actual Main/UI live-session page: jackpot-values",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "8dc6bbcc624b77b6a7d64e54008dac2c2d61b2ed42632c3727af66a1c01a5a5f",
+      "bytes": 14643,
+      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "actual-main-panels210"
+      ],
+      "input_frame_rgb565_sha256": [
+        "b40fe2b121fa3ff32ee083a26769c757744507b92bc1135178c5fb73a3738da7"
+      ],
+      "input_frame_clock_ms": [
+        2686
+      ],
+      "profiles": [
+        {
+          "denomination_minor": 1,
+          "lines": 50,
+          "multiplier": 10
+        }
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "custom_jackpot_mask": 0
+    },
+    {
+      "file": "media/jackpot-editor.png",
+      "kind": "Actual Main/UI live-session page: jackpot-editor",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "d47627af9fd16a5a3fdc69d5478c5f8ffd29d63fb7b2a0ad28a4189a681e31e3",
+      "bytes": 13646,
+      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "actual-main-panels210"
+      ],
+      "input_frame_rgb565_sha256": [
+        "ffb6042a94ecf3109e0254fd65dc816ed657f25da43989e91ac9313b1a3c82b7"
+      ],
+      "input_frame_clock_ms": [
+        4006
+      ],
+      "profiles": [
+        {
+          "denomination_minor": 1,
+          "lines": 50,
+          "multiplier": 10
+        }
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "custom_jackpot_mask": 0
+    },
+    {
+      "file": "media/jackpots-custom.png",
+      "kind": "Actual Main/UI live-session page: jackpots-custom",
+      "source_version": "0.2.120",
+      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "3c0b63786f19f93016ad34b8b9d3d4a452929e78f8c4fbd4578e6595d9f87540",
+      "bytes": 34197,
+      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "actual-main-panels210"
+      ],
+      "input_frame_rgb565_sha256": [
+        "32a6f00e6bc2f8a3732a30b1d05a74d27077d6014ed1381f0614e4b2a9588e47"
+      ],
+      "input_frame_clock_ms": [
+        4240
+      ],
+      "profiles": [
+        {
+          "denomination_minor": 1,
+          "lines": 50,
+          "multiplier": 10
+        }
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "custom_jackpot_mask": 4
     }
   ],
   "publication_enlargement": {
@@ -2290,8 +2529,32 @@
       720,
       405
     ],
-    "renderer_version_retained": "0.2.110",
+    "renderer_version_retained": "0.2.120",
     "game_clock_or_renderer_changes": false
   },
-  "animation_encoding": "Lossless animated WebP; all logical RGB frames and durations checked."
+  "animation_encoding": "Lossless animated WebP; all logical RGB frames and durations checked.",
+  "source_acceptance": {
+    "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+    "family": "018e98afb631925eeec261655f7056d03d2128cb1a3ef615769f30217dcea6f6",
+    "receipt_sha256": "0642d0d0fcbd2c215617cb81fb38fc2701eef603bfb08de1eee5043d7ecf626a",
+    "all167source_files_match_accepted_source": true
+  },
+  "actualMainEditorAndBoardCaptures": {
+    "status": "PASS_ACTUAL_MAIN_CURRENT_PANELS",
+    "version": "0.2.120",
+    "pictures": 6,
+    "counter": 1800,
+    "major_minor": 57204,
+    "custom_mask": 4,
+    "atlas_frames": 60,
+    "alpha_ready": true,
+    "fresh_session": true,
+    "actual_UI_edits": true,
+    "capture_entropy_calls": 0,
+    "administrative_entropy_captures": 1,
+    "sourceAggregateSHA256": "2f81f0a3147e78785a629563b22887c3e80a4596c3f3e8e74a9ef2ad3cab64d6",
+    "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+    "sourceBeforeAfterExact": true,
+    "qualificationOverrides": []
+  }
 }

@@ -9,6 +9,7 @@
 #include <memory>
 #include <new>
 #include "phoenix_random.h"
+#include "prize_amount190.h"
 
 // Independent, offline recreation of the documented Phoenix Link presentation.
 // ALL probabilities, reel weights, line paths and payouts below are LOCAL model
@@ -31,9 +32,10 @@ enum CapacityFaultBit : uint32_t {
   CapacityGrandAwards=1u<<6, CapacityPaidHits=1u<<7, CapacityMeterAwards=1u<<8,
   CapacityLifetimeStaked=1u<<9, CapacityPaidRounds=1u<<10, CapacityRounds=1u<<11,
   CapacityFreeSpins=1u<<12, CapacityFreeAwards=1u<<13,
-  CapacityLuckyAttempts=1u<<14, CapacityLuckyWins=1u<<15
+  CapacityLuckyAttempts=1u<<14, CapacityLuckyWins=1u<<15,
+  CapacityMeterQueue=1u<<16, CapacityAmount=1u<<17
 };
-constexpr uint32_t kCapacityKnownFaults=0xffffu;
+constexpr uint32_t kCapacityKnownFaults=0x3ffffu;
 
 constexpr size_t kColumns = 5, kRows = 3, kCells = 15, kMaxLines = 100;
 constexpr size_t cellIndex(size_t column, size_t row) { return column * kRows + row; }
@@ -43,14 +45,15 @@ struct Cell {
   PrizeKind kind = PrizeKind::Credits;
   uint8_t multiplier = 1;
   bool highlight = false;
-  // A Phoenix's unmultiplied credit value. For named prizes this is the locked
-  // jackpot value at landing. Ordinary symbols always carry zero prize.
+  // Explicit unmultiplied payload. Generated numeric/default named prizes
+  // remain Credits; an explicitly supplied named amount may be ExactMinor.
+  money::Unit prizeUnit = money::Unit::Credits;
   int64_t prize = 0;
 };
 
 namespace local {
 // Version identifies this local, deliberately approximate math configuration.
-constexpr uint32_t modelId = 0x00020013u;
+constexpr uint32_t modelId = 0x00020017u;
 // Historical price-version identifiers for analytic/reference includes only.
 // No backward-compatible game restore or saved-bank import is implemented.
 constexpr uint32_t previousGPriceModelId = 0x00020010u;
@@ -341,6 +344,8 @@ constexpr int64_t observed25c15MiniCredits=700,observed25c15MinorCredits=3500;
 // YfbaaFXhln0 1665/1680.6s: 50c,25lines,multiplier1 ($12.50 bet).
 // Mini$500/Minor$2500; one recorded cabinet, not a universal wager ladder.
 constexpr int64_t observed50c25x1MiniCredits=1000,observed50c25x1MinorCredits=5000;
+// Direct3pfBase1c/50/M10 TripleMini steps; cross-mode fixed-tier use is an architectural inference.
+constexpr int64_t observed1c50x10MiniCredits=1000;
 
 // Documented feature rules, plus explicitly named LOCAL fallbacks where no
 // target help-screen confirmation has yet been recovered.
@@ -419,11 +424,12 @@ struct Statistics {
 struct MeterBank { uint16_t counter = 0, threshold = 0; };
 struct State {
   Cell cells[kCells], holdCells[kCells];
-  // All amounts named balance/win/*Minor are integer US cents. Cell.prize,
-  // jackpotCoins and betCoins are integer credits (one credit = coinValue cents).
+  // Balance/win/*Minor are integer US cents. BetCoins are integer credits.
+  // Each Cell/cache prize payload has an explicit unit; no magnitude inference.
   int64_t balance = local::newBankMinor, win = 0, featureWin = 0, roundPayout = 0;
   int64_t coinValue = 100, betCoins = 10;
-  int64_t jackpotCoins[4] = {80,200,2000,20000};  // Mini, Minor, Major, Grand.
+  int64_t jackpotCoins[4] = {80,200,2000,20000};  // payloads: Mini, Minor, Major, Grand.
+  money::Unit jackpotUnits[4] = {}; // Credits unless explicitly supplied.
   uint64_t rounds = 0, actions = 0;
   uint16_t freeLeft = 0, freePlayed = 0, meter = 0, meterThreshold = 300;
   MeterBank meterBanks[local::meterBucketCount];
@@ -435,6 +441,8 @@ struct State {
   uint16_t pendingMeterHolds = 0;
   PrizeCapProfile prizeCapProfile = local::defaultPrizeCapProfile;
   Statistics stats;
+  bool practiceState = false; // audit history only; no separate game mode.
+  uint8_t customJackpotMask = 0; // explicit absolute-minor overrides, low4 bits.
 };
 
 // An action computes its final board ONCE. The renderer animates these copies
@@ -462,6 +470,7 @@ struct Presentation {
   uint16_t expandedMask = 0;  // exact Wild cells that join, two or three per reel.
   int64_t balanceBefore = 0, balanceAfter = 0, stakeMinor = 0;
   int64_t lineWinMinor = 0, scatterWinMinor = 0, holdWinMinor = 0, phoenixWinMinor = 0, actionWinMinor = 0;
+  int64_t grandWinMinor = 0; // committed component, not a future cache lookup.
   uint64_t actionNumber = 0;
   LineWin lineWins[kMaxLines];
 };
@@ -490,6 +499,45 @@ class Engine {
     return ok;
   }
   bool newBank() { return service_ && initializeFresh(*service_, 1000); }
+  static constexpr int64_t maximumCustomJackpotMinor=local::maximumCreditPrize;
+  bool practiceState() const { return state.practiceState; }
+  uint8_t customJackpotMask() const { return state.customJackpotMask; }
+  bool hasCustomJackpots() const { return state.customJackpotMask!=0; }
+  bool isCustomJackpot(unsigned tier) const { return tier<4&&(state.customJackpotMask&uint8_t(1u<<tier)); }
+  bool canEditManualSettings() const {
+    return !transactionActive_&&randomHealthy()&&!capacityBlocked()&&state.mode==Mode::Base&&!state.roundOpen&&
+      !state.freeSession&&!state.freeLeft&&!state.respinsLeft&&!state.pendingMeterHolds&&validState(state);
+  }
+  // Same-value input is an exact no-op, never a hidden threshold reroll.
+  bool setPracticeMeter(uint16_t counter) {
+    if(counter>=local::meterThresholdMaximum||!canEditManualSettings())return false;
+    if(counter==state.meter)return true;
+    return transact([counter](Engine& work){
+      work.state.meter=counter;work.state.meterThreshold=work.nextMeterThreshold(counter);
+      work.syncMeterBucket();work.state.practiceState=true;return true;
+    });
+  }
+  // Current bucket only. A new default-prior sample is still an administrative
+  // intervention; the audit marker stays set until a fresh session.
+  bool resetPracticeMeter() {
+    if(!canEditManualSettings())return false;
+    return transact([](Engine& work){work.resetActiveMeter();work.state.practiceState=true;return true;});
+  }
+  // Explicit user prices; no random draw or automatic return compensation.
+  // The global minor ceiling fits the old prize bound at every denomination.
+  bool setCustomJackpotMinor(unsigned tier,int64_t minor) {
+    if(tier>=4||minor<1||minor>maximumCustomJackpotMinor||!canEditManualSettings())return false;
+    if(isCustomJackpot(tier)&&state.jackpotCoins[tier]==minor&&state.jackpotUnits[tier]==money::Unit::ExactMinor)return true;
+    state.jackpotCoins[tier]=minor;state.jackpotUnits[tier]=money::Unit::ExactMinor;
+    state.customJackpotMask|=uint8_t(1u<<tier);state.practiceState=true;return true;
+  }
+  // Reapply the selected preset Grand through the UI's existing static-Grand
+  // helper after this succeeds. Historical audit state does not lock presets.
+  bool clearCustomJackpots() {
+    if(!canEditManualSettings())return false;
+    if(!hasCustomJackpots())return true;
+    state.customJackpotMask=0;setJackpots();return true;
+  }
   bool randomHealthy() const { return initialized_ && service_ && service_->healthy(); }
   random::Fault randomFault() const {
     return service_ ? service_->fault() : random::Fault::NotInitialized;
@@ -596,24 +644,47 @@ class Engine {
     }
     return best;
   }
-  static int64_t cellCredits(const Cell& cell) {
-    if (cell.symbol != Symbol::Phoenix) return 0;
-    const uint8_t multiplier = cell.kind != PrizeKind::Credits || local::jackpotMultiplierAppliesToCredits ? cell.multiplier : 1;
-    return cell.prize * multiplier;
+  static bool cellBaseAmountMinor(const Cell& cell,int64_t denomination,int64_t& out) {
+    if (!validCell(cell,denomination)) return false;
+    return money::toMinor({cell.prize,cell.prizeUnit},denomination,1,out);
   }
-  int64_t jackpotValueCoins(unsigned tier) const {
-    if(tier>=4)return 0;
+  static bool cellAmountMinor(const Cell& cell,int64_t denomination,int64_t& out) {
+    if (!validCell(cell,denomination)) return false;
+    return money::toMinor({cell.prize,cell.prizeUnit},denomination,
+                         cell.symbol==Symbol::Phoenix ? cell.multiplier : 1,out);
+  }
+  static bool setCellAmount(Cell& cell,money::Amount amount,int64_t denomination) {
+    Cell proposed=cell;proposed.prize=amount.value;proposed.prizeUnit=amount.unit;
+    if(!validCell(proposed,denomination))return false;
+    cell=proposed;return true;
+  }
+  money::Amount jackpotValueAmount(unsigned tier) const {
+    if(tier>=4)return {};
+    if(isCustomJackpot(tier))return {state.jackpotCoins[tier],state.jackpotUnits[tier]};
+    if(tier==0&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==10)return {local::observed1c50x10MiniCredits,money::Unit::Credits};
     if(state.coinValue==25&&state.lineCount==15){
-      if(tier==0)return local::observed25c15MiniCredits;
-      if(tier==1)return local::observed25c15MinorCredits;
+      if(tier==0)return {local::observed25c15MiniCredits,money::Unit::Credits};
+      if(tier==1)return {local::observed25c15MinorCredits,money::Unit::Credits};
     }
-    // Resolve observed profile-specific future landings without rewriting
-    // any current-session committed cache or Cell.
     if(state.coinValue==50&&state.lineCount==25&&state.betMultiplier==1){
-      if(tier==0)return local::observed50c25x1MiniCredits;
-      if(tier==1)return local::observed50c25x1MinorCredits;
+      if(tier==0)return {local::observed50c25x1MiniCredits,money::Unit::Credits};
+      if(tier==1)return {local::observed50c25x1MinorCredits,money::Unit::Credits};
     }
-    return state.jackpotCoins[tier];
+    return {state.jackpotCoins[tier],state.jackpotUnits[tier]};
+  }
+  bool jackpotAmountMinor(unsigned tier,int64_t& out) const {
+    if(tier>=4||!validAmount({state.jackpotCoins[tier],state.jackpotUnits[tier]},state.coinValue))return false;
+    return money::toMinor({state.jackpotCoins[tier],state.jackpotUnits[tier]},state.coinValue,1,out);
+  }
+  // Explicit future input, independent of a progressive distribution. Never
+  // rewrites an owed Cell; no entropy/debit. Fixed observed overrides stay fixed.
+  bool setJackpotMinor(unsigned tier,int64_t minor) {
+    if(!randomHealthy()||!canChangeBet()||tier>=4||isCustomJackpot(tier)||
+       (tier==0&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==10)||
+       (tier<2&&((state.coinValue==25&&state.lineCount==15)||
+        (state.coinValue==50&&state.lineCount==25&&state.betMultiplier==1)))||
+       !validAmount({minor,money::Unit::ExactMinor},state.coinValue))return false;
+    state.jackpotCoins[tier]=minor;state.jackpotUnits[tier]=money::Unit::ExactMinor;return true;
   }
   static uint16_t phoenixMask(const Cell* cells) {
     uint16_t mask = 0;
@@ -632,7 +703,9 @@ class Engine {
     uint8_t buffer[kSaveCapacity] = {};
     Writer out(buffer, sizeof(buffer));
     out.u32(0x46434c50u);  // "PLCF", independent Phoenix Confucius bank.
-    out.u16(5); out.u16(16); out.u32(0); out.u32(local::modelId);
+    out.u16(0x200); out.u16(16); out.u32(0); out.u32(local::modelId);
+    // Private200 diagnostic marker only. Root assigns final schema/model;
+    // no saved-game import is supported.
     writeState(out, state); // no RNG state or unread output is exported
     const size_t length = out.position + 4;
     if (!out.good || length > sizeof(buffer)) return 0;
@@ -679,6 +752,7 @@ class Engine {
   random::Service* service_ = nullptr;
   random::Draws rng_;
   bool initialized_ = false;
+  bool transactionActive_ = false; // game-thread admission only, no RNG data.
 
   void freshState(int64_t credits) {
     state = State{}; presentation = Presentation{}; capacityFaults_ = 0;
@@ -712,6 +786,7 @@ class Engine {
     // stack. No secret state is copied: only a handle to the external service.
     std::unique_ptr<Engine> work(new (std::nothrow) Engine(*this));
     if (!work) { service_->latchFault(random::Fault::Allocation); return false; }
+    struct Scope { bool& active;bool prior;Scope(bool& a):active(a),prior(a){active=true;}~Scope(){active=prior;} } scope(transactionActive_);
     if (!service_->beginAction()) return false;
     const bool applied = operation(*work);
     const bool healthy = service_->healthy();
@@ -744,14 +819,14 @@ class Engine {
   }
   static void writeCell(Writer& out, const Cell& cell) {
     out.u8(uint8_t(cell.symbol)); out.u8(uint8_t(cell.kind)); out.u8(cell.multiplier);
-    out.u8(cell.highlight ? 1 : 0); out.i64(cell.prize);
+    out.u8(cell.highlight ? 1 : 0); out.u8(uint8_t(cell.prizeUnit)); out.i64(cell.prize);
   }
   static void writeState(Writer& out, const State& s) {
     for (const Cell& c : s.cells) writeCell(out, c);
     for (const Cell& c : s.holdCells) writeCell(out, c);
     out.i64(s.balance); out.i64(s.win); out.i64(s.featureWin); out.i64(s.roundPayout);
     out.i64(s.coinValue); out.i64(s.betCoins);
-    for (int64_t jackpot : s.jackpotCoins) out.i64(jackpot);
+    for (unsigned i=0;i<4;++i) { out.u8(uint8_t(s.jackpotUnits[i])); out.i64(s.jackpotCoins[i]); }
     out.u64(s.rounds); out.u64(s.actions);
     out.u16(s.freeLeft); out.u16(s.freePlayed); out.u16(s.meter); out.u16(s.meterThreshold);
     for (const MeterBank& bank : s.meterBanks) { out.u16(bank.counter); out.u16(bank.threshold); }
@@ -763,6 +838,7 @@ class Engine {
     out.u64(t.paidRounds); out.u64(t.paidHits); out.u64(t.freeAwards); out.u64(t.freeSpins);
     out.u64(t.holdAwards); out.u64(t.meterAwards); out.u64(t.grandAwards); out.u64(t.stakedMinor); out.u64(t.paidMinor);
     out.u64(t.luckyAttempts); out.u64(t.luckyWins);
+    out.u8(s.practiceState?1:0);out.u8(s.customJackpotMask);
   }
   static bool validWager(int64_t denomination, uint8_t lines, uint8_t multiplier) {
     bool validDenomination = false;
@@ -779,12 +855,34 @@ class Engine {
     for (size_t i = 0; i < local::meterBetCount; ++i) if (local::meterBetCredits[i] == s.betCoins) bet = i;
     return denomination * local::meterBetCount + bet;
   }
-  static bool validCell(const Cell& c) {
-    if (uint8_t(c.symbol) >= uint8_t(Symbol::Count) || uint8_t(c.kind) > uint8_t(PrizeKind::Major) || c.multiplier < 1 || c.multiplier > 3) return false;
-    if (c.prize < 0 || c.prize > local::maximumCreditPrize) return false;
-    return c.symbol == Symbol::Phoenix ? c.prize > 0 && (c.kind != PrizeKind::Credits || c.multiplier == 1) : c.prize == 0 && c.kind == PrizeKind::Credits && c.multiplier == 1;
+  static bool validAmount(money::Amount amount,int64_t denomination) {
+    if(!money::known(amount.unit)||amount.value<=0||denomination<=0)return false;
+    int64_t ceiling=0;
+    if(!money::multiply(local::maximumCreditPrize,uint64_t(denomination),ceiling))return false;
+    return amount.unit==money::Unit::Credits ? amount.value<=local::maximumCreditPrize : amount.value<=ceiling;
+  }
+  static bool validCell(const Cell& c,int64_t denomination) {
+    if(uint8_t(c.symbol)>=uint8_t(Symbol::Count)||uint8_t(c.kind)>uint8_t(PrizeKind::Major)||c.multiplier<1||c.multiplier>3)return false;
+    if(c.symbol!=Symbol::Phoenix)return c.prize==0&&c.prizeUnit==money::Unit::Credits&&c.kind==PrizeKind::Credits&&c.multiplier==1;
+    if(c.kind==PrizeKind::Credits&&(c.prizeUnit!=money::Unit::Credits||c.multiplier!=1))return false;
+    return validAmount({c.prize,c.prizeUnit},denomination);
+  }
+  static bool validCustomJackpots(const State& s) {
+    if(s.customJackpotMask&0xf0u)return false;
+    if(s.customJackpotMask&&!s.practiceState)return false;
+    for(unsigned i=0;i<4;++i)if(s.customJackpotMask&uint8_t(1u<<i))
+      if(s.jackpotUnits[i]!=money::Unit::ExactMinor||s.jackpotCoins[i]<1||s.jackpotCoins[i]>maximumCustomJackpotMinor)return false;
+    return true;
+  }
+  bool validAmounts() const {
+    if(!validCustomJackpots(state))return false;
+    for(unsigned i=0;i<4;++i)if(!validAmount({state.jackpotCoins[i],state.jackpotUnits[i]},state.coinValue))return false;
+    for(const auto& c:state.cells)if(!validCell(c,state.coinValue))return false;
+    for(const auto& c:state.holdCells)if(!validCell(c,state.coinValue))return false;
+    return true;
   }
   static bool validState(const State& s) {
+    if(!validCustomJackpots(s))return false;
     if (!validWager(s.coinValue, s.lineCount, s.betMultiplier) || s.betCoins != int64_t(s.lineCount) * s.betMultiplier) return false;
     if (s.wagerIndex != 255 && s.wagerIndex >= wagerCount()) return false;
     if (s.wagerIndex != 255) {
@@ -793,7 +891,7 @@ class Engine {
     }
     const int64_t amounts[] = {s.balance,s.win,s.featureWin,s.roundPayout};
     for (int64_t value : amounts) if (value < 0 || value > local::maximumStoredMinor) return false;
-    for (int64_t value : s.jackpotCoins) if (value <= 0 || value > local::maximumCreditPrize) return false;
+    for (unsigned i=0;i<4;++i) if (!validAmount({s.jackpotCoins[i],s.jackpotUnits[i]},s.coinValue)) return false;
     if (s.meterThreshold < local::meterThresholdMinimum || s.meterThreshold > local::meterThresholdMaximum || s.meter >= s.meterThreshold) return false;
     for (const MeterBank& bank : s.meterBanks) {
       if (!bank.threshold) { if (bank.counter) return false; }
@@ -811,16 +909,26 @@ class Engine {
     if (s.freeLeft && !s.freeSession) return false;
     if (s.pendingMeterHolds && s.mode != Mode::Hold) return false;
     if (uint8_t(s.prizeCapProfile) > uint8_t(PrizeCapProfile::NamedOrHighCash) || s.stats.luckyWins > s.stats.luckyAttempts) return false;
-    for (const Cell& c : s.cells) if (!validCell(c)) return false;
-    for (const Cell& c : s.holdCells) if (!validCell(c)) return false;
+    for (const Cell& c : s.cells) if (!validCell(c,s.coinValue)) return false;
+    for (const Cell& c : s.holdCells) if (!validCell(c,s.coinValue)) return false;
     return true;
   }
   static void copyCells(Cell* destination, const Cell* source) { std::memcpy(destination, source, sizeof(Cell) * kCells); }
 
   void setJackpots() {
-    for (size_t i = 0; i < 4; ++i) state.jackpotCoins[i] = local::jackpotBaseCoins[i] * (local::jackpotScaleWithBetMultiplier ? state.betMultiplier : 1);
-    if(state.coinValue==25&&state.lineCount==15){state.jackpotCoins[0]=local::observed25c15MiniCredits;state.jackpotCoins[1]=local::observed25c15MinorCredits;}
-    if(state.coinValue==50&&state.lineCount==25&&state.betMultiplier==1){state.jackpotCoins[0]=local::observed50c25x1MiniCredits;state.jackpotCoins[1]=local::observed50c25x1MinorCredits;}
+    for(size_t i=0;i<4;++i)if(!isCustomJackpot(unsigned(i))){
+      state.jackpotUnits[i]=money::Unit::Credits;
+      state.jackpotCoins[i]=local::jackpotBaseCoins[i]*(local::jackpotScaleWithBetMultiplier?state.betMultiplier:1);
+    }
+    if(!isCustomJackpot(0)&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==10)state.jackpotCoins[0]=local::observed1c50x10MiniCredits;
+    if(state.coinValue==25&&state.lineCount==15){
+      if(!isCustomJackpot(0))state.jackpotCoins[0]=local::observed25c15MiniCredits;
+      if(!isCustomJackpot(1))state.jackpotCoins[1]=local::observed25c15MinorCredits;
+    }
+    if(state.coinValue==50&&state.lineCount==25&&state.betMultiplier==1){
+      if(!isCustomJackpot(0))state.jackpotCoins[0]=local::observed50c25x1MiniCredits;
+      if(!isCustomJackpot(1))state.jackpotCoins[1]=local::observed50c25x1MinorCredits;
+    }
   }
   uint16_t nextMeterThreshold(uint16_t after) {
     return uint16_t(after + 1 + rng_.bounded(local::meterThresholdMaximum - after));
@@ -849,7 +957,7 @@ class Engine {
     return uint32_t(N - 1);
   }
   bool highCash(const Cell& cell) const {
-    return cell.symbol == Symbol::Phoenix && cell.kind == PrizeKind::Credits && cell.prize >= 200 * state.betCoins;
+    return cell.symbol == Symbol::Phoenix && cell.kind == PrizeKind::Credits && cell.prizeUnit == money::Unit::Credits && cell.prize >= 200 * state.betCoins;
   }
   Cell phoenixCell(const Cell* existing) {
     Cell result; result.symbol = Symbol::Phoenix;
@@ -879,7 +987,8 @@ class Engine {
     } else {
       // Named values lock at landing and are never paid again by animation.
       // Resolve the configured profile-specific Mini/Minor unit amount here.
-      result.prize = jackpotValueCoins(uint8_t(result.kind) - 1);
+      const auto amount=jackpotValueAmount(uint8_t(result.kind)-1);
+      result.prize=amount.value;result.prizeUnit=amount.unit;
       const uint32_t multiplierRoll = rng_.bounded(10000);
       result.multiplier = multiplierRoll < local::tripleChance ? 3 : multiplierRoll < local::tripleChance + local::doubleChance ? 2 : 1;
     }
@@ -963,11 +1072,27 @@ class Engine {
       }
     }
   }
-  void pay(int64_t credits, bool feature) {
-    const int64_t minor = credits * state.coinValue;
-    state.balance += minor; state.win += minor; state.roundPayout += minor;
-    if (feature || state.freeSession) state.featureWin += minor;
-    state.stats.paidMinor += uint64_t(minor);
+  bool amountFailure() { capacityFaults_ |= CapacityAmount; return false; }
+  bool payMinor(int64_t minor,bool feature) {
+    const bool countsFeature=feature||state.freeSession;
+    if(!storedAddFits(state.balance,minor)||!storedAddFits(state.win,minor)||
+       !storedAddFits(state.roundPayout,minor)||(countsFeature&&!storedAddFits(state.featureWin,minor))||
+       !counterAddFits(state.stats.paidMinor,uint64_t(minor)))return amountFailure();
+    state.balance+=minor;state.win+=minor;state.roundPayout+=minor;
+    if(countsFeature)state.featureWin+=minor;
+    state.stats.paidMinor+=uint64_t(minor);return true;
+  }
+  bool payCredits(int64_t credits,bool feature) {
+    int64_t minor=0;
+    if(!money::toMinor({credits,money::Unit::Credits},state.coinValue,1,minor))return amountFailure();
+    return payMinor(minor,feature);
+  }
+  bool sumCellAmounts(const Cell* cells,bool withGrand,int64_t& total,int64_t& grand) {
+    total=grand=0;
+    for(unsigned i=0;i<kCells;++i){int64_t minor=0;
+      if(!cellAmountMinor(cells[i],state.coinValue,minor)||!money::add(total,minor,total))return amountFailure();}
+    if(withGrand&&(!jackpotAmountMinor(3,grand)||!money::add(total,grand,total)))return amountFailure();
+    return true;
   }
   static bool storedAddFits(int64_t value, int64_t added) {
     return value >= 0 && added >= 0 && value <= local::maximumStoredMinor - added;
@@ -980,7 +1105,9 @@ class Engine {
     // At most one15-cell Phoenix/Grand collection can settle in one action.
     // Queued Holds start empty; later actions collect them independently.
     // Three is the largest valid named multiplier, for current-session prizes.
-    int64_t credits = int64_t(kCells) * local::maximumCreditPrize * 3 + state.jackpotCoins[3];
+    if(!validAmounts())return -1;
+    int64_t grand=0;if(!jackpotAmountMinor(3,grand))return -1;
+    int64_t credits = int64_t(kCells) * local::maximumCreditPrize * 3;
     if (before != Mode::Hold) {
       const bool free = before == Mode::Free;
       uint16_t maxLine = 0;
@@ -993,13 +1120,31 @@ class Engine {
       uint8_t maxScatter = 0; for (uint8_t value : scatters) if (value > maxScatter) maxScatter = value;
       credits += state.betCoins * maxScatter;
     }
-    return credits * state.coinValue;
+    int64_t minor=0,total=0;
+    if(!money::toMinor({credits,money::Unit::Credits},state.coinValue,1,minor)||!money::add(minor,grand,total))return -1;
+    return total;
+  }
+  unsigned maximumNewMeterJobs(Mode before) const {
+    // Bound the peak queue before a completed Hold can dequeue its successor.
+    // Each vacant Hold cell can arrive once; Base/Free can show at most15.
+    // The first award requires the current meter gap. Every later reset has
+    // a strictly positive gap, so no later tick can award more than one job.
+    unsigned ticks = unsigned(kCells);
+    if (before == Mode::Hold) ticks = local::meterCountsHoldLandings
+        ? unsigned(kCells) - countMask(phoenixMask(state.holdCells)) : 0;
+    static_assert(!local::meterCountsPhoenixMultiplier, "requalify queue headroom for multiplier ticks");
+    const unsigned gap = state.meterThreshold > state.meter
+        ? unsigned(state.meterThreshold - state.meter) : 1;
+    return ticks >= gap ? ticks - gap + 1 : 0;
   }
   uint32_t actionCapacityFaults(Mode before, int64_t stake, bool lucky = false) const {
     // This outcome-independent preflight runs before RNG, stake or partial pay.
     // All bit meanings are stable caller/service diagnostics, not saved math.
     uint32_t faults=0;
+    if (uint32_t(state.pendingMeterHolds) + maximumNewMeterJobs(before) > local::maximumPendingMeterHolds)
+      faults |= CapacityMeterQueue;
     const int64_t award = maximumActionAwardMinor(before);
+    if(award<0)return faults|CapacityAmount;
     const int64_t balanceAfterStake = state.balance - (before == Mode::Base ? stake : 0);
     if (!storedAddFits(balanceAfterStake,award)) faults|=CapacityBalance;
     if (before != Mode::Base && !storedAddFits(state.roundPayout,award)) faults|=CapacityRoundPayout;
@@ -1044,7 +1189,10 @@ class Engine {
   }
   void queueMeterHolds(uint16_t count) {
     const uint32_t total = uint32_t(state.pendingMeterHolds) + count;
-    state.pendingMeterHolds = uint16_t(total > local::maximumPendingMeterHolds ? local::maximumPendingMeterHolds : total);
+    // Admission reserves this space before entropy or stake. Keep the checked
+    // add as a defensive transaction fault if that bound is ever invalidated.
+    if (total > local::maximumPendingMeterHolds) { capacityFaults_ |= CapacityMeterQueue; return; }
+    state.pendingMeterHolds = uint16_t(total);
   }
   void enterHold(bool meterTriggered, bool chained = false) {
     for (size_t i = 0; i < kCells; ++i) state.holdCells[i] = state.cells[i].symbol == Symbol::Phoenix ? state.cells[i] : Cell{};
@@ -1091,7 +1239,7 @@ class Engine {
       if (win.credits) {
         presentation.lineWins[presentation.lineWinCount++] = win;
         presentation.winMask |= win.mask; presentation.lineWinMinor += win.credits * state.coinValue;
-        pay(win.credits, free);
+        if(!payCredits(win.credits,free))return;
       }
     }
     // A win using one face must not turn its unawarded neighbours into a
@@ -1112,7 +1260,7 @@ class Engine {
     const uint8_t scatterIndex = presentation.scatterCount < 5 ? presentation.scatterCount : 5;
     const int64_t scatterCredits = state.betCoins * (free ? local::freeScatterBetMultipliers[scatterIndex] : local::baseScatterBetMultipliers[scatterIndex]);
     if (scatterCredits) {
-      pay(scatterCredits, free);
+      if(!payCredits(scatterCredits,free))return;
       presentation.scatterWinMinor = scatterCredits * state.coinValue;
       presentation.winMask |= presentation.scatterMask;
       for (size_t i = 0; i < kCells; ++i) if (presentation.scatterMask & uint16_t(1u << i)) state.cells[i].highlight = true;
@@ -1137,9 +1285,9 @@ class Engine {
       // The operator's15-Phoenix rule pays Grand AND every Phoenix directly;
       // it does not enter an artificial Hold. The general15-symbol rule is
       // also used for a Free result; no original Free15 exception is published.
-      int64_t credits = state.jackpotCoins[3];
-      for (const Cell& cell : state.cells) credits += cellCredits(cell);
-      pay(credits,true); presentation.phoenixWinMinor = credits * state.coinValue;
+      int64_t minor=0,grand=0;
+      if(!sumCellAmounts(state.cells,true,minor,grand)||!payMinor(minor,true))return;
+      presentation.phoenixWinMinor=minor;presentation.grandWinMinor=grand;
       presentation.grandAwarded = state.grandAwarded = true; ++state.stats.grandAwards;
       if (!startQueuedHold()) finishRoundIfComplete();
     } else if (naturalHold || presentation.meterTriggered) enterHold(!naturalHold);
@@ -1153,14 +1301,13 @@ class Engine {
     return true;
   }
   void finishHold() {
-    int64_t credits = 0;
-    for (const Cell& cell : state.holdCells) credits += cellCredits(cell);
-    if (local::fullBoardAwardsGrand && phoenixMask(state.holdCells) == 0x7fff) {
-      credits += state.jackpotCoins[3]; state.grandAwarded = true;
-      presentation.grandAwarded = true; ++state.stats.grandAwards;
-    }
-    pay(credits, true); presentation.phoenixWinMinor = presentation.holdWinMinor = credits * state.coinValue;
-    presentation.holdSettled = true; state.respinsLeft = 0;
+    const bool full=local::fullBoardAwardsGrand&&phoenixMask(state.holdCells)==0x7fff;
+    int64_t minor=0,grand=0;
+    if(!sumCellAmounts(state.holdCells,full,minor,grand)||!payMinor(minor,true))return;
+    if(full){state.grandAwarded=true;presentation.grandAwarded=true;++state.stats.grandAwards;}
+    presentation.grandWinMinor=grand;
+    presentation.phoenixWinMinor=presentation.holdWinMinor=minor;
+    presentation.holdSettled=true;state.respinsLeft=0;
     // Preserve the final held cells in state and the presentation for the count
     // up, while the next action is already the correct free/base phase.
     copyCells(state.cells, state.holdCells);
@@ -1198,7 +1345,7 @@ class Engine {
     if (before == Mode::Base && state.balance < stake) return false;
     if (before == Mode::Free && !state.freeLeft) return false;
     if (before == Mode::Hold && !state.respinsLeft) return false;
-    if (scripted) for (size_t i = 0; i < kCells; ++i) if (!validCell(scripted[i])) return false;
+    if (scripted) for (size_t i = 0; i < kCells; ++i) if (!validCell(scripted[i],state.coinValue)) return false;
     if ((capacityFaults_ = actionCapacityFaults(before,stake)) != 0) return false;
     presentation.beforeMode = before; presentation.balanceBefore = state.balance;
     presentation.freeBefore = state.freeLeft; presentation.respinsBefore = state.respinsLeft; presentation.meterBefore = state.meter;
@@ -1223,12 +1370,12 @@ class Engine {
     presentation.freeAfter = state.freeLeft; presentation.respinsAfter = state.respinsLeft; presentation.meterAfter = state.meter;
     presentation.pendingHoldsAfter = state.pendingMeterHolds;
     presentation.actionWinMinor = state.win;
-    return true;
+    return capacityFaults_ == 0;
   }
   bool luckyChanceImpl(const Cell* scripted) {
     capacityFaults_ = 0;
     if (!canLuckyChance()) return false;
-    if (scripted) for (size_t i = 0; i < kCells; ++i) if (!validCell(scripted[i])) return false;
+    if (scripted) for (size_t i = 0; i < kCells; ++i) if (!validCell(scripted[i],state.coinValue)) return false;
     const int64_t remaining = state.balance;
     // Check the possible winning branch before consuming the Lucky gate draw.
     if ((capacityFaults_ = actionCapacityFaults(Mode::Base,remaining,true)) != 0) { presentation = Presentation{}; return false; }

@@ -1,7 +1,7 @@
 {
-  "source_version": "0.2.110",
-  "engine_model": "0x00020013",
-  "source_engine_sha256": "93b70039aaa3bad224f9ffb7e8ea36399234731f3f080a531e8da9df585f067a",
+  "source_version": "0.2.120",
+  "engine_model": "0x00020017",
+  "source_engine_sha256": "5fc452995bffa119c98a3d0939dfe98589ee3f11fb8939242f0480f9549f6fd6",
   "source_cabinet_profile_sha256": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
   "exporter_sha256": "2a3ee0dc7b4c4c3fa876507de5a366464c092581320ac643f5c1121140bd2c7c",
   "scope": "Current implemented local simulator lookup, not original casino PAR.600 internal profiles;55 menu offers. Source-observed price cells and local fallbacks are annotated in the Engine.178 of205 paths remain local fallbacks.",
@@ -28,6 +28,6 @@
   "status": "Current release source-synchronized implementation reference",
   "no_personal_state_or_device_identifiers": true,
   "source_qualification": "Engineering accepted source; numeric return enclosures apply only to stated ideal-uniform local-model assumptions, not actual-CSPRNG infinite-horizon return or casino calibration.",
-  "runtime_fingerprint": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
-  "mathematical_family": "9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937"
+  "runtime_fingerprint": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+  "mathematical_family": "018e98afb631925eeec261655f7056d03d2128cb1a3ef615769f30217dcea6f6"
 }

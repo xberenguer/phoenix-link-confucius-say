@@ -51,7 +51,7 @@ Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clam
 
 <img src="media/volume.png" alt="Fine-volume page, synthetic demonstration state" width="720">
 
-PLAY TEST JINGLE auditions the dedicated Wisdom entry; PLAY FEATURE MUSIC auditions the feature program; PLAY AWARD JINGLE auditions the award program. An audition is not a paid spin and must not change the meter, bank or RNG. Twin music also has a developer audition API.
+TEST FREE-GAMES INTRO auditions the Wisdom entry; TEST HOLD MUSIC auditions the Hold program; TEST AWARD JINGLE auditions the award program. An audition does not stake money or change the counter or outcome generator. Twin music also has a developer audition API.
 
 ## Bank and playback checks
 
@@ -61,6 +61,6 @@ Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free b
 
 ## Remaining work
 
-Original cue registers, all landing eligibility cases, recording-room transfer functions, exactly matched envelopes, missing source variants and perceived speaker balance remain incomplete. A low level or deliberate silence must not be “fixed” by adding an unsupported generic jingle.
+Original cue registers, all landing eligibility cases, recording-room transfer functions, exactly matched envelopes, missing source variants and perceived speaker balance remain incomplete. Some events are intentionally quiet; audible differences do not establish a missing award or a different game result.
 
 For crackle, missing music or battery resets, use [troubleshooting](troubleshooting.md#audio). The official [StickS3 hardware notes](https://docs.m5stack.com/en/core/StickS3) recommend keeping battery-powered speaker volume below 75% to reduce unexpected power-related resets.

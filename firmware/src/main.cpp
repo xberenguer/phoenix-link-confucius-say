@@ -368,6 +368,7 @@ void usbCommand(const char* command) {
   } else if(!strcmp(command,"storage_status")||!strcmp(command,"storage_retry")){
     queueUsb("{\"type\":\"storage-status\",\"policy\":\"session-only\",\"persistentGame\":false,\"retryAvailable\":false}");
   } else if(!strcmp(command,"math_status")){queueUsb(uiMathDiagnostic());
+  } else if(!strcmp(command,"jackpots")){uiJackpots();queueUsb("{\"command\":\"jackpots\",\"requested\":true}");
   } else if(!strcmp(command,"wager_menu")){uiCabinetMenu();queueUsb("{\"command\":\"wager_menu\",\"requested\":true}");
   } else if(!strcmp(command,"ckpt_begin")||!strncmp(command,"ckpt_chunk ",11)){
     queueUsb("{\"type\":\"checkpoint-export\",\"ok\":false,\"reason\":\"session-only; game import/export disabled\"}");
@@ -596,7 +597,7 @@ void loop() {
     uiFrame();serviceUsb();delay(2);return;
   }
   if (M5.BtnA.wasPressed()) { aStarted = now; aLongUsed = false; blackTap.reset(); }
-  if (M5.BtnB.wasPressed()) { bStarted = now; bLongUsed = false; }
+  if (M5.BtnB.wasPressed()) { bStarted = now; bLongUsed = false;if(uiIsGameView())uiPreparePanelInput(); }
   if (M5.BtnA.isPressed() && M5.BtnB.isPressed()) {chordSeen = true;blackTap.reset();}
   if (!chordSeen && aStarted && M5.BtnA.isPressed() && !aLongUsed && now - aStarted >= kHoldMs) {
     aLongUsed = true;
@@ -613,7 +614,7 @@ void loop() {
   }
   if (M5.BtnB.wasReleased() && bStarted && !bLongUsed && !chordSeen && now - bStarted < kHoldMs) {
     if(uiIsGameView()){
-      if(blackTap.released(now)){uiFlipScreen();saveOptions();}
+      if(blackTap.released(now)){uiJackpots();saveOptions();}
     }else {blackTap.reset();dispatchUiInput59(uiButtonB);}
   }
   // Resolve the single only after release handling. A second press, long hold,

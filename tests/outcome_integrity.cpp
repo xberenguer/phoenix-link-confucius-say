@@ -54,7 +54,7 @@ struct Coverage {
 
 static bool sameCell(const Cell&a,const Cell&b){
  return a.symbol==b.symbol&&a.kind==b.kind&&a.multiplier==b.multiplier&&
-        a.highlight==b.highlight&&a.prize==b.prize;
+        a.highlight==b.highlight&&a.prizeUnit==b.prizeUnit&&a.prize==b.prize;
 }
 static bool sameCells(const Cell*a,const Cell*b){
  for(unsigned i=0;i<kCells;++i)if(!sameCell(a[i],b[i]))return false;
@@ -90,7 +90,7 @@ static void samePresentation(const Presentation&a,const Presentation&b,const Off
  SAME(meterAfter) SAME(meterAwardsCount) SAME(meterArrivalMask) SAME(pendingHoldsBefore)
  SAME(pendingHoldsAfter) SAME(landedMask) SAME(heldMask) SAME(winMask) SAME(scatterMask)
  SAME(expandedMask) SAME(stakeMinor) SAME(lineWinMinor) SAME(scatterWinMinor)
- SAME(holdWinMinor) SAME(phoenixWinMinor) SAME(actionWinMinor)
+ SAME(holdWinMinor) SAME(phoenixWinMinor) SAME(actionWinMinor) SAME(grandWinMinor)
 #undef SAME
  CHECK(b.balanceBefore-o.bank==a.balanceBefore);
  CHECK(b.balanceAfter-o.bank==a.balanceAfter);
@@ -127,7 +127,8 @@ static void initialize(Engine&e,random::Service&s,TestTape&t,const Offer&w,unsig
  CHECK(static_grand::setWager(e,selection,static_grand_table::family,w.coin,w.lines,w.mult,true)==static_grand::Result::Applied);
  const static_grand::Entry* row=nullptr;
  CHECK(static_grand::resolve(static_grand_table::family,selection,static_grand::profile(e),row)==static_grand::Result::Applied);
- CHECK(row&&e.state.jackpotCoins[3]==row->grandCredits);
+ CHECK(row&&e.state.jackpotUnits[3]==money::Unit::Credits&&e.state.jackpotCoins[3]==row->grandCredits);
+ CHECK(!e.hasCustomJackpots()); // This suite covers the fixed-default law, not manual price overrides.
  const auto before=t.calls;CHECK(e.setCredits(bank));CHECK(t.calls==before);
 }
 static void fixture(Engine&e,Mode mode,unsigned variant){

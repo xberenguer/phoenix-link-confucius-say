@@ -1,6 +1,6 @@
 # Developer reference
 
-The current source is release 0.2.110, model J (`0x00020013`). Code/asset identity and ideal-reference qualification are bound by the included headers; original casino probabilities remain unknown.
+The included [release identity](../RELEASE.json), [Engine](../firmware/src/phoenix_engine.h) and [runtime identity](../firmware/src/math_runtime_identity.h) identify the current implementation. Code, assets and ideal-reference calculations have separate source bindings; original casino probabilities remain unknown.
 
 ## Runtime map
 

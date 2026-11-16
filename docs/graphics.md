@@ -12,6 +12,10 @@ The cabinet wager menu combines observed denomination, line and red BET controls
 
 <img src="media/wagers.png" alt="Cabinet wager selection" width="720">
 
+Double-press the large grey button to open the jackpot board. The Phoenix Link wordmark, animated Phoenix tier badges and separate red, green, blue and orange amount panels adapt the cabinet's upper display to the Stick screen. Cash amounts are grouped for readability and retain their exact cents.
+
+<img src="media/jackpots.png" alt="Phoenix Link jackpot board" width="720">
+
 ## Every symbol's implemented motion
 
 | Symbol | Current animation path |
@@ -83,7 +87,7 @@ The [gallery manifest](gallery-manifest.json) records dimensions, fixture identi
 
 <img src="media/multiplied-mini101.webp" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
 
-The outgoing flight and sampled ribbon finish behind the next same-cell flight. The animation loops after 4.88 seconds. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.
+The outgoing flight and ribbon finish behind the next same-cell flight. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.
 
 ## Collection-flight visibility
 

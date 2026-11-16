@@ -20,6 +20,26 @@ If the initial three respins produce **zero new Phoenixes**, the simulator resto
 
 Revival has no fixed repeat limit in this model. The numeric storage/capacity protections are engineering limits, not an assertion that a casino feature uses the same bounds. Revival changes the remaining respin count; it does not remove existing locked values or charge another paid bet.
 
+## Local six-seed completion distribution
+
+For **one Hold beginning with exactly six locked Phoenixes**, the local model gives each empty cell a 950/10,000 arrival chance per respin. New arrivals reset the count to three; an initial drought with no new arrivals revives. Under ideal independent uniform draws, the completed count is:
+
+| Phoenixes at completion | Local ideal probability |
+|---|---:|
+| 7 | 5.91334% |
+| 8 | 8.33143% |
+| 9 | 10.73996% |
+| 10 | 13.26012% |
+| 11 | 15.42323% |
+| 12 | 16.35869% |
+| 13 | 14.96834% |
+| 14 | 10.60235% |
+| 15 | 4.40254% |
+
+The minimum is **seven**, the mean is **11.123**, and the chance of finishing with ten or more is **75.0153%**. The 15-cell row is the conditional full-board/Grand probability for this six-seed Hold, not a Grand rate per paid spin.
+
+These are exact-law calculations rounded for display, **not a natural-video sample or factory-calibrated odds**. They exclude separate queued Holds and features that start with another seed count, and use the ideal-draw abstraction rather than modeling source failures or restarts. The [Engine constants and Hold step](../firmware/src/phoenix_engine.h) define this local process.
+
 ## Phoenix values and named prizes
 
 | Displayed prize | Settlement treatment |
@@ -32,6 +52,8 @@ Revival has no fixed repeat limit in this model. The numeric storage/capacity pr
 | Grand from a full board | Add Grand to all Phoenix prizes; it does not replace them |
 
 Do not multiply a shown Phoenix cash value by the stake again. Internally generated ordinary prizes use total-bet multiples, but the displayed number already represents the prize. Ordinary credit prizes do not receive the named-prize 2×/3× multiplier in this model.
+
+At **1¢ / 50 lines / 10×**, the simulator uses a **1,000-credit ($10) Mini**: Double Mini pays $20 and Triple Mini pays $30. The direct [US recording near 12:11](https://www.youtube.com/watch?v=3pfZnZUWGhI&t=731s) shows a Base-origin Triple Mini collected in three $10 increments. Using that fixed tier in Free and later queued Holds at the same profile is a shared-tier model assumption, not a separate mode-specific observation.
 
 Mini/Minor values and restrictions on named/high-cash combinations are configuration-dependent. The Engine contains two prize-cap contexts and scoped filmed Mini/Minor corrections. The two prize-cap contexts are internal model settings and are not exposed in the cabinet menu. The original complete prize-frequency and progressive-contribution schedules remain unknown.
 

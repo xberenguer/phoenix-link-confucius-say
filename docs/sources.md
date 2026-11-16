@@ -1,6 +1,6 @@
 # Sources and evidence scope
 
-Manufacturer references, operator rules and gameplay recordings used to document the game. Rules and pay programs vary by region and cabinet configuration.
+Manufacturer references, operator rules and gameplay recordings used to document the game. US and Las Vegas evidence is primary; Québec material supplies regional comparisons rather than a US pay-program specification. Rules and pay programs vary by region and cabinet configuration.
 
 ## Public primary references
 

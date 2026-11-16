@@ -43,6 +43,6 @@ Wisdom gives a **Twin free-games session**. The Phoenix counter gives a **free H
 
 ## Version and completeness
 
-This guide describes version **0.2.110**. Its tables and gallery are generated from the current accepted source. The [browser guide](browser-play.md) describes the same session-only financial rules with browser-specific input, entropy and audio. See [current release notes](../CHANGELOG.md) for validation status.
+This guide describes the current published game. Its tables and gallery are generated from the included source. The [browser guide](browser-play.md) describes the same session-only financial rules with browser-specific input, entropy and audio. See [current release notes](../CHANGELOG.md) for validation status.
 
 The exhaustive table export documents **implemented** values, including local fallbacks and internal evaluator profiles. It does not make the original casino odds known. Unrecovered original strips, probabilities, font/asset banks and universal event timing remain explicit [math](math-and-evidence.md) and [graphics](graphics.md) limits.
