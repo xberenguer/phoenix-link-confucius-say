@@ -50,7 +50,7 @@ struct Cell {
 
 namespace local {
 // Version identifies this local, deliberately approximate math configuration.
-constexpr uint32_t modelId = 0x00020012u;
+constexpr uint32_t modelId = 0x00020013u;
 // Historical price-version identifiers for analytic/reference includes only.
 // No backward-compatible game restore or saved-bank import is implemented.
 constexpr uint32_t previousGPriceModelId = 0x00020010u;
@@ -163,6 +163,15 @@ inline const std::array<uint8_t,kColumns>& linePath(uint8_t line,uint8_t count=k
     if(line==7)return lines[8];
     if(line==8)return lines[7];
   }
+  // One directly observed US-target 50-line path, nmcPHvRQYDE:10c/50/M1,
+  // numbered Line22=[top,top,bottom,top,top]. Publisher Vegas geotag;
+  // exact property/program unknown. This is not the complete 50/100 chart.
+  // Transpose only 50-line labels18/22 to preserve its exact active path set.
+  // New Line18 is the reassigned LOCAL fallback, not a source-proven label.
+  if(count==50){
+    if(line==17)return lines[21];
+    if(line==21)return lines[17];
+  }
   if(count==25&&line<observedTwentyFiveLines.size())return observedTwentyFiveLines[line];
   return lines[line];
 }
@@ -215,6 +224,11 @@ constexpr uint16_t freePays[10][6] = {
 // or locked Cell is repriced. denominationMinor=0 keeps unscoped inspection
 // calls on the unchanged fallback pays; live settleSpin passes the real coin.
 inline constexpr uint16_t linePay(unsigned symbol,unsigned count,unsigned multiplier,bool free,unsigned lineCount,int64_t denominationMinor){
+  // Source150 nmcPHvRQYDE: filmed US-target paid Base10c/50/M1.
+  // Native3630/3660 Line22 Jack3 wins5; exact property/program unknown.
+  // Scoped J price: future exact-profile Base only; all Free/other profiles unchanged.
+  if(!free&&denominationMinor==10&&lineCount==50&&multiplier==1&&symbol==unsigned(Symbol::Jack)&&count==3)return 5;
+
   // Source82/83 wO4wC7v3Ouw: Confucius Say paid Base10c/25/M1.
   // Native8724 Line11 King3=5; native9090/9150 Line22 Book5=100.
   // Exact filmed profile, future evaluations only. Free/paths/saved awards unchanged.

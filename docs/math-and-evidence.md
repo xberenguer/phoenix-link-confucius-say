@@ -1,6 +1,6 @@
 # Math, RNG and what the evidence establishes
 
-Release 0.2.107 uses local model **I, `0x00020012`**, mathematical family `52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
+Release 0.2.110 uses local model **J, `0x00020013`**, mathematical family `9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
 
 ## Evidence labels
 
@@ -37,6 +37,8 @@ That is software test evidence. It does not establish physical entropy quality, 
 
 Ordinary symbols use local integer weights and column-specific Wild eligibility. A correlated three-position Sage-run construction controls adjacent Wild runs. Free games pair the two outer reel groups; Phoenix values on paired stops are generated separately. These rules do not recover the original physical or virtual strips.
 
+These weights are fixed configuration constants. The generator does not inspect the player's funded balance or accumulated past wins/losses to tune the next result. A paid-action admission check can refuse an unaffordable or unsafe action; disclosed meter, mode and locked-feature state can legitimately affect what action is generated. [The balance/history tests](testing.md#check-balance-and-outcome-history-independence) exercise that separation, not casino calibration.
+
 Hold uses a local 950/10,000 arrival gate per vacancy. Prize weights, named-prize chances and multipliers are local assumptions. The session's collection counter uses uniform reset/threshold laws; the published operator description supplies support/limits, not those distributions. These choices are not a fit to an unbiased casino spin census and do not adapt to the player's recent wins or losses.
 
 Readable continuous recordings can expose a rule, shape or price mismatch. Edited gaps, profile changes, fast stops and bonus-selected uploads must remain visible in the denominators. More symbol cells do not create more independent spins. Rare Grand/prize behavior and meter cycles need their own complete feature exposure. The [source guide](sources.md) keeps program/theme restrictions explicit.
@@ -47,8 +49,12 @@ SIMULATOR RETURN offers six options. Applying an option at a closed Ready/Base b
 
 The displayed return/edge ranges are **ideal-reference-only** enclosures under a fixed profile, fixed option, always-funded play and no Lucky Chance. They assume ideal uniform draws in the unchanged local stochastic game. They do not include every source/runtime fault, restart rule, adaptive wager strategy or short-session fluctuation. Finite draw caps have nonzero failure mass and fail closed; their implementation is not silently equated with unlimited sampling.
 
+For example, at **10¢ / 50 lines / 1×**, the High Cash Only prize-cap profile and default **Option 3** use a current table enclosure of **92.7183–94.2599%** ideal return. This is the full implemented paid-round process under the stated ideal-uniform assumptions, including its triggered Free/Hold/meter/Grand continuations; it is not a casino measurement or just a Base-line estimate. The tiny display rounds the enclosure outward further. A short sample can exceed 100% because rare awards fluctuate.
+
 The current UI asks for added credits when a paid wager is unaffordable. The Engine's separately callable Lucky Chance rule is outside the return-reference scope and is not offered as ordinary custom-schedule play.
 
 RTP is expected paid amount divided by expected stake under a specified process and policy. A short observed return, an EV conditional on a high counter and a fixed-profile long-run reference are different quantities. County denomination averages do not identify this game's pay program. Grand amounts are local schedules, not live casino progressive values.
+
+The exact 10¢/50-line/1× Base Jack price is five credits. Its reference calculation shifts only that profile's twelve cap/Grand-option enclosures; all 7,200 scheduled Grand integers are retained. The observed Line 22 relabeling preserves the active-path multiset, so it changes labels rather than the sum of line awards. Neither correction estimates or changes symbol weights, Hold arrivals, meter distributions or other probabilities.
 
 Replacing the modeled reel/feature law would require new Base/Free/Hold/meter/prize calculations, independent evidence and new source qualification; these ranges cannot simply be relabeled for a different law.

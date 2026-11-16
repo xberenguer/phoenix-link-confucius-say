@@ -31,5 +31,7 @@ jobs:
           diff docs/data/offered-wagers.csv /tmp/phoenix-reference/offered-wagers.csv
       - name: Check CSPRNG known answers and failed-action atomicity
         run: python3 tools/test_rng.py --sanitize
+      - name: Check balance and outcome-history independence
+        run: python3 tools/test_outcome_integrity.py --sanitize --out /tmp/phoenix-outcome-integrity
       - name: Verify browser source and bundle provenance
         run: python3 browser/verify_bundle.py --source firmware/src --assets firmware/data --bundle demo

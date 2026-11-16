@@ -116,7 +116,7 @@ int main() {
     verify(e.action());auto first=e.snapshot();verify(t.calls==3);verify(copy.action());verify(t.calls==4);
     auto second=copy.snapshot();verify(first.length==second.length);verify(std::memcmp(first.data,second.data,first.length)!=0);
   }
-  // Real random game transitions, every offered profile, explicit no-fault smoke.
+  // Real random game transitions, every legacy wager preset, explicit no-fault smoke.
   {
     Engine e;random::Service s;Tape t;init(e,s,t);
     for(size_t p=0;p<Engine::wagerCount();++p){

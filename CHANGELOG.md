@@ -1,20 +1,22 @@
 # Current release notes
 
-## 0.2.107
+## 0.2.110
 
-- Added a short coin burst for cash-only Phoenix Hold awards from 25× to below 50× bet, based on the filmed Venetian 25× ending.
-- The visible burst begins about 1.5 seconds before returning fire, with a brief tail at its first crest.
-- Payouts, odds, music and the existing larger/named-award routes are unchanged.
-- Updated the guide gallery and browser to the current source. Browser updates retain automatic replacement of older cached tabs.
+- Phoenix collection birds keep their broad curl visible when middle- and bottom-row prizes fly into the central WINNER panel.
+- Corrected the observed 50-line Line 22 path: top, top, bottom, top, top.
+- Corrected the Base 10¢ / 50-line / 1× three-Jack award from eight to five credits ($0.50), with matching return-reference tables.
+- Updated the browser game, guide, payout tables and gallery. Added an automated check that funded balances and previous outcome history do not change the next result.
 
-<img src="docs/media/cash25-burst.webp" alt="Short Phoenix coin celebration" width="720">
+<img src="docs/media/line22-jack3.png" alt="Line 22 and the five-credit three-Jack award" width="720">
 
-The observed 25× event supports this reconstruction. The 25–49× visual range is a local policy; the exact original cutoff and particle law remain unrecovered.
+<img src="docs/media/pickup-flight.webp" alt="Phoenix collection flight into the WINNER panel" width="720">
 
-## Validation status
+The price correction applies to the named configuration. The collection flight adapts the original upper-screen effect to the smaller display. See [payouts](docs/payouts.md#ten-cent-50-line-observation), [graphics](docs/graphics.md#collection-flight-visibility) and [math](docs/math-and-evidence.md).
 
-The paired Main/UI/audio replay covers 34 scenarios and 48,350 full-viewport raster samples, with matching financial state, entropy captures, phase clocks, next-action timing and audio. First visible coin to return crest measures 1.518 seconds at the 33 ms replay cadence; the source observation is approximately 1.535 seconds. This comparison is a software timing check, not a full claim of identical original animation.
+## Validation
 
-Native firmware and offline assets passed full write/readback verification and healthy fresh startup: current version, all 60 atlas frames, 1,000 credits and autoplay off. The source-bound browser passed 64 Chromium assertions, including two open 106 tabs upgrading to 107 and offline play. Physical speaker fidelity and original casino odds remain unqualified.
+Firmware and offline assets passed full write/readback verification and healthy startup on StickS3. It starts with 1,000 denomination credits and autoplay off.
 
-The game retains Mbed TLS 3.6.7 AES-256 CTR-DRBG and model I (`0x00020012`). See [testing](docs/testing.md), [math](docs/math-and-evidence.md) and [sources](docs/sources.md).
+Software checks covered 31 Main/UI scenarios, 19,314 rendered frames and 102,454 paired game actions. Prize timing, sound sequences and outcome-service calls matched the preceding build. The browser passed 51 Chromium checks covering upgrades, offline play and failed-install recovery. See [release metadata](RELEASE.json) and [testing](docs/testing.md).
+
+Original casino probabilities remain unrecovered. This release retains the local symbol, prize, Hold-arrival and meter distributions.

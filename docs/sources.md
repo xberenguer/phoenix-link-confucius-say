@@ -39,6 +39,7 @@ Gameplay recordings are indexed below by the features, prices and configurations
 | [wO4wC7v3Ouw](https://www.youtube.com/watch?v=wO4wC7v3Ouw) | Chronological raw-board audit across four visible wager profiles; current 10¢/25/1× King/Book Base prices are scoped to native Line 11/Line 22 captions |
 | [GclIM2tutCg](https://www.youtube.com/watch?v=GclIM2tutCg) | Current source-scoped Bell/Jack Base prices at 1¢/50/10× |
 | [Zfc-LBjwXQA](https://www.youtube.com/watch?v=Zfc-LBjwXQA) | Current source-scoped Bell/Jack/Queen Base prices at 10¢/100/1× |
+| [nmcPHvRQYDE near 1:45](https://www.youtube.com/watch?v=nmcPHvRQYDE&t=105s) | Direct Confucius 10¢/50/1× Base Line22 endpoints/divider path and three-Jack caption5; publisher Las Vegas label, exact property/program unknown |
 | [qQ4gPanpkdU near 1:27](https://www.youtube.com/watch?v=qQ4gPanpkdU&t=87s) | Feature celebration music reference |
 
 Price annotations remain next to their exact branches in the [Engine](../firmware/src/phoenix_engine.h). The [compiled tables](payouts.md) record what the software does, including unresolved local fallback values. A visible payout establishes a price at its observed context; it does not estimate the event's underlying probability.

@@ -49,6 +49,8 @@ Grand and Major celebrations have dedicated presentation paths. The small-screen
 
 ## Count-up and ending order
 
+The collection bird follows a broad reconstructed curl to the centered amount. Middle/bottom routes delay the destination offset until the final approach so their body stays visible in the reel viewport. This display adaptation changes no award, pickup commit, respin, music or phase clock. [See the current flight](graphics.md#collection-flight-visibility).
+
 The source-inspired sequence includes a collected announcement, fire/bird effects, collection of eligible individual values, a WIN transfer and return fire. Major/Grand, ordinary cash and large cash can take different branches. The centered WINNER field reads the existing collection amount; it does not add earlier line wins or a separate named award again.
 
 Coins launch upward from below the screen, spread, then fall. Numeric-only Hold cash from **25× to below 50× the stake** uses a short visual burst before the returning crest. This is a local display policy, separate from the existing longer 50× celebration, named/Grand cases and qualifying final-Free combined-round route.

@@ -1,7 +1,7 @@
 {
-  "version": "0.2.107",
-  "runtime": "06244f381409dbfb2552e7f0a9db323705f3a98e27c5afa64af0782aec2ba0d7",
-  "mathFamily": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03",
+  "version": "0.2.110",
+  "runtime": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+  "mathFamily": "9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937",
   "engineeringAccepted": true,
   "acceptanceMeaning": "Engineering source acceptance only; not regulatory approval or original casino math calibration.",
   "sourcePins": {
@@ -21,7 +21,7 @@
     "award_cache.h": "804b13efba7ad91c78039948ba2bf471b90f90e85665894d4946fce3578e442e",
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
-    "build_version.h": "8f8a80513c7bdf5f42f27666a883bb0b75be3ab41765b9b6dfccc2fd5b89cc75",
+    "build_version.h": "5358e9953f4d1c0b3c4ff107b3a7a260f9ff8d9a5a1700cf119bf9d91930e7c8",
     "cabinet_profile.h": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
     "cabinet_sage_large28.h": "b0ce6e39112497d3b7ae0e99a32a3e577c90b5c3580d2fc4ba22e3b91f76e815",
@@ -81,7 +81,7 @@
     "live_hold_count48.inc": "4afd9a28fb8027d2d05ecd23cbe842bc060c71cd1ac6a403e737f715b52bd503",
     "main.cpp": "b791e37d4c8e96830e8cf3bbbff4e870832014647ebab37c5a085f868cac036c",
     "major_title112_data.h": "83eb58d9c28e7aab85a08836af8892ec39cf0422433cfd95c701d5d6dd1d3c17",
-    "math_runtime_identity.h": "13a39b1ccfa1d7866f5f1d0858d19ab719bbd571a60485204780d2c20f7f6b71",
+    "math_runtime_identity.h": "53f3757035e74a6d3c9f96acdd0485416e6d55a2bad6cc689cc0a06b1416a98c",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "437859f2903793dec34f2c13e9c1013a616a5715f058ffdb1a00b68db71367c4",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -122,7 +122,7 @@
     "phoenix_crypto124/prefix.h": "c45e0fbd64269d9a4dcd3c803449732f664839697ccfa7abe66490db84cc3635",
     "phoenix_effects.cpp": "aa8360b6aeb27ec5367ce22f9cf2be8b784929592584e0d4b13ce4c73689e97f",
     "phoenix_effects.h": "7db8dd0a9cb547b681ddd956408f56482203369a678bc169d70e3e6600009731",
-    "phoenix_engine.h": "774684fa06f1b3f50758d5ce642d4d1ad64de71d4b91042e34266a45392d7007",
+    "phoenix_engine.h": "93b70039aaa3bad224f9ffb7e8ea36399234731f3f080a531e8da9df585f067a",
     "phoenix_numerals.cpp": "3a7824cc5b5ce818b7538a6e5cffee50afd9d7d86629afed9cd8556fe341f33a",
     "phoenix_numerals.h": "4f25d3dd2a67ce371c9d03b33b7798d03e6ed8dad0f67fd5fc04a84a1f547fa2",
     "phoenix_random.cpp": "5c7d988e8ea5e3ac137558ee673db8a882cb2cbc3fae05852db8ce3ba8765393",
@@ -146,14 +146,14 @@
     "spin_award_timing.h": "d0c2f9dae63eed4d75d2a1aea2b2cab63e2655efce1f04c4f9cae4783f743a93",
     "static_grand.h": "f8448b8d5b4eb777f9993b42009572c2f18451ebfcc5bee7adb66b1d786236c0",
     "static_grand_legacy.h": "2f98397c1be3c3107dfcd5e3e06fd71613194380478f8f09131e22f10e2db5f0",
-    "static_grand_table.h": "bd41e00134c932f2b9ddd2de96f4d33a002e93a31af9d2d98c1e424ea59a51d4",
+    "static_grand_table.h": "446b998a019bd741144f0b68b906059c9ca7fbc14f8f921e2ca76a0b3de339e4",
     "third_party/dr_mp3.h": "7a6cc38b0afdb55cfc9eec991d9169d67beb8fd910be2995121510cdaa99c356",
     "twin_free_scope89.inc": "42834a2043a38ca856f30873a76cbe9ea9e7ddb5c32507ea75091529c0a87604",
     "twin_music42.cpp": "54ef49c00d2511b516a6231069c487a93a059a25d7bee9003db7f3e68aaf5519",
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "2c9e1a0b294e6dee12a029186a977d95ead0a2412db1066ff28e8e43f301b953",
+    "ui.cpp": "4bf662db3609fbfea4ce83407e24d5614b29bc52e504d7f0124ae43dd50c83b5",
     "ui.h": "b9cb1e10efdee7140a38e2b5fec42b3d02be94133180a409a1fc9241f057cbb2",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -179,6 +179,6 @@
       "bytes": 199677
     }
   },
-  "sourceAcceptanceReceiptSHA256": "b7951f7c088739cf4cf1a868fe4a28ffdc47342926e350bc070f0e0216f68ca0",
+  "sourceAcceptanceReceiptSHA256": "269995eeccdac3afdc93826c7f797fb193653b3e37bd71502e8180ea874c8b23",
   "sourceBodyFiles": 160
 }

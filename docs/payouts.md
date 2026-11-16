@@ -1,6 +1,6 @@
 # Symbols, winning combinations and payouts
 
-The current game uses local model I (`0x00020012`). The complete lookup tables are freshly exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
+The current game uses local model J (`0x00020013`). The complete lookup tables are freshly exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
 
 ## Symbol roles
 
@@ -76,6 +76,16 @@ The [Confucius Say recording](https://www.youtube.com/watch?v=3pfZnZUWGhI) conta
 The original [King line caption near 4:50](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=290s) shows “Line 11 wins 5”; the [Book caption at 5:03](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=303s) shows “Line 22 wins 100”. These establish the individual line prices, not the complete round totals.
 
 None of these observations qualifies the same price at another denomination, line count, multiplier, regional program or Free Games table. They do not determine the random generator or Grand schedule. Other current lookup rows remain subject to their own [source annotations and evidence limits](math-and-evidence.md).
+
+## Ten-cent, 50-line observation
+
+At **10¢ / 50 lines / 1× in Base**, three Jacks pay **5 unit credits**, or **$0.50** for that line. The [Confucius recording near 1:45](https://www.youtube.com/watch?v=nmcPHvRQYDE&t=105s) shows a numbered Line 22 caption paying five. The numbered endpoints and divider markers identify its path as **top, top, bottom, top, top**. The publisher labels the recording Las Vegas; the exact property and software program are unreadable.
+
+The current 50-line evaluator assigns that observed path to Line 22. The displaced path is retained as the local Line 18 fallback, so relabeling preserves the active geometry set and total payout on every board. Line 18's reassigned geometry is not source-proven. This one observed path does not recover the complete 50- or 100-line chart.
+
+The five-credit Jack price is scoped to this exact Base configuration. Other denominations, line counts, multipliers and Free prices retain their own observations or local fallbacks. A line caption establishes its individual award, not an unobserved terminal round total or random frequency.
+
+<img src="media/line22-jack3.png" alt="Current Line 22 follows the observed path and pays five credits for three Jacks" width="720">
 
 ## Wisdom scatter awards
 

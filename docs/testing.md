@@ -8,6 +8,7 @@ Current tests qualify specific software paths and source identities. They do not
 | Independent DRBG byte oracle | Seed/reseed/request/discard behavior agrees | Test entropy is not a production seed interface |
 | Rejection mapping and price/path comparison | Mapping counts and implemented evaluator behavior | Does not recover casino strips/probabilities |
 | Atomic Engine fault cases | Failed Base/Free/Hold/Lucky/wager/init actions commit no partial state | Does not prove every possible fault |
+| Balance and outcome-history pairs | Matching test inputs produce matching results across different funded balances and past win/loss totals | Disclosed meter/feature state and admission limits can legitimately change behavior |
 | Actual Main/UI cases | Fresh startup, controls and post-fault dispatch follow exercised paths | Hardware APIs are mocked in host tests |
 | ASAN/UBSAN | No detected errors on exercised paths | Not a universal memory-safety proof |
 | Exact raster comparison | Optimized drawing agrees with its reference | Reference fidelity is a separate question |
@@ -39,6 +40,12 @@ After an installation, verify the intended board and written bytes, current menu
 From the repository root, run `python3 tools/test_rng.py --sanitize`. A C99 compiler and a C++17 compiler are required. The script builds the included Mbed TLS source and exercises published known-answer vectors, rejection boundaries, source failures, reentry, reservoir exhaustion and failed-action atomicity. Deterministic entropy and test hooks are compiled only into the temporary test program.
 
 The [current RNG validation summary](data/rng-validation.json) records the first full NIST study and separates host results, native startup checks and unmeasured physical entropy quality.
+
+## Check balance and outcome-history independence
+
+Run `python3 tools/test_outcome_integrity.py --sanitize --out /tmp/phoenix-outcome-integrity` with a new output directory. The test uses two independent instances of the real Engine and Mbed TLS service with matching test-only entropy. It varies funded balances and past win/loss totals while keeping wagers, meters and owed features equal. It compares canonical financial state, committed presentation results and entropy requests across all 55 menu wagers, six Grand selections, both prize-cap profiles and Base/Free/Hold modes.
+
+Additional cases continue complete rounds and queued features, check accounting-capacity refusals, and confirm that changing legitimate meter/feature state can change results. These are finite software regressions, not measurements of casino odds, physical entropy or regulatory approval.
 
 ## Release documentation and media check
 

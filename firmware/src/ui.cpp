@@ -1545,7 +1545,18 @@ void coinShower(uint32_t elapsed){
 }
 CollectPoint pickupFlight(unsigned ms,float sx,float sy,float tx,float ty){
  const auto p=collectFlight(ms,sx,sy);const float t=std::min(1.f,float(ms)/kCollectArrival),ease=t*t*(3-2*t);
- return {p.x+(tx-148)*ease,p.y+(ty-7)*ease};
+ float y=p.y+(ty-7)*ease;
+ if(tx==120.f&&ty==83.f&&ms<kCollectArrival){
+  const unsigned row=unsigned(std::max(0,std::min(2,int(std::lround((sy-33.5f)/35.f)))));
+  if(row){
+   // Preserve the source-derived curl. Move its upper-cabinet destination
+   // into the reel area only over the last two100ms route legs; moving
+   // the whole loop down early sends its body below the reel viewport.
+   const float u=ms>500?float(ms-500)/200.f:0.f;
+   y=p.y+(ty-7)*(u*u*(3-2*u));
+  }
+ }
+ return {p.x+(tx-148)*ease,y};
 }
 CollectPoint pickupDirection(unsigned ms,float sx,float sy,float tx,float ty){
  // A finite-span heading banks the body through the spline/arrival join.

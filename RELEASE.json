@@ -1,8 +1,8 @@
 {
-  "version": "0.2.107",
-  "runtime_fingerprint": "06244f381409dbfb2552e7f0a9db323705f3a98e27c5afa64af0782aec2ba0d7",
-  "mathematical_family": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03",
-  "local_model": "0x00020012",
+  "version": "0.2.110",
+  "runtime_fingerprint": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+  "mathematical_family": "9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937",
+  "local_model": "0x00020013",
   "source_body_files": 160,
   "source_total_files": 163,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
@@ -22,16 +22,16 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Firmware and offline assets passed full write/readback verification. Fresh startup confirmed version 0.2.107, a healthy random service, all 60 atlas frames, 1,000 credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength are unqualified.",
-  "browser_version": "0.2.107",
-  "native_status_version": "0.2.107",
+  "native_validation": "Firmware and offline assets passed full write/readback verification. Fresh startup confirmed version 0.2.110, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength are unqualified.",
+  "browser_version": "0.2.110",
+  "native_status_version": "0.2.110",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
   "status": "Current source-bound release package",
   "changes": [
-    "Short cash-only Phoenix coin burst for local 25\u201349\u00d7 awards, based on a filmed Venetian 25\u00d7 ending",
-    "Visible burst precedes returning fire by about 1.5 seconds and ends at its first crest",
-    "Payouts, random selection, music and existing larger/named-award routes unchanged",
-    "Current-source gallery and source-bound browser, retaining automatic cache updates"
+    "50-line Line22 now follows the directly observed top/top/bottom/top/top path; Line18 retains the displaced local fallback, preserving the active path set.",
+    "Exact Base10-cent/50-line/1x three-Jack price is5 credits, with only12 ideal-reference return intervals adjusted; all Grand integers retained.",
+    "Middle/bottom Phoenix pickup birds stay visible on their existing broad collection curl, with unchanged money, arrival clocks and audio.",
+    "Current-source browser, tables, gallery and three-spin hero; fresh1000credits and manual boot retained."
   ]
 }

@@ -71,11 +71,11 @@ line_selection,line_number,reel_1_row,reel_2_row,reel_3_row,reel_4_row,reel_5_ro
 50,15,2,1,2,1,2,local_fallback
 50,16,1,1,0,1,1,local_fallback
 50,17,1,1,2,1,1,local_fallback
-50,18,0,0,2,0,0,local_fallback
+50,18,1,0,2,0,1,local_fallback
 50,19,2,2,0,2,2,local_fallback
 50,20,0,2,2,2,0,local_fallback
 50,21,2,0,0,0,2,local_fallback
-50,22,1,0,2,0,1,local_fallback
+50,22,0,0,2,0,0,source_observed_US50_line22
 50,23,1,2,0,2,1,local_fallback
 50,24,0,2,0,2,0,local_fallback
 50,25,2,0,2,0,2,local_fallback

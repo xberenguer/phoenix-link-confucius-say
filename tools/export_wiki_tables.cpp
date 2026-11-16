@@ -34,7 +34,7 @@ int main(int argc,char**argv){
  for(auto lines:phoenix::local::lineOptions)for(unsigned line=0;line<lines;++line){
   const auto& p=phoenix::local::linePath(line,lines);paths<<unsigned(lines)<<','<<line+1;
   for(unsigned c=0;c<5;++c)paths<<','<<unsigned(p[c]);
-  paths<<','<<(lines==25?"source_reconstructed_US25_chart":lines==15&&line==5?"source_observed_US15_line6":"local_fallback")<<'\n';++pathRows;
+  paths<<','<<(lines==25?"source_reconstructed_US25_chart":lines==15&&line==5?"source_observed_US15_line6":lines==50&&line==21?"source_observed_US50_line22":"local_fallback")<<'\n';++pathRows;
  }
  std::ofstream deck(output/"offered-wagers.csv");deck<<"denomination_minor,selected_lines,bet_multiplier,stake_credits,stake_money_minor\n";
  unsigned offered=0;

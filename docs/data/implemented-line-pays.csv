@@ -17608,7 +17608,7 @@ denomination_minor,selected_lines,bet_multiplier,mode,symbol,match_count,unit_cr
 10,50,1,base,10,4,10,10,100,true
 10,50,1,base,10,5,40,40,400,true
 10,50,1,base,J,2,0,0,0,true
-10,50,1,base,J,3,8,8,80,true
+10,50,1,base,J,3,5,5,50,true
 10,50,1,base,J,4,20,20,200,true
 10,50,1,base,J,5,50,50,500,true
 10,50,1,base,Q,2,0,0,0,true

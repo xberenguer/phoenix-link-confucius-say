@@ -1,10 +1,10 @@
 {
-  "source_version": "0.2.107",
-  "engine_model": "0x00020012",
-  "source_engine_sha256": "774684fa06f1b3f50758d5ce642d4d1ad64de71d4b91042e34266a45392d7007",
+  "source_version": "0.2.110",
+  "engine_model": "0x00020013",
+  "source_engine_sha256": "93b70039aaa3bad224f9ffb7e8ea36399234731f3f080a531e8da9df585f067a",
   "source_cabinet_profile_sha256": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
-  "exporter_sha256": "574239b487f40b56ed0607b355b4d64c0a4687430d6b2d8d59d90db0b511a6f0",
-  "scope": "Current implemented local simulator lookup, not original casino PAR.600 internal profiles;55 menu offers. Source-observed price cells and local fallbacks are annotated in the Engine.179 of205 paths remain local fallbacks.",
+  "exporter_sha256": "2a3ee0dc7b4c4c3fa876507de5a366464c092581320ac643f5c1121140bd2c7c",
+  "scope": "Current implemented local simulator lookup, not original casino PAR.600 internal profiles;55 menu offers. Source-observed price cells and local fallbacks are annotated in the Engine.178 of205 paths remain local fallbacks.",
   "rows": {
     "line_pay_entries": 48000,
     "selected_line_paths": 205,
@@ -13,11 +13,11 @@
   "datasets": {
     "implemented-line-pays.csv": {
       "bytes": 1758010,
-      "sha256": "58e9e1b604eabb9a3fc06302e1fd6c5d3dfe14d8d99ae288b185316144b1d5af"
+      "sha256": "12843af026e8572c96e884be1485487c1f1b3357453087d11e68dcdcc4f62a6a"
     },
     "implemented-paylines.csv": {
-      "bytes": 6935,
-      "sha256": "04147acd76eb2605a8a37b88e52a971ae992a37f4a36b768516b28c5e1bab15a"
+      "bytes": 6948,
+      "sha256": "b05c6e96ce7d2d3b86f788b2ecb9a8eeaaa3392260cb9cab8d383bdf1b619586"
     },
     "offered-wagers.csv": {
       "bytes": 956,
@@ -28,6 +28,6 @@
   "status": "Current release source-synchronized implementation reference",
   "no_personal_state_or_device_identifiers": true,
   "source_qualification": "Engineering accepted source; numeric return enclosures apply only to stated ideal-uniform local-model assumptions, not actual-CSPRNG infinite-horizon return or casino calibration.",
-  "runtime_fingerprint": "06244f381409dbfb2552e7f0a9db323705f3a98e27c5afa64af0782aec2ba0d7",
-  "mathematical_family": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03"
+  "runtime_fingerprint": "fb19f3853088c47848952448f7b9abebc264063f95e5d28ccb570d3862fa0312",
+  "mathematical_family": "9f5c0f6598f840973c9902d68139de01e429de45e4283fdeccec11d9bf654937"
 }

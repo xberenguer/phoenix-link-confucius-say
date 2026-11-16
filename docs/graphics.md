@@ -84,3 +84,13 @@ The [gallery manifest](gallery-manifest.json) records dimensions, fixture identi
 <img src="media/multiplied-mini101.webp" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
 
 The outgoing flight and sampled ribbon finish behind the next same-cell flight. The animation loops after 4.88 seconds. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.
+
+## Collection-flight visibility
+
+Middle and bottom Phoenix pickups keep their broad reconstructed ribbon curl inside the playfield while approaching the centered amount. Their destination offset is applied during the last 200 ms of the existing 700 ms approach. Top-row and original upper-HUD routes retain their existing motion. The amount commit, fading body, sibling pickup overlaps, audio and game result use the same clocks.
+
+<img src="media/pickup-flight.png" alt="Current middle-row Phoenix remains visible before reaching the collection amount" width="720">
+
+<img src="media/pickup-flight.webp" alt="Current Phoenix pickup and ribbon curl approaching the centered amount" width="720">
+
+This is a small-screen viewport adaptation. It does not recover the original factory trajectory, feather artwork or pose bank. The bird and ribbons can pass in front of the amount during arrival; that foreground layering is intentional.
