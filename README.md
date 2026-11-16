@@ -7,7 +7,7 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
 [**Play in your browser**](https://xberenguer.github.io/phoenix-link-confucius-say/) — no hardware or installation needed.
 
 <a href="https://xberenguer.github.io/phoenix-link-confucius-say/">
-  <img src="docs/media/gameplay106-spin.webp" alt="Spinning reels land on Confucius, merge into gold, then show Bell and Book wins" width="720">
+  <img src="docs/media/gameplay107-spin.webp" alt="Spinning reels land on Confucius, merge into gold, then show Bell and Book wins" width="720">
 </a>
 
 ## Game reference

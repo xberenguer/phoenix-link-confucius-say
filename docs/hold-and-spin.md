@@ -51,7 +51,13 @@ Grand and Major celebrations have dedicated presentation paths. The small-screen
 
 The source-inspired sequence includes a collected announcement, fire/bird effects, collection of eligible individual values, a WIN transfer and return fire. Major/Grand, ordinary cash and large cash can take different branches. The centered WINNER field reads the existing collection amount; it does not add earlier line wins or a separate named award again.
 
-Coins launch upward from below the screen, spread, then fall. A coin/award phrase is not assigned to every Hold indiscriminately. The cash fountain uses a **provisional 50× stake presentation threshold**, with named/Grand cases and a qualifying final-Free combined round handled separately. That threshold is a local visual/audio policy, not a recovered universal casino rule.
+Coins launch upward from below the screen, spread, then fall. Numeric-only Hold cash from **25× to below 50× the stake** uses a short visual burst before the returning crest. This is a local display policy, separate from the existing longer 50× celebration, named/Grand cases and qualifying final-Free combined-round route.
+
+The positive reference is [3pfZnZUWGhI near 23:12](https://www.youtube.com/watch?v=3pfZnZUWGhI&t=1392s): eleven numeric Phoenixes pay $125 on a $5 stake at 5¢/50 lines/2×, following a two-seed meter feature. Its visible VENETIAN REWARDS cabinet branding supports a Las Vegas property inference; the [property's own description](https://www.venetianlasvegas.com/venetian-rewards.html) identifies that loyalty program. The exact software program remains unknown. One positive 25× event does not establish a universal casino cutoff or prove all settings share that threshold.
+
+The short route adds no new Big-award jingle. Coin visibility and music eligibility are separate; existing collection audio remains. Particle shapes, count-up timing and the original event table remain reconstructed. The animation below is a synthetic current-renderer example, not footage or a frequency sample.
+
+<img src="media/cash25-burst.png" alt="Current 25x numeric-only Hold coin burst, synthetic example" width="720">
 
 Autoplay and manual play use the same award-event routing. Muting, a skipped presentation or a different award branch can affect what is heard; autoplay is not intended to remove an otherwise eligible jingle. See [audio](audio.md) for cue order and outstanding limits.
 

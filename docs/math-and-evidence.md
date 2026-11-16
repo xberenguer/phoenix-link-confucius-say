@@ -1,6 +1,6 @@
 # Math, RNG and what the evidence establishes
 
-Release 0.2.106 uses local model **I, `0x00020012`**, mathematical family `52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
+Release 0.2.107 uses local model **I, `0x00020012`**, mathematical family `52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
 
 ## Evidence labels
 
@@ -26,6 +26,8 @@ Code: [service API](../firmware/src/phoenix_random.h), [provider](../firmware/sr
 ## Standards and statistical testing
 
 [Nevada Technical Standard 1](https://www.gaming.nv.gov/siteassets/content/regs/technical-standard-1.pdf), revision February 26, 2026, defines CSPRNG in §1.010(9). Its §1.400(2)(b) applies to approvals on or after January 1, 2027 and requires a CSPRNG plus a recognized randomness-test battery. The 100Hz clause is in the earlier-approval branch, §1.400(2)(a).
+
+[Nevada Regulation 14 §14.040](https://www.gaming.nv.gov/contentassets/d6342a488e944e6aa02337fa9d3c94e5/regulation-14-as-of-08-26.pdf) sets a 75% theoretical floor for each available wager. A casino-wide measured average does not identify a particular game's probabilities. [GLI-11 §4.7.2](https://gaminglabs.com/wp-content/uploads/2018/09/GLI-11-Gaming-Devices-V3-0.pdf) prohibits adaptive payout compensation and changing the selected result to display a different near miss. Documented persistent features, such as the collection meter, are distinct game rules. These are engineering references; original Phoenix probabilities still require separate evidence.
 
 The first official **NIST STS 2.1.2** run used 1,000 sequences of 1,000,000 bits from the host provider. All 15 test families produced 188 report rows, with no aggregate proportion/uniformity flags and no inapplicable rows. Excursion rows use 608 applicable sequences. This is one retained first sample, not a search for a favorable seed. Individual sequence failures are part of the complete result.
 

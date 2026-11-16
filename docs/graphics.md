@@ -54,7 +54,7 @@ Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../f
 | Phoenix collection | A flying bird/trail visits values and targets the centered running amount |
 | Center WINNER | Larger clean wordmark and outlined collection currency, only in its intended collection phase |
 | Major/Grand | Separate title/amount sequence; full-board Grand adds to the values |
-| Coins | Deterministic upward fountain, spreading and falling through the screen |
+| Coins | Deterministic upward fountain; a separate short numeric-only 25–49× Hold burst precedes the return crest |
 | Return fire | Separate exit/reveal geometry returning to Free or Base |
 | Nested Free progress | Actual Free game/total in the condition-text slot, visible during Hold and over fire |
 | Counter border | Calm four-second moving gold rim around the small number box; green digits and padding are independent |
@@ -62,6 +62,10 @@ Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../f
 <img src="media/phoenix.webp" alt="Phoenix animation display fixture" width="720">
 
 <img src="media/coins.webp" alt="Coin fountain display fixture" width="720">
+
+<img src="media/cash25-burst.webp" alt="Current cash-only 25x Hold ending excerpt, synthetic demonstration" width="720">
+
+The short burst and return crest use the actual presentation clocks. The 25× recording supports visible coins for that event; the broader 25–49× display band is a local policy, not recovered casino odds or a universal trigger threshold. Individual particle artwork and timing remain approximations.
 
 Particle paths and visual phase offsets do not draw from the game’s outcome service. Replaying a display frame cannot change the next financial outcome.
 

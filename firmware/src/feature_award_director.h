@@ -46,4 +46,14 @@ constexpr uint32_t bigMusicAt=1800,bigFountainAt=2200;
 // The filmed22x Hold is intermediate Free; the old35x read is39x combined.
 // Cropped views/mixed audio cannot establish a universal lower cutoff.
 inline bool cashFountain(int64_t cash,int64_t bet){return bet>0&&cash/bet>=50;}
+// Separate visual policy: cash-only3pfZnZUWGhI at1392.725s has coins
+// at exactly25x. This positive does not recover a universal lower cutoff.
+// Retain the existing50x phrase/prelude gate above. The lower visual band
+// reuses the existing particle programme during the last1.5s before the
+// return crest, with a short first-crest tail. The observed interval guides
+// this local mapping; unseen player input and
+// the original count-up/particle law remain unresolved.
+constexpr uint32_t lowerCashFountainLeadMs149=1500,lowerCashFountainTailMs149=80;
+inline bool lowerCashFountain149(int64_t cash,int64_t bet){return bet>0&&cash/bet>=25&&cash/bet<50;}
+
 }

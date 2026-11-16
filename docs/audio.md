@@ -39,7 +39,7 @@ The longer program is stored in [feature_music.mp3](../firmware/data/feature_mus
 
 The [qQ4gPanpkdU recording](https://www.youtube.com/watch?v=qQ4gPanpkdU&t=87s) provides a reference for the celebration program.
 
-In the simulator, ordinary collection, named awards, large-cash preludes and a qualifying final-Free combined result have separate routes. A qualifying coin fountain is coordinated with its award program. The cash threshold is a provisional presentation policy. See [Hold endings](hold-and-spin.md#count-up-and-ending-order).
+In the simulator, ordinary collection, named awards, large-cash preludes and a qualifying final-Free combined result have separate routes. **Visible coins do not automatically request the Big-award phrase.** The short numeric-only 25–49× Hold burst adds no new celebration jingle: the filmed 25× coin event does not supply a qualified same-song match to the 1:27 reference. Existing Hold/Collected audio continues under its existing routing. The longer 50× cash-program gate remains a separate provisional presentation policy. See [Hold endings](hold-and-spin.md#count-up-and-ending-order).
 
 Manual play and autoplay share those event routes. Backend queue acceptance proves software submission, not the speaker's acoustic onset. Software diagnostics cannot alone establish that all audible stops are aligned to a camera frame.
 

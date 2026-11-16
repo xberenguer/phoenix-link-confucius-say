@@ -1,5 +1,5 @@
 {
-  "source_version": "0.2.106",
+  "source_version": "0.2.107",
   "engine_model": "0x00020012",
   "source_engine_sha256": "774684fa06f1b3f50758d5ce642d4d1ad64de71d4b91042e34266a45392d7007",
   "source_cabinet_profile_sha256": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
@@ -28,6 +28,6 @@
   "status": "Current release source-synchronized implementation reference",
   "no_personal_state_or_device_identifiers": true,
   "source_qualification": "Engineering accepted source; numeric return enclosures apply only to stated ideal-uniform local-model assumptions, not actual-CSPRNG infinite-horizon return or casino calibration.",
-  "runtime_fingerprint": "816ddd517f0c08dc15ddb39185ca2f252625a74b7b536120966c14416694bf6b",
+  "runtime_fingerprint": "06244f381409dbfb2552e7f0a9db323705f3a98e27c5afa64af0782aec2ba0d7",
   "mathematical_family": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03"
 }

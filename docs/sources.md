@@ -14,6 +14,8 @@ Manufacturer references, operator rules and gameplay recordings used to document
 | [M5Stack StickS3 documentation](https://docs.m5stack.com/en/core/StickS3) | Hardware, download-mode procedure and speaker power notes |
 | [Espressif ESP32-S3 random API, IDF 4.4.7](https://docs.espressif.com/projects/esp-idf/en/v4.4.7/esp32s3/api-reference/system/random.html) | Conditions for hardware entropy in the pinned-generation platform |
 | [Nevada Technical Standard 1](https://www.gaming.nv.gov/siteassets/content/regs/technical-standard-1.pdf) | CSPRNG definition and software-RNG testing branch for approvals from January 1, 2027 |
+| [Nevada Regulation 14](https://www.gaming.nv.gov/contentassets/d6342a488e944e6aa02337fa9d3c94e5/regulation-14-as-of-08-26.pdf) | Per-wager theoretical return floor and accurate rules/outcome displays |
+| [GLI-11 Gaming Devices v3.0](https://gaminglabs.com/wp-content/uploads/2018/09/GLI-11-Gaming-Devices-V3-0.pdf) | RNG outcome integrity and restrictions on adaptive payout compensation and substituted results |
 | [NIST statistical-test scope](https://www.nist.gov/publications/statistical-test-suite-random-and-pseudorandom-number-generators-cryptographic) | Recognized test methodology and its limits |
 | [MbedTLS random-data guide](https://mbed-tls.readthedocs.io/en/latest/kb/how-to/add-a-random-generator/) | CTR_DRBG setup and prediction-resistant reseeding |
 | [PlatformIO installation](https://docs.platformio.org/en/stable/core/installation/index.html) | Development environment setup |

@@ -1077,6 +1077,18 @@ bool collectionFountain(){
  const bool combined=p.holdSettled&&p.freeEnded&&p.roundCompleted;
  return feature_award::cashFountain(combined?engine.state.roundPayout:collectCashTotal(),engine.betMinor());
 }
+// A new lower cash-only VISUAL fountain must not promote an unqualified
+// BigAward phrase, change the existing prelude or alter transfer/return clocks.
+bool lowerCashCollectionFountain149(){
+ const auto& p=engine.presentation;
+ if(!p.valid||!p.holdSettled||p.grandAwarded||collectionNamedDone||collectionFountain())return false;
+ bool cash=false;
+ for(const auto& cell:visible)if(phoenixCell(cell)){
+  if(cell.kind!=phoenix::PrizeKind::Credits)return false;
+  cash=true;
+ }
+ return cash&&feature_award::lowerCashFountain149(collectCashTotal(),engine.betMinor());
+}
 bool largeCollectionPrelude(){
  // The25x Hold /92.2x final-Free source uses the ordinary first-pickup lead.
  // Its combined round still qualifies for the later fountain/award phrase.
@@ -1105,7 +1117,7 @@ void beginAwardTrace(bool test=false){
  lastAward=AwardTrace{};lastAward.valid=true;lastAward.test=test;lastAward.action=engine.state.actions;
  lastAward.cash=collectCashTotal();lastAward.bet=engine.betMinor();lastAward.named=namedAward();lastAward.grand=engine.presentation.grandAwarded;
  captureAwardContext(true);
- lastAward.fountainEligible=collectionFountain()||lastAward.named>0||lastAward.grand;lastAward.beganAt=millis();
+ lastAward.fountainEligible=collectionFountain()||lowerCashCollectionFountain149()||lastAward.named>0||lastAward.grand;lastAward.beganAt=millis();
 #ifndef UI_HOST_TEST
  lastAward.backendStartsBefore=audioMusicDiagnostics().awardStarts;
 #endif
@@ -2184,7 +2196,7 @@ void finishPhase(){switch(phase){
   case Phase::WinTransfer:if(ordinaryCollectionTransfer())displayWin=engine.state.roundPayout;winFrom=winTo=displayWin;
    if(pendingChained){introChained=true;holdWipeRevealed=false;}
    startPhase(Phase::ReturnWipe,collectionReturnLead()+feature_entry::returnDurationMs);break;
-  case Phase::ReturnWipe:displayWin=winFrom=winTo=engine.state.roundPayout;afterCollection();break;
+  case Phase::ReturnWipe:if(lowerCashCollectionFountain149())fountainActive=false;displayWin=winFrom=winTo=engine.state.roundPayout;afterCollection();break;
   case Phase::Outro:
 // The old2.4s procedural FreeEnd score has no qualified match across the
 // independently checked plain completions. Keep its bank/ID for historical
@@ -2826,11 +2838,18 @@ void uiFrame(){if(initialized&&!engine.randomHealthy()){enterRandomFault125();if
     const uint32_t counted=e>feature_award::bigFountainAt?std::min(e-feature_award::bigFountainAt,coin_motion::countDurationMs):0;
     displayWin=money_math::lerp(before,engine.state.roundPayout,counted,coin_motion::countDurationMs);
    }else if(ordinaryCollectionTransfer())displayWin=before+feature_award::normalWinCount(engine.presentation.phoenixWinMinor,e);
+   if(lowerCashCollectionFountain149()){
+    constexpr uint32_t burstAt=feature_award::normalWinTransferMs+feature_award::normalWinSettleMs-feature_award::lowerCashFountainLeadMs149;
+    if(!fountainActive&&e>=burstAt)startAwardFountain(phaseAt+burstAt,now,FeatureMusicPart::Off);
+   }
   }
   if(fountainActive&&(phase==Phase::WinTransfer||phase==Phase::Jackpot))traceAwardFountain(now-phaseAt,now);
   if(phase==Phase::ReturnWipe){
    const uint32_t duration=collectionReturnLead()?collectionReturnLead():200;
    const uint32_t e=std::min(now-phaseAt,duration);const int64_t before=engine.state.roundPayout-engine.presentation.phoenixWinMinor;
+   // The qualified short lower-cash burst is finished at the returning
+   // crest tail. Do not carry its particles into a queued Hold/Free/Base view.
+   if(lowerCashCollectionFountain149()&&now-phaseAt>=collectionReturnLead()+feature_award::lowerCashFountainTailMs149)fountainActive=false;
    displayWin=collectionFountain()||ordinaryCollectionTransfer()?engine.state.roundPayout:money_math::lerp(before,engine.state.roundPayout,e,duration);
   }
   if(cabinetMenuRequested&&phase==Phase::Ready)openCabinetWager();

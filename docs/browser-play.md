@@ -1,6 +1,6 @@
 # Playing in a browser
 
-[Play the browser game](https://xberenguer.github.io/phoenix-link-confucius-say/). The current source release is **0.2.106**, with the build adapter in `browser/` and the hosted bundle in `demo/`. You can also run `python3 -m http.server --directory demo 8080` from the repository root and open the local page.
+[Play the browser game](https://xberenguer.github.io/phoenix-link-confucius-say/). The current source release is **0.2.107**, with the build adapter in `browser/` and the hosted bundle in `demo/`. You can also run `python3 -m http.server --directory demo 8080` from the repository root and open the local page.
 
 The browser compiles the C++ Engine, UI and audio programs to WebAssembly. Its buttons represent the Stick controls around the 240 × 135 game. No connected Stick, account or game server is needed.
 
