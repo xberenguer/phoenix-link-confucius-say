@@ -494,6 +494,9 @@ class Engine {
     service_ = &source; rng_.bind(service_);
     const bool ok = transact([credits](Engine& work) {
       work.freshState(credits); work.resetActiveMeter();
+      // Unpaid opening display, sampled atomically from this initialization
+      // reservoir. No evaluation, meter advancement or feature is awarded.
+      work.generateSpin(false);
       work.initialized_ = true; return true;
     }, false);
     return ok;

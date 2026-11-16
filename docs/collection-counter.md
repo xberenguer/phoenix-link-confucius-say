@@ -34,7 +34,7 @@ Opening a menu does not reset the meter. Each boot or page reload starts fresh m
 
 ## Setting the counter
 
-**Game Menu → Counter & Jackpots → Set Feature Counter** accepts **0 through 1886**. Apply changes only the current wager's bucket and returns to regular play. Other buckets, credits and statistics remain unchanged. Editing requires a completed Base round with no owed feature.
+**Game Menu → Counter & Jackpots → Set Feature Counter** accepts **0 through 1886**. Apply changes only the current wager's bucket and returns to regular play. Other buckets, credits and statistics remain unchanged. Editing requires a completed Base round with no owed feature. The leading digit cycles between 0 and 1. Later digits stay within the allowed prefix, so every draft remains between 0 and 1886. Changing a higher digit may shorten the remaining value to fit the ceiling.
 
 Changing the count also draws a new hidden threshold above that count using the local model below. Applying the same count leaves the existing threshold untouched. This is a simulator control; it does not recover a real cabinet's hidden threshold or expected return. See [the editor controls](settings.md#feature-counter-and-jackpot-amounts).
 

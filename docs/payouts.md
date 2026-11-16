@@ -37,6 +37,10 @@ A positive evaluator entry does not prove that every compatible board can natura
 
 Numbered geometry has been read for **40 of the 50 line IDs** across identified Base and Free recordings. The ten unresolved IDs are **8, 29, 31, 33, 37, 39, 45, 48, 49 and 50**. Some observations are available only in Free; applying one shared chart across modes, wagers or unidentified programs remains conditional. The CSV describes the implemented chart, including local fallbacks, rather than a completely recovered factory chart.
 
+Those 40 IDs describe the observation ledger. Only the explicitly annotated corrections are installed in the compiled chart; other filmed routes and payouts still differ from its local fallbacks. The return reference uses the implemented paths. A complete original chart and its configured pay program remain unresolved.
+
+One known difference is 50-line Line 7: the compiled path is **bottom, bottom, middle, top, top**. The filmed [2¢ / 50-line / 3× Base result](https://www.youtube.com/watch?v=3pfZnZUWGhI&t=115s) and [1¢ / 50-line / 5× Free result](https://www.youtube.com/watch?v=3pfZnZUWGhI&t=324s) show **bottom, bottom, middle, bottom, bottom**. Installing that geometry requires recalculating the affected return references.
+
 ### Reading a row
 
 For Base, 1¢ / 50 lines / 10×, a three-Jack line has unit price 5. Its award is 50 credits, or $0.50. The stake for the whole spin is 500 credits, or $5.00. Additional winning lines add to the $0.50.

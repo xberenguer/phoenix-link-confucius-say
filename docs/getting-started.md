@@ -41,3 +41,5 @@ Hold blue for about 0.85 seconds to toggle autoplay. Hold it again to stop. A sh
 Hold the large grey button for Game Menu. Sound, fine volume, display, credit funding and game-rule pages are there. Double-press grey in the normal game view to open the live Jackpots board. Screen rotation is in Game Menu → Display → Flip Screen. Full details are in [controls](controls.md) and [settings](settings.md).
 
 Implementation: [Main button dispatch](../firmware/src/main.cpp), [UI](../firmware/src/ui.cpp), [Engine](../firmware/src/phoenix_engine.h).
+
+The opening reels vary between new sessions. This is an unpaid display: your starting credits and counters are unchanged by those symbols. Press blue to play the first spin.

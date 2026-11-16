@@ -1,5 +1,6 @@
 // Live-session value editing. No alternate game, outcome fixture or HUD mode.
 // Engine setters own admission, entropy and atomic state changes.
+#include "bounded_decimal_editor121.h"
 enum class CreditsPanel201:uint8_t {Credits,GameValues,CounterEditor,JackpotPicker,MoneyEditor};
 CreditsPanel201 creditsPanel201=CreditsPanel201::Credits;
 unsigned valuesItem201=0,jackpotItem201=0,editFocus201=0;
@@ -34,7 +35,7 @@ bool openValueEditor201(bool moneyEditor){
 void applyValueEditor201(){
  if(!valuesAvailable201()){valuesNotice201("FINISH CURRENT PLAY FIRST");return;}
  const bool isMoney=editorMoney201();
- if((isMoney&&(editedValue201<1||editedValue201>uint64_t(phoenix::Engine::maximumCustomJackpotMinor)))||(!isMoney&&editedValue201>1886)){
+ if((isMoney&&(editedValue201<1||editedValue201>uint64_t(phoenix::Engine::maximumCustomJackpotMinor)))||(!isMoney&&editedValue201>=phoenix::local::meterThresholdMaximum)){
   valuesNotice201("VALUE OUT OF RANGE");return;
  }
  const bool ok=isMoney?engine.setCustomJackpotMinor(jackpotItem201,int64_t(editedValue201)):engine.setPracticeMeter(uint16_t(editedValue201));
@@ -67,6 +68,10 @@ void valuesSelect201(){
   const unsigned digits=editorDigits201();
   if(editFocus201==digits)applyValueEditor201();
   else if(editFocus201==digits+1)valuesBack201();
+  else if(!editorMoney201()){
+   editedValue201=bounded_decimal_editor::next(editedValue201,editFocus201,digits,phoenix::local::meterThresholdMaximum-1);
+   statusLine[0]=0;
+  }
   else {uint64_t place=1;for(unsigned i=editFocus201+1;i<digits;++i)place*=10;
    const unsigned old=unsigned(editedValue201/place%10);
    editedValue201=editedValue201-uint64_t(old)*place+uint64_t((old+1)%10)*place;statusLine[0]=0;}

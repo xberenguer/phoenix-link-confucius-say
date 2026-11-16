@@ -1,10 +1,10 @@
 {
-  "version": "0.2.120",
-  "runtime_fingerprint": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
-  "mathematical_family": "018e98afb631925eeec261655f7056d03d2128cb1a3ef615769f30217dcea6f6",
+  "version": "0.2.130",
+  "runtime_fingerprint": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
+  "mathematical_family": "ccb44f68b8cbb280b0fa4b73f888abe09b65b3de3aee46197a114bd424fbe5b9",
   "local_model": "0x00020017",
-  "source_body_files": 164,
-  "source_total_files": 167,
+  "source_body_files": 165,
+  "source_total_files": 168,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
   "original_casino_calibration": false,
   "actual_CSPRNG_infinite_horizon_return_qualified": false,
@@ -22,27 +22,25 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Final firmware and offline assets passed complete byte-exact readback on StickS3. Fresh startup confirmed version 0.2.120, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
-  "browser_version": "0.2.120",
-  "native_status_version": "0.2.120",
+  "native_validation": "Final firmware and offline assets passed complete byte-exact readback on StickS3. Fresh startup confirmed version 0.2.130, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
+  "browser_version": "0.2.130",
+  "native_status_version": "0.2.130",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Current source-bound release package",
+  "status": "Current final source-bound release package",
   "changes": [
-    "Live jackpot board on double-grey, with manufacturer wordmark, animated Phoenix tier badges and exact grouped cash amounts.",
-    "Counter & Jackpots is a separate Game Menu entry; Credits contains funding, clear balance and auto-refill only. Parent navigation and sound/display labels are consistent.",
-    "Edit the active feature counter or any jackpot amount during a closed Base boundary; edits apply to future play without changing landed prizes. Custom prices hide preset return ranges until defaults are restored.",
-    "Typed exact-cent prize settlement and pre-entropy queue capacity guards; observed 1-cent/50-line/10x Mini corrected to $10, with affected ideal-return intervals recalculated.",
-    "Current-source browser, wiki, payout reference and gallery, with fresh 1,000-credit manual sessions."
+    "New-session reels are sampled from the CSPRNG during the existing initialization action. This unpaid opening display does not change credits, counters, statistics, awards or the following paid-action stream.",
+    "Feature-counter digits wrap only through valid prefix ranges. The leading digit alternates0/1 and every draft stays within0..1886.",
+    "Source-bound browser, current guide, gallery and signed StickS3 flasher synchronized to the final milestone."
   ],
   "native_images": {
     "phoenix-confucius-sticks3.bin": {
-      "sha256": "9cddad31ecf6bea17b1db8220400decff6108a914f321b5ab68cfa69002e2272",
-      "bytes": 5751888
+      "sha256": "5e8a0b94c93a90533b8d8b78fdbea8562cdeca73680f6086ea6fcbb6aa51bbde",
+      "bytes": 5752192
     },
     "phoenix-confucius-app.bin": {
-      "sha256": "9f72f380cf2e959cca56769fe502dd065ff783b7640c6c817321ed3004f41d5c",
-      "bytes": 5686352
+      "sha256": "46b1b3b81c02a90f0616c994f3ef014c91fdbf919abb2c16b928fcba61fbb011",
+      "bytes": 5686656
     },
     "feature-assets.bin": {
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181",

@@ -39,6 +39,8 @@ That is software test evidence. It does not establish physical entropy quality, 
 
 Ordinary symbols use local integer weights and column-specific Wild eligibility. A correlated three-position Sage-run construction controls adjacent Wild runs. Free games pair the two outer reel groups; Phoenix values on paired stops are generated separately. These rules do not recover the original physical or virtual strips.
 
+Retained US footage already shows differences in ordinary-symbol repeats, Wild-stack patterns and Phoenix-bearing boards. These are known calibration gaps in the current window model. A clearer reconstruction of a symbol or a qualified CSPRNG does not resolve its outcome frequency; the local weights still require independently counted, configuration-specific gameplay evidence.
+
 These weights are fixed configuration constants. The generator does not inspect the player's funded balance or accumulated past wins/losses to tune the next result. A paid-action admission check can refuse an unaffordable or unsafe action; disclosed meter, mode and locked-feature state can legitimately affect what action is generated. [The balance/history tests](testing.md#check-balance-and-outcome-history-independence) exercise that separation, not casino calibration.
 
 Hold uses a local 950/10,000 arrival gate per vacancy. Prize weights, named-prize chances and multipliers are local assumptions. The session's collection counter uses uniform reset/threshold laws; the published operator description supplies support/limits, not those distributions. These choices are not a fit to an unbiased casino spin census and do not adapt to the player's recent wins or losses.

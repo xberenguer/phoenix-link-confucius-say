@@ -1,28 +1,17 @@
 # Current release notes
 
-## 0.2.120
+## 0.2.130
 
-- Double-press the large grey button for the live Grand, Major, Minor and Mini board. It uses the Phoenix Link wordmark, animated Phoenix badges, gold frames and separate colored amount panels. Blue or grey closes it without spinning; screen rotation remains under Display.
-- Counter & Jackpots has its own Game Menu entry. Credits contains only additions, Clear Balance and Auto Refill. Back returns to the parent menu; Amount Units and the three sound-test labels describe their actual controls.
-- Set the active feature counter from 0 to 1886, or enter any jackpot from $0.01 to $30,000,000.00. Apply returns to regular play with autoplay off. Future prizes use the edited amount; landed prizes retain their values. Restore Default Jackpots restores the selected schedule. Preset return estimates are hidden while custom jackpot amounts are active.
-- Cash prizes and jackpot pickups retain exact cents throughout display, collection and settlement, including values that are not whole denomination credits. Named 2×/3× multipliers apply once.
-- The observed 1¢ / 50-line / 10× Mini is $10; Double Mini pays $20 and Triple Mini pays $30. The affected ideal-return intervals were recalculated. Other Grand schedule amounts are retained.
-- Queued-feature capacity is checked before entropy generation or debit. Owed empty-start meter Holds remain supported.
-- Wisdom feature text uses the same matte as the compact game header.
-- The browser game, guide, numeric reference and gallery describe the same current source. Each new session starts with 1,000 denomination credits and autoplay off.
+- New sessions open on freshly sampled reels. The opening display does not place a bet, pay a win, advance the counter, record a spin or start a bonus. Credits still start at 1,000 and autoplay starts off.
+- Counter editing stays within 0–1886 throughout. The first digit alternates 0/1; subsequent digits follow the selected prefix. When a larger prefix makes the old remainder invalid, the editor fits it within the ceiling. Apply and Cancel retain their existing behavior; jackpot amount editing is unchanged.
+- The browser game, player guide, gallery and signed firmware package describe the same final source.
 
-<img src="docs/media/jackpots.png" alt="Live Phoenix Link jackpot board" width="720">
-
-<img src="docs/media/menu.png" alt="Reorganized Game Menu" width="720">
-
-<img src="docs/media/counter-editor.png" alt="Feature counter editor" width="720">
-
-<img src="docs/media/jackpot-editor.png" alt="Jackpot amount editor" width="720">
+<img src="docs/media/counter-editor130.webp" alt="Counter digits wrap within the valid range" width="720">
 
 ## Validation status
 
-The final firmware and offline assets passed complete byte-exact readback on StickS3. Fresh startup confirmed the healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off.
+Final firmware and offline assets passed complete byte-exact readback on StickS3. Healthy startup verified 1,000 credits, zero actions, autoplay off and all 60 Phoenix animation frames. Browser checks covered three distinct unpaid startup boards, every counter boundary wrap, menus, exact cash values and offline/cache updates.
 
-The final source passed 779 menu checks, 330 wager/Grand display contexts, 5,925 custom-jackpot checks and source-bound media verification. Real Chrome passed 242 functional checks, six visual checks and 27 same-version cache-upgrade checks, including offline fresh startup. Exact-cent accounting, failure atomicity, outcome independence and the default ideal-model calculations have separate source tests. See [release metadata](RELEASE.json) and [testing](docs/testing.md).
+The startup regression compared 1,024 test entropy tapes and 8,192 following Base/Free/Hold actions with the prior source: financial states, entropy requests and the next random reservoir matched. Startup boards containing feature symbols remained idle and unawarded. All 7,548 legal counter value/focus transitions passed an independent oracle, and the actual menu path passed 2,511 checks with address/undefined-behavior sanitizers. These are software regressions, not measurements of casino frequencies.
 
-Original casino probabilities remain unrecovered. The return reference covers the stated default-price ideal-uniform model; custom prices or repeated manual counter changes are outside that calculation.
+Original casino probabilities and complete factory artwork/audio remain unrecovered. The [math reference](docs/math-and-evidence.md) explains the local model and its limits.

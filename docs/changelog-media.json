@@ -1,14 +1,14 @@
 {
-  "version": "0.2.120",
-  "runtime_fingerprint": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+  "version": "0.2.130",
+  "runtime_fingerprint": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
   "curated_presentation_not_frequency_measurement": true,
   "raw_source_footage_or_user_attachments_included": false,
   "images": [
     {
       "file": "media/line22-jack3.png",
       "kind": "Observed US50Line22 path and exact10c50M1Jack3 five-credit payout",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -45,8 +45,8 @@
     {
       "file": "media/pickup-flight.png",
       "kind": "Middle-row collection bird visible before unchanged700ms arrival",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -83,8 +83,8 @@
     {
       "file": "media/cash25-burst.png",
       "kind": "Current numeric-only25x Hold burst through actualEngine andUI",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -121,8 +121,8 @@
     {
       "file": "media/game.png",
       "kind": "Fresh default-denomination1000-credit game",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -131,8 +131,8 @@
         240,
         135
       ],
-      "sha256": "36d0e9365c0af4ef96ce16bd0530623f311eebd5a6459d535dc14932124f7e78",
-      "bytes": 45703,
+      "sha256": "994ed5213c08b3b4035546cbda0622231b254c1812b0db89ee9579ce491aec6c",
+      "bytes": 43689,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -140,7 +140,7 @@
         1
       ],
       "input_frame_rgb565_sha256": [
-        "98d854f2d6dc12f1d97cc65bf160ca703bb2fab30f0a6ebb9a339503b40f5e61"
+        "53a7f3dd8969fbfd8db4f5f1068d372876824c3b37558763aa08454815e08427"
       ],
       "input_frame_clock_ms": [
         1000
@@ -159,8 +159,8 @@
     {
       "file": "media/wagers.png",
       "kind": "Cabinet wager panel",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -197,8 +197,8 @@
     {
       "file": "media/menu.png",
       "kind": "Current nine-item Main menu with direct Counter & Jackpots",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -207,8 +207,8 @@
         240,
         135
       ],
-      "sha256": "c4fb9dabb53d887d51c58d7614146b0995e8734cf10d4b2912df9538a1cd73e8",
-      "bytes": 15408,
+      "sha256": "19f3f0c70c191126cfd11c4d2f96f9985eade00316fc8e3854945f94279310be",
+      "bytes": 15535,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -216,7 +216,7 @@
         2
       ],
       "input_frame_rgb565_sha256": [
-        "24f873f68fcc31b7e4390183713a39e641a7f5f8af83490ab6341d4fe62f9d2d"
+        "18732fa06a1a978353d32cdabc976f20057ba1d675e512afc350901ca09691ba"
       ],
       "input_frame_clock_ms": [
         1000
@@ -235,8 +235,8 @@
     {
       "file": "media/sound.png",
       "kind": "Current Sound menu, with stops/landings and no reel-bed control",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -245,8 +245,8 @@
         240,
         135
       ],
-      "sha256": "3a60ee64934dd92881a9a8362f448e64838effebffcd76888ddfbaf1efb9237e",
-      "bytes": 15869,
+      "sha256": "2effd4a28e2fd6db037da4574c02b88e94ced56067069caddc8582f7758a170e",
+      "bytes": 15910,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -254,7 +254,7 @@
         2
       ],
       "input_frame_rgb565_sha256": [
-        "aaf5eab4933af1b816ed0dc699ca54a75d3e85f7e8688a487fb67b0705c7c651"
+        "d88c3da963e5b427baee27ddd9dbccd5fcf7f77735441995058d0fe8089d039d"
       ],
       "input_frame_clock_ms": [
         1000
@@ -273,8 +273,8 @@
     {
       "file": "media/volume.png",
       "kind": "Fine volume panel",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -283,8 +283,8 @@
         240,
         135
       ],
-      "sha256": "f1bfeff54b7ecc37cdb82ede23e9ad7175cb690f4df360d5ee2153f0949ef834",
-      "bytes": 10859,
+      "sha256": "27660fc524153206063dbd3b71e2336d499879c8e346f8d2b16368fda53ff6b3",
+      "bytes": 10911,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -292,7 +292,7 @@
         2
       ],
       "input_frame_rgb565_sha256": [
-        "599a07e52363c9d9da3643baccd4d891349caabb7cd1305f801690335fcbbbd5"
+        "565be6aa1bfed15d201dd4136a400df9431c7e5bbcb98a0cb57ed9ffa9bd7943"
       ],
       "input_frame_clock_ms": [
         1000
@@ -311,8 +311,8 @@
     {
       "file": "media/wisdom-entry.png",
       "kind": "Three-Wisdom initial entry",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -349,8 +349,8 @@
     {
       "file": "media/hold.png",
       "kind": "Natural Phoenix Hold entry",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -387,8 +387,8 @@
     {
       "file": "media/collection.png",
       "kind": "Centered running collection amount",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -425,8 +425,8 @@
     {
       "file": "media/symbols.png",
       "kind": "All twelve display symbols",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -463,8 +463,8 @@
     {
       "file": "media/credits.png",
       "kind": "Funding-only Credits panel with Clear Balance selected",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -473,8 +473,8 @@
         240,
         135
       ],
-      "sha256": "309cfe4b5a01ecce1259645593a36d125fbc356aa443f35f54304bcdf3962db1",
-      "bytes": 14189,
+      "sha256": "5f2cdec854283e083eace0c4bb5680cec48348533ee1787f1ed1be977b89bbce",
+      "bytes": 14237,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -482,7 +482,7 @@
         10
       ],
       "input_frame_rgb565_sha256": [
-        "17536ffc33700bf5e8f7c2aabba9b8b5b09be7e057355748a8b8cd6020746f5d"
+        "c59d867a6d45c7e2e546516cbff671d6cd853a7ee1293032a3ff33546e7ed03b"
       ],
       "input_frame_clock_ms": [
         1000
@@ -501,8 +501,8 @@
     {
       "file": "media/wagers-lines.png",
       "kind": "Focus moves from denomination to PLAY LINES",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -539,8 +539,8 @@
     {
       "file": "media/wagers-bets.png",
       "kind": "Selecting lines moves focus to red BET choices",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -577,8 +577,8 @@
     {
       "file": "media/nested-free.png",
       "kind": "Nested Hold with actualFreeGame1of6 and existingHold counts",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -615,8 +615,8 @@
     {
       "file": "media/nested-free-fire.png",
       "kind": "ActualFreeGame1of6 stays readable through the fire",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -653,8 +653,8 @@
     {
       "file": "media/pickup-flight.webp",
       "kind": "Current broad collection curl with late center retarget",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -795,8 +795,8 @@
     {
       "file": "media/cash25-burst.webp",
       "kind": "Current short25x cash-only Hold event excerpt; not a universalthreshold",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -957,8 +957,8 @@
     {
       "file": "media/wisdom.webp",
       "kind": "Wisdom four-second display loop",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -1197,8 +1197,8 @@
     {
       "file": "media/sage.webp",
       "kind": "Awarded two-/three-row Sage event, then preview restarts",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -1299,8 +1299,8 @@
     {
       "file": "media/phoenix.webp",
       "kind": "One Phoenix asset cycle",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -1459,8 +1459,8 @@
     {
       "file": "media/coins.webp",
       "kind": "Current coin-fountain excerpt; no threshold inference",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -1469,8 +1469,8 @@
         240,
         135
       ],
-      "sha256": "8ea93c48e85805a30494c9ad8f7f732f7e54f35dd8512cb7629ad24751184a42",
-      "bytes": 802986,
+      "sha256": "42d0e9e121e0bb2fb49169ad2a6814084a66bffa6c83a50baca1beffd950348b",
+      "bytes": 954570,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -1478,82 +1478,82 @@
         6
       ],
       "input_frame_rgb565_sha256": [
-        "db7a7d1439619ae3a91f7b02060bf8b1addf27d9491b1059da49876bfc4a8f9e",
-        "0741644470958dee11ced4932c6ab5d130c7afd762e9a65a86d95f0995bf0e16",
-        "12789253c3620b0eca7554ade895f3457d7eb97be5b1e1fe63d34d58f2504838",
-        "9e2ee152ec3df26332f9768d5d857b8f1b3d1db595a8f8d9dd84fd911c4b8ac3",
-        "71955e0344c818f2067f4d0edb38cfd1d206444776d86f25f564e7bee6a7ed22",
-        "4e7d6e5d62198a86e57b74088822bc7b47c55a32eca0d36ca1566b5793883a2f",
-        "1291da8b1c7c665de3cbfc9ea06806aab73fd88e39456c7337d68a52d476bd85",
-        "b0fc037d9b5217e279fc330ecebc01850d80e01004b0f9ccb1c198d9fd98546f",
-        "fe7107692e657cc94b4c5eef34a9177bca44ade607885881e94c5c1aad22c7f3",
-        "6166acb7313b30f3eaf6073c9ae0cd1fa1249beb094ca6e5c826117668e50bbe",
-        "47699b59d11c8d1ef9709d6ff1df7f00be2c78f6df2e67f7af47277bb181bbda",
-        "6ff7ba6d643444bce6c3297420c72f2f2ed3c7fe4fe110886037055d3700eb5e",
-        "f0e1ccf06513031877908e818aaf404d7c846f8560e28636d18ca502eb90748c",
-        "c2bc94579f6a7146861d6c2c52d332351d36af3e9bed6ecbbac215ef10ce2e66",
-        "f61cba74baf9f9765908f176743f381effd0cb3ce7ed07d3a7e5988c885f4cf2",
-        "576d076410d3b28aa0fdae31a9f6ff8475ac7c1c1d571c4025280a1ff65144e0",
-        "b11048ef432c58c4a3ea8942d77006cbe5a474f4729448007aa60c83c9d8f178",
-        "881b276565b5fb6c516b26eefa9a9b3d1333ff03647142b0058bfaee73e366f4",
-        "0bf09443e68b5a0ce00ee5fed9e0768e860898e70a2902770310d0d112291b55",
-        "79d95579f363d98769c5dcbc8871bae4089135c17ce48c1a986b2e1c6ea84c08",
-        "bef9dfc780ae9b9226c364d6d5daefe3dad0af0d34490c65ed563e6214cf7f67",
-        "7049fc91959d9e077a99bdd8c1cc0a2e60a151c42ce7a7e5f262f0edcb68a46c",
-        "76f32c0bffe5bdb4d2718cc77349ba92ccb8a25b202d1fbbf6dfdf39c0a0d54d",
-        "056b41a2725d2aa948f5d26269320251fbee96b937fc1460a3f62ccd1ae781df",
-        "236fba9599985458eb4d09b29b9bdf0d844dbc9fed8d78592b9c8c2b5bfbf38f",
-        "2cb931d424607ccbbcf6eb8a5ca711741034645eeea39b3be821bdea93aa556a",
-        "0eb0efd6562e2ae93789fe8a116c3a2e452b4369bccd508be349be8864e50227",
-        "5c20271e0efce2407622b553b7531f5ddb237a2dbb8ada303022d8ac870814c4",
-        "52955047f8e32e575f1ec1f034620c125a305246eba6ec85c297b41f9b3d9e67",
-        "2f1b57ea2b9c91e0ba0d6a10e9e81795315ca37c35a04f6c39d27380c24b222d",
-        "d1848921103a5997b0074788535d87dde4ffdc910266fdbd9a4ca4fea683eecc",
-        "63e1699c151a998e9366111ee7f2916318c7dcf744e3e2bdabdd3a69f180206d",
-        "bebe92579c8d4fdc3ef416c934e0ae7b04deac835a4632f39b4976fd58669f05",
-        "2b2d61f76f8aaf26073ad748b1056f378fae315a80ee4661e87db501ee6867c4",
-        "b6f910be08e7064d5d3c11a04dabd2df6811db5c9a167360bf9d625466d3e7d7",
-        "b9789bdd5f37091a29cf38c78cddee3132e19e7c90d54946d2660e474b8dfa01",
-        "f00f20daf2047bcb65deeab94ff72eadc32a739fa89115199228228f5bfd037b",
-        "132de94bb27ce8eaafefbb59df80136af2dc81506e90590c0f1feae16c2aa9dc",
-        "d728be485fe11e75efc423390e282819e43ed851972937fd85041916e56c1774",
-        "4d483d75a8228eb8f708786dc7d6fef1fa6b3a9c58384dd87cddf85e84c54f1f",
-        "cc997d0c03081a336de1986b994d474c50f5b5f39bfbb2ddbdd5dd1d00beb924",
-        "5b8d781f82e5c65c482c23c3b04b77c879a15c7e46366a0ccfc5ffc953766102",
-        "5a40d0075eadd9f95dda6814241fbeca3346b35a8bc3424b52ec187faef10bcb",
-        "1eb822c3ada2447781f2700d72474429632cfc0f6dfa1252be24af56043064fc",
-        "d260102db4522212a252781a904014afd9d7772cd5df581cc1fd49d109e547e9",
-        "4660b993dfb135a46e9c8880fa001a6ad39a4f1784427bcac48b5d0a182125b8",
-        "36d8ef918088790ec403b0c94fc454dab34f56f1d30b4cffd9ef06979b0a2886",
-        "65dc9c680c3362a8c1d5988281072079fc497b66195bfd3799321f2b400cb713",
-        "d7cf7a39205feb3d56c3d3a7cbe898d62595eba92ebe4f1584da23caf97dfe6c",
-        "52ba28c3cb4a0be54a7802348b388cef25d70c53af14f2c3758a5594933ea6d1",
-        "f63c0ea7a633fa9f8acc2c5c9c89ccabbe927b5fb6933b2e4f1c4ad35d81578b",
-        "cdca4cc0391359c99c02089c3fc53abe2e9d2848e7ebf469add786a5fc69a2b9",
-        "3edad8932dd041152d52a827c377f3246c34e6d6bbac26a0aaa295498dd16b37",
-        "0e67e1e494fea8d6a55c945f7720ebf8e5fcb918107fda7193414055db510db2",
-        "8993ff57b7c44f3f50bc981092d42c3dc04b3bb4c9a094210416adae82bf26fa",
-        "79a7b11ef8cb342afd28c80958ce1d5393669700dc6c495cb5d9dc8642dd2c42",
-        "9f3573b62ef454a736563ca2abf2a9eab1d58cdae843d1cdc85d33ef1c8d3fca",
-        "7d80e98f799a799fd765190f1f8585dc5e61e6e6fa24a5f9ec2ef46be5f1b3c6",
-        "a9f2dfe6121497981344b1e4a7efd48db65341270ecfa41b9489a24faa1958b8",
-        "cadfaf4ed371e11a2ffa3fdbc0b6cf6986b4e8b442f3485e1ffb80ff6c6b97cd",
-        "ee16bf1c34bfaf30a2e57281d087b99a18e4500a8b541f4b70c3c785c55d386c",
-        "0e0e838928d4f98c2ba3bef13477b0f9d62c7259918165267215332d6899823d",
-        "ef7c292e8ccf0482947cb79c59abbeb46fd6c16f66bc162aafb2d8afa655e6b4",
-        "1de48687759b49994f655fa8b0e635641474daf1de6f24cf135c7765036647ec",
-        "3fc2bf48b95a274bc732f7b3f65ecd73ea1612f780d7a135d4ebce712ccb93a5",
-        "9856904145b536a423e9b38aa708074864d665857b64de811f717d8383ef2747",
-        "9064a4609e83b39112a4038d76fa6097c2299f7a5593f617704f52d099b360f6",
-        "ff95b99dd382717495109efb8f312659648581530eddbcbf161a310a0ac3c3d1",
-        "b47681b8314edc2c21d85eddbae3a8391e896cc075d7abdd70aa9348a7bf638f",
-        "6c0577e5245ac323d75aca89a5f7e65a154b060f6844b7a4049c857f818ce172",
-        "c860ace1c2b833902136fc2995ac56585b66ea4b4844b954e88b7d9c773ce499",
-        "b1db5f67486d193b552dcc01c665db4c9945d110a2c00726511e89a664127a51",
-        "29c1fa03a9c483ffb05213ec7875db43315414e045de937628c5c56533d39c7f",
-        "7ca495c462f8b7aa126406cc4dfc09165f6da5194b28952de4261b6f8de0d975",
-        "37161b9ded416802a794b0cb2465d6294c332d84361dddb0ac70071961626f95",
-        "a1e4ec51adec9564c8f6a075febf981599aabc62cb54180f881ad5a2bcdf280e"
+        "ea7c0628a1e0daf4bec9c25d3e3e638394066f8b2bfb5066a585c2b69cfa6f86",
+        "afc76bdad26214eb7409223b2ce28b7bf81469e9085abc8b47673e8914863559",
+        "4c75476dba14df9a0178eba3014451c419ff397176d7075d90d24d3b28619412",
+        "bed6080e3cd97094deb56899fd485004319ce63a82dbdec977944ff60600b7b8",
+        "3f935f8cfdcddb3da73682477f3053c0730284c21f14e16e3b5f9fd8a689c3ab",
+        "c348109d2aa0a34c5277681a6eebfa60a8310dc29814e23fa2f85ad5571dab14",
+        "f0e1cc3af78e0321ed2d447a9b0368d0908945cedee926ecb0c3ddfa0036b7b5",
+        "499e972b80aea4b785cd3a24cd23464872cdd61fdc6ba9f066f9faa697ff7563",
+        "2e87bcbb42e0e23d85bdf346c8152e8fc7a01dd07d0747913c9f47b1bdb38c96",
+        "f512a182c94cf6e982a49d7eba64005836364b083650aec70d2d81841ea278c5",
+        "9185f07c57b9ca2fd82b613a41134abfa1c3f5a783d07ec7add7f7dbd9527a61",
+        "14f809c526efa98a213c7b92d569a01e6d5d13c106b86fe74bd973bb27b34f42",
+        "243e837fa4244e4824d246e44eadaed10d6e4464d445ec9ad17a1259af0a2003",
+        "fe877ccb74f94c50620537cc7084172c861e81ab07afda878985f4c13096bd10",
+        "892030b63b26d56c0b60f2f9dbe57f417ffcd4d6d67f5b751e0740f84025246c",
+        "4a431b1e90a127f5649194e896b8a7b4eab5c68602ab79433e443dd0e1f116f3",
+        "0136ede8612c14bd46c1bf14d141f7f509a4c429d086b64c18076035381dc02a",
+        "549e4a7741af7206f45e4eb4af9c3dd057b5be914e7e113a9e17cce8d705c744",
+        "2e5965de241ad4e80c31ce4a20c5d80a3705729e81ced65fddeebc3bafec09e0",
+        "e174fb65fcb4e80fed1488885d6894c8a4f83d7c51535f79112756bfec417244",
+        "16ce34195eae81dd040f223533e2987aeb55af0b81106230cb0dc1cb97594ab1",
+        "471d9e856ae2936c86ee676d963d99d9d9bd92d8a3c380843cb2fb2798087f7c",
+        "12ca2b7a9aa8f4ef5bd71193f2189e7f71051f1464e4b082804313770f3ba92e",
+        "75f5b10725e7f8f2bf61e6e8b50b882c9a7b55a7e9e8c06e045ab36b6b515e0c",
+        "4e8692f92ad123e7da4186ebc7f2e1ce8f1b2b2c447b88a3b6ebff4e0111b668",
+        "3f44c503a0c0dc75be5d6359249ad61d57f5b2e648023e0bbf4528a75e0e326b",
+        "8eb05f5ca7ddc93ae43a4805e2400d989d4f9b1c2ac8bcc3193b139dec846829",
+        "c6b323794a6238538f2f2abac3e15b773d9f59906ebac516698f827448d571d5",
+        "cf9b34ff27be170d271e58fc9e0ba29a6d0980aaeeb580d08afbcef9f1e53ad3",
+        "ea4bd1c4ac570a26c845975e9e0f29397594ab98aaa2fcafe0fcb24ff8c1325d",
+        "ced3e6ee6e78afaa0836b4b4baecfa8e6d35975cf1bb1684af444fe460ce35be",
+        "2bfdd8a5668e524de0f02b1ebe46056d21eae7b9320518636810f228c264f940",
+        "4ca30990655f7c005ddf4a5b8823ff79f77e218057851b2290692ade009f423d",
+        "f48e9aa407d0244eef02ba88c69cc676589278ee1475eb67093345f2e8937688",
+        "c93dcd27ca1a3690ac6bc5411d71284e547b10d6484efffbe93dccec9411eb2b",
+        "1bd85d88a30198dcd1bfb2a42dd6052095b4bd99fc77495e2e6efbcea9d4d0e1",
+        "a3aee58253b1b0c91ded9d114bf80274eaa230c6f297108fdd45452b45f4200f",
+        "a9f3fba4c3c69c5fa649accf554f9a3f6b97e39d44d8015af481e6f4da5d91f8",
+        "5bbdb62043ffdcd9478998868911167dc7128ab211ef7c3231ecc214090d6932",
+        "bcad7600f63bf5ac2bde7e5c5edd4e6d53dcf8e22a6a486740eadc5d2dcfc912",
+        "11657b27aa4272b0414236a98f884b16e3c80db7cff20e0fad3033a4e3dffec2",
+        "095b3d79f12c7bdb50092817f5a8f401a44c08283cad1c765b92ca245068752c",
+        "d35e772f4332d2c0208dff962fe2df1549954287fee705ba5af8fa39a7990922",
+        "6e7af4d517e3bf44611226387c223bc6b76e94eb9568dfc3e07230a76518b6b1",
+        "64f5b238780078cb3cabcb73b042e632184634916eb120197c3d9b1277aa6acf",
+        "3e4e1e6e62d802ab6c5e2448fa4bea045a35e4f915ce43664f8c94e8a55c982b",
+        "64466930d542694f9d894e7c195ce79df7574298e2ffefd5bab3e17061b714bb",
+        "5b08aaa322d389bd424cdb2f3e6b17e11379e74adbb81be012f9c8bc34139dda",
+        "4dee2ecfe1d35ab37f34662c82a9d7cca4940e7085be9411ef075e6f7fc68939",
+        "e4daac8be19aa9882a8cfeca62c5733aed73e970c8bd79755b0ad9e799637aca",
+        "5930c3d3aef5001d97e1bc8bcd197b794892b3c9d57a5c0498fc3d70781cbf5b",
+        "7da83d8a14371f1b0a07305eac38a7659b61191f84aa3ef205030e1d54a9cf31",
+        "e253813308da34ec0b572c1a3d2be36789645d6785e23eaf69459c9bcc4f0c10",
+        "55596a95c6d57c72332fd217db0f660fc18e7823977ae7dcb87f5624611c67c7",
+        "0f8c9b2adfd9ecfa57f1d5886ba5b3cf127dcaf72c97f472024f78200958f76f",
+        "398ab8fc7be64e54fc25a016e2cd5545fea2e7d323854d436303ecaebe190620",
+        "876b8110b07ec40926f7c73af5512a4fbe41fa73d3944f681e9647b1299acd9d",
+        "894a51b99cb91f39eddeb86fcd19d9fc743dffd6afc5cb3e912bd198c49019c7",
+        "41cd4cb60021b3f5ce77c5d1d44c4c174a251a27e110df40450b7e10fabae8d0",
+        "4d15dd300ed8c59ff1c44d0314daf4ad32199f5465345b1bfdb59e41d7f4ed38",
+        "26dbfbb5021a945e3f2ce2ec40528c06c91c977dcd10cf01d70ddb4211540d5c",
+        "bf2d2f3701d34b4d2a7dd00544e1ed9bb6d2f285f118fb0985e7a59533345194",
+        "86135645483169f46e4a4b79813e46bcf9fce355fa637cd62a2ca965d1ab6bf6",
+        "77f66d9bb4f4ffa5a4c8b9440942e4f466c495bc7f759dc1a748e3d31c3c6113",
+        "58d2111952248a991c14a5b462bd6e47163dec249b4f9a6a561035bb5a2d2053",
+        "7787b4c52ddcccff1dcd0bd07143d116e6725e22e5926fbd25158db22fe718c1",
+        "0abbb1b06bfb0ba38e58373f856f6ee36d7247960fa6bd39491925a6fd5603d9",
+        "2cdb92df20f474553dfba58ab310588da8cb64f4a453c9d7221bc253096ec747",
+        "a1e1a2f902b48966babc4db3d98f7aca83e69579ec85ff5de4455b2918456366",
+        "c2d8578c0caf37ece74bee359e82925e3718e8edd9bc690627b55bc9d458c25e",
+        "4b0b1c7caf6f8920b42661f17fe86ca0785e3da0b5950a48f74efc7057159860",
+        "9fc6f02297c756e2ebdbd13060c65f5f7b09f9a1c5f9e623fb7fa24021fe5b52",
+        "7770f2bd515f0e5b6bb187cf0861819cfb115a9fc571d3a44ec9a7a4c6364d50",
+        "cff668e7eea3c56c4e934ecaa25ddafdb37da9b3d46cde667407898d8f67146a",
+        "f74a3d42b06f588d82ba2577539081b941b834e9bd38f028df86bcffa91a0560",
+        "2efc3bdfc53f2cba3bebd6bdf9e9664245e592f49e6174a7668567527398faa7"
       ],
       "input_frame_clock_ms": [
         1000,
@@ -1651,8 +1651,8 @@
     {
       "file": "media/counter.webp",
       "kind": "Four-second calm counter rim",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -1661,8 +1661,8 @@
         240,
         135
       ],
-      "sha256": "35687b901ea69f5ca328993dd4ac6baa41a0571ddd97f0f430a2f30f0beb41d6",
-      "bytes": 117184,
+      "sha256": "1ef21974b4c374cac1a4aaccf0cfdb3321857b20e0e1a4ecfccbd1627bf49622",
+      "bytes": 241384,
       "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
@@ -1670,46 +1670,46 @@
         7
       ],
       "input_frame_rgb565_sha256": [
-        "3e3d5154305dff975cf31454f72dbc4c4dcdeaf887e920d5abe646edcf38aa30",
-        "bf2bd9d2ecfa861944786dc28a832197e795c5802849a005e191487285984d33",
-        "cb922080694139f230928257bd86670ec354ccc87591eede49dd7bd6aa215bca",
-        "d8251269c2b2e5c19a11e48d314856b2076e2500b83870c76705797b1bd77ed8",
-        "f0f382f1fe44f748f4221ff3e4a4aceecd0827edc4ab63d4b84611e2ebb90f1b",
-        "f902dc259fc919d97ac21f3c905fb317927b65890e5e9e64deb78824fbda6376",
-        "2d7c05f999acea7c1da38387b28fd3865526edd0c2579fa2593763c6a80fb511",
-        "d311273ff4b8c5ad34006074ebecc9fc1a233b2f167205e807c5e3ea5b84a1f9",
-        "8fe392acae53c3031a0a6debb3ac92a64a5ce2c9c287304bb388612d2f75d348",
-        "52efb9c8a44dfe88c8da985741eebc4eeb9ece4d59dbd40ac55a14b36b731881",
-        "16ef63151727b0615c381d216a8f637cf26870297f4763b42e6ee7cf83b936ba",
-        "c7d0fe810e76aa51df0076e566098d0a7ccbc4fbed594008e891b338f555be4c",
-        "487d0b37a2af6de422e99c72402ed0d96d7a159483962c59bf6d2307f32c9f56",
-        "26d9c9e3cad729e9699a32c8f638a7e2e4459929bba5517487a296a6195173d2",
-        "a85f828d6323d0c60e57ed1fc13947489f5abfaea6e860a9f9a3efef0b551325",
-        "2a97d9aa5a542489bada13334dc6aa3009d85dd385c3379a7c1d448f79d88eaf",
-        "e76d9009f29ac083a472428532ec3768c7b6a6955d87e545acb9c91fa33e4e5b",
-        "78b314bed9e7b2842ecc0085fc95a0a8a06a75c5747b821c04f81c8276367988",
-        "989f71bb2665d511a00210db40f38614f336c668a2f1cd27cc37da6d839f033a",
-        "333e52257f069e29e45c0e924c02ac8209a3f724e7a7a58e64375b74b984bf2b",
-        "dd1bfb05bf2684f7d0c9e08df1f7ac80a71e269b4a214f9d80b2b928c08675c3",
-        "acf3255a5383c1ecb73150ae1c042f87259ea950e8f2087026daa89a06f453bd",
-        "19fe3850aff23a85203b84308473f4fceeaabb3ea40fb592dfabdc8a71998ebb",
-        "694a6f08050fcdc7da47601ae89a35e5ce339f90a0afacd169af4473d582134e",
-        "a488c104bd6a566c149d5c8ace6811d425ad21e0029045dfc41651f4acacb615",
-        "b9f0b1278b84db91350cb3b81c414c70733869ddb305375f2d908d48808b4c47",
-        "4b72f0e270d12d1e8644018b40ac6848f0f540b65b695533e2044939ce0fe4f4",
-        "b9c22a804d0b7e3d221cd1ed64c127e256f8364ae78609c235777e8b9055e0ac",
-        "6a0133ace00514c49d328b7fc1a844c48a3fa4c255381da0e6682b293454f897",
-        "4e240cefad47d86647e8a80e1811c9412f9b237c0d093a9e2979b86577ed8078",
-        "05b14511600722a7924cd99b2a9e2c4634661146a599dcc25f368a3068662bb2",
-        "fb660d085cd04f14eea658421b56713740902832ceca98327d5d76bfaff7065c",
-        "b8ff59ec2aceb662140d903869ee54b6a2d80e79ccde4ba655e07a968a02a107",
-        "da06dc58856be482ebcbe492e4bd7f600a6286a7c3a6883114410c6ba11c148c",
-        "b499d5b0872c660859c8f3c5d1c13cdde4a21438abc0d4f3852c0ec355c372da",
-        "25f303eaaab7305c07ae1b60f2b191ba2ce4ae8b9ff2ebb2cfb2ebb80e388a5b",
-        "29bb40c0b7ba258fbf01fc1d7d10488efff0f5d146e1b32f8585ae415ff3ddcc",
-        "c2b97bbd32d3428553770d2f1b7df0d73a4df9da6d9189b5e8532cd42628b434",
-        "4155677173cccae62fe73b7aafbb990235e429f1f758cb4984f9658c9a1b200b",
-        "cddbb479cda63a63b8d295e8dca1d03c06c2e5d243e38131d96da92b4507f423"
+        "9dff91ea32c8b77e26f380fd8b9e85bf224752b75cb641050066cc4362d9c2ca",
+        "7f36031e3d4f602d2f9087652c8f99b21c452f3e8dbf640a98684295fccdf26d",
+        "e4d9155087fad59b070bae548868c93ec2bb8f34960d3a8d74de55f6b954ce67",
+        "0da150f6e10204ba4b510cfd3a3be6f331be9370829a7d6a422391c83e0bd62e",
+        "aaa74e2fecf32b4691f69ae0ff98e4de6c8c7999607c2607395122289b6ab36b",
+        "b0dc70e6550342995b1a775218b57ef142db5757e157f72995694841fa727a43",
+        "1ca9ee5224900031c9a6dcbf3a355ddf071e28e97b758a965911f4c304f6df78",
+        "a01710673e774a5a92aecc4230d3d26c5a12cb56638dfead5d65a321d0b3a73b",
+        "4d3651dc4c44b9baa34e7f9617ad4125bacf3fe24a829a271c7a5384932295d2",
+        "8511112c26be987b0b714318db968e61c89d50ee96284439d0d22bb9725b4837",
+        "2d7e49069b612c7179e693bc08d7fc0c3a974332c6adb6758a7f1d9287f969e4",
+        "0a51cf04db98e4dbdafb1f9ef28be62cc275422d15cc86e11e01d8aea02c028e",
+        "076e3818aae55c9e57784eb7b5acde9e000b278856c535eb97fa4f63a1bdc7d8",
+        "53882796ebdddf7be32b3877e002b1bc620f29ebe82086bab2bffc9fbf661c06",
+        "69202becbeae79556d0c294f3a75635cec2be11e98c8cc98db54025f7dc13e4e",
+        "1ce1c712f234213a7ea849ddc70baf66dd261cc5f7a664437ba9744e9c16e621",
+        "7894902ef2521959efd084a39dedff650bd31fa16eea102cd0d90a4e7cf2be59",
+        "9010567b6f40c6afcee93a92fd9d6bae311dd3c7d53d13cfb78610584c071cb3",
+        "482ff64ae1ee13793fdff58736083172ce200ee25699adfe7ee23d195c239f49",
+        "0910fe2ae18cfb5ffbb001b46c542170dda85b4aaf2c52cad8bc89b02fe5a271",
+        "0369362f5e16890f5c8f14caa8a5c4cf60a571b7a67c258f174113b601841944",
+        "ffdf768f58ec71fde36b0651fee239121e0f3e60764f328b230f6393d0bd15ec",
+        "9a098a4f97012dfd04a912b853ab2753bf2cc0ffcd4e6af93e7f7f4616518e9a",
+        "46d16b9244f21144fb5e3fd5221cfcb59d4930aaa8163fef3b18c4b6a884583a",
+        "38ee01eedc9b459e2e41f4d94cdb3df6b695f4778a882b4ac93ed16fe8c7b2e5",
+        "af55c4a612680a40d8831049f108f41729969fff207c534d817795c6e7b8943d",
+        "a4557dafca33ae1727b76cb6bf5a636212e0cdcfb8093723c92bdcd432717035",
+        "2f86082d52623a3ffc1328f74300cf79f28870e26033ab177f95d63c2d4fc88d",
+        "f0a413d65551986492bebd6afc45110d7ad326e68e640874020bc6eb0a44c22f",
+        "00696e40cd4dd9065f2aaf3a910186c64e381226b220e177b64d9444706aa15c",
+        "b95118ccaaa708e92adbe97d794e9fb80b6dc8e6da1fc7e8bdf92757e28c3e4a",
+        "9b8328cd063a9e1f4c8d2637b720f34e720aca867c36360d6e4518ed397c5ee2",
+        "ce45372e0ff617f747f1f8ae158a2265561b96f6c2826662bad8a8ebe9fde19d",
+        "c25258d8508b041eb3799b6903d00314656a885b6fa4df585c5b57dadf56d95c",
+        "f2d5d8feef13b8743b4ac6e33729e9962c0592ad89108d8100d502dd34ea4025",
+        "10114e1eee891a7a02abe27be93f1ff5d8634ef4975901e9d7b9f3698f4afb55",
+        "8e6a6bb0c32502e545b9adedfece21c53267ec7a3c33f597b65776098dbec2b4",
+        "dae0f855e5bfc70136bbb27e7100de0aa369a0aa1f587dc52634838b9f227aa8",
+        "dfaa0c40517ec7e638d8468e3ddf62daefee10a11505274a223cad30d14bb061",
+        "ba2e00483da89d19916f7ee7322811ec57c8b1a49de8fdd2111404c056ad7742"
       ],
       "input_frame_clock_ms": [
         1000,
@@ -1771,8 +1771,8 @@
     {
       "file": "media/multiplied-mini101.webp",
       "kind": "Current Triple Mini same-cell repeated pickups; stable filename",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -1933,8 +1933,8 @@
     {
       "file": "media/jackpots.png",
       "kind": "Actual Main/UI live-session page: jackpots",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -1972,8 +1972,8 @@
     {
       "file": "media/game-values.png",
       "kind": "Actual Main/UI live-session page: Counter & Jackpots parent",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -2011,8 +2011,8 @@
     {
       "file": "media/counter-editor.png",
       "kind": "Actual Main/UI live-session page: counter-editor",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -2050,8 +2050,8 @@
     {
       "file": "media/jackpot-values.png",
       "kind": "Actual Main/UI live-session page: jackpot-values",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -2089,8 +2089,8 @@
     {
       "file": "media/jackpot-editor.png",
       "kind": "Actual Main/UI live-session page: jackpot-editor",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -2128,8 +2128,8 @@
     {
       "file": "media/jackpots-custom.png",
       "kind": "Actual Main/UI live-session page: jackpots-custom",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "dimensions": [
         720,
         405
@@ -2165,9 +2165,366 @@
       "custom_jackpot_mask": 4
     },
     {
-      "file": "media/gameplay120-spin.webp",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "file": "media/maximum-counter130.png",
+      "kind": "Bounded counter draft at maximum1886; live counter remains unchanged until Apply",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "8eab10adea05ec0c228333536c905b258ed07829804b26a5ac4866111d17aae2",
+      "bytes": 12575,
+      "fixture_kind": "Actual Main/UI button handlers in a synthetic fresh host session; no direct draft/bank/grid edits.",
+      "raw_camera_or_user_screenshot": false,
+      "exact_source_RGB": true,
+      "frames_financial_source_and_entropy_guards": true,
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "input_frame_rgb565_sha256": [
+        "9eb7a8f4d0bc81e675f437445b50e4cec80bd1b7aa52357b72901935a4177a81"
+      ]
+    },
+    {
+      "file": "media/counter-editor130.webp",
+      "kind": "Blue/grey digit presses:0886 to1886 and back, then lower-digit6 to0; no Apply",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "c863af69735ce0bbfaa2a877682079d5c18f9040d052ee7cd54fddb29651a2a9",
+      "bytes": 66440,
+      "fixture_kind": "Actual Main/UI button handlers in a synthetic fresh host session; no direct draft/bank/grid edits.",
+      "raw_camera_or_user_screenshot": false,
+      "exact_source_RGB": true,
+      "frames_financial_source_and_entropy_guards": true,
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 85,
+      "encoded_frames": 85,
+      "duration_ms": 4236,
+      "lossless_decode_verified": true,
+      "preview_repeats_event": true,
+      "no_Apply_in_animation": true,
+      "live_engine_meter_constant": 1246,
+      "entropy_captures_constant": 2,
+      "input_frame_rgb565_sha256": [
+        "59602e8b2b64e7abe63b8d3452d987f2613f4afc37a22112c4e95aff0654f220",
+        "8337cd1279212bc1375dc7e016cd2944391a697e20db4750fd870dcd2a7e439f",
+        "024c6c7cf9333b14710bf6084f8f8429186d7ed2254b4102efbaa2e86b3a6bba",
+        "66608e5cfdbb979b3b58518d320a931a20f1a3add43b5578654f08069f933450",
+        "600c9cc6c5da20f00bffd5f7caff434e2bff6470b8fdd0a22abf78106fcc2fde",
+        "a94225f49c23c5490b54fcfd373973d85c58ae9e9a3d54d7540ffbb725fa8c01",
+        "cc565b65f7985fb401b19bc415dfd12f47b711ca0dbcb2ff933efb53c6c0932f",
+        "62836cb7df06559241cafe627acc3226d511ed5c51ac3c05f614d3622ec90900",
+        "1d5be74220c0dee5f47915ae45f019a76fbc3768daef3aebcaccbd09781eddfc",
+        "184c78a1a940c6d5b38603096ad3481062a82c7ee66bd2100ac05a90850e3cbe",
+        "40eac2a51cfc20af7c433c89c4bfcb471ce3a998852bec893b39a40aaebedceb",
+        "81995b70a06a13938a7b5ded8f2ae0b87cbbb591ec07e3ced20a8d3a515a1d1e",
+        "b09e16c438349ab050b0a788507380fcf29fc0d8355addc5c6618b5fed6b8bc2",
+        "b186ee7193db99cc7222de24451f2ae486d95712307542ddb294f132bc9a3491",
+        "e4336ac51f60d21782b28b9dad910bdd19ea45029a728551e87ab627eecfcad4",
+        "331e6a5a5a90e63a4102510da60058260cedd4e18098d4189b34c2124fe97a85",
+        "040c3d91eacda584063dab6585b0e90adc6ea13a450bfb3a5dc72b9b4eb8cfff",
+        "e9609a8bd0374fa200da38a077826837e060e0b0f11f69772da876b3eadac399",
+        "77e0d10e21ffd01b74b34269b8121177784c188a832ea293f00f7ed551d6af43",
+        "a579fd4354fdfb92d7e15985b409e699786f41a1aeb4e9b92e56fd216a1ed23b",
+        "1cecfeaebc1d2b9b213594ae1f4831c0b2010bed8734b1f29a9e696fa52928a6",
+        "706ced17e0fdf9b25fa813fc716588d544165d62e764ef8639447a2d09ddfb60",
+        "a19f46ee1d2396d7a2ee52787e48fd2e69bbd1bbfc8f27c74225cdb64a077ab9",
+        "a9bc1028c8eaa6782ea4337afd1f432f363de162a7e706584f189ce994af1348",
+        "1f39342da95b5805aef3339d6ea1a5b1fcd6aeb40cfaf621e8422141153962f4",
+        "8e8c463be1dc887d668b06fa907b0bcc91709c2c2dcce4a334acbc7123a07b11",
+        "97cddbca002d13ba229abd7604c604d6392ff277a7496f3f84f9a1926b3038ae",
+        "a9e993287b2b65b24e534db942504f7e5d2c2bf2f5755934858e861e474d4fe1",
+        "af8cebf6ab72faf3da194a15c7646a737c71257c03120ed4a765be9434759628",
+        "3f0ad2f16bff07fa3706d2ef156f059490396e7722103ec9c8ab94c45f2eb273",
+        "1c1c38691c28ed475aedb483f0740c868b68fd8807507b97ce4437758f897aaf",
+        "d3f44799a538bbbe12da521217ff721ce9cf71ebe0b536fc33e3d03a074ecf2c",
+        "2f59620b4b35649bc052ba57b25bc92c44b614355016aea3fd4d84e958cf5c3d",
+        "e88d5b9629777e9bcdef5a769fe2fb1558da78e14e92f3f8f75159d4323a1b4b",
+        "824537ecddf73e9e012e0e13d7dbeef52ee53e40ba4cafe22ce5955ff547b66f",
+        "b5d2bac718bc20778de9644241168cec2d3dc2e8d8f424f79c5a8cf6d811014f",
+        "54832c7c1b11476d954e649d7010a8d2d09e6a294981eac873e3e0f1b4b04a21",
+        "700489bf828e009b8ce1337cfe67369408b426588f83bfd98962cbe807695a53",
+        "2379f83739779307e5bc7affefee52e4c23b8135fdad13fd8858de2b06c7d0bf",
+        "9bdf018179e40f8c7438181ed94adaaa78c89c4f95b462ea3d02719ad4ed8839",
+        "f603ee7cc441c541b4dcbec20e87bde6c7a4faa554295de0ae4327df4981d855",
+        "8c55e814def8345491d3f406ee26aea8c51e0a9df9b77e19f0827ab866392fc1",
+        "ea8ace7ac5f879a0ea2ccd1780bf5773b24777886d62626c66615175e98da124",
+        "a85fd4a58e1a999ac4c802e6e3d378da011dd4daea4f88f858c4cc551be5bb49",
+        "f6dc5c13238abcd0b670e60550f64db4d846cb3d6837459a37a971f5422b8d62",
+        "d69aa12e1bc9681aae9ba73b5f30e19f50787d4d4d4b2fa2b90c4db3d6753fd7",
+        "2b3db65facf868d7c601322206c58b1f9d4dbd1d9ab2f5cfde1dbee972c42823",
+        "59ccb195f9424037ea861427df10bc598abe3fa4008796e0c2540977b3997a63",
+        "8fd65e8bc5b6601ad427901b17249ea5c552e6e28981deb2d66c7b33de5fe1e9",
+        "4dfb173eda1f6e46206e306529dd90ec2021315b23b914fff29232b07b485c04",
+        "786791cf884a278eafd8e42d355e7dfadd8e7b858b71dbea30f6697087374e43",
+        "e81d04bcbf0cac684ce94cde448b8616af4c57c4e092a432ae5f80f0986e2500",
+        "91ee35a8520357851e5ae45a87a7a3f2dc1d3c22b3297681f2d77534e1d0c3d5",
+        "3f027cb9779567439ae01a8a2121b9568e14dd0b70697ef8fa702b95f3752741",
+        "1afd966064c58a5944332e852d33831cd42264c9b0e2be8db53e9bfa44e23cad",
+        "5bb32101cdc3d421680db5fea1ed15b7404e4987088f8c7aa5b48daa6b13b140",
+        "51de94c7974be86e9afecaaf50351b4eeb6742d753eea49d35af08317595fbf7",
+        "1b3cee3ca89af70de9730d5ff8bbbc18d21ba65009960cefec22bfbecc22f36f",
+        "1e7c05b93ca67541ebdad3d6c8b5df29698cb8a198686ff38313a0f502dd49c7",
+        "53dc9fd5841f7136fe2a0d0b96a63a7bba8f01ba7a750be0f5c352df37aac12a",
+        "9ac779322246e0884d9224b885f941087b6621dab614fc1b7fd2d8995bee8d4e",
+        "dbc06bdd34fd7556ede1c0e8ab51a2954e7eb68b05c194a8b6992b00c4befe57",
+        "2fb88e5ef2a3cfed2884ff4d3cc4bc9b2551d24fd3ecc32a304cdb3ed45ecc36",
+        "2db4e6657c3487251b9ff8e0a4db9e0a25fde745f7198af8474b5491f315372b",
+        "43c41526380f9175f82bca8127f4dd490f5290cde337b362fd90b0c3c5b8ba67",
+        "61819466750d2a25d795588a80cabae101a1335037b198c3f6caa7f53ac27ec9",
+        "8bec7d042d80cad0d47bc412f4c8ac45c41e34427aa6ec3177d1fcf413999f31",
+        "01ed10909b1ac2a502e9dd12ec803e11f9457f61a17cc5ef05ba8004d70b8af1",
+        "1728d6daf5dcc25e65aa3653ba967f88110ae9a48c9a778d27f3d7371964da26",
+        "fbaad20fc1437ff7742ef32284f105c855460a39a489780596b16a269182696b",
+        "f0c9d799bdaf7c441c2abc425f91b37539e37b46075894ff39406abba7226c30",
+        "39652cf1dfd564cda70aa387ef62a40890ca14566de4ccb820896d19132609cf",
+        "09c3e50d1c5b61ffa223a63e9fbd49e9973cb45b101962628f9576df943e321c",
+        "fa4df9948667f8873a462d39cea7e482feb727ae9fe4008b9b3d216ce559df7e",
+        "71796c11949a1f6c872455b1df75242048d1b512da775fadd38ada12987f9866",
+        "68386ac784d50e8a86fec5a7194a19f7091d69ee3296c0d8da2f064d599b17a8",
+        "05b5e8586c87a84ae89878a1fef07f3be7c740eba1cb6c7fe2494f0f4b2f450d",
+        "9e549523f97ddc2902f6787f1557fd4683e722adeca05cc4ca0612ecf0500a17",
+        "2d32859a8b2949ee8dc32aa7e443859b68efb9abc2281b42af527af84a2c94c6",
+        "f287cfce6df3ba31576ca44cf4c37a0e595b39f1a03d78429c72a3b9b22008a3",
+        "1b39134f8601540cca94dc4c5b4d8b18971c420b0dd793b0f91588bce506f389",
+        "d43ecbc3f3b651ace52b9ef694673a2258b8c6dd0d0cde82325c3b46018be2f9",
+        "35c32fa717d4f335833c01ef182765bb3589c820f65223859fdb08e1611d6a04",
+        "1560bd9c161e30f58ee2b76af4f6d2a31b7f80425578391ec5abc6393658c712",
+        "539152b39765a5371a66c204d18bbbb6715b4343a90a6f82c8e8f953eb6fcb49"
+      ],
+      "input_frame_clock_ms": [
+        7976,
+        8018,
+        8060,
+        8102,
+        8144,
+        8186,
+        8228,
+        8270,
+        8312,
+        8354,
+        8396,
+        8438,
+        8480,
+        8522,
+        8564,
+        8650,
+        8692,
+        8734,
+        8776,
+        8818,
+        8860,
+        8902,
+        8944,
+        8986,
+        9028,
+        9070,
+        9112,
+        9154,
+        9196,
+        9238,
+        9324,
+        9366,
+        9408,
+        9450,
+        9492,
+        9534,
+        9576,
+        9618,
+        9660,
+        9702,
+        9744,
+        9786,
+        9828,
+        9870,
+        9912,
+        9998,
+        10040,
+        10082,
+        10124,
+        10166,
+        10208,
+        10250,
+        10292,
+        10378,
+        10420,
+        10462,
+        10548,
+        10590,
+        10632,
+        10718,
+        10760,
+        10802,
+        10844,
+        10886,
+        10928,
+        10970,
+        11012,
+        11098,
+        11140,
+        11182,
+        11224,
+        11266,
+        11308,
+        11350,
+        11392,
+        11434,
+        11476,
+        11518,
+        11560,
+        11602,
+        11644,
+        11686,
+        11728,
+        11770,
+        11812
+      ],
+      "source_frame_durations_ms": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        86,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        86,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        86,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        86,
+        42,
+        42,
+        86,
+        42,
+        42,
+        86,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        86,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        400
+      ],
+      "draft_changes": [
+        [
+          0,
+          886,
+          0
+        ],
+        [
+          15,
+          1886,
+          0
+        ],
+        [
+          30,
+          886,
+          0
+        ],
+        [
+          45,
+          1886,
+          0
+        ],
+        [
+          53,
+          1886,
+          1
+        ],
+        [
+          56,
+          1886,
+          2
+        ],
+        [
+          59,
+          1886,
+          3
+        ],
+        [
+          67,
+          1880,
+          3
+        ]
+      ]
+    },
+    {
+      "file": "media/gameplay130-spin.webp",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "sha256": "8ab38bb06bd83d46b6b41f6790c08a713646aba261801f9e1cf48bfeb8ad4a04",
       "bytes": 4797132,
       "dimensions": [
@@ -2226,12 +2583,12 @@
       "encoded_frame_ms": 40,
       "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
       "first_full_gold_still_ms": 3200,
-      "source_fact_receipt_sha256": "635eb807b7be9d629435a82f2a85d543865936a9d4b80fb363336e403f39f9ee"
+      "source_fact_receipt_sha256": "ab2ec57f828c9f5b80b5b40b02b428ebb81c7ddc24afeba21c3cea927cec1a0c"
     },
     {
-      "file": "media/gameplay120-spin.gif",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "file": "media/gameplay130-spin.gif",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "sha256": "8bd327991e41d853c9928c93c23c3f6ae275b529b5d23ae84ccead9bc0b0f736",
       "bytes": 13049298,
       "dimensions": [
@@ -2290,12 +2647,12 @@
       "encoded_frame_ms": 40,
       "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
       "first_full_gold_still_ms": 3200,
-      "source_fact_receipt_sha256": "635eb807b7be9d629435a82f2a85d543865936a9d4b80fb363336e403f39f9ee"
+      "source_fact_receipt_sha256": "ab2ec57f828c9f5b80b5b40b02b428ebb81c7ddc24afeba21c3cea927cec1a0c"
     },
     {
-      "file": "media/hero-full-gold120.png",
-      "source_version": "0.2.120",
-      "runtime": "79c9ab8dac1626c31db2fe99360a50045e145f7f19367686e7c1c5e1f405c433",
+      "file": "media/hero-full-gold130.png",
+      "source_version": "0.2.130",
+      "runtime": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
       "sha256": "bdccecde826ddfc1ffe0579c827b22bdb40688ceedb6fdf32024e13c65dbe7e7",
       "bytes": 49721,
       "dimensions": [
