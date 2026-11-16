@@ -1,15 +1,15 @@
 {
-  "version": "0.2.104",
-  "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "version": "0.2.106",
+  "runtime": "816ddd517f0c08dc15ddb39185ca2f252625a74b7b536120966c14416694bf6b",
   "mathFamily": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03",
   "engineeringAccepted": true,
   "acceptanceMeaning": "Engineering source acceptance only; not regulatory approval or original casino math calibration.",
   "sourcePins": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
-    "audio.cpp": "57027d3c26eb3ab5e70bf089a2ed04f310ef8355242e10c354d777a6b9876ad6",
-    "audio.h": "0027c17308d62a33031b7c453b9df9c4df385fd16ceeef86042a04678048ef1f",
+    "audio.cpp": "6ea8323e0537ce4b44eb16d132cdcd88eb1206d4ed024e058c1c9f41b65d1bb5",
+    "audio.h": "64796182260ab480c136c98f3462ffbb378a45cc0f137ae232fe3a2fe6949d71",
     "audio_cash_in_generated.inc": "a562d427f3305062796d67b07fecbd6bcd88d5f590f300784fe57fda58d7ea5c",
-    "audio_cues.cpp": "4493e13dec443f043c813c4fb57311b0d605b577e2e8e24332d90ea7dcf61c49",
+    "audio_cues.cpp": "fdbf7cbe8c00493af24d5d6870959dd486b317ab710250de829c0583c63c7d03",
     "audio_cues.h": "b66bec19d19dee5abd75350b78b4cee49a78af9775284dcce90bd2f7922ca859",
     "audio_free_start_generated.inc": "17ac2020672d0d7c4c7f80cedf58ff409fcd8fa36360ab7048d03968696f9ba1",
     "audio_music.cpp": "2632723dd98694aa3bf39f0a63ae9d05a3ef4d629db9061726e12126579025e4",
@@ -21,7 +21,7 @@
     "award_cache.h": "804b13efba7ad91c78039948ba2bf471b90f90e85665894d4946fce3578e442e",
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
-    "build_version.h": "cad07d25c2261e9f909841b54ddb9e1636e9d3eb7a93e07f21c5ee82acc74644",
+    "build_version.h": "0d4653f5759c8ba07fd74b2bd3ce8181d1f97a2e86d13f587bd4e8ea989a31e0",
     "cabinet_profile.h": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
     "cabinet_sage_large28.h": "b0ce6e39112497d3b7ae0e99a32a3e577c90b5c3580d2fc4ba22e3b91f76e815",
@@ -81,7 +81,7 @@
     "live_hold_count48.inc": "4afd9a28fb8027d2d05ecd23cbe842bc060c71cd1ac6a403e737f715b52bd503",
     "main.cpp": "b791e37d4c8e96830e8cf3bbbff4e870832014647ebab37c5a085f868cac036c",
     "major_title112_data.h": "83eb58d9c28e7aab85a08836af8892ec39cf0422433cfd95c701d5d6dd1d3c17",
-    "math_runtime_identity.h": "12fb203af9b5e21aecd78d1ee8e29898e58e3d5bfd600b7777c3bcb9d54ed101",
+    "math_runtime_identity.h": "c707868270a4cc7a207fa263cf690dfbb077060cd906fe8e7e82a04f82a9757e",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "437859f2903793dec34f2c13e9c1013a616a5715f058ffdb1a00b68db71367c4",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -153,7 +153,7 @@
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "33e321b996e073cb63f37c5665776807a50396e4cf91742d7c1fea6d5074776b",
+    "ui.cpp": "d795506acde9109da0b8351151dcd6d9088b831976b754030b24d76ead468a2e",
     "ui.h": "b9cb1e10efdee7140a38e2b5fec42b3d02be94133180a409a1fc9241f057cbb2",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -179,6 +179,6 @@
       "bytes": 199677
     }
   },
-  "sourceAcceptanceReceiptSHA256": "d586449ed544570d672c6c58fe254f44841eb1ab5182c00cd3f2efdf2c72c4af",
+  "sourceAcceptanceReceiptSHA256": "ff8930b817153f9075d417b1cd52d1c3147c0235e5c253098769681cf989b1ab",
   "sourceBodyFiles": 160
 }

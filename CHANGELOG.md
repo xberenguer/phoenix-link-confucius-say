@@ -1,23 +1,25 @@
 # Current release notes
 
-## 0.2.104
+## 0.2.106
 
-- Confucius topknots extend into the grey header during reel motion, landings and joined wins.
-- Every documentation screenshot and animation displays at 720 pixels wide. Current gallery captures use exact 3× nearest-neighbor enlargement from 240 × 135.
-- The 19.84-second preview opens mid-spin, lands on Confucius and shows the gold merge before two more results, credit updates and complete WIN count-ups. It is a scripted source render with demonstration credits.
-- AES-256 CTR_DRBG, fresh sessions with 1,000 denomination credits and fail-closed outcome handling remain the current game contract.
-- Model I (`0x00020012`) retains its implemented prices, weights and numerical Grand schedules. Return ranges are ideal-model references, with original casino odds unrecovered.
+- SELECT BET opens on the current denomination, then advances to the selected line count and bet multiplier. Changing a group preserves a valid selection; unavailable choices fall back to the first offered option.
+- Removed the looping reel rumble and its Sound-menu setting. Reel stops, Phoenix cues, win jingles and feature music remain available.
+- Added CLEAR BALANCE to Add Credits. It returns to the game at zero; enabled auto-refill applies when another spin is requested.
+- Free Game progress remains visible during nested Phoenix Hold features and their fire transitions.
+- The browser game uses the same current source and includes a GitHub link.
 
-<img src="docs/media/sage.webp" alt="Current 104 joined Sage and header topknots" width="720">
+<img src="docs/media/wagers-lines.png" alt="Selected line count remains focused" width="720">
+
+<img src="docs/media/credits.png" alt="Clear Balance in the Add Credits menu" width="720">
+
+<img src="docs/media/nested-free.png" alt="Free Game progress during a nested Phoenix Hold feature" width="720">
 
 ## Validation status
 
-The engineering-accepted source passed current Main/UI host checks, the 960-scene header-protection comparison and the ESP32-S3 target build.
+Native firmware and offline assets passed full write/readback verification. Startup confirmed the current version, a healthy random service, all 60 atlas frames,1,000 credits, zero actions and autoplay off.
 
-Native: Firmware and assets passed full write/readback verification. Fresh boot confirmed version 0.2.104, a healthy random service with no source/lease fault, all 60 atlas frames, 1,000 credits, zero actions and autoplay off. Two entropy captures were observed at startup. Later USB synchronization remains unavailable; no spin was sent and per-action native entropy, physical buttons and a full playthrough are not verified by these checks.
+Automated checks cover actual Main/UI controls,172 wager-selection cases, finite audio and feature programs, manual/autoplay routes and fail-closed random-source handling. The source-bound browser build is tested in Chromium. Physical speaker fidelity and original casino odds remain unqualified.
 
-Browser: The exact accepted 104 C++ browser build passed source/provenance checks and desktop Chromium regressions, including fresh sessions/WebCrypto, controls/audio, cached offline use and subpath/mobile emulation. This does not establish an actual phone, physical speaker or hosted publication result.
+The game uses Mbed TLS 3.6.7 AES-256 CTR-DRBG. Model I (`0x00020012`) retains its existing prices, weights and numerical Grand schedules. The first NIST STS study covers 15 test families and 188 rows over 1,000 sequences of 1,000,000 bits, with no aggregate proportion/uniformity flags; it does not establish physical entropy quality or Nevada approval.
 
-The retained first NIST STS 2.1.2 study covers 15 test families and 188 rows over 1,000 × 1,000,000 bits with no aggregate proportion/uniformity flags. It does not establish physical entropy quality, original casino odds or Nevada approval.
-
-See [testing](docs/testing.md) and [math and evidence](docs/math-and-evidence.md). This file describes the current release only.
+See [testing](docs/testing.md) and [math and evidence](docs/math-and-evidence.md).

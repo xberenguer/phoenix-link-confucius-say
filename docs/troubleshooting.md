@@ -26,7 +26,7 @@ Host randomness tests do not establish physical entropy quality. The supported n
 
 ## No sound or crackle
 
-Use the Sound menu's master/reel/landing switches, fine volume and test entries. Browsers may require an initial gesture. A missing required music file is different from a muted channel. Browser and Stick speakers/mixing have different timing and acoustic behavior.
+Use the Sound menu's master sound, stops/landings, fine volume and test entries. Browsers may require an initial gesture. A missing required music file is different from a muted channel. Browser and Stick speakers/mixing have different timing and acoustic behavior.
 
 For crackle/resets on battery, lower volume and consult [M5Stack's speaker guidance](https://docs.m5stack.com/en/core/StickS3). Check USB and battery behavior separately; source fidelity remains a listening question.
 

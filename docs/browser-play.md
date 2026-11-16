@@ -1,6 +1,6 @@
 # Playing in a browser
 
-[Play the browser game](https://xberenguer.github.io/phoenix-link-confucius-say/). The current source release is **0.2.104**, with the build adapter in `browser/` and the hosted bundle in `demo/`. You can also run `python3 -m http.server --directory demo 8080` from the repository root and open the local page.
+[Play the browser game](https://xberenguer.github.io/phoenix-link-confucius-say/). The current source release is **0.2.106**, with the build adapter in `browser/` and the hosted bundle in `demo/`. You can also run `python3 -m http.server --directory demo 8080` from the repository root and open the local page.
 
 The browser compiles the C++ Engine, UI and audio programs to WebAssembly. Its buttons represent the Stick controls around the 240 × 135 game. No connected Stick, account or game server is needed.
 
@@ -8,7 +8,7 @@ The browser compiles the C++ Engine, UI and audio programs to WebAssembly. Its b
 
 Blue spins/selects; holding blue toggles autoplay. Grey opens the wager panel or moves menu focus. Holding grey returns from the wager panel to the game, and opens settings from gameplay. Double-grey flips the screen. See [controls](controls.md).
 
-A click or tap may be required before browser sound can start. The regular Sound menu controls music, reel/landing switches and volume. Hiding a tab pauses presentation/audio; returning to that still-open page continues its live session.
+A click or tap may be required before browser sound can start. The Sound menu controls master sound, stops/landings and volume. Hiding a tab pauses presentation/audio; returning to that still-open page continues its live session.
 
 ## Fresh sessions
 

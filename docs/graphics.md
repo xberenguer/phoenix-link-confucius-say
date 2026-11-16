@@ -56,6 +56,7 @@ Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../f
 | Major/Grand | Separate title/amount sequence; full-board Grand adds to the values |
 | Coins | Deterministic upward fountain, spreading and falling through the screen |
 | Return fire | Separate exit/reveal geometry returning to Free or Base |
+| Nested Free progress | Actual Free game/total in the condition-text slot, visible during Hold and over fire |
 | Counter border | Calm four-second moving gold rim around the small number box; green digits and padding are independent |
 
 <img src="media/phoenix.webp" alt="Phoenix animation display fixture" width="720">

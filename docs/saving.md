@@ -4,7 +4,7 @@ Progress is **session-only**. Every device boot, browser reload and firmware fla
 
 ## Credits and meters
 
-During a live session, ADD CREDITS adds $1,000, $10,000 or $100,000 to the money balance. A successful addition returns directly to manual gameplay. It does not reset that session's wager, meters or statistics. Auto Refill uses the last supported addition amount; see [settings](settings.md#credits).
+During a live session, ADD CREDITS adds $1,000, $10,000 or $100,000 to the money balance. A successful addition returns directly to manual gameplay. It does not reset that session's wager, meters or statistics. CLEAR BALANCE sets the money balance to zero at a safe closed Base boundary and returns to manual play. It preserves the live wager, meter buckets and statistics, and leaves Auto Refill unchanged. Auto Refill uses the last supported addition amount; see [settings](settings.md#credits).
 
 Meter buckets are keyed by denomination and total bet credits within the current session. Switching away and back selects that bucket again. A new boot or reload starts new meter state.
 

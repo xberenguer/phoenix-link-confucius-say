@@ -1,10 +1,10 @@
 {
-  "version": "0.2.104",
-  "runtime": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "version": "0.2.106",
+  "runtime": "816ddd517f0c08dc15ddb39185ca2f252625a74b7b536120966c14416694bf6b",
   "artifacts": {
     "PROVENANCE.json": {
       "bytes": 18569,
-      "sha256": "a83fa52220c0cf40e9194a49f299c5a887828741022a438ffb322e156201ebb6"
+      "sha256": "37313b7482283436b983900dc849d52651bf9ff572176e776e9f673c3b5679d1"
     },
     "THIRD_PARTY_LICENSES.txt": {
       "bytes": 32527,
@@ -19,8 +19,8 @@
       "sha256": "53162f7a9d49f01814cf66572ade767d62f3c25f92b012d1269024639e4992e2"
     },
     "index.html": {
-      "bytes": 1959,
-      "sha256": "a3d5a7d3cf7c167b28b5bfacab3ecf70af04519d6b98cda21cfd5ed82a9eaad9"
+      "bytes": 2130,
+      "sha256": "93756cf2f137288ca5607c4b7f829f08eaf18edb9a7c293aa47f3c75d610038e"
     },
     "phoenix.data": {
       "bytes": 1402188,
@@ -31,20 +31,20 @@
       "sha256": "dfa25ab2bb40cca0edfea669dd13f729b196d5fa782434baf9ad0e313ff9113f"
     },
     "phoenix.wasm": {
-      "bytes": 5046071,
-      "sha256": "6c760c576c170e11d56822986610ce213a3c413a19fc81a865d71db7ffa3dc18"
+      "bytes": 5007633,
+      "sha256": "f9019ad99977519618614530c215bd29daa6a9acc3b62f61cb2ecf118100cf57"
     },
     "source-config.js": {
       "bytes": 220,
-      "sha256": "b6a97b4ec37678036fe296a741ff633782396c55cfd09a411b8cf61ac1683db6"
+      "sha256": "c99738f3e6548890b515c20b7c7f33cc0f7836b7843a9bb158434d4201e971e7"
     },
     "style.css": {
-      "bytes": 3598,
-      "sha256": "5e7f4f95c05172d299cb9f104339491cdcac3425c91a4c736b843aeed1447a63"
+      "bytes": 3835,
+      "sha256": "f8ebbcbfeda52cd1f6ac003073d5fa632ae288d965b4c9c369c7515dff0a322e"
     },
     "sw.js": {
       "bytes": 777,
-      "sha256": "cb9f7c921bc6c8424b113bc1d15ecf07b5f7ec0b80f8d780912b4430d79066cb"
+      "sha256": "14b1089208369bdc4244cb44a6e403f3c832a943b0645eca7430ff626bb33d7f"
     }
   },
   "note": "This manifest excludes itself to avoid a circular digest. The deployment gate verifies all other bundle files and source/adapter pins."

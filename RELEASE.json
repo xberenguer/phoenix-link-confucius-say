@@ -1,6 +1,6 @@
 {
-  "version": "0.2.104",
-  "runtime_fingerprint": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "version": "0.2.106",
+  "runtime_fingerprint": "816ddd517f0c08dc15ddb39185ca2f252625a74b7b536120966c14416694bf6b",
   "mathematical_family": "52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03",
   "local_model": "0x00020012",
   "source_body_files": 160,
@@ -22,16 +22,17 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Firmware and assets passed full write/readback verification. Fresh boot confirmed version 0.2.104, a healthy random service with no source/lease fault, all 60 atlas frames, 1,000 credits, zero actions and autoplay off. Two entropy captures were observed at startup. Later USB synchronization remains unavailable; no spin was sent and per-action native entropy, physical buttons and a full playthrough are not verified by these checks.",
-  "browser_version": "0.2.104",
-  "native_status_version": "0.2.104",
+  "native_validation": "Firmware and offline assets passed full write/readback verification. Fresh startup confirmed version 0.2.106, a healthy random service, all 60 atlas frames, 1,000 credits, zero actions and autoplay off. Physical speaker fidelity and entropy strength are not established by these checks.",
+  "browser_version": "0.2.106",
+  "native_status_version": "0.2.106",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
   "status": "Current source-bound release package",
   "changes": [
-    "Sage topknots extend into grey header during reel motion, landings and joined wins",
-    "Current-source nearest-neighbor 720px documentation gallery",
-    "Three-result preview opens mid-spin, then shows the gold merge and complete credit/WIN counts",
-    "Fresh 1,000-credit sessions and AES-256 CTR_DRBG outcome service"
+    "Current denomination, line count and multiplier stay focused while selecting a wager",
+    "Synthesized reel rumble and its Sound-menu setting removed",
+    "CLEAR BALANCE returns to the game at zero; enabled auto-refill applies on the next spin",
+    "Free Game progress remains visible during nested Hold and fire",
+    "Browser and native game share current source; browser page links to GitHub"
   ]
 }

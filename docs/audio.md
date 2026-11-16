@@ -8,7 +8,7 @@ The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/
 
 | Event | Current routing |
 |---|---|
-| Reels begin moving | Looping reconstructed reel bed |
+| Reel motion | No reel-bed effect |
 | A reel/group impacts | Finite reel-stop or selected Phoenix-arrival family, with ordered pending tails |
 | Phoenix anticipation/arrival | Initial, Follow or Third family where the current landing selector qualifies it |
 | Awarded Confucius/Sage win | Scoped win cue; no generic flourish on every winning or stopped reel |
@@ -45,7 +45,7 @@ Manual play and autoplay share those event routes. Backend queue acceptance prov
 
 ## Settings and auditions
 
-Hold grey → Sound provides master mute, separate spin and stop/landing switches, fine volume and test playback. Disabling the reel bed does not disable win/feature music. Master mute does silence both categories.
+Hold grey → Sound provides master sound, a stops/landings switch, fine volume and test playback. Master mute covers cues and feature music.
 
 Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clamps at either end instead of wrapping a quiet setting to full volume. In the volume page, blue raises and grey lowers it.
 
@@ -55,7 +55,7 @@ PLAY TEST JINGLE auditions the dedicated Wisdom entry; PLAY FEATURE MUSIC auditi
 
 ## Bank and playback checks
 
-The reel bed and initial Phoenix arrival cues are synthesized from analytic recipes. Backend tests check that landing sounds finish playing. MP3 completion/award music and Twin PCM have separate cache and decoder checks.
+The initial Phoenix arrival cues are synthesized from analytic recipes. Backend tests check that landing sounds finish playing. MP3 completion/award music and Twin PCM have separate cache and decoder checks.
 
 Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation.
 

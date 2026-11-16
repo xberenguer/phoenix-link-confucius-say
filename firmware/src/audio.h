@@ -36,8 +36,8 @@ struct AudioLandingTiming {uint32_t events,maxQueueMs,maxLateMs,maxSubmitUs;};
 AudioLandingTiming audioLandingTiming();
 
 void audioInit(bool muted = false);
-// Call once per app loop. Drives a nonblocking180ms reel tail and protected
-// stinger FIFO; no delays, allocation, or render/game callbacks.
+// Call once per app loop. Drives protected finite cue queues; no delays,
+// allocation, or render/game callbacks.
 void audioUpdate(uint32_t nowMs);
 void audioSetMuted(bool muted);
 bool audioMuted();
@@ -48,8 +48,9 @@ bool audioFeatureBusy();
 // Pending stops or finite landing tails; payout/feature transitions wait for
 // these instead of cutting into a delayed reel-stop sequence.
 bool audioLandingsBusy();
-// Defaults: spin and landing sounds ON, volume192/255. Set before audioInit;
+// Defaults: landing sounds ON, volume192/255. Set before audioInit;
 // initialization preserves those selections. Muting never discards volume.
+// Retained spin preference accessors are inert; no reel-bed cue is registered.
 void audioSetSpinEnabled(bool enabled);
 bool audioSpinEnabled();
 void audioSetLandingsEnabled(bool enabled);
@@ -97,8 +98,9 @@ bool audioQueueLanding(AudioCue cue);
 // UI already controls their spacing. Busy voices retain the finite FIFO.
 bool audioQueueLanding(AudioCue cue,uint32_t nowMs);
 bool audioQueueLanding(AudioCue cue,uint32_t nowMs,uint32_t impactMs);
-// Reel bed0; stops1/2; Phoenix arrivals5/7; menu2; wins/countup3;
+// Stops1/2; Phoenix arrivals5/7; menu2; wins/countup3;
 // bonus stingers4; independent full feature stream6.
+// Starts an action's landing scope; no continuous reel sound is submitted.
 bool audioStartReels();
 void audioStopReels();
 void audioStopCue(AudioCue cue);

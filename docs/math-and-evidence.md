@@ -1,6 +1,6 @@
 # Math, RNG and what the evidence establishes
 
-Release 0.2.104 uses local model **I, `0x00020012`**, mathematical family `52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
+Release 0.2.106 uses local model **I, `0x00020012`**, mathematical family `52a05c04e7bb13827289f6566b3ecf8884d8590e58737ff65553e47d9d45df03`. The [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) are the implementation authority. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
 
 ## Evidence labels
 

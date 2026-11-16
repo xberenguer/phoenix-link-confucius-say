@@ -12,6 +12,8 @@ The large top-of-cabinet information is adapted to the small screen: a live coll
 
 <img src="media/hold.png" alt="Scripted Hold scene with synthetic demonstration credits" width="720">
 
+If the Hold is inside Wisdom Free Games, the header also retains the current Free game and total. That caption persists through the fire; it does not replace the remaining-respins or collected-count fields.
+
 ## Revival
 
 If the initial three respins produce **zero new Phoenixes**, the simulator restores three respins. The initial locked symbols do not satisfy this condition. Once at least one new Phoenix has arrived, a later three-spin drought ends the feature normally.

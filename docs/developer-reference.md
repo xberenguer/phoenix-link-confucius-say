@@ -1,6 +1,6 @@
 # Developer reference
 
-The current source is release 0.2.104, model I (`0x00020012`). Code/asset identity and ideal-reference qualification are bound by the included headers; original casino probabilities remain unknown.
+The current source is release 0.2.106, model I (`0x00020012`). Code/asset identity and ideal-reference qualification are bound by the included headers; original casino probabilities remain unknown.
 
 ## Runtime map
 

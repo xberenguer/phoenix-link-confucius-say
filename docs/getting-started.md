@@ -2,12 +2,12 @@
 
 This guide describes the current simulator. Images are deterministic demonstrations of the current game.
 
-The game starts directly at the reels. Once installed, play requires no Wi-Fi, phone, browser or computer. Each boot or browser reload starts manual play with 1,000 credits at the default $1 denomination ($1,000). Progress lasts for the live session. Credit controls add funds without clearing that session’s collection meter.
+The game starts directly at the reels. Once installed, play requires no Wi-Fi, phone, browser or computer. Each boot or browser reload starts manual play with 1,000 credits at the default $1 denomination ($1,000). Progress lasts for the live session. Adding credits or clearing the balance leaves that session’s collection meter intact.
 
 ## Start a paid spin
 
 1. Short-press the large grey side button. Its single-click action waits briefly for the double-click window, then opens the cabinet-style wager screen.
-2. Grey moves the focus and blue selects. Choose a denomination, a line control and a red bet button. **Selecting a funded red bet button starts a spin immediately.** Merely browsing a denomination or line does not stake credits.
+2. Grey moves the focus and blue selects. Focus opens on the current denomination, then follows its current valid line selection and offered bet multiplier. **Selecting a funded red bet button starts a spin immediately.** Merely browsing a denomination or line does not stake credits.
 3. During ordinary play, short-press blue for the next spin. A press during motion can accelerate the presentation; it cannot select a different result.
 
 The stake is `denomination × selected lines × bet multiplier`. The red buttons show the resulting credit amount. See [wagers](wagers.md) for the actual offered rows, including $1/5-line and $1/10-line choices.

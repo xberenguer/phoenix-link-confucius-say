@@ -26,7 +26,7 @@ The current small-screen menu offers a subset of the internal evaluator profiles
 
 ## Continuity
 
-Adding credits and using automatic refill do not reset collection progress during the live session. Switching away from a wager and back selects its current bucket again. All initialized buckets and queued Holds belong to that live game.
+Adding credits, clearing the balance and using automatic refill do not reset collection progress during the live session. Switching away from a wager and back selects its current bucket again. All initialized buckets and queued Holds belong to that live game.
 
 Opening a menu does not reset the meter. Each boot or page reload starts fresh meter state with a new game; no prior record is loaded. See [fresh sessions](saving.md).
 

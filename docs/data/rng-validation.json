@@ -1,6 +1,6 @@
 {
-  "version": "0.2.104",
-  "runtime_fingerprint": "097bbf87b829f8ffa8ffd5c4f7b21015a5bf7fb315f172e91d605ff9e8fed32d",
+  "version": "0.2.106",
+  "runtime_fingerprint": "816ddd517f0c08dc15ddb39185ca2f252625a74b7b536120966c14416694bf6b",
   "algorithm": "AES-256 CTR-DRBG",
   "backend": "Mbed TLS3.6.7 minimal private-symbol subset",
   "prediction_resistance": true,
@@ -19,7 +19,7 @@
     "excursion_applicable_sequences": 608,
     "rerolls": 0,
     "scope": "Host OS entropy; frozen production provider with independently reviewed mechanical API/configuration port to final source. Does not measure physical ESP32 entropy or prove cryptographic security/approval/RTP.",
-    "current_source_basis": "The statistical sample belongs to the unchanged production AES-256 CTR-DRBG provider;104 changes only UI/version/source-identity. It is not a new physical-device entropy or statistical study."
+    "current_source_basis": "The statistical sample belongs to the unchanged production AES-256 CTR-DRBG provider. Current UI/audio changes do not constitute a new physical-device entropy or statistical study."
   },
   "source_tests": {
     "command": "python3 tools/test_rng.py --sanitize",
@@ -35,10 +35,9 @@
     "atlas_frames_verified": 60,
     "user_confirmed_animations_and_buttons": false,
     "live_USB_spin_probe_verified": false,
-    "USB_reconnect_diagnostics": "Open investigation; subsequent commands did not return replies in this validation session.",
     "physical_entropy_strength_measured": false,
-    "validation_scope": "Current104 firmware/assets full readback and healthy fresh startup. No current104 physical-button confirmation; later USB sync unavailable before any spin command.",
-    "startup_entropy_captures": 2
+    "startup_entropy_captures": 2,
+    "validation_scope": "Current106 firmware/assets full readback and healthy fresh startup. Native play and acoustic onset were not measured by this flash check."
   },
   "casino_calibrated": false,
   "Nevada_approved": false,

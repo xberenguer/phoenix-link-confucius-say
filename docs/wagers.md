@@ -31,6 +31,10 @@ The lower-right badge shows the value of a credit. For this source-qualified cab
 
 The caption is a tiny above/below adaptation for the 240 × 135 display; physical readability remains a limitation. Internal profiles outside the offered menu are not extra selectable controls. Code: [denomination badge rules](../firmware/src/denomination_minbet46.h).
 
+The screen opens with the current denomination focused. Selecting a denomination keeps the current valid line selection focused; selecting lines keeps the current offered bet multiplier focused. A valid available choice is used if the current selection is unavailable. This order also applies to denominations with one line control. Selecting lines updates the red credit amounts without spending credits.
+
+<img src="media/wagers-lines.png" alt="Denomination selected with focus on a real PLAY LINES control" width="720">
+
 Viewing or cancelling the wager screen does not change the live wager or spend credits. A new session starts at its default wager; no previous game is imported.
 
 The [payout reference](payouts.md) exports the wider internal evaluator support with a selectable flag. Those internal rows must not be read as extra live cabinet buttons. See [controls](controls.md) for focus/navigation and [session rules](saving.md) for live feature/funding boundaries.

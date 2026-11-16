@@ -16,7 +16,7 @@ Brightness cycles the implemented levels. Display changes cash/credit presentati
 
 ## Sound
 
-Master sound, reel bed and stops/landings have separate controls. Fine volume and the three test entries let you audition the existing programs. See [audio](audio.md) for current routing and acoustic limits.
+Master sound and stops/landings have separate controls. Fine volume and the three test entries let you audition the existing programs. See [audio](audio.md) for current routing and acoustic limits.
 
 <img src="media/sound.png" alt="Sound menu" width="720">
 
@@ -29,10 +29,13 @@ Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the d
 | Add $1,000 | Add to the current money balance, return to Game with autoplay off |
 | Add $10,000 | Add to the current money balance, return to Game with autoplay off |
 | Add $100,000 | Add to the current money balance, return to Game with autoplay off |
+| Clear Balance | Set the money balance to zero and return to Game with autoplay off |
 | Auto Refill | Toggle refill when another paid spin is unaffordable |
 | Return to Menu | Leave this submenu |
 
-Auto Refill uses the last supported addition size for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Funding is available only at safe Ready/Base boundaries and does not reset the live session's wager, meters or statistics. There is no $1 million choice.
+Auto Refill uses the last supported addition size for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Clear Balance is available at a closed Ready/Base boundary; unfinished Free/Hold/queued work and service or selector faults block it. It preserves the live wager, meter buckets and statistics, and does not change the Auto Refill preference. A later unaffordable paid spin can therefore refill the balance if that option is on. There is no $1 million choice.
+
+<img src="media/credits.png" alt="Add Credits menu with Clear Balance selected, synthetic demonstration state" width="720">
 
 ## Battery display
 

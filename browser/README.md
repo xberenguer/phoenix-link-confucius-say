@@ -1,6 +1,6 @@
 # Browser build
 
-This port compiles the exact engineering-accepted 0.2.104 C++ Engine, renderer, audio decoder and music worker to WebAssembly. JavaScript supplies browser display, buttons, WebAudio and WebCrypto. It does not choose outcomes or payouts.
+This port compiles the exact engineering-accepted 0.2.106 C++ Engine, renderer, audio decoder and music worker to WebAssembly. JavaScript supplies browser display, buttons, WebAudio and WebCrypto. It does not choose outcomes or payouts.
 
 The game is session only: each reload starts with 1,000 denomination credits. There is no IndexedDB bank, old save import, bank export or saved RNG state. WebCrypto must be available in a secure context; an entropy failure stops play. Offline use requires the page and code/assets to have been cached previously in a secure browser context.
 

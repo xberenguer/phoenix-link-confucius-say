@@ -12,18 +12,15 @@ struct Clip {
 };
 Clip clips[kCueCount];
 bool muted = false, available = false;
-bool spinEnabled = true, landingsEnabled = true;
+bool landingsEnabled = true;
 uint8_t volume = 192;
 uint8_t gainMagnification = 0;
 AudioDiagnostics diagnostics = {0, 0, 0, AudioCue::Count, AudioResult::None, 0, 0, 0, 0};
-constexpr uint32_t kReelFadeMs=180;
-constexpr uint8_t kReelVolume=200;
 constexpr size_t kPendingCapacity=4;
 struct Pending { AudioCue cue;uint32_t offset=0; };
 Pending pending[2][kPendingCapacity];
 uint8_t pendingCount[2]={};
-uint32_t clockMs=0,fadeAt=0;
-bool reelsActive=false,reelsFading=false;
+uint32_t clockMs=0;
 uint8_t stopVoice=0,phoenixVoice=0;
 constexpr uint8_t kLandingCapacity=8;
 constexpr uint32_t kLandingSpacingMs=140;
@@ -128,7 +125,7 @@ bool play(AudioCue cue, uint32_t repeat, bool orderedLanding=false,uint32_t offs
   if (index >= kCueCount) return finish(AudioResult::InvalidCue);
   if (!available) return finish(AudioResult::NotReady);
   if (muted) return finish(AudioResult::Muted);
-  if ((isSpin(cue) && !spinEnabled) || (isLanding(cue) && !landingsEnabled))
+  if (isSpin(cue) || (isLanding(cue) && !landingsEnabled))
     return finish(AudioResult::Disabled);
   const Clip& clip = clips[index];
   if (!clip.samples || !clip.count||offset>=clip.count) return finish(AudioResult::MissingClip);
@@ -167,7 +164,7 @@ void audioInit(bool value) {
   muted = value;
   landingTiming={};
   completionActive=completionDelivered=false;completionElapsed=0;completionFencePending=false;completionClock=clockMs;
-  clearPending();reelsActive=reelsFading=false;
+  clearPending();
   auto config = M5.Speaker.config();
   // Pinned M5Unified StickS3 profile: BCK17, DOUT14, magnification1.
   // Gain8 could saturate overlapping finite voices at high master volume.
@@ -185,8 +182,7 @@ void audioInit(bool value) {
   // M5Unified squares both master and channel settings. The former160/255
   // landing gain attenuated Phoenix notes by8.1dB relative to feature stingers.
   // All four interchangeable landing voices now have equal full gain; cue
-  // PCM envelopes determine their relative dynamics. The reel bed is lower.
-  M5.Speaker.setChannelVolume(0, kReelVolume);
+  // PCM envelopes determine their relative dynamics.
   M5.Speaker.setChannelVolume(1, 255);
   M5.Speaker.setChannelVolume(2, 255);
   M5.Speaker.setChannelVolume(3, 255);
@@ -210,11 +206,8 @@ uint32_t audioCueDurationMs(AudioCue cue) {
 }
 bool audioFeatureBusy() { return available&&!muted&&(pendingCount[1]||landingPendingCount||M5.Speaker.isPlaying(4)); }
 bool audioLandingsBusy(){return available&&!muted&&(landingPendingCount||M5.Speaker.isPlaying(1)||M5.Speaker.isPlaying(2)||M5.Speaker.isPlaying(5)||M5.Speaker.isPlaying(7));}
-void audioSetSpinEnabled(bool value) {
-  spinEnabled = value;
-  if (!value) {reelsActive=reelsFading=false;if(available)M5.Speaker.stop(0);}
-}
-bool audioSpinEnabled() { return spinEnabled; }
+void audioSetSpinEnabled(bool) {}
+bool audioSpinEnabled() { return false; }
 void audioSetLandingsEnabled(bool value) {
   landingsEnabled = value;
   if(!value){clearLandings();if(available)for(uint8_t c:{1,2,5,7})M5.Speaker.stop(c);}
@@ -309,7 +302,7 @@ AudioCueInfo audioCueInfo(AudioCue cue){
 bool audioRegister(AudioCue cue, const int16_t* samples, size_t sampleCount,
                    uint32_t sampleRate) {
   const size_t index = static_cast<size_t>(cue);
-  if (index >= kCueCount || sampleRate < 8000 || sampleRate > 48000 ||
+  if (index >= kCueCount || isSpin(cue) || sampleRate < 8000 || sampleRate > 48000 ||
       (sampleCount && !samples)) return false;
   // Zero-copy registration: static generated PCM outlives asynchronous play.
   if(cue==AudioCue::CollectedComplete){completionFencePending=false;completionDelivered=false;}
@@ -321,16 +314,11 @@ bool audioQueueLanding(AudioCue cue){return play(cue,1,true);}
 bool audioQueueLanding(AudioCue cue,uint32_t nowMs){return audioQueueLanding(cue,nowMs,nowMs);}
 bool audioQueueLanding(AudioCue cue,uint32_t nowMs,uint32_t impactMs){const bool accepted=play(cue,1,true,0,true,nowMs,impactMs);if(accepted)pumpLandings(nowMs);return accepted;}
 bool audioStartReels() {
-  // Explicitly starting/skipping into another action cancels unheard old
-  // stops, while finite voices already sounding retain their complete tails.
+  // A new action cancels unheard stops while sounding finite voices finish.
   clearLandings();
-  reelsFading=false;
-  if(available)M5.Speaker.setChannelVolume(0,kReelVolume);
-  reelsActive=play(AudioCue::ReelSpin,UINT32_MAX);return reelsActive;
+  return false;
 }
-void audioStopReels() {
-  if(available&&reelsActive&&!reelsFading){fadeAt=clockMs;reelsFading=true;++diagnostics.reelFades;}
-}
+void audioStopReels() {}
 void audioUpdate(uint32_t nowMs) {
   clockMs=nowMs;
   const uint32_t elapsed=nowMs-musicClock;musicClock=nowMs;
@@ -347,11 +335,6 @@ void audioUpdate(uint32_t nowMs) {
   if(!available||muted)return;
   pumpExclusiveCompletion(nowMs);
   pumpLandings(nowMs);
-  if(reelsFading){
-    const uint32_t elapsed=nowMs-fadeAt;
-    if(elapsed>=kReelFadeMs){M5.Speaker.setChannelVolume(0,0);M5.Speaker.stop(0);reelsActive=reelsFading=false;}
-    else M5.Speaker.setChannelVolume(0,uint8_t((uint32_t(kReelVolume)*(kReelFadeMs-elapsed))/kReelFadeMs));
-  }
   for(uint8_t q=0;q<2;++q){
     const uint8_t channel=q+3;
     if(!pendingCount[q]||M5.Speaker.isPlaying(channel))continue;
@@ -368,11 +351,10 @@ void audioStopCue(AudioCue cue) {
     const auto channel=channelFor(cue);
     if(cue==AudioCue::CollectedComplete){completionFencePending=false;completionDelivered=true;}
     if(isLanding(cue)){clearLandings();for(uint8_t c:{1,2,5,7})M5.Speaker.stop(c);return;}
-    if(channel==0)reelsActive=reelsFading=false;
     if(channel==3||channel==4){diagnostics.pending-=pendingCount[channel-3];pendingCount[channel-3]=0;}
     M5.Speaker.stop(channel);
   }
 }
 void audioStop() {
   completionDelivered=false;completionFencePending=false;
-  audioMusicStop();musicTesting=false;musicLevel=0;musicGainQ8=0;audioMusicVolume(0); clearPending();reelsActive=reelsFading=false;if (available) M5.Speaker.stop(); }
+  audioMusicStop();musicTesting=false;musicLevel=0;musicGainQ8=0;audioMusicVolume(0); clearPending();if (available) M5.Speaker.stop(); }

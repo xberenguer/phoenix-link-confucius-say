@@ -18,7 +18,7 @@ The implemented long-press threshold is 850 ms. In normal game view, grey's sing
 
 ## Wager-selection screen
 
-Short grey presses move focus; blue selects the highlighted choice. Choose a denomination and line count, then a red bet button. The red-button credit amounts depend on the selected lines and multiplier. Holding the large grey button on this screen returns directly to the game.
+Short grey presses move focus; blue selects the highlighted choice. The screen opens on the current denomination. Selecting a denomination focuses the currently selected line control when available. Selecting lines focuses the current bet multiplier when it is offered; otherwise a valid available choice is used. The red-button credit amounts depend on the selected lines and multiplier. Holding the large grey button on this screen returns directly to the game.
 
 An unavailable row cannot start a paid spin. Owed features protect their existing wager; opening the screen does not change the paid round that is already in progress.
 
@@ -31,7 +31,7 @@ An unavailable row cannot start a paid spin. Owed features protect their existin
 | Autoplay | Toggle automatic play |
 | Sound | Configure sound effects, volume and test playback |
 | Display | Configure display options and orientation |
-| Add Credits | Add $1,000, $10,000 or $100,000; configure automatic refill |
+| Add Credits | Add $1,000, $10,000 or $100,000; clear the balance; configure automatic refill |
 | Simulator Return | Review and apply six local-model choices affecting future Grand |
 | Return to Game | Resume the game view |
 
@@ -41,7 +41,7 @@ The bottom-right version mark appears in Game Menu. Some compact hints call the 
 
 ## Credit refill
 
-The funding page lists **Add $1,000**, **Add $10,000**, **Add $100,000**, Auto Refill and Return to Menu, in that order. A successful addition returns directly to the game with autoplay off. Every choice adds to the current balance.
+The funding page lists **Add $1,000**, **Add $10,000**, **Add $100,000**, **Clear Balance**, Auto Refill and Return to Menu, in that order. Add choices increase the current balance. Clear Balance sets it to zero. Successful funding or clearing returns to Game with autoplay off; neither resets the live meter buckets, wager or statistics. Clearing leaves the Auto Refill preference in place.
 
 Automatic refill uses the last supported $1,000, $10,000 or $100,000 amount added when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding changes the money balance without resetting this session’s meter buckets, wager or statistics. Unfinished features and source/capacity faults can block funding. See [session rules](saving.md).
 
