@@ -21,7 +21,7 @@
 
 ## Validation status
 
-The final firmware and offline assets build for StickS3. Installation, full readback and fresh startup verification of this exact polished image are pending a device connection.
+The final firmware and offline assets passed complete byte-exact readback on StickS3. Fresh startup confirmed the healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off.
 
 The final source passed 779 menu checks, 330 wager/Grand display contexts, 5,925 custom-jackpot checks and source-bound media verification. Real Chrome passed 242 functional checks, six visual checks and 27 same-version cache-upgrade checks, including offline fresh startup. Exact-cent accounting, failure atomicity, outcome independence and the default ideal-model calculations have separate source tests. See [release metadata](RELEASE.json) and [testing](docs/testing.md).
 

@@ -22,12 +22,12 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Final firmware links and fits StickS3. The polished source has not yet been installed: full readback and startup verification of this exact image are pending. Physical acoustic fidelity and entropy strength remain unqualified.",
+  "native_validation": "Final firmware and offline assets passed complete byte-exact readback on StickS3. Fresh startup confirmed version 0.2.120, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
   "browser_version": "0.2.120",
-  "native_status_version": null,
+  "native_status_version": "0.2.120",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Current source-bound release package; final physical installation pending",
+  "status": "Current source-bound release package",
   "changes": [
     "Live jackpot board on double-grey, with manufacturer wordmark, animated Phoenix tier badges and exact grouped cash amounts.",
     "Counter & Jackpots is a separate Game Menu entry; Credits contains funding, clear balance and auto-refill only. Parent navigation and sound/display labels are consistent.",
