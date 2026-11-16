@@ -1,10 +1,14 @@
 {
-  "source_version": "0.2.130",
-  "engine_model": "0x00020017",
-  "source_engine_sha256": "558948ecf74c0540a9190e730990bf5f1d3464c7f343c8d37a9fe35131fcb16b",
+  "source_version": "0.2.140",
+  "engine_model": "0x0002001d",
+  "model_label": "T",
+  "source_engine_sha256": "56b5b0e34e17cf25f6f036d6320f681a5f93132fb139779e6aabb292b3acfa79",
   "source_cabinet_profile_sha256": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
-  "exporter_sha256": "2a3ee0dc7b4c4c3fa876507de5a366464c092581320ac643f5c1121140bd2c7c",
-  "scope": "Current implemented local simulator lookup, not original casino PAR.600 internal profiles;55 menu offers. Source-observed price cells and local fallbacks are annotated in the Engine.178 of205 paths remain local fallbacks.",
+  "source_build_version_sha256": "85efe5f40705ccb536169fa5dbd22ba175b289b1831259300e1acc9ea9a7299f",
+  "source_runtime_identity_sha256": "66b6b86b251a06b57ef4ad5b480ea3d7acfc56ca5735469ee7456755820db841",
+  "source_static_grand_table_sha256": "a1690cd47b9a9b974ffe262774a484776462af8a3f107d70f1acea35376bffc1",
+  "exporter_sha256": "82b60d81bf0206f68bfc06a17a8e0dbfd8cf21f83ece74fb89d17e01e23e4c1f",
+  "scope": "Current compiled local simulator reference, not a recovered casino PAR. There are 600 internal evaluator profiles and 55 menu offers. Price observations retain their Engine scopes; geometry labels require the count, ID and vector to agree. Of 205 paths, 122 remain local fallbacks.",
   "rows": {
     "line_pay_entries": 48000,
     "selected_line_paths": 205,
@@ -12,12 +16,12 @@
   },
   "datasets": {
     "implemented-line-pays.csv": {
-      "bytes": 1758010,
-      "sha256": "12843af026e8572c96e884be1485487c1f1b3357453087d11e68dcdcc4f62a6a"
+      "bytes": 1758009,
+      "sha256": "b3f8ab79a3d1432fb9087fa61f9d67f661be6873a56739fe9effe6fafb994d83"
     },
     "implemented-paylines.csv": {
-      "bytes": 6948,
-      "sha256": "b05c6e96ce7d2d3b86f788b2ecb9a8eeaaa3392260cb9cab8d383bdf1b619586"
+      "bytes": 7967,
+      "sha256": "2529246bd8f0a3812a76ac356b21c2b24f53880e14e8d2ae401e8ce2e2ecb7cc"
     },
     "offered-wagers.csv": {
       "bytes": 956,
@@ -25,9 +29,20 @@
     }
   },
   "row_numbering": "top0,middle1,bottom2",
-  "status": "Current release source-synchronized implementation reference",
+  "status": "Current implementation reference freshly exported from frozen140 source",
   "no_personal_state_or_device_identifiers": true,
-  "source_qualification": "Engineering accepted source; numeric return enclosures apply only to stated ideal-uniform local-model assumptions, not actual-CSPRNG infinite-horizon return or casino calibration.",
-  "runtime_fingerprint": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
-  "mathematical_family": "ccb44f68b8cbb280b0fa4b73f888abe09b65b3de3aee46197a114bd424fbe5b9"
+  "source_qualification": "Engineering source binding; ideal-uniform fixed-profile/default-jackpot/funded/no-Lucky full-cycle references are separate from casino calibration, physical entropy quality and finite runtime/source failure.",
+  "runtime_fingerprint": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+  "mathematical_family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
+  "geometry_matches_by_line_count": {
+    "5": 1,
+    "10": 0,
+    "15": 2,
+    "25": 25,
+    "50": 42,
+    "100": 13
+  },
+  "geometry_scope": "50-line: 42 of 45 documented IDs match; observed IDs 42, 44 and 50 remain deferred; IDs 31, 33, 39, 45 and 48 are unrecovered. 100-line: 13 of 17 documented IDs match; IDs 15, 36, 37 and 43 remain deferred, and 83 IDs are unobserved. Legacy 5/15-line records remain incomplete; the 25-line reconstruction retains its original scope. Common-chart transport across modes, wagers and programs is conditional.",
+  "local_return_rows": 7200,
+  "original_casino_calibration": false
 }

@@ -14,6 +14,7 @@ The top bar shows the game title, selected line/bet information and active colle
 | Actual offered denomination, line and multiplier combinations | [Wagers](wagers.md) |
 | All twelve symbols, Wild substitution and combination categories | [Symbols and combinations](symbols-and-combinations.md) |
 | All implemented line-pay entries and their evidence scopes | [Payouts](payouts.md) |
+| Browse every line layout and distinguish observed geometry from fallbacks | [Paylines](paylines.md) |
 | Wisdom trigger, Twin outer pairs, retriggers and nested bonuses | [Free games](free-games.md) |
 | Locked Phoenix values, respin reset, revival and 15-cell Grand | [Hold & Spin](hold-and-spin.md) |
 | Which meter is active, what increments it and its live-session buckets | [Collection counter](collection-counter.md) |

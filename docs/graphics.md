@@ -57,7 +57,7 @@ Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../f
 | Collected announcement | Center adaptation of information shown on the cabinet's larger display |
 | Phoenix collection | A flying bird/trail visits values and targets the centered running amount |
 | Center WINNER | Larger clean wordmark and outlined collection currency, only in its intended collection phase |
-| Major/Grand | Separate title/amount sequence; full-board Grand adds to the values |
+| Major/Grand | Winner/amount presentation; Grand uses one continuous WINNER total combining Grand, Major base and cash |
 | Coins | Deterministic upward fountain; a separate short numeric-only 25–49× Hold burst precedes the return crest |
 | Return fire | Separate exit/reveal geometry returning to Free or Base |
 | Nested Free progress | Actual Free game/total in the condition-text slot, visible during Hold and over fire |
@@ -74,6 +74,8 @@ The short burst and return crest use the actual presentation clocks. The 25× re
 Particle paths and visual phase offsets do not draw from the game’s outcome service. Replaying a display frame cannot change the next financial outcome.
 
 Confucius topknots extend into the grey header during reel motion, landings and joined wins. Hold keeps its individual-cell presentation.
+
+The Grand sequence keeps one continuous WINNER display for its combined amount. It is adapted to a single LCD; the original multi-screen sequence and pixel geometry are not claimed as exact matches.
 
 ## What remains approximate
 

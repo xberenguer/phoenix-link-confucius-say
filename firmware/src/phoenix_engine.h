@@ -53,7 +53,7 @@ struct Cell {
 
 namespace local {
 // Version identifies this local, deliberately approximate math configuration.
-constexpr uint32_t modelId = 0x00020017u;
+constexpr uint32_t modelId = 0x0002001du;
 // Historical price-version identifiers for analytic/reference includes only.
 // No backward-compatible game restore or saved-bank import is implemented.
 constexpr uint32_t previousGPriceModelId = 0x00020010u;
@@ -111,9 +111,9 @@ constexpr Wager wagers[] = {
   {50,25,1}, {50,25,2}, {50,25,3}, {50,25,5}, {50,25,10}
 };
 
-// LOCAL fallback paths, retained exactly for5/10/15/50/100-line selections.
-// The separately observed US25-line chart below overrides only count25. Rows are
-// top=0, middle=1, bottom=2; wins pay consecutively from the leftmost reel.
+// LOCAL fallback paths for unrecovered selections/IDs. Observed overrides for
+// count15, count25 and selected count50 IDs follow below.
+// Rows are top=0, middle=1, bottom=2; wins pay from the leftmost reel.
 constexpr uint8_t firstLines[25][kColumns] = {
   {1,1,1,1,1}, {0,0,0,0,0}, {2,2,2,2,2}, {0,1,2,1,0}, {2,1,0,1,2},
   {0,0,1,2,2}, {2,2,1,0,0}, {1,0,0,0,1}, {1,2,2,2,1}, {0,1,1,1,0},
@@ -121,9 +121,9 @@ constexpr uint8_t firstLines[25][kColumns] = {
   {1,1,0,1,1}, {1,1,2,1,1}, {0,0,2,0,0}, {2,2,0,2,2}, {0,2,2,2,0},
   {2,0,0,0,2}, {1,0,2,0,1}, {1,2,0,2,1}, {0,2,0,2,0}, {2,0,2,0,2}
 };
-// Supplemental LOCAL paths are unique base-three row patterns. No50/100-line
-// diagrams have been recovered; their existence supports observed50/100-line
-// menus without falsely paying 243 ways or duplicating the first25 lines.
+// Supplemental LOCAL paths are unique base-three row patterns. A complete
+// original50/100-line chart has not been recovered; fallback paths remain for
+// unrecovered selections/IDs, with observed overrides applied in linePath.
 constexpr std::array<std::array<uint8_t,kColumns>,kMaxLines> makeLines() {
   std::array<std::array<uint8_t,kColumns>,kMaxLines> result{};
   size_t used = 25;
@@ -159,6 +159,8 @@ inline constexpr std::array<std::array<uint8_t,kColumns>,25> observedTwentyFiveL
 // Line6=[top,top,middle,top,top]; Line8=[middle,bottom,bottom,bottom,middle].
 // Keep other configurations untouched. Line9 retains the prior LOCAL upper
 // mirror while8uses its observed lower path;9is not a source-confirmed path.
+// Direct US50 Line7: Base2c/50/M3 and Free1c/50/M5,3pf3454/9725.
+inline constexpr std::array<uint8_t,kColumns> observedFiftyLine7 = {2,2,1,2,2};
 inline const std::array<uint8_t,kColumns>& linePath(uint8_t line,uint8_t count=kMaxLines) {
   if(line>=kMaxLines)return lines[0];
   if(count==15){
@@ -166,14 +168,82 @@ inline const std::array<uint8_t,kColumns>& linePath(uint8_t line,uint8_t count=k
     if(line==7)return lines[8];
     if(line==8)return lines[7];
   }
-  // One directly observed US-target 50-line path, nmcPHvRQYDE:10c/50/M1,
-  // numbered Line22=[top,top,bottom,top,top]. Publisher Vegas geotag;
-  // exact property/program unknown. This is not the complete 50/100 chart.
-  // Transpose only 50-line labels18/22 to preserve its exact active path set.
-  // New Line18 is the reassigned LOCAL fallback, not a source-proven label.
-  if(count==50){
-    if(line==17)return lines[21];
-    if(line==21)return lines[17];
+  // Source-scoped US50 reconstruction:21 directly observed additions to S.
+  // Unapplied observed42/44/50 and unrecovered31/33/39/45/48 stay unchanged.
+  // Shared chart transport across wager/program/mode contexts is a LOCAL
+  // reconstruction assumption; this is not a recovered complete factory chart.
+  if(count==50&&line<50){
+    static constexpr std::array<std::array<uint8_t,kColumns>,50> reconstructedFifty = {{
+      {1,1,1,1,1}, // 1
+      {0,0,0,0,0}, // 2
+      {2,2,2,2,2}, // 3
+      {0,1,2,1,0}, // 4
+      {2,1,0,1,2}, // 5
+      {0,0,1,0,0}, // 6
+      {2,2,1,2,2}, // 7
+      {1,2,2,2,1}, // 8
+      {1,0,0,0,1}, // 9
+      {0,1,1,1,0}, // 10
+      {2,1,1,1,2}, // 11
+      {0,1,0,1,0}, // 12
+      {2,1,2,1,2}, // 13
+      {1,0,1,0,1}, // 14
+      {1,2,1,2,1}, // 15
+      {1,1,0,1,1}, // 16
+      {1,1,2,1,1}, // 17
+      {0,2,0,2,0}, // 18
+      {2,0,2,0,2}, // 19
+      {1,0,2,0,1}, // 20
+      {1,2,0,2,1}, // 21
+      {0,0,2,0,0}, // 22
+      {2,2,0,2,2}, // 23
+      {0,2,2,2,0}, // 24
+      {2,0,0,0,2}, // 25
+      {0,2,1,2,0}, // 26
+      {2,0,1,0,2}, // 27
+      {1,1,1,1,2}, // 28
+      {0,0,1,2,2}, // 29
+      {2,2,1,0,0}, // 30
+      {0,2,0,0,0}, // 31
+      {2,1,1,1,0}, // 32
+      {2,2,0,0,0}, // 33
+      {2,1,0,1,0}, // 34
+      {0,0,0,0,1}, // 35
+      {2,2,2,2,1}, // 36
+      {0,1,0,1,2}, // 37
+      {2,1,2,1,0}, // 38
+      {2,1,1,0,0}, // 39
+      {1,2,1,0,1}, // 40
+      {1,1,0,0,0}, // 41
+      {1,0,2,0,0}, // 42
+      {1,0,0,1,2}, // 43
+      {0,1,2,0,0}, // 44
+      {1,1,2,0,0}, // 45
+      {1,2,1,0,0}, // 46
+      {2,1,0,0,1}, // 47
+      {1,2,2,0,0}, // 48
+      {0,0,1,2,1}, // 49
+      {0,0,0,1,0}, // 50
+    }};
+    return reconstructedFifty[line];
+  }
+  // Count100 label-only swaps: directly observed targets already exist.
+  // Displaced14/19/21/24/34/100 remain unverified LOCAL fallback assignments.
+  if(count==100){
+    if(line==5)return lines[33];
+    if(line==33)return lines[5];
+    if(line==7)return lines[8];
+    if(line==8)return lines[7];
+    if(line==11)return lines[13];
+    if(line==13)return lines[11];
+    if(line==17)return lines[23];
+    if(line==23)return lines[17];
+    if(line==22)return lines[18];
+    if(line==18)return lines[22];
+    if(line==24)return lines[20];
+    if(line==20)return lines[24];
+    if(line==89)return lines[99];
+    if(line==99)return lines[89];
   }
   if(count==25&&line<observedTwentyFiveLines.size())return observedTwentyFiveLines[line];
   return lines[line];
@@ -227,6 +297,36 @@ constexpr uint16_t freePays[10][6] = {
 // or locked Cell is repriced. denominationMinor=0 keeps unscoped inspection
 // calls on the unchanged fallback pays; live settleSpin passes the real coin.
 inline constexpr uint16_t linePay(unsigned symbol,unsigned count,unsigned multiplier,bool free,unsigned lineCount,int64_t denominationMinor){
+  // Rio GclIM2tutCg Base2c/50/M5: Line8 Bell5 wins750, Line49 Book5 wins500.
+  // Effective awards under the existing substitution-only mu=1 model;
+  // no universal bare-price/Wild-factor rule or Line49 geometry is recovered.
+  if(!free&&denominationMinor==2&&lineCount==50&&multiplier==5&&count==5){
+    if(symbol==unsigned(Symbol::Bell))return 150;
+    if(symbol==unsigned(Symbol::Book))return 100;
+  }
+
+  // Original3pf source, exact Base profiles only; no Free/off-profile transfer.
+  // 2c/50/M5: King3Line17=25, Bell2Lines16/7=10 credits.
+  if(!free&&denominationMinor==2&&lineCount==50&&multiplier==5){
+    if(symbol==unsigned(Symbol::King)&&count==3)return 5;
+    if(symbol==unsigned(Symbol::Bell)&&count==2)return 2;
+  }
+  // 5c/25/M5: Queen4Line4=50 credits (native49919, raw49884).
+  if(!free&&denominationMinor==5&&lineCount==25&&multiplier==5&&
+     symbol==unsigned(Symbol::Queen)&&count==4)return 10;
+  // $1/5/M1: King4=20 and Queen4=10, direct Line1 captions.
+  // Abacus2=2 is the explicit cropped-prefix2/completedWin9 joint constraint.
+  if(!free&&denominationMinor==100&&lineCount==5&&multiplier==1){
+    if(symbol==unsigned(Symbol::King)&&count==4)return 20;
+    if(symbol==unsigned(Symbol::Queen)&&count==4)return 10;
+    if(symbol==unsigned(Symbol::Abacus)&&count==2)return 2;
+  }
+
+  // Direct3pfZnZUWGhI Base5c/25/M5,49404/49424: Line14 King3 wins25credits.
+  // Exact-profile unit5 only; no Free or off-profile price transport.
+  if(!free&&denominationMinor==5&&lineCount==25&&multiplier==5&&
+     symbol==unsigned(Symbol::King)&&count==3)return 5;
+
   // Source150 nmcPHvRQYDE: filmed US-target paid Base10c/50/M1.
   // Native3630/3660 Line22 Jack3 wins5; exact property/program unknown.
   // Scoped J price: future exact-profile Base only; all Free/other profiles unchanged.

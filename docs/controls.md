@@ -10,7 +10,7 @@
 | Hold large grey | Open Game Menu |
 | Double-press large grey | Open the live Jackpots board |
 
-There is no on-screen autoplay marker. Each boot, reload or flash starts a fresh game with autoplay off. The small power button is separate from the large grey game-control button.
+The game does not use rumble. There is no on-screen autoplay marker. Each boot, reload or flash starts a fresh game with autoplay off. The small power button is separate from the large grey game-control button.
 
 Stopping autoplay stops further paid automatic play; it does not discard the current result or an already owed Free/Hold session.
 
@@ -27,18 +27,18 @@ An unavailable row cannot start a paid spin. Owed features protect their existin
 | Entry | Purpose |
 |---|---|
 | Game Rules | Inspect the implemented rule and pay pages |
-| Select Bet | Open the same wager-selection screen |
-| Autoplay | Toggle automatic play |
+| Paylines | Browse every line layout, starting with your active selection |
 | Credits | Add money, clear the balance or configure automatic refill |
 | Counter & Jackpots | Set the active feature counter and edit or restore jackpot amounts |
-| Sound | Configure sound effects, volume and test playback |
-| Display | Configure brightness, amount units and orientation |
+| Settings | Open Sound and Display options |
 | Simulator Return | Review and apply six local-model choices affecting future Grand |
 | Return to Game | Resume the game view |
 
+In **Paylines**, grey advances through six diagrams per page, blue switches line layouts, and holding grey returns to Game Menu. Browsing leaves your bet unchanged. See [all line layouts](paylines.md).
+
 On menu pages, grey moves and blue selects. Simulator Return offers six local-model options at a qualified closed Base boundary. Applying a choice changes future Grand only for this live session. Displayed ranges are ideal-model references. See [Simulator Return](settings.md#simulator-return).
 
-Hold grey to return to the parent menu. Credits, Sound, Display and Counter & Jackpots return to their selected Game Menu entry. Editors return to their parent without applying. The wager screen returns directly to play; closing the jackpot board also returns to play without spinning.
+Hold grey to return to the parent menu. Credits and Counter & Jackpots return to their selected Game Menu entry. Sound and Display return to Settings; Settings returns to its selected Game Menu entry. Editors return to their parent without applying. The wager screen returns directly to play; closing the jackpot board also returns to play without spinning.
 
 <img src="media/menu.png" alt="Game Menu with separate Credits and Counter & Jackpots entries" width="720">
 

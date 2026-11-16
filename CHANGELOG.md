@@ -1,14 +1,27 @@
 # Current release notes
 
+## 0.2.140
+
+- Seven-row Game Menu with Settings grouping Sound and Display. Button shortcuts for wagers, autoplay and the live Jackpots board remain available; rumble is not used.
+- Paylines opens on the active layout and browses all six line selections without changing the wager.
+- Grand uses one continuous WINNER count for Grand, the Major base component and cash, adapted for the single LCD.
+- Current model T includes scoped price corrections and source-supported route updates. The guide distinguishes 42/45 documented 50-line matches and 13/17 documented 100-line matches from local fallbacks.
+- Every boot or browser reload begins with 1,000 default-denomination credits, fresh opening reels and autoplay off.
+
+<a id="validation"></a>
+<a id="validation-status"></a>
+
+Current source, browser, firmware and media identities are recorded in [release metadata](RELEASE.json). [Testing](docs/testing.md) distinguishes source checks, byte readback, startup, physical controls/audio and original-machine fidelity. Local return references are not recovered casino odds.
+
 ## 0.2.130
 
 - New sessions open on freshly sampled reels. The opening display does not place a bet, pay a win, advance the counter, record a spin or start a bonus. Credits still start at 1,000 and autoplay starts off.
 - Counter editing stays within 0–1886 throughout. The first digit alternates 0/1; subsequent digits follow the selected prefix. When a larger prefix makes the old remainder invalid, the editor fits it within the ceiling. Apply and Cancel retain their existing behavior; jackpot amount editing is unchanged.
 - The browser game, player guide, gallery and signed firmware package describe the same final source.
 
-<img src="docs/media/counter-editor130.webp" alt="Counter digits wrap within the valid range" width="720">
+<img src="docs/media/counter-editor140.webp" alt="Counter digits wrap within the valid range" width="720">
 
-## Validation status
+### 0.2.130 validation
 
 Final firmware and offline assets passed complete byte-exact readback on StickS3. Healthy startup verified 1,000 credits, zero actions, autoplay off and all 60 Phoenix animation frames. Browser checks covered three distinct unpaid startup boards, every counter boundary wrap, menus, exact cash values and offline/cache updates.
 

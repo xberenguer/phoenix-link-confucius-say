@@ -67,7 +67,7 @@ Double and Triple Mini/Minor prizes collect in separate visible increments, with
 
 All fifteen occupied positions award Grand **plus** all fifteen values. A full fifteen-Phoenix ordinary result settles directly; a Hold settles when it becomes full or exhausts its respins after the revival condition has been satisfied.
 
-Grand and Major celebrations have dedicated presentation paths. The small-screen version places the larger announcement over the reels instead of requiring a second display. Its artwork and timings remain reconstructions. A full board being possible does not establish its casino probability: the model's landing chance and prize weights are local assumptions.
+The Grand sequence uses one continuous **WINNER** count combining Grand, the Major base component and collected cash values. The announcement remains WINNER throughout. This is an adaptation for one LCD, rather than an exact reproduction of the original multi-screen Grand sequence. Animation adds no extra payment. A full board being possible does not establish its casino probability: the model's landing chance and prize weights are local assumptions.
 
 ## Count-up and ending order
 

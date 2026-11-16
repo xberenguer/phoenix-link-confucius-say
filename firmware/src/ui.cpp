@@ -114,7 +114,7 @@ constexpr uint32_t kHoldMaterialExpectedFNV=1464298268u;
 uint16_t* holdMaterialPixels=nullptr;
 uint32_t holdMaterialHash=0;
 enum class Phase {Ready,Spin,Land,Expand,Revive,FreeIntro,FreeCounter,SpinAward,SpinAwardSettle,HoldWipe,HoldIntro,Jackpot,Collect,WinTransfer,ReturnWipe,Outro,AwardIntro};
-enum class View {Game,Menu,Bet,Rules,Options,Reset,Lucky,Sound,Volume,Math,Service,Jackpots};
+enum class View {Game,Menu,Bet,Rules,Options,Reset,Lucky,Sound,Volume,Math,Service,Jackpots,Paylines,Settings};
 Phase phase=Phase::Ready; View view=View::Game;
 uint32_t phaseAt=0,phaseMs=0,lastDraw=0,readyAt=0,autoAt=0,frameCount=0,lastDrawUs=0,maxDrawUs=0;
 constexpr uint32_t kPaylinePeriodMs=1300,kPaylineBlinkMs=650,kPaylineOnMs=325;
@@ -148,6 +148,7 @@ void clearSpinAward(){spinAward=SpinAward{};fountainContinuous=false;fountainAwa
 bool holdWipeRevealed=false;
 bool holdEntryMeter=false;
 int reelSteps[5]={},lastArrived=-1,menuItem=0,rulesPage=0,optionItem=0;
+unsigned paylinesPage=0,paylinesLayout=0;int settingsItem=0;
 int64_t cabinetDenom=100;uint8_t cabinetLines=5;unsigned cabinetFocus=0;bool cabinetAvailable=true,cabinetMenuRequested=false,jackpotBoardRequested198=false;
 const cabinet_profile::Coin& cabinetCoin(){const auto* coin=cabinet_profile::find(cabinetDenom);return coin?*coin:cabinet_profile::coins[0];}
 const cabinet_profile::BetRow& cabinetRow(){const auto& coin=cabinetCoin();const auto index=cabinet_profile::lineIndex(coin,cabinetLines);return coin.rows[index<coin.count?index:0];}
@@ -599,7 +600,7 @@ void rebasePhoenixClocks(uint32_t now){
  phoenixClockAt=now;
 }
 const char* modeName(Mode m){return m==Mode::Hold?"hold":m==Mode::Free?"free":"base";}
-const char* viewName(){switch(view){case View::Game:return "game";case View::Menu:return "menu";case View::Bet:return "bet";case View::Rules:return "rules";case View::Options:return "options";case View::Reset:return "reset";case View::Lucky:return "lucky-chance";case View::Sound:return "sound";case View::Volume:return "volume";case View::Math:return "game-math";case View::Service:return "service";case View::Jackpots:return "jackpots";}return "unknown";}
+const char* viewName(){switch(view){case View::Game:return "game";case View::Menu:return "menu";case View::Bet:return "bet";case View::Rules:return "rules";case View::Options:return "options";case View::Reset:return "reset";case View::Lucky:return "lucky-chance";case View::Sound:return "sound";case View::Volume:return "volume";case View::Math:return "game-math";case View::Service:return "service";case View::Jackpots:return "jackpots";case View::Paylines:return "paylines";case View::Settings:return "settings";}return "unknown";}
 const char* phaseName(){switch(phase){case Phase::Ready:return "ready";case Phase::Spin:return "spinning";case Phase::Land:return "landing";case Phase::Expand:return "sage-expansion";case Phase::Revive:return "phoenix-revival";case Phase::FreeIntro:return "free-intro";case Phase::FreeCounter:return "free-counter";case Phase::SpinAward:return "spin-award";case Phase::SpinAwardSettle:return "spin-award-settle";case Phase::HoldWipe:return "hold-fire";case Phase::HoldIntro:return "hold-intro";case Phase::Jackpot:return "jackpot-award";case Phase::Collect:return "collect";case Phase::WinTransfer:return "win-transfer";case Phase::ReturnWipe:return "return-fire";case Phase::Outro:return "feature-end";case Phase::AwardIntro:return "award-intro";}return "unknown";}
 bool lineDisplayPhase(){return phase==Phase::Ready||phase==Phase::Land||phase==Phase::Expand;}
 uint32_t lineElapsed(uint32_t now){return now-(lineClockValid?lineDisplayAt:readyAt);}
@@ -898,6 +899,13 @@ void drawTopSageOutside133(int x,unsigned rows,uint32_t clock){
  if(motion<=310)sage_crown122::draw(cap,x,RY,[](int){return 255u;},paint);
  else sage_crown122::transition(cap,cap,x,RY,rows,RY+int(std::lround(position)),RY-4,mix,paint);
 }
+// Camera-derived hue categories from the scoped original-US reference facts.
+// Unobserved line/count pairs retain the existing palette.
+uint16_t lineMarkerColor(unsigned index,unsigned count){
+ if((count==50||count==100)&&index==11)return 0x35df;
+ if(count==50){if(index==14)return 0xfcb5;if(index==28)return 0x07a9;if(index==48)return 0x04df;if(index==49)return 0xb81f;}
+ return index==0?0x35df:index==1?0xd85a:index==3?0x07a9:index==7?0x04df:index==10?0xb81f:BRIGHT;
+}
 void drawReels(uint32_t now){
   uint32_t e=now-phaseAt;
   if(phase==Phase::Spin){
@@ -1018,7 +1026,7 @@ void drawReels(uint32_t now){
   // The source indicates paylines at the dividers and with numbered end tabs.
   // It does not draw an uninterrupted gold polyline across the original art.
   const auto& p=engine.presentation;
-  if(lineMarkersVisible(now)){const auto& win=p.lineWins[activeLineIndex(now)];const auto& path=phoenix::local::linePath(win.line,engine.state.lineCount);const uint16_t color=win.line==0?0x35df:win.line==1?0xd85a:win.line==3?0x07a9:win.line==7?0x04df:win.line==10?0xb81f:BRIGHT;for(int c=1;c<5;++c){const int x=RX+c*TW,y=RY+TH/2+TH*(int(path[c-1])+path[c])/2;const int slope=int(path[c])-path[c-1];line(x-2,y-slope,x+2,y+slope,color);line(x-2,y-slope+1,x+2,y+slope+1,color);}const int leftY=RY+TH/2+TH*path[0],rightY=RY+TH/2+TH*path[4];fill(0,leftY-3,6,7,color);fill(W-6,rightY-3,6,7,color);text(integer(win.line+1).c_str(),3,leftY-3,6,WHITE,1);text(integer(win.line+1).c_str(),W-3,rightY-3,6,WHITE,1);}
+  if(lineMarkersVisible(now)){const auto& win=p.lineWins[activeLineIndex(now)];const auto& path=phoenix::local::linePath(win.line,engine.state.lineCount);const uint16_t color=lineMarkerColor(win.line,engine.state.lineCount);for(int c=1;c<5;++c){const int x=RX+c*TW,y=RY+TH/2+TH*(int(path[c-1])+path[c])/2;const int slope=int(path[c])-path[c-1];line(x-2,y-slope,x+2,y+slope,color);line(x-2,y-slope+1,x+2,y+slope+1,color);}const int leftY=RY+TH/2+TH*path[0],rightY=RY+TH/2+TH*path[4];const int badgeWidth=win.line>=99?10:6,badgeCenter=badgeWidth/2;fill(0,leftY-3,badgeWidth,7,color);fill(W-badgeWidth,rightY-3,badgeWidth,7,color);text(integer(win.line+1).c_str(),badgeCenter,leftY-3,6,WHITE,1);text(integer(win.line+1).c_str(),W-badgeCenter,rightY-3,6,WHITE,1);}
 }
 void shade(){fill(0,0,W,H,BLACK,170);}
 void panel(const char* title){shade();fill(4,11,232,121,0x0923);rect(4,11,232,121,GOLD);rect(6,13,228,117,BRIGHT);text(title,120,20,12,BRIGHT,1);line(16,37,224,37,GOLD);}
@@ -1721,20 +1729,6 @@ void fullCollectionSweep(uint32_t elapsed,uint32_t fireDuration){
  entryBird(elapsed);
  if(elapsed>=feature_entry::fireDelayMs)fireWipe(elapsed-feature_entry::fireDelayMs,fireDuration);
 }
-void legacyAwardPanel112(uint32_t elapsed){
- fill(18,29,204,76,BLACK,238);rect(20,31,200,72,0x9800);rect(22,33,196,68,0xfcc5);
- const bool green=elapsed>=feature_award::revealBurnAt+700;
- if(elapsed>=500){if(engine.presentation.grandAwarded)text("GRAND",120,41,16,green?0xf900:BRIGHT,1);
- else fadedSprite(award_art::major(green),62,39,255,RY,122);}
- if(elapsed>=feature_award::amountAt){const int64_t value=namedTitleTotal190();const auto amount=money(value);const unsigned size=cashWidth(amount.c_str(),20)>180?16:20;cashText(amount.c_str(),120+cashWidth(amount.c_str(),size)/2,75,size,green?0x0e63:BRIGHT);}
- if(elapsed>=feature_award::revealBurnAt&&elapsed<feature_award::revealEnd)fireBand(22,34,196,66,elapsed-feature_award::revealBurnAt,feature_award::revealEnd-feature_award::revealBurnAt);
- if(elapsed>=feature_award::exitBurnAt)fireBand(22,34,196,66,elapsed-feature_award::exitBurnAt,feature_award::durationMs-feature_award::exitBurnAt);
- if(elapsed>=feature_award::birdAt&&elapsed<feature_award::pickupAt)collectBird(elapsed-feature_award::birdAt);
- if(elapsed>=feature_award::pickupAt&&elapsed<feature_award::pickupAt+collection_pickup::flightMs){
-  int cell=7;for(int i=0;i<15;++i)if(phoenixCell(visible[i])&&visible[i].kind==phoenix::PrizeKind::Major){cell=i;break;}
-  drawPickupFlight(elapsed-feature_award::pickupAt,RX+(cell/3+.5f)*TW,RY+(cell%3+.5f)*TH,120,83);
- }
-}
 int wideCashWidth112(const char* value,unsigned size){int width=0;for(auto p=(const unsigned char*)value;*p;++p)width+=(pmoney::glyph(size,*p).advance*15+4)/8;return width;}
 void wideCashText112(const char* value,int right,int y,unsigned size,uint16_t color){
  int x=right-wideCashWidth112(value,size);const auto* alpha=pmoney::pixels(size);
@@ -1747,13 +1741,16 @@ void wideCashText112(const char* value,int right,int y,unsigned size,uint16_t co
   x+=(g.advance*15+4)/8;
  }
 }
-// Major-only authored layout study. Grand deliberately retains the exact old
-// path: its winning title/transition was not qualified in source104.
+// Grand stays on the continuous collection display; Major uses its title.
+bool drawHoldCenterWinner89(uint32_t now);
 void awardPanel(uint32_t elapsed){
- if(engine.presentation.grandAwarded){legacyAwardPanel112(elapsed);return;}
+ if(engine.presentation.grandAwarded){drawHoldCenterWinner89(phaseAt+elapsed);return;}
  auto paint=[](int x,int y,uint16_t color,unsigned alpha){dot(x,y,color,alpha);};
  authored_major112::vignette(paint);
- if(elapsed>=500)authored_major112::title(elapsed,elapsed>=feature_award::revealBurnAt+700,paint);
+ if(elapsed>=500){
+  const bool filled=elapsed>=feature_award::revealBurnAt+700;
+  authored_major112::title(elapsed,filled,paint);
+ }
  authored_major112::amountFrame(elapsed,paint);
  if(elapsed>=feature_award::amountAt){
   const auto amount=money(namedAward());unsigned size=20;
@@ -1800,7 +1797,7 @@ void drawTransition(uint32_t now){const uint32_t e=now-phaseAt;switch(phase){
   case Phase::FreeIntro:{if(freeRetriggerIntro()){std::string count=integer(pendingFreeCount)+" FREE GAMES WON";fill(0,0,126,14,native_title::background);text(count.c_str(),63,0,7,BRIGHT,1);text("FREE GAMES ADDED",63,8,6,WHITE,1);}else drawWisdomEntry29(e,pendingFreeCount);break;}
   case Phase::SpinAward:case Phase::SpinAwardSettle:drawSpinAwardHeader(now);break;
   case Phase::HoldIntro:fill(77,0,49,14,native_title::background);headerCaption("PRESS START",0,6,BRIGHT);headerCaption("FEATURE",7,6,BRIGHT);break;
-  case Phase::AwardIntro:fill(0,0,186,14,native_title::background);timedCollectedAnnouncement(e,true);break;
+  case Phase::AwardIntro:fill(0,0,186,14,native_title::background);if(engine.presentation.grandAwarded)drawHoldCenterWinner89(now);else timedCollectedAnnouncement(e,true);break;
   case Phase::Jackpot:fill(0,0,186,14,native_title::background);awardPanel(e);break;
   case Phase::Collect:{fill(0,0,186,14,native_title::background);if(!drawHoldCenterWinner89(now)){drawHoldWinner(now);if(displayWin>0)cashText(money(displayWin).c_str(),181,2,10,BRIGHT);}if(!collectionNamedDone){if(largeCollectionPrelude()){timedCollectedAnnouncement(e,true);if(e>=feature_award::largeBirdAt&&e<collectionLead())collectBird(e-feature_award::largeBirdAt);}else if(e<kCollectLead){timedCollectedAnnouncement(e,false);
    // This was squeezed into a14px header. Bring the Phoenix up from below
@@ -1814,9 +1811,29 @@ void drawTransition(uint32_t now){const uint32_t e=now-phaseAt;switch(phase){
   case Phase::Outro:if(completedFreeBoard29())drawWisdomCompletion29();else{fill(0,0,126,14,native_title::background);rect(0,0,126,14,GOLD);text("FEATURE COMPLETED",63,3,8,BRIGHT,1);}break;
   default:break;}}
 bool valuesAvailable201();
-const char* menuItems[]={"GAME RULES","SELECT BET","AUTOPLAY","CREDITS","COUNTER & JACKPOTS","SOUND","DISPLAY","SIMULATOR RETURN","RETURN TO GAME"};
-constexpr int kMenuItemCount=sizeof(menuItems)/sizeof(menuItems[0]);
-void drawMenu(){panel("GAME MENU");for(int i=0;i<kMenuItemCount;++i){const int y=40+i*8;const bool disabled=i==4&&!valuesAvailable201();if(i==menuItem)fill(35,y,170,8,0x2a86);text(menuItems[i],42,y,8,disabled?0x7bef:i==menuItem?BRIGHT:WHITE);}text(*statusLine?statusLine:"GREY: NEXT   BLUE: SELECT",120,112,6,BRIGHT,1);text(build_version::menu,224,119,10,WHITE,2);}
+struct MenuEntry {int id;const char* label;};
+constexpr MenuEntry menuEntries[]={ {0,"GAME RULES"},{9,"PAYLINES"},{3,"CREDITS"},{4,"COUNTER & JACKPOTS"},{10,"SETTINGS"},{7,"SIMULATOR RETURN"},{8,"RETURN TO GAME"} };
+constexpr int kMenuItemCount=std::size(menuEntries);
+// Retain logical return IDs used by the value editors and return selector.
+void nextMenuItem(){for(unsigned row=0;row<kMenuItemCount;++row)if(menuEntries[row].id==menuItem){menuItem=menuEntries[(row+1)%kMenuItemCount].id;return;}menuItem=0;}
+void drawMenu(){panel("GAME MENU");for(int row=0;row<kMenuItemCount;++row){const auto& item=menuEntries[row];const int y=41+row*9;const bool disabled=item.id==4&&!valuesAvailable201();if(item.id==menuItem)fill(35,y,170,9,0x2a86);text(item.label,42,y,9,disabled?0x7bef:item.id==menuItem?BRIGHT:WHITE);}text(*statusLine?statusLine:"GREY: NEXT   BLUE: SELECT",120,112,6,BRIGHT,1);text(build_version::menu,224,119,10,WHITE,2);}
+void drawSettings(){panel("SETTINGS");const char* items[]={"SOUND","DISPLAY","BACK TO MENU"};for(int i=0;i<3;++i){const int y=50+i*18;if(settingsItem==i)fill(28,y-1,184,13,0x2a86);text(items[i],36,y,10,settingsItem==i?BRIGHT:WHITE);}text("GREY: NEXT   BLUE: SELECT",120,121,6,BRIGHT,1);}
+unsigned paylinesLineCount(){
+ if(!paylinesLayout)return engine.state.lineCount;
+ unsigned position=1;for(auto count:phoenix::local::lineOptions)if(count!=engine.state.lineCount){if(position++==paylinesLayout)return count;}
+ return engine.state.lineCount;
+}
+unsigned paylinesPageCount(){return (paylinesLineCount()+5)/6;}
+void nextPaylinesLayout(){paylinesLayout=(paylinesLayout+1)%std::size(phoenix::local::lineOptions);paylinesPage=0;}
+void drawPaylines(){
+ panel("PAYLINES");const unsigned count=paylinesLineCount();char heading[48];snprintf(heading,sizeof(heading),"%u LINES%s  PAGE %u / %u",count,count==engine.state.lineCount?" CURRENT":"",paylinesPage+1,paylinesPageCount());text(heading,120,39,7,WHITE,1);
+ for(unsigned slot=0;slot<6;++slot){const unsigned index=paylinesPage*6+slot;if(index>=count)break;
+  const int x=12+int(slot%2)*110,y=50+int(slot/2)*22,gx=x+25;const auto& path=phoenix::local::linePath(index,count);const uint16_t color=lineMarkerColor(index,count);
+  text(integer(index+1).c_str(),x+3,y+5,7,WHITE);rect(gx,y,75,18,0x4a69);for(int c=1;c<5;++c)line(gx+c*15,y,gx+c*15,y+17,0x2265);for(int row=1;row<3;++row)line(gx,y+row*6,gx+74,y+row*6,0x2265);
+  for(int c=0;c<5;++c){const int px=gx+7+c*15,py=y+3+int(path[c])*6;if(c<4)line(px,py,px+15,y+3+int(path[c+1])*6,color);fill(px-1,py-1,3,3,color);}
+ }
+ text("GREY: PAGE  BLUE: LINES  HOLD: BACK",120,121,6,BRIGHT,1);
+}
 void drawMath(){
  using Page=return_selector86::Page;
  panel(returnSelector86.page==Page::Help?"ABOUT MODEL RETURN":"SIMULATOR RETURN");
@@ -2033,8 +2050,8 @@ void* (*backdropABTestAlloc115)(size_t)=nullptr;
 enum class MajorBenchStage119:uint8_t {Before,After};
 void (*majorBenchObserver119)(unsigned,uint32_t,uint32_t,MajorBenchStage119)=nullptr;
 #endif
-void rasterSceneBackend103(uint32_t now,bool fastBackdrop){if(storagePause!=UiCheckpointPause::None){fill(0,0,W,H,native_title::background);drawService();return;}if(view==View::Jackpots){drawJackpots198(now);return;}if(!opaqueSceneFire(now)){if(fastBackdrop)drawSceneBackdrop103();else image(pa::backdrop,0,0);drawHeader(now);drawReels(now);drawFooter();drawTransition(now);}drawNestedFreeProgress138();if(fountainActive&&view==View::Game)coinShower(now-fountainAt);if(view==View::Menu)drawMenu();else if(view==View::Bet)drawBet();else if(view==View::Rules)drawRules();else if(view==View::Options)drawOptions();else if(view==View::Reset)drawReset();else if(view==View::Lucky)drawLucky();else if(view==View::Sound)drawSound();else if(view==View::Volume)drawVolume();else if(view==View::Math)drawMath();else if(view==View::Service)drawService();if(storagePause!=UiCheckpointPause::None)drawService();if(*statusLine&&storagePause==UiCheckpointPause::None&&view==View::Game&&phase==Phase::Ready){fill(33,109,174,11,0x0000,225);text(statusLine,120,111,7,BRIGHT,1);}}
-void rasterScene(uint32_t now){if(storagePause!=UiCheckpointPause::None){fill(0,0,W,H,native_title::background);drawService();return;}if(view==View::Jackpots){drawJackpots198(now);return;}if(!opaqueSceneFire(now)){image(pa::backdrop,0,0);drawHeader(now);drawReels(now);drawFooter();drawTransition(now);}drawNestedFreeProgress138();if(fountainActive&&view==View::Game)coinShower(now-fountainAt);if(view==View::Menu)drawMenu();else if(view==View::Bet)drawBet();else if(view==View::Rules)drawRules();else if(view==View::Options)drawOptions();else if(view==View::Reset)drawReset();else if(view==View::Lucky)drawLucky();else if(view==View::Sound)drawSound();else if(view==View::Volume)drawVolume();else if(view==View::Math)drawMath();else if(view==View::Service)drawService();if(storagePause!=UiCheckpointPause::None)drawService();if(*statusLine&&storagePause==UiCheckpointPause::None&&view==View::Game&&phase==Phase::Ready){fill(33,109,174,11,0x0000,225);text(statusLine,120,111,7,BRIGHT,1);}}
+void rasterSceneBackend103(uint32_t now,bool fastBackdrop){if(storagePause!=UiCheckpointPause::None){fill(0,0,W,H,native_title::background);drawService();return;}if(view==View::Jackpots){drawJackpots198(now);return;}if(!opaqueSceneFire(now)){if(fastBackdrop)drawSceneBackdrop103();else image(pa::backdrop,0,0);drawHeader(now);drawReels(now);drawFooter();drawTransition(now);}drawNestedFreeProgress138();if(fountainActive&&view==View::Game)coinShower(now-fountainAt);if(view==View::Menu)drawMenu();else if(view==View::Bet)drawBet();else if(view==View::Rules)drawRules();else if(view==View::Paylines)drawPaylines();else if(view==View::Settings)drawSettings();else if(view==View::Options)drawOptions();else if(view==View::Reset)drawReset();else if(view==View::Lucky)drawLucky();else if(view==View::Sound)drawSound();else if(view==View::Volume)drawVolume();else if(view==View::Math)drawMath();else if(view==View::Service)drawService();if(storagePause!=UiCheckpointPause::None)drawService();if(*statusLine&&storagePause==UiCheckpointPause::None&&view==View::Game&&phase==Phase::Ready){fill(33,109,174,11,0x0000,225);text(statusLine,120,111,7,BRIGHT,1);}}
+void rasterScene(uint32_t now){if(storagePause!=UiCheckpointPause::None){fill(0,0,W,H,native_title::background);drawService();return;}if(view==View::Jackpots){drawJackpots198(now);return;}if(!opaqueSceneFire(now)){image(pa::backdrop,0,0);drawHeader(now);drawReels(now);drawFooter();drawTransition(now);}drawNestedFreeProgress138();if(fountainActive&&view==View::Game)coinShower(now-fountainAt);if(view==View::Menu)drawMenu();else if(view==View::Bet)drawBet();else if(view==View::Rules)drawRules();else if(view==View::Paylines)drawPaylines();else if(view==View::Settings)drawSettings();else if(view==View::Options)drawOptions();else if(view==View::Reset)drawReset();else if(view==View::Lucky)drawLucky();else if(view==View::Sound)drawSound();else if(view==View::Volume)drawVolume();else if(view==View::Math)drawMath();else if(view==View::Service)drawService();if(storagePause!=UiCheckpointPause::None)drawService();if(*statusLine&&storagePause==UiCheckpointPause::None&&view==View::Game&&phase==Phase::Ready){fill(33,109,174,11,0x0000,225);text(statusLine,120,111,7,BRIGHT,1);}}
 #include "reference_effect_v0258.h"
 void render(uint32_t now){uint32_t begin=micros();rasterScene(now);M5.Display.pushImage(0,0,W,H,pixels);lastDraw=now;dirty=false;lastDrawUs=micros()-begin;maxDrawUs=std::max(maxDrawUs,lastDrawUs);++frameCount;}
 void ready(){if(phase!=Phase::Land&&phase!=Phase::Expand&&phase!=Phase::FreeCounter&&phase!=Phase::SpinAwardSettle)lineClockValid=false;phase=Phase::Ready;readyAt=millis();displayBank=engine.state.roundOpen?engine.state.balance-engine.state.roundPayout:engine.state.balance;winFrom=displayWin;winTo=engine.state.roundPayout;winAt=millis();autoAt=millis()+(spinAward.finished?spin_award::readyDelayMs:engine.presentation.actionWinMinor?2600:650);dirty=true;}
@@ -2415,20 +2432,22 @@ void openCabinetWager(){
 }
 void chooseMenu(){cueButton();switch(menuItem){
  case 0:rulesPage=0;view=View::Rules;break;
- case 1:uiCabinetMenu();break;
- case 2:if(runtimeFinancialBlocked()){enterService();break;}autoPlay=!autoPlay;if(autoPlay)awaitingBonusResume=false;view=View::Game;autoAt=millis()+250;break;
+ 
+ 
  case 3:creditItem=0;creditsPanel201=CreditsPanel201::Credits;statusLine[0]=0;view=View::Reset;break;
  case 4:if(valuesAvailable201()){creditsPanel201=CreditsPanel201::GameValues;valuesItem201=0;statusLine[0]=0;view=View::Reset;}else valuesNotice201("FINISH CURRENT PLAY FIRST");break;
- case 5:soundItem=0;view=View::Sound;break;
- case 6:optionItem=0;view=View::Options;break;
+ 
+ 
  case 7:openReturnSelector86();break;
  case 8:view=View::Game;break;
+ case 9:paylinesPage=paylinesLayout=0;statusLine[0]=0;view=View::Paylines;break;
+ case 10:settingsItem=0;view=View::Settings;break;
  }dirty=true;}
 
 }
 
 void uiSetOutcomeCheckpointHandler(UiOutcomeCheckpointHandler handler){outcomeCheckpointHandler=handler;}
-bool uiInitFresh(phoenix::random::Service& source){amountFailureShown190=false;randomFailureShown125=false;returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=jackpotBoardRequested198=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;creditsPanel201=CreditsPanel201::Credits;valuesItem201=jackpotItem201=editFocus201=0;editedValue201=0;holdBackdropCaptured=false;holdStripStartsBlank=false;landingSounds=true;soundVolume=192;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;const bool randomReady125=engine.initializeFresh(source,1000);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
+bool uiInitFresh(phoenix::random::Service& source){amountFailureShown190=false;randomFailureShown125=false;returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=jackpotBoardRequested198=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;paylinesPage=paylinesLayout=0;settingsItem=0;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;creditsPanel201=CreditsPanel201::Credits;valuesItem201=jackpotItem201=editFocus201=0;editedValue201=0;holdBackdropCaptured=false;holdStripStartsBlank=false;landingSounds=true;soundVolume=192;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;const bool randomReady125=engine.initializeFresh(source,1000);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
  fire_alpha::init();
  initHoldMaterial();
 #ifndef UI_HOST_TEST
@@ -3043,7 +3062,7 @@ void uiButtonA(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiChe
    else if(applyRuntimeWager(cabinetDenom,cabinetLines,multiplier)){view=View::Game;action();}
   }
  }
-}else if(view==View::Rules)view=View::Menu;else if(view==View::Reset){if(creditsPanel201!=CreditsPanel201::Credits){valuesSelect201();}else if(creditItem<3){if(uiAddCredits(creditAmounts[creditItem])){view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==3){if(clearBalanceAvailable()&&engine.setCredits(0)){++creditRevision;displayBank=0;view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==4){autoRefill=!autoRefill;++creditRevision;cueCredit();}else if(creditItem==5){menuItem=3;view=View::Menu;statusLine[0]=0;}}else if(view==View::Lucky)playLucky();else if(view==View::Options){if(optionItem==0){auto b=M5.Display.getBrightness();M5.Display.setBrightness(b>=200?40:b<80?100:b<150?160:220);}else if(optionItem==1)creditsDisplay=!creditsDisplay;else uiFlipScreen();}
+}else if(view==View::Settings){if(settingsItem==0){soundItem=0;view=View::Sound;}else if(settingsItem==1){optionItem=0;view=View::Options;}else{menuItem=10;view=View::Menu;}}else if(view==View::Paylines){nextPaylinesLayout();}else if(view==View::Rules)view=View::Menu;else if(view==View::Reset){if(creditsPanel201!=CreditsPanel201::Credits){valuesSelect201();}else if(creditItem<3){if(uiAddCredits(creditAmounts[creditItem])){view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==3){if(clearBalanceAvailable()&&engine.setCredits(0)){++creditRevision;displayBank=0;view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==4){autoRefill=!autoRefill;++creditRevision;cueCredit();}else if(creditItem==5){menuItem=3;view=View::Menu;statusLine[0]=0;}}else if(view==View::Lucky)playLucky();else if(view==View::Options){if(optionItem==0){auto b=M5.Display.getBrightness();M5.Display.setBrightness(b>=200?40:b<80?100:b<150?160:220);}else if(optionItem==1)creditsDisplay=!creditsDisplay;else uiFlipScreen();}
 else if(view==View::Sound){if(soundItem==0){
 #ifndef UI_HOST_TEST
  audioSetMuted(!audioMuted());
@@ -3055,7 +3074,7 @@ else if(view==View::Volume)adjustVolume(true);
 else if(view==View::Math){selectReturnOption86();}
 
 dirty=true;}
-void uiButtonB(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game)return;cueButton();if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Menu)menuItem=(menuItem+1)%kMenuItemCount;else if(view==View::Bet)cabinetFocus=(cabinetFocus+1)%(cabinetReturnFocus()+1);else if(view==View::Rules)rulesPage=(rulesPage+1)%kRulesPageCount;else if(view==View::Options)optionItem=(optionItem+1)%3;else if(view==View::Sound)soundItem=(soundItem+1)%6;else if(view==View::Volume)adjustVolume(false);else if(view==View::Reset){if(creditsPanel201==CreditsPanel201::Credits)creditItem=(creditItem+1)%6;else valuesNext201();}else if(view==View::Lucky)view=View::Game;else if(view==View::Math)nextReturnOption86();dirty=true;}
+void uiButtonB(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game)return;cueButton();if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Menu)nextMenuItem();else if(view==View::Settings)settingsItem=(settingsItem+1)%3;else if(view==View::Paylines)paylinesPage=(paylinesPage+1)%paylinesPageCount();else if(view==View::Bet)cabinetFocus=(cabinetFocus+1)%(cabinetReturnFocus()+1);else if(view==View::Rules)rulesPage=(rulesPage+1)%kRulesPageCount;else if(view==View::Options)optionItem=(optionItem+1)%3;else if(view==View::Sound)soundItem=(soundItem+1)%6;else if(view==View::Volume)adjustVolume(false);else if(view==View::Reset){if(creditsPanel201==CreditsPanel201::Credits)creditItem=(creditItem+1)%6;else valuesNext201();}else if(view==View::Lucky)view=View::Game;else if(view==View::Math)nextReturnOption86();dirty=true;}
 void uiButtonBHold(){if(uiReturnSelectionInputFenced())return;if(view==View::Reset&&creditsPanel201!=CreditsPanel201::Credits){valuesBack201();return;}if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Bet)uiCabinetMenu();else uiMenu();}
 void uiMenu(){
  if(uiReturnSelectionInputFenced())return;
@@ -3065,9 +3084,9 @@ void uiMenu(){
  if(view==View::Reset){
   if(creditsPanel201!=CreditsPanel201::Credits)valuesBack201();
   else{menuItem=3;view=View::Menu;statusLine[0]=0;}
- }else if(view==View::Rules){menuItem=0;view=View::Menu;statusLine[0]=0;}
- else if(view==View::Sound){menuItem=5;view=View::Menu;statusLine[0]=0;}
- else if(view==View::Options){menuItem=6;view=View::Menu;statusLine[0]=0;}
+ }else if(view==View::Settings){menuItem=10;view=View::Menu;statusLine[0]=0;}else if(view==View::Paylines){menuItem=9;view=View::Menu;statusLine[0]=0;}else if(view==View::Rules){menuItem=0;view=View::Menu;statusLine[0]=0;}
+ else if(view==View::Sound){settingsItem=0;view=View::Settings;statusLine[0]=0;}
+ else if(view==View::Options){settingsItem=1;view=View::Settings;statusLine[0]=0;}
  else if(view==View::Volume)view=View::Sound;
  else if(view==View::Math){
   using Page=return_selector86::Page;

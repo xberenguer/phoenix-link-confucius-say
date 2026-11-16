@@ -6,7 +6,7 @@ The browser compiles the C++ Engine, UI and audio programs to WebAssembly. Its b
 
 ## Controls
 
-Blue spins/selects; holding blue toggles autoplay. Grey opens the wager panel or moves menu focus. Holding grey returns from the wager panel to the game, and opens settings from gameplay. Double-grey opens the live Jackpots board. Rotation is in Display → Flip Screen. See [controls](controls.md).
+Blue spins/selects; holding blue toggles autoplay. Grey opens the wager panel or moves menu focus. Holding grey returns from the wager panel to the game, and opens Game Menu from gameplay. Double-grey opens the live Jackpots board. Rotation is in Settings → Display → Flip Screen. See [controls](controls.md).
 
 A click or tap may be required before browser sound can start. The Sound menu controls master sound, stops/landings and volume. Hiding a tab pauses presentation/audio; returning to that still-open page continues its live session.
 

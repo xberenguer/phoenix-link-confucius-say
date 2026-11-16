@@ -35,11 +35,9 @@ The internal evaluator can represent more profiles than the wager menu offers. T
 
 A positive evaluator entry does not prove that every compatible board can naturally occur. Wild placement, correlated reels and the local generator constrain which patterns can be drawn. The original joint reel law remains unrecovered.
 
-Numbered geometry has been read for **40 of the 50 line IDs** across identified Base and Free recordings. The ten unresolved IDs are **8, 29, 31, 33, 37, 39, 45, 48, 49 and 50**. Some observations are available only in Free; applying one shared chart across modes, wagers or unidentified programs remains conditional. The CSV describes the implemented chart, including local fallbacks, rather than a completely recovered factory chart.
+The current **T (`0x0002001d`)** chart matches **42 of 45 documented 50-line IDs** and **13 of 17 documented 100-line IDs**. Matching observations are scoped to their filmed modes, wagers and program context; applying a common chart more widely remains a model assumption. [The coverage table](paylines.md#documented-geometry-coverage) separates implemented matches, observed-but-deferred vectors and unrecovered IDs.
 
-Those 40 IDs describe the observation ledger. Only the explicitly annotated corrections are installed in the compiled chart; other filmed routes and payouts still differ from its local fallbacks. The return reference uses the implemented paths. A complete original chart and its configured pay program remain unresolved.
-
-One known difference is 50-line Line 7: the compiled path is **bottom, bottom, middle, top, top**. The filmed [2¢ / 50-line / 3× Base result](https://www.youtube.com/watch?v=3pfZnZUWGhI&t=115s) and [1¢ / 50-line / 5× Free result](https://www.youtube.com/watch?v=3pfZnZUWGhI&t=324s) show **bottom, bottom, middle, bottom, bottom**. Installing that geometry requires recalculating the affected return references.
+The implemented 50-line Line7 is **bottom, bottom, middle, bottom, bottom**, matching the retained Base and Free observations. Complete original 50- and 100-line charts remain unrecovered. Other rows still use explicit local fallbacks, and some recorded whole-round totals remain unresolved even when an individual caption matches. A caption is not proof of full-event reproduction.
 
 ### Reading a row
 
@@ -82,6 +80,24 @@ The [Confucius Say recording](https://www.youtube.com/watch?v=3pfZnZUWGhI) conta
 The original [King line caption near 4:50](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=290s) shows “Line 11 wins 5”; the [Book caption at 5:03](https://www.youtube.com/watch?v=wO4wC7v3Ouw&t=303s) shows “Line 22 wins 100”. These establish the individual line prices, not the complete round totals.
 
 None of these observations qualifies the same price at another denomination, line count, multiplier, regional program or Free Games table. They do not determine the random generator or Grand schedule. Other current lookup rows remain subject to their own [source annotations and evidence limits](math-and-evidence.md).
+
+## Additional exact-profile Base corrections
+
+| Exact Base configuration | Combination | Unit credits | Line award |
+|---|---|---:|---|
+| 2¢ / 50 / 5× | Two Bells | 2 | 10 credits / $0.20 |
+| 2¢ / 50 / 5× | Three Kings | 5 | 25 credits / $0.50 |
+| 2¢ / 50 / 5× | Five Bells | 150 | 750 credits / $15.00 |
+| 2¢ / 50 / 5× | Five Books | 100 | 500 credits / $10.00 |
+| 5¢ / 25 / 5× | Three Kings | 5 | 25 credits / $1.25 |
+| 5¢ / 25 / 5× | Four Queens | 10 | 50 credits / $2.50 |
+| $1 / 5 / 1× | Two Abacuses | 2 | 2 credits / $2.00 |
+| $1 / 5 / 1× | Four Kings | 20 | 20 credits / $20.00 |
+| $1 / 5 / 1× | Four Queens | 10 | 10 credits / $10.00 |
+| 2¢ / 100 / 3× | Three Jacks | 5 | 15 credits / $0.30 |
+| 2¢ / 100 / 3× | Five Abacuses | 100 | 300 credits / $6.00 |
+
+The [3pf recording](https://www.youtube.com/watch?v=3pfZnZUWGhI), [Rio recording](https://www.youtube.com/watch?v=GclIM2tutCg) and [Cannery recording](https://www.youtube.com/watch?v=YoyplGW4DPM) supply the scoped captions retained beside the Engine branches. Several contain selected Wilds: those constrain effective awards under the current substitution-only model, rather than authenticating a universal bare-price or extra Wild-multiplier rule. The $1/5/1× two-Abacus value uses a joint prefix/terminal-total integer constraint; its cropped caption is not an independent uncropped witness. Values are not extended to unfilmed profiles or Free. Current 100-line placeholders and unqualified prices can still conflict with recorded whole-round money; no missing route or price is filled from a residual.
 
 ## Ten-cent, 50-line observation
 

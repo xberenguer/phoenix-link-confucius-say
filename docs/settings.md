@@ -8,15 +8,19 @@ Hold the large grey button during gameplay for Game Menu. Grey moves and blue se
 
 Game Rules has six pages covering play, features, Base pays, Free pays, units and Phoenix awards. Pay pages use the current configuration and show unit credits before the bet multiplier. See [payouts](payouts.md).
 
-Select Bet opens the cabinet panel. Browsing/cancelling does not stake money. Selecting a funded red BET choice commits its wager and starts immediately. Unfinished features prevent changing their wager.
+Short-grey during play opens the cabinet panel. Browsing/cancelling does not stake money. Selecting a funded red BET choice commits its wager and starts immediately. Unfinished features prevent changing their wager.
+
+## Settings menu
+
+**Game Menu → Settings** contains Sound, Display and Back to Menu. Hold grey in Sound or Display to return to Settings; hold grey in Settings to return to Game Menu.
 
 ## Display
 
-Brightness cycles the implemented levels. Amount Units switches between cash and denomination credits without changing the money balance. Flip Screen rotates 180 degrees. Double-grey in gameplay opens the live Jackpots board. A new session starts with its default display state.
+Brightness cycles the implemented levels. Amount Units switches between cash and denomination credits without changing the money balance. Flip Screen rotates 180 degrees. Open **Settings → Display** for these controls. Double-grey in gameplay opens the live Jackpots board. A new session starts with its default display state.
 
 ## Sound
 
-Master sound and stops/landings have separate controls. Volume adjusts the level; Test Free-Games Intro, Test Hold Music and Test Award Jingle play their named programs. See [audio](audio.md) for current routing and acoustic limits.
+Open **Settings → Sound**. Master sound and stops/landings have separate controls. Volume adjusts the level; Test Free-Games Intro, Test Hold Music and Test Award Jingle play their named programs. See [audio](audio.md) for current routing and acoustic limits.
 
 <img src="media/sound.png" alt="Sound menu" width="720">
 
@@ -52,6 +56,8 @@ Jackpot amounts are absolute cash values: changing denomination or wager does no
 <img src="media/jackpot-editor.png" alt="Jackpot cash amount editor" width="720">
 
 Double-grey during gameplay opens the jackpot board. Blue or grey closes it without spinning. It shows the amounts available for future prizes at the current configuration.
+
+The counter ceiling is the simulator’s closed-state limit, derived from its hidden-threshold and immediate-reset policy. It is not an authenticated factory display maximum; see [counter scope](collection-counter.md#local-meter-model).
 
 ## Battery display
 

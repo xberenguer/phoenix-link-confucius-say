@@ -19,6 +19,8 @@ The included [release identity](../RELEASE.json), [Engine](../firmware/src/phoen
 | [audio.cpp](../firmware/src/audio.cpp), [audio_music.cpp](../firmware/src/audio_music.cpp) | Cue lanes, speaker submission and music worker |
 | [platformio.ini](../firmware/platformio.ini) | Target/toolchain configuration |
 
+The current mathematical model is **T (`0x0002001d`)**. Its family/runtime fingerprint is taken from the included release metadata, not inferred from the version number. The public geometry exporter labels an observed route only when the current compiled count/ID/vector actually matches the scoped observation. See [payline coverage](paylines.md#documented-geometry-coverage).
+
 ## Financial state and presentation
 
 The Engine modes are Base, Free and Hold. A successful action computes its board, award and next mode before the UI animates it. Presentation phases and count-ups are views of that one result, not independent financial games. Use the recorded presentation context when routing a feature's sound or graphics.

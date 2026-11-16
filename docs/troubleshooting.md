@@ -8,7 +8,7 @@ Every device boot, flash and browser reload starts a fresh manual session with 1
 
 ## Grey opens wagers instead of settings
 
-Short-grey opens the cabinet panel. Hold-grey exits that panel directly to Game, or opens settings from gameplay. Double-grey opens the live Jackpots board; use Display → Flip Screen for rotation. The short action waits through the 400 ms double-click window. See [controls](controls.md).
+Short-grey opens the cabinet panel. Hold-grey exits that panel directly to Game, or opens Game Menu from gameplay. Double-grey opens the live Jackpots board; use Settings → Display → Flip Screen for rotation. The short action waits through the 400 ms double-click window. See [controls](controls.md).
 
 ## Unavailable wager or funding
 
@@ -26,7 +26,7 @@ Host randomness tests do not establish physical entropy quality. The supported n
 
 ## No sound or crackle
 
-Use the Sound menu's master sound, stops/landings, fine volume and test entries. Browsers may require an initial gesture. A missing required music file is different from a muted channel. Browser and Stick speakers/mixing have different timing and acoustic behavior.
+Use Settings → Sound's master sound, stops/landings, fine volume and test entries. Browsers may require an initial gesture. A missing required music file is different from a muted channel. Browser and Stick speakers/mixing have different timing and acoustic behavior.
 
 For crackle/resets on battery, lower volume and consult [M5Stack's speaker guidance](https://docs.m5stack.com/en/core/StickS3). Check USB and battery behavior separately; source fidelity remains a listening question.
 

@@ -14,7 +14,7 @@ python3 -m http.server 8777
 
 Open `http://localhost:8777/demo/` and press **Play with sound**. Source the SDK environment first, or supply its `EM_CONFIG` path. The build refuses any source or runtime asset differing from `SOURCE_BINDING.json`; there is no unaccepted-source override. A new release requires an explicitly reviewed new binding and fresh build.
 
-Blue/Space spins or selects; hold to toggle autoplay. Grey/Enter/Right opens SELECT BET or advances a menu; hold for settings, double press in the game for the live Jackpots board. Use Display → Flip Screen to rotate. Escape opens settings. Hidden tabs pause gameplay. Browser timing and output differ from physical hardware.
+Blue/Space spins or selects; hold to toggle autoplay. Grey/Enter/Right opens SELECT BET or advances a menu; hold for Game Menu, double press in the game for the live Jackpots board. Use Settings → Display → Flip Screen to rotate. Escape opens Game Menu. Hidden tabs pause gameplay. Browser timing and output differ from physical hardware.
 
 Engineering source acceptance is not regulatory approval. Return ranges describe the local ideal-uniform model under its stated play policy; they do not establish original casino PAR probabilities, physical entropy quality or the effect of every runtime fault. See [math and evidence](../docs/math-and-evidence.md#return-and-house-edge). Maintained Mbed TLS 3.6.7 supplies AES-256 CTR_DRBG; a fresh WebCrypto entropy request is required for each financial action.
 

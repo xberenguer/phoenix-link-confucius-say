@@ -42,7 +42,9 @@ Changing the count also draws a new hidden threshold above that count using the 
 
 ## Local meter model
 
-After a hit, the simulator chooses a reset uniformly from 100 through 1500. It then chooses its hidden threshold uniformly from the next count through 1887. The **support** of the reset and must-hit limit has rulebook support; the **uniform distributions do not**. On later arrivals the stored threshold stays in force until the bucket hits.
+After a hit, the simulator chooses a reset uniformly from 100 through 1500. It then chooses its hidden threshold uniformly from the next count through 1887. The **support** of the reset and must-hit limit has regional rulebook support; the **uniform distributions do not**. On later arrivals the stored threshold stays in force until the bucket hits.
+
+The current Core increments, awards and resets before recording the arrival’s displayed counter. With hidden threshold at most 1887 and a valid counter strictly below it, the editor accepts at most 1886. This is a local state/display policy, not proof that a factory screen cannot show 1887. A single still cannot establish whether such a value is idle or already awaiting a triggered feature.
 
 That local mechanism can make late-meter play more valuable conditionally, but it does not identify the casino's hazard curve or a profitable entry point. Published AP thresholds, selected bonus videos and aggregate casino returns are not a replacement for original distributions. No particular counter value on this simulator proves positive expected value on a real machine.
 

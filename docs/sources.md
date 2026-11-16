@@ -35,9 +35,10 @@ Gameplay recordings are indexed below by the features, prices and configurations
 | [hmyKdYjMjAQ at 8:29](https://www.youtube.com/watch?v=hmyKdYjMjAQ&t=509s) | New queued meter Hold begins empty after the preceding feature |
 | [hmyKdYjMjAQ at 25:40](https://www.youtube.com/watch?v=hmyKdYjMjAQ&t=1540s) | Twin symbol stops can carry different Phoenix amounts/prizes |
 | [mQZbc-_wjO4](https://www.youtube.com/watch?v=mQZbc-_wjO4) | Target US Free/Hold observations and visible meter increments/wager switching |
+| [YoyplGW4DPM](https://www.youtube.com/watch?v=YoyplGW4DPM) | Cannery original Confucius footage: scoped 100-line markers/prices and separate funded-Base recording groups; program identity remains unknown |
 | [YfbaaFXhln0](https://www.youtube.com/watch?v=YfbaaFXhln0) | Scoped 50¢/25/1× line chart, prices and Free/collection sequences; no blanket extension to every profile |
 | [wO4wC7v3Ouw](https://www.youtube.com/watch?v=wO4wC7v3Ouw) | Chronological raw-board audit across four visible wager profiles; current 10¢/25/1× King/Book Base prices are scoped to native Line 11/Line 22 captions |
-| [GclIM2tutCg](https://www.youtube.com/watch?v=GclIM2tutCg) | Current source-scoped Bell/Jack Base prices at 1¢/50/10× |
+| [GclIM2tutCg](https://www.youtube.com/watch?v=GclIM2tutCg) | Scoped Base prices and numbered 50-line geometry at the filmed configurations; remaining chart and Wild-bearing effective-price limits stay explicit |
 | [Zfc-LBjwXQA](https://www.youtube.com/watch?v=Zfc-LBjwXQA) | Current source-scoped Bell/Jack/Queen Base prices at 10¢/100/1× |
 | [nmcPHvRQYDE near 1:45](https://www.youtube.com/watch?v=nmcPHvRQYDE&t=105s) | Direct Confucius 10¢/50/1× Base Line22 endpoints/divider path and three-Jack caption5; publisher Las Vegas label, exact property/program unknown |
 | [qQ4gPanpkdU near 1:27](https://www.youtube.com/watch?v=qQ4gPanpkdU&t=87s) | Feature celebration music reference |

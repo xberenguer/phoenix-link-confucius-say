@@ -37,6 +37,8 @@ That is software test evidence. It does not establish physical entropy quality, 
 
 ## The local reel and feature law
 
+The current mathematical model is **T (`0x0002001d`)**. Its numeric source/family/runtime identities and table bindings are recorded in the included release data.
+
 Ordinary symbols use local integer weights and column-specific Wild eligibility. A correlated three-position Sage-run construction controls adjacent Wild runs. Free games pair the two outer reel groups; Phoenix values on paired stops are generated separately. These rules do not recover the original physical or virtual strips.
 
 Retained US footage already shows differences in ordinary-symbol repeats, Wild-stack patterns and Phoenix-bearing boards. These are known calibration gaps in the current window model. A clearer reconstruction of a symbol or a qualified CSPRNG does not resolve its outcome frequency; the local weights still require independently counted, configuration-specific gameplay evidence.
@@ -44,6 +46,10 @@ Retained US footage already shows differences in ordinary-symbol repeats, Wild-s
 These weights are fixed configuration constants. The generator does not inspect the player's funded balance or accumulated past wins/losses to tune the next result. A paid-action admission check can refuse an unaffordable or unsafe action; disclosed meter, mode and locked-feature state can legitimately affect what action is generated. [The balance/history tests](testing.md#check-balance-and-outcome-history-independence) exercise that separation, not casino calibration.
 
 Hold uses a local 950/10,000 arrival gate per vacancy. Prize weights, named-prize chances and multipliers are local assumptions. The session's collection counter uses uniform reset/threshold laws; the published operator description supplies support/limits, not those distributions. These choices are not a fit to an unbiased casino spin census and do not adapt to the player's recent wins or losses.
+
+A retained development ledger contains **143 funding-confirmed paid-Base slots: 141 complete boards and two partial/censored boards**, across three recordings and ten recording/wager groups. Sixteen funding-unknown slots remain separate. The complete-board counts are 40 from [3pf](https://www.youtube.com/watch?v=3pfZnZUWGhI), 53 from [Rio](https://www.youtube.com/watch?v=GclIM2tutCg) and 48 from [Cannery](https://www.youtube.com/watch?v=YoyplGW4DPM). These are exposed, clustered publication samples with subset independent checks—not 141 independent double-read casino trials.
+
+No ordinary adjacent equal pair was read in the funded cells, while two separated Q–C–Q reel windows were retained. That differs materially from the current ordinary-residual construction and supports further reel-window work; it does not justify hard-zero probabilities or a recovered casino law. No alternative fitted law is deployed.
 
 Readable continuous recordings can expose a rule, shape or price mismatch. Edited gaps, profile changes, fast stops and bonus-selected uploads must remain visible in the denominators. More symbol cells do not create more independent spins. Rare Grand/prize behavior and meter cycles need their own complete feature exposure. The [source guide](sources.md) keeps program/theme restrictions explicit.
 

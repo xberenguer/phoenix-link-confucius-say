@@ -1,8 +1,8 @@
 {
-  "version": "0.2.130",
-  "runtime_fingerprint": "d6558a87c8e4827010b112d61c640ffbce8d0c5838ffdfeaddbc5c8518c04bf2",
-  "mathematical_family": "ccb44f68b8cbb280b0fa4b73f888abe09b65b3de3aee46197a114bd424fbe5b9",
-  "local_model": "0x00020017",
+  "version": "0.2.140",
+  "runtime_fingerprint": "c5e2652ed1dfb188fd7fc0f3c2a94cc531ff54a543862b765782903a0975ac32",
+  "mathematical_family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
+  "local_model": "0x0002001d",
   "source_body_files": 165,
   "source_total_files": 168,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
@@ -22,29 +22,44 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Final firmware and offline assets passed complete byte-exact readback on StickS3. Fresh startup confirmed version 0.2.130, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
-  "browser_version": "0.2.130",
-  "native_status_version": "0.2.130",
+  "native_validation": "Final 0.2.140 firmware and offline assets passed complete byte-exact readback on the original StickS3. Fresh startup confirmed a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
+  "browser_version": "0.2.140",
+  "native_status_version": "0.2.140",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
   "status": "Current final source-bound release package",
   "changes": [
-    "New-session reels are sampled from the CSPRNG during the existing initialization action. This unpaid opening display does not change credits, counters, statistics, awards or the following paid-action stream.",
-    "Feature-counter digits wrap only through valid prefix ranges. The leading digit alternates0/1 and every draft stays within0..1886.",
-    "Source-bound browser, current guide, gallery and signed StickS3 flasher synchronized to the final milestone."
+    "Seven-item Game Menu with Sound and Display grouped under Settings; existing button shortcuts retained.",
+    "In-game Paylines viewer opens the current layout first and browses all six implemented line counts without changing the wager.",
+    "Additional source-observed payline geometry and scoped payout corrections, with compiled reference tables and explicit remaining fallback routes.",
+    "Grand awards use the existing WINNER artwork and a continuous checked jackpot-plus-Phoenix collection total; the unsupported Grand lettering is removed.",
+    "The actual current source, browser executable, guide, complete gallery, looping preview and signed hardware flasher are synchronized."
   ],
   "native_images": {
+    "feature-assets.bin": {
+      "bytes": 1572864,
+      "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
+    },
     "phoenix-confucius-sticks3.bin": {
-      "sha256": "5e8a0b94c93a90533b8d8b78fdbea8562cdeca73680f6086ea6fcbb6aa51bbde",
-      "bytes": 5752192
+      "bytes": 5735648,
+      "sha256": "5598cbc54dcbce722ba9495644a92ec36e31bc8d67a309b2572672013dac5380"
     },
     "phoenix-confucius-app.bin": {
-      "sha256": "46b1b3b81c02a90f0616c994f3ef014c91fdbf919abb2c16b928fcba61fbb011",
-      "bytes": 5686656
-    },
-    "feature-assets.bin": {
-      "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181",
-      "bytes": 1572864
+      "bytes": 5670112,
+      "sha256": "dc22acc2fed6bfd364199588213959d1cda05571cb30766cba6aa4a8c1879e18"
     }
+  },
+  "validation": {
+    "browser_functional_checks": 327,
+    "browser_cache_offline_checks": 62,
+    "CSPRNG_known_answer_and_fault_checks": 47905,
+    "source_return_rows_checked": 7200,
+    "menu_wagers_checked": 110,
+    "return_selector_details_checked": 660,
+    "payline_routes_checked": 1230,
+    "payline_viewer_pages_checked": 222,
+    "full_native_readback": true,
+    "fresh_native_startup": true,
+    "original_machine_fidelity_certified": false
   }
 }
