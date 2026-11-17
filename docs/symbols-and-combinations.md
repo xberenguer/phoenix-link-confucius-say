@@ -21,6 +21,12 @@ This is the complete symbol inventory in the current [Engine](../firmware/src/ph
 | Wisdom | Scatter | Any-position award and free-games trigger; does not require a selected payline |
 | Phoenix | Held value / named prize | Its displayed value belongs to the Phoenix feature, not the line-pay table |
 
+## Named Phoenix prizes
+
+Mini, Minor and Major each have **single, double and triple** artwork. Repeated names on one Phoenix represent multiples of that prize. View all nine labels below, or see [their full reel-grid screenshots and award screens](graphics.md#single-double-and-triple-jackpot-symbols).
+
+<img src="media/jackpot-variants.png" alt="Single, double and triple Mini, Minor and Major artwork from the current game" width="720">
+
 ## Regular line wins
 
 Each selected line chooses one row from each of the five columns. The evaluator checks a matching prefix starting on column 1. A gap ends that prefix; a match on columns 3–5 alone is not a line win. Confucius can fill a regular-symbol position.

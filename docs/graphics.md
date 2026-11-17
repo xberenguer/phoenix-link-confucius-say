@@ -2,6 +2,8 @@
 
 Gallery of the **current game**. The native display is 240 × 135 pixels. Images and animations are enlarged to 720 × 405 with nearest-neighbor scaling, preserving the pixel grid.
 
+Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [rare award screens](#rare-award-and-feature-screens), [symbol motion](#every-symbols-implemented-motion) or [feature effects](#feature-effects). Detail sheets combine enlarged crops from the rendered screens. Demonstration boards show the artwork without requiring a rare natural outcome; they are not probability samples.
+
 ## Screen layout
 
 <img src="media/game.png" alt="Regular game, synthetic demo state" width="720">
@@ -15,6 +17,64 @@ The cabinet wager menu combines observed denomination, line and red BET controls
 Double-press the large grey button to open the jackpot board. The Phoenix Link wordmark, animated Phoenix tier badges and separate red, green, blue and orange amount panels adapt the cabinet's upper display to the Stick screen. Cash amounts are grouped for readability and retain their exact cents.
 
 <img src="media/jackpots.png" alt="Phoenix Link jackpot board" width="720">
+
+## Single, double and triple jackpot symbols
+
+Mini, Minor and Major each have single, double and triple versions. Repeated names on one symbol mean **1×, 2× or 3× that prize**. A Triple Major is one Phoenix carrying three Major units, not three separate occupied cells. These labels can appear on the Base reels, in Free Games or during Hold & Spin; payment follows the feature's collection rules.
+
+Columns below are **Mini, Minor, Major**. Rows are **single, double, triple**. These are magnified crops of the actual current renderer, with no smoothing or replacement lettering.
+
+<img src="media/jackpot-variants.png" alt="All nine current jackpot labels: single, double and triple Mini, Minor and Major" width="720">
+
+### Single prizes in the reel grid
+
+<img src="media/jackpot-symbols-1x.png" alt="Current Hold grid with single Mini, Minor and Major symbols on the top row" width="720">
+
+### Double prizes in the reel grid
+
+<img src="media/jackpot-symbols-2x.png" alt="Current Hold grid with Double Mini, Double Minor and Double Major symbols on the top row" width="720">
+
+### Triple prizes in the reel grid
+
+<img src="media/jackpot-symbols-3x.png" alt="Current Hold grid with Triple Mini, Triple Minor and Triple Major symbols on the top row" width="720">
+
+The three boards are separate presentation examples. Each contains one Major symbol, matching the current model's single-Major restriction. Their appearance does not establish original cabinet frequencies. See [prizes and collection](hold-and-spin.md#phoenix-values-and-named-prizes).
+
+## Rare award and feature screens
+
+The Major title, full-board Grand, running collection amount and revival use different presentation paths.
+
+**Major award:** its named title and locked award amount, before the other values collect.
+
+<img src="media/major-award.png" alt="Current Major award title and framed green amount" width="720">
+
+**Full-board Grand:** the continuous WINNER display includes the Grand contribution; it does not add a second plain Grand popup.
+
+<img src="media/grand-award.png" alt="Full fifteen-Phoenix board with the centered Grand-inclusive WINNER amount" width="720">
+
+**Named-prize collection:** the running amount and flying Phoenix continue after the named-award stage.
+
+<img src="media/named-collection.png" alt="Current collection phase after a Triple Major award" width="720">
+
+**Hold entry and revival:** the feature prompt is distinct from a renewed set of respins after an initial drought.
+
+<img src="media/hold-entry.png" alt="Phoenix Hold feature entry prompt with named prizes locked in the grid" width="720">
+
+<img src="media/hold-revival.png" alt="Current Phoenix revival fire and restored feature prompt" width="720">
+
+**Wisdom Free Games entry:** the announcement uses the current game's actual transition artwork.
+
+<img src="media/free-games-entry.png" alt="Current three-Wisdom Free Games entry announcement" width="720">
+
+**A Hold inside Free Games:** the Free-game progress stays visible both during the fire transition and on the held board.
+
+<img src="media/nested-free-fire.png" alt="Hold-entry fire with the ongoing Free-game progress retained" width="720">
+
+<img src="media/nested-free.png" alt="Phoenix Hold inside an ongoing Free Games session" width="720">
+
+**Three-row gold Confucius:** awarded adjacent faces join into the tall figure.
+
+<img src="media/hero-full-gold150.png" alt="Current three-row merged gold Confucius in a winning line" width="720">
 
 ## Every symbol's implemented motion
 
@@ -32,6 +92,8 @@ Double-press the large grey button to open the jackpot board. The Phoenix Link w
 | Phoenix | 60-frame animated asset, independently phased for visible positions |
 
 Animation frames are selected by [generated assets](../firmware/src/generated_assets.cpp) and [Phoenix artwork](../firmware/src/phoenix_art.cpp).
+
+<img src="media/symbols.png" alt="All twelve current symbol types in a display fixture" width="720">
 
 <img src="media/wisdom.webp" alt="Wisdom animation display fixture" width="720">
 

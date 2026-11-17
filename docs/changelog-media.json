@@ -2678,6 +2678,255 @@
       "frames": 1,
       "exact_source_RGB": true,
       "fixture_kind": "Current-source full three-row Sage merge from the scripted loop."
+    },
+    {
+      "file": "media/jackpot-symbols-1x.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "dfde64b4d6c36551d8a307d9b800d49556becf074502cc7f3b25a06788a82c9c",
+      "bytes": 36312,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "f57d4af5591ff6180bdd78e168d82c6ed92837c8e5c37a279a1042b4e8723814",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/grand-award.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "bc8f6c3a2aa786651e9430455475486a8bc5005683ac303421ff220a563588df",
+      "bytes": 39294,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "985040e3879a41e221b5d00a297699292c89af8e56dabff417e64d3d14303e5d",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/hold-revival.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "20e29be4d389a3034f2a131e95df3ff05c098ca7c968a61b96caf399e7ee0eed",
+      "bytes": 44984,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "e6e6e25d9bc67e98c62b4c76ba0f3d56fcb7a5384fb28d408a2666e81e542284",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/jackpot-symbols-3x.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "af0822b18a4fe4269995a4f7ad26844a16d2661c70cf44a5e0893c578600f1f0",
+      "bytes": 36961,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "54dfb8b07ceeb47417edf5e45a212e7467be1e0db47c16f82ec1cad661d3ebb3",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/free-games-entry.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "08d25cc7f20a88ff79f9b997cdff6042070da33c46251626cf538035f8fa82f1",
+      "bytes": 32422,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "5d09fc116ca1730b7e2f31bbfb8637bf0b787bfaff93fd266599e85547e3c960",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/major-award.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "dd1b44dcaf3540c2d6b44af80be9e860f8911906860d45458e5956651fbe9bd6",
+      "bytes": 40985,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "61451f54f893bb302e68632b4f00e41188e05efe625f77c984d361109445dfe8",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/named-collection.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "febcc87a641df75439adc06de81bc257ef38b03244a9b3bd8d7b9797df543744",
+      "bytes": 47513,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "ae20ba676ec63d93c6edbfbc89cc3375b35ea204517f4cab795e953c1425d597",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/jackpot-symbols-2x.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "dda1c384053dea2a5b0e0b0c1ea5a5dd3c829e1f35d553419881ea728da33795",
+      "bytes": 36695,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "77f393e03013a8e1257c4aebb9a3ef0ddaa66a06e3ca32845609d9b2bc737ef5",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/hold-entry.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "3f5bc4a270eccf94de4664a65b0b4c964c7579777cae39f2508bafb3428c9c02",
+      "bytes": 36163,
+      "dimensions": [
+        720,
+        405
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "input_frame_ppm_sha256": "4d18be60f7c4ecb6c34fd86d017e4e23d6b07bef21b03d68d9f77b42c6e526ed",
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "publication_transform": "Nearest-neighbor 3x enlargement."
+    },
+    {
+      "file": "media/jackpot-variants.png",
+      "source_version": "0.2.151",
+      "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
+      "sha256": "8bef954a72f9d1627162a9d701d6e08ecb85694038d7dc1f699cb12aebcdabf2",
+      "bytes": 33020,
+      "dimensions": [
+        720,
+        540
+      ],
+      "frames": 1,
+      "exact_source_RGB": true,
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic demonstration from the actual current Main/UI renderer; scripted Engine transitions; not a natural probability sample.",
+      "fixture_builder_sha256": "29665673bfab12572f5346e4a06091ec132310a94dbef82cfafc9834a95498b3",
+      "render_preserves_financial_snapshot": true,
+      "render_consumes_outcome_entropy": false,
+      "publication_transform": "3 by 3 detail sheet of top-row symbol crops, nearest-neighbor 5x enlargement.",
+      "source_frames": [
+        {
+          "file": "jackpot-symbols-1x",
+          "ppm_sha256": "f57d4af5591ff6180bdd78e168d82c6ed92837c8e5c37a279a1042b4e8723814"
+        },
+        {
+          "file": "jackpot-symbols-2x",
+          "ppm_sha256": "77f393e03013a8e1257c4aebb9a3ef0ddaa66a06e3ca32845609d9b2bc737ef5"
+        },
+        {
+          "file": "jackpot-symbols-3x",
+          "ppm_sha256": "54dfb8b07ceeb47417edf5e45a212e7467be1e0db47c16f82ec1cad661d3ebb3"
+        }
+      ]
     }
   ]
 }

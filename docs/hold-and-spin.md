@@ -8,6 +8,8 @@ Six through fourteen Phoenixes on a Base or Free result enter Hold & Spin. Their
 
 Each action consumes one remaining respin. Any new Phoenix locks and resets the remaining count to three. Already locked Phoenixes keep their prizes and do not count as new arrivals on every spin. Empty cells do not earn ordinary line awards during Hold.
 
+The simulator generates a fresh result for **each initiated respin**, then animates that result landing. It does not choose the entire feature's final board or total at entry. Manual play and autoplay use the same outcome path. This describes the included implementation; it does not establish the original cabinet's internal draw timing. See [how randomness works](randomness.md).
+
 The large top-of-cabinet information is adapted to the small screen: a live collected count appears above the reels, and collection WINNER/currency announcements can occupy the center. The count includes existing locks and new symbols whose visual impact has occurred, rather than revealing every precommitted landing at the start of motion.
 
 <img src="media/hold.png" alt="Scripted Hold scene with synthetic demonstration credits" width="720">
@@ -50,6 +52,8 @@ These are exact-law calculations rounded for display, **not a natural-video samp
 | Major | Use its separate named-award presentation and pay its locked value |
 | Double / Triple named prize | Apply 2× / 3× to that named Mini, Minor or Major |
 | Grand from a full board | Add Grand to all Phoenix prizes; it does not replace them |
+
+See [all nine named-prize labels and their reel screenshots](graphics.md#single-double-and-triple-jackpot-symbols), including Double and Triple Major.
 
 Do not multiply a shown Phoenix cash value by the stake again. Internally generated ordinary prizes use total-bet multiples, but the displayed number already represents the prize. Ordinary credit prizes do not receive the named-prize 2×/3× multiplier in this model.
 
