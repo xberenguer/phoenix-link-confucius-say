@@ -1,17 +1,17 @@
 {
-  "describes_version": "0.2.160",
-  "target_public_version": "0.2.160",
+  "describes_version": "0.2.170",
+  "target_public_version": "0.2.170",
   "model": "0x0002001f",
   "family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
-  "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+  "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
   "renderer_source": "firmware/src/ui.cpp",
-  "renderer_sha256": "16ecf3fcb0677f257fe1b17f02744516ee813063fdeac1a20916df065c636231",
+  "renderer_sha256": "cbf4f56d5fa2cd11feb61a9b7a3f85e0db546e83dfb16cdeea0ed0c79280a6ad",
   "engine_source": "firmware/src/phoenix_engine.h",
   "engine_sha256": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
   "renderer_fixture_sha256": "4359d3a3e3357df67960a73c03150df684b755e06e0d133c17d48283597fcae6",
   "source_files_sha256": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
-    "audio.cpp": "002d028edb82da2d212771d7f03237e96296fdaa6aeab3cf7c375c0fe8d3ffbf",
+    "audio.cpp": "7891f1c924d66ab9c8ebe1100964b341c71fdcf93f0e1ad7e047a87a1461421e",
     "audio.h": "d10be072c3bed8642ff1afbb6390a6f643855d0c6e0a0abe9c60f6df37b5b83c",
     "audio_cash_in_generated.inc": "a562d427f3305062796d67b07fecbd6bcd88d5f590f300784fe57fda58d7ea5c",
     "audio_cues.cpp": "fdbf7cbe8c00493af24d5d6870959dd486b317ab710250de829c0583c63c7d03",
@@ -20,7 +20,7 @@
     "audio_music.cpp": "6c425f97f12adcb7e4f9152db649cbc9c0152666186da1069d0061f1ed1f36c2",
     "audio_music.h": "a20063f44da33c1f2e4d23799706038ff1a9b4091c41ffc735e253ac3fb425cb",
     "audio_third_generated.inc": "170cf2fc6a4df6abcbf566a3ef826868fd7ff43392357b080933f510732334a1",
-    "authored_major112.h": "545f97c07e9f431d8b0eb6de0c75f033b739b7035fb16bd1c9d61d30bf959097",
+    "authored_major112.h": "466f708715370d2d49e53aee33bd4ee08bc1c6955e9cc3068c8f419d8c1947c2",
     "award_art.cpp": "6ee57f2e7f840562484397584e4b3178c29f21cc4129a91a49a98012206d09c1",
     "award_art.h": "b6128f5d104fb179cee8b4f3d512264f2c66f90286b06e6c71fa1b0566db9ac5",
     "award_cache.h": "804b13efba7ad91c78039948ba2bf471b90f90e85665894d4946fce3578e442e",
@@ -29,7 +29,7 @@
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
     "bounded_decimal_editor121.h": "1c477b5355b62a71f2b8751b4ee2d40b11fd33b189013e252cdd29d0bbcc9821",
-    "build_version.h": "a97412b80d4d35ff86787fce08e79ed731ab125b6325177e719cbc38fba49442",
+    "build_version.h": "ce6d581a602fba276a6f7447177426154b400984bf6892ea20cd75d1ec6ad86b",
     "cabinet_profile.h": "af3599df21043ef3fcd1b2c88a1bae41bd9a30de6f629fdabab8cf211da1b6e0",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
     "cabinet_scene145.h": "999a9fd5d09757a93884748951c945512b6c72186289a02ef253c67bb3513a3f",
@@ -77,7 +77,7 @@
     "fire_field.h": "fbf11814ef5ce08961b3adbc1279946a191e3df85d1e1688c5df0396c5c519d1",
     "fire_field_data.h": "6f854c98987d41f11c145f92b4caf3b693fb0c4d88dc158368b16dfcdc64ddd5",
     "game_black_tap.h": "54584b4ba0c8e6f81f7cf378693c4756d681a22705d22d65e14f0c90f9ba9457",
-    "game_values_editor201.inc": "ee628eaf470bf397ee48482be4cb4490d7f5c5d9b95bc194469e49627bae8a81",
+    "game_values_editor201.inc": "6f613b4f18c7d27a41e0c522ef2d339be3a4cf6a7412a9846a43f1f2d3520423",
     "generated_assets.cpp": "6e713d75a40b4324bc8a94d2f1b73a676c93e021c8dc19caf23cb54030be8331",
     "generated_assets.h": "4a6ee515ff05d86da6abfdc9755e776b4f4d7672eb74dae9610931bc40d41c1f",
     "gold_burn.h": "f808a860a36bd59571cc51adbb0b15c4a053b24d72fa79f3736eed57de60c553",
@@ -96,7 +96,7 @@
     "major_material153.h": "ce371e119af6a89ad797687243769c71502e54f7723bd2c97232c67f08ced062",
     "major_material153_data.h": "d2975b76c7b73cc44e1b3da46192f420d251ac719b5bb63d2f136bf3e5806310",
     "major_title112_data.h": "e75772a92c3acd0e7efe4d7a28a74779c8de9e93df0d44acfa2bb62d2dc4a68e",
-    "math_runtime_identity.h": "3591b2a0f90c6c80969878efbe18fcbeb552a49f756b01213d673aa970163590",
+    "math_runtime_identity.h": "f285de351a4ab64f93c848d3c048716d8a7659d7e4177da08fc00d8bfcac403b",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "af304bc8f1b6586e88ca6c0771a921278d5ce69d710bcb4b7b7aa6c490236c0a",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -174,7 +174,7 @@
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "16ecf3fcb0677f257fe1b17f02744516ee813063fdeac1a20916df065c636231",
+    "ui.cpp": "cbf4f56d5fa2cd11feb61a9b7a3f85e0db546e83dfb16cdeea0ed0c79280a6ad",
     "ui.h": "63dd39dd10d134be292f9e046cc76b877216ccad22e1090dab9266f64b2b6493",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -200,8 +200,8 @@
     {
       "file": "media/settings.png",
       "kind": "settings",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "7f5d53d255d6d24ef43ce68dcb8367fd6e5262c876b661d090f0e9702a77259c",
       "bytes": 11510,
       "dimensions": [
@@ -223,8 +223,8 @@
     {
       "file": "media/paylines.png",
       "kind": "paylines-current",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "d8444e5d95f851611c4e0237dea91f596efc975f3e856269c24fa0da786d9c05",
       "bytes": 11903,
       "dimensions": [
@@ -246,8 +246,8 @@
     {
       "file": "media/paylines-all.png",
       "kind": "paylines-all",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "f9882ec2dda9c1bc0df14d83fd1101e307895a2daa8e7cc38a6f405f4e81c699",
       "bytes": 11570,
       "dimensions": [
@@ -269,8 +269,8 @@
     {
       "file": "media/line22-jack3.png",
       "kind": "line22-jack3",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "50698cd71cf23a6e7ebf281bccf3415d2d79ca51ffbad060b4f4b8b89d6b5c1b",
       "bytes": 42345,
       "dimensions": [
@@ -292,8 +292,8 @@
     {
       "file": "media/pickup-flight.png",
       "kind": "pickup-flight",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "154322031f2751a2b39a7da7c5f68368069243ae9bd13e37b87fadad0a108a34",
       "bytes": 40259,
       "dimensions": [
@@ -315,8 +315,8 @@
     {
       "file": "media/cash25-burst.png",
       "kind": "cash25-burst",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "ba0d4ac01bdbcdd8bc105ef3aeebc772ba914491eadcccb8dafc7b6a4bfa5af4",
       "bytes": 45281,
       "dimensions": [
@@ -338,8 +338,8 @@
     {
       "file": "media/game.png",
       "kind": "game",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "994ed5213c08b3b4035546cbda0622231b254c1812b0db89ee9579ce491aec6c",
       "bytes": 43689,
       "dimensions": [
@@ -361,8 +361,8 @@
     {
       "file": "media/wagers.png",
       "kind": "wagers",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "21b50e2760d76e281512604f10c66cefd4751a04f988d8761461cc2151cc1acd",
       "bytes": 64233,
       "dimensions": [
@@ -384,10 +384,10 @@
     {
       "file": "media/menu.png",
       "kind": "menu",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "sha256": "dbff6159ca3cdf3f8835c97bbe44dc5576401449337f67b019e2fa52de04206c",
-      "bytes": 14434,
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "40f409ce3056070e6ecac14879e6079935dad253f32031ae312ce6bdde36fd3f",
+      "bytes": 14395,
       "dimensions": [
         720,
         405
@@ -401,16 +401,16 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "354e83d0b44e37e0a1e8fb6071fd2f03eee58b9f7d104fd8ef2319f99620d8bc"
+        "f23abc47bd6aed8995cf0ef730a82e74ce6ca6c6f2d1a7d9e57c1d0b01738b2e"
       ]
     },
     {
       "file": "media/sound.png",
       "kind": "sound",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "sha256": "2effd4a28e2fd6db037da4574c02b88e94ced56067069caddc8582f7758a170e",
-      "bytes": 15910,
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "6b09e6e8061742a0962181f787a2c9e64272bd1aeebcc01c1b7b91596f5b1b1e",
+      "bytes": 15874,
       "dimensions": [
         720,
         405
@@ -424,14 +424,14 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "f37f715fe0d7e35b81cd68a51ae134b898dcfb2bf069f3f4c08281a3ed0a41df"
+        "72be3dc6f74ce4a331440f4b7d19db66be62ecda11ce65374ec2c9859634a665"
       ]
     },
     {
       "file": "media/volume.png",
       "kind": "volume",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "27660fc524153206063dbd3b71e2336d499879c8e346f8d2b16368fda53ff6b3",
       "bytes": 10911,
       "dimensions": [
@@ -453,8 +453,8 @@
     {
       "file": "media/wisdom-entry.png",
       "kind": "wisdom-entry",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "36015d971d0f620ada3947c41e7d9dc82543f915b3a9d3615d19d5f9778daf1e",
       "bytes": 45612,
       "dimensions": [
@@ -476,8 +476,8 @@
     {
       "file": "media/hold.png",
       "kind": "hold",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "d9904b74cb27225ee4c0ecfcfb4ae2b66348980b59ca30147b834b474d870e83",
       "bytes": 52556,
       "dimensions": [
@@ -499,8 +499,8 @@
     {
       "file": "media/collection.png",
       "kind": "collection",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "3297196ea23da301920f2225c509bf198e38b1616f79a2ba323fd181eeec89bc",
       "bytes": 55113,
       "dimensions": [
@@ -522,8 +522,8 @@
     {
       "file": "media/symbols.png",
       "kind": "symbols",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "1b289940b5376cf1d9a65f9516da2c0442bb2679bc499a0f2c86cf80f31911be",
       "bytes": 45593,
       "dimensions": [
@@ -545,8 +545,8 @@
     {
       "file": "media/credits.png",
       "kind": "credits",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "b127207c2f7035cb75e8b817945ae1228182a32a4ae3166f97a2bf9ed6f67722",
       "bytes": 14939,
       "dimensions": [
@@ -568,8 +568,8 @@
     {
       "file": "media/wagers-lines.png",
       "kind": "wagers-lines",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "4d4a4be013ff6a30ba3a949e8a2fde3a9fa6809bd9ce7db5bbeee815d20517c6",
       "bytes": 43201,
       "dimensions": [
@@ -591,8 +591,8 @@
     {
       "file": "media/wagers-bets.png",
       "kind": "wagers-bets",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "1d37f3381c9c91181396bc3e909afa84b023f83952da970e71a4b4560e9e70ba",
       "bytes": 43466,
       "dimensions": [
@@ -614,8 +614,8 @@
     {
       "file": "media/nested-free.png",
       "kind": "nested-free",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "c130bceda5bbdd739d4ef7edc887f8f213995acd0671fe190713ff56ec506e0a",
       "bytes": 32530,
       "dimensions": [
@@ -637,8 +637,8 @@
     {
       "file": "media/nested-free-fire.png",
       "kind": "nested-free-fire",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "01e212a0d6c28eeca389830f179cb305bf5d8ad86f091e92dee01036b6451133",
       "bytes": 39868,
       "dimensions": [
@@ -660,8 +660,8 @@
     {
       "file": "media/pickup-flight.webp",
       "kind": "pickup-flight",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "5ca1ebd1a993bb64b73754f8eab69e61a8a203a3af11e482e89400239436dfe5",
       "bytes": 704846,
       "dimensions": [
@@ -736,8 +736,8 @@
     {
       "file": "media/cash25-burst.webp",
       "kind": "cash25-burst",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "e2d1da536fc3decad3d0973749c547c7f280730d3551c8c47eb54d50a4de9a10",
       "bytes": 1082546,
       "dimensions": [
@@ -822,8 +822,8 @@
     {
       "file": "media/wisdom.webp",
       "kind": "wisdom",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "9fddbfd05e83e56b5e4668c021b4829a0fbbebe18f42dde087c340fd034f8e44",
       "bytes": 228552,
       "dimensions": [
@@ -947,8 +947,8 @@
     {
       "file": "media/sage.webp",
       "kind": "sage",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "d05aaa870953987fd7fd3451e99c9555822d4807c7e7b6c395e4211d88bd18a8",
       "bytes": 149664,
       "dimensions": [
@@ -1003,8 +1003,8 @@
     {
       "file": "media/phoenix.webp",
       "kind": "phoenix",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "084f64f15487100f86890abc0eacc229d17806ec513c8e6c540930bfd04d81b3",
       "bytes": 251230,
       "dimensions": [
@@ -1088,8 +1088,8 @@
     {
       "file": "media/coins.webp",
       "kind": "coins",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "42d0e9e121e0bb2fb49169ad2a6814084a66bffa6c83a50baca1beffd950348b",
       "bytes": 954570,
       "dimensions": [
@@ -1189,8 +1189,8 @@
     {
       "file": "media/counter.webp",
       "kind": "counter",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "1ef21974b4c374cac1a4aaccf0cfdb3321857b20e0e1a4ecfccbd1627bf49622",
       "bytes": 241384,
       "dimensions": [
@@ -1254,8 +1254,8 @@
     {
       "file": "media/multiplied-mini.webp",
       "kind": "multiplied-mini101",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "bae6284cf6453b194a23256ef61f3c08bac1b50129a3816a91527f32070f00ed",
       "bytes": 998802,
       "dimensions": [
@@ -1340,8 +1340,8 @@
     {
       "file": "media/free-games-entry.png",
       "kind": "free-games-entry",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "35426e16c0c8a06ad2c8dd42f487845400464278f43ac9d46e47207c1f2ccd75",
       "bytes": 31196,
       "dimensions": [
@@ -1363,8 +1363,8 @@
     {
       "file": "media/grand-award.png",
       "kind": "grand-award",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "e297217cbe1888f40f1850d84d6d5b972e9ccfa5eb0aef8802db014ebf54ad85",
       "bytes": 61132,
       "dimensions": [
@@ -1386,8 +1386,8 @@
     {
       "file": "media/hold-entry.png",
       "kind": "hold-entry",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "71fc9f3b1fb1cd1af1b14b5b7aed2ecc0f50cab630254e637c13acbefc0b76a6",
       "bytes": 59618,
       "dimensions": [
@@ -1409,8 +1409,8 @@
     {
       "file": "media/hold-revival.png",
       "kind": "hold-revival",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "357fb2978255088814006e3efa57d4cc3cd181908766d18bb1a3574ea2351a63",
       "bytes": 51202,
       "dimensions": [
@@ -1432,8 +1432,8 @@
     {
       "file": "media/jackpots-custom.png",
       "kind": "jackpots-custom",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "f7e9592a1b30befb9e31294e9a8b7da3863a91389a3c0c10f728dc3a2a591cfc",
       "bytes": 39955,
       "dimensions": [
@@ -1454,8 +1454,8 @@
     {
       "file": "media/jackpots.png",
       "kind": "jackpots",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "9dd4ecb60d803a06c9712247181ff036b4ae77d6c0642adb2b57cefeef58e64e",
       "bytes": 38288,
       "dimensions": [
@@ -1476,8 +1476,8 @@
     {
       "file": "media/jackpot-symbols-1x.png",
       "kind": "jackpot-symbols-1x",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "d2378fd43f264a28a99c2ec0ebaf5654d6a2c04710d4b1f2a6b8c47c7e353595",
       "bytes": 59764,
       "dimensions": [
@@ -1499,8 +1499,8 @@
     {
       "file": "media/jackpot-symbols-2x.png",
       "kind": "jackpot-symbols-2x",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "27616cfeab43f485e5a11835ea9f8f0f486a5b245f2b7eac1ba789c560142ab3",
       "bytes": 60098,
       "dimensions": [
@@ -1522,8 +1522,8 @@
     {
       "file": "media/jackpot-symbols-3x.png",
       "kind": "jackpot-symbols-3x",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "744882d613791f5fe89f6c277f3d3b67a29f9898c0f52eec9decfa0d26fe6e8c",
       "bytes": 60468,
       "dimensions": [
@@ -1545,10 +1545,10 @@
     {
       "file": "media/major-award.png",
       "kind": "major-award",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "sha256": "cd83eea42be12b3da954536ddbe3483c1c094dfbda74cb4433f58de1c27f649a",
-      "bytes": 36631,
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "aa2f1a55b3e63ff2bff27f7e937149f970fc302262d8f30e1120f58969268d24",
+      "bytes": 58083,
       "dimensions": [
         720,
         405
@@ -1562,14 +1562,14 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "d2b83eea033404a367847156825bd7010e09162153fcc962da3b26df54b124c2"
+        "61b122f9eec7e80cc9fa7efc35c8dd0f2455695d1da6d70674bd9ce6d59c65c4"
       ]
     },
     {
       "file": "media/named-collection.png",
       "kind": "named-collection",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "6c9ac3df659d9521e16e32b2dbbc05669f6bc938d9281e363794c1916f2c5338",
       "bytes": 60952,
       "dimensions": [
@@ -1591,8 +1591,8 @@
     {
       "file": "media/jackpot-variants.png",
       "kind": "All nine named-prize symbols, crops from the current renderer",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "ce39df8d68411f89f0c39c7027d9c6f89f52bc5fbbe8ca6446c2986e360b688c",
       "bytes": 70449,
       "dimensions": [
@@ -1616,8 +1616,8 @@
     {
       "file": "media/jackpots-fire.webp",
       "kind": "Animated jackpot view",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "b7ea715a7a7fe2865cb5ee485e0dcd3b491a5bfd7d5dabd4b54ccc87943a6cc8",
       "bytes": 842334,
       "dimensions": [
@@ -1704,8 +1704,8 @@
     {
       "file": "media/counter-editor.png",
       "kind": "counter-editor",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "f4eadd51fe427caccac518928298d839cfa11a3bb9d99411cf40268683a5821a",
       "bytes": 12500,
       "dimensions": [
@@ -1726,8 +1726,8 @@
     {
       "file": "media/game-values.png",
       "kind": "game-values",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "a7d30517be7a7148558bec8578b73af8ec9af08da90d1a622c47164aa15845d1",
       "bytes": 14793,
       "dimensions": [
@@ -1748,8 +1748,8 @@
     {
       "file": "media/jackpot-editor.png",
       "kind": "jackpot-editor",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "836e160c1316af6879bab5ab3f257a44f2dcb90384c62388f1b1bfcb837ea03f",
       "bytes": 13628,
       "dimensions": [
@@ -1770,8 +1770,8 @@
     {
       "file": "media/jackpot-values.png",
       "kind": "jackpot-values",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "8fe7d01b59e53035421b34983346eb685e75abd31b6e9d3b3c906f39c32adaa6",
       "bytes": 14667,
       "dimensions": [
@@ -1792,8 +1792,8 @@
     {
       "file": "media/credit-voucher-filled.png",
       "kind": "credit-voucher-filled",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "61ac0bc31fcfe9df7b4c752f8045f658be5416364d20378670a7e0be51586d6a",
       "bytes": 21518,
       "dimensions": [
@@ -1814,10 +1814,10 @@
     {
       "file": "media/credit-voucher.png",
       "kind": "credit-voucher",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "sha256": "818ee5f23981f943206866dbd66d640c6d97f8fc1d9ca506faa04807c704a2ad",
-      "bytes": 20020,
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "ee1c7705ebfd030e1e26dbe15fdea2e4d47044522160ddd9a5e9e50f137386bd",
+      "bytes": 19973,
       "dimensions": [
         720,
         405
@@ -1829,15 +1829,15 @@
       "raw_camera_or_user_screenshot": false,
       "fixture_kind": "Synthetic current-source renderer state, not a frequency sample.",
       "input_sha256": [
-        "b14650b2334e62c1f65f1bfedf0b2f3b29ebe1283b6b46462b23962442d836cf"
+        "337d5450bfc0a1ce92cda4c0b9ca9e8e907fc81310f8c3d7a49be5164767413e"
       ],
       "frames": 1
     },
     {
       "file": "media/high-limit-bet.png",
       "kind": "high-limit-bet",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "db592a1030f4505840169d7d905703e6047e04d515467a703da356ef5cb30730",
       "bytes": 54825,
       "dimensions": [
@@ -1858,8 +1858,8 @@
     {
       "file": "media/high-limit-denomination.png",
       "kind": "high-limit-denomination",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "82769066b9ff826ed326137a4f4b69c33b3f6e967f2817ce64e53bcb64a10150",
       "bytes": 64379,
       "dimensions": [
@@ -1880,8 +1880,8 @@
     {
       "file": "media/high-limit-fifty.png",
       "kind": "high-limit-fifty",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "df129028f9d74d5417b480e0c824c1701b69edfce4374bedff94e604957e2eab",
       "bytes": 58219,
       "dimensions": [
@@ -1902,8 +1902,8 @@
     {
       "file": "media/loading.png",
       "kind": "loading",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "3de065323127b29ede7fde8b3dd904c1552d8191885f44bb5f640747c5fed38a",
       "bytes": 41653,
       "dimensions": [
@@ -1924,8 +1924,8 @@
     {
       "file": "media/empty-game.png",
       "kind": "empty-game",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "a0c5e150376e02b9789544e145919b27ca1f74e2bd2903e0ebb108e96e8f7266",
       "bytes": 45607,
       "dimensions": [
@@ -1946,10 +1946,10 @@
     {
       "file": "media/funded-game.png",
       "kind": "funded-game",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "sha256": "e98deddb9a9b05d47de5f67e2ab5aeb95b68c0542b70cada4d68f457e5384a49",
-      "bytes": 45801,
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "7e86b538bddb69c7b10b436069e30e580aacd754be1e05a7f02942825b4d5f71",
+      "bytes": 45758,
       "dimensions": [
         720,
         405
@@ -1961,15 +1961,37 @@
       "raw_camera_or_user_screenshot": false,
       "fixture_kind": "Synthetic current-source renderer state, not a frequency sample.",
       "input_sha256": [
-        "2a1f1f4eb550d2eaf207c36788945062646e364bb99fb2a9fd363220f407c545"
+        "2b4fc51ba6593d819fc62d28b6a45497054cbf437554f484ee9260e4e83214a5"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/sound-default.png",
+      "kind": "sound-default",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "dbf3818da72986f91eca1829d0b2ef7da6c18be718474c3344707a792dd20649",
+      "bytes": 15935,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Synthetic current-source renderer state, not a frequency sample.",
+      "input_sha256": [
+        "460a8889df178bc5735ba541d92254b0902c499443c993f5062bf6fbf86a2e94"
       ],
       "frames": 1
     },
     {
       "file": "media/startup-high-limit.png",
       "kind": "startup-high-limit",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "6ff528cf1c370c81c431e5b3ecf2e41cbf513202888c3e1855269187765c0b1f",
       "bytes": 64269,
       "dimensions": [
@@ -1990,8 +2012,8 @@
     {
       "file": "media/startup-lines-bet.png",
       "kind": "startup-lines-bet",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "80ff3f766155bd5a9b8d21faae43b9f4b5cd2d87903db368249dce12a9a6e25c",
       "bytes": 42617,
       "dimensions": [
@@ -2012,10 +2034,10 @@
     {
       "file": "media/startup-menu.png",
       "kind": "startup-menu",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "sha256": "cba6025c8db5736a4b6acd69eb02770ed52a90d1e21c7d6e5ffe219dec8680d8",
-      "bytes": 14379,
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a1bd1c201f07fc6d753f2ac54ccde5e9f00286f33e74bf1c26f64ecc8f651f18",
+      "bytes": 14341,
       "dimensions": [
         720,
         405
@@ -2027,15 +2049,15 @@
       "raw_camera_or_user_screenshot": false,
       "fixture_kind": "Synthetic current-source renderer state, not a frequency sample.",
       "input_sha256": [
-        "531540b653a9002a0db101c9cfc2a9f0e3e6a5f3caf6a3cfc988ec6529d1d9c0"
+        "e3c552801821d6f2c03936bd9d23e1e1bc9cc1536cb58c2dbf1ddce3dd6fa887"
       ],
       "frames": 1
     },
     {
       "file": "media/startup-settings.png",
       "kind": "startup-settings",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "ce54aedfcd8370f0fed41c9ebf66a1e5e6e8be389a98d9dc343d14fdbdef3bfc",
       "bytes": 11564,
       "dimensions": [
@@ -2056,8 +2078,8 @@
     {
       "file": "media/startup-standard.png",
       "kind": "startup-standard",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "e820c51c9963591756ce40d1d38c6525acf050b1069d15f304a894d5188d0753",
       "bytes": 64132,
       "dimensions": [
@@ -2078,10 +2100,10 @@
     {
       "file": "media/startup-voucher.png",
       "kind": "startup-voucher",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "sha256": "729c9def74bf1fb60e01d49f093c2264c29d20fdd9c59311d456820053c2d6f2",
-      "bytes": 20634,
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a663fd402c613132558f397a68bb7be127bd9ea328a094abed7a5c59719ad34d",
+      "bytes": 20560,
       "dimensions": [
         720,
         405
@@ -2093,15 +2115,15 @@
       "raw_camera_or_user_screenshot": false,
       "fixture_kind": "Synthetic current-source renderer state, not a frequency sample.",
       "input_sha256": [
-        "36883a8a40ff8fc4d0975e771c9f2e720581ae9867096ed3b5869c49633ebe41"
+        "58b9805e0a70408ef8795f94e1ddecf6ca397438fe844d9c2c251081c16881a1"
       ],
       "frames": 1
     },
     {
       "file": "media/maximum-counter.png",
       "kind": "Counter editor at local maximum1886",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "2d00351f34c301e285163163ee9ee3e3f02b44f96df9e5473cd1ffbafe9c67f1",
       "bytes": 12513,
       "dimensions": [
@@ -2122,8 +2144,8 @@
     {
       "file": "media/counter-editor.webp",
       "kind": "Bounded counter editing; preview only, no Apply",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "07976d7d1dec37e2cbf64061e19284b81a84786bfd76a1b154db81fa54274979",
       "bytes": 66148,
       "dimensions": [
@@ -2231,8 +2253,8 @@
     {
       "file": "media/gameplay.webp",
       "kind": "Three-spin gameplay loop",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "d65d1fa7016766079fb317283dd33a895110db281802bf25f1657f3428de4bad",
       "bytes": 4767026,
       "dimensions": [
@@ -2753,8 +2775,8 @@
     {
       "file": "media/gameplay.gif",
       "kind": "Palette-quantized gameplay loop",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "c23fe1f01fdca1f7b97eda2c9cc77765ecb6392ae16bd1adfcf2750cef75f02a",
       "bytes": 13013158,
       "dimensions": [
@@ -3272,8 +3294,8 @@
     {
       "file": "media/confucius-merged.png",
       "kind": "Full-height merged Confucius",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "a0452d9eccc8548b55c1cb5ae6502b7cb0016b0b79e96bd2e20bb175cd16add0",
       "bytes": 48013,
       "dimensions": [
@@ -3292,12 +3314,1430 @@
       "frames": 1
     },
     {
+      "file": "media/symbol-nine.png",
+      "kind": "9 idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "75f20a2150eb6dfbefb15a6c75821f38a113f3b7fe909a8de1eacd46ab16d314",
+      "bytes": 4626,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-nine-motion.webp",
+      "kind": "9 available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "b522ac6615601f88f34a7f05acd1f19827f28091253e9f4bd1c2e48336c65764",
+      "bytes": 4698,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6",
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6",
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6",
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6",
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6",
+        "4159534d46a353ded8a9a35c2b2e9f94668aa6a6bc75e5dfc4d11d9189e11a2b",
+        "4159534d46a353ded8a9a35c2b2e9f94668aa6a6bc75e5dfc4d11d9189e11a2b",
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6",
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6",
+        "905c9f00fa1cb628b34363e872de100e9ceb3704597348e8a84565875c8231b6"
+      ],
+      "frames": 10,
+      "encoded_frames": 3,
+      "duration_ms": 1250,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-ten.png",
+      "kind": "10 idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "b9bd2999d08e0b5013d18f29340677e272cf8ba2faa0fc110ab3a217eb297b51",
+      "bytes": 4648,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "692cde8273c30bf963f56f32772e194ab3e3a47de6f4561a3a0e98bff8a673e7"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-ten-motion.webp",
+      "kind": "10 available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "6b1d248d8fe21fcd181b6a0f36db6ce998a48b63b8d96a50e417a6a756ba1a54",
+      "bytes": 8696,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "692cde8273c30bf963f56f32772e194ab3e3a47de6f4561a3a0e98bff8a673e7",
+        "ee1a04dc91bb6eadeb45370740e0ec5c731fb2c4a20acd44007438022bb865ae",
+        "4159534d46a353ded8a9a35c2b2e9f94668aa6a6bc75e5dfc4d11d9189e11a2b",
+        "4159534d46a353ded8a9a35c2b2e9f94668aa6a6bc75e5dfc4d11d9189e11a2b",
+        "692cde8273c30bf963f56f32772e194ab3e3a47de6f4561a3a0e98bff8a673e7",
+        "692cde8273c30bf963f56f32772e194ab3e3a47de6f4561a3a0e98bff8a673e7",
+        "ee1a04dc91bb6eadeb45370740e0ec5c731fb2c4a20acd44007438022bb865ae",
+        "4159534d46a353ded8a9a35c2b2e9f94668aa6a6bc75e5dfc4d11d9189e11a2b"
+      ],
+      "frames": 8,
+      "encoded_frames": 6,
+      "duration_ms": 1000,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-jack.png",
+      "kind": "Jack idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "8c58d9361e59ff5c5b17a44736508d00fef56710ad60cad90fa5796d3f57ec34",
+      "bytes": 4346,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "8e2c36867c417da99972d55c1ad54c54c849c5a45eeffc342b7b32443ecec6aa"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-queen.png",
+      "kind": "Queen idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "416350f6a42bdad8f6e7f06cad6d42be1def59275c396e3b0572957d05674e45",
+      "bytes": 4951,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "62143111a4b5611e0f1e4a141f5b8de7f45baab84dc5bb81e277f9d5a9dfa5e4"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-king.png",
+      "kind": "King idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "0e4607aa04630cdaa2b7f84be960a2a117b4d414d4f7d14e434f0f8da734eca9",
+      "bytes": 4665,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "ecfdc8348cabc371e94fc1dd7db66c5455a881c058a4f4ada68c2d86b47e77b4"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-bell.png",
+      "kind": "Bell idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "f37eb22f648cd06d8f61eb15a77b109aa8dc743e748474f9ab70a0125d871ea3",
+      "bytes": 4272,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "cb8c6704e2887fd13e4246c10abe6ac0d57747a071d24e262fc6465490d79ead"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-bell-motion.webp",
+      "kind": "Bell available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "5a946d12a94dfa6701c73b16de37906187c52543557baecc1f6edc5f7ce9b07e",
+      "bytes": 110280,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "cb8c6704e2887fd13e4246c10abe6ac0d57747a071d24e262fc6465490d79ead",
+        "240cb9cad447e841b1e4af5b941f715ad1fc4e86b434f968196dbc99d76b9165",
+        "113074d23924d0244185bcfe01a0466ba6f3fdabce03d26de22c6f36caca36a3",
+        "ea66a88bf04c42c04b49da3805b152f0eee474bfbd5803af13aebeb7e2c944a3",
+        "7d5314d757bcb8888ae23a266b00efe258be038ebbcb765111a6c3380dfd58b7",
+        "dfe6e966559b66857d9a5d9ecfdcad0028c3d437aec914a7f5f9a7e358134c69",
+        "02544e4f3f7ae18155689e21238d1bf21f0cdd43e437d246d19b630730021fde",
+        "855bb82c427f1ef35c61f6a948e3a986b10248ff53918edd1c6884aec291ea17",
+        "8397a7f1ff8b517378a64ea92f5465d2b7f973ed9de64715c7c48b7865b31b44",
+        "f133abf0a3923c544005be56785041b6a9deb52dd879a80db2b08ca888cffa7f",
+        "ff0c17ad9f0bc57487bdcc587a2d0dfde685e566a7b8f4f3d1e626b8e7e6a2a7",
+        "965e902d1a37ac5388c1e571b6352c59fa59e3daf8ace0644d3b6ce8e95af128",
+        "1f096cfc73a2a346deea37b9857b1db0d796348dddc024d1b53452f8696580f5",
+        "697f8f49297f017a241d9ea69b7d47c85cd1d4ba100f4bf349213a78211b0352",
+        "c0f0d63a3f02120ceed020b790cb347db5d14d855595701fc47388a70b47e0c4",
+        "08643cd3096f42d16e7cb6bb6482e191e8f72c93a3d9e5408666c223530ee664",
+        "a4bf85149b61596ccca655c5b44725ee4772a4dc11034f7fdce1d5025e838b0e",
+        "323eb68c0ac7006485faa3f6ffd65da574109e98ee0fbfc829cd3222c1302cb9",
+        "34805c2d31ad71d7948daef0b167d67790049e835f25dc7cdf06c0f86590027c",
+        "5b681ef27bf691560b5e0270ac7d537023c0dc2b18912f7de7eafde067b9fa7b",
+        "14cf07a059d71ba12455f4a2d8bdd9d220d795a32dd8ab4fc9f66c2e142dabea",
+        "2d99c68603a1c5b4ac4d689fb3987245c4b95a3f7fe7994ec2cb4ea94bb7e565",
+        "67384d0cca7695b5f50b841bec9db4b0743d38629c554d3f146e6a83f4948344",
+        "54c0635f6a8343f2e45072fa6701a1c40237f05454ff1ef8a20f53c8acafd70c",
+        "5cdeb89937fa7522a7709847e1a41873ae2639c65f3602e5654d189be3ffe6f7",
+        "65031bac3d54a88f5c559b1c13396442a77bf2e4915753d7d886d6ab4665c0b4",
+        "1eb382111d428747410c5cb049b56df0781fe11b0ec436d15e21b030e1a0306d",
+        "dc78743025417fcbb9b9403dfb8b0828c42c2d472ff808d97a88753f4c1f6504",
+        "a96766db483818fdf1cbb0fad5885420877fa19360e10200301ef8d59101604b",
+        "f3c7ee537451fb4c56080c59c8edbe4c9458f577c333752794c1c62b476737ce",
+        "2f4980345feb1376a55a7d0f6f68a882ac3a1bd7fd6da4a43c5dcf8b903c2d13",
+        "3974e0d476b88394ac3b9d09fe2cc373a027a36d6d2c8f01e63a0ed230fce29d",
+        "c80dd2a3ed46f523aab0f9017dfc382b780542bdb150d040c29a67b0fdb08261",
+        "4f6831f3af4ceb851636ca0eb2b0424a0c9cd0e623f07174e513cc7411db17fb",
+        "4101f8ac6a1aabd05a94ea78aceaa9010d6fb2f6150a096b56f9f3278f27ca06",
+        "476bab82f7aea68b801edc7b932186a2c19ea2f4472d7fcab024967e7e2b6e4c",
+        "93543988627528ec2b73b96d056b1ac2be5db8e2d983460b26ec539d16aa859a",
+        "baa97dfd95632bf9a9096bf6e1b309e487c6990d08cedcb2878c2c790cdbb2a8",
+        "25876365f4cf47983906f82928b09058677be4a65ef709910a7dbd8e734eb1df",
+        "38f96371e337431b7d61f2ddc99bff1828428bf75bcd719a9a3dee945f991cb0",
+        "70aa34979161b243b317e763208576d9f90124f57a263326d8b19977d89fe96f",
+        "4741bc0db1c2c73d05863c5f5a0dbaecfd234cf5335688d5dd3ef44a568efab3",
+        "7e8128b037ffaa6acb4ab41ab46ef5b2894071e821450a16b0059806f86a787e",
+        "c082a0c218d5a0608910de30cea0b0e71099ad0851e59f4c2f58357b060d4f54",
+        "2e91f58cc12fe1a4b7bce8cd239905a5087a3fb72fb0925607d8f40e05c5f58b",
+        "df8dbe57d28d83be8ec07ffc5ef736a1497c7e9de62d6e367a074fa9511e31e8",
+        "4062544e78687610b917dc59b0f0fc228d016e8f31bdc60c988387e16e217b84",
+        "611ef4ea98e32298b633be43b8ffbc1666514de8233efd6d727f336931891556",
+        "b3736de8bb799054b5e8c7166f432f519139f494406aa730f5ae4bb533ed14ea",
+        "d911f9acc6f71f1c1e617b8faec9541262a54469d7efd26a38526127e09aa82a",
+        "a8ac78a90be78430787e035709164a85defd2b5ce4d14a840da4b510fc31d9e0",
+        "1d832c532b897203908b52bbb3c5567d8d7c4bd9e1f4beff44189a43d6786bb7",
+        "60af199fa1612acc6405a7a843b6a460435019461725767d2a671b3568305a3a",
+        "bc1ec705b212d198dd7c799b2756d8cb642dd98caad697b4339c39706d44d90e",
+        "f9f722a5473419e610d747dc546ad74c290a428daed793b76ed32e467fb993f5",
+        "77b50df68ce392414ef62d65f1c8170b1de55f95a2a45b49ecb70623a85e0618",
+        "604b9f18400c0721c96499a5cfc29bed25ef1224da9f799c621c49616c112a26",
+        "ff2d9e6393fdd65d13356f97bccbfd7712ee3fa3a203257e55b684e5ea2055c7",
+        "27e71e2ec6eabc640dc1170aea506562b35d194afd22d16e585c872a639aa73a",
+        "6520ff9df7a741595223f23620dc35019e52829ac66e4d75730369d5fbf18edb",
+        "da67b0887d738a1c6545bc0204649087221b2976f2da761ca941d9f112b1a8b0",
+        "5e21d81603088d52aab205267be819423feec4c574ab7589c61684e36ae28e98",
+        "6242af4decf6399e34fe4777cec74c6ec9e80b34436e8b3498cad4cbe7db8085",
+        "3c5b2ef6286e7eceaeef1c22c838105f25003d0d0147d9efc617bcc7d056f2bc",
+        "f5e2c917ba8bf8b6050df1fa6deb768143687d6c46f88cb8d583c6607e0d7163",
+        "1f41788be9a0e5f623d5dae690be529a380a432c26816b2e2228c8a038106bff",
+        "ecc14154ec340ef80c99a31cdb45400ff53585e15a575b3ca7de40e37fac153c",
+        "349122f52e2b9a210c45be685dcfb900ec335d0d9953e9d1b01183364897d48f",
+        "1d17622ac77ddb3ee65841d692bf8cf113ae7233d8924e3b75c9d6a9b5e3236c",
+        "ab6ab61587cd8719b816e6a1b53689daf43f4a3e8882934c7f92ca32833e9f7b",
+        "31ab756dfc8e367e1a38c9b55ee708e778f72ee3af0dcdfde0477be83c5b66c9",
+        "793df79a67833a2336b19bbe1508a57e7cc2a63d77773a30adb120ac7e86160d",
+        "ac39f64e66c13a46b59067e2c642e4b80b051ac6ad5dc99b91a24778e1b55e79",
+        "456d385a4857935a0b19cb40a0372dfe47d71911de087ef31be056f424bc59a4",
+        "3c8fca9c751f244ec03e7787f370f0141d5b96a3df3fda8e2c4c5a1421bcd150",
+        "812b5ae21baaf63eae932491498d116c5828104857f4cb822f93bb54194f674b",
+        "49faabe1ed35749749c3223c8504a7622ae325d1c517d9c6bebba8b51b1ae225",
+        "e918fb913212fb9bda187f6e736d6bb342c2f19df122a62c99078278ce537e27",
+        "379581bf0f3b9cf90b82ebf6a69d80844cce16a686933efe64b34fdb5c75ea5a",
+        "013582a33f22a32164fab9342a949791c82609dcdfeb962967034d1c1d7024ea",
+        "a7f5ed2c9a987b3f058b73579f85b1acaded53b5f523b4f768a56b51d3786cf4",
+        "af4b386cf0b8bdf934664d85ec1f7f59e49551f3446b3bab8eead7d7ccff5bbc",
+        "7359a3147d47604390c15f885bc4de36979e4d4e3307fd64f9fe34908db3fa93",
+        "3069c7be3d369319033bfb2d30f299610c3f52ff7154fc3d4055d42d3c3fb197",
+        "1dcf8433c3e5f3fe2391631121a2c8f2aa295f046ab8db8dfeeb875f857a5d18",
+        "7686779c963aca3db7399177ed62e84adce4fcb1ff9e4a72f57a2a23ef4dc86b",
+        "359ec604137c0b765aa7d11236d5e4ec2d4f2f40fdb0a848f227a35f1d279b58",
+        "be382a66850caff7e6e8bd4ff512be2206d5ecd60634611ad3f7a3a36a19211e",
+        "d51e3a17d43744556d771ca2b757e871ca00ffd0ff0c815f0aee62a0185d8106",
+        "ffa333d5ca02657f9b0cc1b0ba69cd9d7cca2da7ce345bb2e7ceb4bb68802225",
+        "ff7f3a140581f151be3aaab54d16939e4390f1d31221ef9d45097d3e8657ca4e",
+        "0e646d60f7cd9bd245e1da602466d96bbccb14f01663d83abb1260c7df904db8",
+        "3e06a492f00f91839245c39efe2c16036b3594e6423d7c82e6895acc3aa9c59f",
+        "5dd90d1a729c739805d52e1627ca8ae52088d78ba75d60ce713d9403d5837305",
+        "725ac8fcab3701d960ef08a5260c107958a32fce30acaf7165e8f4c736e44c1e",
+        "91d767ecfe1d24828237401c139cb5bac0dfc026209cde5a5c9008d3e055ee60"
+      ],
+      "frames": 96,
+      "encoded_frames": 96,
+      "duration_ms": 4000,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-abacus.png",
+      "kind": "Abacus idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "3645e9625f6f2a6d231d33b2858752968d50f59abf28390f2b2710bab9d39574",
+      "bytes": 5239,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "859743fa099d32bdcc6282fc03592aace4552487c5d2253c9042728eaec88f1b"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-abacus-motion.webp",
+      "kind": "Abacus available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "719964f1c4c7809e6e7a74836760b49e8b3ba303d71033d1984f9976272f94a4",
+      "bytes": 44046,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "13792bb5f52782fa1b023a51bc959edf986f520c994143ad022d8cbd02d5999b",
+        "16e796da3bfb3bc39ef45c38dd51e5bc1c799f3b68f62ad7c5f058199c5a7dd2",
+        "18b6a091b917290c82d7c6413e30464d389b5632b2895f78aeba32f2bccbe608",
+        "6f1f7a316f6e6c40f66135ea870ed42b795f83894d239cac15e9984ffa3a8d4d",
+        "0cfa9243a54a9a12faf9cc0375d07c78063378293c2ef582c07a75677f87f03b",
+        "7a86d5651676d5aece458005904c5ac83649c06c1b87920141c4a3b543007dc9",
+        "4a667f8d98e97cf3adaf760af8bacf90f337871df02837f0c317279785723090",
+        "e7bd946a1c530f9364dd6db40816ef74f5303a62beb3baf48a3bc3cf791ef83e",
+        "3d5d9daac378376baf3fd9f4380373f1bdce7a74f92cf0de2baede216987317d",
+        "3c6e4e296cd7fa65f3ed04cb170baf24bb65d7aa5e3381d1d510768c76a44377",
+        "89f30958a5de667a845d245db5a3c38a38abc928ae6c0a6392b70572c9a36e0a",
+        "ce4dcd856a250e22eeaabd509edbbb82cd83aea61aa22ca64a9499c0401a4dcb",
+        "1083ef34b47ffa3f283191f2816b80f5f981360a32665b45e0a89048e15176c4",
+        "e3e96b061c6d3673084521e51b8ddd56b740986f2c3a12e0a57c7c93ed04cf52",
+        "165ada187aecefef968fcc6c1a98e6a0b0579e6a21edc10d37364c8f8abc933e",
+        "efe99105c0d50940b87c44b40f3c96c5d5c2706f264a8e6daa9c185614fd670b",
+        "2630abedf5cc9a827bd40a0e891e3135ea2f3c0f17f724e5ebc71fd6b7b32d69",
+        "ca43f253f2b0a6be2da8df97bfa17de62864ea6bc90c9118cc26e4b9ff57ef27",
+        "a42f25ee3d2b2ce3ccd01b95c34bacfd0da63c1ac098d0ea7f8ebc896b9611bf",
+        "76af4a3df5f2b75f883af6fc26c0fe7226404199192fe8fd545656a4912e0064",
+        "ee909f289a039d56c896abcb0fdaeb00a14143119530025d21461102d225aae3",
+        "03744b85521f467a6d4a1139123b51e10972d6ad5de8e98f8218a9147c320380",
+        "6fc2a94555f7e552f25b3cd64b502f62bf4a2d402d8fc55eeaf372dfe1fcb268",
+        "751f15e2efbe351304fb7a8823a34c57f151d84f9f67fed12795b50e8f20745c",
+        "21a80c3daefcc9637c03045488034d13244c40d6ec2ed080183f339c1b44232a",
+        "4e46365b9d6bced6fe90155b8e948e7a73ef27081d47bcf47fb087108902f914",
+        "4234b52b38aa4600233f5de8bc524fa572df21b0357723b4ccab1ba504f05a5b",
+        "0959e7f0d49f656f2820edb951b846606e5654a51a01f1db9098dd48e009beda",
+        "b599a0db8e256e99e095e78709f344fe9861f7fa0b627fd024f258986d50f372",
+        "fd616714aea41cd5faa3dee293ad1619b5d27f9057af47403e8d8d94e42eccf4",
+        "bd48087b7bf792d711c98a3fcbcbeb9f7a02bfb82ac1d19cce56e966e7d08cce",
+        "86aabdedafb7eb30d6e9981ffae09494753c70fe747b8ba66de47dbc689af30d"
+      ],
+      "frames": 32,
+      "encoded_frames": 32,
+      "duration_ms": 4000,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-book.png",
+      "kind": "Book idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "0a930dc373fdb9b5849c945db666e94d059ac3e591e84fb772b50498bac99f6f",
+      "bytes": 4684,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "905857711237a8a8af6febb52058701108339eb811600ff47972f9e113bf3421"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-book-motion.webp",
+      "kind": "Book available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "ca57c9ccf6981d854e23294db7ac40f7b6e434efc4ffa2b30c75dd495604659b",
+      "bytes": 57166,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "905857711237a8a8af6febb52058701108339eb811600ff47972f9e113bf3421",
+        "905857711237a8a8af6febb52058701108339eb811600ff47972f9e113bf3421",
+        "6e7dbcc5d76926089d1a23930835bdf94b9419df42e546c0e4bc0f21f0265c74",
+        "bf934678f1050e0fadad440bd2a2e1206d830608fb3fe708294580f247048887",
+        "2d26db4536b5365684bbbe3eed42a63988ba5466fdd480a916d9fadcfa332c2f",
+        "c3b452217c4e2745693104134eeaddb9f585c8afc54d0f80c60b45c2ecd07bfb",
+        "7c06de14c102263e0ee077c9eecc8c547dd2f58c53a233fb642d484460dd1b5c",
+        "53da539414983bf967efdaaa8f1212b4b68a50dbaceb57bd5eda48825088c01d",
+        "4b78537339967142e748ab3a610be5d4d3690bd1a33f9b7bd86d75b58ce00fab",
+        "19fb4ebf87ca246f60c80be99ede9f7445659de35b0bcae466e0529f930173ba",
+        "58713eb26352bb310107d253ade40647475fd68b739d71a8f06c74509f205d5a",
+        "30bd45aebc11315458e3eef18f1e84651955e2871586c4f82f2849c351006f06",
+        "db3fa92ef215e397377408e8b94b87b5feaf5382a184ff79460d335c7f81c6a6",
+        "227a635ae1934d1e5c094fa3ea67cd9a9fb782d758c31065c95e01053ab03808",
+        "fa1d97f85b3e8e409b640d9ee4a5bb92f0803e3dc24af4bb24324c5324f6df78",
+        "0cc88eb69d727c4e062f90874e65dc6eb2506fc6c3eab54711eb80e0d197cccf",
+        "4573c734f7ce4e6345219aedb709adf02526b5812daa6dd50ccbf84c8fc6f32c",
+        "6e7147bad3a782db7365e0586e2b157c99c76cf36e10f53c22fd13f856d27d08",
+        "f2cf9130186ab047b4719505e99500f3ef43871f169eba7537593f32749aa32a",
+        "5b1af4f308547f4fa7bac9ba0133bb9b230afbd085a3435942091fe1cec3ecd7",
+        "0c602d71064511109283292e82c851eba17ecd99785000a73a7aa8e2c4e33684",
+        "c22d7eda6324f5945d8d2d66eebaae86b51e9017493f5e742803bedb87e9f7cd",
+        "0b890b770f73402e9c4fffb97c744eab6292bc539a56ad4f5186b71924f8d914",
+        "5646e72bf9c06cf57f8455ff32a20f088db7599964171fb5bacf989e8921dbf9",
+        "49bd5ad6816c4b5969590e9a51b663a8f9b0fb2ac7c28313aa140adbe9836842",
+        "b5e31903c7704e084378134b3c94a6475b8d583e99e344ded5a484018e8a9990",
+        "0c602d71064511109283292e82c851eba17ecd99785000a73a7aa8e2c4e33684",
+        "c22d7eda6324f5945d8d2d66eebaae86b51e9017493f5e742803bedb87e9f7cd",
+        "0b890b770f73402e9c4fffb97c744eab6292bc539a56ad4f5186b71924f8d914",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "105b4af8b61e68515e3f7410e8f6ffe5cebcabbc8fc8f83d381efc9eb1bde35d",
+        "105b4af8b61e68515e3f7410e8f6ffe5cebcabbc8fc8f83d381efc9eb1bde35d",
+        "fb89895ecb047a2c049c33a9e71e05bdd3970a3e20ea497640e09bc285f933e1",
+        "fb89895ecb047a2c049c33a9e71e05bdd3970a3e20ea497640e09bc285f933e1",
+        "f7807614cfcab4293745e4eed7db08936af2eaa5bd2477a937b88888c2653f5b",
+        "f7807614cfcab4293745e4eed7db08936af2eaa5bd2477a937b88888c2653f5b",
+        "70c9020e36103b02d7687ba679eaeffabc7fc0bbbdef4a47087037545f64bf37",
+        "70c9020e36103b02d7687ba679eaeffabc7fc0bbbdef4a47087037545f64bf37",
+        "3bce133d3fa31b9db4b2a61e796a1cec045422767f75f64fc539d1d473ac1637",
+        "3bce133d3fa31b9db4b2a61e796a1cec045422767f75f64fc539d1d473ac1637",
+        "f31980dbb22631795fa10456c1742a57535a3b78b1fc09fd1c52de307cdbb5e1",
+        "f31980dbb22631795fa10456c1742a57535a3b78b1fc09fd1c52de307cdbb5e1",
+        "e5b88bdc253df58adfebda8ed4fe5cf732b12c6ed94c94737876fed641315b73",
+        "e5b88bdc253df58adfebda8ed4fe5cf732b12c6ed94c94737876fed641315b73",
+        "268a4c37d9d91abeaa26a3ac582bf0100c81ea25918565daf85161190e05b8ba",
+        "268a4c37d9d91abeaa26a3ac582bf0100c81ea25918565daf85161190e05b8ba",
+        "72251b1739dc8a13de63b4c46e1d2f65f8e5e535a3db8ed6b6a999a637be4b50",
+        "72251b1739dc8a13de63b4c46e1d2f65f8e5e535a3db8ed6b6a999a637be4b50",
+        "3ae82dd674596671cc7f5836115f7104491490b2d47c4a26169969a731601e35",
+        "3ae82dd674596671cc7f5836115f7104491490b2d47c4a26169969a731601e35",
+        "4e5d600c4b263fb57488c0eab3e7f3d6d82446ce6261f47c225b1a883d2d9d23",
+        "4e5d600c4b263fb57488c0eab3e7f3d6d82446ce6261f47c225b1a883d2d9d23",
+        "4dc5a140e4e174c61aa030e5d40835b644f14e8e7a14abbebf23d762363f9faf",
+        "4dc5a140e4e174c61aa030e5d40835b644f14e8e7a14abbebf23d762363f9faf",
+        "73f93a6a0bbb76e58e12c2b7b9d7aa8f7cde1c5eabed5505c9fedc20545ab006",
+        "73f93a6a0bbb76e58e12c2b7b9d7aa8f7cde1c5eabed5505c9fedc20545ab006",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "49bd5ad6816c4b5969590e9a51b663a8f9b0fb2ac7c28313aa140adbe9836842",
+        "b5e31903c7704e084378134b3c94a6475b8d583e99e344ded5a484018e8a9990",
+        "c7873a5e63a57e41ae7957abb5fc357366e572e25cc9c688023d02f72e2373b7",
+        "12e0de18c3e51cb78c225502e97e7e912731bd31b92f74decd5b0344a78b9168",
+        "9becb20d4fa49ca978a181c14ed3880f196a08b413c213db5c1d16255c10c58c",
+        "c7873a5e63a57e41ae7957abb5fc357366e572e25cc9c688023d02f72e2373b7",
+        "c22d7eda6324f5945d8d2d66eebaae86b51e9017493f5e742803bedb87e9f7cd",
+        "8def2c3a2c025ef18bd8e325e9c981fdd7d2911e8ef86d707a22ed852a272ab8",
+        "496267b6cd7f2db8668f07c92764f2324f8ca76dc043c27b4a809c70db715ef6",
+        "c7873a5e63a57e41ae7957abb5fc357366e572e25cc9c688023d02f72e2373b7",
+        "c22d7eda6324f5945d8d2d66eebaae86b51e9017493f5e742803bedb87e9f7cd",
+        "2954087bd6f6b5e2027aeed8f0474850ca0fdaad259f3dcd98d939f18c074ec8",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "639037736fee0d40ec9c35bb53de55e0aba742018318a5f9ed803aa4902ffde2",
+        "10275b0fe3a48d1787b1bf382ec3823833cba5eab6083a21a796c586d46efc91",
+        "af720883cfbbb48befd0de38b797fbbf5d44a5167b7cd89a57b543d6c0305311",
+        "d9b724556f70a9046a6b56cbd6bc64fff64f2be00a1e1bb1d51830ee44eb5792",
+        "e846b6df0367f6d801f9ce722319662d22dcc08496eedf88da4536c443590c2f",
+        "54d68b2bc89fd1f38b0e072bcb801ff58837695371a3f9d03ff7fe5b2af939b7",
+        "49bd5ad6816c4b5969590e9a51b663a8f9b0fb2ac7c28313aa140adbe9836842",
+        "496267b6cd7f2db8668f07c92764f2324f8ca76dc043c27b4a809c70db715ef6",
+        "c7873a5e63a57e41ae7957abb5fc357366e572e25cc9c688023d02f72e2373b7",
+        "c22d7eda6324f5945d8d2d66eebaae86b51e9017493f5e742803bedb87e9f7cd",
+        "2954087bd6f6b5e2027aeed8f0474850ca0fdaad259f3dcd98d939f18c074ec8",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "105b4af8b61e68515e3f7410e8f6ffe5cebcabbc8fc8f83d381efc9eb1bde35d",
+        "105b4af8b61e68515e3f7410e8f6ffe5cebcabbc8fc8f83d381efc9eb1bde35d",
+        "fb89895ecb047a2c049c33a9e71e05bdd3970a3e20ea497640e09bc285f933e1",
+        "fb89895ecb047a2c049c33a9e71e05bdd3970a3e20ea497640e09bc285f933e1",
+        "f7807614cfcab4293745e4eed7db08936af2eaa5bd2477a937b88888c2653f5b",
+        "f7807614cfcab4293745e4eed7db08936af2eaa5bd2477a937b88888c2653f5b",
+        "70c9020e36103b02d7687ba679eaeffabc7fc0bbbdef4a47087037545f64bf37",
+        "70c9020e36103b02d7687ba679eaeffabc7fc0bbbdef4a47087037545f64bf37",
+        "3bce133d3fa31b9db4b2a61e796a1cec045422767f75f64fc539d1d473ac1637",
+        "3bce133d3fa31b9db4b2a61e796a1cec045422767f75f64fc539d1d473ac1637",
+        "f31980dbb22631795fa10456c1742a57535a3b78b1fc09fd1c52de307cdbb5e1",
+        "f31980dbb22631795fa10456c1742a57535a3b78b1fc09fd1c52de307cdbb5e1",
+        "e5b88bdc253df58adfebda8ed4fe5cf732b12c6ed94c94737876fed641315b73",
+        "e5b88bdc253df58adfebda8ed4fe5cf732b12c6ed94c94737876fed641315b73",
+        "268a4c37d9d91abeaa26a3ac582bf0100c81ea25918565daf85161190e05b8ba",
+        "268a4c37d9d91abeaa26a3ac582bf0100c81ea25918565daf85161190e05b8ba",
+        "72251b1739dc8a13de63b4c46e1d2f65f8e5e535a3db8ed6b6a999a637be4b50",
+        "72251b1739dc8a13de63b4c46e1d2f65f8e5e535a3db8ed6b6a999a637be4b50",
+        "3ae82dd674596671cc7f5836115f7104491490b2d47c4a26169969a731601e35",
+        "3ae82dd674596671cc7f5836115f7104491490b2d47c4a26169969a731601e35",
+        "4e5d600c4b263fb57488c0eab3e7f3d6d82446ce6261f47c225b1a883d2d9d23",
+        "4e5d600c4b263fb57488c0eab3e7f3d6d82446ce6261f47c225b1a883d2d9d23",
+        "4dc5a140e4e174c61aa030e5d40835b644f14e8e7a14abbebf23d762363f9faf",
+        "4dc5a140e4e174c61aa030e5d40835b644f14e8e7a14abbebf23d762363f9faf",
+        "73f93a6a0bbb76e58e12c2b7b9d7aa8f7cde1c5eabed5505c9fedc20545ab006",
+        "73f93a6a0bbb76e58e12c2b7b9d7aa8f7cde1c5eabed5505c9fedc20545ab006",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d",
+        "ac47507617c3feb6e423be203c73353463954af86cdb05abfe7f2e027302209d"
+      ],
+      "frames": 144,
+      "encoded_frames": 82,
+      "duration_ms": 6000,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-candle.png",
+      "kind": "Candle idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "6b9334ad0816dfa8b4ed5583ade538149457202ce8b6be4c7866f19970f1e5ec",
+      "bytes": 5227,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "81387a88d6ad2ef661fe39eb3fd5ae1f23b2fb79c672dd71ac5a9dbdf664aede"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-candle-motion.webp",
+      "kind": "Candle available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "021951bf237540f40426d5ea4f5fe85244b888c2fbc794404859a0a39fe4c342",
+      "bytes": 14954,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "81387a88d6ad2ef661fe39eb3fd5ae1f23b2fb79c672dd71ac5a9dbdf664aede",
+        "d75755fb3f73ae2f6e8425388d54dd00f2618b515da231e29308554e69d83a4f",
+        "56c9f776953f2131387ec8ec9b062d58086c5ecae17ad7a40d29f03eb48f581d",
+        "72e08e82dca74f7df1ad8c454c1d4e10675ba94c845362a11d6350def574e412",
+        "a5cfe0a05cc19e293b048117c55216e090088326f25130a2a3c6316688007e91",
+        "768311dda952f21fda67ac14a699fd0545ce347f9625d39614a4b6af77ed87d7",
+        "076bf7eeab4b4a69b8a9a8bd7fa0c3b9f2b64ae8a21dca9c997f5e79cfbd7c0b",
+        "c11667d94bd5665176a7a59799b71baaaaec9177c2ee13de88e373e559310501",
+        "be9a43014a9b3b99b61f360486ba0dec07bc922b0f8d560939f80b340d083dc0",
+        "7421ea7f5ca20bcf9fa0ec4dcfed5e57dd0da542aba8af3ad84d43172cc6b369",
+        "d23f8a35feedc79bc4efcc41db996c77aa2269712e3b4c8e7af1a92fc0a6cca1",
+        "9372d12eef717672bad2ec48de7e4b9a689926257bf329ba9ab8ee10d456c46e",
+        "d535af3708368592d73b74038b3a534f0a67c3bf07ac1b6a2d0be0866e797081",
+        "a7bfe6eb41de82ebd7458ca5918dc392345f7e146f74fc24d5c31ff0149e948c",
+        "19b7195331210f86f18b6ee9ab7fdecf27046c3d3babac75d440fa372e5a917b",
+        "4da615fd1a681fd5036d3a9044c47a099a1993d500a2eedb23dbfde0d87b5e27"
+      ],
+      "frames": 16,
+      "encoded_frames": 16,
+      "duration_ms": 2000,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-confucius.png",
+      "kind": "Confucius idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a1ae41cee65f0d5d244599d6b85d28490ea26f89afef7467142afcb1b5232b07",
+      "bytes": 5726,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "67c92f310b75f5421d66d084c28166cc2d5e0aad34231a2576c9a66fd09108d2"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-confucius-motion.webp",
+      "kind": "Confucius available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "288a3a2c0fe34c52742e4189a9a25ad2f05fe5cdd146093bc85baedd896273eb",
+      "bytes": 13134,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "010896a2c46b06e34bcb988d85345a4c9ac577caa13e91dac9b45dc4fdec640c",
+        "122e943b6c356e198ab5bb1386cc933ec6ec1a5e1f9c74ffb2b15d1993ea5039",
+        "33d79dc192a8b0da862d025ffc86f9630c279b751e4ed9821a21ef65d25a1af0",
+        "df050818bfdc0ad4abeb721b9228b8946868eaa7e7b5baf7b509882b2db1eb3f",
+        "ae6507dac2ab3a84b61a30b5c3f6dc402eb1f25b110d4eb1d8411620332e07aa",
+        "ba3581c89c27d4a6ebf2ef081d9e13b399a6ceff74ae98949a0d412061571981",
+        "b9109d609014a2d67e7a6039ba74113cc84b99c6a1d49f8caa78879c131a1edd",
+        "d883cc993e5bbcdd6c0e4952cb0a83f40fb68cc7602898d71c28d482e5f4b5aa",
+        "67c92f310b75f5421d66d084c28166cc2d5e0aad34231a2576c9a66fd09108d2",
+        "67c92f310b75f5421d66d084c28166cc2d5e0aad34231a2576c9a66fd09108d2",
+        "67c92f310b75f5421d66d084c28166cc2d5e0aad34231a2576c9a66fd09108d2",
+        "67c92f310b75f5421d66d084c28166cc2d5e0aad34231a2576c9a66fd09108d2",
+        "67c92f310b75f5421d66d084c28166cc2d5e0aad34231a2576c9a66fd09108d2",
+        "67c92f310b75f5421d66d084c28166cc2d5e0aad34231a2576c9a66fd09108d2"
+      ],
+      "frames": 40,
+      "encoded_frames": 9,
+      "duration_ms": 4000,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-wisdom.png",
+      "kind": "Wisdom idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "7c43d560240ac75494d08535adbad48b18b0eb3c7215f01a32b3b5a686537e42",
+      "bytes": 6439,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "cffd402068d771c5b25d9395090598ffd4d2214b3b4d963c03c682b9f0095142"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-wisdom-motion.webp",
+      "kind": "Wisdom available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "8baacaa90e60ccd90f326c791aec0a2edd11d4a2ade4b5a85ae9acd61c5d5fc3",
+      "bytes": 144442,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "c878117f19e219bdd4c64f5d67aae1e4598cf552642671acc28dd1109b16249e",
+        "f97f8a2db311b7de29992024a3e9af12fcbb3b2d77774d6aae5444a89c9ca7a4",
+        "a870037d383f1fb193874d5d8494a3077f50c0c1f645c0290160b7c5db4eb627",
+        "d546b1c0aae0d7d39b9fd620f708dca2e7aa5d0218a48dc2d2418f8c3805a192",
+        "ccec7a3ff6d71237d9d4e4dda2a1e32631ec6f1399cba02a57776e09df7d9799",
+        "6a759b09d96478e57205aa247306900f1ace04c617157430b4afa2b9ef5d181b",
+        "3ac20824e3bb5ad7e980ac6f6df6aeb6104b65a1a4ea5bc140873b6dcb235c39",
+        "4b5c53e452d714c5f4adadc2ff4c9f8cc340ac6eae9fa5be939d51c566259a6f",
+        "f73f19a0056532a4c2827a85dd1de95d07deef4bf4e02e656b2467e2ad51bd57",
+        "f73f19a0056532a4c2827a85dd1de95d07deef4bf4e02e656b2467e2ad51bd57",
+        "971ae58303c4456fd6132e0e56d123b69f40fb84215f7bc4b5ee78f9f61a1bea",
+        "03988becbc1c5dcaef0ebbfcff55581ac8c6c8025e8725b716081fe40e46ea33",
+        "4a50397cf4e977f62fde05a72cc669517c60986658e9ba4d7c13416f18516cc4",
+        "2bea9879929756e64b3e901c18c7896e02a5157b990c6d205cc8961a607ae84b",
+        "1e8901f0bda677ec6c300412a6fe3989111f6a4efed40f5cd2297161d6d6fe13",
+        "e3ffeee5ea66e47c1b73c79ecfd20ddeddece63cad420c6050d8157de2ff07a9",
+        "aadf3389c5f00651a64beb5b4e78649e1a1f15a066aa28efd351b23ca48fdd38",
+        "3bd02e8e9e9a9c13ade8dee7eb15deabf658b9b4147f171b58ba0564339d36f6",
+        "24cb1b6445134df4ab09c8e6ce1a5c32061a6f58db1ee5bf3cbfe43571157cc8",
+        "51d524f377037280031d3782dc16d5dc6a04a57cdd0779ec485da2e80ef086f1",
+        "ef928443caea178d0c0e51202201e0298bf12625ee2233bb4fc80c9e4bd37908",
+        "53320d862a46e352a1b0ba59a56d1204fc60cc37b6152f926f304dc21873787e",
+        "6d560bf394329d07d670eed8cb80330ed2dd4cf1640633c2593b8b00996680d8",
+        "33802b66d885c89836c4fc1d025c1f3c45c856723ea796ad201f6b6a34f6b29c",
+        "6606649665a6e20ec8fead4825cd3f66f306a388261af1d0702f3a239b1c1b88",
+        "3cce5b2133243aa72f8e6bc9a7e8eeb0f788f1be610576c79126de750f852fc9",
+        "84938de1d4ca5df61c1b6b041a15c39979f13ffaa9ca9201a5c0cc1dc690004e",
+        "4d35d6152dfe32b3eed57299cf2355003cc0f795daaa8cad8d1b335d797c5b8c",
+        "b08f7344da5c731ffee54bcdf25a227dec6b6be262ae724c4ef3e4512cbd86d8",
+        "0f55d95f0522d96d7954704b2135b8ed46a0a00c01d468ecd761ef6d6fc3b15a",
+        "fe4af622f31b5863b503b24aa610bc04f9c035e99f6cac3c6af7dad9efa60692",
+        "6ce0426a92dd3528b3c192b6dfce1d88bb63190023ede434ef9f44e29c9f921e",
+        "a2733a3d39ccec23af562ccc29d03e41c6118df4694e1b423ddc071309e07f78",
+        "41c00be2385a12b30a6034656b09421d7d82a5d41458528457fd4c30f93f6b39",
+        "09e88a61c8249c7cd73fe6535ad2aadbd5601a2227a5294a68a9c10cfbf9d035",
+        "8bae9b2c2203e07eb89f41088a9e748dae7cf924dc4b9c57caf4156ecf6f860e",
+        "da4a552ff74a71b65479cdf2bc3a006e23acb6a9b43733924eb580560245685a",
+        "a44d2fed435d0a833099644ba99ccc9b8e15ddf8117ecfa1573c80982c04aacc",
+        "6679a1daaefe6497ba6021c049df917628d9f9cf6206a2357ff0dfae22eca43b",
+        "72d2f4564cb07d58652297f9c895a5dda012ff461b36cb7749556f75ee4515b0",
+        "a67871fe3f8373d81f4bac62e9056aaee43bdcd082899b7a77241072fde1e887",
+        "d64b3549422e4efb53f253ae01ab26ea2ea44a03ba5ba795f7c7a6667c46fb12",
+        "716271da0ae901dc912d0f98103a95903e2de98a1452e10cd015790befb77309",
+        "63a63aa669a4d11080c495ec58276d416317095cf2fe0b0a01183316e3a6dc48",
+        "4eb759ab9a01b553024d321fb6cc37a292299aac2e602df87ff5e1558f23c67a",
+        "f206f2de12bbe31b626dc750100c1fbdbc70bc8161959d4e09494eeb30be6913",
+        "320662fe3cbe2b27ac37ab71c924aaa9b614fc10991b3966d20f283aecfa7442",
+        "32075ea353077bb2dc099e520b19e2f8f0cd38c32c4e6a4eacadd17ccb6da19b",
+        "42df27e6ae6c3fbe088798deed4f33bae5a49e1be98a96db73629b3459b05a30",
+        "f36b3d86637ce7a375a12e002c0d29a41d4f447308833b5c264808651b65c69d",
+        "ee2282a7d68e47b73d3732ecfe56b5861549cbd101541f03f3c8a1873d47280d",
+        "908723723b832c0fa0e1bff1d588e9b9a8c0fdc1d47b52917bf3a7b28469f043",
+        "47d83a1c206c34caa880156c4dd44d95ad162be47f855366fba31624cb1e6ffe",
+        "d7b4470967e405c4f57364552ae8f362ed3b15ee323f552ebd4344ad3184542c",
+        "938b53d7ebaf0f6ff07300b108def197ff2cd26ec288c50dedeb119a41cce3b0",
+        "f36775f5766c615b30800b5161f1f947d969084935ea2cbb254ef2412d7d3e73",
+        "83e2a205b86c916f3a0313f465db2005607699ba5e6e20067f09db274fac4245",
+        "8643bed198eb6662f67b2da09da4874550459c8cdd67a5619eabffb4cf38fc55",
+        "9cdc244ca13cf1ef97ee416acd9e4da6ffaebb142b072d9638bd249658848818",
+        "d32820f77b48c05778d8373dc33137ee2d934cf479f7963993e35ea4e9105eb2",
+        "9d82b523021ed3f43e386c94ddd588994b8732a06b0414b104710d90b698aee3",
+        "20d81f826b14ca3e8bd85d6752042e176066ff18b81915be257c62cc7179690d",
+        "6cae532c87cca3f5cdc1919d0088681fdbd6cae1640f0cdeebbc12907f795856",
+        "c110fc0837cbb81535c151fe185466e34c6c44289ba94dc04d01ccc6d5cdf249",
+        "65b02864c524afd1c18ff6c54ecf0cf8c7742601856f0efb7f0048d503afec1f",
+        "c39b42976808d7fc7099cf579b14fa01cdbf11e11b559f33fd183fb0154e545c",
+        "6347cfb67fccec92e6a194ee421e2292b1ac7441c0435d063cd644fa8de2b8db",
+        "9e2e00788b713f557bcf1c8763f99a675edb38e0778f46cda900e8bd202c3e7d",
+        "8c0c1c001634f402404d3f38ae953f6bdce76399b13f30e9f5092216e25f7c65",
+        "4af2c3a4d0c7d73feffeff2db0ea754d7a556e1f0825dd9f70e6141ce81eec4f",
+        "35d51c83e7150e032f7cde852dc6c20469d545220fb1a507907999a3954d0432",
+        "91168991f7ca8e7b19d6ea0b3ef00b411e9a62cdab7c6662ab3913e284118158",
+        "a1dd6b9cededf0c60bfd2f19b9a116fec6ced90dc1b9209a5d3db59b59d2486b",
+        "95f23dd9b6ec38759a04c8278f9a3fc23df6e049729a60a32e384eb5673b182d",
+        "04ca4a9b91ba633e30b2174db1f0e4d6ae42531e0092a2b2e62ff05e8a1543ac",
+        "4a84352e167eef0bb1d83df27062e6b32bae6ff223b0c2758c4a1a6465535389",
+        "e0cbe60d0ab149cae9fa0099a930a4842a49851c8866960a8a5c5e00480e5936",
+        "d00d29d175cf52d9854bc9d7514fb648a8862cb86dd9c57203a1078a1c93b9c9",
+        "d517e26d47f1a3f12dfc06544babfbe7daa3a9ce84878c877ae243a684ff6ee5",
+        "aa5b80f11c4ed3c7c2ba87098fc0e7967d53db9464d4f3bacb53a5c40844fb21",
+        "de8f3419cde26c31cf2450c106eca552be4dde27384b946756b0c475ed45bc26",
+        "34244deaff1106fb06fa09f1d2ae8ac4d8815e5f41d4f062317f47679ccd8a0e",
+        "ec704a737ec523942caedd2bef28fd1c52d1f07f21f49285dfe0285c17d4d30d",
+        "428b170ebaabe35aa1f39556d075d0f9208c8a10be792023940ee060a87b482c",
+        "8f3b8574ed8d7471b5968c4d8931188983eda9f0f48848381ee408e8ffc9d901",
+        "ec2c5ae8b41cf8b1942b7a1beeb74908937853c1b5c76484e28d4dc36ffadb01",
+        "bd650d0b68946ea94aadb5208df5f469c9c2e91e0b3fe10e5f5bf6a85693a671",
+        "be402b365a0b66d01eb7e3d0ee31ed70fa10641b5e30a8bef9978c9142d1614d",
+        "d776b6453a9cfab24f86b287c0606d6a4ece79b6fce87a79275d25d27145ddaa",
+        "4d53384e313136439238b639daf7633efc1c469006bdb5b10173cc7ff50f851c",
+        "afe43a4b244d22cafb5a4b98f79ba294425f402691772046b334fc1e15e676ef",
+        "6611056cf7772bddb938eab9e44596d2eaa940b5c87525c65a29b314112c162c",
+        "6e0604c33be8d0a8ff243d1aec5f5e716160df0fa50e725afdf063ba77e59979",
+        "08c0139dbe63b0ec3285b68c5f459be6ebb279193c86fde7d5f0f4f8f41848c7",
+        "9ca8d10a5fdaeb7d0dbfb894445ca0bc1fb77cb1f8be466c9899a88cc7093706",
+        "61a924087a97a5a08cfbe94f4d6765466f6a6271c4cf4144a24dfe9d5fa14416",
+        "39c86341a84ba6a527fa432e91766dc82aceb7b4c1b1edc8d3c7071edaf8f252",
+        "cf0b12b062be94e705869f1dfd0f7ae58a7a0d8a14625ed3c8593ee57d881da9",
+        "3c53d4f7f92caa5b5fc26e472448332893f3e9d8c23a17d684fb44758d480ab4",
+        "9152daf9b6357c328892f3f08224b5302f9250e01de9300068c06c667cb9ca28"
+      ],
+      "frames": 100,
+      "encoded_frames": 99,
+      "duration_ms": 4000,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/symbol-phoenix.png",
+      "kind": "Phoenix idle",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "c699711e13c44465a124d6062dcc0791bae426357ccfe6063abfb8735832f0bb",
+      "bytes": 6878,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "6f3be561a5615927266febfa11d3aa926d1b08812dd4e4fd1c64e630cf696379"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/symbol-phoenix-motion.webp",
+      "kind": "Phoenix available native animation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "31f9d94e6577ba02fc60bd633f22ad44427a350d64586ca49359d61fddf70227",
+      "bytes": 172920,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "6f3be561a5615927266febfa11d3aa926d1b08812dd4e4fd1c64e630cf696379",
+        "598ba9e73b49870d85a149529bb19eb5191b94e6b37e347a898866edb67681cd",
+        "11742846a3f285bf2c02096b1780e825a839a85f14418694bf8e511332a0a2d7",
+        "0ec9002c88a98e12aca7ed96675c5d86be2036e3597ad7ae599916053f7d6dd7",
+        "b04a61f65a10a802b86569e704077cb8cd1e078f17c2616f71da2ecbfcf11c3f",
+        "5e4babcceeb6f2b9cd50cd745b415c1271883712b9675726cac7cd7712450904",
+        "8fb9aecbb2cc0cdb6d62dbc42831386ee2193ed7b529e9afaa3fab44254242d7",
+        "8eb6c06d165cb66932f5e715420925d863873906100c29920e488b0d338d6b92",
+        "f7dd198ba049a7ecf5ced952fd4261d15db8bdddefa26bf88a11eba13e6708d2",
+        "67407df9f42e6b6a5d6a02ac2ca7123d08e3335fc22715dc204b180637ee71d0",
+        "24fbcafb28752ad8f153541cff0eeb45ca6c24e611923a3861f03ed13c3eb0b3",
+        "9a43063e0f15e6674aac9a066fe06f37f6543460899e98110d1d8e51f8d6cb32",
+        "1929cc3a56c3c7465edb9ec3baae146b6c65c14ca92ef823deaf2bfc2949fa45",
+        "09832c692ef311220222a64a30cbd5d967ed57ff2848dff3528e6a5f56775f43",
+        "d318f18bf31e1ab04f812b3d7208af632a71d29ff5443f0008d3106e90602e13",
+        "b3cb01a816f88be8613079c5d76d901ad87e9f71cd6e35f8ef4b9bd6e014290a",
+        "63eac3a27d27aa3a4284d240619fed41c265ed09d3a5ad2b977cf4b17a866d92",
+        "19c7f048993c42159882fdd0879f0ca40c82ea18ec4811ac45a47a902c31babf",
+        "c1f66154e781344a01c639dcf9b6982d472444285dd67440538440f98b788240",
+        "ab2ec87c58659579dddc986aac5a0f9874204c590d752b77951c66f9fd72ad0f",
+        "86419855d7482706447977ba18452bb9082c850a1b5047dbea5b0245e947bdf7",
+        "5468bc77dd8e41752c0da89a5132fc13c4c139a55eae7c02e84e633149a68acc",
+        "6181412011ad8aaf44f466e65140549f0e0a38c3aa04721211c48364de104fd5",
+        "699f0ec36f13b3cf5307bb39873d19a8375a449c435c13654f546731f68d37e8",
+        "f8506e072e822b7092b0f718d20db1d37f308ae90c9315cc8abb1ae3560737be",
+        "90d6928e5e7437367fbb487be073e01488bb5b7969fab10bebf6c0534316999e",
+        "812f54db5ec0d85b33fef4d2a58ed5aaf541382bbd6a823884919dc866dd0b70",
+        "b9626b6e7e7bdc896feb623ec5d1099cdc7a60ce122512209082bbca16152136",
+        "8b38788da94f4cfba5ced09215d5bcc90e505bbd5036be7bf7a60fc76ea7fbaa",
+        "bb365b17b17be10d6edd596fe5ccc4e8cda3613aabafcd1416e51246c0282dac",
+        "5fe2d5316b91a27fb0ba058e4c9d5e9640238723ed7249588d1af6a41263e4c7",
+        "c4545f6f5fffd41dbc810f0139124bc545108836289cca4023501e3f4dc3b8e9",
+        "ae0fd3bc0af2c96b4861dce460e97f917e91ec640f9e82e65d550301c4c2b981",
+        "dda06cfe8365d1f91765a9738a99513b7f5d07c3c7207f9701fc7de259150cb7",
+        "9d486b18183bc40f8696c7aad9393bfe5e4cf453b3f8ab280d1a4cbff1585b56",
+        "8bf8973e73b97723a5103f0b67e40268436d6c001b0bbfd2c915a028b80f2b73",
+        "d7d9bdfaaf32acf79459eb816edde278bd39ba9ce5a0148385447b3a49b71fb6",
+        "3a4170fe118d999f04fbd1b748f2d3f71011791305a1864b718db92f1381ecec",
+        "f47b4f77b040d7fbed3d351f1d5f7925348f35b038925e4d6b5494dca499b14e",
+        "cb022bb076bb2d695a1d6a9777e103caba54d61cb4d08b9d8d121f9dcbde11f2",
+        "2ee1a6bfe4b755420177063dd746ddbc9053ba5e297854b769cbd7206a412b26",
+        "00cc0cab79b31771623dd5f873db997d963770e60126414950b8e1216c942535",
+        "8a2717522068756c527a2d4995d0da2ecaaa0a3021f179da0e81e8f2f18df59f",
+        "b38de257825bb1209592e05a568ddfd7323c1cdac6ade5b63bd508050b71f61c",
+        "31c466c36b81f2ca941a27aa68d69effcd756264cae2385c71ea6ef482db6cea",
+        "e3bf43136509484775ea5dafe4435a952b9c2d79aa0a085214297de6c9c9bb76",
+        "2c9a3b162075ace936d3907aeef1d8b9c9ba81931a7d0a23f2711399c33e85ec",
+        "f66e35d222b978da80c4d25b31c8dd20e161dd6583dd2bda6eda18e1daa202b6",
+        "a9f86cc5fe546b0341b4920b19fcbfa7adffb0830b601892ddbebbc169965c6c",
+        "54fadef2210c82cff4f11d12fef381cec5dc0a61f421d32545426f0706073aa4",
+        "b57ac0385f11d4debc4f66f0199653f336aa4e8e5f3f70530a7b83e1c8e9376f",
+        "b2c3b86f53b25b2fc1ec766537a89cf8e9f7b13ee64b44312e6a1f783f48c38c",
+        "96bfe8bcc0b8b4b1ce6b8c05d72f488c3b24854c503557bcd55d96bec8753d6c",
+        "d224f882c6bb85b383fcf1c025409fb5769bd72c20aded70b4d7a2af153c8d6d",
+        "add966f2518b84c99610f910f32c155ecc7d5756548f426964f894a272b4e2dc",
+        "6592ce070abfe52266b72401d59d32856072139175e642f515d245b46d0da725",
+        "69bdcef00da913efe13d7ff33e976ee07785141f51d8b445fff0e84e1a0eeda4",
+        "168156595e45a25abb8d5fa4468bb8fd882194468eb5b808b9be35140ee8a912",
+        "47973b136f51e4265b7968f8c983378d33563638cd677b2dfb86e07fd6cac7c5",
+        "0bfaa10e67b932245da7a2c626c8c95b106c8168821633039776e6d2c2a95e32"
+      ],
+      "frames": 60,
+      "encoded_frames": 60,
+      "duration_ms": 2500,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/confucius-2-fusion.webp",
+      "kind": "2-row Confucius joining sequence",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "bb50a5e04932f69d1fbd77a036f1be3ae4b9373dc4c1e267dc6575d4bbc15045",
+      "bytes": 44414,
+      "dimensions": [
+        720,
+        720
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "49cd8b19346f3e1a406bec42cfbd7eaab150651f77e4b3022e25881aaccf2eaa",
+        "49cd8b19346f3e1a406bec42cfbd7eaab150651f77e4b3022e25881aaccf2eaa",
+        "49cd8b19346f3e1a406bec42cfbd7eaab150651f77e4b3022e25881aaccf2eaa",
+        "49cd8b19346f3e1a406bec42cfbd7eaab150651f77e4b3022e25881aaccf2eaa",
+        "49cd8b19346f3e1a406bec42cfbd7eaab150651f77e4b3022e25881aaccf2eaa",
+        "49cd8b19346f3e1a406bec42cfbd7eaab150651f77e4b3022e25881aaccf2eaa",
+        "49cd8b19346f3e1a406bec42cfbd7eaab150651f77e4b3022e25881aaccf2eaa",
+        "06c11fea337050ae82ded938ada57c863f1af8181324e368398b7264d8490baf",
+        "06c11fea337050ae82ded938ada57c863f1af8181324e368398b7264d8490baf",
+        "06c11fea337050ae82ded938ada57c863f1af8181324e368398b7264d8490baf",
+        "06c11fea337050ae82ded938ada57c863f1af8181324e368398b7264d8490baf",
+        "06c11fea337050ae82ded938ada57c863f1af8181324e368398b7264d8490baf",
+        "5338ec8510cb09d2a1a90ce2cd3142bbf0d84f66df42a07c685b966a3945aa04",
+        "5338ec8510cb09d2a1a90ce2cd3142bbf0d84f66df42a07c685b966a3945aa04",
+        "5db61b8be0b1ae0b50d899f1b0ae4f46bf3e55459f25dfa184201bdf06c4c333",
+        "0b8ce44d89caa39ecb970abcfd0dd0fb0db6566cead62e4d1423b5cca919b195",
+        "0b8ce44d89caa39ecb970abcfd0dd0fb0db6566cead62e4d1423b5cca919b195",
+        "1ff11581e38998dec636cb594ac069747c92e032b75c0ca3f3594b0bc53fc50f",
+        "1ff11581e38998dec636cb594ac069747c92e032b75c0ca3f3594b0bc53fc50f",
+        "b2c6c11854b4dbfc2a6dc7fcfb0ee19203814015c57f60e4d5dbefae6c85e2a1",
+        "59b80acf4fd8ab55e7056b6df46e163dacfe0c44a5601e1370534cb6fd6d1698",
+        "59b80acf4fd8ab55e7056b6df46e163dacfe0c44a5601e1370534cb6fd6d1698",
+        "ecc4cf98de48a9dd394050151679efbd4939582426eeb78b254983d672de0489",
+        "ecc4cf98de48a9dd394050151679efbd4939582426eeb78b254983d672de0489",
+        "9a53df663c5184de4ac7b16318bb5640a5c0f497c680b57a6a9fe2134b9a63c2",
+        "ecad0853bfbca285773023b0704d2c88dd301ceac74e402ebe3e31880302dc50",
+        "ecad0853bfbca285773023b0704d2c88dd301ceac74e402ebe3e31880302dc50",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4",
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4"
+      ],
+      "frames": 42,
+      "encoded_frames": 12,
+      "duration_ms": 2400,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/confucius-2-fusion-settled.png",
+      "kind": "2-row settled gold Confucius",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "71b0c6c727dac8759faff2f72e6fd5db3dcf347cbf535e932a91fe19ec355f37",
+      "bytes": 11007,
+      "dimensions": [
+        720,
+        720
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "54e1bca4e2d1e198f85aadafb9d08f496cd7b5d292489911bc9698ee88fae4c4"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/confucius-3-fusion.webp",
+      "kind": "3-row Confucius joining sequence",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "2d73e87504840c9b19cb085620c90c89965b6678f809027fd119b976e5530fee",
+      "bytes": 67854,
+      "dimensions": [
+        720,
+        720
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "4422304b566440c715c4ca15189eb2496cc045a58f0119210b769797129af0ff",
+        "4422304b566440c715c4ca15189eb2496cc045a58f0119210b769797129af0ff",
+        "4422304b566440c715c4ca15189eb2496cc045a58f0119210b769797129af0ff",
+        "4422304b566440c715c4ca15189eb2496cc045a58f0119210b769797129af0ff",
+        "4422304b566440c715c4ca15189eb2496cc045a58f0119210b769797129af0ff",
+        "4422304b566440c715c4ca15189eb2496cc045a58f0119210b769797129af0ff",
+        "4422304b566440c715c4ca15189eb2496cc045a58f0119210b769797129af0ff",
+        "c7b9680385d99d6d03a1f96e8551a2a11069bcb63da24623b848e121aeb9cd53",
+        "c7b9680385d99d6d03a1f96e8551a2a11069bcb63da24623b848e121aeb9cd53",
+        "c7b9680385d99d6d03a1f96e8551a2a11069bcb63da24623b848e121aeb9cd53",
+        "c7b9680385d99d6d03a1f96e8551a2a11069bcb63da24623b848e121aeb9cd53",
+        "c7b9680385d99d6d03a1f96e8551a2a11069bcb63da24623b848e121aeb9cd53",
+        "d4dcf1602a195a4b2d29bfc42419649f52e84345c1640415d2f45180e523c64f",
+        "d4dcf1602a195a4b2d29bfc42419649f52e84345c1640415d2f45180e523c64f",
+        "b9954c080a7a0082d9e89b15dd9c402b9401757eb2361f05c651dfa9cefe3caf",
+        "7222ef786aa457003387a1b5008e69d8831d6496276c92be4205e61bcd9a0627",
+        "7222ef786aa457003387a1b5008e69d8831d6496276c92be4205e61bcd9a0627",
+        "058a934638100b871100760ea9c5fb3b1943aaa058f74f7d27654340c231c5b0",
+        "058a934638100b871100760ea9c5fb3b1943aaa058f74f7d27654340c231c5b0",
+        "aeaae2d6f4c065f13e19c4ce8cedef5468da2a40f1f55ed0f5e594a089e41ea1",
+        "89a41ce741518b48ed98e3cb13bde599e6c5d335edf3f5238c2ea84b76fd26a1",
+        "89a41ce741518b48ed98e3cb13bde599e6c5d335edf3f5238c2ea84b76fd26a1",
+        "7a5666c54fe66101929de1470c0f4e2526753bad10dd5784386834dd91da687b",
+        "7a5666c54fe66101929de1470c0f4e2526753bad10dd5784386834dd91da687b",
+        "be25991d8c07dccc6203c58187ccf84469136231dafb5ebb2e997eeb14c705d2",
+        "96a62a6b2e4bddf3add791829f9cb78f80db1ba5f8e396405d47f937ea0aa827",
+        "96a62a6b2e4bddf3add791829f9cb78f80db1ba5f8e396405d47f937ea0aa827",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa",
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa"
+      ],
+      "frames": 42,
+      "encoded_frames": 12,
+      "duration_ms": 2400,
+      "lossless_decode_verified": true
+    },
+    {
+      "file": "media/confucius-3-fusion-settled.png",
+      "kind": "3-row settled gold Confucius",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "7e0e72039604ce066ff56d22ed5f68e7f2b5664842cb82beb93ef7ad417cb772",
+      "bytes": 15935,
+      "dimensions": [
+        720,
+        720
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "5d4bb85a8129876fa83301501afd21b4f19f6a36a417c2c023d23624947e8ffa"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-mini-1x.png",
+      "kind": "1x mini through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "23dbf4d226cea7420ce2aef0c51d96679243e73aedb75e98d5316cbafb49b0fd",
+      "bytes": 7285,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "d444b915e27e4f01441876748add41869ec749d79751b426e5b0e69d5a81864b"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-mini-2x.png",
+      "kind": "2x mini through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "336a9425450854e2f20385526ae8627d62de6e8b17746b38c369308923940127",
+      "bytes": 7360,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "faca9819d165ad5cc2b5d33a369af6276b4994464d597c98efd3ae7747371456"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-mini-3x.png",
+      "kind": "3x mini through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a402d3338d0fbb62ea73d29e3e4abaf5610eb0e0e5ee113a1cd07bc4b7355338",
+      "bytes": 7338,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "e2c50d7ac43ebaad6902255599ce8753702b56be8475e48d6399aa3ddfe439dd"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-minor-1x.png",
+      "kind": "1x minor through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "d87d023edc8e3a74d4840affb2c70e695cc18fe3cd420e34b4fb9a32fa0e7620",
+      "bytes": 7456,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "cf93b04cb105058b1ba218dddf365dd694d9e609811f007b54dc742bf6348f3f"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-minor-2x.png",
+      "kind": "2x minor through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "3b703ed112325055761940ea75988dbda56f176e5419e289f824687dba5c50a9",
+      "bytes": 7483,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "67e37ff69f550b6ffddadd61839a92c08f8e1dd72df13eacb670f0c961963692"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-minor-3x.png",
+      "kind": "3x minor through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "58ab0fd08abd4a218e90b4060e9bcc85b4949d14988fb4fc757b65fc015cc3b5",
+      "bytes": 7613,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "00b0d684717aa5fb1ccb4deb3efac5dad6224c9bbbf8100c24d332d9fa469e2f"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-major-1x.png",
+      "kind": "1x major through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "d1d146fcb7dc59a0fe4ead301112207367edec41ef8795cade1d2b163ef13433",
+      "bytes": 7553,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "0abcf4f81c6f6cbf17b376b558d29ec30f94360908351fc17269e07879c42a27"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-major-2x.png",
+      "kind": "2x major through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a541e5ded5a477cb1a039b9300508c3b251a1aef731c27db228af0c2f7817014",
+      "bytes": 7782,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "d43b8b5d20ca4574a66455f93c5c264e62786824d3e1d95eedbc2fc1b0b5c1b0"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/prize-major-3x.png",
+      "kind": "3x major through the live prize renderer",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "60201464d10c926ac77a3c0c7b066932be63ef5752e5f6ccb6a70f12890ae6f9",
+      "bytes": 7986,
+      "dimensions": [
+        720,
+        480
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "256f09cf7e1358b794584d7357b65a81a256f674b39d14df9ae9e93a0c1111f9"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/component-background.png",
+      "kind": "background artwork component",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "9e1a8135cb6304d577ab61adac000eeeda3e8ad09f9162e62c7a0cd20f523374",
+      "bytes": 3052,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "03e98b14d8a801fc202709e9257383c8c3ff24ee58632c32a710d4d71988061a"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/component-hold-background.png",
+      "kind": "hold-background artwork component",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "c02da47c8e9c8ecd8ff9fa141268da101336abe2d240329f5bcf6f435eda658e",
+      "bytes": 1091,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "a551fc83a4120d53caf7a31dfe744ee74679d250e42c04e95c97664e58100d89"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/component-header.png",
+      "kind": "header artwork component",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "de1365b410e0c20d665f2b3988ba108e20279f94d3ebc5c04de2453059f79d7e",
+      "bytes": 6210,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "1b1ccbc3292cda8dbcab07d0ee0eef05ae1023acd8c48e996bdae9c441921727"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/component-footer.png",
+      "kind": "footer artwork component",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "63c3522f894f57120114fcb6433a00fa56381520e0c46ebdad2d9e8a4e4ef2ac",
+      "bytes": 1038,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "38cdd009024f40f502f15116a9bb8b176498751b8474f9c6aab8f2b01c823ddf"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/component-credit-label.png",
+      "kind": "credit-label artwork component",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "c1bb1b3f48f31c7c8faebdb0fb5d2af16139bc8180a9b040a166840a92ec0775",
+      "bytes": 2410,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "5b672291bdc1f758366720ce8cd948f22fb0b0ca4844b62e2c9c0cbabecbf49e"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/component-bet-label.png",
+      "kind": "bet-label artwork component",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "c71d2ab585c115c427717b102dae7997ce228ac93a5590804f4cb0fa135c096d",
+      "bytes": 1879,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "276d214d271072f66d027bf0c303fdf297a057a18528ab1c7aaba51db13e4347"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/component-win-label.png",
+      "kind": "win-label artwork component",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "44997e8e3fa48691129029154f526c5c593270371292316d05ba4d0ef32bbf2e",
+      "bytes": 1898,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "d1374857c8cf3a4e8f03a2af4eefb94cb562a7d6a94bf46ff9ecdb8afd4d576e"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/major-fire.webp",
+      "kind": "Gold Major over visible held reels",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "94b6c12eb836d986de114a1451e809bf6259513638f10f2c50b7ac568b285e36",
+      "bytes": 545714,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "a534169b5a4fe3896214c7cee7c7677d63b5be28c99f6d7241d0a6060157e48c",
+        "ca66a37d409f4d11ec2e0a1e59d9fc76d6c6330b9aa1b61d8e4fa6ea0d2a066e",
+        "0dbed55f36293d7ed84665ce31727d09d8a4ba6b5de459050e2c38f6eff1ecb0",
+        "f5d0254f24c9080412016f7bd2c97a0266bfda7cf6fccd696f04144593fc2d19",
+        "695bb597a4355ca0d791074c26bc9ef9bff8d7f16b4448acb861cf93bca236ca",
+        "4c8360d28e73eb17ebef10417aa25aafe38d03bc7e5597f1afd7fa1f39865100",
+        "8545a2177312d9e469c551b2556c9435b7b5c5823735d1416eaabff59e762775",
+        "142141dfe95c02411d945b10caf048485c496e268bd9526da59063b462cdb9c1",
+        "7e09d744e732e5d9f36373ccde9b4c4d715831682af1a630ddb8708752c6dbd1",
+        "70d3d35ad6724cca69e0d47d60d9d93c1544cbd3e397204cca5fdfe081dd45df",
+        "4a23a3fe07394e5d7b82bbb87bc4474a94cd19f15592ca8bf432fa4d29d54668",
+        "a778129061607f38c229322c9c438587ac4f2b686c950a44cdeab73045b19621",
+        "09b855864b4523bd282d9250e25c47e495b85a9b9e30bd73bac955deb00e4c6d",
+        "d52a87898be20e33cf04c4a3f938f0eb6e18fd307996d0e34051f5e0156ab243",
+        "56ef7ca70c41750b2dade8bc9cd6364c5b2e589c38aef8f42ab81c70a38757ad",
+        "5b2b7c681bbc40cee823c6c7593ddbd6d9cb127cdaae90d8084b54b6461d4cf4",
+        "b49cadb2ee73c2357109b7b31d916222e03ed17de412873ec232be05124e64d4",
+        "bd58766eee84a46d65f0f17befc57e275a2fd4327df3f789de26c41f235a61e5",
+        "167b7d4feb797bc54a64a052774c27e7b77b3161a079625eff1671df3bce59bd",
+        "ff55155814159ec33fa6720d797600b4e5391f86b75f0f54f2e9a25a4a689824",
+        "2d4f058625e89875f905ea32a6ca16534fe552b7610c09bb9f61bb1feb88d66f",
+        "df4a9e0eb7a41629c966ea30749c50eef850debf02602d045d3aede808687443",
+        "da19d0d66b0e374eeb2e4f297ab0fcedc2f8b4fb8fc2231837853b17a91e3612",
+        "1bfdb3d24f77adddb5d5a667f880697f5eae61eb37f0173eed9598b0da41c608",
+        "fb2d3d931477dd01dc3cb1fc4da7fe1f705b34c8de0d947980b006a8b4e8dcb8",
+        "8629caf5e0a033ab7ca2f146bd0da3418eef9ce8fd263d736d487fbc40ddb306",
+        "45aa9330661aef202db0ff0d9e969d366d61b7ce09f4ff0099777e5a1f67bf11",
+        "063fb917526f20d767c9e596817d05dd66182fdf4ccd6799367b7c26033606dd",
+        "a9715f0ecfb914c4b19ed81e5f276aae8de7d63134c0b8d2e859e891e4377bf9",
+        "7ba66f99e22c7fb49b86533dc47062d55152424d74acb0912301f78e20f838e4"
+      ],
+      "frames": 30,
+      "encoded_frames": 30,
+      "duration_ms": 1200,
+      "lossless_decode_verified": true
+    },
+    {
       "file": "media/collection-fast-total.png",
-      "source_version": "0.2.160",
-      "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
-      "kind": "One-press completed Phoenix tally",
+      "kind": "One-press Phoenix tally through actual Hold presentation",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
       "sha256": "3419c6d71c791b36403de5d9e24cad980208ab0971a4ca000097f68650d30d6e",
       "bytes": 49858,
+      "dimensions": [
+        720,
+        405
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual current-source asset renderer; synthetic demonstration state.",
+      "input_sha256": [
+        "962f644c5175a3a044a19071c74bbff3cc5c2563870e2c0a511a80af827f2258"
+      ],
+      "frames": 1
+    },
+    {
+      "file": "media/display-options.png",
+      "kind": "display-options",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "d37a0ec40775ca56b6472f0c0d3b05f971d67cd9e7702d04b33e8f4fb84cd528",
+      "bytes": 12950,
       "dimensions": [
         720,
         405
@@ -3306,18 +4746,1642 @@
         240,
         135
       ],
-      "fixture_kind": "Synthetic settled Hold replayed through Base entry and every Hold respin before one-press collection; original game renderer, no camera or attachment pixels.",
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
       "input_sha256": [
-        "962f644c5175a3a044a19071c74bbff3cc5c2563870e2c0a511a80af827f2258"
+        "963d0ddc79b3f7cb101bb7ef371fb73dd878b474f1a1163e1bfdabecedba44b5"
+      ]
+    },
+    {
+      "file": "media/high-wager-100-25.png",
+      "kind": "high-wager-100-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "44868776a9402850c1c9da735b3ddde54a99bdda622c008cdf963c00ad3c2504",
+      "bytes": 54413,
+      "dimensions": [
+        720,
+        405
       ],
-      "fixture_source_sha256": "c03aebe931454fe41d80c715e342b01bcb268e6ba3d18541965ef988185dbb72",
-      "correct_hold_view_and_backdrop": true
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "f6aa760361318af4a79db2d09af979f590223f638b223cff2243521123049e7b"
+      ]
+    },
+    {
+      "file": "media/high-wager-1000-25.png",
+      "kind": "high-wager-1000-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "216afe0bccf3a29483c01c872f8ead553237359a7f3e73388f8b4f39239bdd04",
+      "bytes": 54645,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "fee9efc994d01878001f46de9773d9676e5c251ac24a816f838f05ce9dd18757"
+      ]
+    },
+    {
+      "file": "media/high-wager-10000-25.png",
+      "kind": "high-wager-10000-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "e88ddd28d9fc0d765c3c47c908c17d3e1c2c1bac7f07bc019087e61dc4aafd0a",
+      "bytes": 54719,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "a0392232e8e24e46b6e028c57b9e3b2157c1059deed18e9d576ab31b5debcac4"
+      ]
+    },
+    {
+      "file": "media/high-wager-200-25.png",
+      "kind": "high-wager-200-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "2bbb282c55e4694f9c3ff2094db5a993bb24ad85b84a78a18f18a58d142c4d7e",
+      "bytes": 54511,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "3a5de4b2257834ed09e9236d2d2a11a0e327afbc315b0e3b232ec2ac976504ed"
+      ]
+    },
+    {
+      "file": "media/high-wager-2500-25.png",
+      "kind": "high-wager-2500-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "94c70ccd165db3fdf355be863ff343fcc39968e4ca6f6dc9e7acd056df15e3ba",
+      "bytes": 55065,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "bc66e0337e517f3a2797856378626756cdc2bf59c5ce7b7644300636969acb28"
+      ]
+    },
+    {
+      "file": "media/high-wager-500-25.png",
+      "kind": "high-wager-500-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "2df1acd6aaa15b65dcf7481fb4ef4860f4ec8ec9c71b87039e8608dd4d73541e",
+      "bytes": 51098,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "1c1e522404112d8e9c5e8762f388964d8d10d577d03153a3ee1c65b9a3bcece1"
+      ]
+    },
+    {
+      "file": "media/high-wager-500-50.png",
+      "kind": "high-wager-500-50",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a43754dcc4362e63aa06437e69315d752e4eb0709f02a0ce02ddf0556af9da37",
+      "bytes": 58191,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "74d9bc1136a89174c63367a90a5b963d81182843f110bc480a2845575885172a"
+      ]
+    },
+    {
+      "file": "media/high-wager-5000-25.png",
+      "kind": "high-wager-5000-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "b27dc8d3d332059b79e93106f922c9b0d25117713b4e36f3d0fb7a6b6101b83f",
+      "bytes": 54882,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "d5c3420d4eb83dd1fc1285e773793af4c3dfe63e272578e4b19abf13dc7febe1"
+      ]
+    },
+    {
+      "file": "media/return-detail-1.png",
+      "kind": "return-detail-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "1a8539b41526f3a3ede8559d904600c6e07ae2884c595f4262879b4bb766661c",
+      "bytes": 12900,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "76681e4860bbe634000d2ae0e70d2b307746551297df66ab38eafc26d1a8f085"
+      ]
+    },
+    {
+      "file": "media/return-detail-2.png",
+      "kind": "return-detail-2",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "b37b926ea6d9f1d7f974eb65c34aa97e069983a946d432f9ee4dba1073f1bf13",
+      "bytes": 13154,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "7b50b3bbe22cc787d874513df4acc1cbff5f6ef8247ee10a576f5d11b3ca859a"
+      ]
+    },
+    {
+      "file": "media/return-detail-3.png",
+      "kind": "return-detail-3",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "9983e82edb107288bbab0fdd03bc8aa903c321ea8521ac784907d93efe2566c8",
+      "bytes": 12908,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "d10788d64ac8228ec726404df4b2c463755ae6acf65f12cc0297528c330d6bea"
+      ]
+    },
+    {
+      "file": "media/return-detail-4.png",
+      "kind": "return-detail-4",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "baa3b21277841957d8103138db8bea555eb6d1ae0f39b8403e719509363caafa",
+      "bytes": 12876,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "19da9b92af02741f71c32d2f2b749bd9b511713f83bb2d9453f5a85d43d22f32"
+      ]
+    },
+    {
+      "file": "media/return-detail-5.png",
+      "kind": "return-detail-5",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "5ead847a8a4d5aa3e7540385069b9f75dd33220e73aa967e078394e75a01ba77",
+      "bytes": 13188,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "7d276af6b061f745b9f461eb74068ca05a0269260fd13fe7b523a33d47067897"
+      ]
+    },
+    {
+      "file": "media/return-detail-6.png",
+      "kind": "return-detail-6",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "2e6e7dab5e9e857d8b2160b862ac65cbd6ba8410cf7c3f9c0ce290a0a8739ffd",
+      "bytes": 13110,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "5f841cdbd41f86f5cabc0604a1a1fcd14a0b6770df96b81c2ac36ac0c2772768"
+      ]
+    },
+    {
+      "file": "media/return-help.png",
+      "kind": "return-help",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "75dfba14171ee98ac4519b00b5fc65071b979643053950de6dd3d2f004c8ae9d",
+      "bytes": 15087,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "48bbc544d22a7fea7bdd7fa9f0538a972c4d768ef493b1f0fe29dd7f58fad2a5"
+      ]
+    },
+    {
+      "file": "media/return-options.png",
+      "kind": "return-options",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "161fb3df94c70789dafd8f31d21191da5c7b98cda802a3c69bf90f9dc0ea88d3",
+      "bytes": 18337,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "d68f12742f16b3436f1d15d8a4a92572bd0ea406b83adb07ef0f586840af3534"
+      ]
+    },
+    {
+      "file": "media/routes-10-1.png",
+      "kind": "routes-10-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "0febdee30f3a49c561674b5f835f37e0093bb1ae4c35ab24a2f9d9f1eea71826",
+      "bytes": 11286,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "9e632c8a1c692da3a7f6468638677ca4f4dcc49570b0293ed42b0ec9a106b8de"
+      ]
+    },
+    {
+      "file": "media/routes-10-2.png",
+      "kind": "routes-10-2",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "b26369c43e27ae8f2a5586a505db8220f8a84d82ffee6d02579c69b0fbf06ed1",
+      "bytes": 10842,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "9ef046576e96b39637094d539e0748a54c1bed2346b83087dea06e58a3646e61"
+      ]
+    },
+    {
+      "file": "media/routes-100-1.png",
+      "kind": "routes-100-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "fddd55ed949f78b236962e1b589bee6de89fbd895a8bee97b2e4b5fadcc7c252",
+      "bytes": 11289,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "4aaf811c87c6bf73a78fb6cec580d3218718c145f97b31eb25f7a6bcf29475cd"
+      ]
+    },
+    {
+      "file": "media/routes-100-10.png",
+      "kind": "routes-100-10",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "dd2a6ca49687478cf07496a56ae8cb77275515e23042a4b15124db55c43f7a67",
+      "bytes": 11721,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "9676e1eb67a2e1120a6548b4dc07cdcb96af5f80ce049af86bee3f818fdc8408"
+      ]
+    },
+    {
+      "file": "media/routes-100-11.png",
+      "kind": "routes-100-11",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "0c4664f57eaeb362e996034a1fcac8918234a923080568bf70feaaa53d7ff40c",
+      "bytes": 11523,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "f1eeeaca57ee196e2d2cc09b91f0f220e8906b8cd2ab23437f68cee2b679ba8e"
+      ]
+    },
+    {
+      "file": "media/routes-100-12.png",
+      "kind": "routes-100-12",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "ec40925c7de5961d016fbec9fa9094dbefc556056ffa40d00291fedc53d19f03",
+      "bytes": 11715,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "65d4d8bad13bd4549f541bf37c3eed483a0569e970674c9f012acfc37244242b"
+      ]
+    },
+    {
+      "file": "media/routes-100-13.png",
+      "kind": "routes-100-13",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "75365472faadd128ce0696c6d7abf72ff506d7c83c2be0afcc263d9cf6c9d7db",
+      "bytes": 11764,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "50dcbc102223738eccdf52196941efcdebf6e3291e857c3abd81d71d72487a52"
+      ]
+    },
+    {
+      "file": "media/routes-100-14.png",
+      "kind": "routes-100-14",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "e0cde33ad14fcd52de764c45eff7ae69d3368f4058212235f51e976a18fe8959",
+      "bytes": 11895,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "9bd799a8edb1bfc2c1cd6f20adf8aaf265eae715f3267cb2813fcc24ca4fcc37"
+      ]
+    },
+    {
+      "file": "media/routes-100-15.png",
+      "kind": "routes-100-15",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "3231bf0343051061dec1fe6ef5aad1e02fc61634e45f6791012222a47e296f90",
+      "bytes": 11754,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "1a5762748a6d03e43f59851fc3bcf0532ca3b366dc2471d064efdb46bea8c801"
+      ]
+    },
+    {
+      "file": "media/routes-100-16.png",
+      "kind": "routes-100-16",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "ff8bb96a5215110b2894382edaeface49b89219372ff54ca03657913a31e7c0c",
+      "bytes": 11830,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "434ad53ce2a5762cdf201ebab37dbdecfb1016faf7a648ceb7a75b49ef7c874b"
+      ]
+    },
+    {
+      "file": "media/routes-100-17.png",
+      "kind": "routes-100-17",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "6da94360a98bdc5a947c57307b467d79a8202b0fc22443285e8637c563b2f81d",
+      "bytes": 10972,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "a204cbebdd94c9f1378622194d39d1edb5631b2a4fd1232a17e562776fef8a60"
+      ]
+    },
+    {
+      "file": "media/routes-100-2.png",
+      "kind": "routes-100-2",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "bde79904748487ff0dc9108cd5311c8f75a9906a1ef84474cd0018d994e80bbf",
+      "bytes": 11470,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "1cf4530f9538ed1dc95c057504b817237621a4c1a895af439dc43ec262bcf362"
+      ]
+    },
+    {
+      "file": "media/routes-100-3.png",
+      "kind": "routes-100-3",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "b8612b867e6a5d65a897760b380d1bf65435777a7a459ba54422c21dd8505c30",
+      "bytes": 11558,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "ca440c4a5777485dc4a18cbd1f996a7e371edfec4cad206c7eb9d2219c761d73"
+      ]
+    },
+    {
+      "file": "media/routes-100-4.png",
+      "kind": "routes-100-4",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "0808bbc05d0539a67cfe81eecd5151930993f9c087448761e8930a744c4de73c",
+      "bytes": 11845,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "eba00978db8c62e9fd3923a70621b040313b2b12f5baccb315c22c267ab42ac7"
+      ]
+    },
+    {
+      "file": "media/routes-100-5.png",
+      "kind": "routes-100-5",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "8a609201b52e2275ac23c50da3d392a79fcbed4a9a497c1706a61918ac603d52",
+      "bytes": 11661,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "e433c329a3ab64914d4042d09776d0fb803ac4761eb5a6fc8a286c8ca7f7bff1"
+      ]
+    },
+    {
+      "file": "media/routes-100-6.png",
+      "kind": "routes-100-6",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "45d3fa1269986fba4ab726b3497f08ff0a171522fabb042dadef52d3555e87a1",
+      "bytes": 11677,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "c226899a617d1f0fd9d0ab4a7e89b4f02193fc59f208368f3f674eb811c0c1b0"
+      ]
+    },
+    {
+      "file": "media/routes-100-7.png",
+      "kind": "routes-100-7",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "cafd2717f862dde731c9eb2ef1f522550f6492622d1b76956b80e39ba8f4b0a6",
+      "bytes": 11629,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "7b3ed6d06cc119bd55dd87298d810a3a842271293af26800b8bb24d33657e162"
+      ]
+    },
+    {
+      "file": "media/routes-100-8.png",
+      "kind": "routes-100-8",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "9cd77784bfb7139e532ab3ea64096b6cde4324afd4a77e1710d56c9df9738906",
+      "bytes": 11751,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "2e8e03a95eee336f58bce6f3600a8ad7456e465095454f8aa909c4c2f5253d58"
+      ]
+    },
+    {
+      "file": "media/routes-100-9.png",
+      "kind": "routes-100-9",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a6c517378dd174be90a8ee6139b23a5099f458a2c0658ea92719bbee65666965",
+      "bytes": 11648,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "710ba6a2fa77cdd0a0f1e28ead83f462b289266893acd36c890865c752bc06c2"
+      ]
+    },
+    {
+      "file": "media/routes-15-1.png",
+      "kind": "routes-15-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "c2ec8634caf930ca1706a2619a267d9062135a47cbc842d68ab9f352d80eb404",
+      "bytes": 11281,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "749ebdc1877716e26bbe63bd740779c11cd6ebcc9c50316db09655e1d372680a"
+      ]
+    },
+    {
+      "file": "media/routes-15-2.png",
+      "kind": "routes-15-2",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "114e80ff1d982fd7f4b5c2e1cefd8ad512443ed59494732f1d8335b44e7dd4a5",
+      "bytes": 11534,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "3a1e66679b05fc0362595c0df452af9808920b4ab2551044fde94b5eb336cfc2"
+      ]
+    },
+    {
+      "file": "media/routes-15-3.png",
+      "kind": "routes-15-3",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a2d6e7b6f2accb0239dbe946c249d827feb36eba54b0116a6b2c303fcc046d7c",
+      "bytes": 10592,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "9705c206a5e5745770e72c8fa2c2c038d11733b788cddec0811d586399950bf3"
+      ]
+    },
+    {
+      "file": "media/routes-25-1.png",
+      "kind": "routes-25-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "d7a72f7632d42e225ef08af0cd0677d0f22376c9a497e3de7fd757af1494a73b",
+      "bytes": 11299,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "bb0288659a6dadb471d78e0d2103b96237453a8b66b7a7e152cf67f1ad4e60d0"
+      ]
+    },
+    {
+      "file": "media/routes-25-2.png",
+      "kind": "routes-25-2",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "ee5e20862e9e64f41273899d8e00b47e6601ee0e407203218fa7ac5e58cd68cc",
+      "bytes": 11429,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "9fe71639b6ff0a7e4c9881324b14d6bdd037d14f7825b9fc58b5649d0a6b8865"
+      ]
+    },
+    {
+      "file": "media/routes-25-3.png",
+      "kind": "routes-25-3",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "f82c24136acec33369fe731a07a849dcace2eef4543944c5a6b7141fb86148d7",
+      "bytes": 11556,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "45972c669d65c29a7fb1187e459ea450287e4d12cc5d9944b1109aadc7db5429"
+      ]
+    },
+    {
+      "file": "media/routes-25-4.png",
+      "kind": "routes-25-4",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "d6d346341aef1a6360c4809fdd375b9d7223eef2fd5627ebb233da5e8fd401ad",
+      "bytes": 11770,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "bc1ba73b4c6eee92f6540d1040ba8dae140dab0d294b13d8fb82d64408d6deb2"
+      ]
+    },
+    {
+      "file": "media/routes-25-5.png",
+      "kind": "routes-25-5",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "c1fe8de407e064b674db1190b2f114d0bc1e51df6c18b2d06c6b24ee05283fd3",
+      "bytes": 10030,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "6a15f875bb81a9b9e1359e3171e1859d0d39b25d338abb61aaa155367e9d9357"
+      ]
+    },
+    {
+      "file": "media/routes-5-1.png",
+      "kind": "routes-5-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "719c9f0823d791682716e5fdc3e0dad439c14fe57f3e62da39bf68b08686bf29",
+      "bytes": 11288,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "d9a5a2c5faec7d282b904ce102915a27785f803cd084678b2ba80ba8c171679e"
+      ]
+    },
+    {
+      "file": "media/routes-50-1.png",
+      "kind": "routes-50-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "b76d9356094bb43fd54fb4c00ac5623273d6ad16c60310a768677da50ec9a5f9",
+      "bytes": 11342,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "e8cdd8c9361700b6e166f41ec058ce4d1b28b2fa6960f0f5c7924f28ff85c9e7"
+      ]
+    },
+    {
+      "file": "media/routes-50-2.png",
+      "kind": "routes-50-2",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "1d54eac09609c27f8f7fd2e21f6b05f4a53fdb5ad21e857d88678a14be0726f0",
+      "bytes": 11512,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "c521bb7321c583a181cc84fd7361370c0bce687a882229b8867becf6c8686c24"
+      ]
+    },
+    {
+      "file": "media/routes-50-3.png",
+      "kind": "routes-50-3",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "d6f28fc903b57a3ec639161d538e3769cd8aaf91c2e34f217fc20ef98b4bc0aa",
+      "bytes": 11610,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "3aa7cdb03c1d2e9a6d1b3529447b3d851a0f2af04c660a66da1e68543426fc9f"
+      ]
+    },
+    {
+      "file": "media/routes-50-4.png",
+      "kind": "routes-50-4",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "446de5d8a5a5bc5e24ff76018e39925363cfa05cf7a07ae0a0e697fb850dc35f",
+      "bytes": 11813,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "67eb0996825a25a727c1beb96a1344c347ad48003a027d8a5a7bdfa1b1f6e44c"
+      ]
+    },
+    {
+      "file": "media/routes-50-5.png",
+      "kind": "routes-50-5",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "8f5b4516edd3ecef5ed3c163deb7d18adf84ee53c93aaae486c8f313954c48bf",
+      "bytes": 11976,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "2b3afdbc364c43008e1b073d0ea4d539cb72cb3c94241f68cf77ca24685c97a7"
+      ]
+    },
+    {
+      "file": "media/routes-50-6.png",
+      "kind": "routes-50-6",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "79c5811b431cb75fa50de203d0816795aa53a719fc33d76268b265577ea6d8b7",
+      "bytes": 11661,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "60bdcd7b7f9463f64f2f9f3ae6cd950eb93d15dbff42d2a8e3ff50be71d8d5e5"
+      ]
+    },
+    {
+      "file": "media/routes-50-7.png",
+      "kind": "routes-50-7",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "93ba607a53c530a414f4c51e6765ffdaa386a1d4f1284a973b5d052e8d7c3dd8",
+      "bytes": 11776,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "c77ec4d98d0c7cdb11be523ff544a1ec5563626ae82f99d719a20be5bedcb746"
+      ]
+    },
+    {
+      "file": "media/routes-50-8.png",
+      "kind": "routes-50-8",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "2a6fe619d150fc041ec3bbd8453a5a22f6e94464367d80a7e6c0e083a3f0ff8e",
+      "bytes": 11771,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "0f66c6a368b7ff106955cd23d8dfff9f3503e48900bcc979588c25dbd793f0f8"
+      ]
+    },
+    {
+      "file": "media/routes-50-9.png",
+      "kind": "routes-50-9",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "28731c61ddfc64fdcba22ff8bd4a76c68fb426ef3dd3404fff66f8c0eb187d62",
+      "bytes": 10407,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "39cf88a0b2cdd1fb9204016ce9c0646312c3d548fade7f38a2342d39c2ad06b3"
+      ]
+    },
+    {
+      "file": "media/rules-1.png",
+      "kind": "rules-1",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "8e28da41a913a48ce5c66d6843377cc57f7bbd26606002fffde18bbfb59eeba6",
+      "bytes": 15168,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "9122fa6f7a012d1c3bc0d04f1cbbe045c3345864d35452a19a56626249ea4185"
+      ]
+    },
+    {
+      "file": "media/rules-2.png",
+      "kind": "rules-2",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "0246ecb1298d1481947c23c6a99048a461fa8a737d213e277e99cd3c3bc26a66",
+      "bytes": 14964,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "06c9612dc5a2b4b8527c7f0757cd255a416ce9d923de1600c43de9e09180867d"
+      ]
+    },
+    {
+      "file": "media/rules-3.png",
+      "kind": "rules-3",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "a653a5359b2c571a46a832c98ec9d81dcd38f09444e70d800a037afdf7672f67",
+      "bytes": 16522,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "af5043c11ba76bdd4d812fe9794526f93d9ec975b9d1386abfabdf58f7937a9e"
+      ]
+    },
+    {
+      "file": "media/rules-4.png",
+      "kind": "rules-4",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "ace2ddaacadf7f9e4637c94d60e814e8d016915a19bdbacca66d0056f6133391",
+      "bytes": 16731,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "47acad64478f3d91564dc0840e11792372aa3f9ff72cd3434e24ac32083afb62"
+      ]
+    },
+    {
+      "file": "media/rules-5.png",
+      "kind": "rules-5",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "5c7d869eba9faf0f5c1d4b97d0f2a4a783c491c5640e4b4537fbc52f2d79b751",
+      "bytes": 15205,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "fd3c14a7a2203e1c79b06096a2c7ad8dd6b0df373fe075f057628e40dde57f17"
+      ]
+    },
+    {
+      "file": "media/rules-6.png",
+      "kind": "rules-6",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "831a9e10b3a3095f07d448be55307f6cfef37f18d59c8c26384ed7724c2796e7",
+      "bytes": 15939,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "ff7826162efaefbd9c3e55593ac2ac46eb7a97915b145e02bb8b37f56a203f77"
+      ]
+    },
+    {
+      "file": "media/safety-amount.png",
+      "kind": "safety-amount",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "500f1662a103b1599ea136a3a8209e610b621cbec8341ab3dad261ad14d02019",
+      "bytes": 25338,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "0d4ffe0da1505e770dbafc275b77b80c13530462e4d0f523be0a08abd99c0a68"
+      ]
+    },
+    {
+      "file": "media/safety-capacity.png",
+      "kind": "safety-capacity",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "fd3542f3b27f64ac34d6f198ec8098f08d29624845a8ea57abad3879cf7b0c6a",
+      "bytes": 10775,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "35c0a76eaa439f4defed29ef6e29b555cb2be570f43729ffd3db6d8f0831be52"
+      ]
+    },
+    {
+      "file": "media/safety-random.png",
+      "kind": "safety-random",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "e417ef5b61616346b3e8b09229e9144b45579068041cd18602454bf55b36f1cd",
+      "bytes": 11344,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "f11c6bb51b0f0415e7d03f0550c503d81ce7f6970caef418c50d24e4d0be0db3"
+      ]
+    },
+    {
+      "file": "media/safety-session.png",
+      "kind": "safety-session",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "afcdb211c86a9f2019b5f8d2dcce2f8a03fbb3361e96a23141163cc610ad0885",
+      "bytes": 10786,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "3f2c9db42d62032b412bdb54acb6e7ef43026a25f6188eb729e4fa238a602daf"
+      ]
+    },
+    {
+      "file": "media/standard-wager-1-100.png",
+      "kind": "standard-wager-1-100",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "9c897556ab24528472ad1a9a67e77b6b91d6dfbab1c945e134bb044b272d39bd",
+      "bytes": 42855,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "30bdfa64ff7314311eb5eff4732542992d8b1354c53456ec9d15a3c9f5ee628a"
+      ]
+    },
+    {
+      "file": "media/standard-wager-1-50.png",
+      "kind": "standard-wager-1-50",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "43c9b41807f50962c16855f4d15f86164ba8581efb4021ddcecbb23c56ec476b",
+      "bytes": 42557,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "efa5beb09eddb8102d7ab55369068d2ad402a38b5451044d058a82d0ce287827"
+      ]
+    },
+    {
+      "file": "media/standard-wager-10-25.png",
+      "kind": "standard-wager-10-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "7ddb219bf58a35476e8e2e596c2be36b673c2c6d1757d2ac3cd5241be85f5ea4",
+      "bytes": 43499,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "0716b4cc31f3f96128c72a9089a75bd4fae90713a429d63136211666e3a51ca6"
+      ]
+    },
+    {
+      "file": "media/standard-wager-10-50.png",
+      "kind": "standard-wager-10-50",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "f90ec2e7bcaa3f248a8467fdd5cf16b5b606f700d79ec42568face6ad8cb6b6c",
+      "bytes": 42980,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "22e3fa3bcf0edc3daea4f6de40534ad63f9751cbf55384f0985313e77b00e9a9"
+      ]
+    },
+    {
+      "file": "media/standard-wager-100-10.png",
+      "kind": "standard-wager-100-10",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "0a144d411f2221f79e1a11aeb92b8d37ba0770da33f01fcd047bb4a0a687aa43",
+      "bytes": 42707,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "6ec7113968316d336db2786987b8a73d26147fc8b379247b2c692adb3b363c9b"
+      ]
+    },
+    {
+      "file": "media/standard-wager-100-5.png",
+      "kind": "standard-wager-100-5",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "21fe3e9af4f81f941a92fc880120763a9a00ff785f275ca38e44ab8e6445f94e",
+      "bytes": 42552,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "b64a04db12600bd804ec15119086f89e6f69be9b57f2f7800304b7a647e62507"
+      ]
+    },
+    {
+      "file": "media/standard-wager-2-100.png",
+      "kind": "standard-wager-2-100",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "d6d928979f1d8d1682b5488002692cfa78d084304e2f334b240efb60f4dbfc89",
+      "bytes": 43052,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "3e1472a0a34bd32f385e011bae979821f482e2cfae939c4b9f5780cc5686e2ca"
+      ]
+    },
+    {
+      "file": "media/standard-wager-2-50.png",
+      "kind": "standard-wager-2-50",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "08f41e5496c4ad0dc2dbcfd7f1ace3186a14d25090ac3e7c84a6d031388b80fd",
+      "bytes": 42814,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "c278943e037e7aafec885ed483dbaeedb083e5a6cce86fd3dfd34c09b0e7efe7"
+      ]
+    },
+    {
+      "file": "media/standard-wager-200-5.png",
+      "kind": "standard-wager-200-5",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "3342d1c1d530aa73a9d256fd54d37a723d68b0fa27467840666f1eb1f31f6d67",
+      "bytes": 46054,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "1dcf050d7a15ca7eecbbbd68075dd6bcf0f4ee21b9e31c364b6bd4b636499298"
+      ]
+    },
+    {
+      "file": "media/standard-wager-5-25.png",
+      "kind": "standard-wager-5-25",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "74e1e1468475745e5bb2023214dd8514c488e9f6b5df6070f8d623800fccca62",
+      "bytes": 43528,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "8790d57bff3db56393f13c962040cfe355ff046a9b96dd835f25ccd6bcce2da3"
+      ]
+    },
+    {
+      "file": "media/standard-wager-5-50.png",
+      "kind": "standard-wager-5-50",
+      "source_version": "0.2.170",
+      "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+      "sha256": "805df3cb7deb783c4eeab53cca4c51df5f34d090b67e9252697aa1e810ac0246",
+      "bytes": 42988,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Current-source menu/diagram demonstration; synthetic state.",
+      "frames": 1,
+      "input_sha256": [
+        "30157e9655cd121cc8dbf060bf3c41a8a84b70196ac5c422279e6021b6492375"
+      ]
     }
   ],
-  "current_render_validation": {
-    "collection_tally_cases": 30,
-    "collection_tally_assertions": 887,
-    "correct_hold_entry_and_respin_path": true,
-    "firmware_or_odds_changed": false
-  }
+  "individual_asset_capture_sha256": "8aa366dfe3bffe85f502e1f7f447dd46c95ebc87d4f00ba3c079fb20ecdddb73",
+  "menu_capture_sha256": "d214625045a8f81b7454ba7da42654d9d94ab0fd0a085900dfa1adb7e9106016"
 }

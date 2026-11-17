@@ -1,6 +1,6 @@
 {
-  "version": "0.2.160",
-  "runtime_fingerprint": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+  "version": "0.2.170",
+  "runtime_fingerprint": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
   "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
   "local_model": "0x0002001f",
   "source_body_files": 176,
@@ -22,20 +22,18 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Current image installed on original Stick; complete firmware/assets readback and17healthy fresh-start checks passed. Menu/flip and fast collection use host Main/UI tests; live USB menu probing was inconclusive.",
-  "browser_version": "0.2.160",
-  "native_status_version": "0.2.160",
+  "native_validation": "Original Stick: complete firmware/assets readback and18healthy fresh-start checks passed. Host/Main and browser checks qualify controls and render cases separately.",
+  "browser_version": "0.2.170",
+  "native_status_version": "0.2.170",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Current source-bound release package",
+  "status": "Final source-bound release",
   "changes": [
-    "Zero-balance denomination/line/bet startup and direct Stardust voucher funding",
-    "Full startup menu with sound, display and High Limit settings",
-    "One-press Phoenix tally in manual play and autoplay; normal ending sequence retained",
-    "Source-based portrait, curved temple, sky, prize labels and award lettering",
-    "First-choice wager navigation",
-    "Scoped1c/50-line/5x Mini10/Minor50 price correction and revalued current-model return references",
-    "Current-source gallery, showcase and browser bundle"
+    "Gold Major title and yellow amount over visible held reels, matching the WINNER treatment",
+    "Custom Amount starts at the thousands digit with $0,000.00",
+    "Default native and browser sound volume is10%",
+    "Expanded individual-symbol, animation, fusion, prize, feature, menu and artwork gallery",
+    "Synchronized final firmware, browser game, guide and signed flasher"
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -43,12 +41,12 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 6496016,
-      "sha256": "df86424d74dcd738420184187696563fec4f8fdfa64f5b5c2b125dd42619b79b"
+      "bytes": 6475120,
+      "sha256": "02e932ddb57abf63b71d55fb678017809ecd7d577431b5a520e2de61d348908d"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 6430480,
-      "sha256": "c7bd6aa2d3daa0d2e9633b9cd0630f34a0e83e839aea45e5bf525cd373cda3df"
+      "bytes": 6409584,
+      "sha256": "629af11e3253e8fb0f039454e85138307d25cd8dc7219c0f767dd28eea502736"
     }
   },
   "validation": {
@@ -65,15 +63,25 @@
     "standard_offers_checked": 55,
     "high_limit_offers_checked": 22,
     "independence_paired_actions": 143487,
-    "current_source_gallery_frames": 500,
     "current_source_hero_frames": 494,
     "voucher_leading_zero_actual_navigation_ASAN_UBSAN": true,
-    "startup_UI_assertions": 51365,
+    "startup_UI_assertions": 51522,
     "collection_skip_cases": 30,
-    "collection_skip_assertions": 709,
-    "browser_startup_navigation_checks": 100,
-    "native_boot_checks": 17,
-    "current_source_gallery_images": 65,
-    "live_USB_menu_probe_verified": false
+    "collection_skip_assertions": 887,
+    "browser_startup_navigation_checks": 103,
+    "native_boot_checks": 18,
+    "current_source_gallery_images": 183,
+    "live_USB_menu_probe_verified": false,
+    "individual_asset_render_frames": 621,
+    "individual_symbols": 12,
+    "animated_symbols": 9,
+    "fusion_sequences": 2,
+    "individual_prize_variants": 9,
+    "major_native_browser_pixel_cases": 12,
+    "major_transparent_backdrop_pixels_preserved": 8480,
+    "rule_pages": 6,
+    "payline_chart_pages": 37,
+    "wager_gallery_panels": 19,
+    "safety_gallery_screens": 4
   }
 }

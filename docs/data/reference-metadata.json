@@ -1,5 +1,5 @@
 {
-  "source_version": "0.2.160",
+  "source_version": "0.2.170",
   "engine_model": "0x0002001f",
   "model_label": "V",
   "source_engine_sha256": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
@@ -34,7 +34,7 @@
   "status": "Current compiled implementation; Engine-derived datasets include both exposed menu decks.",
   "no_personal_state_or_device_identifiers": true,
   "source_qualification": "Engineering source binding; ideal-uniform fixed-profile/default-jackpot/funded/no-Lucky full-cycle references are separate from casino calibration, physical entropy quality and finite runtime/source failure.",
-  "runtime_fingerprint": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+  "runtime_fingerprint": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
   "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
   "geometry_matches_by_line_count": {
     "5": 1,

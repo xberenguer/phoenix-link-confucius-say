@@ -22,3 +22,94 @@ Each route selects one position on each of the five reels. A line win starts on 
 For50 lines, **31,33,39,45,48** are unrecovered. Observed **42,44,50** differ from the current implementation. All first25 implemented50-line vectors match the retained observations. For100 lines, the documented but deferred IDs are **15,36,37,43**. Their observed vectors remain evidence; adding them while holding other local placeholders/prices fixed does not yet reproduce all qualified round totals. No unobserved ID is assigned a factory path from a payout residual.
 
 Evidence labels are attached to the actual count, numbered ID and vector. A50-line observation does not automatically establish the same ID in the100-line chart. Matching a filmed path at one mode/wager also does not authenticate every program variant. Source facts remain separate from the current playable chart and from random outcome frequencies.
+
+## All in-game chart pages
+
+These are the implemented layouts; the source-evidence coverage above remains separate.
+
+### 5 lines
+
+<img src="media/routes-5-1.png" alt="5-line chart page 1" width="720">
+
+### 10 lines
+
+<img src="media/routes-10-1.png" alt="10-line chart page 1" width="720">
+
+<img src="media/routes-10-2.png" alt="10-line chart page 2" width="720">
+
+### 15 lines
+
+<img src="media/routes-15-1.png" alt="15-line chart page 1" width="720">
+
+<img src="media/routes-15-2.png" alt="15-line chart page 2" width="720">
+
+<img src="media/routes-15-3.png" alt="15-line chart page 3" width="720">
+
+### 25 lines
+
+<img src="media/routes-25-1.png" alt="25-line chart page 1" width="720">
+
+<img src="media/routes-25-2.png" alt="25-line chart page 2" width="720">
+
+<img src="media/routes-25-3.png" alt="25-line chart page 3" width="720">
+
+<img src="media/routes-25-4.png" alt="25-line chart page 4" width="720">
+
+<img src="media/routes-25-5.png" alt="25-line chart page 5" width="720">
+
+### 50 lines
+
+<img src="media/routes-50-1.png" alt="50-line chart page 1" width="720">
+
+<img src="media/routes-50-2.png" alt="50-line chart page 2" width="720">
+
+<img src="media/routes-50-3.png" alt="50-line chart page 3" width="720">
+
+<img src="media/routes-50-4.png" alt="50-line chart page 4" width="720">
+
+<img src="media/routes-50-5.png" alt="50-line chart page 5" width="720">
+
+<img src="media/routes-50-6.png" alt="50-line chart page 6" width="720">
+
+<img src="media/routes-50-7.png" alt="50-line chart page 7" width="720">
+
+<img src="media/routes-50-8.png" alt="50-line chart page 8" width="720">
+
+<img src="media/routes-50-9.png" alt="50-line chart page 9" width="720">
+
+### 100 lines
+
+<img src="media/routes-100-1.png" alt="100-line chart page 1" width="720">
+
+<img src="media/routes-100-2.png" alt="100-line chart page 2" width="720">
+
+<img src="media/routes-100-3.png" alt="100-line chart page 3" width="720">
+
+<img src="media/routes-100-4.png" alt="100-line chart page 4" width="720">
+
+<img src="media/routes-100-5.png" alt="100-line chart page 5" width="720">
+
+<img src="media/routes-100-6.png" alt="100-line chart page 6" width="720">
+
+<img src="media/routes-100-7.png" alt="100-line chart page 7" width="720">
+
+<img src="media/routes-100-8.png" alt="100-line chart page 8" width="720">
+
+<img src="media/routes-100-9.png" alt="100-line chart page 9" width="720">
+
+<img src="media/routes-100-10.png" alt="100-line chart page 10" width="720">
+
+<img src="media/routes-100-11.png" alt="100-line chart page 11" width="720">
+
+<img src="media/routes-100-12.png" alt="100-line chart page 12" width="720">
+
+<img src="media/routes-100-13.png" alt="100-line chart page 13" width="720">
+
+<img src="media/routes-100-14.png" alt="100-line chart page 14" width="720">
+
+<img src="media/routes-100-15.png" alt="100-line chart page 15" width="720">
+
+<img src="media/routes-100-16.png" alt="100-line chart page 16" width="720">
+
+<img src="media/routes-100-17.png" alt="100-line chart page 17" width="720">
+

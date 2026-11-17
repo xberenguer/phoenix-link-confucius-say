@@ -118,7 +118,7 @@ void openCreditVoucher143(bool fromGame=false){
  if(!seed)seed=1;
  for(unsigned i=0;i<18;++i)voucherCode143[i]=char('0'+cosmetic(seed)%10);
  voucherCode143[0]=char('1'+cosmetic(seed)%9);voucherCode143[18]=0;
- editFocus201=2;creditsPanel201=CreditsPanel201::CreditVoucher;statusLine[0]=0;
+ editFocus201=3;creditsPanel201=CreditsPanel201::CreditVoucher;statusLine[0]=0;
 }
 void drawCreditVoucher142(){
  shade();constexpr uint16_t paper=0xffde,ink=0x0000;

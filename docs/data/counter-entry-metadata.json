@@ -24,8 +24,8 @@
     }
   },
   "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
-  "source_version": "0.2.160",
-  "runtime_fingerprint": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+  "source_version": "0.2.170",
+  "runtime_fingerprint": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
   "basis_sha256": "264721861fd81c9b5f019373d16939b5e911bac4b42608306689fe7a406c9c42",
   "price_revaluation_sha256": "44a1409d56781e4537fa85f116ae8354de4fbca16f13d462eed5e8f9ace43a88"
 }

@@ -13,7 +13,7 @@ struct Clip {
 Clip clips[kCueCount];
 bool muted = false, available = false,gameplayPaused141=false;
 bool landingsEnabled = true;
-uint8_t volume = 192;
+uint8_t volume = 26;
 uint8_t gainMagnification = 0;
 AudioDiagnostics diagnostics = {0, 0, 0, AudioCue::Count, AudioResult::None, 0, 0, 0, 0};
 constexpr size_t kPendingCapacity=4;

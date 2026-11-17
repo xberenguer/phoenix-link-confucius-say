@@ -44,7 +44,7 @@ Auto Refill uses the last successful addition amount for this session; its initi
 
 <img src="media/credits.png" alt="Balance menu with balance and automatic refill controls" width="720">
 
-Custom Amount is the first Balance choice. It opens a Stardust voucher. Grey moves right through digits, Insert Credits and Cancel; short blue changes a digit. **Hold blue moves one digit left**, revealing a leading place without cycling around the form. Hold grey cancels. Insert Credits adds the amount once with the cash-in sound. It returns to Game during regular play, or back to denomination setup if opened from the startup menu. New vouchers open at **$00,000.00**, focused on the ten-thousands zero. Unused leading zeros disappear as you move right: one dollar displays as **$1.00**. Hold blue to reveal a larger place again. The amount in words follows the editable cash value. The matching barcode and validation identifiers are decorative, remain fixed during editing and change for each newly opened voucher. The issue stamp uses the release date and session time, not a synchronized casino clock.
+Custom Amount is the first Balance choice. It opens a Stardust voucher. Grey moves right through digits, Insert Credits and Cancel; short blue changes a digit. **Hold blue moves one digit left**, revealing a leading place without cycling around the form. Hold grey cancels. Insert Credits adds the amount once with the cash-in sound. It returns to Game during regular play, or back to denomination setup if opened from the startup menu. New vouchers open at **$0,000.00**, focused on the thousands zero. Unused leading zeros disappear as you move right: one dollar displays as **$1.00**. Hold blue to reveal a larger place again. The amount in words follows the editable cash value. The matching barcode and validation identifiers are decorative, remain fixed during editing and change for each newly opened voucher. The issue stamp uses the release date and session time, not a synchronized casino clock.
 
 <img src="media/credit-voucher.png" alt="Editable custom credit voucher" width="720">
 
@@ -87,3 +87,5 @@ Implementation: [UI](../firmware/src/ui.cpp), [selector](../firmware/src/return_
 Settings → High Limit switches between the standard and high-limit denomination menus. See [the high-limit wagers](wagers.md#high-limit).
 
 The startup menu includes the regular sound, brightness, screen-flip and High Limit controls. Empty balances cannot be cleared again; feature-state restrictions apply to value editing during play.
+
+Sound starts at **10%**.

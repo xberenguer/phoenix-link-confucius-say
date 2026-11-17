@@ -51,7 +51,7 @@ Opening a menu pauses the current feature and its music. Returning to the game c
 
 Hold grey → Settings → Sound provides master sound, a stops/landings switch, fine volume and test playback. Master mute covers cues and feature music.
 
-Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clamps at either end instead of wrapping a quiet setting to full volume. In the volume page, blue raises and grey lowers it.
+Sound starts at **10%**. Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clamps at either end instead of wrapping a quiet setting to full volume. In the volume page, blue raises and grey lowers it.
 
 <img src="media/volume.png" alt="Fine-volume page, synthetic demonstration state" width="720">
 

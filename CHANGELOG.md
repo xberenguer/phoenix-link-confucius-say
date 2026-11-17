@@ -1,22 +1,21 @@
-# Current release notes
+# Release notes
 
-## 0.2.162 — development, queued for v170
+## 0.2.170
 
-- Major retains the filmed letter shapes, with clearer black separation around the green title and a thin gold outline on its amount.
-- WINNER, Grand, jackpot-board values and named-prize symbols keep their existing rendering.
+- Major uses WINNER-style gold lettering and a yellow amount over the held reels, replacing the opaque blue backdrop.
+- Custom Amount starts at the thousands digit with **$0,000.00**. Default sound volume is **10%**.
+- Expanded graphics gallery: individual symbols and their available animations, two-/three-row Confucius fusions, named-prize variants, feature effects, menus and cabinet artwork.
+- Firmware, browser demo, game guide, gallery and signed flasher are synchronized to this release. Gameplay probability weights are unchanged.
 
-<img src="docs/media/development/major-award162.png" alt="Refined Major title and framed amount" width="720">
+<img src="docs/media/major-award.png" alt="Gold Major title over visible Phoenix reels" width="720">
 
-<img src="docs/media/development/major-fire162.gif" alt="Animated Major title and amount frame" width="720">
+<img src="docs/media/major-fire.webp" alt="Animated gold Major overlay" width="720">
 
-## 0.2.161 — development, queued for v170
+<img src="docs/media/startup-voucher.png" alt="Voucher starts at the thousands digit" width="720">
 
-- Custom Amount opens at the thousands digit with **$0,000.00**. Hold blue to move left for larger amounts.
-- Default sound volume is **10%** on StickS3 and in the browser build.
+### Validation
 
-<img src="docs/media/development/startup-voucher161.png" alt="Custom amount starting at the thousands digit" width="720">
-
-<img src="docs/media/development/sound-default161.png" alt="Default sound volume at ten percent" width="720">
+Complete firmware/assets readback and 18 fresh-start checks passed on the original Stick. All 77 wager startup paths, 30 manual/autoplay tally cases, 103 browser checks, 12 native/Wasm Major raster comparisons and the current-source gallery checks passed.
 
 ## 0.2.160
 

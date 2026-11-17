@@ -1,26 +1,26 @@
 {
-  "version": "0.2.160",
-  "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+  "version": "0.2.170",
+  "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
   "artifacts": {
     "PROVENANCE.json": {
-      "bytes": 20247,
-      "sha256": "7e559e1e211f68e2934ef816e6b6a3a3a97978048cee8250f319d7a3d9d90930"
+      "bytes": 20152,
+      "sha256": "e1258aea2c19194cfe1652c10891c4b1699c2b7c5f01f7ff0eb572b1bd08ee0f"
     },
     "THIRD_PARTY_LICENSES.txt": {
       "bytes": 37000,
       "sha256": "0b63516d1ae2719f8782908496b62052477d63e7f9a08b689d0568c3882b7cd2"
     },
     "app.js": {
-      "bytes": 11171,
-      "sha256": "06fd139dbd75535b7e37d78089362d9fb8a40632e291521d00203a708786c582"
+      "bytes": 11170,
+      "sha256": "6c7b6715788d1a4baa869c5f8307e088904013d40706ba77128d48b6a43b8d97"
     },
     "control-config.js": {
       "bytes": 70,
       "sha256": "53162f7a9d49f01814cf66572ade767d62f3c25f92b012d1269024639e4992e2"
     },
     "index.html": {
-      "bytes": 2205,
-      "sha256": "948df0447d03c36951e5f700d90482bb815ac40340feb717f7658a86e694d7ce"
+      "bytes": 2161,
+      "sha256": "413ae77cb103394c176e8d15975d1b0a8eeb550e9f5fdf3d340d7b4fe7fd0c1b"
     },
     "phoenix.data": {
       "bytes": 1402188,
@@ -31,12 +31,12 @@
       "sha256": "dfa25ab2bb40cca0edfea669dd13f729b196d5fa782434baf9ad0e313ff9113f"
     },
     "phoenix.wasm": {
-      "bytes": 5795202,
-      "sha256": "195a316d0bb6df831f1681ab32a123feddf864cbcad90ec9d9f739658dec7a5d"
+      "bytes": 5787317,
+      "sha256": "e7f97305b5551ca9eb22a9b0b80e028fc07ff0c6788f0625945bdb2aadd5ae80"
     },
     "source-config.js": {
       "bytes": 220,
-      "sha256": "0a99125b1bdd53638e3a74ad00b9c66f70a3d95e83dbc36028550f34bd0c35eb"
+      "sha256": "93b494e2339db47a5f351fd7433ea9f98f931035b4d1f5ab698df5b068ffd8ac"
     },
     "style.css": {
       "bytes": 3835,
@@ -44,7 +44,7 @@
     },
     "sw.js": {
       "bytes": 1742,
-      "sha256": "a352c60dab72e02f6e40857c0325de43ef7c3d0778a5251a10cc16dcf4f5a998"
+      "sha256": "a4cf3f4be7d3fc87e5fd9b3582e65e303c6156b576074cfa30ebdfe88d8f298d"
     }
   },
   "note": "This manifest excludes itself to avoid a circular digest. The deployment gate verifies all other bundle files and source/adapter pins."

@@ -24,6 +24,7 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
 - [Counter-entry return and current model limits](docs/counter-entry.md)
 - [Jackpot values and configurations](docs/jackpot-values.md)
 - [Graphics gallery](docs/graphics.md)
+- [Individual symbols, animations and fusions](docs/symbol-gallery.md)
 - [Sounds and music events](docs/audio.md)
 - [Fresh sessions and funding](docs/saving.md)
 - [Settings and Simulator Return](docs/settings.md)

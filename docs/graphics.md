@@ -2,6 +2,10 @@
 
 Screens and animations from the current game. The native display is 240 × 135 pixels; previews are enlarged to 720 × 405 with nearest-neighbor scaling.
 
+See the [individual symbols, animations, fusions and artwork](symbol-gallery.md). The [menu gallery](menu-gallery.md) includes every rules page, display/return controls, wager panels and safety messages. [All payline chart pages](paylines.md#all-in-game-chart-pages) are also shown.
+
+See the [individual symbols, animations, fusions and artwork](symbol-gallery.md). The [menu gallery](menu-gallery.md) includes every rules page, display/return controls, wager panels and safety messages. [All payline chart pages](paylines.md#all-in-game-chart-pages) are also shown.
+
 Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [rare award screens](#rare-award-and-feature-screens), [symbol motion](#every-symbols-implemented-motion) or [feature effects](#feature-effects). Detail sheets combine enlarged crops from the rendered screens. Demonstration boards show the artwork without requiring a rare natural outcome; they are not probability samples.
 
 ## Starting a game
@@ -62,13 +66,11 @@ The three boards are separate presentation examples. Each contains one Major sym
 
 The Major title, full-board Grand, running collection amount and revival use different presentation paths.
 
-**Major award:** its named title and locked award amount, before the other values collect.
+**Major award:** its original letter shapes use the WINNER gold treatment over the held reels, with the named amount below.
 
-Development build 0.2.162:
+<img src="media/major-award.png" alt="Major award with original letter shapes and clearer native outlines" width="720">
 
-<img src="media/development/major-award162.png" alt="Major award with original letter shapes and clearer native outlines" width="720">
-
-<img src="media/development/major-fire162.gif" alt="Animated Major title and fiery amount border" width="720">
+<img src="media/major-fire.webp" alt="Animated Major title and fiery amount border" width="720">
 
 **Full-board Grand:** the continuous WINNER display includes the Grand contribution; it does not add a second plain Grand popup.
 

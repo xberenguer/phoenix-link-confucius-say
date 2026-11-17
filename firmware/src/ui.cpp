@@ -175,7 +175,7 @@ uint16_t heldMask=0,landedMask=0,pendingFreeCount=0,displayMeter=0,displayQueued
 int64_t displayBank=0,displayWin=0,winFrom=0,winTo=0;
 uint32_t winAt=0;
 char statusLine[72]={};
-constexpr bool spinSounds=false;bool landingSounds=true,hostMuted=false;uint8_t soundVolume=192;int soundItem=0;uint32_t testJingleAt=0;bool testJingleQueued=false,testAwardJingle=false;
+constexpr bool spinSounds=false;bool landingSounds=true,hostMuted=false;uint8_t soundVolume=26;int soundItem=0;uint32_t testJingleAt=0;bool testJingleQueued=false,testAwardJingle=false;
 bool holdBackdropCaptured=false;
 bool creditsDisplay=false;uint64_t luckyOfferAction=UINT64_MAX;
 bool winCuePending=false;
@@ -1772,17 +1772,15 @@ std::string jackpotBoardMoney207(int64_t minor,unsigned tier);
 void awardPanel(uint32_t elapsed){
  if(engine.presentation.grandAwarded){drawHoldCenterWinner89(phaseAt+elapsed);return;}
  auto paint=[](int x,int y,uint16_t color,unsigned alpha){dot(x,y,color,alpha);};
- authored_major112::vignette(paint);
  if(elapsed>=500){
-  const bool filled=elapsed>=feature_award::revealBurnAt+700;
-  authored_major112::title(elapsed,filled,paint);
+  authored_major112::title(elapsed,paint);
  }
  authored_major112::amountFrame(elapsed,paint);
  if(elapsed>=feature_award::amountAt){
   const auto amount=jackpotBoardMoney207(namedAward(),2);unsigned size=20;
-  for(unsigned candidate:{26u,24u,20u,18u,14u,10u}){size=candidate;if(wideCashWidth112(amount.c_str(),size)<=184)break;}
-  const int right=120+wideCashWidth112(amount.c_str(),size)/2,y=89-int(size)/2;
-  sourceCashText153(amount.c_str(),right,y,size);
+  for(unsigned candidate:{20u,16u,10u}){size=candidate;if(wideCashWidth112(amount.c_str(),size)<=164)break;}
+  const int right=120+wideCashWidth112(amount.c_str(),size)/2,y=73+(20-int(size))/2;
+  sourceCashText153(amount.c_str(),right,y,size,0xffac);
  }
  // Existing phase clocks and moving Phoenix paths remain untouched. The
  // amount is green when it first appears, independently of the title fill.
@@ -2503,7 +2501,7 @@ void chooseMenu(){cueButton();switch(menuItem){
 }
 
 void uiSetOutcomeCheckpointHandler(UiOutcomeCheckpointHandler handler){outcomeCheckpointHandler=handler;}
-bool uiInitFresh(phoenix::random::Service& source){amountFailureShown190=false;randomFailureShown125=false;returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=jackpotBoardRequested198=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;menuPaused141=false;menuPauseWall141=menuPauseGame141=menuDrawWall141=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;paylinesPage=paylinesLayout=0;settingsItem=0;highLimit146=false;cabinetDenominationPage146=true;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;creditsPanel201=CreditsPanel201::Credits;valuesItem201=jackpotItem201=editFocus201=0;editedValue201=0;holdBackdropCaptured=false;holdStripStartsBlank=false;landingSounds=true;soundVolume=192;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;startupWager160=true;voucherFromGame160=false;const bool randomReady125=engine.initializeFresh(source,0);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
+bool uiInitFresh(phoenix::random::Service& source){amountFailureShown190=false;randomFailureShown125=false;returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=jackpotBoardRequested198=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;menuPaused141=false;menuPauseWall141=menuPauseGame141=menuDrawWall141=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;paylinesPage=paylinesLayout=0;settingsItem=0;highLimit146=false;cabinetDenominationPage146=true;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;creditsPanel201=CreditsPanel201::Credits;valuesItem201=jackpotItem201=editFocus201=0;editedValue201=0;holdBackdropCaptured=false;holdStripStartsBlank=false;landingSounds=true;soundVolume=26;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;startupWager160=true;voucherFromGame160=false;const bool randomReady125=engine.initializeFresh(source,0);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
  initializeDenominationScenes144();
  fire_alpha::init();
  initHoldMaterial();

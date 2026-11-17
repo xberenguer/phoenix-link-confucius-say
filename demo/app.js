@@ -15,7 +15,7 @@ function consumeSelectorInputs() { blue?.consume(); black?.consume(); }
 const formatError = error => error?.message || String(error);
 
 class BrowserAudio {
-  constructor() { this.context = null; this.channels = []; this.masterValue = 192; this.magnification = 1; }
+  constructor() { this.context = null; this.channels = []; this.masterValue = 26; this.magnification = 1; }
   async enable() {
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
     if (!AudioContextClass) return false;
