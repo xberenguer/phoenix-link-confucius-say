@@ -1,7 +1,7 @@
 #pragma once
 #include "static_grand.h"
 namespace static_grand_table {
-// Local model U: exact high-limit credit-law transport from model T.
+// Local model V: observed1c/50/M5 Mini1000/Minor5000; all Grand amounts retained.
 // Added $25/$50/$100 profiles retain the $10 per-credit reference law;
 // original high-limit casino probabilities and progressive prices are unknown.
 // Numeric enclosures apply only to the unedited default fixed-policy ideal law.
@@ -9,7 +9,7 @@ namespace static_grand_table {
 inline constexpr bool idealReferenceOnly=true;
 inline constexpr bool rootAccepted=true;
 inline constexpr bool hostTrial=false;
-inline constexpr static_grand::Fingerprint fingerprint={0xbe,0xee,0xfd,0x81,0xa3,0x46,0xef,0x6e,0xd9,0x9b,0x44,0xdc,0xdb,0x79,0x87,0xae,0xcc,0x47,0x4c,0x94,0x37,0x69,0x8a,0x0c,0x8f,0x9b,0x2d,0xe6,0x69,0x33,0x5d,0x40};
+inline constexpr static_grand::Fingerprint fingerprint={0x6e,0x99,0x67,0xa8,0xdf,0x8c,0x8e,0x05,0x47,0x2c,0x58,0x18,0xc4,0xe1,0xa1,0xfe,0x66,0x87,0x71,0x78,0x72,0xb7,0x43,0x7a,0x98,0x38,0xfc,0x71,0x60,0x2c,0x80,0x7f};
 inline const static_grand::Entry entries[]={
  {{1,5,1,phoenix::PrizeCapProfile::HighCashOnly},0,3935LL,895050,899946,909081,static_grand::Proof::LocalAnalyticEnclosure,3},
  {{1,5,1,phoenix::PrizeCapProfile::HighCashOnly},1,4394LL,944771,950054,959964,static_grand::Proof::LocalAnalyticEnclosure,3},
@@ -539,18 +539,18 @@ inline const static_grand::Entry entries[]={
  {{1,50,4,phoenix::PrizeCapProfile::NamedOrHighCash},3,163972LL,887135,892104,901411,static_grand::Proof::LocalAnalyticEnclosure,3},
  {{1,50,4,phoenix::PrizeCapProfile::NamedOrHighCash},4,182013LL,935993,941341,951410,static_grand::Proof::LocalAnalyticEnclosure,3},
  {{1,50,4,phoenix::PrizeCapProfile::NamedOrHighCash},5,192838LL,965308,970885,981411,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},0,208989LL,896370,901410,910860,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},1,231890LL,945985,951411,961635,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},2,245630LL,975753,981410,992098,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},3,204727LL,887136,892105,901411,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},4,227279LL,935995,941344,951411,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},5,240810LL,965310,970887,981411,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},0,209228LL,896371,901412,910863,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},1,232128LL,945984,951410,961635,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},2,245869LL,975754,981412,992100,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},3,204965LL,887135,892104,901411,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},4,227517LL,935994,941343,951412,static_grand::Proof::LocalAnalyticEnclosure,3},
- {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},5,241048LL,965309,970886,981412,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},0,208989LL,901788,906859,916358,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},1,231890LL,951403,956860,967133,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},2,245630LL,981170,986859,997596,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},3,204727LL,892554,897554,906909,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},4,227279LL,941413,946793,956909,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::HighCashOnly},5,240810LL,970728,976335,986909,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},0,209228LL,901611,906681,916179,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},1,232128LL,951224,956680,966951,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},2,245869LL,980994,986681,997417,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},3,204965LL,892375,897374,906728,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},4,227517LL,941234,946613,956728,static_grand::Proof::LocalAnalyticEnclosure,3},
+ {{1,50,5,phoenix::PrizeCapProfile::NamedOrHighCash},5,241048LL,970549,976156,986728,static_grand::Proof::LocalAnalyticEnclosure,3},
  {{1,50,6,phoenix::PrizeCapProfile::HighCashOnly},0,250787LL,896370,901411,910861,static_grand::Proof::LocalAnalyticEnclosure,3},
  {{1,50,6,phoenix::PrizeCapProfile::HighCashOnly},1,278268LL,945985,951411,961635,static_grand::Proof::LocalAnalyticEnclosure,3},
  {{1,50,6,phoenix::PrizeCapProfile::HighCashOnly},2,294757LL,975755,981412,992100,static_grand::Proof::LocalAnalyticEnclosure,3},

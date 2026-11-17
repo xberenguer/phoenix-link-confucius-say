@@ -19,7 +19,7 @@ void valuesFinished201(){
  creditsPanel201=CreditsPanel201::Credits;dirty=true;
 }
 void valuesBack201(){
- if(creditsPanel201==CreditsPanel201::CreditVoucher){creditsPanel201=CreditsPanel201::Credits;creditItem=0;}
+ if(creditsPanel201==CreditsPanel201::CreditVoucher){creditsPanel201=CreditsPanel201::Credits;creditItem=0;if(voucherFromGame160){voucherFromGame160=false;view=View::Game;}}
  else if(creditsPanel201==CreditsPanel201::MoneyEditor)creditsPanel201=CreditsPanel201::JackpotPicker;
  else if(creditsPanel201==CreditsPanel201::CounterEditor||creditsPanel201==CreditsPanel201::JackpotPicker)creditsPanel201=CreditsPanel201::GameValues;
  else {creditsPanel201=CreditsPanel201::Credits;menuItem=4;view=View::Menu;}
@@ -63,7 +63,7 @@ void valuesSelect201(){
   if(editFocus201==9){
    if(!editedValue201){valuesNotice201("ENTER AN AMOUNT ABOVE ZERO");return;}
    if(editedValue201>999999999||!uiAddCredits(uint32_t(editedValue201))){valuesNotice201("CREDIT ADDITION UNAVAILABLE");return;}
-   creditsPanel201=Page::Credits;view=View::Game;autoPlay=false;statusLine[0]=0;
+   creditsPanel201=Page::Credits;voucherFromGame160=false;view=View::Game;autoPlay=false;statusLine[0]=0;
   }else if(editFocus201==10)valuesBack201();
   else{uint64_t place=1;for(unsigned i=editFocus201+1;i<9;++i)place*=10;
    const unsigned digit=unsigned(editedValue201/place%10);
@@ -109,8 +109,8 @@ std::string ticketInteger142(uint32_t n){
 std::string ticketAmountWords142(uint64_t minor){const uint32_t dollars=uint32_t(minor/100),cents=uint32_t(minor%100);return ticketInteger142(dollars)+(dollars==1?" DOLLAR":" DOLLARS")+(cents?" AND "+ticketInteger142(cents)+(cents==1?" CENT":" CENTS"):" EXACTLY");}
 uint32_t voucherOpened142=0,voucherSequence142=1;
 char voucherCode143[19]="730148529674183026";
-void openCreditVoucher143(){
- editedValue201=0;voucherOpened142=uiWallMillis();
+void openCreditVoucher143(bool fromGame=false){
+ voucherFromGame160=fromGame;editedValue201=0;voucherOpened142=uiWallMillis();
  // Cosmetic identifiers use only already-public display information. They
  // never draw from, reveal, reseed or otherwise alter the outcome generator.
  uint32_t seed=0x8d2537abu^voucherOpened142^uint32_t(++voucherSequence142*0x9e3779b9u)^uint32_t(engine.state.meter);

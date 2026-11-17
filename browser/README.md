@@ -2,7 +2,7 @@
 
 This port compiles the included C++ Engine, renderer, audio decoder and music worker to WebAssembly. Its release identity is recorded in `SOURCE_BINDING.json` and the bundle provenance. JavaScript supplies browser display, buttons, WebAudio and WebCrypto. It does not choose outcomes or payouts.
 
-The game is session only: each reload starts with 1,000 denomination credits. There is no persistent bank, game import/export or saved RNG state. WebCrypto must be available in a secure context; an entropy failure stops play. Offline use requires the page and code/assets to have been cached previously in a secure browser context.
+The game is session only: each reload opens denomination selection with zero balance. There is no persistent bank, game import/export or saved RNG state. WebCrypto must be available in a secure context; an entropy failure stops play. Offline use requires the page and code/assets to have been cached previously in a secure browser context.
 
 Use the pinned official Emscripten **7.0.0** SDK and Python 3:
 

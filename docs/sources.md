@@ -49,7 +49,7 @@ Price annotations remain next to their exact branches in the [Engine](../firmwar
 
 The [DG Production recording](https://www.youtube.com/watch?v=nJhRBm39t34) shows Confucius Say at **1¢ / 50 lines / 5×**, a **$2.50 spin**. At that exact configuration, two independent collection totals identify **Mini $10**: [8:52](https://www.youtube.com/watch?v=nJhRBm39t34&t=532s) collects $40 in numeric prizes plus one Mini for $50; [13:45](https://www.youtube.com/watch?v=nJhRBm39t34&t=825s) collects $217.50 plus a Double Mini for $237.50. The [6:35 board](https://www.youtube.com/watch?v=nJhRBm39t34&t=395s) pays $130 from $40 in numeric values, four Mini units and one Minor, identifying **Minor $50**. Credit changes reconcile those totals.
 
-Development v159 applies these two prices only to that wager. Other configurations, prize frequencies and counter-trigger laws are unchanged. The uploader labels the session Las Vegas; the exact property, software and pay program remain unknown. An outcome-selected upload can qualify visible prices without supplying unbiased bonus-frequency or RTP estimates.
+The simulator applies these two prices only to that wager. Other configurations, prize frequencies and counter-trigger laws are unchanged. The uploader labels the session Las Vegas; the exact property, software and pay program remain unknown. An outcome-selected upload can qualify visible prices without supplying unbiased bonus-frequency or RTP estimates.
 
 ## Unrecovered original data
 
@@ -62,3 +62,7 @@ Included media comes from the simulator with demonstration credits. Scripted gal
 The [HandpayAday Phoenix Link recording](https://www.youtube.com/watch?v=s9EJCIFnh8g) shows the moving fire fringe around the stationary jackpot-topper lettering. The small-screen title effect is reconstructed in code; video frames are not shipped as textures.
 
 The [Palms Confucius Say recording](https://www.youtube.com/watch?v=mBcjPK63KW4) and [General Tso denomination checks](https://www.youtube.com/watch?v=iQ6VfmPqavM) show retained boards during unfunded wager checks and separate displays by denomination. The latter is family corroboration. The simulator keeps the last settled display per denomination; fresh unplayed displays use an explicitly unpaid cosmetic arrangement.
+
+## Recorded counter and queued-feature behavior
+
+In the same [1¢ / 50-line / 5× recording at 7:54](https://www.youtube.com/watch?v=nJhRBm39t34&t=474s), a seven-Phoenix natural Hold and a separate meter award are both owed. The [queued Hold starts empty](https://www.youtube.com/watch?v=nJhRBm39t34&t=546s), and [another meter award queues during it](https://www.youtube.com/watch?v=nJhRBm39t34&t=558s). Visible endpoint readings agree with new arrivals counting once: 122 + 6 = 128; 159 + 12 = 171; and 171 + 14 = 185. Those observations support the implemented queue/counting rules; edited gaps and selected outcomes prevent estimating a casino trigger distribution from this upload.

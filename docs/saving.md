@@ -1,10 +1,10 @@
 # Fresh sessions, funding and action safety
 
-Progress is **session-only**. Every device boot, browser reload and firmware flash starts a new manual game with **1,000 credits at the default $1 denomination ($1,000)**. Autoplay starts off. Credits, collection-meter buckets, statistics, settings and unfinished features are not loaded from a prior game.
+Progress is **session-only**. Every device boot, browser reload and firmware flash opens the denomination chooser with a **$0 balance**. Choose denomination, lines and bet, then use the editable voucher to fund the game. Autoplay starts off. Credits, collection-meter buckets, statistics, settings and unfinished features are not loaded from a prior game.
 
 ## Balance and meters
 
-During a live session, the Balance menu offers Custom Amount through an editable voucher, plus $1,000, $10,000 or $100,000 additions to the money balance. A successful addition returns directly to manual gameplay. It does not reset that session's wager, meters or statistics. CLEAR BALANCE sets the money balance to zero at a safe closed Base boundary and returns to manual play. It preserves the live wager, meter buckets and statistics, and leaves Auto Refill unchanged. Auto Refill uses the last successful addition amount, including Custom Amount; see [settings](settings.md#balance).
+During a live session, the Balance menu offers Custom Amount through an editable voucher, plus $1,000, $10,000 or $100,000 additions to the money balance. A successful addition returns to manual gameplay during play, or to denomination setup if opened from the startup menu. It does not reset that session's wager, meters or statistics. CLEAR BALANCE sets the money balance to zero at a safe closed Base boundary and returns to manual play. It preserves the live wager, meter buckets and statistics, and leaves Auto Refill unchanged. Auto Refill uses the last successful addition amount, including Custom Amount; see [settings](settings.md#balance).
 
 Meter buckets are keyed by denomination and total bet credits within the current session. Switching away and back selects that bucket again. A new boot or reload starts new meter state.
 

@@ -2,7 +2,7 @@
 
 Hold grey to open **Game Menu**, then select **Paylines**. Each page shows up to six routes for the displayed line count. Grey advances to the next page; blue switches between the 5-, 10-, 15-, 25-, 50- and 100-line layouts. Hold grey to return to Game Menu. Your active layout opens first and is labelled **CURRENT**. Browsing does not change your bet. Blue visits the other layouts in ascending order after CURRENT, then returns to CURRENT.
 
-<img src="media/development/paylines.png" alt="In-game Paylines viewer" width="720">
+<img src="media/paylines.png" alt="In-game Paylines viewer" width="720">
 
 Each route selects one position on each of the five reels. A line win starts on reel one and follows that route from left to right. Different winning lines add together.
 

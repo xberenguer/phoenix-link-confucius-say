@@ -1,4 +1,5 @@
 #include "jackpot_brand207.h"
+#include "source_badge_lettering153.h"
 // Current future-landing units, read without changing a cache or outcome.
 bool jackpotBoardAmount198(unsigned tier,int64_t& out){
  int64_t cached=0;
@@ -6,15 +7,9 @@ bool jackpotBoardAmount198(unsigned tier,int64_t& out){
  return phoenix::money::toMinor(engine.jackpotValueAmount(tier),engine.state.coinValue,1,out);
 }
 constexpr uint16_t jackpotColors207[4]={0xfa61,0x121f,0x2e63,0xf840};
-void jackpotBold207(const char* label,int center,int y,unsigned size,uint16_t color){
- int x=center-(textWidth(label,size)+1)/2;const auto* opacity=pf::pixels(size);
- for(auto p=reinterpret_cast<const unsigned char*>(label);*p;++p){const auto& glyph=pf::glyph(size,*p);
-  for(int r=0;r<glyph.h;++r)for(int c=0;c<=glyph.w;++c){
-   const unsigned alpha=std::max(c<int(glyph.w)?unsigned(opacity[glyph.offset+r*glyph.w+c]):0u,c?unsigned(opacity[glyph.offset+r*glyph.w+c-1]):0u);
-   if(alpha)dot(x+c,y+r,color,alpha);
-  }
-  x+=glyph.advance;
- }
+void jackpotLetters153(const source_badge_lettering153::Sprite& im,int center,int y){
+ const int left=center-int(im.w)/2;
+ for(unsigned r=0;r<im.h;++r)for(unsigned c=0;c<im.w;++c){const unsigned at=r*im.w+c;if(im.alpha[at])dot(left+int(c),y+int(r),im.rgb[at],im.alpha[at]);}
 }
 void jackpotEmblem207(uint32_t now,int x,int y,int w,int h,unsigned tier,bool mirror){
  const uint32_t period=phoenix_art::periodMs();
@@ -27,16 +22,14 @@ void jackpotEmblem207(uint32_t now,int x,int y,int w,int h,unsigned tier,bool mi
   if(alpha)dot(x+c,y+r,im.rgb[at],alpha);
  }
 }
-void jackpotBadge207(uint32_t now,unsigned tier,const char* label,int x,int y,bool wide,bool mirror){
+void jackpotBadge207(uint32_t now,unsigned tier,int x,int y,bool wide,bool mirror){
  const int w=wide?48:36,h=wide?36:27,cx=x+w/2;
  jackpotEmblem207(now,x,y,w,h,tier,mirror);
  const int rx=wide?15:12,ry=wide?10:8,cy=y+(wide?21:16);
  for(int dy=-ry;dy<=ry;++dy)for(int dx=-rx;dx<=rx;++dx)
   if(dx*dx*ry*ry+dy*dy*rx*rx<=rx*rx*ry*ry)dot(cx+dx,cy+dy,0x0800,225);
- const unsigned size=wide?8:7;const int labelY=y+(wide?12:8);
- jackpotBold207(label,cx+1,labelY+1,size,0x0000);
- jackpotBold207(label,cx,labelY,size,jackpotColors207[tier]);
- text(wide?"JACKPOT":"BONUS",cx,y+(wide?22:17),6,BRIGHT,1);
+ jackpotLetters153(source_badge_lettering153::word(tier),cx,y+(wide?10:6));
+ jackpotLetters153(source_badge_lettering153::footer(tier),cx,y+(wide?22:17));
 }
 void jackpotFrame198(uint32_t now,int x,int y,int w,int h){
  // Original topper uses a flat dark field behind the jackpot amounts.
@@ -67,33 +60,25 @@ std::string jackpotBoardMoney207(int64_t minor,unsigned tier){
 }
 JackpotAmountLayout207 jackpotAmountLayout207(const char* amount,unsigned tier){
  const bool wide=tier>=2;const int left=wide?50:tier==1?40:126,right=wide?190:tier==1?114:200;
- unsigned size=wide?20:16;
- for(unsigned candidate:wide?std::initializer_list<unsigned>{20,16,10,8,7}:std::initializer_list<unsigned>{16,10,8,7}){
-  size=candidate;if(cashWidth(amount,candidate)<=right-left-2)break;
+ unsigned size=wide?20:14;
+ for(unsigned candidate:wide?std::initializer_list<unsigned>{20,18,16,14,12,10,8,7,6}:std::initializer_list<unsigned>{14,12,10,8,7,6}){
+  size=candidate;if(wideCashWidth112(amount,candidate)<=right-left-2)break;
  }
- return {left,right,(tier==3?37:tier==2?73:107)+((wide?20:16)-int(size))/2,size};
+ return {left,right,(tier==3?37:tier==2?73:107)+((wide?20:14)-int(size))/2,size};
 }
 void jackpotCash207(const char* amount,const JackpotAmountLayout207& placement,unsigned tier){
- const unsigned scale=tier>=2&&cashWidth(amount,placement.size)*6<=(placement.right-placement.left-2)*5?6:5;
- const int width=(cashWidth(amount,placement.size)*int(scale)+2)/5;
- const int left=(placement.left+placement.right-width)/2,y=placement.y-(int(placement.size*scale/5)-int(placement.size))/2;
- const auto draw=[&](int dx,int dy,uint16_t color){int advance=0;const auto* alpha=pmoney::pixels(placement.size);
-  for(auto p=(const unsigned char*)amount;*p;++p){const auto& g=pmoney::glyph(placement.size,*p);const int x=left+(advance*int(scale)+2)/5;
-   for(unsigned r=0;r<(g.h*scale+4)/5;++r)for(unsigned c=0;c<(g.w*scale+4)/5;++c){const unsigned srcR=std::min<unsigned>(g.h-1,r*5/scale),srcC=std::min<unsigned>(g.w-1,c*5/scale);const auto opacity=alpha[g.offset+srcR*g.w+srcC];if(opacity)dot(x+int(c)+dx,y+int(r)+dy,color,opacity);}
-   advance+=g.advance;
-  }
- };
- draw(1,1,0x0000);draw(-1,0,0xff20);draw(1,0,0xff20);draw(0,-1,0xff20);draw(0,1,0xff20);draw(0,0,jackpotColors207[tier]);
+ const int width=wideCashWidth112(amount,placement.size),right=(placement.left+placement.right+width)/2,y=placement.y;
+ sourceCashText153(amount,right,y,placement.size,jackpotColors207[tier]);
 }
-void jackpotRow207(uint32_t now,unsigned tier,const char* label){
+void jackpotRow207(uint32_t now,unsigned tier){
  const bool wide=tier>=2;const int top=tier==3?28:tier==2?64:100;
  if(wide)jackpotFrame198(now,20,top+4,200,31);
  else jackpotFrame198(now,tier==1?20:120,104,100,22);
  int64_t value=0;
  if(jackpotBoardAmount198(tier,value)){const auto amount=jackpotBoardMoney207(value,tier);jackpotCash207(amount.c_str(),jackpotAmountLayout207(amount.c_str(),tier),tier);}
  else text("UNAVAILABLE",wide?120:tier==1?77:163,top+(wide?14:11),7,WHITE,1);
- if(wide){jackpotBadge207(now,tier,label,0,top,true,false);jackpotBadge207(now,tier,label,192,top,true,true);}
- else jackpotBadge207(now,tier,label,tier==1?1:203,100,false,tier==0);
+ if(wide){jackpotBadge207(now,tier,0,top,true,false);jackpotBadge207(now,tier,192,top,true,true);}
+ else jackpotBadge207(now,tier,tier==1?1:203,100,false,tier==0);
 }
 // Local reconstruction of the filmed letter-edge fire. The underlying
 // publisher wordmark remains stationary; only its warm fringe is animated.
@@ -128,6 +113,6 @@ void jackpotTopper207(uint32_t now){
 void drawJackpots198(uint32_t now){
  fill(0,0,W,H,0x0800);
  jackpotTopper207(now);
- jackpotRow207(now,3,"GRAND");jackpotRow207(now,2,"MAJOR");
- jackpotRow207(now,1,"MINOR");jackpotRow207(now,0,"MINI");
+ jackpotRow207(now,3);jackpotRow207(now,2);
+ jackpotRow207(now,1);jackpotRow207(now,0);
 }

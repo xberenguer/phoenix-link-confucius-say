@@ -1,6 +1,6 @@
 # Build and flash
 
-Build the current firmware and its required asset filesystem. Browser instructions are in [browser play](browser-play.md). Every boot after installation starts a new 1,000-credit manual game at the default $1 denomination; existing game progress is not imported.
+Build the current firmware and its required asset filesystem. Browser instructions are in [browser play](browser-play.md). Every boot after installation opens a fresh zero-balance denomination chooser; existing game progress is not imported.
 
 ## Install the prebuilt game
 
@@ -71,6 +71,6 @@ This excludes the filesystem; it cannot repair missing/mismatched assets. Use th
 
 ## Verify the result
 
-Verify image hashes/written bytes, current menu version, 1,000 default denomination credits and autoplay off. Exercise controls, an ordinary action and an audio audition. A build, a verified write, a native frame and physical sound/entropy behavior establish different things. Current completed validation is in [release notes](../CHANGELOG.md#validation).
+Verify image hashes/written bytes, current menu version, a zero balance and the startup denomination chooser and autoplay off. Exercise controls, an ordinary action and an audio audition. A build, a verified write, a native frame and physical sound/entropy behavior establish different things. Current completed validation is in [release notes](../CHANGELOG.md#validation).
 
 See [troubleshooting](troubleshooting.md) for assets, USB and random-source errors. The firmware workflow and [table exporter](payouts.md#regenerating-the-reference) check current-source builds/data. A Pages workflow publishes the static `demo/` folder; [GitHub documents custom Pages workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).

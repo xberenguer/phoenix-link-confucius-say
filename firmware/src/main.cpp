@@ -110,7 +110,7 @@ void reportStatus() {
   line += String(",\"minFreeHeapBytes\":") + ESP.getMinFreeHeap();
   line += String(",\"uptimeMs\":")+millis()+",\"resetReason\":"+unsigned(esp_reset_reason())+",\"lastBenchJob\":"+lastEffectBenchJob+",\"lastBenchFrames\":"+lastEffectBench.frames;
   line += String(",\"loopStackHighWaterMark\":") + unsigned(uxTaskGetStackHighWaterMark(nullptr));
-  line += ",\"statePersistence\":\"session-only\",\"freshCredits\":1000,\"restoredAtBoot\":false,\"saveAvailable\":false";
+  line += ",\"statePersistence\":\"session-only\",\"freshCredits\":0,\"restoredAtBoot\":false,\"saveAvailable\":false";
   line += String(",\"rngHealthy\":")+(uiRandomHealthy()?"true":"false")+",\"rngFault\":"+unsigned(uiRandomFault())+",\"entropyLeaseFault\":"+unsigned(entropySource125.fault());
   char leases125[64];snprintf(leases125,sizeof(leases125),",\"entropyCaptures\":%llu",(unsigned long long)entropySource125.captures());line+=leases125;
   line += ",\"overlay\":"; line += uiOverlayVisible() ? "true" : "false";

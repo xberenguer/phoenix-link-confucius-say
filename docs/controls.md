@@ -4,8 +4,8 @@
 
 | Input | Action |
 |---|---|
-| Short blue press | Spin, continue a prompted feature, or advance the current animation where supported; while autoplay is active, turn it off |
-| Hold blue | Toggle autoplay on or off |
+| Short blue press | Spin or continue a feature; open the voucher when the next paid wager is unaffordable; stop active autoplay |
+| Hold blue | Toggle autoplay on or off when funded; open the voucher when the next wager is unaffordable |
 | Short large grey press | Open the wager-selection screen, or queue it until a running sequence permits entry |
 | Hold large grey | Open Game Menu |
 | Double-press large grey | Open the live Jackpots board |
@@ -18,7 +18,11 @@ The implemented long-press threshold is 850 ms. In normal game view, grey's sing
 
 ## Wager-selection screen
 
-Short grey presses move focus; blue selects the highlighted choice. In development v159, focus starts at the first denomination, then the first PLAY LINES choice, then the first offered BET button. Your existing choices stay marked until you select a replacement. Returning to the denomination page also starts focus at its first choice. The playable release receives this workflow at v160. The red-button credit amounts depend on the selected lines and multiplier. Holding the large grey button applies the selected denomination and lines, activates their counter and returns directly to the game without spinning.
+Short grey presses move focus; blue selects. Startup opens the denomination chooser. Hold blue on this initial page to switch between standard and High Limit denominations. Choose a denomination, then PLAY LINES and a red BET button. Focus starts at the first choice in each section; the existing selection stays marked until changed.
+
+The reels open with a **$0 balance**. Blue opens the editable Stardust voucher when the selected wager is unaffordable. Insert Credits adds the entered cash amount and returns to the game with the same denomination, lines and multiplier. Cancelling returns without funding or spinning.
+
+On the initial denomination page, hold-grey or Escape opens the full Game Menu. Closing it returns to setup and preserves the denomination draft. From the initial line/bet page, hold-grey or Escape returns to denominations. After setup, short grey reopens the normal wager panel; holding grey there applies the draft denomination and lines and returns to the game without spinning. Selecting a funded red BET commits its wager and starts a spin.
 
 An unavailable row cannot start a paid spin. Owed features protect their existing wager; opening the screen does not change the paid round that is already in progress.
 
@@ -42,13 +46,13 @@ Opening a menu pauses the current feature and its music. Returning to Game resum
 
 Hold grey to return to the parent menu. Balance and Counter & Jackpots return to their selected Game Menu entry. Sound and Display return to Settings; Settings returns to its selected Game Menu entry. Editors return to their parent without applying. The wager screen returns directly to play; closing the jackpot board also returns to play without spinning.
 
-<img src="media/development/menu.png" alt="Game Menu with separate Balance and Counter & Jackpots entries" width="720">
+<img src="media/menu.png" alt="Game Menu with separate Balance and Counter & Jackpots entries" width="720">
 
 The bottom-right version mark appears in Game Menu. See [settings](settings.md) for the full option list and [troubleshooting](troubleshooting.md) for apparent input delays.
 
 ## Balance and funding
 
-The funding page lists **Custom Amount**, **Add $1,000**, **Add $10,000**, **Add $100,000**, **Clear Balance**, Auto Refill and Back to Menu, in that order. Custom Amount opens the editable voucher; grey moves right, short blue changes a digit, hold blue moves left, and Insert Credits funds the game. Add choices increase the current balance. Clear Balance sets it to zero. Successful funding or clearing returns to Game with autoplay off; neither resets the live meter buckets, wager or statistics. Clearing leaves the Auto Refill preference in place.
+The funding page lists **Custom Amount**, **Add $1,000**, **Add $10,000**, **Add $100,000**, **Clear Balance**, Auto Refill and Back to Menu, in that order. Custom Amount opens the editable voucher; grey moves right, short blue changes a digit, hold blue moves left, and Insert Credits funds the game. Add choices increase the current balance. Clear Balance sets it to zero. Successful funding or clearing returns to Game during play, or to denomination setup when opened from the startup menu, with autoplay off; neither resets the live meter buckets, wager or statistics. Clearing leaves the Auto Refill preference in place.
 
 Automatic refill uses the last successful addition, including a custom voucher amount when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding changes the money balance without resetting this session’s meter buckets, wager or statistics. Unfinished features and source/capacity faults can block funding. See [session rules](saving.md).
 
@@ -65,3 +69,7 @@ Implementation: [button timing/dispatch](../firmware/src/main.cpp), [single/doub
 On StickS3, a small loading panel remains over the actual game while startup preparation finishes. Its bar advances as the game, audio and effects become ready. The regular game is exposed when setup finishes and button polling can begin. This indicates preparation; it does not add an artificial delay.
 
 <img src="media/loading.png" alt="Startup loading progress" width="720">
+
+## Finish the Phoenix tally
+
+During the final Phoenix count-up, press blue once to display all remaining collectible amounts immediately. The final-total hold, win transfer and applicable coin fountain/jingle continue. This also stops autoplay; that press never starts another spin or changes a prize.

@@ -19,7 +19,7 @@ The included [release identity](../RELEASE.json), [Engine](../firmware/src/phoen
 | [audio.cpp](../firmware/src/audio.cpp), [audio_music.cpp](../firmware/src/audio_music.cpp) | Cue lanes, speaker submission and music worker |
 | [platformio.ini](../firmware/platformio.ini) | Target/toolchain configuration |
 
-The current mathematical model is **U (`0x0002001e`)**. Its family/runtime fingerprint is taken from the included release metadata, not inferred from the version number. The public geometry exporter labels an observed route only when the current compiled count/ID/vector actually matches the scoped observation. See [payline coverage](paylines.md#documented-geometry-coverage).
+The current mathematical model is **V (`0x0002001f`)**. Its family/runtime fingerprint is taken from the included release metadata, not inferred from the version number. The public geometry exporter labels an observed route only when the current compiled count/ID/vector actually matches the scoped observation. See [payline coverage](paylines.md#documented-geometry-coverage).
 
 ## Financial state and presentation
 
@@ -31,7 +31,7 @@ Money uses integer minor units; credit prices are converted by denomination. A v
 
 The service must outlive its Engine handles and is confined to the game thread. Copying an Engine copies a handle, never a key/context/reservoir. Every transaction gets a fresh prediction-resistant request; unused words are discarded. Renderer/audio work and synthetic gallery fixtures do not draw from that service.
 
-There is no production seed/replay interface or saved-game restore. Compile-test-only entropy/vector fixtures are separate from production callbacks. Backend/source errors, finite mapping exhaustion and allocation failure stop play without committing scratch money/state. Fresh boot/reload gives 1,000 default denomination credits. See [session rules](saving.md) and [RNG scope](math-and-evidence.md).
+There is no production seed/replay interface or saved-game restore. Compile-test-only entropy/vector fixtures are separate from production callbacks. Backend/source errors, finite mapping exhaustion and allocation failure stop play without committing scratch money/state. Fresh boot/reload gives a zero balance and the startup denomination chooser. See [session rules](saving.md) and [RNG scope](math-and-evidence.md).
 
 ## Timing and resources
 
@@ -47,4 +47,4 @@ See [testing](testing.md), [build](build-and-flash.md), [sources](sources.md) an
 
 ## Documentation and releases
 
-Documentation, screenshots and research findings may be updated between tagged releases. Development gallery images carry their own source version and runtime in the [preview manifest](development-gallery.json); they do not relabel the downloadable firmware or playable demo. Tagged game releases follow the ten-version milestones, with the next at 0.2.160. The [release verifier](../tools/verify_release.py) checks stable-release assets and separately pinned development media.
+Documentation, screenshots and research findings may be updated between tagged releases. Tagged releases follow ten-version milestones. The [release verifier](../tools/verify_release.py) checks the current source, browser bundle, numeric references and gallery together.

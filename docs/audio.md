@@ -53,7 +53,7 @@ Hold grey → Settings → Sound provides master sound, a stops/landings switch,
 
 Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clamps at either end instead of wrapping a quiet setting to full volume. In the volume page, blue raises and grey lowers it.
 
-<img src="media/development/volume.png" alt="Fine-volume page, synthetic demonstration state" width="720">
+<img src="media/volume.png" alt="Fine-volume page, synthetic demonstration state" width="720">
 
 TEST FREE-GAMES INTRO auditions the Wisdom entry; TEST HOLD MUSIC auditions the Hold program; TEST AWARD JINGLE auditions the award program. An audition does not stake money or change the counter or outcome generator. Twin music also has a developer audition API.
 

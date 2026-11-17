@@ -97,7 +97,7 @@ void drawCabinetWager(const CabinetWagerArtDeck&deck){
  fill(0,0,W,H,BLACK);
  if(cabinetDenominationPage146){
   image(cabinet_selection146::denomination,0,0);
-  cabinetButtonFace(184,4,50,16,false,false);cabinetCaption("RETURN",209,8,8,WHITE);
+  if(!startupWager160){cabinetButtonFace(184,4,50,16,false,false);cabinetCaption("RETURN",209,8,8,WHITE);}
   fill(3,103,234,31,0x1800);rect(3,103,234,31,GOLD);rect(4,104,232,29,0xb341);
   for(int y=105;y<132;++y)for(int x=5;x<235;++x)if(((x+y)%8)==0)dot(x,y,0x4800);
   cabinetMachineCaption27("CHOOSE YOUR DENOMINATION",120,105,6,0xff8a);
@@ -110,7 +110,7 @@ void drawCabinetWager(const CabinetWagerArtDeck&deck){
    cabinetCoinNumber27(denomination,x+coinW/2,coinY+(coinH-int(size))/2,size);
    if(i==cabinetFocus)cabinetFocusFrame(x,coinY,coinW,coinH);
   }
-  if(cabinetFocus==cabinetReturnFocus())cabinetFocusFrame(184,4,50,16);
+  if(!startupWager160&&cabinetFocus==cabinetReturnFocus())cabinetFocusFrame(184,4,50,16);
   return;
  }
  cabinetTempleBackdrop28();rect(1,1,W-2,H-2,0x8321);rect(2,2,W-4,H-4,0x3182);

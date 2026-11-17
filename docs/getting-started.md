@@ -2,13 +2,14 @@
 
 This guide describes the current simulator. Images are deterministic demonstrations of the current game.
 
-The game starts directly at the reels. Once installed, play requires no Wi-Fi, phone, browser or computer. Each boot or browser reload starts manual play with 1,000 credits at the default $1 denomination ($1,000). Progress lasts for the live session. Adding credits or clearing the balance leaves that session’s collection meter intact.
+Startup opens denomination selection at zero balance. Once installed, the Stick needs no Wi-Fi, phone or computer. Choose a wager, then add a custom play-money voucher to begin. Progress lasts for the live session. Adding credits or clearing the balance leaves that session’s collection meter intact.
 
 ## Start a paid spin
 
-1. Short-press the large grey side button. Its single-click action waits briefly for the double-click window, then opens the cabinet-style wager screen.
-2. Grey moves the focus and blue selects. Development v159 starts focus at the first choice in each section: denomination, lines, then bet. Existing choices stay marked until selected; this navigation is scheduled for the playable v160 release. **Selecting a funded red bet button starts a spin immediately.** Merely browsing a denomination or line does not stake credits.
-3. During ordinary play, short-press blue for the next spin. A press during motion can accelerate the presentation; it cannot select a different result.
+1. Choose a denomination on the startup screen. Grey moves; blue selects. Holding blue switches standard/High Limit denominations. Hold grey for Game Menu, including sound and screen settings.
+2. Choose PLAY LINES, then a red BET button. The reels open at **$0** with that wager selected.
+3. Press blue to open the Stardust voucher. Grey moves through the amount; blue changes a digit, and hold-blue moves left. Select **INSERT CREDITS** to fund the game.
+4. Press blue to spin. Short grey reopens wagers, hold-grey opens Game Menu, and double-grey opens Jackpots.
 
 The stake is `denomination × selected lines × bet multiplier`. The red buttons show the resulting credit amount. See [wagers](wagers.md) for the actual offered rows, including $1/5-line and $1/10-line choices.
 

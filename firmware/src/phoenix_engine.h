@@ -53,7 +53,7 @@ struct Cell {
 
 namespace local {
 // Version identifies this local, deliberately approximate math configuration.
-constexpr uint32_t modelId = 0x0002001eu;
+constexpr uint32_t modelId = 0x0002001fu;
 // Historical price-version identifiers for analytic/reference includes only.
 // No backward-compatible game restore or saved-bank import is implemented.
 constexpr uint32_t previousGPriceModelId = 0x00020010u;
@@ -446,6 +446,11 @@ constexpr int64_t observed25c15MiniCredits=700,observed25c15MinorCredits=3500;
 constexpr int64_t observed50c25x1MiniCredits=1000,observed50c25x1MinorCredits=5000;
 // Direct3pfBase1c/50/M10 TripleMini steps; cross-mode fixed-tier use is an architectural inference.
 constexpr int64_t observed1c50x10MiniCredits=1000;
+// nJhRBm39t34: two filmed1c/50/M5 Hold payments imply Mini1000credits.
+// One LasVegas-labelled cabinet; not a universal casino payset claim.
+constexpr int64_t observed1c50x5MiniCredits=1000;
+// Same recorded wager: Minor5000credits from a settled$130payment.
+constexpr int64_t observed1c50x5MinorCredits=5000;
 
 // Documented feature rules, plus explicitly named LOCAL fallbacks where no
 // target help-screen confirmation has yet been recovered.
@@ -765,6 +770,8 @@ class Engine {
     if(tier>=4)return {};
     if(isCustomJackpot(tier))return {state.jackpotCoins[tier],state.jackpotUnits[tier]};
     if(tier==0&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==10)return {local::observed1c50x10MiniCredits,money::Unit::Credits};
+    if(tier==0&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==5)return {local::observed1c50x5MiniCredits,money::Unit::Credits};
+    if(tier==1&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==5)return {local::observed1c50x5MinorCredits,money::Unit::Credits};
     if(state.coinValue==25&&state.lineCount==15){
       if(tier==0)return {local::observed25c15MiniCredits,money::Unit::Credits};
       if(tier==1)return {local::observed25c15MinorCredits,money::Unit::Credits};
@@ -783,7 +790,7 @@ class Engine {
   // rewrites an owed Cell; no entropy/debit. Fixed observed overrides stay fixed.
   bool setJackpotMinor(unsigned tier,int64_t minor) {
     if(!randomHealthy()||!canChangeBet()||tier>=4||isCustomJackpot(tier)||
-       (tier==0&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==10)||
+       ((tier==0&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==10)||(tier<2&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==5))||
        (tier<2&&((state.coinValue==25&&state.lineCount==15)||
         (state.coinValue==50&&state.lineCount==25&&state.betMultiplier==1)))||
        !validAmount({minor,money::Unit::ExactMinor},state.coinValue))return false;
@@ -1024,6 +1031,8 @@ class Engine {
       state.jackpotCoins[i]=local::jackpotBaseCoins[i]*(local::jackpotScaleWithBetMultiplier?state.betMultiplier:1);
     }
     if(!isCustomJackpot(0)&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==10)state.jackpotCoins[0]=local::observed1c50x10MiniCredits;
+    if(!isCustomJackpot(0)&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==5)state.jackpotCoins[0]=local::observed1c50x5MiniCredits;
+    if(!isCustomJackpot(1)&&state.coinValue==1&&state.lineCount==50&&state.betMultiplier==5)state.jackpotCoins[1]=local::observed1c50x5MinorCredits;
     if(state.coinValue==25&&state.lineCount==15){
       if(!isCustomJackpot(0))state.jackpotCoins[0]=local::observed25c15MiniCredits;
       if(!isCustomJackpot(1))state.jackpotCoins[1]=local::observed25c15MinorCredits;

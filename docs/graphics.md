@@ -1,36 +1,40 @@
 # Graphics, animation and native gallery
 
-Gallery of the game, including the latest **0.2.160 development artwork**. The playable release remains **0.2.151**; the next tagged release is **0.2.160**. The native display is 240 × 135 pixels. Images and animations are enlarged to 720 × 405 with nearest-neighbor scaling, preserving the pixel grid.
+Screens and animations from the current game. The native display is 240 × 135 pixels; previews are enlarged to 720 × 405 with nearest-neighbor scaling.
 
 Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [rare award screens](#rare-award-and-feature-screens), [symbol motion](#every-symbols-implemented-motion) or [feature effects](#feature-effects). Detail sheets combine enlarged crops from the rendered screens. Demonstration boards show the artwork without requiring a rare natural outcome; they are not probability samples.
 
-## Startup
+## Starting a game
 
-Choose a denomination, then lines and bet. The new startup sequence enters the reels with an empty balance; blue opens the voucher.
+Choose the denomination, lines and bet, then fund the reels with the editable voucher. Holding blue on the startup chooser switches denomination sets.
 
-<img src="media/development/startup-standard.png" alt="Initial denomination screen with the original cloud artwork" width="720">
+<img src="media/startup-standard.png" alt="Startup standard denomination chooser" width="720">
 
-<img src="media/development/startup-high-limit.png" alt="Initial High Limit denominations" width="720">
+<img src="media/startup-high-limit.png" alt="Startup High Limit denomination chooser" width="720">
 
-<img src="media/development/startup-lines-bet.png" alt="Startup line and bet selection" width="720">
+<img src="media/empty-game.png" alt="Chosen wager with zero balance before funding" width="720">
 
-<img src="media/development/empty-game.png" alt="Ready reels with zero balance" width="720">
+<img src="media/startup-voucher.png" alt="Stardust cash voucher opened from the unfunded game" width="720">
 
-<img src="media/development/startup-voucher.png" alt="Custom amount voucher opened from empty reels" width="720">
+## Startup menu
+
+<img src="media/startup-menu.png" alt="Full Game Menu before choosing a denomination" width="720">
+
+<img src="media/startup-settings.png" alt="Sound, display and High Limit settings before play" width="720">
 
 ## Screen layout
 
-<img src="media/development/game.png" alt="Regular game, synthetic demo state" width="720">
+<img src="media/game.png" alt="Regular game, synthetic demo state" width="720">
 
 The reel area uses five 47 × 35 symbol cells across three rows. A compact top strip carries title/feature information and the aligned meter; the footer carries CREDIT, BET, WIN and denomination. The side LEDs and cabinet surround are intentionally omitted. Larger second-display events are retargeted over the reels.
 
 The denomination page shows the original Confucius portrait and curved temple roof. Selecting a denomination opens the PLAY LINES and red BET controls on the next page. The full roof comes from the manufacturer’s original character card, uniformly scaled for the landscape screen. The [wager guide](wagers.md) distinguishes actual observed choices from internal compatibility settings.
 
-<img src="media/development/wagers.png" alt="Cabinet wager selection" width="720">
+<img src="media/wagers.png" alt="Cabinet wager selection" width="720">
 
 Double-press the large grey button to open the jackpot board. The Phoenix Link wordmark, animated Phoenix tier badges and separate red, green, blue and orange amount panels adapt the cabinet's upper display to the Stick screen. Cash amounts are grouped for readability and retain their exact cents.
 
-<img src="media/development/jackpots.png" alt="Phoenix Link jackpot board" width="720">
+<img src="media/jackpots.png" alt="Phoenix Link jackpot board" width="720">
 
 ## Single, double and triple jackpot symbols
 
@@ -38,19 +42,19 @@ Mini, Minor and Major each have single, double and triple versions. Repeated nam
 
 Columns below are **Mini, Minor, Major**. Rows are **single, double, triple**. These are magnified crops of the actual current renderer, with no smoothing or replacement lettering.
 
-<img src="media/development/jackpot-variants.png" alt="All nine current jackpot labels: single, double and triple Mini, Minor and Major" width="720">
+<img src="media/jackpot-variants.png" alt="All nine current jackpot labels: single, double and triple Mini, Minor and Major" width="720">
 
 ### Single prizes in the reel grid
 
-<img src="media/development/jackpot-symbols-1x.png" alt="Current Hold grid with single Mini, Minor and Major symbols on the top row" width="720">
+<img src="media/jackpot-symbols-1x.png" alt="Current Hold grid with single Mini, Minor and Major symbols on the top row" width="720">
 
 ### Double prizes in the reel grid
 
-<img src="media/development/jackpot-symbols-2x.png" alt="Current Hold grid with Double Mini, Double Minor and Double Major symbols on the top row" width="720">
+<img src="media/jackpot-symbols-2x.png" alt="Current Hold grid with Double Mini, Double Minor and Double Major symbols on the top row" width="720">
 
 ### Triple prizes in the reel grid
 
-<img src="media/development/jackpot-symbols-3x.png" alt="Current Hold grid with Triple Mini, Triple Minor and Triple Major symbols on the top row" width="720">
+<img src="media/jackpot-symbols-3x.png" alt="Current Hold grid with Triple Mini, Triple Minor and Triple Major symbols on the top row" width="720">
 
 The three boards are separate presentation examples. Each contains one Major symbol, matching the current model's single-Major restriction. Their appearance does not establish original cabinet frequencies. See [prizes and collection](hold-and-spin.md#phoenix-values-and-named-prizes).
 
@@ -60,35 +64,35 @@ The Major title, full-board Grand, running collection amount and revival use dif
 
 **Major award:** its named title and locked award amount, before the other values collect.
 
-<img src="media/development/major-award.png" alt="Current Major award title and framed green amount" width="720">
+<img src="media/major-award.png" alt="Current Major award title and framed green amount" width="720">
 
 **Full-board Grand:** the continuous WINNER display includes the Grand contribution; it does not add a second plain Grand popup.
 
-<img src="media/development/grand-award.png" alt="Full fifteen-Phoenix board with the centered Grand-inclusive WINNER amount" width="720">
+<img src="media/grand-award.png" alt="Full fifteen-Phoenix board with the centered Grand-inclusive WINNER amount" width="720">
 
 **Named-prize collection:** the running amount and flying Phoenix continue after the named-award stage.
 
-<img src="media/development/named-collection.png" alt="Current collection phase after a Triple Major award" width="720">
+<img src="media/named-collection.png" alt="Current collection phase after a Triple Major award" width="720">
 
 **Hold entry and revival:** the feature prompt is distinct from a renewed set of respins after an initial drought.
 
-<img src="media/development/hold-entry.png" alt="Phoenix Hold feature entry prompt with named prizes locked in the grid" width="720">
+<img src="media/hold-entry.png" alt="Phoenix Hold feature entry prompt with named prizes locked in the grid" width="720">
 
-<img src="media/development/hold-revival.png" alt="Current Phoenix revival fire and restored feature prompt" width="720">
+<img src="media/hold-revival.png" alt="Current Phoenix revival fire and restored feature prompt" width="720">
 
 **Wisdom Free Games entry:** the announcement uses the current game's actual transition artwork.
 
-<img src="media/development/free-games-entry.png" alt="Current three-Wisdom Free Games entry announcement" width="720">
+<img src="media/free-games-entry.png" alt="Current three-Wisdom Free Games entry announcement" width="720">
 
 **A Hold inside Free Games:** the Free-game progress stays visible both during the fire transition and on the held board.
 
-<img src="media/development/nested-free-fire.png" alt="Hold-entry fire with the ongoing Free-game progress retained" width="720">
+<img src="media/nested-free-fire.png" alt="Hold-entry fire with the ongoing Free-game progress retained" width="720">
 
-<img src="media/development/nested-free.png" alt="Phoenix Hold inside an ongoing Free Games session" width="720">
+<img src="media/nested-free.png" alt="Phoenix Hold inside an ongoing Free Games session" width="720">
 
 **Three-row gold Confucius:** awarded adjacent faces join into the tall figure.
 
-<img src="media/hero-full-gold150.png" alt="Current three-row merged gold Confucius in a winning line" width="720">
+<img src="media/confucius-merged.png" alt="Current three-row merged gold Confucius in a winning line" width="720">
 
 ## Every symbol's implemented motion
 
@@ -107,11 +111,11 @@ The Major title, full-board Grand, running collection amount and revival use dif
 
 Animation frames are selected by [generated assets](../firmware/src/generated_assets.cpp) and [Phoenix artwork](../firmware/src/phoenix_art.cpp).
 
-<img src="media/development/symbols.png" alt="All twelve current symbol types in a display fixture" width="720">
+<img src="media/symbols.png" alt="All twelve current symbol types in a display fixture" width="720">
 
-<img src="media/development/wisdom.webp" alt="Wisdom animation display fixture" width="720">
+<img src="media/wisdom.webp" alt="Wisdom animation display fixture" width="720">
 
-<img src="media/development/sage.webp" alt="Awarded adjacent Sage demonstration" width="720">
+<img src="media/sage.webp" alt="Awarded adjacent Sage demonstration" width="720">
 
 A joined Sage fills the qualifying two- or three-position region, including its internal seams. It does not stretch a non-Wild into a Wild. Unawarded or separated faces stay separate under the current [joining policy](symbols-and-combinations.md#the-tall-gold-confucius).
 
@@ -122,6 +126,10 @@ Base, Twin and individual Hold strips move downward, overrun their final positio
 Ordinary artwork stays clipped to its reel viewport. Phoenix flame/wing effects can cross cell edges where their oversized treatment requires it; the grid is drawn with its own layer priority. Twin pairs share a larger opening during the feature and keep it on the completed board. Hold restores the individual-cell grid.
 
 Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../firmware/src/reel_motion.h), [UI draw/phase flow](../firmware/src/ui.cpp).
+
+## Fast Phoenix tally
+
+<img src="media/collection-fast-total.png" alt="Remaining Phoenix amounts collected with one blue press" width="720">
 
 ## Feature effects
 
@@ -139,11 +147,11 @@ Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../f
 | Nested Free progress | Actual Free game/total in the condition-text slot, visible during Hold and over fire |
 | Counter border | Calm four-second moving gold rim around the small number box; green digits and padding are independent |
 
-<img src="media/development/phoenix.webp" alt="Phoenix animation display fixture" width="720">
+<img src="media/phoenix.webp" alt="Phoenix animation display fixture" width="720">
 
-<img src="media/development/coins.webp" alt="Coin fountain display fixture" width="720">
+<img src="media/coins.webp" alt="Coin fountain display fixture" width="720">
 
-<img src="media/development/cash25-burst.webp" alt="Current cash-only 25x Hold ending excerpt, synthetic demonstration" width="720">
+<img src="media/cash25-burst.webp" alt="Current cash-only 25x Hold ending excerpt, synthetic demonstration" width="720">
 
 The short burst and return crest use the actual presentation clocks. The 25× recording supports visible coins for that event; the broader 25–49× display band is a local policy, not recovered casino odds or a universal trigger threshold. Individual particle artwork and timing remain approximations.
 
@@ -159,11 +167,11 @@ The original complete artwork, font and animation banks are unrecovered. The cur
 
 Camera-fitted timings, flame geometry, wing contours, exact symbol placement, palette, source-dependent screen lighting and unobserved transition branches remain areas for comparison.
 
-The [development gallery manifest](development-gallery.json) identifies the preview images; the [release gallery manifest](gallery-manifest.json) records dimensions, fixture identity, source version, generator and content hashes. See [testing](testing.md) for pixel comparisons versus source-fidelity evidence, and [attribution](attribution.md) for third-party material.
+The [gallery manifest](gallery-manifest.json) records dimensions, fixture identity, source version and content hashes. See [testing](testing.md) for pixel comparisons versus source-fidelity evidence, and [attribution](attribution.md) for third-party material.
 
 ## Repeated named-prize flights
 
-<img src="media/development/multiplied-mini101.webp" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
+<img src="media/multiplied-mini.webp" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
 
 The outgoing flight and ribbon finish behind the next same-cell flight. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.
 
@@ -171,9 +179,9 @@ The outgoing flight and ribbon finish behind the next same-cell flight. Each nam
 
 Middle and bottom Phoenix pickups keep their broad reconstructed ribbon curl inside the playfield while approaching the centered amount. Their destination offset is applied during the last 200 ms of the existing 700 ms approach. Top-row and original upper-HUD routes retain their existing motion. The amount commit, fading body, sibling pickup overlaps, audio and game result use the same clocks.
 
-<img src="media/development/pickup-flight.png" alt="Current middle-row Phoenix remains visible before reaching the collection amount" width="720">
+<img src="media/pickup-flight.png" alt="Current middle-row Phoenix remains visible before reaching the collection amount" width="720">
 
-<img src="media/development/pickup-flight.webp" alt="Current Phoenix pickup and ribbon curl approaching the centered amount" width="720">
+<img src="media/pickup-flight.webp" alt="Current Phoenix pickup and ribbon curl approaching the centered amount" width="720">
 
 This is a small-screen viewport adaptation. It does not recover the original factory trajectory, feather artwork or pose bank. The bird and ribbons can pass in front of the amount during arrival; that foreground layering is intentional.
 
@@ -181,7 +189,7 @@ This is a small-screen viewport adaptation. It does not recover the original fac
 
 The jackpot board uses flat dark amount fields and animated fire attached to the stationary Phoenix Link title. The title fringe is a local reconstruction of the filmed effect; original animation frames remain unavailable.
 
-<img src="media/development/jackpots-fire.webp" alt="Animated jackpot title fire" width="720">
+<img src="media/jackpots-fire.webp" alt="Animated jackpot title fire" width="720">
 
 Custom credit funding uses a code-rendered Stardust voucher with amount words, matching decorative validation numbers and insertion text.
 
@@ -191,6 +199,6 @@ Custom credit funding uses a code-rendered Stardust voucher with amount words, m
 
 The denomination view gives the character, temple and title more room. Selecting a coin opens the separate line and bet controls.
 
-<img src="media/development/wagers.png" alt="Confucius Say denomination chooser" width="720">
+<img src="media/wagers.png" alt="Confucius Say denomination chooser" width="720">
 
 <img src="media/high-limit-fifty.png" alt="$5 denomination with PLAY25 and PLAY50 controls" width="720">

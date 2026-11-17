@@ -32,11 +32,11 @@ The [gallery](graphics.md) uses synthetic states from the renderer. Inspect its 
 
 Menu checks pause real feature presentations, keep the phase, money, meter and outcome-generator state fixed while browsing, and resume the existing music context. Browser checks also cover a real Hold respin, Sound auditions and automatic cached-build upgrades followed by offline play.
 
-Useful cases include partial reel stops, awarded Sage joins, Twin pairs, natural/meter/chained Hold, initial zero-new revival, named collection, direct 15, source-failure UI, manual/autoplay quick-stop and wrapped clocks. Funding/wager changes and meter continuity are checked within a live session. Reload/boot checks require a new 1,000-credit game with autoplay off.
+Useful cases include partial reel stops, awarded Sage joins, Twin pairs, natural/meter/chained Hold, initial zero-new revival, named collection, direct 15, source-failure UI, manual/autoplay quick-stop and wrapped clocks. Funding/wager changes and meter continuity are checked within a live session. Reload/boot checks require a new zero-balance denomination chooser with autoplay off.
 
 ## Physical acceptance
 
-After an installation, verify the intended board and written bytes, current menu version, fresh 1,000 denomination credits, autoplay off, controls, an ordinary action and one audio audition. Record physical display, stack/timing, entropy-source behavior and audible output separately. Never infer physical operation from a build or a desktop frame.
+After an installation, verify the intended board and written bytes, current menu version, a fresh zero-balance denomination chooser, autoplay off, controls, an ordinary action and one audio audition. Record physical display, stack/timing, entropy-source behavior and audible output separately. Never infer physical operation from a build or a desktop frame.
 
 ## Run the CSPRNG source tests
 

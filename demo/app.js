@@ -124,9 +124,9 @@ function queueInput(code) {
 
 function finishStartup() {
   const info = JSON.parse(module.UTF8ToString(module._pl_info()));
-  if (!info.accepted || info.version !== SOURCE.version || info.runtime !== SOURCE.runtime || info.mathFamily !== SOURCE.mathFamily || info.statePersistence !== 'session-only' || info.freshCredits !== 1000) throw new Error('Browser bundle source identity mismatch. Reload the current release.');
+  if (!info.accepted || info.version !== SOURCE.version || info.runtime !== SOURCE.runtime || info.mathFamily !== SOURCE.mathFamily || info.statePersistence !== 'session-only' || info.freshCredits !== 0) throw new Error('Browser bundle source identity mismatch. Reload the current release.');
   $('#version').textContent = info.version;
-  status.textContent = 'Fresh 1,000-credit session. Reload starts fresh; play money only.';
+  status.textContent = 'Choose your denomination and bet, then insert a play-money voucher.';
   $('#cover').hidden = true;
   running = true;
   // Read-only diagnostics; no scripted-result, forced-feature or testEngine API.

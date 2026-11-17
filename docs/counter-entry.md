@@ -15,7 +15,7 @@ A high starting counter can have positive conditional value while continuous pla
 | Wager | Long-run full return | First counter above 110%, all payouts | First above 110%, excluding Minor, Major and Grand |
 |---|---:|---:|---:|
 | 1¢ / 50 lines / 1×, $0.50 spin | 94.13% | 1,276 | 1,780 |
-| Default $1 / 5 lines / 2×, $10 spin | 94.02% | 1,283 | 1,776 |
+| $1 / 5 lines / 2×, $10 spin | 94.02% | 1,283 | 1,776 |
 
 The excluded-prize column values **all** Minor, Major and Grand payments at zero, including doubled and tripled versions. Mini and ordinary cash remain. Outcomes and costs are still counted; losing sessions and exceptional events are not discarded. This is a payout-component diagnostic, not the same statistic as a guide that excludes only extraordinary wins.
 
@@ -23,9 +23,9 @@ The excluded-prize column values **all** Minor, Major and Grand payments at zero
 
 Rare jackpots make a large contribution to the full-return curve. At the default wager's 1,283 entry, expected Grand payments contribute about $869 of the approximately $1,681 expected total payout. That dependence, and the nearly identical thresholds across bet multipliers, remain important calibration gaps.
 
-## Development price correction
+## Source-priced wager
 
-The tables above describe the playable v151 model. Development v159 changes only the observed **1¢ / 50 lines / 5×** Mini and Minor prices to **$10 and $50**. Revaluing the same outcome law gives **94.68%** local long-run full return, a full-payout 110% entry of **1,265**, and an entry of **1,779** when all Minor, Major and Grand payments are excluded. The other 76 offered wagers are unchanged. These price corrections do not calibrate the counter curve to casino results. See the [recorded prize evidence](sources.md#recorded-mini-and-minor-prices).
+At **1¢ / 50 lines / 5×**, Mini is **$10** and Minor is **$50**, matching the retained recording. Under this local probability model, long-run full return is **94.68%**; the first full-payout 110% entry is **1,265**, or **1,779** when all Minor, Major and Grand payments are excluded. This price evidence does not calibrate the counter curve to casino results. See the [recorded prize evidence](sources.md#recorded-mini-and-minor-prices).
 
 ## What the model still assumes
 

@@ -31,9 +31,9 @@ The lower-right badge shows the value of a credit. For this source-qualified cab
 
 The caption is a tiny above/below adaptation for the 240 × 135 display; physical readability remains a limitation. Internal profiles outside the offered menu are not extra selectable controls. Code: [denomination badge rules](../firmware/src/denomination_minbet46.h).
 
-Development v159 starts focus at the first denomination, first PLAY LINES choice and first offered BET button, in that order. Existing choices stay marked until changed. The playable release receives this workflow at v160. This order also applies to denominations with one line control. Selecting lines updates the red credit amounts without spending credits.
+Focus starts at the first denomination, first PLAY LINES choice and first offered BET button, in that order. Existing choices stay marked until changed. Selecting lines updates the red credit amounts without spending credits. At startup, selecting BET opens the reels with no balance; blue then opens the voucher. During funded play, a red BET starts a spin.
 
-<img src="media/development/wagers-lines.png" alt="Denomination selected with focus on a real PLAY LINES control" width="720">
+<img src="media/wagers-lines.png" alt="Denomination selected with focus on a real PLAY LINES control" width="720">
 
 Holding grey or choosing RETURN applies the selected denomination and lines without spending credits or starting a spin. The current multiplier is retained when offered; otherwise the first supported multiplier is selected. The green counter changes to that wager's existing bank. An unaffordable red BET still selects its wager and counter, then follows the normal insufficient-funds path. A new session starts at its default wager; no previous game is imported.
 
@@ -41,7 +41,7 @@ The [payout reference](payouts.md) exports the wider internal evaluator support 
 
 ## High Limit
 
-Settings → High Limit changes the denomination chooser to $1, $2, $5, $10, $25, $50 and $100. The cash balance is unchanged when switching modes. In development v159, the chooser starts at the first denomination; selecting a denomination opens the line and bet controls. Hold grey returns to the reels without a paid spin. Turning High Limit off from a denomination unavailable in standard mode returns to $1.
+Settings → High Limit changes the denomination chooser to $1, $2, $5, $10, $25, $50 and $100. The cash balance is unchanged when switching modes. The chooser starts at the first denomination; selecting a denomination opens the line and bet controls. Holding blue on the initial startup chooser also switches between standard and High Limit denominations. Hold grey there for the full Game Menu; closing it resumes setup. Hold grey returns to the reels without a paid spin. Turning High Limit off from a denomination unavailable in standard mode returns to $1.
 
 The shared practice row uses 25 lines and bet multipliers 1, 2 and 3, giving 25, 50 and 75 credits. At $5, PLAY50 also offers the directly observed 3× wager: 150 credits, or $750. At $100, the middle button places a $5,000 wager. These are simulator choices, not a complete recovered factory high-limit deck.
 

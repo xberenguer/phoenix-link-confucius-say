@@ -100,7 +100,7 @@ EMSCRIPTEN_KEEPALIVE int pl_input(int code){
  return 1;
 }
 EMSCRIPTEN_KEEPALIVE const char*pl_snapshot(){static String s;s=uiSnapshot();return s.c_str();}
-EMSCRIPTEN_KEEPALIVE const char*pl_info(){std::snprintf(info.data(),info.size(),"{\"version\":\"%s\",\"runtime\":\"%s\",\"mathFamily\":\"%s\",\"accepted\":%s,\"statePersistence\":\"session-only\",\"freshCredits\":1000,\"rngHealthy\":%s,\"rngFault\":%u}",build_version::number,math_runtime_identity::fingerprint,math_runtime_identity::mathematicalFamily,math_runtime_identity::accepted?"true":"false",uiRandomHealthy()?"true":"false",unsigned(uiRandomFault()));return info.data();}
+EMSCRIPTEN_KEEPALIVE const char*pl_info(){std::snprintf(info.data(),info.size(),"{\"version\":\"%s\",\"runtime\":\"%s\",\"mathFamily\":\"%s\",\"accepted\":%s,\"statePersistence\":\"session-only\",\"freshCredits\":0,\"rngHealthy\":%s,\"rngFault\":%u}",build_version::number,math_runtime_identity::fingerprint,math_runtime_identity::mathematicalFamily,math_runtime_identity::accepted?"true":"false",uiRandomHealthy()?"true":"false",unsigned(uiRandomFault()));return info.data();}
 EMSCRIPTEN_KEEPALIVE int pl_random_healthy(){return uiRandomHealthy();}
 EMSCRIPTEN_KEEPALIVE int pl_return_input_fenced(){return uiReturnSelectionInputFenced();}
 EMSCRIPTEN_KEEPALIVE int pl_game_view(){return uiIsGameView();}

@@ -4,7 +4,7 @@ Match Game Menu's version to the current [release identity](../RELEASE.json). [C
 
 ## Progress disappeared after restart
 
-Every device boot, flash and browser reload starts a fresh manual session with 1,000 default denomination credits. There is no restore/import flow. A hidden browser tab can continue its still-live session when shown again; reloading it creates a new one.
+Every device boot, flash and browser reload starts a fresh manual session with a zero balance and the startup denomination chooser. There is no restore/import flow. A hidden browser tab can continue its still-live session when shown again; reloading it creates a new one.
 
 ## Grey opens wagers instead of settings
 

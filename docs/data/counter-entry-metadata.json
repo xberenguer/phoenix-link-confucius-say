@@ -1,6 +1,6 @@
 {
-  "model": "U/0x0002001e",
-  "engine_sha256": "82d1b768cf34714b340b688b1ea67cb9bf27c38e18eb1ff6c9be676d17c0a492",
+  "model": "V/0x0002001f",
+  "engine_sha256": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
   "return_option": 3,
   "stopping_policy": "Fixed wager, start at counter, first meter trigger then complete all owed features before next paid spin.",
   "excluded_components": [
@@ -11,17 +11,21 @@
   "Mini_retained": true,
   "original_casino_calibrated": false,
   "threshold_rows": 77,
-  "curve_rows": 1001,
-  "numerical_checks": "Current-code stopped-session reward solve;512/768workload comparison and300000native-engine sessions checked the full-return basis. Payout-only exclusions preserve action laws and costs.",
+  "curve_rows": 1232,
+  "numerical_checks": "Stopped-session reward basis previously checked at512/768workload and300000native-engine sessions. Price-only Mini/Minor revaluation changes one of77offered wagers; expected stakes and transition laws remain unchanged. These are not casino-calibrated probabilities.",
   "files": {
     "counter-entry-thresholds.csv": {
-      "bytes": 5763,
-      "sha256": "b102362d50e11eafb51e0767a20cee2c451024d823d331bbade9c6e8d9fbdcc5"
+      "bytes": 5685,
+      "sha256": "a981fdd14a996556d28084723588dc10667275cc71de0faab93488e1286fb3cb"
     },
     "counter-entry-curves.csv": {
-      "bytes": 70890,
-      "sha256": "a0073c73fc49710690feabf59f06338fc3a647d7bc990409f901a68fd68ce640"
+      "bytes": 85976,
+      "sha256": "684cf37c737b0e72ab80d991c5a0bb9359e5ba62acb0b4d2cb6e5fef8b4f706d"
     }
   },
-  "mathematical_family": "beeefd81a346ef6ed99b44dcdb7987aecc474c9437698a0c8f9b2de669335d40"
+  "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
+  "source_version": "0.2.160",
+  "runtime_fingerprint": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
+  "basis_sha256": "264721861fd81c9b5f019373d16939b5e911bac4b42608306689fe7a406c9c42",
+  "price_revaluation_sha256": "44a1409d56781e4537fa85f116ae8354de4fbca16f13d462eed5e8f9ace43a88"
 }

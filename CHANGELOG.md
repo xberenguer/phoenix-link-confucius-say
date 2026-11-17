@@ -1,22 +1,27 @@
 # Current release notes
 
-## Development 0.2.160
+## 0.2.160 — release candidate
 
-- Startup opens denomination selection, then lines and bet, then the reels at zero balance.
-- Blue at an unfunded game opens the Stardust custom voucher; inserting credits returns to the chosen wager.
-- Hold blue on the initial denomination screen to switch Standard and High Limit.
-- Initial denomination selection has no Return button.
-- Refined the portrait cutout and rebuilt the sky from a wider section of the original cloud artwork.
-- Rebuilt preview artwork and animations from fresh current-source objects.
+- Startup opens denomination selection, then PLAY LINES and BET, then the reels at a zero balance. Blue opens the Stardust custom voucher when funding is needed.
+- Hold blue on the initial denomination chooser to switch Standard and High Limit. Hold grey for the full Game Menu, including sound, brightness and screen flip; closing it returns to setup.
+- One blue press during the final Phoenix tally collects the remaining amounts immediately, stops autoplay and preserves the normal ending sequence.
+- Original manufacturer portrait, curved temple and cloud artwork replace the earlier courtyard reconstruction; the portrait cutout and sky seams are refined.
+- Wager navigation starts at the first denomination, first line choice and first offered bet.
+- Jackpot labels and award lettering use source-derived shapes with clearer outlines. The Grand ending uses the centered WINNER display instead of a separate invented title screen.
+- Recorded 1¢ / 50-line / 5× Mini and Minor prices are $10 and $50. The affected return and counter-entry calculations are repriced; probability weights remain unchanged.
+- Gallery screens, animations, the three-spin showcase, browser demo and numeric references are regenerated from this source.
 
-## Development v159 — queued for v160
+<img src="docs/media/startup-standard.png" alt="Initial denomination chooser with original portrait and curved temple" width="720">
 
-- Original manufacturer portrait and full curved temple roof replace the cropped, flattened courtyard composition.
-- Wager focus starts at the first denomination, PLAY LINES choice and offered BET button; existing choices remain marked until selected.
-- Source-observed 1¢ / 50-line / 5× Mini and Minor prices are $10 and $50. The local return calculation is updated for that wager; outcome frequencies are unchanged.
-- Gallery images and animations show the current development renderer. The playable demo and firmware downloads remain at the stable release until v160.
+<img src="docs/media/startup-menu.png" alt="Full menu available during startup" width="720">
 
-<img src="docs/media/development/wagers.png" alt="Updated original curved temple and denomination chooser" width="720">
+<img src="docs/media/jackpot-variants.png" alt="Single, double and triple named-prize symbols" width="720">
+
+<img src="docs/media/collection-fast-total.png" alt="Phoenix tally completed with one button press" width="720">
+
+### Validation
+
+All 77 wager choices pass actual Main/UI startup and funding checks. Manual/autoplay collection tests preserve the financial snapshot, outcome entropy and ending effects. Native and browser startup pixels match. Source RNG/outcome checks and the current target build pass. Physical installation of this exact updated image awaits device reconnection. Original casino odds and complete original-asset fidelity remain unverified.
 
 ## 0.2.151
 
@@ -50,7 +55,7 @@
 
 <img src="docs/media/wagers.png" alt="Wager selector with temple courtyard" width="720">
 
-<img src="docs/media/jackpots-fire.gif" alt="Animated jackpot title fire" width="720">
+<img src="docs/media/jackpots-fire.webp" alt="Animated jackpot title fire" width="720">
 
 ## 0.2.141
 
@@ -77,7 +82,7 @@ Current source, browser, firmware and media identities are recorded in [release 
 - Counter editing stays within 0–1886 throughout. The first digit alternates 0/1; subsequent digits follow the selected prefix. When a larger prefix makes the old remainder invalid, the editor fits it within the ceiling. Apply and Cancel retain their existing behavior; jackpot amount editing is unchanged.
 - The browser game, player guide, gallery and signed firmware package describe the same final source.
 
-<img src="docs/media/counter-editor140.webp" alt="Counter digits wrap within the valid range" width="720">
+<img src="docs/media/counter-editor.webp" alt="Counter digits wrap within the valid range" width="720">
 
 ### 0.2.130 validation
 

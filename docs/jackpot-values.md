@@ -15,9 +15,9 @@ Double-grey opens the jackpot board. It reads the same future-prize amounts used
 | Major | 1,000 credits × bet multiplier × denomination | Local assumption; no network growth |
 | Grand | Current profile's local return-reference table | Engineering schedule keyed by denomination, lines, multiplier, cap profile and return option; not a factory progressive |
 
-Observed exceptions are kept narrow: 1¢/50 lines/10× Mini $10; 25¢/15 lines Mini $175 and Minor $875 in the recorded cabinet; 50¢/25 lines/1× Mini $500 and Minor $2,500 in that recorded cabinet. The 25¢ amounts were observed at multipliers 1 and 5; using them at other multipliers in that profile is an architectural assumption. These observations do not identify a universal denomination ladder or original arrival probabilities.
+Observed exceptions are kept narrow: 1¢/50 lines/5× Mini $10 and Minor $50; 1¢/50 lines/10× Mini $10; 25¢/15 lines Mini $175 and Minor $875 in the recorded cabinet; 50¢/25 lines/1× Mini $500 and Minor $2,500 in that recorded cabinet. The 25¢ amounts were observed at multipliers 1 and 5; using them at other multipliers in that profile is an architectural assumption. These observations do not identify a universal denomination ladder or original arrival probabilities.
 
-The remaining fallback can produce unrealistic relationships. For example, at 1¢/50 lines/10×, the corrected Mini is $10 while the unverified Minor fallback is also $10. That is a known fidelity gap, not a validated casino relationship. Correcting a price needs scoped source evidence and fresh return calculations.
+At the sourced 1¢/50-line/5× wager, Major still uses the unverified local $50 fallback, equal to the observed Minor. The remaining fallback can produce unrealistic relationships. For example, at 1¢/50 lines/10×, the corrected Mini is $10 while the unverified Minor fallback is also $10. That is a known fidelity gap, not a validated casino relationship. Correcting a price needs scoped source evidence and fresh return calculations.
 
 Default amounts are fixed-session values; play on other cabinets is not emulated. Their local expected-return checks do not certify original casino probabilities or progressive contributions. Simply substituting a million-dollar Grand at the same hit frequency changes the return.
 

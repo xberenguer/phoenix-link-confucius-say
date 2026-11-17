@@ -22,7 +22,7 @@
 | Sample return | What a finite observed session actually paid; can differ greatly from expectation |
 | Conditional EV | Expected value from a particular meter/owed state and policy |
 | PAR data | Manufacturer mathematical program data; not recovered for this project |
-| Session | Live game state; boot or page reload starts fresh with 1,000 default denomination credits |
+| Session | Live game state; boot or page reload opens fresh denomination selection at zero balance |
 | NVS | ESP32 nonvolatile storage; current game progress is session-only |
 | SPIFFS | Asset filesystem holding runtime music and the Phoenix atlas |
 | Source-observed | Directly visible in identified footage/material, with its configuration scope |
