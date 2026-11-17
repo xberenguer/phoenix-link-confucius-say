@@ -1,10 +1,10 @@
 {
-  "version": "0.2.141",
-  "runtime_fingerprint": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+  "version": "0.2.143",
+  "runtime_fingerprint": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
   "mathematical_family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
   "local_model": "0x0002001d",
-  "source_body_files": 165,
-  "source_total_files": 168,
+  "source_body_files": 166,
+  "source_total_files": 169,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
   "original_casino_calibration": false,
   "actual_CSPRNG_infinite_horizon_return_qualified": false,
@@ -22,17 +22,21 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Final 0.2.141 firmware and offline assets passed complete byte-exact readback on the original StickS3. Fresh startup confirmed the current version, a healthy random service, all 60 atlas frames, 1,000 denomination credits, zero actions and autoplay off. Physical acoustic fidelity and entropy strength remain unqualified.",
-  "browser_version": "0.2.141",
-  "native_status_version": "0.2.141",
+  "native_validation": "Original StickS3 full firmware/assets readback and healthy fresh startup passed; autoplay off.",
+  "browser_version": "0.2.143",
+  "native_status_version": "0.2.143",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
   "status": "Current source-bound hotfix release package",
   "changes": [
-    "Opening menus pauses the feature and its tune; returning resumes the same playback position.",
-    "Sound-menu auditions use an independent decoder context, preserving the paused game music.",
-    "Stick firmware and browser use the same menu-pause behavior.",
-    "Probability weights, payouts, jackpots and RNG provider are unchanged."
+    "Wager-screen Return and hold-grey apply the selected denomination and lines without spinning.",
+    "Unaffordable red BET selects its counter before the normal funding check; equal-credit same-denomination bets retain their shared bank.",
+    "Custom Amount comes first in Credits; holding blue moves to the digit on the left.",
+    "Editable Stardust voucher uses matching varied decorative identifiers, written amounts and the cash-in sound.",
+    "Small startup progress overlay retains the game behind it.",
+    "Flat jackpot fields, larger topper/amounts and stationary letter-edge fire.",
+    "Reconstructed red temple courtyard behind the original clean publisher figure.",
+    "Jackpot amounts, outcome weights and CSPRNG provider are unchanged."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -40,30 +44,24 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 5736992,
-      "sha256": "09db77b2ef58e8b4ed20aa544ec6c89505dbe4bb208e7a1f3eac53a9b989828a"
+      "bytes": 5794192,
+      "sha256": "d4bbbbf58c5e4d0a41528d3a5eb49e7824e0538196ec7b0be37ce270e7ca9c15"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 5671456,
-      "sha256": "b720a24bb20e0e3715abe2eda3930273bdc576951b9576eff6eca30f355530db"
+      "bytes": 5728656,
+      "sha256": "25ad3436bd6b5c98156a855c669b2624e54b4a1cb4830d6a03f393083387c903"
     }
   },
   "validation": {
-    "native_target_build": true,
-    "menu_UI_sanitizer_cases": 15,
-    "music_PCM_pause_context_cases": 19,
-    "audio_producer_checks": 357,
-    "explicit_stop_cases": 2,
-    "source_return_rows_unchanged": 7200,
+    "startup_UI_sanitizer_cases": 2,
+    "voucher_money_navigation_checks": true,
+    "jackpot_read_only_and_word_boundary_checks": 105,
     "full_native_readback": true,
     "fresh_native_startup": true,
     "original_machine_fidelity_certified": false,
-    "browser_menu_feature_audio_checks": 122,
-    "browser_cache_offline_checks": 62,
-    "browser_page_errors": 0,
-    "browser_console_errors": 0,
-    "browser_real_Hold_respin_pause_resume": true,
-    "browser_audio_context_running": true,
-    "native_boot_checks": 10
+    "counter_bank_and_insufficient_funds_navigation": true,
+    "voucher_ID_and_left_hold_checks": true,
+    "local_browser_controls": 22,
+    "feature_pause_and_input_regressions": 13
   }
 }

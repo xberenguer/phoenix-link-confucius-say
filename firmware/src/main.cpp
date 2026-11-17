@@ -562,11 +562,16 @@ void setup() {
   sessionReady125=seeded125&&qualified125&&fresh125;
   uiSetOutcomeCheckpointHandler(sessionOutcome125);
   // No old bank is read and no RNG state is restored. Autoplay starts off.
+  // Keep the loading raster visible through all blocking preparation.
+  uiLoading(1);
+  audioInit(false);
+  uiLoading(2);
+  uiPrepareEffects();
+  uiLoading(3);
+  // Publish the playable scene only once setup is complete and loop can poll
+  // buttons. A failed session still renders its existing service screen.
   uiRedraw();
   uiFrame();
-  // Bring up the audio mixer after the fresh session/error screen reaches LCD.
-  audioInit(false);
-  uiPrepareEffects();
   reportStatus();
 }
 

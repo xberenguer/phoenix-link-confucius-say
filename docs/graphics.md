@@ -100,3 +100,13 @@ Middle and bottom Phoenix pickups keep their broad reconstructed ribbon curl ins
 <img src="media/pickup-flight.webp" alt="Current Phoenix pickup and ribbon curl approaching the centered amount" width="720">
 
 This is a small-screen viewport adaptation. It does not recover the original factory trajectory, feather artwork or pose bank. The bird and ribbons can pass in front of the amount during arrival; that foreground layering is intentional.
+
+## Jackpot board and credit voucher
+
+The jackpot board uses flat dark amount fields and animated fire attached to the stationary Phoenix Link title. The title fringe is a local reconstruction of the filmed effect; original animation frames remain unavailable.
+
+<img src="media/jackpots-fire.gif" alt="Animated jackpot title fire" width="720">
+
+Custom credit funding uses a code-rendered Stardust voucher with amount words, matching decorative validation numbers and insertion text.
+
+<img src="media/credit-voucher.png" alt="Custom credit voucher" width="720">

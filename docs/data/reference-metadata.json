@@ -1,11 +1,11 @@
 {
-  "source_version": "0.2.141",
+  "source_version": "0.2.143",
   "engine_model": "0x0002001d",
   "model_label": "T",
   "source_engine_sha256": "56b5b0e34e17cf25f6f036d6320f681a5f93132fb139779e6aabb292b3acfa79",
   "source_cabinet_profile_sha256": "29f36dcdb3e7e85ad946b62560bdd5ff6f2622c8873374e8eab21bb961889f88",
-  "source_build_version_sha256": "3452816430f9f3efa1b89bbc9c8cf52ff4ddbea0ae10a6b30033ef425cbe27eb",
-  "source_runtime_identity_sha256": "4fb74b9d25889d1699e90f2fc0c1a9b29f8bc83739e0d4feb5bdc2fe46a1165e",
+  "source_build_version_sha256": "1f9815a5901c5f9fa3692e04a3ae15aae3b980ba515af3effcca3eec01563acd",
+  "source_runtime_identity_sha256": "62e0ce9ce1391bb44c685f3c4000e8c07d8355bccaf24f4ac374d3dbe5092ed0",
   "source_static_grand_table_sha256": "a1690cd47b9a9b974ffe262774a484776462af8a3f107d70f1acea35376bffc1",
   "exporter_sha256": "82b60d81bf0206f68bfc06a17a8e0dbfd8cf21f83ece74fb89d17e01e23e4c1f",
   "scope": "Current compiled local simulator reference, not a recovered casino PAR. There are 600 internal evaluator profiles and 55 menu offers. Price observations retain their Engine scopes; geometry labels require the count, ID and vector to agree. Of 205 paths, 122 remain local fallbacks.",
@@ -32,7 +32,7 @@
   "status": "Current compiled implementation; Engine, payout datasets and offered wagers unchanged and byte-pinned.",
   "no_personal_state_or_device_identifiers": true,
   "source_qualification": "Engineering source binding; ideal-uniform fixed-profile/default-jackpot/funded/no-Lucky full-cycle references are separate from casino calibration, physical entropy quality and finite runtime/source failure.",
-  "runtime_fingerprint": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+  "runtime_fingerprint": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
   "mathematical_family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
   "geometry_matches_by_line_count": {
     "5": 1,

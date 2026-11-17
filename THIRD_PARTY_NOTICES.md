@@ -7,3 +7,7 @@
 ## MbedTLS crypto subset
 
 AES, CTR_DRBG and platform zeroization use Mbed TLS 3.6.7, copyright the MbedTLS contributors. The source offers Apache-2.0 OR GPL-2.0-or-later; this project uses the Apache-2.0 option. Private include paths, symbol names and configuration wrappers isolate the subset from platform libraries. Original algorithm bodies and notices are retained. See the [included license](firmware/src/phoenix_crypto124/LICENSE) and [official upstream release](https://github.com/Mbed-TLS/mbedtls/releases/tag/mbedtls-3.6.7).
+
+## Ticket typography
+
+The ticket glyph bank is rasterized from Liberation Sans Regular/Bold, copyright 2010 Google Corporation and 2012 Red Hat, Inc., under the SIL Open Font License 1.1. See [the included license](LICENSES/LiberationFonts-OFL.txt) and [upstream font project](https://github.com/liberationfonts/liberation-fonts). The optional rasterizer is in tools/generate_ticket_font.py; normal builds use the included bitmap header.

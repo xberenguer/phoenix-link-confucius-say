@@ -21,6 +21,7 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
 - [Free games and Twin Reels](docs/free-games.md)
 - [Phoenix Hold & Spin](docs/hold-and-spin.md)
 - [The 1888 collection counter](docs/collection-counter.md)
+- [Jackpot values and configurations](docs/jackpot-values.md)
 - [Graphics gallery](docs/graphics.md)
 - [Sounds and music events](docs/audio.md)
 - [Fresh sessions and funding](docs/saving.md)

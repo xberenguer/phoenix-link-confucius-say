@@ -91,19 +91,35 @@ uint8_t cabinetDraftMultiplier24(const CabinetWagerArtDeck&deck){
  return deck.betCount?deck.bets[0]:0; // Never invent a multiplier for an unknown row.
 }
 void cabinetTempleBackdrop28(){
- // Authored low-resolution temple geometry. No camera RGB, text, or texture.
- for(int y=0;y<115;++y){const unsigned t=unsigned(y)*255/114;fill(0,y,W,1,blend(cabinetRgb27(80,96,82),cabinetRgb27(174,178,151),t));}
- // Receding wall and door bays under a red/gold temple eave.
- fill(7,34,226,76,cabinetRgb27(93,104,87));
- for(int x=14;x<240;x+=38){fill(x,37,25,73,cabinetRgb27(48,76,67));rect(x,37,25,73,cabinetRgb27(157,139,75));rect(x+2,39,21,69,cabinetRgb27(92,117,94));for(int yy=44;yy<107;yy+=7)line(x+5,yy,x+19,yy,cabinetRgb27(62,88,73));}
- for(int x=-18;x<250;x+=38){fill(x,30,8,84,cabinetRgb27(164,153,111));fill(x+1,31,3,82,cabinetRgb27(205,194,145));fill(x+6,31,2,82,cabinetRgb27(97,98,71));}
- fill(0,10,240,20,cabinetRgb27(122,32,21));
- for(int y=10;y<28;++y)for(int x=0;x<240;++x){const int slope=(x+y*2)%13;if(slope<2)dot(x,y,cabinetRgb27(176,59,32));else if(slope==3)dot(x,y,cabinetRgb27(71,26,23));}
- fill(0,27,240,3,cabinetRgb27(179,123,50));line(0,27,239,27,cabinetRgb27(229,184,92));
- for(int x=3;x<240;x+=13){fill(x,30,5,3,cabinetRgb27(129,39,29));dot(x+2,31,cabinetRgb27(227,175,65));}
- // Low shrubs and stone foreground are visible only between the controls.
- for(int x=0;x<240;++x){const int top=62+(x*7%11);for(int y=top;y<87;++y)dot(x,y,cabinetRgb27(42+(x+y)%13,82+(x*3+y)%21,35+(x+y*2)%9));}
- fill(0,90,240,25,cabinetRgb27(114,119,105));for(int y=92;y<115;y+=9)line(0,y,239,y,cabinetRgb27(71,83,75));
+ // Code-rendered courtyard, following the red layered eaves, gold/green
+ // doors, clipped trees and pale steps of the cabinet setting. No photo pixels.
+ for(int y=0;y<115;++y)fill(0,y,W,1,blend(cabinetRgb27(47,103,148),cabinetRgb27(173,190,164),unsigned(y)*255/114));
+ fill(6,27,228,53,cabinetRgb27(137,49,35));
+ for(int x=13;x<238;x+=30){
+  fill(x,39,23,40,cabinetRgb27(59,83,62));rect(x,39,23,40,cabinetRgb27(188,163,83));rect(x+2,41,19,36,cabinetRgb27(113,129,99));
+  for(int xx=x+5;xx<x+20;xx+=4)for(int yy=44;yy<75;yy+=4)dot(xx,yy,cabinetRgb27(186,178,113),180);
+  fill(x-4,31,4,50,cabinetRgb27(153,48,31));line(x-3,33,x-3,78,cabinetRgb27(206,88,41));
+ }
+ // Two curved roof tiers with red tiles and fine gold/teal carved eaves.
+ for(int tier=0;tier<2;++tier){const int base=tier?35:15;
+  for(int x=0;x<W;++x){const int edge=std::abs(x-120);const int lift=edge>88?(edge-88)*(edge-88)/155:0;const int yy=base-lift;
+   for(int y=yy-9;y<=yy;++y){const bool seam=(x+2*y)%7==0;dot(x,y,cabinetRgb27(seam?93:171,seam?28:47,seam?24:31));}
+   dot(x,yy,cabinetRgb27(233,178,82));dot(x,yy+1,cabinetRgb27(28,89,99));dot(x,yy+2,cabinetRgb27(205,156,72));
+   if(x%9<3){dot(x,yy+3,cabinetRgb27(187,87,41));dot(x,yy+4,cabinetRgb27(229,181,82));}
+  }
+ }
+ // Pale stone stairway and garden beds beneath the entrance.
+ for(int y=78;y<115;++y){const int inset=std::max(0,50-(y-78)*2);fill(inset,y,W-inset*2,1,cabinetRgb27(170,173,157));if((y-78)%6==0)line(inset,y,W-inset-1,y,cabinetRgb27(217,218,191));}
+ for(int side=0;side<2;++side){const int root=side?220:20;
+  fill(root-2,44,4,39,cabinetRgb27(75,64,40));
+  for(int y=21;y<81;++y)for(int x=root-24;x<=root+24;++x){
+   const int dx=x-root,dy=y-(y<45?37:60);const int radius=y<45?22:19;
+   if(dx*dx*2+dy*dy*3<radius*radius*2){const unsigned speck=(unsigned(x+41)*37u+unsigned(y)*23u)%31;dot(x,y,cabinetRgb27(22+speck/3,57+speck,27+speck/2));}
+  }
+  for(int x=side?203:0;x<(side?240:37);++x)for(int y=89+(x*7%4);y<115;++y)dot(x,y,cabinetRgb27(41+(x+y)%11,94+(x*3+y)%23,39+(x+y*2)%13));
+  // Small carved guardian on its stone plinth; deliberately no invented detail.
+  const int lion=side?192:43;fill(lion-6,83,13,7,cabinetRgb27(175,178,157));fill(lion-4,76,8,8,cabinetRgb27(199,200,174));fill(lion-5,72,9,7,cabinetRgb27(210,209,181));dot(lion-3,74,cabinetRgb27(105,113,96));line(lion-4,89,lion+5,89,cabinetRgb27(107,119,104));
+ }
 }
 void drawCabinetWager(const CabinetWagerArtDeck&deck){
  // Existing clean game backdrop, never sampled footage or attachment pixels.

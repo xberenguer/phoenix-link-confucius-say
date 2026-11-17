@@ -1,14 +1,14 @@
 {
-  "version": "0.2.141",
-  "runtime_fingerprint": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+  "version": "0.2.143",
+  "runtime_fingerprint": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
   "curated_presentation_not_frequency_measurement": true,
   "raw_source_footage_or_user_attachments_included": false,
   "images": [
     {
       "file": "media/settings.png",
       "kind": "Settings groups Sound and Display",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -41,13 +41,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/paylines.png",
       "kind": "Current selected payline layout, six diagrams per page",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -80,13 +80,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/paylines-all.png",
       "kind": "Read-only browsing of another implemented payline layout",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -119,13 +119,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/line22-jack3.png",
       "kind": "Observed US50Line22 path and exact10c50M1Jack3 five-credit payout",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -158,13 +158,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/pickup-flight.png",
       "kind": "Middle-row collection bird visible before unchanged700ms arrival",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -197,13 +197,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/cash25-burst.png",
       "kind": "Current numeric-only25x Hold burst through actualEngine andUI",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -236,13 +236,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/game.png",
       "kind": "Fresh default-denomination1000-credit game",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -275,13 +275,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/wagers.png",
       "kind": "Cabinet wager panel",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -290,13 +290,13 @@
         240,
         135
       ],
-      "sha256": "b48fee0a9186560cc7f009df73228e07532c4da00d18a2d3cb5cd7ab4384cfca",
-      "bytes": 27928,
-      "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
+      "sha256": "72818a8fe67a15651ccd0da6eff786cea70995b9373998db11032c060d453062",
+      "bytes": 30104,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        1
+        "current-wagers"
       ],
       "input_frame_rgb565_sha256": [
         "2ab5f56ee35f453d294bbe74a4790c048616d8ab2bb3be06b9b68097d21ab8a5"
@@ -314,13 +314,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "bf4b1224065df6c226738625c92cf2779eb314843ccf2664f1f88d445cfe1acf"
     },
     {
       "file": "media/menu.png",
       "kind": "Current seven-item Main menu with grouped Settings",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -329,25 +330,25 @@
         240,
         135
       ],
-      "sha256": "b7d2342f2367da07f26a300f9035ea5f75355b5e0b0e02cf9666a22c5c80cc30",
-      "bytes": 14465,
-      "fixture_kind": "Synthetic current Main/UI session; actual Game Menu navigation with no personal state.",
+      "sha256": "4faaf2c23055f2367f8da540ccebb146e8c1a94894cbb0ddc76a5a4cbd250bea",
+      "bytes": 15062,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        "actual-main-menu141"
+        "current-menu"
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1",
-      "input_frame_ppm_sha256": "e0405a5a740318a09fdb70956f0eb02df839b900b50ec65d3a87b9a53e29002b"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "17ed1ab7210709572d39709cb76b186a2d9b405400a57e93853923c7e9ef11ee"
     },
     {
       "file": "media/sound.png",
       "kind": "Current Sound menu, with stops/landings and no reel-bed control",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -380,13 +381,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/volume.png",
       "kind": "Fine volume panel",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -419,13 +420,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/wisdom-entry.png",
       "kind": "Three-Wisdom initial entry",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -458,13 +459,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/hold.png",
       "kind": "Natural Phoenix Hold entry",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -497,13 +498,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/collection.png",
       "kind": "Centered running collection amount",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -536,13 +537,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/symbols.png",
       "kind": "All twelve display symbols",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -575,13 +576,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/credits.png",
       "kind": "Funding-only Credits panel with Clear Balance selected",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -590,37 +591,25 @@
         240,
         135
       ],
-      "sha256": "5f2cdec854283e083eace0c4bb5680cec48348533ee1787f1ed1be977b89bbce",
-      "bytes": 14237,
-      "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
+      "sha256": "9ad5ca0acb3b19df4f29be812c8a4c9a5865feacd42557814e2534e6a439a325",
+      "bytes": 15535,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        10
-      ],
-      "input_frame_rgb565_sha256": [
-        "c59d867a6d45c7e2e546516cbff671d6cd853a7ee1293032a3ff33546e7ed03b"
-      ],
-      "input_frame_clock_ms": [
-        1000
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 100,
-          "lines": 5,
-          "multiplier": 2
-        }
+        "current-credits"
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "7d5965a7955245bd6bb538809201a3c95ce465aaca592efdee1f692512c4671a"
     },
     {
       "file": "media/wagers-lines.png",
       "kind": "Focus moves from denomination to PLAY LINES",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -629,13 +618,13 @@
         240,
         135
       ],
-      "sha256": "0620fa295b22cdfea8baf9d86e34addd5fd4cc073050fbc1388f9e5cbf1bb9b2",
-      "bytes": 28451,
-      "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
+      "sha256": "45ecae73755fb65833294604b93be0aab23669cbc50f7d9b3f842db33c3a9be8",
+      "bytes": 30118,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        11
+        "current-wagers-lines"
       ],
       "input_frame_rgb565_sha256": [
         "f2f4e06f04af422dc8b31f5cb5ab3616942ee8bdc68da555a8c6d7fc8dfdf199"
@@ -653,13 +642,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "37672f86693fa95a6a7c421a57a79cc94ebf1a7c1117db0fe2c581f91469d300"
     },
     {
       "file": "media/wagers-bets.png",
       "kind": "Selecting lines moves focus to red BET choices",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -668,13 +658,13 @@
         240,
         135
       ],
-      "sha256": "f643d99a9836ca07a21a4b0fd8ec54a3af3033c26ba93c412ffc5d899b84419a",
-      "bytes": 28286,
-      "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
+      "sha256": "62e57c01757f2c845ca4b21abde9f67ecb528e6e490f53e9063afc9147f63ba5",
+      "bytes": 30012,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        11
+        "current-wagers-bets"
       ],
       "input_frame_rgb565_sha256": [
         "c57831c33645d49c4dd08271a8e0be2253057460317b96b4a55659eebd83466b"
@@ -692,13 +682,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "63f61903bdd6e1dd85f4ba0b43856aa286fcf2234e8b14764d4e47d950d641e9"
     },
     {
       "file": "media/nested-free.png",
       "kind": "Nested Hold with actualFreeGame1of6 and existingHold counts",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -731,13 +722,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/nested-free-fire.png",
       "kind": "ActualFreeGame1of6 stays readable through the fire",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -770,13 +761,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/pickup-flight.webp",
       "kind": "Current broad collection curl with late center retarget",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -913,13 +904,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/cash25-burst.webp",
       "kind": "Current short25x cash-only Hold event excerpt; not a universalthreshold",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -1076,13 +1067,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/wisdom.webp",
       "kind": "Wisdom four-second display loop",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -1317,13 +1308,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/sage.webp",
       "kind": "Awarded two-/three-row Sage event, then preview restarts",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -1420,13 +1411,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/phoenix.webp",
       "kind": "One Phoenix asset cycle",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -1581,13 +1572,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/coins.webp",
       "kind": "Current coin-fountain excerpt; no threshold inference",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -1774,13 +1765,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/counter.webp",
       "kind": "Four-second calm counter rim",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -1895,13 +1886,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/multiplied-mini101.webp",
       "kind": "Current Triple Mini same-cell repeated pickups; stable filename",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2058,13 +2049,13 @@
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
       "preview_repeats_event": true,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/jackpots.png",
       "kind": "Actual Main/UI live-session page: jackpots",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2073,38 +2064,25 @@
         240,
         135
       ],
-      "sha256": "18c38af4d16940ecb7a3c046734405be16b62b0bea06440e7e65ae9deb18acbc",
-      "bytes": 33819,
-      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "sha256": "bce844763d3300313007b6b0ae77c72f83c252d2b305d098775616cecdb48139",
+      "bytes": 37881,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        "actual-main-panels210"
-      ],
-      "input_frame_rgb565_sha256": [
-        "7d42085052f3a175503e753477b14cb68af28c34c39185e405138d0e10b07064"
-      ],
-      "input_frame_clock_ms": [
-        1190
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 1,
-          "lines": 50,
-          "multiplier": 10
-        }
+        "current-jackpots"
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "359b21e4954117bedca04be0e1738f475c97bd686397d7819132ace203eba0a8"
     },
     {
       "file": "media/game-values.png",
       "kind": "Actual Main/UI live-session page: Counter & Jackpots parent",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2138,13 +2116,13 @@
       "frames": 1,
       "exact_source_RGB": true,
       "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/counter-editor.png",
       "kind": "Actual Main/UI live-session page: counter-editor",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2178,13 +2156,13 @@
       "frames": 1,
       "exact_source_RGB": true,
       "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/jackpot-values.png",
       "kind": "Actual Main/UI live-session page: jackpot-values",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2218,13 +2196,13 @@
       "frames": 1,
       "exact_source_RGB": true,
       "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/jackpot-editor.png",
       "kind": "Actual Main/UI live-session page: jackpot-editor",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2258,13 +2236,13 @@
       "frames": 1,
       "exact_source_RGB": true,
       "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/jackpots-custom.png",
       "kind": "Actual Main/UI live-session page: jackpots-custom",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2273,13 +2251,13 @@
         240,
         135
       ],
-      "sha256": "148eaf6051fe650fbf88223455b89e0c44dfdfc852d5a302df204df7ed05e5f8",
-      "bytes": 34059,
-      "fixture_kind": "Synthetic fresh session; supported Main/UI navigation and value editing, no direct bank/grid/presentation edits.",
+      "sha256": "6c3eb17928e9d870cf93af8e1bead34fc698c695cfa55429337a7e63ad2b3186",
+      "bytes": 39167,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
       "raw_camera_or_user_screenshot": false,
       "frames_financial_source_and_entropy_guards": true,
       "fixture_ids": [
-        "actual-main-panels210"
+        "current-jackpots-custom"
       ],
       "input_frame_rgb565_sha256": [
         "c007e5901e5126740ba8d66d209abb2dfa8db9b586a5f448394d582f6418383c"
@@ -2298,13 +2276,14 @@
       "frames": 1,
       "exact_source_RGB": true,
       "custom_jackpot_mask": 4,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "cd8e89122585e6a9525b1a145e30d7b2be81a69eb77713a2b04974c634766b97"
     },
     {
       "file": "media/maximum-counter140.png",
       "kind": "Bounded counter draft at maximum1886; live counter remains unchanged until Apply",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2324,13 +2303,13 @@
       "input_frame_rgb565_sha256": [
         "9055e5274bb8df00a6bbee09a6c3feab99b9bf2ba64ab8ce38c7e8eb4b2545c3"
       ],
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/counter-editor140.webp",
       "kind": "Blue/grey digit presses:0886 to1886 and back, then lower-digit6 to0; no Apply",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "dimensions": [
         720,
         405
@@ -2657,12 +2636,99 @@
           3
         ]
       ],
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+    },
+    {
+      "file": "media/credit-voucher.png",
+      "kind": "Funding-only Credits panel with Clear Balance selected",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "4ab5e6885b574dbc663d33885f6ae4733f962907f09040b3ffb47f4b0cae96b9",
+      "bytes": 22633,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "current-credit-voucher"
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "title": "Custom credit voucher",
+      "alt": "Editable Stardust credit voucher",
+      "input_frame_ppm_sha256": "1d832879d8b4de763746c9b02c093a12e314a356c976e70d01933e1e6d2c90d0"
+    },
+    {
+      "file": "media/loading.png",
+      "kind": "Funding-only Credits panel with Clear Balance selected",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "af1f8c28ef567c7fe134096efeb25c659e594c746df9e10989533ae261906029",
+      "bytes": 43090,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "current-loading"
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "title": "Startup loading overlay",
+      "alt": "Loading progress over the actual game",
+      "input_frame_ppm_sha256": "fa0d1b61432aa60842120a01f000cac7570008ae878240a647d9f66b82778526"
+    },
+    {
+      "file": "media/jackpots-fire.gif",
+      "kind": "Actual Main/UI live-session page: jackpots",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "sha256": "775e456fa0cc863f51284b0fda3a95e3251bc904d3c8b2ca04f3304e3b508642",
+      "bytes": 4003002,
+      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
+      "raw_camera_or_user_screenshot": false,
+      "frames_financial_source_and_entropy_guards": true,
+      "fixture_ids": [
+        "current-jackpots"
+      ],
+      "publication_transform": "Exact nearest-neighbor3x enlargement.",
+      "frames": 1,
+      "exact_source_RGB": true,
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
+      "input_frame_ppm_sha256": "b81355f39dedef7d9424c4d49fbe15eb3a001df636c7b02b1756a9879f77ffd0",
+      "title": "Jackpot title fire",
+      "alt": "Animated fire follows the Phoenix Link lettering"
     },
     {
       "file": "media/gameplay140-spin.webp",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "sha256": "187a67ea36d80c40dfb5215e8a3f94857505a8a3190aef12f40e1fb8af99c5f2",
       "bytes": 4789862,
       "dimensions": [
@@ -2722,12 +2788,12 @@
       "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
       "first_full_gold_still_ms": 3200,
       "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff",
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/gameplay140-spin.gif",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "sha256": "cafe6be14976996b1023bd27d36dd3f3516cd0950a4271793f1157a66393fa03",
       "bytes": 13118681,
       "dimensions": [
@@ -2787,12 +2853,12 @@
       "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
       "first_full_gold_still_ms": 3200,
       "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff",
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     },
     {
       "file": "media/hero-full-gold140.png",
-      "source_version": "0.2.141",
-      "runtime": "9464f61434fdcbc6102c41e30b04ac863cd0bd802d598cc25f15eb0e7ab91fb6",
+      "source_version": "0.2.143",
+      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
       "sha256": "bdccecde826ddfc1ffe0579c827b22bdb40688ceedb6fdf32024e13c65dbe7e7",
       "bytes": 49721,
       "dimensions": [
@@ -2801,7 +2867,7 @@
       ],
       "kind": "Full three-row gold Sage in current source, synthetic credits",
       "source_unrotated_clock_ms": 800,
-      "current_source_render_review_sha256": "23e3a89853b111be3da91d89102956bdcd6ae15504b181679c42614a35cf3af1"
+      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
     }
   ]
 }

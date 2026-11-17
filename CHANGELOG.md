@@ -1,5 +1,23 @@
 # Current release notes
 
+## 0.2.143
+
+- Wager-screen Return and hold-grey apply the selected denomination and lines without spinning.
+- Unaffordable red BET selects its counter before the normal funding check; equal-credit same-denomination bets retain their shared bank.
+- Custom Amount comes first in Credits; holding blue moves to the digit on the left.
+- Editable Stardust voucher uses matching varied decorative identifiers, written amounts and the cash-in sound.
+- Small startup progress overlay retains the game behind it.
+- Flat jackpot fields, larger topper/amounts and stationary letter-edge fire.
+- Reconstructed red temple courtyard behind the original clean publisher figure.
+- Jackpot amounts, outcome weights and CSPRNG provider are unchanged.
+
+
+<img src="docs/media/credit-voucher.png" alt="Custom credit voucher" width="720">
+
+<img src="docs/media/wagers.png" alt="Wager selector with temple courtyard" width="720">
+
+<img src="docs/media/jackpots-fire.gif" alt="Animated jackpot title fire" width="720">
+
 ## 0.2.141
 
 - Opening a menu pauses the feature and its music. Returning to play continues the tune from its paused position instead of replaying the opening bells.

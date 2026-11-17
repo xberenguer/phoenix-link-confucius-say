@@ -5,7 +5,7 @@ bool jackpotBoardAmount198(unsigned tier,int64_t& out){
  if(!engine.jackpotAmountMinor(tier,cached))return false;
  return phoenix::money::toMinor(engine.jackpotValueAmount(tier),engine.state.coinValue,1,out);
 }
-constexpr uint16_t jackpotColors207[4]={0xfc43,0x229f,0x05a3,0xe122};
+constexpr uint16_t jackpotColors207[4]={0xfa61,0x121f,0x2e63,0xf840};
 void jackpotBold207(const char* label,int center,int y,unsigned size,uint16_t color){
  int x=center-(textWidth(label,size)+1)/2;const auto* opacity=pf::pixels(size);
  for(auto p=reinterpret_cast<const unsigned char*>(label);*p;++p){const auto& glyph=pf::glyph(size,*p);
@@ -38,9 +38,9 @@ void jackpotBadge207(uint32_t now,unsigned tier,const char* label,int x,int y,bo
  jackpotBold207(label,cx,labelY,size,jackpotColors207[tier]);
  text(wide?"JACKPOT":"BONUS",cx,y+(wide?22:17),6,BRIGHT,1);
 }
-void jackpotFrame198(uint32_t now,int x,int y,int w,int h,uint16_t top,uint16_t bottom){
- for(int r=0;r<h;++r){const int inset=r<3?3-r:r>=h-3?r-h+4:0;
-  fill(x+inset,y+r,w-inset*2,1,counter_fire89::mix565(top,bottom,unsigned(r)*255/unsigned(h-1)));}
+void jackpotFrame198(uint32_t now,int x,int y,int w,int h){
+ // Original topper uses a flat dark field behind the jackpot amounts.
+ fill(x,y,w,h,0x0800);
  const auto rim=[&](int inset,uint16_t color){
   const int xx=x+inset,yy=y+inset,ww=w-inset*2,hh=h-inset*2;
   line(xx+3,yy,xx+ww-4,yy,color);line(xx+3,yy+hh-1,xx+ww-4,yy+hh-1,color);
@@ -71,42 +71,63 @@ JackpotAmountLayout207 jackpotAmountLayout207(const char* amount,unsigned tier){
  for(unsigned candidate:wide?std::initializer_list<unsigned>{20,16,10,8,7}:std::initializer_list<unsigned>{16,10,8,7}){
   size=candidate;if(cashWidth(amount,candidate)<=right-left-2)break;
  }
- return {left,right,(tier==3?33:tier==2?69:103)+((wide?20:16)-int(size))/2,size};
+ return {left,right,(tier==3?37:tier==2?73:107)+((wide?20:16)-int(size))/2,size};
 }
 void jackpotCash207(const char* amount,const JackpotAmountLayout207& placement,unsigned tier){
- const int right=(placement.left+placement.right+cashWidth(amount,placement.size))/2;
- cashText(amount,right+1,placement.y+1,placement.size,0x0000);
- constexpr uint16_t rim=0xb560;
- cashText(amount,right-1,placement.y,placement.size,rim);
- cashText(amount,right+1,placement.y,placement.size,rim);
- cashText(amount,right,placement.y-1,placement.size,rim);
- cashText(amount,right,placement.y+1,placement.size,rim);
- cashText(amount,right,placement.y,placement.size,jackpotColors207[tier]);
+ const unsigned scale=tier>=2&&cashWidth(amount,placement.size)*6<=(placement.right-placement.left-2)*5?6:5;
+ const int width=(cashWidth(amount,placement.size)*int(scale)+2)/5;
+ const int left=(placement.left+placement.right-width)/2,y=placement.y-(int(placement.size*scale/5)-int(placement.size))/2;
+ const auto draw=[&](int dx,int dy,uint16_t color){int advance=0;const auto* alpha=pmoney::pixels(placement.size);
+  for(auto p=(const unsigned char*)amount;*p;++p){const auto& g=pmoney::glyph(placement.size,*p);const int x=left+(advance*int(scale)+2)/5;
+   for(unsigned r=0;r<(g.h*scale+4)/5;++r)for(unsigned c=0;c<(g.w*scale+4)/5;++c){const unsigned srcR=std::min<unsigned>(g.h-1,r*5/scale),srcC=std::min<unsigned>(g.w-1,c*5/scale);const auto opacity=alpha[g.offset+srcR*g.w+srcC];if(opacity)dot(x+int(c)+dx,y+int(r)+dy,color,opacity);}
+   advance+=g.advance;
+  }
+ };
+ draw(1,1,0x0000);draw(-1,0,0xff20);draw(1,0,0xff20);draw(0,-1,0xff20);draw(0,1,0xff20);draw(0,0,jackpotColors207[tier]);
 }
 void jackpotRow207(uint32_t now,unsigned tier,const char* label){
- const bool wide=tier>=2;const int top=tier==3?24:tier==2?60:96;
- constexpr uint16_t panelTop[4]={0x5840,0x0010,0x0240,0x5800};
- constexpr uint16_t panelBottom[4]={0x1800,0x0003,0x0060,0x1800};
- if(wide)jackpotFrame198(now,20,top+4,200,31,panelTop[tier],panelBottom[tier]);
- else jackpotFrame198(now,tier==1?20:120,98,100,26,panelTop[tier],panelBottom[tier]);
+ const bool wide=tier>=2;const int top=tier==3?28:tier==2?64:100;
+ if(wide)jackpotFrame198(now,20,top+4,200,31);
+ else jackpotFrame198(now,tier==1?20:120,104,100,22);
  int64_t value=0;
  if(jackpotBoardAmount198(tier,value)){const auto amount=jackpotBoardMoney207(value,tier);jackpotCash207(amount.c_str(),jackpotAmountLayout207(amount.c_str(),tier),tier);}
  else text("UNAVAILABLE",wide?120:tier==1?77:163,top+(wide?14:11),7,WHITE,1);
  if(wide){jackpotBadge207(now,tier,label,0,top,true,false);jackpotBadge207(now,tier,label,192,top,true,true);}
- else jackpotBadge207(now,tier,label,tier==1?1:203,96,false,tier==0);
+ else jackpotBadge207(now,tier,label,tier==1?1:203,100,false,tier==0);
+}
+// Local reconstruction of the filmed letter-edge fire. The underlying
+// publisher wordmark remains stationary; only its warm fringe is animated.
+unsigned jackpotFlame143(unsigned x,unsigned step){
+ uint32_t v=uint32_t(x+17)*0x45d9f3bu^uint32_t(step%32+1)*0x9e3779b9u;
+ v^=v>>16;v*=0x45d9f3bu;return (v^(v>>16))&255u;
+}
+unsigned jackpotFlow143(unsigned x,uint32_t now){
+ const unsigned tick=(now%2560)/80,fraction=(now%80)*255/80;
+ return (jackpotFlame143(x,tick)*(255-fraction)+jackpotFlame143(x,tick+1)*fraction+127)/255;
 }
 void jackpotTopper207(uint32_t now){
- const auto& im=jackpot_brand207::image;const int left=(W-int(im.w))/2;
- const unsigned phase=(now/160)%20,gain=246+(phase<10?phase:19-phase);
- for(unsigned r=0;r<im.h;++r)for(unsigned c=0;c<im.w;++c){const unsigned at=r*im.w+c;
-  if(im.alpha[at])dot(left+int(c),int(r),im.rgb[at],unsigned(im.alpha[at])*gain/255);
+ const auto& im=jackpot_brand207::image;constexpr int width=224,height=32,left=(W-width)/2;
+ for(int c=0;c<width;++c){
+  const unsigned flow=jackpotFlow143(unsigned(c/3),now);int top=-1;
+  for(int r=0;r<height;++r){const unsigned at=unsigned(r)*im.h/height*im.w+unsigned(c)*im.w/width;
+   if(!im.alpha[at])continue;
+   const uint16_t pigment=im.rgb[at];const unsigned red=(pigment>>11)&31,green=(pigment>>5)&63,blue=pigment&31;
+   const bool warm=red>15&&green>15&&green<red*2&&blue<12;
+   if(warm&&im.alpha[at]>160&&top<0)top=r;
+   dot(left+c,r,pigment,im.alpha[at]);
+   if(warm){const unsigned light=jackpotFlow143(unsigned(c/3+r/4),now+unsigned(r)*24u);
+    dot(left+c,r,light>150?0xff8c:0xfaa0,40+light/3);}
+  }
+  if(top>0&&top<height/2){
+   const unsigned tongue=flow>192?3:flow>96?2:1;
+   for(unsigned k=1;k<=tongue;++k){const int yy=top-int(k);if(yy<0)break;
+    dot(left+c,yy,k==1?0xfd60:0xfb00,(unsigned(tongue+1-k)*(60+flow/2))/tongue);}
+  }
  }
 }
 void drawJackpots198(uint32_t now){
  fill(0,0,W,H,0x0800);
- for(int row=0;row<20;++row)fill(0,row,W,1,counter_fire89::mix565(0x0800,0x2000,unsigned(row)*255/19));
  jackpotTopper207(now);
  jackpotRow207(now,3,"GRAND");jackpotRow207(now,2,"MAJOR");
  jackpotRow207(now,1,"MINOR");jackpotRow207(now,0,"MINI");
- text("BLUE OR GREY: BACK",120,128,6,BRIGHT,1);
 }

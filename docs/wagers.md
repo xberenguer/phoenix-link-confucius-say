@@ -23,7 +23,7 @@ The menu evidence is cabinet-specific. It does not establish a universal denomin
 
 The main deck is based on the filmed Palms configuration [mBcjPK63KW4](https://www.youtube.com/watch?v=mBcjPK63KW4). Its $1/10-line control is visible, but a complete selected Confucius paid row has not been recovered. The selectable $1/10-line row uses observed Phoenix Link family controls from General Tso: multipliers 1, 2, 3, 4, 5, with amounts calculated for ten selected lines. This is an explicitly labeled family adaptation, not proof of a universal Confucius $1 wager deck.
 
-The exact implemented availability is defined by [cabinet_profile.h](../firmware/src/cabinet_profile.h); the generated [offered-wager CSV](data/offered-wagers.csv) enumerates all 55 selectable choices. The red button commits its wager and begins a funded spin, rather than merely highlighting a bet for a second confirmation.
+The exact implemented availability is defined by [cabinet_profile.h](../firmware/src/cabinet_profile.h); the generated [offered-wager CSV](data/offered-wagers.csv) enumerates all 55 selectable choices. The red button commits its wager and begins a spin when funded; the ordinary funding check prevents an unaffordable spin.
 
 ## Denomination and MIN BET
 
@@ -35,6 +35,6 @@ The screen opens with the current denomination focused. Selecting a denomination
 
 <img src="media/wagers-lines.png" alt="Denomination selected with focus on a real PLAY LINES control" width="720">
 
-Viewing or cancelling the wager screen does not change the live wager or spend credits. A new session starts at its default wager; no previous game is imported.
+Holding grey or choosing RETURN applies the selected denomination and lines without spending credits or starting a spin. The current multiplier is retained when offered; otherwise the first supported multiplier is selected. The green counter changes to that wager's existing bank. An unaffordable red BET still selects its wager and counter, then follows the normal insufficient-funds path. A new session starts at its default wager; no previous game is imported.
 
 The [payout reference](payouts.md) exports the wider internal evaluator support with a selectable flag. Those internal rows must not be read as extra live cabinet buttons. See [controls](controls.md) for focus/navigation and [session rules](saving.md) for live feature/funding boundaries.

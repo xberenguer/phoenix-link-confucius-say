@@ -30,6 +30,7 @@ Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the d
 
 | Choice | Effect |
 |---|---|
+| Custom Amount | Edit a cash voucher; Done adds the amount and returns to Game with the cash-in cue |
 | Add $1,000 | Add to the current money balance, return to Game with autoplay off |
 | Add $10,000 | Add to the current money balance, return to Game with autoplay off |
 | Add $100,000 | Add to the current money balance, return to Game with autoplay off |
@@ -37,9 +38,13 @@ Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the d
 | Auto Refill | Toggle refill when another paid spin is unaffordable |
 | Back to Menu | Return to Game Menu |
 
-Auto Refill uses the last supported addition size for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Clear Balance is available at a closed Ready/Base boundary; unfinished Free/Hold/queued work and service or selector faults block it. It preserves the live wager, meter buckets and statistics, and does not change the Auto Refill preference. A later unaffordable paid spin can therefore refill the balance if that option is on. There is no $1 million choice.
+Auto Refill uses the last successful addition amount for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Clear Balance is available at a closed Ready/Base boundary; unfinished Free/Hold/queued work and service or selector faults block it. It preserves the live wager, meter buckets and statistics, and does not change the Auto Refill preference. A later unaffordable paid spin can therefore refill the balance if that option is on. There is no fixed $1 million button; Custom Amount accepts $0.01–$9,999,999.99.
 
 <img src="media/credits.png" alt="Credits menu with balance and automatic refill controls" width="720">
+
+Custom Amount is the first Credits choice. It opens a Stardust voucher. Grey moves right through digits, Done and Cancel; short blue changes a digit. **Hold blue moves one digit left**, revealing a leading place without cycling around the form. Hold grey cancels. Done adds the amount once and returns to Game with the cash-in sound. The amount in words follows the editable cash value. The matching barcode and validation identifiers are decorative, remain fixed during editing and change for each newly opened voucher. The issue stamp uses the release date and session time, not a synchronized casino clock.
+
+<img src="media/credit-voucher.png" alt="Editable custom credit voucher" width="720">
 
 ## Feature counter and jackpot amounts
 
@@ -55,7 +60,7 @@ Jackpot amounts are absolute cash values: changing denomination or wager does no
 
 <img src="media/jackpot-editor.png" alt="Jackpot cash amount editor" width="720">
 
-Double-grey during gameplay opens the jackpot board. Blue or grey closes it without spinning. It shows the amounts available for future prizes at the current configuration.
+Double-grey during gameplay opens the jackpot board. Blue or grey closes it without spinning. It shows the amounts available for future prizes at the current configuration. See [jackpot values and configurations](jackpot-values.md) for the denomination rules, observed prices and local assumptions.
 
 The counter ceiling is the simulator’s closed-state limit, derived from its hidden-threshold and immediate-reset policy. It is not an authenticated factory display maximum; see [counter scope](collection-counter.md#local-meter-model).
 

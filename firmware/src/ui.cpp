@@ -1928,9 +1928,9 @@ bool clearBalanceAvailable(){
 void drawReset(){
  if(creditsPanel201!=CreditsPanel201::Credits){drawValues201();return;}
  panel("CREDITS");
- const char* labels[]={"ADD $1,000","ADD $10,000","ADD $100,000","CLEAR BALANCE","AUTO REFILL","BACK TO MENU"};
+ const char* labels[]={"CUSTOM AMOUNT","ADD $1,000","ADD $10,000","ADD $100,000","CLEAR BALANCE","AUTO REFILL","BACK TO MENU"};
  const bool available=phase==Phase::Ready&&engine.canChangeBet();
- for(int i=0;i<6;++i){const int y=43+i*10;if(i==creditItem)fill(16,y-1,208,9,0x2a86);const bool disabled=i<3?!available:i==3?!clearBalanceAvailable():false;text(labels[i],24,y,8,disabled?0x7bef:i==creditItem?BRIGHT:WHITE);if(i==4)text(autoRefill?"ON":"OFF",213,y,8,autoRefill?0x07e5:WHITE,2);}
+ for(int i=0;i<7;++i){const int y=41+i*9;if(i==creditItem)fill(16,y-1,208,9,0x2a86);const bool disabled=i<4?!available:i==4?!clearBalanceAvailable():false;text(labels[i],24,y,8,disabled?0x7bef:i==creditItem?BRIGHT:WHITE);if(i==5)text(autoRefill?"ON":"OFF",213,y,8,autoRefill?0x07e5:WHITE,2);}
  text(("BALANCE "+money(engine.state.balance)).c_str(),120,106,7,WHITE,1);
  text(available?("REFILL TO "+money(lastAddedMinor,true)).c_str():"FUNDING AVAILABLE AFTER FEATURE",120,115,6,BRIGHT,1);
  text("GREY: NEXT  BLUE: SELECT  HOLD GREY: BACK",120,122,6,WHITE,1);
@@ -2431,6 +2431,18 @@ void openCabinetWager(){
  for(unsigned i=0;i<cabinet_profile::denominationCount;++i)if(cabinet_profile::coins[i].minor==cabinetDenom)cabinetFocus=i;cabinetAvailable=phase==Phase::Ready&&engine.canChangeBet()&&cabinetRow().count;
  if(engine.state.mode!=Mode::Base)awaitingBonusResume=true;
  statusLine[0]=0;view=View::Bet;dirty=true;
+}
+bool returnCabinetWager143(){
+ if(cabinetAvailable&&phase==Phase::Ready&&engine.canChangeBet()){
+  const auto& row=cabinetRow();uint8_t multiplier=row.count?row.multipliers[0]:0;
+  for(unsigned i=0;i<row.count;++i)if(row.multipliers[i]==engine.state.betMultiplier)multiplier=row.multipliers[i];
+  if(!multiplier||!applyRuntimeWager(cabinetDenom,cabinetLines,multiplier)){
+   if(!engine.randomHealthy())enterRandomFault125();
+   else{snprintf(statusLine,sizeof(statusLine),"WAGER UNAVAILABLE");dirty=true;}
+   return false;
+  }
+ }
+ cabinetMenuRequested=false;view=View::Game;statusLine[0]=0;dirty=true;return true;
 }
 void chooseMenu(){cueButton();switch(menuItem){
  case 0:rulesPage=0;view=View::Rules;break;
@@ -3056,6 +3068,18 @@ UiAwardSceneTest uiTestAwardScene(bool spinOnly,bool automatic){
 }
 #include "arrival_scene_qa.h"
 #include "profile_scene_qa.h"
+void uiLoading(uint8_t prepared){
+ if(!initialized)return;
+ rasterScene(millis());
+ fill(76,49,88,34,0x0923);
+ rect(76,49,88,34,0xe585);rect(78,51,84,30,0xff6e);
+ text("LOADING",W/2,57,10,0xff6e,1);
+ fill(87,72,66,4,0x0000);rect(86,71,68,6,0xe585);
+ fill(87,72,66*std::min<unsigned>(prepared,3)/3,4,0xff6e);
+ M5.Display.setSwapBytes(true);
+ M5.Display.pushImage(0,0,W,H,pixels);
+ dirty=true;
+}
 void uiRedraw(){dirty=true;}
 void uiStatus(const char* message){snprintf(statusLine,sizeof(statusLine),"%s",message?message:"");dirty=true;}
 bool uiReady(){return initialized&&!runtimeFinancialBlocked()&&phase==Phase::Ready&&view==View::Game;}
@@ -3070,20 +3094,19 @@ void uiNewBank(){
 }
 
 void uiButtonA(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game){uiAction();return;}if(view==View::Jackpots){cueButton();closeJackpotBoard198();return;}cueButton();if(view==View::Menu)chooseMenu();else if(view==View::Bet){
- if(cabinetFocus==cabinetReturnFocus())view=View::Game;
+ if(cabinetFocus==cabinetReturnFocus())returnCabinetWager143();
  else if(phase==Phase::Ready&&engine.canChangeBet()){
   if(cabinetFocus<cabinet_profile::denominationCount){statusLine[0]=0;cabinetDraftDenom(cabinetFocus);}
   else if(cabinetFocus<cabinetBetBase()){statusLine[0]=0;cabinetLines=cabinetCoin().lines[cabinetFocus-cabinet_profile::denominationCount];cabinetFocusBet();}
   else if(cabinetFocus<cabinetReturnFocus()){
    const auto multiplier=cabinetRow().multipliers[cabinetFocus-cabinetBetBase()];
-   const int64_t stake=cabinetDenom*int64_t(cabinetLines)*multiplier;
-   // Browsing is read-only. The observed red BET control commits and spins;
-   // an unfunded press cannot create a meter bucket or consume a game draw.
-   if(engine.state.balance<stake&&!autoRefill){snprintf(statusLine,sizeof(statusLine),"NOT ENOUGH CREDITS");dirty=true;}
-   else if(applyRuntimeWager(cabinetDenom,cabinetLines,multiplier)){view=View::Game;action();}
+   // A red BET selects this wager even when the balance cannot fund it.
+   // The normal action admission owns charging/spinning or the existing
+   // insufficient-funds path; selecting a meter bank never buys a spin.
+   if(applyRuntimeWager(cabinetDenom,cabinetLines,multiplier)){view=View::Game;action();}
   }
  }
-}else if(view==View::Settings){if(settingsItem==0){soundItem=0;view=View::Sound;}else if(settingsItem==1){optionItem=0;view=View::Options;}else{menuItem=10;view=View::Menu;}}else if(view==View::Paylines){nextPaylinesLayout();}else if(view==View::Rules)view=View::Menu;else if(view==View::Reset){if(creditsPanel201!=CreditsPanel201::Credits){valuesSelect201();}else if(creditItem<3){if(uiAddCredits(creditAmounts[creditItem])){view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==3){if(clearBalanceAvailable()&&engine.setCredits(0)){++creditRevision;displayBank=0;view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==4){autoRefill=!autoRefill;++creditRevision;cueCredit();}else if(creditItem==5){menuItem=3;view=View::Menu;statusLine[0]=0;}}else if(view==View::Lucky)playLucky();else if(view==View::Options){if(optionItem==0){auto b=M5.Display.getBrightness();M5.Display.setBrightness(b>=200?40:b<80?100:b<150?160:220);}else if(optionItem==1)creditsDisplay=!creditsDisplay;else uiFlipScreen();}
+}else if(view==View::Settings){if(settingsItem==0){soundItem=0;view=View::Sound;}else if(settingsItem==1){optionItem=0;view=View::Options;}else{menuItem=10;view=View::Menu;}}else if(view==View::Paylines){nextPaylinesLayout();}else if(view==View::Rules)view=View::Menu;else if(view==View::Reset){if(creditsPanel201!=CreditsPanel201::Credits){valuesSelect201();}else if(creditItem==0){if(phase==Phase::Ready&&engine.canChangeBet())openCreditVoucher143();}else if(creditItem<4){if(uiAddCredits(creditAmounts[creditItem-1])){view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==4){if(clearBalanceAvailable()&&engine.setCredits(0)){++creditRevision;displayBank=0;view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==5){autoRefill=!autoRefill;++creditRevision;cueCredit();}else if(creditItem==6){menuItem=3;view=View::Menu;statusLine[0]=0;}}else if(view==View::Lucky)playLucky();else if(view==View::Options){if(optionItem==0){auto b=M5.Display.getBrightness();M5.Display.setBrightness(b>=200?40:b<80?100:b<150?160:220);}else if(optionItem==1)creditsDisplay=!creditsDisplay;else uiFlipScreen();}
 else if(view==View::Sound){if(soundItem==0){
 #ifndef UI_HOST_TEST
  audioSetMuted(!audioMuted());
@@ -3095,7 +3118,7 @@ else if(view==View::Volume)adjustVolume(true);
 else if(view==View::Math){selectReturnOption86();}
 
 dirty=true;}
-void uiButtonB(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game)return;cueButton();if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Menu)nextMenuItem();else if(view==View::Settings)settingsItem=(settingsItem+1)%3;else if(view==View::Paylines)paylinesPage=(paylinesPage+1)%paylinesPageCount();else if(view==View::Bet)cabinetFocus=(cabinetFocus+1)%(cabinetReturnFocus()+1);else if(view==View::Rules)rulesPage=(rulesPage+1)%kRulesPageCount;else if(view==View::Options)optionItem=(optionItem+1)%3;else if(view==View::Sound)soundItem=(soundItem+1)%6;else if(view==View::Volume)adjustVolume(false);else if(view==View::Reset){if(creditsPanel201==CreditsPanel201::Credits)creditItem=(creditItem+1)%6;else valuesNext201();}else if(view==View::Lucky)view=View::Game;else if(view==View::Math)nextReturnOption86();dirty=true;}
+void uiButtonB(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game)return;cueButton();if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Menu)nextMenuItem();else if(view==View::Settings)settingsItem=(settingsItem+1)%3;else if(view==View::Paylines)paylinesPage=(paylinesPage+1)%paylinesPageCount();else if(view==View::Bet)cabinetFocus=(cabinetFocus+1)%(cabinetReturnFocus()+1);else if(view==View::Rules)rulesPage=(rulesPage+1)%kRulesPageCount;else if(view==View::Options)optionItem=(optionItem+1)%3;else if(view==View::Sound)soundItem=(soundItem+1)%6;else if(view==View::Volume)adjustVolume(false);else if(view==View::Reset){if(creditsPanel201==CreditsPanel201::Credits)creditItem=(creditItem+1)%7;else valuesNext201();}else if(view==View::Lucky)view=View::Game;else if(view==View::Math)nextReturnOption86();dirty=true;}
 void uiButtonBHold(){if(uiReturnSelectionInputFenced())return;if(view==View::Reset&&creditsPanel201!=CreditsPanel201::Credits){valuesBack201();return;}if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Bet)uiCabinetMenu();else uiMenu();}
 void uiMenu(){
  if(uiReturnSelectionInputFenced())return;
@@ -3135,7 +3158,7 @@ void uiCabinetMenu(){
  if(!initialized||storagePause!=UiCheckpointPause::None)return;
  if(runtimeFinancialBlocked()){enterService();return;}
  autoPlay=false;cueButton();
- if(view==View::Bet){cabinetMenuRequested=false;view=View::Game;dirty=true;return;}
+ if(view==View::Bet){returnCabinetWager143();return;}
  if(cabinetMenuRequested){cabinetMenuRequested=false;dirty=true;return;}
  if(phase!=Phase::Ready){cabinetMenuRequested=true;dirty=true;return;}
  openCabinetWager();
@@ -3144,7 +3167,7 @@ bool uiIsGameView(){return storagePause==UiCheckpointPause::None&&view==View::Ga
 void uiSetScreenFlipped(bool flipped){screenFlipped=flipped;M5.Display.setRotation(flipped?3:1);dirty=true;}
 void uiFlipScreen(){if(uiReturnSelectionInputFenced())return;uiSetScreenFlipped(!screenFlipped);}
 bool uiScreenFlipped(){return screenFlipped;}
-void uiToggleAuto(){if(uiReturnSelectionInputFenced())return;if(!initialized||runtimeFinancialBlocked())return;if(view==View::Volume){auditionSound(false);return;}if(view!=View::Game)return;autoPlay=!autoPlay;if(autoPlay){awaitingBonusResume=false;view=View::Game;autoAt=millis()+250;}cueButton();dirty=true;}
+void uiToggleAuto(){if(uiReturnSelectionInputFenced())return;if(!initialized||runtimeFinancialBlocked())return;if(view==View::Reset&&creditsPanel201==CreditsPanel201::CreditVoucher){editFocus201=editFocus201<9?(editFocus201?editFocus201-1:0):8;statusLine[0]=0;dirty=true;return;}if(view==View::Volume){auditionSound(false);return;}if(view!=View::Game)return;autoPlay=!autoPlay;if(autoPlay){awaitingBonusResume=false;view=View::Game;autoAt=millis()+250;}cueButton();dirty=true;}
 void uiSetSoundPreferences(bool spin,bool landings,uint8_t volume){(void)spin;landingSounds=landings;soundVolume=volume;
 #ifndef UI_HOST_TEST
  audioSetSpinEnabled(false);audioSetLandingsEnabled(landings);audioSetVolume(volume);
@@ -3153,14 +3176,11 @@ void uiSetSoundPreferences(bool spin,bool landings,uint8_t volume){(void)spin;la
 }
 bool uiAddCredits(uint32_t amountMinor){
  if(!amountMinor||uiReturnSelectionInputFenced()||runtimeFinancialBlocked()||phase!=Phase::Ready||!engine.canChangeBet()||!engine.addCredits(amountMinor))return false;
- for(auto amount:creditAmounts)if(amountMinor==amount)lastAddedMinor=amount;
+ lastAddedMinor=amountMinor;
  ++creditRevision;displayBank=engine.state.balance;dirty=true;cueCredit();return true;
 }
 void uiSetCreditPreferences(bool enabled,uint32_t amount){
- // An old $1m refill selection becomes the largest remaining menu amount.
- // Only the refill preference changes; the current bank/meter/RNG do not.
- autoRefill=enabled;lastAddedMinor=amount==100000000?10000000:1000000;
- for(auto valid:creditAmounts)if(amount==valid)lastAddedMinor=amount;
+ autoRefill=enabled;lastAddedMinor=amount&&amount<=999999999?amount:1000000;
  dirty=true;
 }
 bool uiAutoRefillEnabled(){return autoRefill;}

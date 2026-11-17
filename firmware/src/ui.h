@@ -15,6 +15,8 @@ bool uiPrepareEffects();
 UiEffectCache uiEffectCache();
 void uiFrame();
 void uiRedraw();
+// Startup-only raster; does not advance the game or consume randomness.
+void uiLoading(uint8_t prepared=1);
 void uiStatus(const char* text);
 bool uiReady();
 void uiAction();
