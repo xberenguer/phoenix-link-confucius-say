@@ -8,7 +8,7 @@ Three or more Wisdom scatters in Base award six free games in the current model.
 
 The initial three-Wisdom entry uses a dedicated announcement and jingle. The final reel settles, the six-free announcement appears above the board and START continues the feature. Accepting START commits the displayed existing win, exposes the paired reel frames and begins the first free motion after a roughly half-second preparation. This display preparation does not spend a second bet or draw an extra outcome.
 
-<img src="media/wisdom-entry.png" alt="Scripted Wisdom entry on the simulator" width="720">
+<img src="media/development/wisdom-entry.png" alt="Scripted Wisdom entry on the simulator" width="720">
 
 The first free-game caption can count from 1 OF 1 to 1 OF 6 as a presentation. The Engine has already awarded six games; the caption does not generate them one at a time. Source-timed entry work is based on identified three-Wisdom sequences, including [5BUJOWxIBN4 near 10:10](https://www.youtube.com/watch?v=5BUJOWxIBN4&t=610s), rather than a universal timer for every scatter count.
 
@@ -32,7 +32,7 @@ A free result can also enter Hold & Spin. The free-game session and its remainin
 
 During a nested Hold, **FREE GAME / n OF total** remains in the condition-text slot alongside the normal Hold information. The progress caption stays readable through the fire sweep. It uses the actual Free game and announced total; it does not consume a game or create an award.
 
-<img src="media/nested-free.png" alt="Nested Hold with Free Game progress, collected count, remaining respins and green meter" width="720">
+<img src="media/development/nested-free.png" alt="Nested Hold with Free Game progress, collected count, remaining respins and green meter" width="720">
 
 Feature WIN is cumulative across the session. A Hold's values and a line/scatter award are not meant to be counted twice when their animations transfer to CREDIT. The [session guide](saving.md) explains live action safety and the fresh-game behavior on restart.
 

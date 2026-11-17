@@ -2,7 +2,7 @@
 
 Hold the large grey button during gameplay for Game Menu. Grey moves and blue selects. The small power key is separate. Inside the wager panel, hold-grey returns directly to Game.
 
-<img src="media/menu.png" alt="Game Menu" width="720">
+<img src="media/development/menu.png" alt="Game Menu" width="720">
 
 ## Rules and wagers
 
@@ -22,7 +22,7 @@ Brightness cycles the implemented levels. Amount Units switches between cash and
 
 Open **Settings → Sound**. Master sound and stops/landings have separate controls. Volume adjusts the level; Test Free-Games Intro, Test Hold Music and Test Award Jingle play their named programs. See [audio](audio.md) for current routing and acoustic limits.
 
-<img src="media/sound.png" alt="Sound menu" width="720">
+<img src="media/development/sound.png" alt="Sound menu" width="720">
 
 ## Balance
 
@@ -40,7 +40,7 @@ Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the d
 
 Auto Refill uses the last successful addition amount for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Clear Balance is available at a closed Ready/Base boundary; unfinished Free/Hold/queued work and service or selector faults block it. It preserves the live wager, meter buckets and statistics, and does not change the Auto Refill preference. A later unaffordable paid spin can therefore refill the balance if that option is on. There is no fixed $1 million button; Custom Amount accepts $0.01–$9,999,999.99.
 
-<img src="media/credits.png" alt="Balance menu with balance and automatic refill controls" width="720">
+<img src="media/development/credits.png" alt="Balance menu with balance and automatic refill controls" width="720">
 
 Custom Amount is the first Balance choice. It opens a Stardust voucher. Grey moves right through digits, Insert Credits and Cancel; short blue changes a digit. **Hold blue moves one digit left**, revealing a leading place without cycling around the form. Hold grey cancels. Insert Credits adds the amount once and returns to Game with the cash-in sound. New vouchers open at **$00,000.00**, focused on the ten-thousands zero. Unused leading zeros disappear as you move right: one dollar displays as **$1.00**. Hold blue to reveal a larger place again. The amount in words follows the editable cash value. The matching barcode and validation identifiers are decorative, remain fixed during editing and change for each newly opened voucher. The issue stamp uses the release date and session time, not a synchronized casino clock.
 

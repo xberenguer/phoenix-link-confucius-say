@@ -57,6 +57,8 @@ Readable continuous recordings can expose a rule, shape or price mismatch. Edite
 
 ## Return and house edge
 
+The [counter-entry reference](counter-entry.md) gives conditional return calculations for the current model and explains why they are not validated casino entry thresholds.
+
 SIMULATOR RETURN offers six options. Applying an option at a closed Ready/Base boundary changes **future Grand only**. It does not change reel weights, hit probabilities, ordinary prices or other prizes.
 
 The displayed return/edge ranges are **ideal-reference-only** enclosures under a fixed profile, fixed option, always-funded play and no Lucky Chance. They assume ideal uniform draws in the unchanged local stochastic game. They do not include every source/runtime fault, restart rule, adaptive wager strategy or short-session fluctuation. Finite draw caps have nonzero failure mass and fail closed; their implementation is not silently equated with unlimited sampling.

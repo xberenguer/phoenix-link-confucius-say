@@ -110,6 +110,41 @@ def verify(root):
         require(list(dimensions(path)) == item["dimensions"],
                 "Image size mismatch: " + item["file"])
         catalog[path] = item
+    # Documentation may preview a separately pinned development renderer while
+    # source, playable demo and tagged firmware retain the stable release.
+    # Keep all stable-release checks above; preview images have their own scope.
+    preview_path = root / "docs/development-gallery.json"
+    if preview_path.exists():
+        preview = read("docs/development-gallery.json")
+        require(preview["kind"] == "development-preview", "Unscoped gallery preview")
+        require(preview["release_version"] == version, "Preview stable release is stale")
+        preview_pins = preview["source_files_sha256"]
+        preview_bodies = {n: v for n, v in preview_pins.items() if n not in {
+            "math_runtime_identity.h", "static_grand_table.h", "phoenix_crypto124/LICENSE"}}
+        preview_canonical = json.dumps({"family": preview["mathematical_family"],
+                                       "sources": preview_bodies},
+                                      sort_keys=True, separators=(",", ":")).encode()
+        require(hashlib.sha256(preview_canonical).hexdigest() == preview["runtime"],
+                "Preview source fingerprint is inconsistent")
+        require(preview["renderer_sha256"] == preview_pins["ui.cpp"],
+                "Preview renderer identity differs")
+        require(preview["engine_sha256"] == preview_pins["phoenix_engine.h"],
+                "Preview Engine identity differs")
+        for item in preview["images"]:
+            path = (root / "docs" / item["file"]).resolve()
+            require(path.is_relative_to(root / "docs/media/development") and path.is_file(),
+                    "Missing/unsafe development image: " + item["file"])
+            require(item["source_version"] == preview["version"] and
+                    item["runtime"] == preview["runtime"], "Preview image source differs")
+            if path.is_file():
+                require(sha(path) == item["sha256"] and path.stat().st_size == item["bytes"],
+                        "Preview image content differs: " + item["file"])
+                require(list(dimensions(path)) == item["dimensions"],
+                        "Preview image dimensions differ: " + item["file"])
+            catalog[path] = item
+        for path in (root / "docs/media/development").rglob("*"):
+            if path.is_file():
+                require(path.resolve() in catalog, "Uncatalogued development media: " + path.name)
     for name, key in [("docs/data/reference-metadata.json", "source_version"),
                       ("docs/data/rng-validation.json", "version")]:
         record = read(name)
@@ -144,6 +179,29 @@ def verify(root):
                 int(row["bet_multiplier"]) and int(row["stake_money_minor"]) ==
                 int(row["stake_credits"]) * int(row["denomination_minor"])
                 for row in offers), "Published wager arithmetic is inconsistent")
+    entry_path = root / "docs/data/counter-entry-metadata.json"
+    if entry_path.exists():
+        entry = read("docs/data/counter-entry-metadata.json")
+        require(entry["engine_sha256"] == pins["phoenix_engine.h"] and
+                entry["mathematical_family"] == family,
+                "Counter-entry estimates belong to another mathematical source")
+        for name, item in entry["files"].items():
+            path = (root / "docs/data" / name).resolve()
+            require(path.is_relative_to(root / "docs/data") and path.is_file(),
+                    "Missing/unsafe counter-entry dataset")
+            if path.is_file():
+                require(sha(path) == item["sha256"] and path.stat().st_size == item["bytes"],
+                        "Counter-entry dataset mismatch: " + name)
+        with (root / "docs/data/counter-entry-thresholds.csv").open(newline="") as stream:
+            entries = list(csv.DictReader(stream))
+        entry_keys = {(round(float(row["denomination_dollars"]) * 100),
+                       int(row["lines"]), int(row["multiplier"])) for row in entries}
+        offer_keys = {(int(row["denomination_minor"]), int(row["selected_lines"]),
+                       int(row["bet_multiplier"])) for row in offers}
+        require(len(entries) == entry["threshold_rows"] == len(entry_keys) and
+                entry_keys == offer_keys, "Counter-entry wager coverage differs")
+        require(entry["original_casino_calibrated"] is False,
+                "Unqualified original-casino calibration claim")
     for name, item in reference["datasets"].items():
         path = root / "docs/data" / name
         require(path.stat().st_size == item["bytes"] and sha(path) == item["sha256"],

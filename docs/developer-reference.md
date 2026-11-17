@@ -44,3 +44,7 @@ Immutable audio submitted to a worker stays valid until consumption. Finite comp
 The public [table exporter](../tools/export_wiki_tables.cpp) documents the actual evaluator. Regenerate data from the current source and check its metadata. Status/frame diagnostics and scripted synthetic fixtures have different side effects; a USB timeout alone does not show an application freeze.
 
 See [testing](testing.md), [build](build-and-flash.md), [sources](sources.md) and [attribution](attribution.md).
+
+## Documentation and releases
+
+Documentation, screenshots and research findings may be updated between tagged releases. Development gallery images carry their own source version and runtime in the [preview manifest](development-gallery.json); they do not relabel the downloadable firmware or playable demo. Tagged game releases follow the ten-version milestones, with the next at 0.2.160. The [release verifier](../tools/verify_release.py) checks stable-release assets and separately pinned development media.

@@ -1,0 +1,27 @@
+{
+  "model": "U/0x0002001e",
+  "engine_sha256": "82d1b768cf34714b340b688b1ea67cb9bf27c38e18eb1ff6c9be676d17c0a492",
+  "return_option": 3,
+  "stopping_policy": "Fixed wager, start at counter, first meter trigger then complete all owed features before next paid spin.",
+  "excluded_components": [
+    "Minor including2x3x",
+    "Major including2x3x",
+    "Grand"
+  ],
+  "Mini_retained": true,
+  "original_casino_calibrated": false,
+  "threshold_rows": 77,
+  "curve_rows": 1001,
+  "numerical_checks": "Current-code stopped-session reward solve;512/768workload comparison and300000native-engine sessions checked the full-return basis. Payout-only exclusions preserve action laws and costs.",
+  "files": {
+    "counter-entry-thresholds.csv": {
+      "bytes": 5763,
+      "sha256": "b102362d50e11eafb51e0767a20cee2c451024d823d331bbade9c6e8d9fbdcc5"
+    },
+    "counter-entry-curves.csv": {
+      "bytes": 70890,
+      "sha256": "a0073c73fc49710690feabf59f06338fc3a647d7bc990409f901a68fd68ce640"
+    }
+  },
+  "mathematical_family": "beeefd81a346ef6ed99b44dcdb7987aecc474c9437698a0c8f9b2de669335d40"
+}

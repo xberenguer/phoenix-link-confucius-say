@@ -33,7 +33,7 @@ The caption is a tiny above/below adaptation for the 240 × 135 display; physica
 
 The screen opens with the current denomination focused. Selecting a denomination keeps the current valid line selection focused; selecting lines keeps the current offered bet multiplier focused. A valid available choice is used if the current selection is unavailable. This order also applies to denominations with one line control. Selecting lines updates the red credit amounts without spending credits.
 
-<img src="media/wagers-lines.png" alt="Denomination selected with focus on a real PLAY LINES control" width="720">
+<img src="media/development/wagers-lines.png" alt="Denomination selected with focus on a real PLAY LINES control" width="720">
 
 Holding grey or choosing RETURN applies the selected denomination and lines without spending credits or starting a spin. The current multiplier is retained when offered; otherwise the first supported multiplier is selected. The green counter changes to that wager's existing bank. An unaffordable red BET still selects its wager and counter, then follows the normal insufficient-funds path. A new session starts at its default wager; no previous game is imported.
 

@@ -48,6 +48,8 @@ The current Core increments, awards and resets before recording the arrival’s 
 
 That local mechanism can make late-meter play more valuable conditionally, but it does not identify the casino's hazard curve or a profitable entry point. Published AP thresholds, selected bonus videos and aggregate casino returns are not a replacement for original distributions. No particular counter value on this simulator proves positive expected value on a real machine.
 
+See [counter-entry return](counter-entry.md) for the current model's calculated thresholds, payout exclusions and the measurements needed for better calibration.
+
 ## Entry and queueing
 
 A meter award with fewer than six visible Phoenixes retains those symbols for its free Hold. A simultaneous natural Hold runs first and preserves the extra meter feature in a queue. A meter hit during an existing Hold also queues. Each queued Hold starts with an empty board and its own collected count; the preceding Hold has already paid.

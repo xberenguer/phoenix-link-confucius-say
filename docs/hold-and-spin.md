@@ -12,7 +12,7 @@ The simulator generates a fresh result for **each initiated respin**, then anima
 
 The large top-of-cabinet information is adapted to the small screen: a live collected count appears above the reels, and collection WINNER/currency announcements can occupy the center. The count includes existing locks and new symbols whose visual impact has occurred, rather than revealing every precommitted landing at the start of motion.
 
-<img src="media/hold.png" alt="Scripted Hold scene with synthetic demonstration credits" width="720">
+<img src="media/development/hold.png" alt="Scripted Hold scene with synthetic demonstration credits" width="720">
 
 If the Hold is inside Wisdom Free Games, the header also retains the current Free game and total. That caption persists through the fire; it does not replace the remaining-respins or collected-count fields.
 
@@ -65,7 +65,7 @@ Mini/Minor values and restrictions on named/high-cash combinations are configura
 
 Double and Triple Mini/Minor prizes collect in separate visible increments, with a new Phoenix flight from the same physical cell for each unit. The stacked label stays intact. The payout is already settled once; these graphical steps add no extra Engine payment. Audio plays once per physical cell. The fitted interval between units is 1067 ms; normal between-cell timing remains 1333 ms. Those are local presentation fits, not recovered universal manufacturer timing or named-prize audio.
 
-<img src="media/multiplied-mini101.webp" alt="TripleMini repeated pickups, current renderer in a synthetic state" width="720">
+<img src="media/development/multiplied-mini101.webp" alt="TripleMini repeated pickups, current renderer in a synthetic state" width="720">
 
 ## Fifteen Phoenixes and Grand
 
@@ -85,7 +85,7 @@ The positive reference is [3pfZnZUWGhI near 23:12](https://www.youtube.com/watch
 
 The short route adds no new Big-award jingle. Coin visibility and music eligibility are separate; existing collection audio remains. Particle shapes, count-up timing and the original event table remain reconstructed. The animation below is a synthetic current-renderer example, not footage or a frequency sample.
 
-<img src="media/cash25-burst.png" alt="Current 25x numeric-only Hold coin burst, synthetic example" width="720">
+<img src="media/development/cash25-burst.png" alt="Current 25x numeric-only Hold coin burst, synthetic example" width="720">
 
 Autoplay and manual play use the same award-event routing. Muting, a skipped presentation or a different award branch can affect what is heard; autoplay is not intended to remove an otherwise eligible jingle. See [audio](audio.md) for cue order and outstanding limits.
 

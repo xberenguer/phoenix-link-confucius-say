@@ -107,7 +107,7 @@ The current 50-line evaluator assigns that observed path to Line 22. This observ
 
 The five-credit Jack price is scoped to this exact Base configuration. Other denominations, line counts, multipliers and Free prices retain their own observations or local fallbacks. A line caption establishes its individual award, not an unobserved terminal round total or random frequency.
 
-<img src="media/line22-jack3.png" alt="Current Line 22 follows the observed path and pays five credits for three Jacks" width="720">
+<img src="media/development/line22-jack3.png" alt="Current Line 22 follows the observed path and pays five credits for three Jacks" width="720">
 
 ## Wisdom scatter awards
 
