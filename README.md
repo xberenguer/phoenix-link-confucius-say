@@ -29,6 +29,7 @@ An offline, play-money reconstruction of Phoenix Link — Confucius Say for M5St
 - [Build and flash](docs/build-and-flash.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [Developer reference](docs/developer-reference.md)
+- [How randomness works](docs/randomness.md)
 - [Math and evidence](docs/math-and-evidence.md)
 - [Testing](docs/testing.md)
 - [Sources and attribution](docs/sources.md)

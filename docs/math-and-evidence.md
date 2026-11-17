@@ -1,5 +1,7 @@
 # Math, RNG and what the evidence establishes
 
+For a plain-language introduction to hardware noise, the secure generator and the game choices it controls, read [How randomness works](randomness.md).
+
 The included [release identity](../RELEASE.json), [Engine](../firmware/src/phoenix_engine.h), [Grand table](../firmware/src/static_grand_table.h) and [runtime identity](../firmware/src/math_runtime_identity.h) identify the current local model and its reference calculations. Original reel strips, complete pay programs, prize/meter distributions and configured casino RTP remain unrecovered.
 
 ## Evidence labels

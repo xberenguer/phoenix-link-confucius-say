@@ -20,6 +20,7 @@ The top bar shows the game title, selected line/bet information and active colle
 | Which meter is active, what increments it and its live-session buckets | [Collection counter](collection-counter.md) |
 | Every symbol, animated state and screen transition | [Graphics](graphics.md) |
 | Landing cues, feature music, collection and volume controls | [Audio](audio.md) |
+| Hardware entropy, secure random choices and what they control | [How randomness works](randomness.md) |
 | Current model, measurements, return assumptions and unknowns | [Math and evidence](math-and-evidence.md) |
 | Fresh starting credits, live-round safety and restart behavior | [Fresh sessions](saving.md) |
 | Building, installing and updating offline | [Build and flash](build-and-flash.md) |
