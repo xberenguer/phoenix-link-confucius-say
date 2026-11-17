@@ -1,12 +1,12 @@
 {
   "kind": "development-preview",
-  "version": "0.2.159",
-  "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+  "version": "0.2.160",
+  "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
   "release_version": "0.2.151",
   "next_tagged_release": "0.2.160",
   "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
   "engine_sha256": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
-  "renderer_sha256": "9d9e2ecdb6bd57d3a356369917155e95e55f6584a0e800866cc00f10398ebedf",
+  "renderer_sha256": "38bc3509c040f0c2b91fd0807ff932da095f027db51e633029c0b878c54e49b9",
   "source_files_sha256": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
     "audio.cpp": "002d028edb82da2d212771d7f03237e96296fdaa6aeab3cf7c375c0fe8d3ffbf",
@@ -27,13 +27,13 @@
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
     "bounded_decimal_editor121.h": "1c477b5355b62a71f2b8751b4ee2d40b11fd33b189013e252cdd29d0bbcc9821",
-    "build_version.h": "dd1254c8f05fd7c9e2571ff2786c358347676585013abe94fc43eb2fbfe0e688",
+    "build_version.h": "a97412b80d4d35ff86787fce08e79ed731ab125b6325177e719cbc38fba49442",
     "cabinet_profile.h": "af3599df21043ef3fcd1b2c88a1bae41bd9a30de6f629fdabab8cf211da1b6e0",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
-    "cabinet_scene145.h": "207323556a568e8ecf11de2e9becd082625c6be4b2eaedf58437ae4deb7cb4ae",
-    "cabinet_selection146.h": "38f36644081debee38881dd9d81c54352e497716b0ec918492d41a530793eecd",
+    "cabinet_scene145.h": "999a9fd5d09757a93884748951c945512b6c72186289a02ef253c67bb3513a3f",
+    "cabinet_selection146.h": "6ca61e590f6d941b2dc9a2689843d540c9178b1d9f92573cee818e22cb7304c5",
     "cabinet_type27.h": "834969699e927bc687fb5fc8d1dbe2794331039dca10ab5aea401f4db48dec87",
-    "cabinet_wager.inc": "be529d350adf67e99c13d1a2a309ed9c373d14c0afae5faf9f7ad3d70a64525a",
+    "cabinet_wager.inc": "6f484f1b318485068c7baba61dafe1cce3d77ca23db44ba74695a470c465a8e9",
     "capacity_service.h": "b5678302db26ee809b06a19279b14b6aeea5f7c7318aa9cc36ba0c0b5ce726a4",
     "cash_font.h": "0e4df31c5c0127defbb5b171df4cd31bd007249b2d6c8ab15311144f666dfcc8",
     "center_program49.h": "4d52b29646e1b39879edc8afa8e0593bbbc5c190ef005ae9f02aa374e865fb29",
@@ -75,7 +75,7 @@
     "fire_field.h": "fbf11814ef5ce08961b3adbc1279946a191e3df85d1e1688c5df0396c5c519d1",
     "fire_field_data.h": "6f854c98987d41f11c145f92b4caf3b693fb0c4d88dc158368b16dfcdc64ddd5",
     "game_black_tap.h": "54584b4ba0c8e6f81f7cf378693c4756d681a22705d22d65e14f0c90f9ba9457",
-    "game_values_editor201.inc": "bd72ba7859acc4c3f82c4db6ddf94ebc1ddc3d7347b1f167e372da95abcfd1cb",
+    "game_values_editor201.inc": "ee628eaf470bf397ee48482be4cb4490d7f5c5d9b95bc194469e49627bae8a81",
     "generated_assets.cpp": "6e713d75a40b4324bc8a94d2f1b73a676c93e021c8dc19caf23cb54030be8331",
     "generated_assets.h": "4a6ee515ff05d86da6abfdc9755e776b4f4d7672eb74dae9610931bc40d41c1f",
     "gold_burn.h": "f808a860a36bd59571cc51adbb0b15c4a053b24d72fa79f3736eed57de60c553",
@@ -90,11 +90,11 @@
     "jackpot_brand207.h": "dd01d7c21bd7bcd40a85198ba29858aa371ca7f8b6ff58fcdac1be3e77dca8c6",
     "landing_cues.h": "8e978c9b3409b051cd1e8a9f091a93b86c2acf5df3fb75cec15d5c5460afb506",
     "live_hold_count48.inc": "4afd9a28fb8027d2d05ecd23cbe842bc060c71cd1ac6a403e737f715b52bd503",
-    "main.cpp": "f6ac70aefb33b40f806883c3519c022ad195c61abf25f9d67ed849c93df58c6c",
+    "main.cpp": "9b8ba1ce0cd4f6f6285a44cef25dc05487cb3113ad9191ef3d788fd73f3f6be1",
     "major_material153.h": "ce371e119af6a89ad797687243769c71502e54f7723bd2c97232c67f08ced062",
     "major_material153_data.h": "d2975b76c7b73cc44e1b3da46192f420d251ac719b5bb63d2f136bf3e5806310",
     "major_title112_data.h": "e75772a92c3acd0e7efe4d7a28a74779c8de9e93df0d44acfa2bb62d2dc4a68e",
-    "math_runtime_identity.h": "cf25f0810624b365abe2c4ed872de357b9d0511d7e9465013bdbeaf70a06edca",
+    "math_runtime_identity.h": "c841386f563d372a8a213eee3f3aec5b3f0dc14cdee7112a7d2370c6b13166ee",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "af304bc8f1b6586e88ca6c0771a921278d5ce69d710bcb4b7b7aa6c490236c0a",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -172,7 +172,7 @@
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "9d9e2ecdb6bd57d3a356369917155e95e55f6584a0e800866cc00f10398ebedf",
+    "ui.cpp": "38bc3509c040f0c2b91fd0807ff932da095f027db51e633029c0b878c54e49b9",
     "ui.h": "63dd39dd10d134be292f9e046cc76b877216ccad22e1090dab9266f64b2b6493",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -188,15 +188,15 @@
     "wisdom_free_caption29.inc": "7e54425d7ac004b84194e3f1cc0cc9bd95fd339a99e86c85804c5f383e099bf7",
     "wisdom_lower_win88.h": "8808489a9a09700b55d32a729c9c14ec08d48eff29e4f2afdb517efa21764dec"
   },
-  "source_acceptance_sha256": "f939a11290e6a77823a93ee155d6da827a4c98dda19d988e55c9e1de46e59104",
-  "capture_receipt_sha256": "0611a52db55522d40dc7a7249f53d7f88540d36ee7cd6e710a4cd66b357e4f06",
-  "source_limitations": "Source-derived lettering with reconstructed perspective, masks and native scaling; not original vendor alpha or a complete pixel-perfect asset bank.",
+  "source_acceptance_sha256": "7b7bbbdd573ad90be9aa337b48812911b19b3a29e73f1a1da9418591736b4df2",
+  "capture_receipt_sha256": "869323e90942fe679f91761c0dfd8ff1aa5adcaeefb3224ec04a18513b653995",
+  "source_limitations": "Original manufacturer artwork adapted for landscape with a tightly segmented original portrait and a broad source-cloud band. Hidden building regions are reconstructed from the same card; original unoccluded background is unavailable. This is not a recovered vendor asset bank.",
   "images": [
     {
       "file": "media/development/settings.png",
       "kind": "settings",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "7f5d53d255d6d24ef43ce68dcb8367fd6e5262c876b661d090f0e9702a77259c",
       "bytes": 11510,
       "dimensions": [
@@ -218,8 +218,8 @@
     {
       "file": "media/development/paylines.png",
       "kind": "paylines-current",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "d8444e5d95f851611c4e0237dea91f596efc975f3e856269c24fa0da786d9c05",
       "bytes": 11903,
       "dimensions": [
@@ -241,8 +241,8 @@
     {
       "file": "media/development/paylines-all.png",
       "kind": "paylines-all",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "f9882ec2dda9c1bc0df14d83fd1101e307895a2daa8e7cc38a6f405f4e81c699",
       "bytes": 11570,
       "dimensions": [
@@ -264,8 +264,8 @@
     {
       "file": "media/development/line22-jack3.png",
       "kind": "line22-jack3",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "50698cd71cf23a6e7ebf281bccf3415d2d79ca51ffbad060b4f4b8b89d6b5c1b",
       "bytes": 42345,
       "dimensions": [
@@ -287,8 +287,8 @@
     {
       "file": "media/development/pickup-flight.png",
       "kind": "pickup-flight",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "154322031f2751a2b39a7da7c5f68368069243ae9bd13e37b87fadad0a108a34",
       "bytes": 40259,
       "dimensions": [
@@ -310,8 +310,8 @@
     {
       "file": "media/development/cash25-burst.png",
       "kind": "cash25-burst",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "ba0d4ac01bdbcdd8bc105ef3aeebc772ba914491eadcccb8dafc7b6a4bfa5af4",
       "bytes": 45281,
       "dimensions": [
@@ -333,8 +333,8 @@
     {
       "file": "media/development/game.png",
       "kind": "game",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "994ed5213c08b3b4035546cbda0622231b254c1812b0db89ee9579ce491aec6c",
       "bytes": 43689,
       "dimensions": [
@@ -356,10 +356,10 @@
     {
       "file": "media/development/wagers.png",
       "kind": "wagers",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
-      "sha256": "ae5b634fb7b9f8af2454816683aee4c334b244dcfeceffc8edd46d7e8334b819",
-      "bytes": 65460,
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "21b50e2760d76e281512604f10c66cefd4751a04f988d8761461cc2151cc1acd",
+      "bytes": 64233,
       "dimensions": [
         720,
         405
@@ -373,16 +373,16 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "767c8db3d46c8c5b3ba04e47ef47cc8cfc3fa03e4158966d99881b0929144d57"
+        "cbaf266a44859d6c61a43232286ec8a6dacf779bf672da2eb7a4f313814ae654"
       ]
     },
     {
       "file": "media/development/menu.png",
       "kind": "menu",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
-      "sha256": "c581ef1a24cb521eb8686ff94b7daab937863b7f0b78df5de28986cfe2f0c083",
-      "bytes": 14520,
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "dbff6159ca3cdf3f8835c97bbe44dc5576401449337f67b019e2fa52de04206c",
+      "bytes": 14434,
       "dimensions": [
         720,
         405
@@ -396,14 +396,14 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "64cf993bd6aa6871e614bf27e0b8828d8806f46da7bf2e31aff58a35aa8dc44a"
+        "354e83d0b44e37e0a1e8fb6071fd2f03eee58b9f7d104fd8ef2319f99620d8bc"
       ]
     },
     {
       "file": "media/development/sound.png",
       "kind": "sound",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "2effd4a28e2fd6db037da4574c02b88e94ced56067069caddc8582f7758a170e",
       "bytes": 15910,
       "dimensions": [
@@ -425,8 +425,8 @@
     {
       "file": "media/development/volume.png",
       "kind": "volume",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "27660fc524153206063dbd3b71e2336d499879c8e346f8d2b16368fda53ff6b3",
       "bytes": 10911,
       "dimensions": [
@@ -448,8 +448,8 @@
     {
       "file": "media/development/wisdom-entry.png",
       "kind": "wisdom-entry",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "36015d971d0f620ada3947c41e7d9dc82543f915b3a9d3615d19d5f9778daf1e",
       "bytes": 45612,
       "dimensions": [
@@ -471,8 +471,8 @@
     {
       "file": "media/development/hold.png",
       "kind": "hold",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "d9904b74cb27225ee4c0ecfcfb4ae2b66348980b59ca30147b834b474d870e83",
       "bytes": 52556,
       "dimensions": [
@@ -494,8 +494,8 @@
     {
       "file": "media/development/collection.png",
       "kind": "collection",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "3297196ea23da301920f2225c509bf198e38b1616f79a2ba323fd181eeec89bc",
       "bytes": 55113,
       "dimensions": [
@@ -517,8 +517,8 @@
     {
       "file": "media/development/symbols.png",
       "kind": "symbols",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "1b289940b5376cf1d9a65f9516da2c0442bb2679bc499a0f2c86cf80f31911be",
       "bytes": 45593,
       "dimensions": [
@@ -540,8 +540,8 @@
     {
       "file": "media/development/credits.png",
       "kind": "credits",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "b127207c2f7035cb75e8b817945ae1228182a32a4ae3166f97a2bf9ed6f67722",
       "bytes": 14939,
       "dimensions": [
@@ -563,10 +563,10 @@
     {
       "file": "media/development/wagers-lines.png",
       "kind": "wagers-lines",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
-      "sha256": "39d61e37f5c2d6310f805fdf35a5410edc0417715b00f8c05064775f637e63db",
-      "bytes": 44345,
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "4d4a4be013ff6a30ba3a949e8a2fde3a9fa6809bd9ce7db5bbeee815d20517c6",
+      "bytes": 43201,
       "dimensions": [
         720,
         405
@@ -580,16 +580,16 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "56f3ac93641e6848758457277fdad7c0255af1712a93e37c99bbc5c419264eb3"
+        "ffb5632c6e80b13504dc5a4b7ffbed28e9af0c226e8c174cdbc9f52b443a35c5"
       ]
     },
     {
       "file": "media/development/wagers-bets.png",
       "kind": "wagers-bets",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
-      "sha256": "205e7079fca4c1422f284504818d3c19cc9f38aa4897ca3683b5c5eb6db7700b",
-      "bytes": 44608,
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "1d37f3381c9c91181396bc3e909afa84b023f83952da970e71a4b4560e9e70ba",
+      "bytes": 43466,
       "dimensions": [
         720,
         405
@@ -603,14 +603,14 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "4b15a2fd9ef9edfdd4cfce687eb3ff2c596de7cd7ebcd2ed8dd94b915ac05d9d"
+        "d0da56fab73734cd8956fa20e559b42429c0acf5741a2a7ff991bfb46ac54488"
       ]
     },
     {
       "file": "media/development/nested-free.png",
       "kind": "nested-free",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "c130bceda5bbdd739d4ef7edc887f8f213995acd0671fe190713ff56ec506e0a",
       "bytes": 32530,
       "dimensions": [
@@ -632,8 +632,8 @@
     {
       "file": "media/development/nested-free-fire.png",
       "kind": "nested-free-fire",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "01e212a0d6c28eeca389830f179cb305bf5d8ad86f091e92dee01036b6451133",
       "bytes": 39868,
       "dimensions": [
@@ -655,8 +655,8 @@
     {
       "file": "media/development/pickup-flight.webp",
       "kind": "pickup-flight",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "5ca1ebd1a993bb64b73754f8eab69e61a8a203a3af11e482e89400239436dfe5",
       "bytes": 704846,
       "dimensions": [
@@ -731,8 +731,8 @@
     {
       "file": "media/development/cash25-burst.webp",
       "kind": "cash25-burst",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "e2d1da536fc3decad3d0973749c547c7f280730d3551c8c47eb54d50a4de9a10",
       "bytes": 1082546,
       "dimensions": [
@@ -817,8 +817,8 @@
     {
       "file": "media/development/wisdom.webp",
       "kind": "wisdom",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "9fddbfd05e83e56b5e4668c021b4829a0fbbebe18f42dde087c340fd034f8e44",
       "bytes": 228552,
       "dimensions": [
@@ -942,8 +942,8 @@
     {
       "file": "media/development/sage.webp",
       "kind": "sage",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "d05aaa870953987fd7fd3451e99c9555822d4807c7e7b6c395e4211d88bd18a8",
       "bytes": 149664,
       "dimensions": [
@@ -998,8 +998,8 @@
     {
       "file": "media/development/phoenix.webp",
       "kind": "phoenix",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "084f64f15487100f86890abc0eacc229d17806ec513c8e6c540930bfd04d81b3",
       "bytes": 251230,
       "dimensions": [
@@ -1083,8 +1083,8 @@
     {
       "file": "media/development/coins.webp",
       "kind": "coins",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "42d0e9e121e0bb2fb49169ad2a6814084a66bffa6c83a50baca1beffd950348b",
       "bytes": 954570,
       "dimensions": [
@@ -1184,8 +1184,8 @@
     {
       "file": "media/development/counter.webp",
       "kind": "counter",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "1ef21974b4c374cac1a4aaccf0cfdb3321857b20e0e1a4ecfccbd1627bf49622",
       "bytes": 241384,
       "dimensions": [
@@ -1249,10 +1249,10 @@
     {
       "file": "media/development/multiplied-mini101.webp",
       "kind": "multiplied-mini101",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
-      "sha256": "a2bfa1cb186aa502be6929df8896007b9e9fbc0ec72c343678cec1d6dcd0e4b5",
-      "bytes": 980184,
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "bae6284cf6453b194a23256ef61f3c08bac1b50129a3816a91527f32070f00ed",
+      "bytes": 998802,
       "dimensions": [
         720,
         405
@@ -1266,67 +1266,67 @@
       "financial_state_and_entropy_guards": true,
       "frames": 61,
       "input_sha256": [
-        "7bb186491d174716d34255949643e399bc9b9b77081b55c915e976fdae74cb07",
-        "e59f8286da7a43cf9f465f6b64a6276b8c6b3ecebbb2f8158968c6a8daaba9ec",
-        "a2f1b8509c4ad944ff2db1dce404b3740970b176c6b04585e14f3742a6ca77b1",
-        "867a260263702ea7ee062019ba6ccadddd247fa1f06dffafc213b7742aed11b1",
-        "448f940bca571404256e53d70ecd25a06ab5f874c73727b69b25d02ba24b7cf2",
-        "86dfffe795944a8300a28e121d661b26c04b21ae92d108c82e339b653460513c",
-        "33eb810829a60364c177eb2406a669b7ccde451248d82076687063fa31090cd1",
-        "08c6794b4060aee1cd6cb763a86bdf9306f9b5fc60cc3639f4850d3f5af4fe17",
-        "98f9415e36cbecc9133a389bb500addec2b5d3eb39fb3fc7303d5902286f369e",
-        "046186ea02e87e9089350b8cad942a20f04a4320fd6bb48a0a44016d76a88f07",
-        "e3bb66a7e33b7c2c35869b23884cce4602d952f4cabc28694ceef9441a480cdc",
-        "4a46453e584f0bb8225d356933c39ebc3b3e60917ab5611196b0688161f4a896",
-        "77f0a95cda1339f191f5e8d928f4fd492fef43b6d3346b970c54cd40b7adc51e",
-        "0ad72c7c434d8c6f3b366afa7c0217a4022f5e341e5ca43db8bc604230e11db3",
-        "aaa876d8af074e0ec754419cd5d871e9baf402878759e9075db0ad4143b92a52",
-        "f460e64d5895c3e4900ed6340e8572ad53992b1c52556338b551991c24516198",
-        "4e03b9195457b064cedf227f5947e4cf238b8f81175f38cc36ac46559100541e",
-        "7969c17b7723cfa17291de01d02f761f4299b28ab79b643b1dc859294a350b90",
-        "bda26077ec65f109c40833949edefacab214f226e5b932d329ace901b57156f5",
-        "5e9f02705c4ab714449658083480640da8230332f05eba52b6621c051ef067b5",
-        "b13d3e395c941702d588615df7f669491e34b858fa17b2461feef95d65fa0f3b",
-        "f89c28d1a2b3eb3051fc3f3dcf4616460efa19e4e8df955f7973e2ac82201ea0",
-        "013602698bf11c345c1e49de64ff691603b7f257141c05dbb4c16cef3971d4bd",
-        "c02b57530d111a16eeeaa8ccb924ae19d2193aca1567b801dec7284d37d700aa",
-        "e94041847a5e72d505e72638aac95a613e73c877cae3058b3cf2c3d9819d6641",
-        "7a393c12f57c687ad70bff832aacbec6b1d04eed3ed5aa8f30f21795aca0015e",
-        "e21e3f95cb553b57c7aa603e15c47f949e6ad62b31db8c9b442336931e2e031d",
-        "338a54e0c4b2b25a21998d551ff353fd052333383430365f3a29156504aeea19",
-        "b8592e61fac2ddba768fa1d8b71812e829e9a016084a0d36ae815373a24bf12e",
-        "82b42d9b5ef24cdfc496ab53bed52fe663008aa31b1293ed71617ebb1d5a708e",
-        "398906fcaf6ce1266a9c1779b689549fabf17ffd4b1895dd63bc8dcf184b5bf5",
-        "78326dd9c1ff83c43b2d4671a2d305b47a11437d09af26fe5d3f6f9d5bcfde58",
-        "eb24291e72a87564848c143f36173896c87d4a9fac069244318f1bf884a67a67",
-        "2d90979958e34643cc8451d9d3d3c4430f2b1ebb02f3b00528dee9eceb2e07a7",
-        "6a79af67b5e2e28e2d756b02a680ca2bfc174779bc2c78692e26105565cc9078",
-        "c222fd07c487935c7e2577152db0d02987f3f04598a7106932ab03a1254703c9",
-        "1e6367f8beb12acc49912c28b0b532962e8b6f303382f2f13a996d280900fbb8",
-        "e6e0cf48f6c602debccb3dff6a13871ea213e02775694b1002c073f94ef60573",
-        "6602d60c43c4d7c22f3abcdcbc163c798da463bef1df0141f4662533e988046a",
-        "23cc23cf10f653c751ebc882404b2f813917be6b4c83598fb4eb99af1315b528",
-        "9943fbd48f3dda95b6eb7f109044642ddf33a9a4b2f7d104b387c395c565c2e0",
-        "a804bded98d8c18adea7b121f659d8fbb2330ddea05ba5ea30057833b522a61b",
-        "6f68e32937dbccd138a52da2df9663b4306348baeed3e5c4d9ee768c2af35f71",
-        "acf5356114b98a6eadd9dce166358ebae8870cd8a27e5196d13e2019914a478f",
-        "5abe6f898658cd556a0bb0a072968a874a3229f5faec15dacc220eecc0c8c5e3",
-        "fbcb95d1775fed125d6fc993a05edccf57c6bd3ee2b8e0b7d0b9baf5df88e452",
-        "a4cc77caea7171d971129ed0ee90b585569149f0b155193dc07cdef0c9b441fa",
-        "7da56e143df12ccf6c413dfc1f53b3893333a224d6331f056b1fa5b2a8d6cb8c",
-        "b02cdc26ef2fefe822e17aa70050659ca97c7c85c60020fdab5641ab836b248d",
-        "5824dedb8382f97526b5c730cb393211894fb3f57ccdd9153b12733ad1be4868",
-        "cb902e7499eeafbabe1515bfede9be52bbb61080ed265c243a3a58b2d04c5289",
-        "a5b8956b292cda4eb4ddc229ec33e0ec73e40bd25cfee4b1508330547afdc8b5",
-        "484024cd7fe99c59e6c84b2d9426ecf781f569a18251d7ef57eafecdbe506df8",
-        "07455f9dcce9944b9ea5eb452d84cb8ab508cc8707aa9a68d6c89be6fc42d8bd",
-        "c368d4e58b30017fbe1c199c46fda09b42e0bb3d5cdb9df65c52ed29f6624b1c",
-        "465ffe07e93cb51139eaaedb354ae9261cce2f0eb7fa82d600a686e09efb5897",
-        "aa105ac1748a60146d56c6a4a73937537b95cdc73fd7431f7b90692f814fef82",
-        "7c281bcb5e98aa48e73d8d9ca4172e65173820c0b6c5a4f59a6a4cb76ba48816",
-        "7aba490fa152bc7a5ceb86cca480b78d523747e3f35380cf4269bece43e057c5",
-        "8d142590f51235be0cacf9076d28b97e18238ffcbc8c4e1cd92f3526eef0115c",
-        "e640a458e5aa3d15e8d4f1a000dcd882d9cf6b29eef894abfaf38f3acae39805"
+        "03ea3ad64b152d5838790b6cad06ad3330d8719c727997f50990a2c3ae5f12e4",
+        "bcece7ab4c9c890fa22f85b809d8426a712487f3bd0f5a3e24c6ecccc01cfdef",
+        "7464c3da69b7422c220e1c50a96c1e51106f78de1a1e6286f930ea4a11f26330",
+        "1d23b1ff81932a28bf98f7a0c2fa046a40e0a162ab42321069ad43435191a88b",
+        "b19d7ee54bb51f381af30ad7de95d1749677229c0bfb6c38084829ad5f809ecd",
+        "ff05dfecb79ad82cccea49f4916a2ae9a21c0d09551fa9a185c9f1ecd7ce662d",
+        "f16059dcd499d3c57e0c35f5d5681b5c5ce14b1952e490933d554065421f88c9",
+        "a7fcf2fc819be7822ad59cc1a54e6adb5f30d61f24803d21ef677e32b85892ca",
+        "4362c7da42b973656cb48a4b0b6af9a1882e124bbdfc48df76cae05cb7a5e172",
+        "85de799561d8be12f2c9fc3b2e2f4f20e5ce3d03fd04d43812d22b92f0433bf3",
+        "b3153ca908614a898823b146003036c3f3c741731dc475095d5a0d489cc7bd01",
+        "d18d69256d23d73d801d294ab8b857941a399b7646aa35cdc20df646fbbf8134",
+        "d6eb8c3e98573231bebb270b76ffa2cbde5e0241e2a106432fe14e9836001fa8",
+        "69c2843a7cefa33fe96545f38272d328b5139e5cdd880e17551e1b7c03564704",
+        "e2f821cac07c1264bc43c8d186b0833734f1b9f3fd5672a393948cc42ac68d89",
+        "2da86065e32020875285f9cfd2b9ba80d0bc3a9a7ff4aecc5deae4a6e045d9e6",
+        "f8e36331a34c0ad230b5a43ecec9a17ed577085fa2f3612011ff5e96ec3af5e2",
+        "02a167581ce33879d87fedd64d3ba8f0aa96dfa63eefae8dee366ba4248c8dd3",
+        "cdbe2dd2f2282b3d81cce6cc58e3940273c38e285d5007b4c08907c0d72950e6",
+        "b55d58f6abf92ade7ebf81e0cde8e7ac5a864b5b41ae3414ffd4b8feb5f2d635",
+        "7c0a2513b96990fbf7e6259ee519753f2e07e832d15702c8a9b2fc3bad8bf752",
+        "ebca979d303d92f27c2259eb002af0db54362c1d885ce5d2e8ee94309f07ec5a",
+        "2b41a8d93c4e4a8e490d2e9097cf4ca79aa04020cfbcc73dc8f82c071bf1ce04",
+        "72e2b046a3aeea93195e41ec8caf86105516ccf30fdc50577a21440c8678fa5e",
+        "038c27766a4b4690e166585e84c4ea257587ed714f5e7b1df9dfbc40722d055f",
+        "30cdd894d05a20e8f0ff4b847f2203a4154e18e6a753c8105bd6348171834308",
+        "de2b590b752a1eee83ceb4f5360ace14591b5989ef0f62dfa60c9f2d1e39f010",
+        "823a86411952edfc4343da6a6d980b1692e45e211916c8321025395bb3b846be",
+        "a96dbfffafe1bc53e4b27df7b0703218668a0f346dc43e943c8372cdb4722415",
+        "143827c915727784918f33f2ffd063ebef700a651343e62c93a15d5f73ef1b1d",
+        "7375810938fdc78b7a89ee9a66ffe7a022a7811ae40997824065223c7d0c9b82",
+        "2269bd24e05c06b17dee422bae274a1426548ddf9659c9233da302be3558e59a",
+        "9fe039e6b29528993b683e93619e9bb8f06cf5771a719f680367e93068bc0434",
+        "f88827ff3bd7d676e35174dc303e57a60a4697cd7a6cdf34504e4179dae5a6b6",
+        "cb3e4fd52cfb1ed4f4377a63f596cc4c236cd5a4b4388269bd44f7aa278af394",
+        "30ce2ecc4726d7f551aa90e19563159cc0168630ebbe66caac1441e16a6f21bd",
+        "8d500839a068a3ca9b1a156e52710092bb9228fd7730f7bc785d4d3f2c426eb0",
+        "560d0d45b15dc926785a059ca0ff6d7deeccd2cd42e861cb0205a32eb79e7f7d",
+        "46efeebe530bacfd082f169a0f1908814bf7b8bd1953754120422d9b51eb0408",
+        "484648f1d2e7a5e6d9fb12012193786ac97919ac25ba782eff7cb6ca1ea224dc",
+        "ff49bfadfc52779bc7d9fc545273d4d396f4745ea645dc6b0328fcdeca98dae6",
+        "b616611d65b0055b9c42dc2bde6dcff4ed7f614a0297a976137edaa8391f0984",
+        "e3e950007a1ecf1eb38e422adef35fa566c508daf8dc25fe3325148c2637e359",
+        "28316a14d00cd96babfc756174e3416710e208920c622e6882c78308b98e3eca",
+        "285c49f2faa5f0c075922e3fc6a652bc3547fd6aa8c16278cf46ff0353a68ea1",
+        "ed9f3a40d1670cbe2e132e47fb255c6bcd5897b396ecd0f8d7a84ba6a4b4c850",
+        "5cbcb93a882a003d3d0c5e094d29b9b6a44035eae2d5c46e8564a8f5cc9284c2",
+        "190acba8453908d72d2db6186db9d22beb44bb244952f8aa4087fdcdde4abe32",
+        "878ec17b06d293fa010e9706e6b2fcd42d09396ca67a09a8160f3d6d2d3a1fea",
+        "9c29959cc44940b8ac38494c3a595903987ddb7fb550f1c0aaa094e1ed1450b0",
+        "d7a374289e839bc88e3b28e9a5b2e9fa59c20f63e7437b73b81332058364fa39",
+        "1f96152f3edfc615c8b63ffdffe5f47d37cafee31cfa610f52da52e0ba50560e",
+        "21f2d9b0fe1d09f4ce2edcd730900784ec112e9ada99b9b76d2d9128ec22e979",
+        "5017434e219e07c084f6f292c24ae28ed7a1dc61a3acf08d0516c7d6814a2c3b",
+        "ff5dc4564f07b4267e0e27dca8b4f044b8cd6e473e7cab6645e5b8d19346543b",
+        "9426e68dcb74b6c67ea82fdf28463a008de55c144c3667bb9248bf78cd8276d9",
+        "d42e3df6f3c3a6938ab25bbde54991a01aa0ca6f92ae8dc86ec6a17532d0f733",
+        "9b7d8d9d1ce95e010539d40c4a284b5e2516ff0f3e0010226b0c078343a4580e",
+        "9f7f10adc9c29496182ffecde206af72b5f4319bfe34e673784b5c783f44dc38",
+        "c73283715cbce9e1cfef015453057fe5a34dcacc543e4f656107ccfe22c0e2e1",
+        "12eb5098f531a14a3bf2f524f2c02d4dcfba2ea6749e807e0c993510682ccd28"
       ],
       "lossless_decode_verified": true,
       "duration_ms": 4880,
@@ -1335,8 +1335,8 @@
     {
       "file": "media/development/free-games-entry.png",
       "kind": "free-games-entry",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "35426e16c0c8a06ad2c8dd42f487845400464278f43ac9d46e47207c1f2ccd75",
       "bytes": 31196,
       "dimensions": [
@@ -1358,8 +1358,8 @@
     {
       "file": "media/development/grand-award.png",
       "kind": "grand-award",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "e297217cbe1888f40f1850d84d6d5b972e9ccfa5eb0aef8802db014ebf54ad85",
       "bytes": 61132,
       "dimensions": [
@@ -1381,8 +1381,8 @@
     {
       "file": "media/development/hold-entry.png",
       "kind": "hold-entry",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "71fc9f3b1fb1cd1af1b14b5b7aed2ecc0f50cab630254e637c13acbefc0b76a6",
       "bytes": 59618,
       "dimensions": [
@@ -1404,8 +1404,8 @@
     {
       "file": "media/development/hold-revival.png",
       "kind": "hold-revival",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "357fb2978255088814006e3efa57d4cc3cd181908766d18bb1a3574ea2351a63",
       "bytes": 51202,
       "dimensions": [
@@ -1427,8 +1427,8 @@
     {
       "file": "media/development/jackpots-custom.png",
       "kind": "jackpots-custom",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "477a4fec88150f5ef00e060136d0c2a120d728ff314a84b6b3e7b6d438673dfd",
       "bytes": 36097,
       "dimensions": [
@@ -1450,8 +1450,8 @@
     {
       "file": "media/development/jackpots.png",
       "kind": "jackpots",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "8f85cd9d921d1898122a7a74c2497c088e03c6fdd5ff8bf18e64561aa0ec8719",
       "bytes": 38159,
       "dimensions": [
@@ -1473,8 +1473,8 @@
     {
       "file": "media/development/jackpot-symbols-1x.png",
       "kind": "jackpot-symbols-1x",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "d2378fd43f264a28a99c2ec0ebaf5654d6a2c04710d4b1f2a6b8c47c7e353595",
       "bytes": 59764,
       "dimensions": [
@@ -1496,8 +1496,8 @@
     {
       "file": "media/development/jackpot-symbols-2x.png",
       "kind": "jackpot-symbols-2x",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "27616cfeab43f485e5a11835ea9f8f0f486a5b245f2b7eac1ba789c560142ab3",
       "bytes": 60098,
       "dimensions": [
@@ -1519,8 +1519,8 @@
     {
       "file": "media/development/jackpot-symbols-3x.png",
       "kind": "jackpot-symbols-3x",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "744882d613791f5fe89f6c277f3d3b67a29f9898c0f52eec9decfa0d26fe6e8c",
       "bytes": 60468,
       "dimensions": [
@@ -1542,8 +1542,8 @@
     {
       "file": "media/development/major-award.png",
       "kind": "major-award",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "cd83eea42be12b3da954536ddbe3483c1c094dfbda74cb4433f58de1c27f649a",
       "bytes": 36631,
       "dimensions": [
@@ -1565,8 +1565,8 @@
     {
       "file": "media/development/named-collection.png",
       "kind": "named-collection",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "6c9ac3df659d9521e16e32b2dbbc05669f6bc938d9281e363794c1916f2c5338",
       "bytes": 60952,
       "dimensions": [
@@ -1588,8 +1588,8 @@
     {
       "file": "media/development/jackpot-variants.png",
       "kind": "All nine named-prize symbols, crops from the current renderer",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "ce39df8d68411f89f0c39c7027d9c6f89f52bc5fbbe8ca6446c2986e360b688c",
       "bytes": 70449,
       "dimensions": [
@@ -1613,8 +1613,8 @@
     {
       "file": "media/development/jackpots-fire.webp",
       "kind": "Animated jackpot view",
-      "source_version": "0.2.159",
-      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
       "sha256": "b7ea715a7a7fe2865cb5ee485e0dcd3b491a5bfd7d5dabd4b54ccc87943a6cc8",
       "bytes": 842334,
       "dimensions": [
@@ -1697,6 +1697,138 @@
       ],
       "lossless_decode_verified": true,
       "duration_ms": 5120
+    },
+    {
+      "file": "media/development/startup-standard.png",
+      "kind": "startup-standard",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "e820c51c9963591756ce40d1d38c6525acf050b1069d15f304a894d5188d0753",
+      "bytes": 64132,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual Main/UI startup and voucher navigation with synthetic demo credits.",
+      "frames": 1,
+      "input_sha256": [
+        "0a040acd3b0308c10fb4af3196cfe70b44ad23293d411224ed9678a2a32cda88"
+      ]
+    },
+    {
+      "file": "media/development/startup-high-limit.png",
+      "kind": "startup-high-limit",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "6ff528cf1c370c81c431e5b3ecf2e41cbf513202888c3e1855269187765c0b1f",
+      "bytes": 64269,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual Main/UI startup and voucher navigation with synthetic demo credits.",
+      "frames": 1,
+      "input_sha256": [
+        "ebc93c6cb88583cac939ca244ef8241faf03182981f12c3d1e4ac1e87c549c5d"
+      ]
+    },
+    {
+      "file": "media/development/startup-lines-bet.png",
+      "kind": "startup-lines-bet",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "80ff3f766155bd5a9b8d21faae43b9f4b5cd2d87903db368249dce12a9a6e25c",
+      "bytes": 42617,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual Main/UI startup and voucher navigation with synthetic demo credits.",
+      "frames": 1,
+      "input_sha256": [
+        "52659f8516afc6856dc6fe5d7b84d739eb93b65ad9519458c6652e2efe4a7f01"
+      ]
+    },
+    {
+      "file": "media/development/empty-game.png",
+      "kind": "empty-game",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "a0c5e150376e02b9789544e145919b27ca1f74e2bd2903e0ebb108e96e8f7266",
+      "bytes": 45607,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual Main/UI startup and voucher navigation with synthetic demo credits.",
+      "frames": 1,
+      "input_sha256": [
+        "c8ea8caa6ec01efb00029d8c0f2d0c0a1124630510168359c0316a0e2f5a9ff9"
+      ]
+    },
+    {
+      "file": "media/development/startup-voucher.png",
+      "kind": "startup-voucher",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "729c9def74bf1fb60e01d49f093c2264c29d20fdd9c59311d456820053c2d6f2",
+      "bytes": 20634,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual Main/UI startup and voucher navigation with synthetic demo credits.",
+      "frames": 1,
+      "input_sha256": [
+        "36883a8a40ff8fc4d0975e771c9f2e720581ae9867096ed3b5869c49633ebe41"
+      ]
+    },
+    {
+      "file": "media/development/funded-game.png",
+      "kind": "funded-game",
+      "source_version": "0.2.160",
+      "runtime": "a8a021f90f561e9bcff94363a5646d670066a5330b96a6e740aa820d75e4b84b",
+      "sha256": "e98deddb9a9b05d47de5f67e2ab5aeb95b68c0542b70cada4d68f457e5384a49",
+      "bytes": 45801,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "raw_camera_or_user_screenshot": false,
+      "fixture_kind": "Actual Main/UI startup and voucher navigation with synthetic demo credits.",
+      "frames": 1,
+      "input_sha256": [
+        "2a1f1f4eb550d2eaf207c36788945062646e364bb99fb2a9fd363220f407c545"
+      ]
     }
   ]
 }

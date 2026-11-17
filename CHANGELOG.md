@@ -1,5 +1,14 @@
 # Current release notes
 
+## Development 0.2.160
+
+- Startup opens denomination selection, then lines and bet, then the reels at zero balance.
+- Blue at an unfunded game opens the Stardust custom voucher; inserting credits returns to the chosen wager.
+- Hold blue on the initial denomination screen to switch Standard and High Limit.
+- Initial denomination selection has no Return button.
+- Refined the portrait cutout and rebuilt the sky from a wider section of the original cloud artwork.
+- Rebuilt preview artwork and animations from fresh current-source objects.
+
 ## Development v159 — queued for v160
 
 - Original manufacturer portrait and full curved temple roof replace the cropped, flattened courtyard composition.

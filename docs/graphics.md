@@ -1,8 +1,22 @@
 # Graphics, animation and native gallery
 
-Gallery of the game, including the latest **0.2.159 development artwork**. The playable release remains **0.2.151**; the next tagged release is **0.2.160**. The native display is 240 × 135 pixels. Images and animations are enlarged to 720 × 405 with nearest-neighbor scaling, preserving the pixel grid.
+Gallery of the game, including the latest **0.2.160 development artwork**. The playable release remains **0.2.151**; the next tagged release is **0.2.160**. The native display is 240 × 135 pixels. Images and animations are enlarged to 720 × 405 with nearest-neighbor scaling, preserving the pixel grid.
 
 Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [rare award screens](#rare-award-and-feature-screens), [symbol motion](#every-symbols-implemented-motion) or [feature effects](#feature-effects). Detail sheets combine enlarged crops from the rendered screens. Demonstration boards show the artwork without requiring a rare natural outcome; they are not probability samples.
+
+## Startup
+
+Choose a denomination, then lines and bet. The new startup sequence enters the reels with an empty balance; blue opens the voucher.
+
+<img src="media/development/startup-standard.png" alt="Initial denomination screen with the original cloud artwork" width="720">
+
+<img src="media/development/startup-high-limit.png" alt="Initial High Limit denominations" width="720">
+
+<img src="media/development/startup-lines-bet.png" alt="Startup line and bet selection" width="720">
+
+<img src="media/development/empty-game.png" alt="Ready reels with zero balance" width="720">
+
+<img src="media/development/startup-voucher.png" alt="Custom amount voucher opened from empty reels" width="720">
 
 ## Screen layout
 
