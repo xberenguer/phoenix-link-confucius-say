@@ -64,7 +64,11 @@ The Major title, full-board Grand, running collection amount and revival use dif
 
 **Major award:** its named title and locked award amount, before the other values collect.
 
-<img src="media/major-award.png" alt="Current Major award title and framed green amount" width="720">
+Development build 0.2.162:
+
+<img src="media/development/major-award162.png" alt="Major award with original letter shapes and clearer native outlines" width="720">
+
+<img src="media/development/major-fire162.gif" alt="Animated Major title and fiery amount border" width="720">
 
 **Full-board Grand:** the continuous WINNER display includes the Grand contribution; it does not add a second plain Grand popup.
 

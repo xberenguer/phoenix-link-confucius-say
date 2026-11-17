@@ -1,5 +1,14 @@
 # Current release notes
 
+## 0.2.162 — development, queued for v170
+
+- Major retains the filmed letter shapes, with clearer black separation around the green title and a thin gold outline on its amount.
+- WINNER, Grand, jackpot-board values and named-prize symbols keep their existing rendering.
+
+<img src="docs/media/development/major-award162.png" alt="Refined Major title and framed amount" width="720">
+
+<img src="docs/media/development/major-fire162.gif" alt="Animated Major title and amount frame" width="720">
+
 ## 0.2.161 — development, queued for v170
 
 - Custom Amount opens at the thousands digit with **$0,000.00**. Hold blue to move left for larger amounts.

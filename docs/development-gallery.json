@@ -1,8 +1,8 @@
 {
   "kind": "development-preview",
   "release_version": "0.2.160",
-  "version": "0.2.161",
-  "runtime": "5083484abc3850a52138dde8882c41bc92db87a22adc59abb5f8e9bfd4d3bb9a",
+  "version": "0.2.162",
+  "runtime": "7639a2e1d9f4c47293daa897551b661cafe7f75146fb02aa5f54b8ff82812bc7",
   "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
   "source_files_sha256": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
@@ -15,7 +15,7 @@
     "audio_music.cpp": "6c425f97f12adcb7e4f9152db649cbc9c0152666186da1069d0061f1ed1f36c2",
     "audio_music.h": "a20063f44da33c1f2e4d23799706038ff1a9b4091c41ffc735e253ac3fb425cb",
     "audio_third_generated.inc": "170cf2fc6a4df6abcbf566a3ef826868fd7ff43392357b080933f510732334a1",
-    "authored_major112.h": "545f97c07e9f431d8b0eb6de0c75f033b739b7035fb16bd1c9d61d30bf959097",
+    "authored_major112.h": "781d37b43c128eab7fbb27d824c125c4e8431208d87abe62bd0b74a663f81faf",
     "award_art.cpp": "6ee57f2e7f840562484397584e4b3178c29f21cc4129a91a49a98012206d09c1",
     "award_art.h": "b6128f5d104fb179cee8b4f3d512264f2c66f90286b06e6c71fa1b0566db9ac5",
     "award_cache.h": "804b13efba7ad91c78039948ba2bf471b90f90e85665894d4946fce3578e442e",
@@ -24,7 +24,7 @@
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
     "bounded_decimal_editor121.h": "1c477b5355b62a71f2b8751b4ee2d40b11fd33b189013e252cdd29d0bbcc9821",
-    "build_version.h": "b837b25be2e6f1378313acb396bb974f499bcd5b69993ea45b53442c674f4db1",
+    "build_version.h": "325407be6d35da60ad553044a8b7ed9abdbc463b98bf8d922dfd60855bc7291a",
     "cabinet_profile.h": "af3599df21043ef3fcd1b2c88a1bae41bd9a30de6f629fdabab8cf211da1b6e0",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
     "cabinet_scene145.h": "999a9fd5d09757a93884748951c945512b6c72186289a02ef253c67bb3513a3f",
@@ -91,7 +91,7 @@
     "major_material153.h": "ce371e119af6a89ad797687243769c71502e54f7723bd2c97232c67f08ced062",
     "major_material153_data.h": "d2975b76c7b73cc44e1b3da46192f420d251ac719b5bb63d2f136bf3e5806310",
     "major_title112_data.h": "e75772a92c3acd0e7efe4d7a28a74779c8de9e93df0d44acfa2bb62d2dc4a68e",
-    "math_runtime_identity.h": "bebdb19713ddadcefd360125b6226e5cfa017ee52ee3a920af8c7f4f13c5c571",
+    "math_runtime_identity.h": "503a0efb4f95a79bf9bd6a12258f2650f9c803d2f87fb5802035c87c6908b693",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "af304bc8f1b6586e88ca6c0771a921278d5ce69d710bcb4b7b7aa6c490236c0a",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -169,7 +169,7 @@
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "5b1be64de6a09356254191cd619ff8f5b2322374d90db1912a0e6a92da296560",
+    "ui.cpp": "1784c588df92e18b7314c7f9aef254538f395da368386724a6bdf49afeb97252",
     "ui.h": "63dd39dd10d134be292f9e046cc76b877216ccad22e1090dab9266f64b2b6493",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -185,13 +185,13 @@
     "wisdom_free_caption29.inc": "7e54425d7ac004b84194e3f1cc0cc9bd95fd339a99e86c85804c5f383e099bf7",
     "wisdom_lower_win88.h": "8808489a9a09700b55d32a729c9c14ec08d48eff29e4f2afdb517efa21764dec"
   },
-  "renderer_sha256": "5b1be64de6a09356254191cd619ff8f5b2322374d90db1912a0e6a92da296560",
+  "renderer_sha256": "1784c588df92e18b7314c7f9aef254538f395da368386724a6bdf49afeb97252",
   "engine_sha256": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
   "images": [
     {
       "file": "media/development/startup-voucher161.png",
-      "source_version": "0.2.161",
-      "runtime": "5083484abc3850a52138dde8882c41bc92db87a22adc59abb5f8e9bfd4d3bb9a",
+      "source_version": "0.2.162",
+      "runtime": "7639a2e1d9f4c47293daa897551b661cafe7f75146fb02aa5f54b8ff82812bc7",
       "sha256": "213cd7b5c18eba4b8ba672edd279e0fe1e95c25d2796a8ee06a33ef53ec8209f",
       "bytes": 21107,
       "dimensions": [
@@ -201,10 +201,32 @@
     },
     {
       "file": "media/development/sound-default161.png",
-      "source_version": "0.2.161",
-      "runtime": "5083484abc3850a52138dde8882c41bc92db87a22adc59abb5f8e9bfd4d3bb9a",
+      "source_version": "0.2.162",
+      "runtime": "7639a2e1d9f4c47293daa897551b661cafe7f75146fb02aa5f54b8ff82812bc7",
       "sha256": "f173da49a362c25d282cb0a9699629cee7519f17208479ca672e4be04a1aac4e",
       "bytes": 16480,
+      "dimensions": [
+        720,
+        405
+      ]
+    },
+    {
+      "file": "media/development/major-award162.png",
+      "source_version": "0.2.162",
+      "runtime": "7639a2e1d9f4c47293daa897551b661cafe7f75146fb02aa5f54b8ff82812bc7",
+      "sha256": "1d408c76d9367d787602c86f1310a2d8114f857a610942445e0830924f5956a9",
+      "bytes": 38640,
+      "dimensions": [
+        720,
+        405
+      ]
+    },
+    {
+      "file": "media/development/major-fire162.gif",
+      "source_version": "0.2.162",
+      "runtime": "7639a2e1d9f4c47293daa897551b661cafe7f75146fb02aa5f54b8ff82812bc7",
+      "sha256": "5658f64490e2231b047af52bc87f059b139862dca17a02a536d3129f74d020f7",
+      "bytes": 1932484,
       "dimensions": [
         720,
         405
