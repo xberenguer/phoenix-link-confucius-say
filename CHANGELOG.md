@@ -1,6 +1,6 @@
 # Current release notes
 
-## 0.2.160 — release candidate
+## 0.2.160
 
 - Startup opens denomination selection, then PLAY LINES and BET, then the reels at a zero balance. Blue opens the Stardust custom voucher when funding is needed.
 - Hold blue on the initial denomination chooser to switch Standard and High Limit. Hold grey for the full Game Menu, including sound, brightness and screen flip; closing it returns to setup.
@@ -21,7 +21,7 @@
 
 ### Validation
 
-All 77 wager choices pass actual Main/UI startup and funding checks. Manual/autoplay collection tests preserve the financial snapshot, outcome entropy and ending effects. Native and browser startup pixels match. Source RNG/outcome checks and the current target build pass. Physical installation of this exact updated image awaits device reconnection. Original casino odds and complete original-asset fidelity remain unverified.
+All 77 wager choices pass actual Main/UI startup and funding checks. Manual/autoplay collection tests preserve the financial snapshot, outcome entropy and ending effects. Native and browser startup pixels match. Source RNG/outcome checks and the current target build pass. Full firmware/assets readback and 17 healthy fresh-start checks passed on the original Stick. Original casino odds and complete original-asset fidelity remain unverified.
 
 ## 0.2.151
 

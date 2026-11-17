@@ -22,7 +22,7 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Current public-project target built; final updated image readback and startup verification required before publication",
+  "native_validation": "Current image installed on original Stick; complete firmware/assets readback and17healthy fresh-start checks passed. Menu/flip and fast collection use host Main/UI tests; live USB menu probing was inconclusive.",
   "browser_version": "0.2.160",
   "native_status_version": "0.2.160",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
@@ -55,8 +55,8 @@
     "startup_UI_sanitizer_cases": 77,
     "voucher_money_navigation_checks": true,
     "jackpot_read_only_and_word_boundary_checks": 105,
-    "full_native_readback": false,
-    "fresh_native_startup": false,
+    "full_native_readback": true,
+    "fresh_native_startup": true,
     "original_machine_fidelity_certified": false,
     "counter_bank_and_insufficient_funds_navigation": true,
     "voucher_ID_and_left_hold_checks": true,
@@ -67,6 +67,13 @@
     "independence_paired_actions": 143487,
     "current_source_gallery_frames": 500,
     "current_source_hero_frames": 494,
-    "voucher_leading_zero_actual_navigation_ASAN_UBSAN": true
+    "voucher_leading_zero_actual_navigation_ASAN_UBSAN": true,
+    "startup_UI_assertions": 51365,
+    "collection_skip_cases": 30,
+    "collection_skip_assertions": 709,
+    "browser_startup_navigation_checks": 100,
+    "native_boot_checks": 17,
+    "current_source_gallery_images": 65,
+    "live_USB_menu_probe_verified": false
   }
 }
