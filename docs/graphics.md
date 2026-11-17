@@ -110,3 +110,11 @@ The jackpot board uses flat dark amount fields and animated fire attached to the
 Custom credit funding uses a code-rendered Stardust voucher with amount words, matching decorative validation numbers and insertion text.
 
 <img src="media/credit-voucher.png" alt="Custom credit voucher" width="720">
+
+## Denomination and wager views
+
+The denomination view gives the character, temple and title more room. Selecting a coin opens the separate line and bet controls.
+
+<img src="media/wagers.png" alt="Confucius Say denomination chooser" width="720">
+
+<img src="media/high-limit-fifty.png" alt="$5 denomination with PLAY25 and PLAY50 controls" width="720">

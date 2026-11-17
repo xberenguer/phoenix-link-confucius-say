@@ -6,6 +6,7 @@ the original machine. A reviewer must still inspect new renders and wording.
 Run from any directory; no third-party Python packages are required.
 """
 import argparse
+import csv
 import hashlib
 import html
 import json
@@ -117,6 +118,32 @@ def verify(root):
     reference = read("docs/data/reference-metadata.json")
     require(reference["source_engine_sha256"] == pins["phoenix_engine.h"],
             "Payout reference Engine is stale")
+    require(reference["source_cabinet_profile_sha256"] == pins["cabinet_profile.h"],
+            "Wager reference menu source is stale")
+    require(reference["source_static_grand_table_sha256"] == pins["static_grand_table.h"],
+            "Return reference table is stale")
+    model = re.search(r"modelId\s*=\s*(0x[0-9a-fA-F]+)",
+                      (source / "phoenix_engine.h").read_text())[1]
+    require(int(reference["engine_model"], 16) == int(model, 16) ==
+            int(release["local_model"], 16) == int(gallery["model"], 16),
+            "Published model labels differ from the current Engine")
+    with (root / "docs/data/offered-wagers.csv").open(newline="") as stream:
+        offers = list(csv.DictReader(stream))
+    require(len(offers) == reference["rows"]["offered_wagers"],
+            "Offered wager count is stale")
+    for mode in ["standard", "high_limit"]:
+        count = sum(row["menu_mode"] == mode for row in offers)
+        require(count == reference["rows"][mode + "_offered_wagers"],
+                "Menu-mode wager count is stale: " + mode)
+    require(all(row["menu_mode"] in {"standard", "high_limit"} for row in offers),
+            "Unknown wager menu mode")
+    keys = {(row["denomination_minor"], row["selected_lines"], row["bet_multiplier"])
+            for row in offers}
+    require(len(keys) == len(offers), "Duplicate published wager")
+    require(all(int(row["stake_credits"]) == int(row["selected_lines"]) *
+                int(row["bet_multiplier"]) and int(row["stake_money_minor"]) ==
+                int(row["stake_credits"]) * int(row["denomination_minor"])
+                for row in offers), "Published wager arithmetic is inconsistent")
     for name, item in reference["datasets"].items():
         path = root / "docs/data" / name
         require(path.stat().st_size == item["bytes"] and sha(path) == item["sha256"],

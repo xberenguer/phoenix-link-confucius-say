@@ -103,6 +103,13 @@ constexpr ObservedRoute observedRoutes[]={
  {100,90,{{2,0,0,0,1}}},
 };
 const char* geometryEvidence(unsigned count,unsigned id,const std::array<uint8_t,5>& path){for(const auto& x:observedRoutes)if(x.count==count&&x.id==id&&x.path==path)return count==25?"source_reconstructed_US25_chart":"source_observed_geometry_matches";return "local_fallback";}
+bool currentMenuOffered(int64_t coin,unsigned lines,unsigned multiplier){
+ if(cabinet_profile::offered(coin,lines,multiplier))return true;
+ for(const auto& c:cabinet_profile::highLimitCoins)if(c.minor==coin)
+  for(unsigned r=0;r<c.count;++r)if(c.lines[r]==lines)
+   for(unsigned m=0;m<c.rows[r].count;++m)if(c.rows[r].multipliers[m]==multiplier)return true;
+ return false;
+}
 int main(int argc,char**argv){
  if(argc!=2){std::cerr<<"Usage: export-wiki OUTPUT_DIRECTORY\n";return 2;}
  const std::filesystem::path output=argv[1];std::filesystem::create_directories(output);
@@ -119,7 +126,7 @@ int main(int argc,char**argv){
  for(auto coin:phoenix::local::denominations)for(auto lines:phoenix::local::lineOptions)for(auto mult:phoenix::local::betMultipliers)for(bool free:{false,true})for(const auto& info:symbols)for(unsigned count=2;count<=5;++count){
   const auto unit=phoenix::local::linePay(unsigned(info.symbol),count,mult,free,lines,coin);
   const int64_t credits=int64_t(unit)*mult;
-  const bool offered=cabinet_profile::offered(coin,lines,mult);
+  const bool offered=currentMenuOffered(coin,lines,mult);
   if(offered)lookupOffered.emplace(coin,lines,mult);
   pays<<coin<<','<<unsigned(lines)<<','<<unsigned(mult)<<','<<(free?"free":"base")<<','<<info.name<<','<<count<<','<<unit<<','<<credits<<','<<credits*coin<<','<<(offered?"true":"false")<<'\n';++payRows;
  }
@@ -130,13 +137,17 @@ int main(int argc,char**argv){
   for(unsigned c=0;c<5;++c)paths<<','<<unsigned(p[c]);
   paths<<','<<geometryEvidence(lines,line+1,p)<<'\n';++pathRows;
  }
- std::ofstream deck(output/"offered-wagers.csv");deck<<"denomination_minor,selected_lines,bet_multiplier,stake_credits,stake_money_minor\n";
+ std::ofstream deck(output/"offered-wagers.csv");deck<<"denomination_minor,selected_lines,bet_multiplier,stake_credits,stake_money_minor,menu_mode\n";
  unsigned offered=0;
- for(const auto&coin:cabinet_profile::coins)for(unsigned row=0;row<coin.count;++row)for(unsigned b=0;b<coin.rows[row].count;++b){
-  const unsigned mult=coin.rows[row].multipliers[b],lines=coin.lines[row];const int64_t stake=int64_t(lines)*mult;
-  if(!menuOffered.emplace(coin.minor,lines,mult).second){std::cerr<<"Duplicate menu wager\n";return 4;}
-  deck<<coin.minor<<','<<lines<<','<<mult<<','<<stake<<','<<stake*coin.minor<<'\n';++offered;
- }
+ auto writeDeck=[&](const auto& coins,const char* mode){
+  for(const auto&coin:coins)for(unsigned row=0;row<coin.count;++row)for(unsigned b=0;b<coin.rows[row].count;++b){
+   const unsigned mult=coin.rows[row].multipliers[b],lines=coin.lines[row];const int64_t stake=int64_t(lines)*mult;
+   if(!menuOffered.emplace(coin.minor,lines,mult).second){std::cerr<<"Duplicate menu wager\n";return false;}
+   deck<<coin.minor<<','<<lines<<','<<mult<<','<<stake<<','<<stake*coin.minor<<','<<mode<<'\n';++offered;
+  }
+  return true;
+ };
+ if(!writeDeck(cabinet_profile::coins,"standard")||!writeDeck(cabinet_profile::highLimitCoins,"high_limit"))return 4;
  pays.close();paths.close();deck.close();if(!pays||!paths||!deck)return 3;
  std::cout<<"{\"engine_model\":"<<phoenix::local::modelId<<",\"line_pay_rows\":"<<payRows<<",\"active_line_paths\":"<<pathRows<<",\"offered_wagers\":"<<offered<<"}\n";
  unsigned expectedPaths=0;for(auto lines:phoenix::local::lineOptions)expectedPaths+=lines;

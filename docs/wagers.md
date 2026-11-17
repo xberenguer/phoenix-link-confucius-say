@@ -11,7 +11,7 @@ The current wager menu offers these denomination, line and multiplier choices. M
 | $1 | 5 / 10 | 1, 2, 3, 5, 10 on 5 lines; 1, 2, 3, 4, 5 on 10 lines |
 | $2 | 5 | 1, 2, 3, 4, 5 |
 
-There are 55 selectable denomination/line/multiplier combinations. Prize-cap contexts are internal model settings, not extra wager buttons.
+The standard menu has 55 selectable denomination/line/multiplier combinations. Prize-cap contexts are internal model settings, not extra wager buttons.
 
 **Stake in credits = selected lines × bet multiplier.**
 
@@ -23,7 +23,7 @@ The menu evidence is cabinet-specific. It does not establish a universal denomin
 
 The main deck is based on the filmed Palms configuration [mBcjPK63KW4](https://www.youtube.com/watch?v=mBcjPK63KW4). Its $1/10-line control is visible, but a complete selected Confucius paid row has not been recovered. The selectable $1/10-line row uses observed Phoenix Link family controls from General Tso: multipliers 1, 2, 3, 4, 5, with amounts calculated for ten selected lines. This is an explicitly labeled family adaptation, not proof of a universal Confucius $1 wager deck.
 
-The exact implemented availability is defined by [cabinet_profile.h](../firmware/src/cabinet_profile.h); the generated [offered-wager CSV](data/offered-wagers.csv) enumerates all 55 selectable choices. The red button commits its wager and begins a spin when funded; the ordinary funding check prevents an unaffordable spin.
+The exact implemented availability is defined by [cabinet_profile.h](../firmware/src/cabinet_profile.h); the generated [offered-wager CSV](data/offered-wagers.csv) enumerates all 77 choices across standard and high-limit modes. The red button commits its wager and begins a spin when funded; the ordinary funding check prevents an unaffordable spin.
 
 ## Denomination and MIN BET
 
@@ -38,3 +38,23 @@ The screen opens with the current denomination focused. Selecting a denomination
 Holding grey or choosing RETURN applies the selected denomination and lines without spending credits or starting a spin. The current multiplier is retained when offered; otherwise the first supported multiplier is selected. The green counter changes to that wager's existing bank. An unaffordable red BET still selects its wager and counter, then follows the normal insufficient-funds path. A new session starts at its default wager; no previous game is imported.
 
 The [payout reference](payouts.md) exports the wider internal evaluator support with a selectable flag. Those internal rows must not be read as extra live cabinet buttons. See [controls](controls.md) for focus/navigation and [session rules](saving.md) for live feature/funding boundaries.
+
+## High Limit
+
+Settings → High Limit changes the denomination chooser to $1, $2, $5, $10, $25, $50 and $100. The cash balance is unchanged when switching modes. The chooser starts on the selected denomination; selecting it opens the line and bet controls. Hold grey returns to the reels without a paid spin. Turning High Limit off from a denomination unavailable in standard mode returns to $1.
+
+The shared practice row uses 25 lines and bet multipliers 1, 2 and 3, giving 25, 50 and 75 credits. At $5, PLAY50 also offers the directly observed 3× wager: 150 credits, or $750. At $100, the middle button places a $5,000 wager. These are simulator choices, not a complete recovered factory high-limit deck.
+
+The filmed high-limit General Tso cabinet directly shows all seven denominations, 25-line play, $100 wagers of $2,500/$5,000, and a $50 wager of $3,750. The shared three-button row across all seven denominations is an implementation adaptation of those observed wagers. The Confucius Say recording 5BUJOWxIBN4 directly verifies $5 / 50 lines / 3× / $750, so that selection is also available. Its other 50-line bet choices remain unrecovered. Other omitted buttons, a universal $5,000 machine maximum and the authentic high-limit pay program remain unverified.
+
+The extra denominations retain the existing local model in credit units. Their reference return enclosures are transported from the $10 local credit law; this does not identify casino probabilities, jackpot seeds or linked progressive contributions. Default jackpot values remain local simulator values. Use Counter & Jackpots to match displayed cash amounts for practice; custom amounts do not retain the default return qualification.
+
+References: [General Tso high-limit play](https://www.youtube.com/watch?v=FbBUqjjzN08), [Confucius Say $750 play](https://www.youtube.com/watch?v=5BUJOWxIBN4).
+
+![High-limit $5, 50-line selection](media/high-limit-fifty.png)
+
+## Reel display when switching
+
+Each denomination remembers its last settled reel display during this session. Changing lines or bet multiplier within that denomination keeps the displayed board until another spin lands. Returning to a denomination restores its icons, displayed Phoenix amounts and win paths; selection alone does not pay the displayed result or restart its feature.
+
+The green counter uses a separate grouping: denomination plus total credit stake. A fresh, unplayed denomination has an unpaid cosmetic arrangement of the opening symbols; it is not an evaluated spin. Both display history and counter banks are session-only.

@@ -24,13 +24,13 @@ Open **Settings → Sound**. Master sound and stops/landings have separate contr
 
 <img src="media/sound.png" alt="Sound menu" width="720">
 
-## Credits
+## Balance
 
-Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the default $1 denomination. Game Menu → CREDITS offers:
+Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the default $1 denomination. Game Menu → BALANCE offers:
 
 | Choice | Effect |
 |---|---|
-| Custom Amount | Edit a cash voucher; Done adds the amount and returns to Game with the cash-in cue |
+| Custom Amount | Edit a cash voucher; Insert Credits adds the amount and returns to Game with the cash-in cue |
 | Add $1,000 | Add to the current money balance, return to Game with autoplay off |
 | Add $10,000 | Add to the current money balance, return to Game with autoplay off |
 | Add $100,000 | Add to the current money balance, return to Game with autoplay off |
@@ -40,9 +40,9 @@ Every boot/reload starts with **1,000 denomination credits**, or $1,000 at the d
 
 Auto Refill uses the last successful addition amount for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Clear Balance is available at a closed Ready/Base boundary; unfinished Free/Hold/queued work and service or selector faults block it. It preserves the live wager, meter buckets and statistics, and does not change the Auto Refill preference. A later unaffordable paid spin can therefore refill the balance if that option is on. There is no fixed $1 million button; Custom Amount accepts $0.01–$9,999,999.99.
 
-<img src="media/credits.png" alt="Credits menu with balance and automatic refill controls" width="720">
+<img src="media/credits.png" alt="Balance menu with balance and automatic refill controls" width="720">
 
-Custom Amount is the first Credits choice. It opens a Stardust voucher. Grey moves right through digits, Done and Cancel; short blue changes a digit. **Hold blue moves one digit left**, revealing a leading place without cycling around the form. Hold grey cancels. Done adds the amount once and returns to Game with the cash-in sound. The amount in words follows the editable cash value. The matching barcode and validation identifiers are decorative, remain fixed during editing and change for each newly opened voucher. The issue stamp uses the release date and session time, not a synchronized casino clock.
+Custom Amount is the first Balance choice. It opens a Stardust voucher. Grey moves right through digits, Insert Credits and Cancel; short blue changes a digit. **Hold blue moves one digit left**, revealing a leading place without cycling around the form. Hold grey cancels. Insert Credits adds the amount once and returns to Game with the cash-in sound. New vouchers open at **$00,000.00**, focused on the ten-thousands zero. The amount in words follows the editable cash value. The matching barcode and validation identifiers are decorative, remain fixed during editing and change for each newly opened voucher. The issue stamp uses the release date and session time, not a synchronized casino clock.
 
 <img src="media/credit-voucher.png" alt="Editable custom credit voucher" width="720">
 
@@ -79,3 +79,7 @@ Custom jackpot amounts lock this page and hide its preset return ranges. Restore
 A closed Ready/Base boundary is required. Free/Hold/queued work and service/capacity faults lock the choice. Browsing/help/cancellation do not alter the live round. Applied choices belong to this session; boot or reload starts fresh.
 
 Implementation: [UI](../firmware/src/ui.cpp), [selector](../firmware/src/return_selector86.h), [native startup](../firmware/src/main.cpp).
+
+## High Limit
+
+Settings → High Limit switches between the standard and high-limit denomination menus. See [the high-limit wagers](wagers.md#high-limit).

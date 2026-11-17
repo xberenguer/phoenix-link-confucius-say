@@ -37,7 +37,7 @@ That is software test evidence. It does not establish physical entropy quality, 
 
 ## The local reel and feature law
 
-The current mathematical model is **T (`0x0002001d`)**. Its numeric source/family/runtime identities and table bindings are recorded in the included release data.
+The current mathematical model is **U (`0x0002001e`)**. Its numeric source/family/runtime identities and table bindings are recorded in the included release data.
 
 Ordinary symbols use local integer weights and column-specific Wild eligibility. A correlated three-position Sage-run construction controls adjacent Wild runs. Free games pair the two outer reel groups; Phoenix values on paired stops are generated separately. These rules do not recover the original physical or virtual strips.
 

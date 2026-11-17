@@ -26,16 +26,16 @@ The number of active lines is already used to select and evaluate the paths. Do 
 
 ## Complete implemented combination reference
 
-- [All implemented line-pay entries](data/implemented-line-pays.csv): 48,000 rows, including zero-pay entries, both modes, ten evaluator symbols and match counts 2–5 across 600 internal denomination/line/multiplier profiles.
+- [All implemented line-pay entries](data/implemented-line-pays.csv): 62,400 rows, including zero-pay entries, both modes, ten evaluator symbols and match counts 2–5 across 780 internal denomination/line/multiplier profiles.
 - [All active selected-line paths](data/implemented-paylines.csv): 205 paths across the six internal line selections. Rows use top=0, middle=1, bottom=2.
-- [The current menu's 55 offered wagers](data/offered-wagers.csv): denomination, lines, multiplier, stake credits and stake money.
+- [The current menus’ 77 offered wagers](data/offered-wagers.csv): denomination, lines, multiplier, stake credits and stake money.
 - [Export metadata](data/reference-metadata.json): source version, input hashes, exporter hash and dataset hashes.
 
 The internal evaluator can represent more profiles than the wager menu offers. The CSV marks whether each profile is currently selectable. Its complete internal data must not be mistaken for additional real-machine buttons.
 
 A positive evaluator entry does not prove that every compatible board can naturally occur. Wild placement, correlated reels and the local generator constrain which patterns can be drawn. The original joint reel law remains unrecovered.
 
-The current **T (`0x0002001d`)** chart matches **42 of 45 documented 50-line IDs** and **13 of 17 documented 100-line IDs**. Matching observations are scoped to their filmed modes, wagers and program context; applying a common chart more widely remains a model assumption. [The coverage table](paylines.md#documented-geometry-coverage) separates implemented matches, observed-but-deferred vectors and unrecovered IDs.
+The current **U (`0x0002001e`)** chart matches **42 of 45 documented 50-line IDs** and **13 of 17 documented 100-line IDs**. Matching observations are scoped to their filmed modes, wagers and program context; applying a common chart more widely remains a model assumption. [The coverage table](paylines.md#documented-geometry-coverage) separates implemented matches, observed-but-deferred vectors and unrecovered IDs.
 
 The implemented 50-line Line7 is **bottom, bottom, middle, bottom, bottom**, matching the retained Base and Free observations. Complete original 50- and 100-line charts remain unrecovered. Other rows still use explicit local fallbacks, and some recorded whole-round totals remain unresolved even when an individual caption matches. A caption is not proof of full-event reproduction.
 

@@ -2,12 +2,12 @@
 // Requires cabinetDenom, cabinetLines, cabinetFocus, cabinetAvailable and the
 // existing ui.cpp helpers. Deck arrays/counts are passed by the caller.
 // No game-state mutation, fallback deck or availability policy occurs here.
-// Geometry contract: 1..6 caller-confirmed denominations (cents below $1, whole dollars above),
+// Geometry contract: 1..7 caller-confirmed denominations (cents below $1, whole dollars above),
 // one or two line choices <=100, 0..5 multipliers <=10. An empty row has
 // no paid action; caller supplies its read-only unavailable-row caption.
 // The caller validates choices, focus range and safe cash arithmetic.
 // Accepted original publisher CG, deterministically cropped/resampled.
-#include "cabinet_sage_large28.h"
+#include "cabinet_selection146.h"
 #include "cabinet_type27.h"
 struct CabinetWagerArtDeck {
  const int64_t* denoms;unsigned denomCount;
@@ -74,7 +74,7 @@ void cabinetFocusFrame(int x,int y,int w,int h){
  }
 }
 std::string cabinetDenomLabel(int64_t denomination){return denomination<100?integer(denomination)+"c":"$"+integer(denomination/100);}
-void cabinetDenomFace23(int x,int y,int w,int h,bool cyan,bool selected){
+void cabinetDenomFace23(int x,int y,int w,int h,bool cyan,bool selected,bool green=false){
  for(int yy=0;yy<h;++yy)for(int xx=0;xx<w;++xx){
   if(!cabinetRoundedInside(xx,yy,w,h,4))continue;
   const bool inner1=cabinetRoundedInside(xx-1,yy-1,w-2,h-2,3),inner3=cabinetRoundedInside(xx-3,yy-3,w-6,h-6,2);
@@ -82,6 +82,7 @@ void cabinetDenomFace23(int x,int y,int w,int h,bool cyan,bool selected){
   if(!inner1)color=cyan?(yy<h/2?cabinetRgb27(18,193,255):cabinetRgb27(1,62,161)):(yy<h/2?0xff6b:0x7220);
   else if(!inner3)color=cyan?(yy<h/2?cabinetRgb27(94,235,255):cabinetRgb27(7,109,223)):(yy<h/2?0xffee:0xb402);
   else{const int edge=std::abs(2*xx-w)*3/w;const unsigned t=unsigned(yy)*255/unsigned(h-1);color=cyan?blend(cabinetRgb27(2,111,229),cabinetRgb27(8,185,247),t):blend(0xb2e0,0xfe42,t);if(edge)color=blend(cyan?0x0396:0xaa00,color,unsigned(edge)*20);}
+  if(green){if(!inner1)color=yy<h/2?cabinetRgb27(16,122,6):cabinetRgb27(0,55,0);else if(!inner3)color=yy<h/2?cabinetRgb27(91,245,35):cabinetRgb27(7,116,4);else color=blend(cabinetRgb27(1,112,2),cabinetRgb27(35,232,12),unsigned(yy)*255/unsigned(h-1));}
   dot(x+xx,y+yy,color);
  }
  if(selected){line(x+4,y+2,x+w-5,y+2,WHITE);line(x+2,y+4,x+2,y+h-5,cyan?0xafff:0xfff5);}
@@ -90,61 +91,38 @@ uint8_t cabinetDraftMultiplier24(const CabinetWagerArtDeck&deck){
  for(unsigned i=0;i<deck.betCount;++i)if(deck.bets[i]==engine.state.betMultiplier)return deck.bets[i];
  return deck.betCount?deck.bets[0]:0; // Never invent a multiplier for an unknown row.
 }
-void cabinetTempleBackdrop28(){
- // Code-rendered courtyard, following the red layered eaves, gold/green
- // doors, clipped trees and pale steps of the cabinet setting. No photo pixels.
- for(int y=0;y<115;++y)fill(0,y,W,1,blend(cabinetRgb27(47,103,148),cabinetRgb27(173,190,164),unsigned(y)*255/114));
- fill(6,27,228,53,cabinetRgb27(137,49,35));
- for(int x=13;x<238;x+=30){
-  fill(x,39,23,40,cabinetRgb27(59,83,62));rect(x,39,23,40,cabinetRgb27(188,163,83));rect(x+2,41,19,36,cabinetRgb27(113,129,99));
-  for(int xx=x+5;xx<x+20;xx+=4)for(int yy=44;yy<75;yy+=4)dot(xx,yy,cabinetRgb27(186,178,113),180);
-  fill(x-4,31,4,50,cabinetRgb27(153,48,31));line(x-3,33,x-3,78,cabinetRgb27(206,88,41));
- }
- // Two curved roof tiers with red tiles and fine gold/teal carved eaves.
- for(int tier=0;tier<2;++tier){const int base=tier?35:15;
-  for(int x=0;x<W;++x){const int edge=std::abs(x-120);const int lift=edge>88?(edge-88)*(edge-88)/155:0;const int yy=base-lift;
-   for(int y=yy-9;y<=yy;++y){const bool seam=(x+2*y)%7==0;dot(x,y,cabinetRgb27(seam?93:171,seam?28:47,seam?24:31));}
-   dot(x,yy,cabinetRgb27(233,178,82));dot(x,yy+1,cabinetRgb27(28,89,99));dot(x,yy+2,cabinetRgb27(205,156,72));
-   if(x%9<3){dot(x,yy+3,cabinetRgb27(187,87,41));dot(x,yy+4,cabinetRgb27(229,181,82));}
-  }
- }
- // Pale stone stairway and garden beds beneath the entrance.
- for(int y=78;y<115;++y){const int inset=std::max(0,50-(y-78)*2);fill(inset,y,W-inset*2,1,cabinetRgb27(170,173,157));if((y-78)%6==0)line(inset,y,W-inset-1,y,cabinetRgb27(217,218,191));}
- for(int side=0;side<2;++side){const int root=side?220:20;
-  fill(root-2,44,4,39,cabinetRgb27(75,64,40));
-  for(int y=21;y<81;++y)for(int x=root-24;x<=root+24;++x){
-   const int dx=x-root,dy=y-(y<45?37:60);const int radius=y<45?22:19;
-   if(dx*dx*2+dy*dy*3<radius*radius*2){const unsigned speck=(unsigned(x+41)*37u+unsigned(y)*23u)%31;dot(x,y,cabinetRgb27(22+speck/3,57+speck,27+speck/2));}
-  }
-  for(int x=side?203:0;x<(side?240:37);++x)for(int y=89+(x*7%4);y<115;++y)dot(x,y,cabinetRgb27(41+(x+y)%11,94+(x*3+y)%23,39+(x+y*2)%13));
-  // Small carved guardian on its stone plinth; deliberately no invented detail.
-  const int lion=side?192:43;fill(lion-6,83,13,7,cabinetRgb27(175,178,157));fill(lion-4,76,8,8,cabinetRgb27(199,200,174));fill(lion-5,72,9,7,cabinetRgb27(210,209,181));dot(lion-3,74,cabinetRgb27(105,113,96));line(lion-4,89,lion+5,89,cabinetRgb27(107,119,104));
- }
-}
+void cabinetTempleBackdrop28(){image(cabinet_scene145::image,0,0);}
+
 void drawCabinetWager(const CabinetWagerArtDeck&deck){
- // Existing clean game backdrop, never sampled footage or attachment pixels.
- fill(0,0,W,H,BLACK);cabinetTempleBackdrop28();
- const pa::Image sageFigure={cabinet_sage_large28::width,cabinet_sage_large28::height,cabinet_sage_large28::rgb,cabinet_sage_large28::alpha,0};
- image(sageFigure,56,3,3,3,W-3,115);
- rect(1,1,W-2,H-2,0x8321);rect(2,2,W-4,H-4,0x3182);
- int focusX=0,focusY=0,focusW=0,focusH=0;
- const unsigned lineFocusBase=deck.denomCount,betFocusBase=lineFocusBase+deck.lineCount,returnFocus=betFocusBase+deck.betCount;
- const unsigned coinCount=deck.denoms?deck.denomCount:0;
- const int coinW=34,coinH=21,coinY=6;
- const int coinStart=5;
- for(unsigned i=0;i<coinCount;++i){
-  const int x=coinStart+int(i%2)*(coinW+3),y=coinY+int(i/2)*23;const auto denomination=deck.denoms[i];
-  cabinetDenomFace23(x,y,coinW,coinH,denomination<100,denomination==cabinetDenom);
-  const unsigned size=coinW>=34&&cabinetCoinWidth27(denomination,16)<=coinW-6?16:10;
-  cabinetCoinNumber27(denomination,x+coinW/2,y+(coinH-int(size))/2,size);
-  if(i==cabinetFocus){focusX=x;focusY=y;focusW=coinW;focusH=coinH;}
+ fill(0,0,W,H,BLACK);
+ if(cabinetDenominationPage146){
+  image(cabinet_selection146::denomination,0,0);
+  cabinetButtonFace(184,4,50,16,false,false);cabinetCaption("RETURN",209,8,8,WHITE);
+  fill(3,103,234,31,0x1800);rect(3,103,234,31,GOLD);rect(4,104,232,29,0xb341);
+  for(int y=105;y<132;++y)for(int x=5;x<235;++x)if(((x+y)%8)==0)dot(x,y,0x4800);
+  cabinetMachineCaption27("CHOOSE YOUR DENOMINATION",120,105,6,0xff8a);
+  const int gap=2,coinW=(226-int(deck.denomCount-1)*gap)/int(deck.denomCount),coinY=112,coinH=20;
+  const int start=(240-int(deck.denomCount)*coinW-int(deck.denomCount-1)*gap)/2;
+  for(unsigned i=0;i<deck.denomCount;++i){
+   const int x=start+int(i)*(coinW+gap);const auto denomination=deck.denoms[i];
+   cabinetDenomFace23(x,coinY,coinW,coinH,denomination<100,denomination==cabinetDenom,highLimit146&&denomination<2500);
+   const unsigned size=cabinetCoinWidth27(denomination,16)<=coinW-6?16:10;
+   cabinetCoinNumber27(denomination,x+coinW/2,coinY+(coinH-int(size))/2,size);
+   if(i==cabinetFocus)cabinetFocusFrame(x,coinY,coinW,coinH);
+  }
+  if(cabinetFocus==cabinetReturnFocus())cabinetFocusFrame(184,4,50,16);
+  return;
  }
+ cabinetTempleBackdrop28();rect(1,1,W-2,H-2,0x8321);rect(2,2,W-4,H-4,0x3182);
+ int focusX=0,focusY=0,focusW=0,focusH=0;
+ const unsigned betFocusBase=deck.lineCount,denomFocus=betFocusBase+deck.betCount,returnFocus=denomFocus+1;
+ cabinetDenomFace23(6,6,48,21,cabinetDenom<100,true);cabinetCoinNumber27(cabinetDenom,30,8,cabinetCoinWidth27(cabinetDenom,16)<=42?16:10);
  for(unsigned i=0;i<deck.lineCount;++i){
   const int x=235-int(deck.lineCount-i)*46,y=36;const auto lines=deck.lines[i];
   cabinetButtonFace(x,y,45,37,false,lines==cabinetLines);
   cabinetMachineCaption27("PLAY",x+22,y+2,6,WHITE);cabinetNumber(integer(lines).c_str(),x+22,y+9,16);
   cabinetMachineCaption27("LINES",x+22,y+26,5,WHITE);
-  if(i+lineFocusBase==cabinetFocus){focusX=x;focusY=y;focusW=45;focusH=37;}
+  if(i==cabinetFocus){focusX=x;focusY=y;focusW=45;focusH=37;}
  }
  for(unsigned i=0;i<deck.betCount;++i){
   const int x=(W-int(deck.betCount)*45-int(deck.betCount-1))/2+int(i)*46,y=75;const auto multiplier=deck.bets[i];
@@ -158,12 +136,13 @@ void drawCabinetWager(const CabinetWagerArtDeck&deck){
   cabinetMachineCaption27("CREDITS",x+22,y+30,5,cabinetAvailable?WHITE:0x9cd3);
   if(i+betFocusBase==cabinetFocus){focusX=x;focusY=y;focusW=45;focusH=39;}
  }
- fill(5,117,173,16,0x0000);line(6,116,177,116,0x72e2);
- const unsigned previewMultiplier=cabinetFocus>=betFocusBase&&cabinetFocus<returnFocus?deck.bets[cabinetFocus-betFocusBase]:cabinetDraftMultiplier24(deck);
+ fill(5,117,173,16,BLACK);line(6,116,177,116,0x72e2);
+ cabinetButtonFace(6,117,51,16,false,false);cabinetCaption("DENOM",31,121,8,WHITE);
+ const unsigned previewMultiplier=cabinetFocus>=betFocusBase&&cabinetFocus<denomFocus?deck.bets[cabinetFocus-betFocusBase]:cabinetDraftMultiplier24(deck);
  const int64_t credits=int64_t(cabinetLines)*previewMultiplier,cash=cabinetDenom*credits;
- const char* hint=cabinetAvailable?(cabinetFocus>=betFocusBase&&cabinetFocus<returnFocus?"GREY: NEXT  BLUE: BET":"GREY: NEXT  BLUE: SELECT"):engine.state.mode!=Mode::Base||engine.state.roundOpen?"FEATURE IN PLAY - RETURN":"BET CHANGE PAUSED - RETURN";
- text(hint,8,117,6,BRIGHT);text((integer(credits)+" CREDITS  "+money(cash)).c_str(),8,124,8,WHITE);
+ text(money(cash).c_str(),120,120,10,WHITE,1);
  cabinetButtonFace(184,117,50,16,false,false);cabinetCaption("RETURN",209,121,8,WHITE);
+ if(cabinetFocus==denomFocus){focusX=6;focusY=117;focusW=51;focusH=16;}
  if(cabinetFocus==returnFocus){focusX=184;focusY=117;focusW=50;focusH=16;}
  if(focusW)cabinetFocusFrame(focusX,focusY,focusW,focusH);
 }

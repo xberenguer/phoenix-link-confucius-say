@@ -4,13 +4,13 @@
 // trigger presentation has twinSpin=false, so it cannot gate this interval.
 // No board, prize, wager, Engine state or input controller is changed here.
 bool startedInitialFreeReady29(){
- return engine.presentation.valid&&freeView()&&!(phase==Phase::FreeIntro&&!freeRetriggerIntro());
+ return boardPresentation144().valid&&freeView()&&!(phase==Phase::FreeIntro&&!freeRetriggerIntro());
 }
 bool pairedReelsAccepted29(){
- return !holdView&&((engine.presentation.valid&&engine.presentation.twinSpin)||startedInitialFreeReady29());
+ return !holdView&&((boardPresentation144().valid&&boardPresentation144().twinSpin)||startedInitialFreeReady29());
 }
 bool completedFreeBoard29(){
- return !holdView&&engine.presentation.valid&&engine.presentation.twinSpin&&engine.presentation.freeEnded&&
+ return !holdView&&boardPresentation144().valid&&boardPresentation144().twinSpin&&boardPresentation144().freeEnded&&
         (phase==Phase::Outro||phase==Phase::Ready);
 }
 bool bonusReelsActive29(){

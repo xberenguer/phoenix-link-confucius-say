@@ -26,11 +26,11 @@ An unavailable row cannot start a paid spin. Owed features protect their existin
 
 | Entry | Purpose |
 |---|---|
+| Balance | Add money, clear the balance or configure automatic refill |
 | Game Rules | Inspect the implemented rule and pay pages |
 | Paylines | Browse every line layout, starting with your active selection |
-| Credits | Add money, clear the balance or configure automatic refill |
 | Counter & Jackpots | Set the active feature counter and edit or restore jackpot amounts |
-| Settings | Open Sound and Display options |
+| Settings | Open Sound, Display and High Limit options |
 | Simulator Return | Review and apply six local-model choices affecting future Grand |
 | Return to Game | Resume the game view |
 
@@ -40,15 +40,15 @@ On menu pages, grey moves and blue selects. Simulator Return offers six local-mo
 
 Opening a menu pauses the current feature and its music. Returning to Game resumes them; paid autoplay remains stopped.
 
-Hold grey to return to the parent menu. Credits and Counter & Jackpots return to their selected Game Menu entry. Sound and Display return to Settings; Settings returns to its selected Game Menu entry. Editors return to their parent without applying. The wager screen returns directly to play; closing the jackpot board also returns to play without spinning.
+Hold grey to return to the parent menu. Balance and Counter & Jackpots return to their selected Game Menu entry. Sound and Display return to Settings; Settings returns to its selected Game Menu entry. Editors return to their parent without applying. The wager screen returns directly to play; closing the jackpot board also returns to play without spinning.
 
-<img src="media/menu.png" alt="Game Menu with separate Credits and Counter & Jackpots entries" width="720">
+<img src="media/menu.png" alt="Game Menu with separate Balance and Counter & Jackpots entries" width="720">
 
 The bottom-right version mark appears in Game Menu. See [settings](settings.md) for the full option list and [troubleshooting](troubleshooting.md) for apparent input delays.
 
-## Credit refill
+## Balance and funding
 
-The funding page lists **Custom Amount**, **Add $1,000**, **Add $10,000**, **Add $100,000**, **Clear Balance**, Auto Refill and Back to Menu, in that order. Custom Amount opens the editable voucher; grey moves right, short blue changes a digit, hold blue moves left, and Done funds the game. Add choices increase the current balance. Clear Balance sets it to zero. Successful funding or clearing returns to Game with autoplay off; neither resets the live meter buckets, wager or statistics. Clearing leaves the Auto Refill preference in place.
+The funding page lists **Custom Amount**, **Add $1,000**, **Add $10,000**, **Add $100,000**, **Clear Balance**, Auto Refill and Back to Menu, in that order. Custom Amount opens the editable voucher; grey moves right, short blue changes a digit, hold blue moves left, and Insert Credits funds the game. Add choices increase the current balance. Clear Balance sets it to zero. Successful funding or clearing returns to Game with autoplay off; neither resets the live meter buckets, wager or statistics. Clearing leaves the Auto Refill preference in place.
 
 Automatic refill uses the last successful addition, including a custom voucher amount when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding changes the money balance without resetting this session’s meter buckets, wager or statistics. Unfinished features and source/capacity faults can block funding. See [session rules](saving.md).
 

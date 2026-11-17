@@ -54,3 +54,5 @@ The original joint reel/stop law, virtual weights, full pay programs, prize/mult
 Included media comes from the simulator with demonstration credits. Scripted gallery fixtures and live-session previews are identified by their [provenance](gallery-manifest.json), version, dimensions and hashes. Third-party attribution is in [attribution](attribution.md).
 
 The [HandpayAday Phoenix Link recording](https://www.youtube.com/watch?v=s9EJCIFnh8g) shows the moving fire fringe around the stationary jackpot-topper lettering. The small-screen title effect is reconstructed in code; video frames are not shipped as textures.
+
+The [Palms Confucius Say recording](https://www.youtube.com/watch?v=mBcjPK63KW4) and [General Tso denomination checks](https://www.youtube.com/watch?v=iQ6VfmPqavM) show retained boards during unfunded wager checks and separate displays by denomination. The latter is family corroboration. The simulator keeps the last settled display per denomination; fresh unplayed displays use an explicitly unpaid cosmetic arrangement.

@@ -1,10 +1,10 @@
 {
-  "version": "0.2.143",
-  "runtime_fingerprint": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
-  "mathematical_family": "c3b320441217a6fee28ce485916d5c9507c5f86e5a5d26ba4ae9dcd2673277d8",
-  "local_model": "0x0002001d",
-  "source_body_files": 166,
-  "source_total_files": 169,
+  "version": "0.2.150",
+  "runtime_fingerprint": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+  "mathematical_family": "beeefd81a346ef6ed99b44dcdb7987aecc474c9437698a0c8f9b2de669335d40",
+  "local_model": "0x0002001e",
+  "source_body_files": 168,
+  "source_total_files": 171,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
   "original_casino_calibration": false,
   "actual_CSPRNG_infinite_horizon_return_qualified": false,
@@ -22,21 +22,19 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Original StickS3 full firmware/assets readback and healthy fresh startup passed; autoplay off.",
-  "browser_version": "0.2.143",
-  "native_status_version": "0.2.143",
+  "native_validation": "Public-project firmware, full original-Stick firmware/assets readback and healthy fresh startup passed; autoplay off.",
+  "browser_version": "0.2.150",
+  "native_status_version": "0.2.150",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Current source-bound hotfix release package",
+  "status": "Current source-bound release package",
   "changes": [
-    "Wager-screen Return and hold-grey apply the selected denomination and lines without spinning.",
-    "Unaffordable red BET selects its counter before the normal funding check; equal-credit same-denomination bets retain their shared bank.",
-    "Custom Amount comes first in Credits; holding blue moves to the digit on the left.",
-    "Editable Stardust voucher uses matching varied decorative identifiers, written amounts and the cash-in sound.",
-    "Small startup progress overlay retains the game behind it.",
-    "Flat jackpot fields, larger topper/amounts and stationary letter-edge fire.",
-    "Reconstructed red temple courtyard behind the original clean publisher figure.",
-    "Jackpot amounts, outcome weights and CSPRNG provider are unchanged."
+    "Two-stage denomination and wager selection with publisher Confucius/temple artwork and original title.",
+    "Each denomination restores its last settled reel display; changing lines/bet within it keeps that display until another spin.",
+    "Balance is the first Game Menu entry; Custom Amount starts at $00,000.00 and confirms with INSERT CREDITS.",
+    "High Limit offers $1/$2/$5/$10/$25/$50/$100 and the directly filmed $5/50-line/3x/$750 selection.",
+    "Higher-denomination money/credit formatting and source-derived offer documentation.",
+    "Source, browser, wiki tables and signed-flasher bundle synchronized for this release."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -44,12 +42,12 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 5794192,
-      "sha256": "d4bbbbf58c5e4d0a41528d3a5eb49e7824e0538196ec7b0be37ce270e7ca9c15"
+      "bytes": 5974560,
+      "sha256": "1d532932d5795e5bdabf182973ffc237fa821f3e868f5ef094049630b9709fa3"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 5728656,
-      "sha256": "25ad3436bd6b5c98156a855c669b2624e54b4a1cb4830d6a03f393083387c903"
+      "bytes": 5909024,
+      "sha256": "a62d8a49ec3c26ae4fb72970a89e8a749eeed62c98d2e758bca1e6fa2d206dfe"
     }
   },
   "validation": {
@@ -61,7 +59,12 @@
     "original_machine_fidelity_certified": false,
     "counter_bank_and_insufficient_funds_navigation": true,
     "voucher_ID_and_left_hold_checks": true,
-    "local_browser_controls": 22,
-    "feature_pause_and_input_regressions": 13
+    "local_browser_controls": 26,
+    "feature_pause_and_input_regressions": 13,
+    "standard_offers_checked": 55,
+    "high_limit_offers_checked": 22,
+    "independence_paired_actions": 143487,
+    "current_source_gallery_frames": 500,
+    "current_source_hero_frames": 496
   }
 }

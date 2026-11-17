@@ -53,7 +53,7 @@ struct Cell {
 
 namespace local {
 // Version identifies this local, deliberately approximate math configuration.
-constexpr uint32_t modelId = 0x0002001du;
+constexpr uint32_t modelId = 0x0002001eu;
 // Historical price-version identifiers for analytic/reference includes only.
 // No backward-compatible game restore or saved-bank import is implemented.
 constexpr uint32_t previousGPriceModelId = 0x00020010u;
@@ -81,7 +81,7 @@ constexpr int64_t maximumBankMinor = 1000000000000000LL;  // external play-money
 constexpr int64_t maximumStoredMinor = std::numeric_limits<int64_t>::max();
 constexpr int64_t maximumCreditPrize = 3000000000LL;  // defensive locked-prize capacity, not an original casino award limit.
 constexpr int64_t newBankMinor = 100000;  // $1,000.00 play bank.
-constexpr int64_t denominations[] = {1, 2, 5, 10, 25, 50, 100, 200, 500, 1000};
+constexpr int64_t denominations[] = {1, 2, 5, 10, 25, 50, 100, 200, 500, 1000, 2500, 5000, 10000};
 constexpr size_t denominationCount = sizeof(denominations) / sizeof(denominations[0]);
 constexpr uint8_t lineOptions[] = {5,10,15,25,50,100};
 constexpr uint16_t meterBetCredits[] = {5,10,15,20,25,30,35,40,45,50,60,70,75,80,90,100,105,120,125,135,150,175,200,225,250,300,350,400,450,500,600,700,800,900,1000};

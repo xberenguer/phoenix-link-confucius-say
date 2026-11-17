@@ -110,14 +110,17 @@ static void equalAfter(const Engine&a,const Engine&b,const Offsets&o){
 }
 static std::vector<Offer> offers(){
  std::vector<Offer> result;
- for(const auto&coin:cabinet_profile::coins)for(unsigned line=0;line<coin.count;++line){
-  const auto&row=coin.rows[line];CHECK(row.multipliers&&row.count==5);
-  for(unsigned i=0;i<row.count;++i){
-   Offer next{coin.minor,coin.lines[line],row.multipliers[i]};
-   CHECK(cabinet_profile::offered(next.coin,next.lines,next.mult));result.push_back(next);
+ auto append=[&](const auto& coins){
+  for(const auto&coin:coins)for(unsigned line=0;line<coin.count;++line){
+   const auto&row=coin.rows[line];CHECK(row.multipliers&&row.count>0);
+   for(unsigned i=0;i<row.count;++i){
+    Offer next{coin.minor,coin.lines[line],row.multipliers[i]};
+    CHECK(std::none_of(result.begin(),result.end(),[&](const Offer& o){return o.coin==next.coin&&o.lines==next.lines&&o.mult==next.mult;}));result.push_back(next);
+   }
   }
- }
- CHECK(result.size()==55);CHECK(Engine::wagerCount()==50);return result;
+ };
+ append(cabinet_profile::coins);append(cabinet_profile::highLimitCoins);
+ CHECK(result.size()==77);CHECK(Engine::wagerCount()==50);return result;
 }
 static void initialize(Engine&e,random::Service&s,TestTape&t,const Offer&w,unsigned slot,unsigned cap,int64_t bank){
  CHECK(s.initialize(TestTape::get,&t));CHECK(t.calls==1);
@@ -330,9 +333,9 @@ int main(){
  static_assert(!std::is_copy_constructible<random::Service>::value,"Services must be independent owners");
  CHECK(static_grand_table::rootAccepted&&!static_grand_table::hostTrial);
  const auto all=offers();matrix(all);naturalRounds(all);owedContinuations(all);capacity(all);positiveControls(all);
- CHECK(counts.traces==23760&&counts.naturalRounds==1760);
- CHECK(counts.capacityRefusals==1705&&counts.capacityBoundaries==165);
- CHECK(counts.owedContinuations==110&&counts.holdEntered>0&&counts.holdSettled>0);
+ CHECK(counts.traces==all.size()*432&&counts.naturalRounds==all.size()*32);
+ CHECK(counts.capacityRefusals==all.size()*31&&counts.capacityBoundaries==all.size()*3);
+ CHECK(counts.owedContinuations==all.size()*2&&counts.holdEntered>0&&counts.holdSettled>0);
  CHECK(counts.meterTriggered>0&&counts.chained>0&&counts.freeAwarded>0&&counts.freeEnded>0);
  std::printf("{\"status\":\"PASS\",\"checks\":%llu,\"cabinetOffers\":%zu,\"legacyPresets\":%zu,"
   "\"grandSlots\":6,\"prizeCaps\":2,\"matrixTraces\":%llu,\"pairedActions\":%llu,"

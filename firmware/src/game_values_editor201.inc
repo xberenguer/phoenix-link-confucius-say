@@ -110,7 +110,7 @@ std::string ticketAmountWords142(uint64_t minor){const uint32_t dollars=uint32_t
 uint32_t voucherOpened142=0,voucherSequence142=1;
 char voucherCode143[19]="730148529674183026";
 void openCreditVoucher143(){
- editedValue201=std::min<uint32_t>(lastAddedMinor,999999999);voucherOpened142=uiWallMillis();
+ editedValue201=0;voucherOpened142=uiWallMillis();
  // Cosmetic identifiers use only already-public display information. They
  // never draw from, reveal, reseed or otherwise alter the outcome generator.
  uint32_t seed=0x8d2537abu^voucherOpened142^uint32_t(++voucherSequence142*0x9e3779b9u)^uint32_t(engine.state.meter);
@@ -118,7 +118,7 @@ void openCreditVoucher143(){
  if(!seed)seed=1;
  for(unsigned i=0;i<18;++i)voucherCode143[i]=char('0'+cosmetic(seed)%10);
  voucherCode143[0]=char('1'+cosmetic(seed)%9);voucherCode143[18]=0;
- editFocus201=voucherFirstDigit142();creditsPanel201=CreditsPanel201::CreditVoucher;statusLine[0]=0;
+ editFocus201=2;creditsPanel201=CreditsPanel201::CreditVoucher;statusLine[0]=0;
 }
 void drawCreditVoucher142(){
  shade();constexpr uint16_t paper=0xffde,ink=0x0000;
@@ -147,15 +147,15 @@ void drawCreditVoucher142(){
  if(ticketWidth142(words.c_str(),6)>192){size_t split=words.size()/2;auto at=words.find_last_of(' ',split);if(at==std::string::npos)at=split;first=words.substr(0,at);second=words.substr(at+1);}
  ticketText142(first.c_str(),120,76,6,ink,1);if(!second.empty())ticketText142(second.c_str(),120,82,6,ink,1);
  char digits[16];snprintf(digits,sizeof(digits),"%09llu",(unsigned long long)editedValue201);
- unsigned start=voucherFirstDigit142();if(editFocus201<start)start=editFocus201;
+ unsigned start=std::min(2u,voucherFirstDigit142());if(editFocus201<start)start=editFocus201;
  std::string amount="$";int offsets[9]={};int width=ticketWidth142("$",18);
  for(unsigned i=start;i<9;++i){if(i==7){amount+='.';width+=ticketWidth142(".",18);}offsets[i]=width;const char glyph[2]={digits[i],0};amount+=digits[i];width+=ticketWidth142(glyph,18);if(i<6&&(6-i)%3==0){amount+=',';width+=ticketWidth142(",",18);}}
  const int left=(W-width)/2;ticketText142(amount.c_str(),left,88,18,ink);
  if(editFocus201<9){const char glyph[2]={digits[editFocus201],0};const int x=left+offsets[editFocus201],w=ticketWidth142(glyph,18);fill(x,87,w,20,0xe71c);ticketText142(glyph,x,88,18,ink);fill(x,107,w,1,ink);}
  ticketText142("Void after 180 days",31,110,5,ink);ticketText142("MACHINE # 0142",208,110,5,ink,2);
  fill(0,117,W,18,0x0923);
- if(editFocus201==9)rect(46,118,60,11,0xe585);if(editFocus201==10)rect(134,118,60,11,0xe585);
- text("DONE",76,120,8,editFocus201==9?BRIGHT:WHITE,1);text("CANCEL",164,120,8,editFocus201==10?BRIGHT:WHITE,1);
+ if(editFocus201==9)rect(18,118,128,11,0xe585);if(editFocus201==10)rect(160,118,65,11,0xe585);
+ text("INSERT CREDITS",82,120,8,editFocus201==9?BRIGHT:WHITE,1);text("CANCEL",192,120,8,editFocus201==10?BRIGHT:WHITE,1);
  ticketText142("GREY NEXT   BLUE +1   HOLD BLUE LEFT",120,130,5,WHITE,1);
  if(*statusLine){fill(8,74,224,12,paper);ticketText142(statusLine,120,77,6,ink,1);}
 }

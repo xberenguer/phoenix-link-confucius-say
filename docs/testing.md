@@ -24,7 +24,7 @@ The production crypto build excludes deterministic self-test/input helpers. Thos
 
 ## Reproduce public tables
 
-Use [the exporter command](payouts.md#regenerating-the-reference) against the current source. Verify its source version, input hashes and dataset hashes. The internal evaluator includes more profiles than the 55 offered wager choices.
+Use [the exporter command](payouts.md#regenerating-the-reference) against the current source. Verify its source version, input hashes and dataset hashes. The internal evaluator includes more profiles than the 77 offered wager choices.
 
 ## Visual and audio fixtures
 
@@ -46,7 +46,7 @@ The [current RNG validation summary](data/rng-validation.json) records the first
 
 ## Check balance and outcome-history independence
 
-Run `python3 tools/test_outcome_integrity.py --sanitize --out /tmp/phoenix-outcome-integrity` with a new output directory. The test uses two independent instances of the real Engine and Mbed TLS service with matching test-only entropy. It varies funded balances and past win/loss totals while keeping wagers, meters and owed features equal. It compares canonical financial state, committed presentation results and entropy requests across all 55 menu wagers, six Grand selections, both prize-cap profiles and Base/Free/Hold modes.
+Run `python3 tools/test_outcome_integrity.py --sanitize --out /tmp/phoenix-outcome-integrity` with a new output directory. The test uses two independent instances of the real Engine and Mbed TLS service with matching test-only entropy. It varies funded balances and past win/loss totals while keeping wagers, meters and owed features equal. It compares canonical financial state, committed presentation results and entropy requests across all 77 standard/high-limit menu wagers, six Grand selections, both prize-cap profiles and Base/Free/Hold modes.
 
 Additional cases continue complete rounds and queued features, check accounting-capacity refusals, and confirm that changing legitimate meter/feature state can change results. These are finite software regressions, not measurements of casino odds, physical entropy or regulatory approval.
 

@@ -1,5 +1,15 @@
 # Current release notes
 
+## 0.2.150
+
+- Two-stage denomination and wager selection with publisher Confucius/temple artwork and original title.
+- Each denomination restores its last settled reel display; changing lines/bet within it keeps that display until another spin.
+- Balance is the first Game Menu entry; Custom Amount starts at $00,000.00 and confirms with INSERT CREDITS.
+- High Limit offers $1/$2/$5/$10/$25/$50/$100 and the directly filmed $5/50-line/3x/$750 selection.
+- Higher-denomination money/credit formatting and source-derived offer documentation.
+- Source, browser, wiki tables and signed-flasher bundle synchronized for this release.
+
+
 ## 0.2.143
 
 - Wager-screen Return and hold-grey apply the selected denomination and lines without spinning.

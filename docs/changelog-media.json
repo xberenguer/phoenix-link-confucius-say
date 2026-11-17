@@ -1,14 +1,13 @@
 {
-  "version": "0.2.143",
-  "runtime_fingerprint": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
-  "curated_presentation_not_frequency_measurement": true,
-  "raw_source_footage_or_user_attachments_included": false,
+  "version": "0.2.150",
+  "runtime_fingerprint": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
   "images": [
     {
       "file": "media/settings.png",
-      "kind": "Settings groups Sound and Display",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "bd0b0ff783744849bac6319f2538720e7a44e04c151497ad0bacd49f28927d22",
+      "bytes": 11567,
       "dimensions": [
         720,
         405
@@ -17,37 +16,18 @@
         240,
         135
       ],
-      "sha256": "bb15610304cd7683d867d1af5471ab5205a741ef3276086dc1f10b2a49fe3101",
-      "bytes": 10740,
-      "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        2
-      ],
-      "input_frame_rgb565_sha256": [
-        "4002d1afffb32e0de3edc88a5ae9a1cc9155141110d1f2450f30b4341bb1fb7e"
-      ],
-      "input_frame_clock_ms": [
-        1000
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 100,
-          "lines": 5,
-          "multiplier": 2
-        }
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "653a10b8e2445d18001ae4714dbbf6c6d0c2b3d01fcc51a9ccef5c058b7ba372",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/paylines.png",
       "kind": "Current selected payline layout, six diagrams per page",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -79,14 +59,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/paylines-all.png",
       "kind": "Read-only browsing of another implemented payline layout",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -118,14 +97,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/line22-jack3.png",
       "kind": "Observed US50Line22 path and exact10c50M1Jack3 five-credit payout",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -157,14 +135,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/pickup-flight.png",
       "kind": "Middle-row collection bird visible before unchanged700ms arrival",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -196,14 +173,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/cash25-burst.png",
       "kind": "Current numeric-only25x Hold burst through actualEngine andUI",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -235,14 +211,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/game.png",
-      "kind": "Fresh default-denomination1000-credit game",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "da5bea80de7b6753020c5c9b677aed49b0d1de32ca2c1ad9181bc7b16525bfad",
+      "bytes": 45825,
       "dimensions": [
         720,
         405
@@ -251,37 +227,19 @@
         240,
         135
       ],
-      "sha256": "994ed5213c08b3b4035546cbda0622231b254c1812b0db89ee9579ce491aec6c",
-      "bytes": 43689,
-      "fixture_kind": "Explicit synthetic board/presentation from current C++ source; not a frequency sample.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        1
-      ],
-      "input_frame_rgb565_sha256": [
-        "53a7f3dd8969fbfd8db4f5f1068d372876824c3b37558763aa08454815e08427"
-      ],
-      "input_frame_clock_ms": [
-        1000
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 100,
-          "lines": 5,
-          "multiplier": 2
-        }
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "37cdd19776114e680efac669aefd9bae4c1b39ac3fd52299ccf8aefea8ea9d61",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/wagers.png",
-      "kind": "Cabinet wager panel",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "093c1018728af7d10d384fbd353a862e9745be537a350fc00e4dc329da26d3b3",
+      "bytes": 60348,
       "dimensions": [
         720,
         405
@@ -290,38 +248,19 @@
         240,
         135
       ],
-      "sha256": "72818a8fe67a15651ccd0da6eff786cea70995b9373998db11032c060d453062",
-      "bytes": 30104,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-wagers"
-      ],
-      "input_frame_rgb565_sha256": [
-        "2ab5f56ee35f453d294bbe74a4790c048616d8ab2bb3be06b9b68097d21ab8a5"
-      ],
-      "input_frame_clock_ms": [
-        1000
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 100,
-          "lines": 5,
-          "multiplier": 2
-        }
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "bf4b1224065df6c226738625c92cf2779eb314843ccf2664f1f88d445cfe1acf"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "d0a894ec00e0690f1bcbe5b9bbc9ed32f4f6fcea0de83e2a7afae717e2618666",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/menu.png",
-      "kind": "Current seven-item Main menu with grouped Settings",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "77331f7863022b67a2f74a85be2c5b202b7d36056d60a05d196625ea9541c984",
+      "bytes": 14486,
       "dimensions": [
         720,
         405
@@ -330,25 +269,18 @@
         240,
         135
       ],
-      "sha256": "4faaf2c23055f2367f8da540ccebb146e8c1a94894cbb0ddc76a5a4cbd250bea",
-      "bytes": 15062,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-menu"
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "17ed1ab7210709572d39709cb76b186a2d9b405400a57e93853923c7e9ef11ee"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "3866a0b36c91b44e40b5e4d06985de2aa0f267b7613a5c4f7453697d70b600a6",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/sound.png",
       "kind": "Current Sound menu, with stops/landings and no reel-bed control",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -380,14 +312,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/volume.png",
       "kind": "Fine volume panel",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -419,14 +350,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/wisdom-entry.png",
       "kind": "Three-Wisdom initial entry",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -458,14 +388,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/hold.png",
       "kind": "Natural Phoenix Hold entry",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -497,14 +426,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/collection.png",
       "kind": "Centered running collection amount",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -536,14 +464,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/symbols.png",
       "kind": "All twelve display symbols",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -575,14 +502,14 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/credits.png",
-      "kind": "Funding-only Credits panel with Clear Balance selected",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "998d5979b93770cc2cc4d53333cf4d75b635f1f1fb10ab4310c6cb3350671666",
+      "bytes": 14945,
       "dimensions": [
         720,
         405
@@ -591,25 +518,19 @@
         240,
         135
       ],
-      "sha256": "9ad5ca0acb3b19df4f29be812c8a4c9a5865feacd42557814e2534e6a439a325",
-      "bytes": 15535,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-credits"
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "7d5965a7955245bd6bb538809201a3c95ce465aaca592efdee1f692512c4671a"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "df59ba0ad1e528b2c58abf306073416c452b7bf4e65e5b9547a55635caba4d26",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/wagers-lines.png",
-      "kind": "Focus moves from denomination to PLAY LINES",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "40db7acd0323efc659c5fe074c5a58de31c57f7feb17a60ba2c1dc93f92b586f",
+      "bytes": 42253,
       "dimensions": [
         720,
         405
@@ -618,38 +539,19 @@
         240,
         135
       ],
-      "sha256": "45ecae73755fb65833294604b93be0aab23669cbc50f7d9b3f842db33c3a9be8",
-      "bytes": 30118,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-wagers-lines"
-      ],
-      "input_frame_rgb565_sha256": [
-        "f2f4e06f04af422dc8b31f5cb5ab3616942ee8bdc68da555a8c6d7fc8dfdf199"
-      ],
-      "input_frame_clock_ms": [
-        1000
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 5,
-          "lines": 50,
-          "multiplier": 1
-        }
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "37672f86693fa95a6a7c421a57a79cc94ebf1a7c1117db0fe2c581f91469d300"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "5de448b5c8667a86899430a8cb4629df350b95f5ab8f7c0b252587c21b29dd83",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/wagers-bets.png",
-      "kind": "Selecting lines moves focus to red BET choices",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "ba3b237a3306660254178cb3ed3941a3e98c31ed7fd2ce3ce14faafa0bbe7715",
+      "bytes": 42223,
       "dimensions": [
         720,
         405
@@ -658,38 +560,18 @@
         240,
         135
       ],
-      "sha256": "62e57c01757f2c845ca4b21abde9f67ecb528e6e490f53e9063afc9147f63ba5",
-      "bytes": 30012,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-wagers-bets"
-      ],
-      "input_frame_rgb565_sha256": [
-        "c57831c33645d49c4dd08271a8e0be2253057460317b96b4a55659eebd83466b"
-      ],
-      "input_frame_clock_ms": [
-        1000
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 5,
-          "lines": 50,
-          "multiplier": 1
-        }
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "63f61903bdd6e1dd85f4ba0b43856aa286fcf2234e8b14764d4e47d950d641e9"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "793593ccfa0dd16e7a1e61a5677ae61ba38629afc10f1aec9ab169ddbb36e5e4",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/nested-free.png",
       "kind": "Nested Hold with actualFreeGame1of6 and existingHold counts",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -721,14 +603,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/nested-free-fire.png",
       "kind": "ActualFreeGame1of6 stays readable through the fire",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -760,14 +641,13 @@
       ],
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "exact_source_RGB": true
     },
     {
       "file": "media/pickup-flight.webp",
       "kind": "Current broad collection curl with late center retarget",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -903,14 +783,13 @@
       "encoded_frames": 51,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/cash25-burst.webp",
       "kind": "Current short25x cash-only Hold event excerpt; not a universalthreshold",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -1066,14 +945,13 @@
       "encoded_frames": 61,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/wisdom.webp",
       "kind": "Wisdom four-second display loop",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -1307,14 +1185,13 @@
       "encoded_frames": 100,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/sage.webp",
       "kind": "Awarded two-/three-row Sage event, then preview restarts",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -1410,14 +1287,13 @@
       "encoded_frames": 31,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/phoenix.webp",
       "kind": "One Phoenix asset cycle",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -1571,14 +1447,13 @@
       "encoded_frames": 60,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/coins.webp",
       "kind": "Current coin-fountain excerpt; no threshold inference",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -1764,14 +1639,13 @@
       "encoded_frames": 76,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/counter.webp",
       "kind": "Four-second calm counter rim",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -1885,14 +1759,13 @@
       "encoded_frames": 40,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/multiplied-mini101.webp",
       "kind": "Current Triple Mini same-cell repeated pickups; stable filename",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -2048,14 +1921,14 @@
       "encoded_frames": 61,
       "exact_source_RGB": true,
       "lossless_decode_verified": true,
-      "preview_repeats_event": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "preview_repeats_event": true
     },
     {
       "file": "media/jackpots.png",
-      "kind": "Actual Main/UI live-session page: jackpots",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "43c72034df90d0d427951db2b545d3cf11a9b0da548eef37a09ea620b052a34b",
+      "bytes": 36823,
       "dimensions": [
         720,
         405
@@ -2064,25 +1937,18 @@
         240,
         135
       ],
-      "sha256": "bce844763d3300313007b6b0ae77c72f83c252d2b305d098775616cecdb48139",
-      "bytes": 37881,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-jackpots"
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "359b21e4954117bedca04be0e1738f475c97bd686397d7819132ace203eba0a8"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "359b21e4954117bedca04be0e1738f475c97bd686397d7819132ace203eba0a8",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/game-values.png",
       "kind": "Actual Main/UI live-session page: Counter & Jackpots parent",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -2115,14 +1981,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "custom_jackpot_mask": 0
     },
     {
       "file": "media/counter-editor.png",
       "kind": "Actual Main/UI live-session page: counter-editor",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -2155,14 +2020,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "custom_jackpot_mask": 0
     },
     {
       "file": "media/jackpot-values.png",
       "kind": "Actual Main/UI live-session page: jackpot-values",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -2195,14 +2059,13 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "custom_jackpot_mask": 0
     },
     {
       "file": "media/jackpot-editor.png",
       "kind": "Actual Main/UI live-session page: jackpot-editor",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -2235,14 +2098,14 @@
       "publication_transform": "Exact nearest-neighbor3x enlargement.",
       "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 0,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "custom_jackpot_mask": 0
     },
     {
       "file": "media/jackpots-custom.png",
-      "kind": "Actual Main/UI live-session page: jackpots-custom",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "11a1cf9ad48bee99ecaef85568c67e350b9b563bb24700a866b80aba76be051c",
+      "bytes": 38065,
       "dimensions": [
         720,
         405
@@ -2251,39 +2114,18 @@
         240,
         135
       ],
-      "sha256": "6c3eb17928e9d870cf93af8e1bead34fc698c695cfa55429337a7e63ad2b3186",
-      "bytes": 39167,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-jackpots-custom"
-      ],
-      "input_frame_rgb565_sha256": [
-        "c007e5901e5126740ba8d66d209abb2dfa8db9b586a5f448394d582f6418383c"
-      ],
-      "input_frame_clock_ms": [
-        4152
-      ],
-      "profiles": [
-        {
-          "denomination_minor": 1,
-          "lines": 50,
-          "multiplier": 10
-        }
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "custom_jackpot_mask": 4,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "cd8e89122585e6a9525b1a145e30d7b2be81a69eb77713a2b04974c634766b97"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "cd8e89122585e6a9525b1a145e30d7b2be81a69eb77713a2b04974c634766b97",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/maximum-counter140.png",
       "kind": "Bounded counter draft at maximum1886; live counter remains unchanged until Apply",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -2302,14 +2144,13 @@
       "frames": 1,
       "input_frame_rgb565_sha256": [
         "9055e5274bb8df00a6bbee09a6c3feab99b9bf2ba64ab8ce38c7e8eb4b2545c3"
-      ],
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      ]
     },
     {
       "file": "media/counter-editor140.webp",
       "kind": "Blue/grey digit presses:0886 to1886 and back, then lower-digit6 to0; no Apply",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "dimensions": [
         720,
         405
@@ -2635,14 +2476,14 @@
           1880,
           3
         ]
-      ],
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      ]
     },
     {
-      "file": "media/credit-voucher.png",
-      "kind": "Funding-only Credits panel with Clear Balance selected",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "file": "media/credit-voucher-filled.png",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "14adef42fd8a120aa9e76e072a6afa5d57cc6343689c1f9a839a4481fac51dbc",
+      "bytes": 21578,
       "dimensions": [
         720,
         405
@@ -2651,27 +2492,61 @@
         240,
         135
       ],
-      "sha256": "4ab5e6885b574dbc663d33885f6ae4733f962907f09040b3ffb47f4b0cae96b9",
-      "bytes": 22633,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-credit-voucher"
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "title": "Custom credit voucher",
-      "alt": "Editable Stardust credit voucher",
-      "input_frame_ppm_sha256": "1d832879d8b4de763746c9b02c093a12e314a356c976e70d01933e1e6d2c90d0"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "8a2ff08691e7a544066382e6ca402f5c1b133df4d648641899d8268c1fcb7208",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
+    },
+    {
+      "file": "media/high-limit-fifty.png",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "31d781e1fe142a98073cbe4dd8773f2feb9d4c71a50a345b8986ab12392af9c6",
+      "bytes": 46520,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "exact_source_RGB": true,
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "dece75bb15823768c7b03c15762b363bd2bf41d37f0f95fa041c0dfb878857e2",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
+    },
+    {
+      "file": "media/high-limit-bet.png",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "fc12ee1db04a6cfaa0ed0a2fb5be24c385db40b5591946a031dd1d6a0f00b89d",
+      "bytes": 47941,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "exact_source_RGB": true,
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "10187ab606558413e742893bb2a6e2fbd24b39d4bad377cffe2f6ecefd09a848",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/loading.png",
-      "kind": "Funding-only Credits panel with Clear Balance selected",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "b6d656e60685c3a2a808b18086651cb37384a503f28950838e26e818fb2db0d7",
+      "bytes": 41678,
       "dimensions": [
         720,
         405
@@ -2680,55 +2555,74 @@
         240,
         135
       ],
-      "sha256": "af1f8c28ef567c7fe134096efeb25c659e594c746df9e10989533ae261906029",
-      "bytes": 43090,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-loading"
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
       "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "title": "Startup loading overlay",
-      "alt": "Loading progress over the actual game",
-      "input_frame_ppm_sha256": "fa0d1b61432aa60842120a01f000cac7570008ae878240a647d9f66b82778526"
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "fa0d1b61432aa60842120a01f000cac7570008ae878240a647d9f66b82778526",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
+    },
+    {
+      "file": "media/credit-voucher.png",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "818ee5f23981f943206866dbd66d640c6d97f8fc1d9ca506faa04807c704a2ad",
+      "bytes": 20020,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "exact_source_RGB": true,
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "b14650b2334e62c1f65f1bfedf0b2f3b29ebe1283b6b46462b23962442d836cf",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
+    },
+    {
+      "file": "media/high-limit-denomination.png",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "ed0f4b352cbc6db08fad4f75210bb8b32573c8ce525cf87456af26cbe72df43e",
+      "bytes": 60482,
+      "dimensions": [
+        720,
+        405
+      ],
+      "renderer_dimensions": [
+        240,
+        135
+      ],
+      "exact_source_RGB": true,
+      "frames": 1,
+      "fixture_kind": "Actual current Main/UI synthetic fresh-session capture; no player bank or device photograph.",
+      "input_frame_ppm_sha256": "e4b9e6509c76a098a1fc34f959d8b8a990ba5e48cb1099ea6d16a0fa7032c420",
+      "raw_camera_or_user_screenshot": false,
+      "publication_transform": "Nearest-neighbor3x enlargement."
     },
     {
       "file": "media/jackpots-fire.gif",
-      "kind": "Actual Main/UI live-session page: jackpots",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+      "sha256": "95e23a8c6b89c25cbf75f110e1457084740216d17c1fbcfddac5cc942f7cde72",
+      "bytes": 3296116,
       "dimensions": [
         720,
         405
       ],
-      "renderer_dimensions": [
-        240,
-        135
-      ],
-      "sha256": "775e456fa0cc863f51284b0fda3a95e3251bc904d3c8b2ca04f3304e3b508642",
-      "bytes": 4003002,
-      "fixture_kind": "Synthetic current C++ session; no personal saved state.",
-      "raw_camera_or_user_screenshot": false,
-      "frames_financial_source_and_entropy_guards": true,
-      "fixture_ids": [
-        "current-jackpots"
-      ],
-      "publication_transform": "Exact nearest-neighbor3x enlargement.",
-      "frames": 1,
-      "exact_source_RGB": true,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f",
-      "input_frame_ppm_sha256": "b81355f39dedef7d9424c4d49fbe15eb3a001df636c7b02b1756a9879f77ffd0",
-      "title": "Jackpot title fire",
-      "alt": "Animated fire follows the Phoenix Link lettering"
+      "frames": 64,
+      "duration_ms": 2560,
+      "fixture_kind": "Read-only current-source jackpot title loop; palette-converted GIF.",
+      "raw_camera_or_user_screenshot": false
     },
     {
-      "file": "media/gameplay140-spin.webp",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "file": "media/gameplay150-spin.webp",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "sha256": "187a67ea36d80c40dfb5215e8a3f94857505a8a3190aef12f40e1fb8af99c5f2",
       "bytes": 4789862,
       "dimensions": [
@@ -2742,58 +2636,16 @@
       "presentation_rotation_ms": 17440,
       "exact_source_RGB": true,
       "declared_palette_decode_exact": true,
-      "kind": "Curated natural-clock three-spin loop; synthetic credits, not frequency data",
-      "reel_settle_times_ms": [
-        2380,
-        9740,
-        15440
-      ],
-      "countup_windows_ms": [
-        {
-          "result": "Sage A",
-          "credit": [
-            5100,
-            5100
-          ],
-          "win": [
-            4420,
-            6700
-          ]
-        },
-        {
-          "result": "Bell B",
-          "credit": [
-            12040,
-            12040
-          ],
-          "win": [
-            9760,
-            12340
-          ]
-        },
-        {
-          "result": "Book C",
-          "credit": [
-            16440,
-            16440
-          ],
-          "win": [
-            15460,
-            18040
-          ]
-        }
-      ],
-      "temporal_resolution_ms": 20,
-      "encoded_frame_ms": 40,
-      "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
-      "first_full_gold_still_ms": 3200,
-      "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff",
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "fixture_kind": "Three scripted current-Engine outcomes, synthetic credits, actual phase clocks; not frequency data.",
+      "credit_and_meter_close": true,
+      "body_and_footer_seam_pixels": 0,
+      "header_flame_seam_pixels": 68,
+      "source_trace_sha256": "bd40c758ed7e2931f17aca899af69c2bc63d9dbfba216fb9cd19506f5c9b51b5"
     },
     {
-      "file": "media/gameplay140-spin.gif",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "file": "media/gameplay150-spin.gif",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "sha256": "cafe6be14976996b1023bd27d36dd3f3516cd0950a4271793f1157a66393fa03",
       "bytes": 13118681,
       "dimensions": [
@@ -2807,67 +2659,25 @@
       "presentation_rotation_ms": 17440,
       "exact_source_RGB": false,
       "declared_palette_decode_exact": true,
-      "kind": "Curated natural-clock three-spin loop; synthetic credits, not frequency data",
-      "reel_settle_times_ms": [
-        2380,
-        9740,
-        15440
-      ],
-      "countup_windows_ms": [
-        {
-          "result": "Sage A",
-          "credit": [
-            5100,
-            5100
-          ],
-          "win": [
-            4420,
-            6700
-          ]
-        },
-        {
-          "result": "Bell B",
-          "credit": [
-            12040,
-            12040
-          ],
-          "win": [
-            9760,
-            12340
-          ]
-        },
-        {
-          "result": "Book C",
-          "credit": [
-            16440,
-            16440
-          ],
-          "win": [
-            15460,
-            18040
-          ]
-        }
-      ],
-      "temporal_resolution_ms": 20,
-      "encoded_frame_ms": 40,
-      "credit_semantics": "Actual displayBank update events, not gradual credit animation; WIN can continue after Ready.",
-      "first_full_gold_still_ms": 3200,
-      "source_fact_receipt_sha256": "e37518fe141d4df23241818e5ff8747c0762f47ebbf67a07b7fa63799da381ff",
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "fixture_kind": "Three scripted current-Engine outcomes, synthetic credits, actual phase clocks; not frequency data.",
+      "credit_and_meter_close": true,
+      "body_and_footer_seam_pixels": 0,
+      "header_flame_seam_pixels": 68,
+      "source_trace_sha256": "bd40c758ed7e2931f17aca899af69c2bc63d9dbfba216fb9cd19506f5c9b51b5"
     },
     {
-      "file": "media/hero-full-gold140.png",
-      "source_version": "0.2.143",
-      "runtime": "3955e32ee502e8569b079dc91c3c736665c3f09dca9417cc48ab288cc690bc42",
+      "file": "media/hero-full-gold150.png",
+      "source_version": "0.2.150",
+      "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
       "sha256": "bdccecde826ddfc1ffe0579c827b22bdb40688ceedb6fdf32024e13c65dbe7e7",
       "bytes": 49721,
       "dimensions": [
         720,
         405
       ],
-      "kind": "Full three-row gold Sage in current source, synthetic credits",
-      "source_unrotated_clock_ms": 800,
-      "current_source_render_review_sha256": "4f6f2a9d3c0c5b6b210c3c9f2fa683c1974eb6798490a28079cd2d855bbe623f"
+      "frames": 1,
+      "exact_source_RGB": true,
+      "fixture_kind": "Current-source full three-row Sage merge from the scripted loop."
     }
   ]
 }

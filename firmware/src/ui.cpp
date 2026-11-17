@@ -150,13 +150,19 @@ bool holdWipeRevealed=false;
 bool holdEntryMeter=false;
 int reelSteps[5]={},lastArrived=-1,menuItem=0,rulesPage=0,optionItem=0;
 unsigned paylinesPage=0,paylinesLayout=0;int settingsItem=0;
+bool highLimit146=false,cabinetDenominationPage146=true;
+const cabinet_profile::Coin* cabinetCoins146(){return highLimit146?cabinet_profile::highLimitCoins: cabinet_profile::coins;}
+const int64_t* cabinetDenoms146(){return highLimit146?cabinet_profile::highLimitDenominations:cabinet_profile::denominations;}
+unsigned cabinetCount146(){return highLimit146?cabinet_profile::highLimitDenominationCount:cabinet_profile::denominationCount;}
+const cabinet_profile::Coin* cabinetFind146(int64_t coin){for(unsigned i=0;i<cabinetCount146();++i)if(cabinetCoins146()[i].minor==coin)return &cabinetCoins146()[i];return nullptr;}
 int64_t cabinetDenom=100;uint8_t cabinetLines=5;unsigned cabinetFocus=0;bool cabinetAvailable=true,cabinetMenuRequested=false,jackpotBoardRequested198=false;
-const cabinet_profile::Coin& cabinetCoin(){const auto* coin=cabinet_profile::find(cabinetDenom);return coin?*coin:cabinet_profile::coins[0];}
+const cabinet_profile::Coin& cabinetCoin(){const auto* coin=cabinetFind146(cabinetDenom);return coin?*coin:cabinetCoins146()[0];}
 const cabinet_profile::BetRow& cabinetRow(){const auto& coin=cabinetCoin();const auto index=cabinet_profile::lineIndex(coin,cabinetLines);return coin.rows[index<coin.count?index:0];}
-unsigned cabinetBetBase(){return cabinet_profile::denominationCount+cabinetCoin().count;}
-unsigned cabinetReturnFocus(){return cabinetBetBase()+cabinetRow().count;}
+unsigned cabinetBetBase(){return cabinetCoin().count;}
+unsigned cabinetDenomNavigation146(){return cabinetBetBase()+cabinetRow().count;}
+unsigned cabinetReturnFocus(){return cabinetDenominationPage146?cabinetCount146():cabinetDenomNavigation146()+1;}
 void cabinetFocusBet(){cabinetFocus=cabinetBetBase();const auto& row=cabinetRow();for(unsigned i=0;i<row.count;++i)if(row.multipliers[i]==engine.state.betMultiplier)cabinetFocus+=i;}
-void cabinetDraftDenom(unsigned index){const auto& coin=cabinet_profile::coins[index];cabinetDenom=coin.minor;if(cabinet_profile::lineIndex(coin,cabinetLines)==coin.count)cabinetLines=coin.lines[0];cabinetFocus=cabinet_profile::denominationCount+cabinet_profile::lineIndex(coin,cabinetLines);}
+void cabinetDraftDenom(unsigned index){const auto& coin=cabinetCoins146()[index];cabinetDenom=coin.minor;if(cabinet_profile::lineIndex(coin,cabinetLines)==coin.count)cabinetLines=coin.lines[0];cabinetFocus=cabinet_profile::lineIndex(coin,cabinetLines);}
 int creditItem=0;
 bool autoRefill=false;
 uint32_t lastAddedMinor=1000000,creditRevision=0;
@@ -292,10 +298,13 @@ bool prepareCustomRound(){
  if(result==static_grand::Result::Applied||result==static_grand::Result::NoChange)return true;
  autoPlay=false;snprintf(statusLine,sizeof(statusLine),"CUSTOM CONFIG UNAVAILABLE - GAME MENU");dirty=true;return false;
 }
+#include "denomination_history144.inc"
 bool applyRuntimeWager(int64_t coin,uint8_t lines,uint8_t multiplier){
- if(runtimeFinancialBlocked())return false;
+ if(runtimeFinancialBlocked()||phase!=Phase::Ready||!engine.canChangeBet())return false;
  const bool changed=coin!=engine.state.coinValue||lines!=engine.state.lineCount||multiplier!=engine.state.betMultiplier;
  if(changed&&engine.state.actions==UINT64_MAX){if(capacityService.capturePreflight(engine,phoenix_capacity::Attempt::Normal)){++runtimeRevision;enterService();}return false;}
+ const int64_t previousDenomination=engine.state.coinValue;
+ if(changed&&!rememberDenominationScene144()){snprintf(statusLine,sizeof(statusLine),"DISPLAY MEMORY UNAVAILABLE");dirty=true;return false;}
  if(referenceLocalMath()){
   if(phase!=Phase::Ready||!engine.setWager(coin,lines,multiplier))return false;
  }else{
@@ -303,6 +312,7 @@ bool applyRuntimeWager(int64_t coin,uint8_t lines,uint8_t multiplier){
   const auto result=static_grand::setWager(engine,effectiveMathChoice(),*mathFamily,coin,lines,multiplier,phase==Phase::Ready);
   if(result!=static_grand::Result::Applied&&result!=static_grand::Result::NoChange){snprintf(statusLine,sizeof(statusLine),"WAGER UNAVAILABLE FOR CUSTOM CONFIG");dirty=true;return false;}
  }
+ if(changed)restoreDenominationScene144(previousDenomination);
  ++runtimeRevision;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;dirty=true;return true;
 }
 struct AwardTrace {
@@ -547,7 +557,7 @@ SpinAmountLayout spinAmountLayout(int64_t cents){
  constexpr int center=93,maxWidth=116;
  SpinAmountLayout result;const uint64_t n=cents<0?uint64_t(-(cents+1))+1:uint64_t(cents);
  const uint64_t unit=creditsDisplay?uint64_t(engine.state.coinValue):100;
- // Divide before scaling: valid denominations are <=1000c. This also keeps
+ // Divide before scaling, including high-limit denominations. This also keeps
  // a stress value at either signed64-bit limit from wrapping in credits mode.
  const uint64_t whole=n/unit;const char* sign=cents<0?"-":"";
  const auto exact=hudValue(cents);snprintf(result.value,sizeof(result.value),"%s",exact.c_str());
@@ -605,7 +615,7 @@ const char* viewName(){switch(view){case View::Game:return "game";case View::Men
 const char* phaseName(){switch(phase){case Phase::Ready:return "ready";case Phase::Spin:return "spinning";case Phase::Land:return "landing";case Phase::Expand:return "sage-expansion";case Phase::Revive:return "phoenix-revival";case Phase::FreeIntro:return "free-intro";case Phase::FreeCounter:return "free-counter";case Phase::SpinAward:return "spin-award";case Phase::SpinAwardSettle:return "spin-award-settle";case Phase::HoldWipe:return "hold-fire";case Phase::HoldIntro:return "hold-intro";case Phase::Jackpot:return "jackpot-award";case Phase::Collect:return "collect";case Phase::WinTransfer:return "win-transfer";case Phase::ReturnWipe:return "return-fire";case Phase::Outro:return "feature-end";case Phase::AwardIntro:return "award-intro";}return "unknown";}
 bool lineDisplayPhase(){return phase==Phase::Ready||phase==Phase::Land||phase==Phase::Expand;}
 uint32_t lineElapsed(uint32_t now){return now-(lineClockValid?lineDisplayAt:readyAt);}
-int activeLineIndex(uint32_t now){const auto& p=engine.presentation;if(!lineDisplayPhase()||holdView||!p.lineWinCount)return -1;return int((lineElapsed(now)/kPaylinePeriodMs)%p.lineWinCount);}
+int activeLineIndex(uint32_t now){const auto& p=boardPresentation144();if(!lineDisplayPhase()||holdView||!p.lineWinCount)return -1;return int((lineElapsed(now)/kPaylinePeriodMs)%p.lineWinCount);}
 bool lineMarkersVisible(uint32_t now){return activeLineIndex(now)>=0&&lineElapsed(now)%kPaylineBlinkMs<kPaylineOnMs;}
 void startPhase(Phase p,uint32_t ms){phase=p;phaseAt=millis();phaseMs=ms;dirty=true;}
 #ifdef UI_SAGE_REGISTRATION_TEST_HOOK
@@ -642,11 +652,11 @@ void frameBorder(){
  // Row dividers belong only to the held bonus grid.
  if(holdView)for(int r=1;r<3;++r){const int y=RY+r*TH;line(RX,y-1,RX+RW-1,y-1,shoulder);line(RX,y,RX+RW-1,y,light);}
 }
-std::string cashPrizeDigits(const Cell& cell){int64_t minor=0;if(cell.kind!=phoenix::PrizeKind::Credits||cell.prizeUnit!=phoenix::money::Unit::Credits||!phoenix::Engine::cellBaseAmountMinor(cell,engine.state.coinValue,minor)){enterAmountFault190();return "INVALID";}return integer(engine.state.coinValue>=100?minor/100:cell.prize);}
+std::string cashPrizeDigits(const Cell& cell){int64_t minor=0;const auto coin=boardCoin144();if(cell.kind!=phoenix::PrizeKind::Credits||cell.prizeUnit!=phoenix::money::Unit::Credits||!phoenix::Engine::cellBaseAmountMinor(cell,coin,minor)){enterAmountFault190();return "INVALID";}return integer(coin>=100?minor/100:cell.prize);}
 void prizeText(const Cell& cell,int x,int y,unsigned alpha=255){
   if(!phoenixCell(cell))return;
   if(cell.kind!=phoenix::PrizeKind::Credits){overlay(pdfa::prize(unsigned(cell.kind),cell.multiplier),x,y);return;}
-  std::string value=cashPrizeDigits(cell);const bool cash=engine.state.coinValue>=100;
+  std::string value=cashPrizeDigits(cell);const bool cash=boardCoin144()>=100;
   if(pnum::supports(value.c_str())){
     unsigned height=10,width=pnum::width(value.c_str(),height)+(cash?textWidth("$",8)+1:0);
     if(width>TW-6){height=8;width=pnum::width(value.c_str(),height)+(cash?textWidth("$",8)+1:0);}
@@ -747,7 +757,7 @@ void initHoldMaterial(){
  if(hash!=kHoldMaterialExpectedFNV){std::free(memory);return;}
  holdMaterialPixels=memory;holdMaterialHash=hash;
 }
-bool freeView(){if(phase==Phase::Spin||phase==Phase::Land||phase==Phase::Expand)return engine.presentation.valid&&engine.presentation.freeSpin;return engine.state.freeSession||(phase!=Phase::Ready&&engine.presentation.valid&&engine.presentation.freeSpin);}
+bool freeView(){if(phase==Phase::Spin||phase==Phase::Land||phase==Phase::Expand)return engine.presentation.valid&&engine.presentation.freeSpin;return engine.state.freeSession||(phase!=Phase::Ready&&boardPresentation144().valid&&boardPresentation144().freeSpin);}
 int shownRespins(){if(phase==Phase::AwardIntro||phase==Phase::Collect||phase==Phase::Jackpot||phase==Phase::WinTransfer||phase==Phase::ReturnWipe)return 0;if(phase==Phase::Revive&&uint32_t(millis()-phaseAt)>=revival_timing::promptAt)return engine.state.respinsLeft;return (phase==Phase::Spin||phase==Phase::Land||phase==Phase::Revive)?displayRespins:engine.state.respinsLeft;}
 // Only freshly entered natural Holds are source-qualified. Restored/ongoing,
 // revival and meter/queued entries keep their existing display behavior.
@@ -832,7 +842,7 @@ void drawHeader(uint32_t now){
   else meterNumber(displayMeter);
   counterFrame(now);
   const int lineIndex=activeLineIndex(now);
-  std::string lineCaption;if(lineIndex>=0){const auto& win=engine.presentation.lineWins[lineIndex];lineCaption="LINE "+integer(win.line+1)+" WINS "+integer(win.credits);if(textWidth(lineCaption.c_str(),6)>47)lineCaption="L"+integer(win.line+1)+" +"+integer(win.credits);}
+  std::string lineCaption;if(lineIndex>=0){const auto& win=boardPresentation144().lineWins[lineIndex];lineCaption="LINE "+integer(win.line+1)+" WINS "+integer(win.credits);if(textWidth(lineCaption.c_str(),6)>47)lineCaption="L"+integer(win.line+1)+" +"+integer(win.credits);}
 
   if(holdView){
     if(phase==Phase::Ready&&engine.state.mode!=Mode::Hold){
@@ -857,6 +867,7 @@ void drawHeader(uint32_t now){
 
  if(phase==Phase::Ready&&completedFreeBoard29())drawWisdomCompletion29();
 }
+void cabinetTypeText27(const char*,int,int,unsigned,uint16_t);
 void drawFooter(){
   image(pa::footer,0,122);fill(0,122,240,13,0x18c3,225);
   image(pa::creditLabel,3,123);image(pa::betLabel,96,123);image(pa::winLabel,158,123);
@@ -868,7 +879,8 @@ void drawFooter(){
   amount((phase==Phase::Collect||phase==Phase::Jackpot)?engine.state.roundPayout-engine.presentation.phoenixWinMinor:displayWin,215,123,31);
   // Dedicated original-style condensed gold lettering and a true cent sign.
   // This occupies its existing slot without shrinking CREDIT/BET/WIN values.
-  if(const auto* badge=denomination_minbet46::forWager(engine.state.coinValue,engine.state.lineCount,engine.state.betMultiplier))image(*badge,219,122);
+  if(highLimit146||engine.state.coinValue>1000){const std::string coin="$"+integer(engine.state.coinValue/100);const unsigned size=cashWidth(coin.c_str(),8)<=21?8:7;cashText(coin.c_str(),239,122,size,BRIGHT);cabinetTypeText27("MIN 25",223,130,5,BRIGHT);}
+  else if(const auto* badge=denomination_minbet46::forWager(engine.state.coinValue,engine.state.lineCount,engine.state.betMultiplier))image(*badge,219,122);
   else image(counter_hud::denomination(unsigned(engine.state.coinValue)),219,122);
 }
 
@@ -933,7 +945,7 @@ void drawReels(uint32_t now){
     }
   }else{
     for(int c=0;c<5;++c)for(int r=0;r<3;++r){int i=c*3+r;
-      const int active=activeLineIndex(now);bool winner=(active>=0?bool(engine.presentation.lineWins[active].mask&(1u<<i)):((phase==Phase::Ready&&visible[i].highlight&&(now-readyAt)%2200<1450)||(spinAwardPhase()&&visible[i].highlight)))||((phase==Phase::FreeIntro||phase==Phase::FreeCounter)&&visible[i].symbol==Symbol::Scatter);
+      const int active=activeLineIndex(now);bool winner=(active>=0?bool(boardPresentation144().lineWins[active].mask&(1u<<i)):((phase==Phase::Ready&&visible[i].highlight&&(now-readyAt)%2200<1450)||(spinAwardPhase()&&visible[i].highlight)))||((phase==Phase::FreeIntro||phase==Phase::FreeCounter)&&visible[i].symbol==Symbol::Scatter);
       if(holdView&&!phoenixCell(visible[i])){drawHoldCell(holdBackdropCaptured?holdBase[i]:visible[i],RX+c*TW,RY+r*TH,now,RY+r*TH,RY+(r+1)*TH,false,!holdBackdropCaptured);continue;}
       // HzpqxpE-Ht8 at160s: both awarded Abaci keep moving while the
       // centre Queen line is announced. Their full cycle is independent of
@@ -1026,8 +1038,8 @@ void drawReels(uint32_t now){
   for(int i=0;i<15;++i){const Cell* cell=nullptr;if(phase!=Phase::Spin)cell=&visible[i];else {if(holdView&&(heldMask&(1u<<i)))cell=&previous[i];else if(e>=reelMs[i/3])cell=&target[i];}if(!cell||!phoenixCell(*cell))continue;const int x=RX+i/3*TW,y=RY+i%3*TH;const auto& flame=pa::symbol(unsigned(Symbol::Phoenix),phoenixRenderClock(unsigned(i),now),false);image(flame,x+(TW-int(flame.w))/2,y+(TH-int(flame.h))/2,RX-2,RY-2,RX+RW+2,RY+RH+1);prizeText(*cell,x,y);}
   // The source indicates paylines at the dividers and with numbered end tabs.
   // It does not draw an uninterrupted gold polyline across the original art.
-  const auto& p=engine.presentation;
-  if(lineMarkersVisible(now)){const auto& win=p.lineWins[activeLineIndex(now)];const auto& path=phoenix::local::linePath(win.line,engine.state.lineCount);const uint16_t color=lineMarkerColor(win.line,engine.state.lineCount);for(int c=1;c<5;++c){const int x=RX+c*TW,y=RY+TH/2+TH*(int(path[c-1])+path[c])/2;const int slope=int(path[c])-path[c-1];line(x-2,y-slope,x+2,y+slope,color);line(x-2,y-slope+1,x+2,y+slope+1,color);}const int leftY=RY+TH/2+TH*path[0],rightY=RY+TH/2+TH*path[4];const int badgeWidth=win.line>=99?10:6,badgeCenter=badgeWidth/2;fill(0,leftY-3,badgeWidth,7,color);fill(W-badgeWidth,rightY-3,badgeWidth,7,color);text(integer(win.line+1).c_str(),badgeCenter,leftY-3,6,WHITE,1);text(integer(win.line+1).c_str(),W-badgeCenter,rightY-3,6,WHITE,1);}
+  const auto& p=boardPresentation144();
+  if(lineMarkersVisible(now)){const auto& win=p.lineWins[activeLineIndex(now)];const auto& path=phoenix::local::linePath(win.line,boardLineCount144());const uint16_t color=lineMarkerColor(win.line,boardLineCount144());for(int c=1;c<5;++c){const int x=RX+c*TW,y=RY+TH/2+TH*(int(path[c-1])+path[c])/2;const int slope=int(path[c])-path[c-1];line(x-2,y-slope,x+2,y+slope,color);line(x-2,y-slope+1,x+2,y+slope+1,color);}const int leftY=RY+TH/2+TH*path[0],rightY=RY+TH/2+TH*path[4];const int badgeWidth=win.line>=99?10:6,badgeCenter=badgeWidth/2;fill(0,leftY-3,badgeWidth,7,color);fill(W-badgeWidth,rightY-3,badgeWidth,7,color);text(integer(win.line+1).c_str(),badgeCenter,leftY-3,6,WHITE,1);text(integer(win.line+1).c_str(),W-badgeCenter,rightY-3,6,WHITE,1);}
 }
 void shade(){fill(0,0,W,H,BLACK,170);}
 void panel(const char* title){shade();fill(4,11,232,121,0x0923);rect(4,11,232,121,GOLD);rect(6,13,228,117,BRIGHT);text(title,120,20,12,BRIGHT,1);line(16,37,224,37,GOLD);}
@@ -1813,12 +1825,12 @@ void drawTransition(uint32_t now){const uint32_t e=now-phaseAt;switch(phase){
   default:break;}}
 bool valuesAvailable201();
 struct MenuEntry {int id;const char* label;};
-constexpr MenuEntry menuEntries[]={ {0,"GAME RULES"},{9,"PAYLINES"},{3,"CREDITS"},{4,"COUNTER & JACKPOTS"},{10,"SETTINGS"},{7,"SIMULATOR RETURN"},{8,"RETURN TO GAME"} };
+constexpr MenuEntry menuEntries[]={ {3,"BALANCE"},{0,"GAME RULES"},{9,"PAYLINES"},{4,"COUNTER & JACKPOTS"},{10,"SETTINGS"},{7,"SIMULATOR RETURN"},{8,"RETURN TO GAME"} };
 constexpr int kMenuItemCount=std::size(menuEntries);
 // Retain logical return IDs used by the value editors and return selector.
 void nextMenuItem(){for(unsigned row=0;row<kMenuItemCount;++row)if(menuEntries[row].id==menuItem){menuItem=menuEntries[(row+1)%kMenuItemCount].id;return;}menuItem=0;}
 void drawMenu(){panel("GAME MENU");for(int row=0;row<kMenuItemCount;++row){const auto& item=menuEntries[row];const int y=41+row*9;const bool disabled=item.id==4&&!valuesAvailable201();if(item.id==menuItem)fill(35,y,170,9,0x2a86);text(item.label,42,y,9,disabled?0x7bef:item.id==menuItem?BRIGHT:WHITE);}text(*statusLine?statusLine:"GREY: NEXT   BLUE: SELECT",120,112,6,BRIGHT,1);text(build_version::menu,224,119,10,WHITE,2);}
-void drawSettings(){panel("SETTINGS");const char* items[]={"SOUND","DISPLAY","BACK TO MENU"};for(int i=0;i<3;++i){const int y=50+i*18;if(settingsItem==i)fill(28,y-1,184,13,0x2a86);text(items[i],36,y,10,settingsItem==i?BRIGHT:WHITE);}text("GREY: NEXT   BLUE: SELECT",120,121,6,BRIGHT,1);}
+void drawSettings(){panel("SETTINGS");const std::string limit=std::string("HIGH LIMIT: ")+(highLimit146?"ON":"OFF");const char* items[]={"SOUND","DISPLAY",limit.c_str(),"BACK TO MENU"};for(int i=0;i<4;++i){const int y=44+i*17;if(settingsItem==i)fill(28,y-1,184,13,0x2a86);text(items[i],36,y,10,settingsItem==i?BRIGHT:WHITE);}text(*statusLine?statusLine:"GREY: NEXT   BLUE: SELECT",120,121,6,BRIGHT,1);}
 unsigned paylinesLineCount(){
  if(!paylinesLayout)return engine.state.lineCount;
  unsigned position=1;for(auto count:phoenix::local::lineOptions)if(count!=engine.state.lineCount){if(position++==paylinesLayout)return count;}
@@ -1887,7 +1899,7 @@ void drawService(){
 void drawBet(){
  const auto& coin=cabinetCoin();const auto& row=cabinetRow();
  cabinetAvailable=phase==Phase::Ready&&engine.canChangeBet()&&row.count;
- drawCabinetWager({cabinet_profile::denominations,cabinet_profile::denominationCount,coin.lines,coin.count,row.multipliers,row.count});
+ drawCabinetWager({cabinetDenoms146(),cabinetCount146(),coin.lines,coin.count,row.multipliers,row.count});
  if(!row.count||statusLine[0]){fill(5,117,173,16,BLACK);text(row.count?statusLine:"SELECT PLAY 5",8,121,8,BRIGHT,0,8,177);}
 }
 
@@ -1927,7 +1939,7 @@ bool clearBalanceAvailable(){
 #include "game_values_editor201.inc"
 void drawReset(){
  if(creditsPanel201!=CreditsPanel201::Credits){drawValues201();return;}
- panel("CREDITS");
+ panel("BALANCE");
  const char* labels[]={"CUSTOM AMOUNT","ADD $1,000","ADD $10,000","ADD $100,000","CLEAR BALANCE","AUTO REFILL","BACK TO MENU"};
  const bool available=phase==Phase::Ready&&engine.canChangeBet();
  for(int i=0;i<7;++i){const int y=41+i*9;if(i==creditItem)fill(16,y-1,208,9,0x2a86);const bool disabled=i<4?!available:i==4?!clearBalanceAvailable():false;text(labels[i],24,y,8,disabled?0x7bef:i==creditItem?BRIGHT:WHITE);if(i==5)text(autoRefill?"ON":"OFF",213,y,8,autoRefill?0x07e5:WHITE,2);}
@@ -2277,6 +2289,7 @@ void prepareStrips(){
  }
 }
 void presentAction(){
+ beginLiveBoard144();
   const auto& entryResult30=engine.presentation;
   const bool firstFree30=wisdomEntry30.stage==wisdom_ctrl30::Stage::Accepted&&entryResult30.valid&&entryResult30.freeSpin&&entryResult30.actionNumber==wisdomEntry30.triggerAction+1;
   if(!firstFree30)wisdomEntry30={};
@@ -2425,10 +2438,10 @@ void closeJackpotBoard198(){
  view=View::Game;dirty=true;
 }
 void openCabinetWager(){
- jackpotBoardRequested198=false;cabinetMenuRequested=false;cabinetDenom=engine.state.coinValue;cabinetLines=engine.state.lineCount;cabinetFocus=0;
- if(!cabinet_profile::find(cabinetDenom))cabinetDenom=cabinet_profile::denominations[0];
+ jackpotBoardRequested198=false;cabinetMenuRequested=false;cabinetDenom=engine.state.coinValue;cabinetLines=engine.state.lineCount;cabinetFocus=0;cabinetDenominationPage146=true;
+ if(!cabinetFind146(cabinetDenom))cabinetDenom=cabinetDenoms146()[0];
  const auto& coin=cabinetCoin();if(cabinet_profile::lineIndex(coin,cabinetLines)==coin.count)cabinetLines=coin.lines[0];
- for(unsigned i=0;i<cabinet_profile::denominationCount;++i)if(cabinet_profile::coins[i].minor==cabinetDenom)cabinetFocus=i;cabinetAvailable=phase==Phase::Ready&&engine.canChangeBet()&&cabinetRow().count;
+ for(unsigned i=0;i<cabinetCount146();++i)if(cabinetCoins146()[i].minor==cabinetDenom)cabinetFocus=i;cabinetAvailable=phase==Phase::Ready&&engine.canChangeBet()&&cabinetRow().count;
  if(engine.state.mode!=Mode::Base)awaitingBonusResume=true;
  statusLine[0]=0;view=View::Bet;dirty=true;
 }
@@ -2443,6 +2456,15 @@ bool returnCabinetWager143(){
   }
  }
  cabinetMenuRequested=false;view=View::Game;statusLine[0]=0;dirty=true;return true;
+}
+bool changeHighLimit146(){
+ if(runtimeFinancialBlocked()||phase!=Phase::Ready||!engine.canChangeBet()){snprintf(statusLine,sizeof(statusLine),"FINISH CURRENT PLAY FIRST");dirty=true;return false;}
+ const bool prior=highLimit146;highLimit146=!highLimit146;
+ const auto* coin=cabinetFind146(engine.state.coinValue);if(!coin)coin=cabinetFind146(100);if(!coin)coin=&cabinetCoins146()[0];
+ unsigned index=cabinet_profile::lineIndex(*coin,engine.state.lineCount);if(index>=coin->count)index=0;
+ const auto& row=coin->rows[index];if(!row.count){highLimit146=prior;snprintf(statusLine,sizeof(statusLine),"BET OPTIONS NOT AVAILABLE");dirty=true;return false;}uint8_t multiplier=row.multipliers[0];for(unsigned i=0;i<row.count;++i)if(row.multipliers[i]==engine.state.betMultiplier)multiplier=row.multipliers[i];
+ if(!applyRuntimeWager(coin->minor,coin->lines[index],multiplier)){highLimit146=prior;dirty=true;return false;}
+ autoPlay=false;statusLine[0]=0;dirty=true;return true;
 }
 void chooseMenu(){cueButton();switch(menuItem){
  case 0:rulesPage=0;view=View::Rules;break;
@@ -2461,7 +2483,8 @@ void chooseMenu(){cueButton();switch(menuItem){
 }
 
 void uiSetOutcomeCheckpointHandler(UiOutcomeCheckpointHandler handler){outcomeCheckpointHandler=handler;}
-bool uiInitFresh(phoenix::random::Service& source){amountFailureShown190=false;randomFailureShown125=false;returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=jackpotBoardRequested198=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;menuPaused141=false;menuPauseWall141=menuPauseGame141=menuDrawWall141=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;paylinesPage=paylinesLayout=0;settingsItem=0;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;creditsPanel201=CreditsPanel201::Credits;valuesItem201=jackpotItem201=editFocus201=0;editedValue201=0;holdBackdropCaptured=false;holdStripStartsBlank=false;landingSounds=true;soundVolume=192;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;const bool randomReady125=engine.initializeFresh(source,1000);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
+bool uiInitFresh(phoenix::random::Service& source){amountFailureShown190=false;randomFailureShown125=false;returnSelector86={};outcomeCheckpointHandler=nullptr;wisdomEntry30={};holdOpening31.clear();cabinetMenuRequested=jackpotBoardRequested198=false;storagePause=UiCheckpointPause::None;uiClockOffset=uiPauseWallAt=uiPauseGameAt=0;menuPaused141=false;menuPauseWall141=menuPauseGame141=menuDrawWall141=0;initializeMathPreference();runtimeRevision=0;capacityService.clear();checkpointBlocked=false;lastAward=AwardTrace{};collectionNamedDone=fountainActive=false;fountainAt=0;clearSpinAward();phoenixClockAt=0;memset(phoenixPhases,0,sizeof(phoenixPhases));phoenixPhasesRestored=false;spinQuickStopped=spinLandingCoalesced=false;lineClockValid=false;paylinesPage=paylinesLayout=0;settingsItem=0;highLimit146=false;cabinetDenominationPage146=true;uiSetScreenFlipped(false);entry_art::init();collect_art::init();phoenix_art::init();awaitingBonusResume=false;winCuePending=false;autoRefill=false;lastAddedMinor=1000000;creditRevision=0;creditItem=0;creditsPanel201=CreditsPanel201::Credits;valuesItem201=jackpotItem201=editFocus201=0;editedValue201=0;holdBackdropCaptured=false;holdStripStartsBlank=false;landingSounds=true;soundVolume=192;hostMuted=false;testJingleAt=0;testAwardJingle=false;creditsDisplay=false;luckyOfferAction=UINT64_MAX;const bool randomReady125=engine.initializeFresh(source,1000);copy(visible,engine.state.cells);copy(target,visible);copy(previous,visible);copy(holdBase,visible);displayBank=engine.state.balance;displayMeter=engine.state.meter;displayQueuedHolds=engine.state.pendingMeterHolds;displayWin=0;phase=Phase::Ready;view=View::Game;autoPlay=false;holdView=false;pendingFree=pendingHold=pendingOutro=pendingChained=introChained=false;pendingFreeCount=0;freeIntroIsRetrigger=false;freeIntroOldTotal=0;initialized=true;dirty=true;readyAt=millis();M5.Display.setSwapBytes(true);
+ initializeDenominationScenes144();
  fire_alpha::init();
  initHoldMaterial();
 #ifndef UI_HOST_TEST
@@ -3096,8 +3119,9 @@ void uiNewBank(){
 void uiButtonA(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game){uiAction();return;}if(view==View::Jackpots){cueButton();closeJackpotBoard198();return;}cueButton();if(view==View::Menu)chooseMenu();else if(view==View::Bet){
  if(cabinetFocus==cabinetReturnFocus())returnCabinetWager143();
  else if(phase==Phase::Ready&&engine.canChangeBet()){
-  if(cabinetFocus<cabinet_profile::denominationCount){statusLine[0]=0;cabinetDraftDenom(cabinetFocus);}
-  else if(cabinetFocus<cabinetBetBase()){statusLine[0]=0;cabinetLines=cabinetCoin().lines[cabinetFocus-cabinet_profile::denominationCount];cabinetFocusBet();}
+  if(cabinetDenominationPage146){statusLine[0]=0;cabinetDraftDenom(cabinetFocus);cabinetDenominationPage146=false;}
+  else if(cabinetFocus==cabinetDenomNavigation146()){cabinetDenominationPage146=true;cabinetFocus=0;for(unsigned i=0;i<cabinetCount146();++i)if(cabinetDenoms146()[i]==cabinetDenom)cabinetFocus=i;}
+  else if(cabinetFocus<cabinetBetBase()){statusLine[0]=0;cabinetLines=cabinetCoin().lines[cabinetFocus];cabinetFocusBet();}
   else if(cabinetFocus<cabinetReturnFocus()){
    const auto multiplier=cabinetRow().multipliers[cabinetFocus-cabinetBetBase()];
    // A red BET selects this wager even when the balance cannot fund it.
@@ -3106,7 +3130,7 @@ void uiButtonA(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiChe
    if(applyRuntimeWager(cabinetDenom,cabinetLines,multiplier)){view=View::Game;action();}
   }
  }
-}else if(view==View::Settings){if(settingsItem==0){soundItem=0;view=View::Sound;}else if(settingsItem==1){optionItem=0;view=View::Options;}else{menuItem=10;view=View::Menu;}}else if(view==View::Paylines){nextPaylinesLayout();}else if(view==View::Rules)view=View::Menu;else if(view==View::Reset){if(creditsPanel201!=CreditsPanel201::Credits){valuesSelect201();}else if(creditItem==0){if(phase==Phase::Ready&&engine.canChangeBet())openCreditVoucher143();}else if(creditItem<4){if(uiAddCredits(creditAmounts[creditItem-1])){view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==4){if(clearBalanceAvailable()&&engine.setCredits(0)){++creditRevision;displayBank=0;view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==5){autoRefill=!autoRefill;++creditRevision;cueCredit();}else if(creditItem==6){menuItem=3;view=View::Menu;statusLine[0]=0;}}else if(view==View::Lucky)playLucky();else if(view==View::Options){if(optionItem==0){auto b=M5.Display.getBrightness();M5.Display.setBrightness(b>=200?40:b<80?100:b<150?160:220);}else if(optionItem==1)creditsDisplay=!creditsDisplay;else uiFlipScreen();}
+}else if(view==View::Settings){if(settingsItem==0){soundItem=0;view=View::Sound;}else if(settingsItem==1){optionItem=0;view=View::Options;}else if(settingsItem==2){changeHighLimit146();}else{menuItem=10;view=View::Menu;}}else if(view==View::Paylines){nextPaylinesLayout();}else if(view==View::Rules)view=View::Menu;else if(view==View::Reset){if(creditsPanel201!=CreditsPanel201::Credits){valuesSelect201();}else if(creditItem==0){if(phase==Phase::Ready&&engine.canChangeBet())openCreditVoucher143();}else if(creditItem<4){if(uiAddCredits(creditAmounts[creditItem-1])){view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==4){if(clearBalanceAvailable()&&engine.setCredits(0)){++creditRevision;displayBank=0;view=View::Game;autoPlay=false;statusLine[0]=0;}}else if(creditItem==5){autoRefill=!autoRefill;++creditRevision;cueCredit();}else if(creditItem==6){menuItem=3;view=View::Menu;statusLine[0]=0;}}else if(view==View::Lucky)playLucky();else if(view==View::Options){if(optionItem==0){auto b=M5.Display.getBrightness();M5.Display.setBrightness(b>=200?40:b<80?100:b<150?160:220);}else if(optionItem==1)creditsDisplay=!creditsDisplay;else uiFlipScreen();}
 else if(view==View::Sound){if(soundItem==0){
 #ifndef UI_HOST_TEST
  audioSetMuted(!audioMuted());
@@ -3118,7 +3142,7 @@ else if(view==View::Volume)adjustVolume(true);
 else if(view==View::Math){selectReturnOption86();}
 
 dirty=true;}
-void uiButtonB(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game)return;cueButton();if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Menu)nextMenuItem();else if(view==View::Settings)settingsItem=(settingsItem+1)%3;else if(view==View::Paylines)paylinesPage=(paylinesPage+1)%paylinesPageCount();else if(view==View::Bet)cabinetFocus=(cabinetFocus+1)%(cabinetReturnFocus()+1);else if(view==View::Rules)rulesPage=(rulesPage+1)%kRulesPageCount;else if(view==View::Options)optionItem=(optionItem+1)%3;else if(view==View::Sound)soundItem=(soundItem+1)%6;else if(view==View::Volume)adjustVolume(false);else if(view==View::Reset){if(creditsPanel201==CreditsPanel201::Credits)creditItem=(creditItem+1)%7;else valuesNext201();}else if(view==View::Lucky)view=View::Game;else if(view==View::Math)nextReturnOption86();dirty=true;}
+void uiButtonB(){if(uiReturnSelectionInputFenced())return;if(storagePause!=UiCheckpointPause::None)return;if(view==View::Game)return;cueButton();if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Menu)nextMenuItem();else if(view==View::Settings)settingsItem=(settingsItem+1)%4;else if(view==View::Paylines)paylinesPage=(paylinesPage+1)%paylinesPageCount();else if(view==View::Bet)cabinetFocus=(cabinetFocus+1)%(cabinetReturnFocus()+1);else if(view==View::Rules)rulesPage=(rulesPage+1)%kRulesPageCount;else if(view==View::Options)optionItem=(optionItem+1)%3;else if(view==View::Sound)soundItem=(soundItem+1)%6;else if(view==View::Volume)adjustVolume(false);else if(view==View::Reset){if(creditsPanel201==CreditsPanel201::Credits)creditItem=(creditItem+1)%7;else valuesNext201();}else if(view==View::Lucky)view=View::Game;else if(view==View::Math)nextReturnOption86();dirty=true;}
 void uiButtonBHold(){if(uiReturnSelectionInputFenced())return;if(view==View::Reset&&creditsPanel201!=CreditsPanel201::Credits){valuesBack201();return;}if(view==View::Jackpots)closeJackpotBoard198();else if(view==View::Bet)uiCabinetMenu();else uiMenu();}
 void uiMenu(){
  if(uiReturnSelectionInputFenced())return;
@@ -3136,7 +3160,7 @@ void uiMenu(){
   using Page=return_selector86::Page;
   if(returnSelector86.page==Page::Detail||returnSelector86.page==Page::Help)nextReturnOption86();
   else{menuItem=7;view=View::Menu;statusLine[0]=0;}
- }else if(view==View::Game||view==View::Bet){cabinetMenuRequested=false;menuItem=0;view=View::Menu;statusLine[0]=0;}
+ }else if(view==View::Game||view==View::Bet){cabinetMenuRequested=false;menuItem=3;view=View::Menu;statusLine[0]=0;}
  else view=View::Game;
  dirty=true;
 }
@@ -3191,7 +3215,7 @@ bool uiLandingSoundEnabled(){return landingSounds;}
 uint8_t uiSoundVolume(){return soundVolume;}
 void uiSetCreditsDisplay(bool value){creditsDisplay=value;dirty=true;}
 bool uiCreditsDisplay(){return creditsDisplay;}
-String uiSnapshot(){char b[1500];snprintf(b,sizeof(b),"{\"theme\":\"Confucius Say\",\"model\":\"prototype-unfitted-math-0x%08x\",\"mode\":\"%s\",\"animation\":\"%s\",\"ready\":%s,\"autoPlay\":%s,\"balanceMinor\":%lld,\"winMinor\":%lld,\"featureWinMinor\":%lld,\"coinValue\":%lld,\"betCoins\":%lld,\"lines\":%u,\"betMultiplier\":%u,\"freeLeft\":%u,\"respinsLeft\":%u,\"meter\":%u,\"actions\":%llu,\"rounds\":%llu,\"renderFrames\":%u,\"lastDrawUs\":%u,\"maxDrawUs\":%u,\"grid\":[",unsigned(phoenix::local::modelId),modeName(engine.state.mode),phaseName(),uiReady()?"true":"false",autoPlay?"true":"false",(long long)engine.state.balance,(long long)engine.state.win,(long long)engine.state.featureWin,(long long)engine.state.coinValue,(long long)engine.state.betCoins,engine.state.lineCount,engine.state.betMultiplier,engine.state.freeLeft,engine.state.respinsLeft,engine.state.meter,(unsigned long long)engine.state.actions,(unsigned long long)engine.state.rounds,frameCount,lastDrawUs,maxDrawUs);String result(b);for(int i=0;i<15;++i){if(i)result+=",";result+=int(engine.state.cells[i].symbol);}result+="],\"view\":\"";result+=viewName();result+="\",\"creditsDisplay\":";result+=creditsDisplay?"true":"false";result+=",\"spinSounds\":";result+=spinSounds?"true":"false";result+=",\"landingSounds\":";result+=landingSounds?"true":"false";result+=",\"screenFlipped\":";result+=screenFlipped?"true":"false";result+=",\"awaitingBonusResume\":";result+=awaitingBonusResume?"true":"false";result+=",\"autoRefill\":";result+=autoRefill?"true":"false";result+=",\"lastAddedMinor\":";result+=String(lastAddedMinor);result+=",\"phoenixArtReady\":";result+=phoenix_art::ready()?"true":"false";result+=",\"phoenixFramesVerified\":";result+=String(phoenix_art::verifiedFrames());result+=",\"phoenixArtDecodedFNV\":";result+=String(phoenix_art::decodedHash());result+=",\"phoenixPeriodMs\":";result+=String(phoenix_art::periodMs());result+=",\"holdMaterialReady\":";result+=holdMaterialPixels?"true":"false";result+=",\"holdMaterialFNV\":";result+=String(holdMaterialHash);result+=",\"holdMaterialBytes\":";result+=String(holdMaterialPixels?(kHoldMaterialPixels+TW*TH)*2:0);result+=",\"phoenixPhasesRestored\":";result+=phoenixPhasesRestored?"true":"false";result+=",\"phoenixAssetReadBytes\":";result+=String(phoenix_art::assetReadBytes());result+=",\"phoenixAssetReadFNV\":";result+=String(phoenix_art::assetReadHash());result+=",\"phoenixAlphaReady\":";result+=phoenix_art::alphaReady()?"true":"false";result+=",\"phoenixAlphaMetadataBytes\":";result+=String(phoenix_art::alphaMetadataBytes());result+=",\"phoenixImageWidth\":";result+=String(phoenix_art::frameIndex(0).w);result+=",\"coinSamplerReady\":";result+=coin_sampler::info().ready?"true":"false";result+=",\"coinSamplerBytes\":";result+=String(coin_sampler::info().bytes);result+=",\"coinSamplerEntries\":";result+=String(coin_sampler::info().entries);result+=",\"coinSamplerBuildUs\":";result+=String(coinMapsBuildUs);result+=",\"coinSamplerFNV\":";result+=String(coin_sampler::decodedHash());result+=",\"coinArtFNV\":";result+=String(clean_coins::decodedHash());result+=",\"coinNativeSize\":";result+=String(clean_coins::nativeSize);result+=",\"collectionBirdFNV\":";result+=String(winged_phoenix::decodedHash());result+=",\"collectionFlightKeys\":";result+=String(winged_phoenix::flightKeyFrames);result+=",\"collectionFlightPeriodMs\":";result+=String(winged_phoenix::flightPeriodMs);result+=",\"phoenixPhases\":[";for(unsigned i=0;i<15;++i){if(i)result+=",";result+=String(phoenixRenderClock(i,millis()));}result+="]}";return result;}
+String uiSnapshot(){char b[1500];snprintf(b,sizeof(b),"{\"theme\":\"Confucius Say\",\"model\":\"prototype-unfitted-math-0x%08x\",\"mode\":\"%s\",\"animation\":\"%s\",\"ready\":%s,\"autoPlay\":%s,\"balanceMinor\":%lld,\"winMinor\":%lld,\"featureWinMinor\":%lld,\"coinValue\":%lld,\"betCoins\":%lld,\"lines\":%u,\"betMultiplier\":%u,\"freeLeft\":%u,\"respinsLeft\":%u,\"meter\":%u,\"actions\":%llu,\"rounds\":%llu,\"renderFrames\":%u,\"lastDrawUs\":%u,\"maxDrawUs\":%u,\"grid\":[",unsigned(phoenix::local::modelId),modeName(engine.state.mode),phaseName(),uiReady()?"true":"false",autoPlay?"true":"false",(long long)engine.state.balance,(long long)engine.state.win,(long long)engine.state.featureWin,(long long)engine.state.coinValue,(long long)engine.state.betCoins,engine.state.lineCount,engine.state.betMultiplier,engine.state.freeLeft,engine.state.respinsLeft,engine.state.meter,(unsigned long long)engine.state.actions,(unsigned long long)engine.state.rounds,frameCount,lastDrawUs,maxDrawUs);String result(b);for(int i=0;i<15;++i){if(i)result+=",";result+=int(engine.state.cells[i].symbol);}result+="],\"view\":\"";result+=viewName();result+="\",\"creditsDisplay\":";result+=creditsDisplay?"true":"false";result+=",\"spinSounds\":";result+=spinSounds?"true":"false";result+=",\"landingSounds\":";result+=landingSounds?"true":"false";result+=",\"screenFlipped\":";result+=screenFlipped?"true":"false";result+=",\"awaitingBonusResume\":";result+=awaitingBonusResume?"true":"false";result+=",\"autoRefill\":";result+=autoRefill?"true":"false";result+=",\"lastAddedMinor\":";result+=String(lastAddedMinor);result+=",\"phoenixArtReady\":";result+=phoenix_art::ready()?"true":"false";result+=",\"phoenixFramesVerified\":";result+=String(phoenix_art::verifiedFrames());result+=",\"phoenixArtDecodedFNV\":";result+=String(phoenix_art::decodedHash());result+=",\"phoenixPeriodMs\":";result+=String(phoenix_art::periodMs());result+=",\"holdMaterialReady\":";result+=holdMaterialPixels?"true":"false";result+=",\"holdMaterialFNV\":";result+=String(holdMaterialHash);result+=",\"holdMaterialBytes\":";result+=String(holdMaterialPixels?(kHoldMaterialPixels+TW*TH)*2:0);result+=",\"phoenixPhasesRestored\":";result+=phoenixPhasesRestored?"true":"false";result+=",\"phoenixAssetReadBytes\":";result+=String(phoenix_art::assetReadBytes());result+=",\"phoenixAssetReadFNV\":";result+=String(phoenix_art::assetReadHash());result+=",\"phoenixAlphaReady\":";result+=phoenix_art::alphaReady()?"true":"false";result+=",\"phoenixAlphaMetadataBytes\":";result+=String(phoenix_art::alphaMetadataBytes());result+=",\"phoenixImageWidth\":";result+=String(phoenix_art::frameIndex(0).w);result+=",\"coinSamplerReady\":";result+=coin_sampler::info().ready?"true":"false";result+=",\"coinSamplerBytes\":";result+=String(coin_sampler::info().bytes);result+=",\"coinSamplerEntries\":";result+=String(coin_sampler::info().entries);result+=",\"coinSamplerBuildUs\":";result+=String(coinMapsBuildUs);result+=",\"coinSamplerFNV\":";result+=String(coin_sampler::decodedHash());result+=",\"coinArtFNV\":";result+=String(clean_coins::decodedHash());result+=",\"coinNativeSize\":";result+=String(clean_coins::nativeSize);result+=",\"collectionBirdFNV\":";result+=String(winged_phoenix::decodedHash());result+=",\"collectionFlightKeys\":";result+=String(winged_phoenix::flightKeyFrames);result+=",\"collectionFlightPeriodMs\":";result+=String(winged_phoenix::flightPeriodMs);result+=",\"phoenixPhases\":[";for(unsigned i=0;i<15;++i){if(i)result+=",";result+=String(phoenixRenderClock(i,millis()));}result+="],\"highLimit\":";result+=highLimit146?"true":"false";result+=",\"wagerPage\":\"";result+=cabinetDenominationPage146?"denomination":"bet";result+="\",\"cabinetFocus\":";result+=String(cabinetFocus);result+=",\"reelDisplay\":{\"denominationMinor\":";result+=String(boardCoin144());result+=",\"lines\":";result+=String(boardLineCount144());result+=",\"archived\":";result+=archivedScene144>=0?"true":"false";result+=",\"symbols\":[";for(unsigned i=0;i<15;++i){if(i)result+=",";result+=int(visible[i].symbol);}result+="]}}";return result;}
 
 uint32_t uiRuntimeRevision(){return runtimeRevision;}
 bool uiCheckpointBlocked(){return checkpointBlocked;}

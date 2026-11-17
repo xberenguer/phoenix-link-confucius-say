@@ -14,7 +14,7 @@ Short-grey opens the cabinet panel. Hold-grey exits that panel directly to Game,
 
 The menu offers both $1/5-line and $1/10-line play; the latter has multipliers 1, 2, 3, 4, 5 and the [documented family-adaptation scope](wagers.md). A funded red BET button starts immediately. Merely browsing/cancelling does not stake credits.
 
-An unaffordable wager asks for play money. Credit additions are available at safe Ready/Base boundaries; an unfinished feature or service/capacity fault can block it. Funding does not clear the session's meters. See [settings](settings.md#credits).
+An unaffordable wager asks for play money. Credit additions are available at safe Ready/Base boundaries; an unfinished feature or service/capacity fault can block it. Funding does not clear the session's meters. See [settings](settings.md#balance).
 
 ## Random source error
 
