@@ -147,7 +147,7 @@ void drawCreditVoucher142(){
  if(ticketWidth142(words.c_str(),6)>192){size_t split=words.size()/2;auto at=words.find_last_of(' ',split);if(at==std::string::npos)at=split;first=words.substr(0,at);second=words.substr(at+1);}
  ticketText142(first.c_str(),120,76,6,ink,1);if(!second.empty())ticketText142(second.c_str(),120,82,6,ink,1);
  char digits[16];snprintf(digits,sizeof(digits),"%09llu",(unsigned long long)editedValue201);
- unsigned start=std::min(2u,voucherFirstDigit142());if(editFocus201<start)start=editFocus201;
+ unsigned start=voucherFirstDigit142();if(editFocus201<start)start=editFocus201;
  std::string amount="$";int offsets[9]={};int width=ticketWidth142("$",18);
  for(unsigned i=start;i<9;++i){if(i==7){amount+='.';width+=ticketWidth142(".",18);}offsets[i]=width;const char glyph[2]={digits[i],0};amount+=digits[i];width+=ticketWidth142(glyph,18);if(i<6&&(6-i)%3==0){amount+=',';width+=ticketWidth142(",",18);}}
  const int left=(W-width)/2;ticketText142(amount.c_str(),left,88,18,ink);

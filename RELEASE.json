@@ -1,6 +1,6 @@
 {
-  "version": "0.2.150",
-  "runtime_fingerprint": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+  "version": "0.2.151",
+  "runtime_fingerprint": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
   "mathematical_family": "beeefd81a346ef6ed99b44dcdb7987aecc474c9437698a0c8f9b2de669335d40",
   "local_model": "0x0002001e",
   "source_body_files": 168,
@@ -23,18 +23,15 @@
     "phoenix_atlas.zlib"
   ],
   "native_validation": "Public-project firmware, full original-Stick firmware/assets readback and healthy fresh startup passed; autoplay off.",
-  "browser_version": "0.2.150",
-  "native_status_version": "0.2.150",
+  "browser_version": "0.2.151",
+  "native_status_version": "0.2.151",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
   "status": "Current source-bound release package",
   "changes": [
-    "Two-stage denomination and wager selection with publisher Confucius/temple artwork and original title.",
-    "Each denomination restores its last settled reel display; changing lines/bet within it keeps that display until another spin.",
-    "Balance is the first Game Menu entry; Custom Amount starts at $00,000.00 and confirms with INSERT CREDITS.",
-    "High Limit offers $1/$2/$5/$10/$25/$50/$100 and the directly filmed $5/50-line/3x/$750 selection.",
-    "Higher-denomination money/credit formatting and source-derived offer documentation.",
-    "Source, browser, wiki tables and signed-flasher bundle synchronized for this release."
+    "Custom Amount hides unused leading zeros as the cursor moves right: one dollar displays as $1.00.",
+    "Moving left exposes larger digit positions; the initial entry remains $00,000.00.",
+    "Firmware, browser, guide and signed-flasher release synchronized."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -42,12 +39,12 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 5974560,
-      "sha256": "1d532932d5795e5bdabf182973ffc237fa821f3e868f5ef094049630b9709fa3"
+      "bytes": 5974480,
+      "sha256": "6c54634b61cb67f9015253a91ad936b904e2b037a32f66e2cb0e820c549860a2"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 5909024,
-      "sha256": "a62d8a49ec3c26ae4fb72970a89e8a749eeed62c98d2e758bca1e6fa2d206dfe"
+      "bytes": 5908944,
+      "sha256": "a4f0b89dc1ff984c7e246df06cf803c40e481f6d728d9772713aeaa401edf635"
     }
   },
   "validation": {
@@ -65,6 +62,7 @@
     "high_limit_offers_checked": 22,
     "independence_paired_actions": 143487,
     "current_source_gallery_frames": 500,
-    "current_source_hero_frames": 496
+    "current_source_hero_frames": 496,
+    "voucher_leading_zero_actual_navigation_ASAN_UBSAN": true
   }
 }

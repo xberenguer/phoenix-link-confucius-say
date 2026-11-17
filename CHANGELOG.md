@@ -1,5 +1,11 @@
 # Current release notes
 
+## 0.2.151
+
+- Custom Amount drops unused leading zeros as you move right: **$1.00** instead of **$00,001.00**.
+- Moving left reveals larger digit positions again.
+- Updated browser build, voucher examples and signed-flasher release.
+
 ## 0.2.150
 
 - Two-stage denomination and wager selection with publisher Confucius/temple artwork and original title.

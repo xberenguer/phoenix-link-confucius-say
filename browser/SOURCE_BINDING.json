@@ -1,6 +1,6 @@
 {
-  "version": "0.2.150",
-  "runtime": "bb84fb5bd91ad64e601476c39679c88da3c987f9a5c38e79999dfeca9b25526c",
+  "version": "0.2.151",
+  "runtime": "c93735665799ad99b22c4f915a2dce6ff880a459921e534c06e211cf8afad88c",
   "mathFamily": "beeefd81a346ef6ed99b44dcdb7987aecc474c9437698a0c8f9b2de669335d40",
   "engineeringAccepted": true,
   "acceptanceMeaning": "Engineering source acceptance only; not regulatory approval or original casino math calibration.",
@@ -73,7 +73,7 @@
     "phoenix_numerals.h": "4f25d3dd2a67ce371c9d03b33b7798d03e6ed8dad0f67fd5fc04a84a1f547fa2",
     "collect_art_data.h": "1371081f7798aa2b79d7ea04e6de0b219aa1fec03a843b2d14c4172a914e09f6",
     "fire_field.cpp": "dceb39ddae3cfd589518259b275f413a421415a026c8f34dcd1f5a8d80fd04ac",
-    "game_values_editor201.inc": "c723f726f581f5191130f0bd46212218f6b828478eb74058b813f68fa91b8e98",
+    "game_values_editor201.inc": "bd72ba7859acc4c3f82c4db6ddf94ebc1ddc3d7347b1f167e372da95abcfd1cb",
     "phoenix_numerals.cpp": "3a7824cc5b5ce818b7538a6e5cffee50afd9d7d86629afed9cd8556fe341f33a",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "scene_checkpoint.h": "63b03e3b8b308e2f2f392ea9de2430f9713df7c0fe717ce942f278d33a2e018f",
@@ -103,7 +103,7 @@
     "cash_font.h": "0e4df31c5c0127defbb5b171df4cd31bd007249b2d6c8ab15311144f666dfcc8",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
     "audio_music.cpp": "6c425f97f12adcb7e4f9152db649cbc9c0152666186da1069d0061f1ed1f36c2",
-    "build_version.h": "a13993baed936eecb62b1629f22fde382f2b5360c56a034a77604f0cdea1b160",
+    "build_version.h": "e6c0571607f864f0e744dc63fb1f95c9e2721d78392c5368fee5668d643e92bb",
     "audio_cues.cpp": "fdbf7cbe8c00493af24d5d6870959dd486b317ab710250de829c0583c63c7d03",
     "pickup_arrival.h": "cc4452833c20f302a9333a6a345c434882d02b09bf1539459913dc2437f5bf4e",
     "coin_motion.h": "f9b91256e5804b65d6b3175055ee41b46387245753f19bf848d51ffce4cbd312",
@@ -151,7 +151,7 @@
     "checkpoint_store.h": "686ba0de046e55e4d8b1e13f852097566ccc77a458ce88627946c9c641bf53e3",
     "wisdom_free_caption29.inc": "7e54425d7ac004b84194e3f1cc0cc9bd95fd339a99e86c85804c5f383e099bf7",
     "ticket_font142.h": "62da234ce37e2765c79e485ff45c0b005c2acf22bd1555d39495f35ac937aab9",
-    "math_runtime_identity.h": "0af3f39637fbb59d1d8313304adf334fc8391f3853588b2c1ff2722c38d90757",
+    "math_runtime_identity.h": "cdb4fa2c84652ec253b80ce3bea3e416deb52f629db81fe12aa33239a3c9bda3",
     "third_party/dr_mp3.h": "7a6cc38b0afdb55cfc9eec991d9169d67beb8fd910be2995121510cdaa99c356",
     "phoenix_crypto124/LICENSE": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b",
     "phoenix_crypto124/config.h": "8e1320e1c8f1b462f8de96a8faa0f6bf3cf321c8fb2da10593de2d44cee09972",
@@ -178,7 +178,7 @@
     "phoenix_crypto124/library/ctr.h": "63331eb36d8ea69b4b4dcd2ec059582bcabf51a8ea891db26d37ab033967789f"
   },
   "sourceBodyFiles": 168,
-  "sourceAcceptanceReceiptSHA256": "9b4ee46a6e63679548032fa824d7b7591e9efa4170bfc9122f4fa04e1f770624",
+  "sourceAcceptanceReceiptSHA256": "3d65aaa720748f9e321d353c2f27d33260d411c8edae4a91d0a69b578b458094",
   "assets": {
     "feature_music.mp3": {
       "sha256": "ff6fb76c36e0b08779a1fa864ac1495cf43c19cada1bb5c70f8bdef85ea5ad01",
