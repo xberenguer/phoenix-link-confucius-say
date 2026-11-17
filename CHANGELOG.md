@@ -1,5 +1,14 @@
 # Current release notes
 
+## 0.2.161 — development, queued for v170
+
+- Custom Amount opens at the thousands digit with **$0,000.00**. Hold blue to move left for larger amounts.
+- Default sound volume is **10%** on StickS3 and in the browser build.
+
+<img src="docs/media/development/startup-voucher161.png" alt="Custom amount starting at the thousands digit" width="720">
+
+<img src="docs/media/development/sound-default161.png" alt="Default sound volume at ten percent" width="720">
+
 ## 0.2.160
 
 - Startup opens denomination selection, then PLAY LINES and BET, then the reels at a zero balance. Blue opens the Stardust custom voucher when funding is needed.
