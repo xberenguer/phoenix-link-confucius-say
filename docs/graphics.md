@@ -4,8 +4,6 @@ Screens and animations from the current game. The native display is 240 × 135 p
 
 See the [individual symbols, animations, fusions and artwork](symbol-gallery.md). The [menu gallery](menu-gallery.md) includes every rules page, display/return controls, wager panels and safety messages. [All payline chart pages](paylines.md#all-in-game-chart-pages) are also shown.
 
-See the [individual symbols, animations, fusions and artwork](symbol-gallery.md). The [menu gallery](menu-gallery.md) includes every rules page, display/return controls, wager panels and safety messages. [All payline chart pages](paylines.md#all-in-game-chart-pages) are also shown.
-
 Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [rare award screens](#rare-award-and-feature-screens), [symbol motion](#every-symbols-implemented-motion) or [feature effects](#feature-effects). Detail sheets combine enlarged crops from the rendered screens. Demonstration boards show the artwork without requiring a rare natural outcome; they are not probability samples.
 
 ## Starting a game
