@@ -129,6 +129,8 @@ Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../f
 
 ## Fast Phoenix tally
 
+Unfilled Hold positions retain subdued background symbols behind the held Phoenixes.
+
 <img src="media/collection-fast-total.png" alt="Remaining Phoenix amounts collected with one blue press" width="720">
 
 ## Feature effects

@@ -3296,8 +3296,8 @@
       "source_version": "0.2.160",
       "runtime": "5efd7f9df7773ac14e0b339d38552ecbc621924064d857d75a796888fba6fa80",
       "kind": "One-press completed Phoenix tally",
-      "sha256": "462cbad1266c636a45933046afc859b61e45c262998acd4709b178ce96ee12dd",
-      "bytes": 44113,
+      "sha256": "3419c6d71c791b36403de5d9e24cad980208ab0971a4ca000097f68650d30d6e",
+      "bytes": 49858,
       "dimensions": [
         720,
         405
@@ -3306,10 +3306,18 @@
         240,
         135
       ],
-      "fixture_kind": "Actual UI button dispatch after a synthetic settled Hold; no natural-frequency claim.",
+      "fixture_kind": "Synthetic settled Hold replayed through Base entry and every Hold respin before one-press collection; original game renderer, no camera or attachment pixels.",
       "input_sha256": [
-        "980574576b6367b9bd5191c0cc8884f6973a23a9224c6683e4ea436151e89550"
-      ]
+        "962f644c5175a3a044a19071c74bbff3cc5c2563870e2c0a511a80af827f2258"
+      ],
+      "fixture_source_sha256": "c03aebe931454fe41d80c715e342b01bcb268e6ba3d18541965ef988185dbb72",
+      "correct_hold_view_and_backdrop": true
     }
-  ]
+  ],
+  "current_render_validation": {
+    "collection_tally_cases": 30,
+    "collection_tally_assertions": 887,
+    "correct_hold_entry_and_respin_path": true,
+    "firmware_or_odds_changed": false
+  }
 }
