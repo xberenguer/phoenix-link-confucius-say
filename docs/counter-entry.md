@@ -23,6 +23,10 @@ The excluded-prize column values **all** Minor, Major and Grand payments at zero
 
 Rare jackpots make a large contribution to the full-return curve. At the default wager's 1,283 entry, expected Grand payments contribute about $869 of the approximately $1,681 expected total payout. That dependence, and the nearly identical thresholds across bet multipliers, remain important calibration gaps.
 
+## Development price correction
+
+The tables above describe the playable v151 model. Development v159 changes only the observed **1¢ / 50 lines / 5×** Mini and Minor prices to **$10 and $50**. Revaluing the same outcome law gives **94.68%** local long-run full return, a full-payout 110% entry of **1,265**, and an entry of **1,779** when all Minor, Major and Grand payments are excluded. The other 76 offered wagers are unchanged. These price corrections do not calibrate the counter curve to casino results. See the [recorded prize evidence](sources.md#recorded-mini-and-minor-prices).
+
 ## What the model still assumes
 
 - The original virtual reel strips and stop frequencies are unrecovered; symbol weights and stacking are local choices.

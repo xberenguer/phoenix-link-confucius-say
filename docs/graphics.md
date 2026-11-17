@@ -1,6 +1,6 @@
 # Graphics, animation and native gallery
 
-Gallery of the game, including the latest **0.2.157 development artwork**. The playable release remains **0.2.151**; the next tagged release is **0.2.160**. The native display is 240 × 135 pixels. Images and animations are enlarged to 720 × 405 with nearest-neighbor scaling, preserving the pixel grid.
+Gallery of the game, including the latest **0.2.159 development artwork**. The playable release remains **0.2.151**; the next tagged release is **0.2.160**. The native display is 240 × 135 pixels. Images and animations are enlarged to 720 × 405 with nearest-neighbor scaling, preserving the pixel grid.
 
 Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [rare award screens](#rare-award-and-feature-screens), [symbol motion](#every-symbols-implemented-motion) or [feature effects](#feature-effects). Detail sheets combine enlarged crops from the rendered screens. Demonstration boards show the artwork without requiring a rare natural outcome; they are not probability samples.
 
@@ -10,7 +10,7 @@ Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [
 
 The reel area uses five 47 × 35 symbol cells across three rows. A compact top strip carries title/feature information and the aligned meter; the footer carries CREDIT, BET, WIN and denomination. The side LEDs and cabinet surround are intentionally omitted. Larger second-display events are retargeted over the reels.
 
-The cabinet wager menu combines observed denomination, line and red BET controls on one screen. Its digital portrait and button artwork adapt the recorded cabinet layout. The [wager guide](wagers.md) distinguishes actual observed choices from internal compatibility settings.
+The denomination page shows the original Confucius portrait and curved temple roof. Selecting a denomination opens the PLAY LINES and red BET controls on the next page. The full roof comes from the manufacturer’s original character card, uniformly scaled for the landscape screen. The [wager guide](wagers.md) distinguishes actual observed choices from internal compatibility settings.
 
 <img src="media/development/wagers.png" alt="Cabinet wager selection" width="720">
 

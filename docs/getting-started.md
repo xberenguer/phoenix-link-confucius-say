@@ -7,7 +7,7 @@ The game starts directly at the reels. Once installed, play requires no Wi-Fi, p
 ## Start a paid spin
 
 1. Short-press the large grey side button. Its single-click action waits briefly for the double-click window, then opens the cabinet-style wager screen.
-2. Grey moves the focus and blue selects. Focus opens on the current denomination, then follows its current valid line selection and offered bet multiplier. **Selecting a funded red bet button starts a spin immediately.** Merely browsing a denomination or line does not stake credits.
+2. Grey moves the focus and blue selects. Development v159 starts focus at the first choice in each section: denomination, lines, then bet. Existing choices stay marked until selected; this navigation is scheduled for the playable v160 release. **Selecting a funded red bet button starts a spin immediately.** Merely browsing a denomination or line does not stake credits.
 3. During ordinary play, short-press blue for the next spin. A press during motion can accelerate the presentation; it cannot select a different result.
 
 The stake is `denomination × selected lines × bet multiplier`. The red buttons show the resulting credit amount. See [wagers](wagers.md) for the actual offered rows, including $1/5-line and $1/10-line choices.

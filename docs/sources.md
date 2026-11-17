@@ -45,6 +45,12 @@ Gameplay recordings are indexed below by the features, prices and configurations
 
 Price annotations remain next to their exact branches in the [Engine](../firmware/src/phoenix_engine.h). The [compiled tables](payouts.md) record what the software does, including unresolved local fallback values. A visible payout establishes a price at its observed context; it does not estimate the event's underlying probability.
 
+## Recorded Mini and Minor prices
+
+The [DG Production recording](https://www.youtube.com/watch?v=nJhRBm39t34) shows Confucius Say at **1¢ / 50 lines / 5×**, a **$2.50 spin**. At that exact configuration, two independent collection totals identify **Mini $10**: [8:52](https://www.youtube.com/watch?v=nJhRBm39t34&t=532s) collects $40 in numeric prizes plus one Mini for $50; [13:45](https://www.youtube.com/watch?v=nJhRBm39t34&t=825s) collects $217.50 plus a Double Mini for $237.50. The [6:35 board](https://www.youtube.com/watch?v=nJhRBm39t34&t=395s) pays $130 from $40 in numeric values, four Mini units and one Minor, identifying **Minor $50**. Credit changes reconcile those totals.
+
+Development v159 applies these two prices only to that wager. Other configurations, prize frequencies and counter-trigger laws are unchanged. The uploader labels the session Las Vegas; the exact property, software and pay program remain unknown. An outcome-selected upload can qualify visible prices without supplying unbiased bonus-frequency or RTP estimates.
+
 ## Unrecovered original data
 
 The original joint reel/stop law, virtual weights, full pay programs, prize/multiplier schedules, property RTP settings, meter hazard/reset weights and complete original graphics/audio banks remain unrecovered. Aggregate denomination returns cannot identify them. See [math](math-and-evidence.md), [graphics](graphics.md) and [audio](audio.md) for the practical consequences.

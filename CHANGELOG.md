@@ -1,5 +1,14 @@
 # Current release notes
 
+## Development v159 — queued for v160
+
+- Original manufacturer portrait and full curved temple roof replace the cropped, flattened courtyard composition.
+- Wager focus starts at the first denomination, PLAY LINES choice and offered BET button; existing choices remain marked until selected.
+- Source-observed 1¢ / 50-line / 5× Mini and Minor prices are $10 and $50. The local return calculation is updated for that wager; outcome frequencies are unchanged.
+- Gallery images and animations show the current development renderer. The playable demo and firmware downloads remain at the stable release until v160.
+
+<img src="docs/media/development/wagers.png" alt="Updated original curved temple and denomination chooser" width="720">
+
 ## 0.2.151
 
 - Custom Amount drops unused leading zeros as you move right: **$1.00** instead of **$00,001.00**.

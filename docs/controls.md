@@ -18,7 +18,7 @@ The implemented long-press threshold is 850 ms. In normal game view, grey's sing
 
 ## Wager-selection screen
 
-Short grey presses move focus; blue selects the highlighted choice. The screen opens on the current denomination. Selecting a denomination focuses the currently selected line control when available. Selecting lines focuses the current bet multiplier when it is offered; otherwise a valid available choice is used. The red-button credit amounts depend on the selected lines and multiplier. Holding the large grey button applies the selected denomination and lines, activates their counter and returns directly to the game without spinning.
+Short grey presses move focus; blue selects the highlighted choice. In development v159, focus starts at the first denomination, then the first PLAY LINES choice, then the first offered BET button. Your existing choices stay marked until you select a replacement. Returning to the denomination page also starts focus at its first choice. The playable release receives this workflow at v160. The red-button credit amounts depend on the selected lines and multiplier. Holding the large grey button applies the selected denomination and lines, activates their counter and returns directly to the game without spinning.
 
 An unavailable row cannot start a paid spin. Owed features protect their existing wager; opening the screen does not change the paid round that is already in progress.
 

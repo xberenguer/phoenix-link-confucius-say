@@ -1,12 +1,12 @@
 {
   "kind": "development-preview",
-  "version": "0.2.157",
-  "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+  "version": "0.2.159",
+  "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
   "release_version": "0.2.151",
   "next_tagged_release": "0.2.160",
-  "mathematical_family": "beeefd81a346ef6ed99b44dcdb7987aecc474c9437698a0c8f9b2de669335d40",
-  "engine_sha256": "82d1b768cf34714b340b688b1ea67cb9bf27c38e18eb1ff6c9be676d17c0a492",
-  "renderer_sha256": "08a4ff06356c1bf6a5b1afa962784e017b7eb1fbd4de6cca0304bd1b0ef4bc9d",
+  "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
+  "engine_sha256": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
+  "renderer_sha256": "9d9e2ecdb6bd57d3a356369917155e95e55f6584a0e800866cc00f10398ebedf",
   "source_files_sha256": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
     "audio.cpp": "002d028edb82da2d212771d7f03237e96296fdaa6aeab3cf7c375c0fe8d3ffbf",
@@ -27,11 +27,11 @@
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
     "bounded_decimal_editor121.h": "1c477b5355b62a71f2b8751b4ee2d40b11fd33b189013e252cdd29d0bbcc9821",
-    "build_version.h": "38abdaf9aba61b9f980035fbd1e33c09ac8f54cf40d316beb5ee8c9b1877c5ed",
+    "build_version.h": "dd1254c8f05fd7c9e2571ff2786c358347676585013abe94fc43eb2fbfe0e688",
     "cabinet_profile.h": "af3599df21043ef3fcd1b2c88a1bae41bd9a30de6f629fdabab8cf211da1b6e0",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
-    "cabinet_scene145.h": "1c8fc8796af18aa515ae07fa6394861325d69cb17ba3b5f62dac84731e85d189",
-    "cabinet_selection146.h": "e859ddef4f966c230152613d6ab10a660bd907f63fbab69cabaea2a8efcfa260",
+    "cabinet_scene145.h": "207323556a568e8ecf11de2e9becd082625c6be4b2eaedf58437ae4deb7cb4ae",
+    "cabinet_selection146.h": "38f36644081debee38881dd9d81c54352e497716b0ec918492d41a530793eecd",
     "cabinet_type27.h": "834969699e927bc687fb5fc8d1dbe2794331039dca10ab5aea401f4db48dec87",
     "cabinet_wager.inc": "be529d350adf67e99c13d1a2a309ed9c373d14c0afae5faf9f7ad3d70a64525a",
     "capacity_service.h": "b5678302db26ee809b06a19279b14b6aeea5f7c7318aa9cc36ba0c0b5ce726a4",
@@ -94,7 +94,7 @@
     "major_material153.h": "ce371e119af6a89ad797687243769c71502e54f7723bd2c97232c67f08ced062",
     "major_material153_data.h": "d2975b76c7b73cc44e1b3da46192f420d251ac719b5bb63d2f136bf3e5806310",
     "major_title112_data.h": "e75772a92c3acd0e7efe4d7a28a74779c8de9e93df0d44acfa2bb62d2dc4a68e",
-    "math_runtime_identity.h": "49954ae247f52dea10ab29edecc7cfcd4879e8834757f0f250b326ea81887afe",
+    "math_runtime_identity.h": "cf25f0810624b365abe2c4ed872de357b9d0511d7e9465013bdbeaf70a06edca",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "af304bc8f1b6586e88ca6c0771a921278d5ce69d710bcb4b7b7aa6c490236c0a",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -135,7 +135,7 @@
     "phoenix_crypto124/prefix.h": "c45e0fbd64269d9a4dcd3c803449732f664839697ccfa7abe66490db84cc3635",
     "phoenix_effects.cpp": "aa8360b6aeb27ec5367ce22f9cf2be8b784929592584e0d4b13ce4c73689e97f",
     "phoenix_effects.h": "7db8dd0a9cb547b681ddd956408f56482203369a678bc169d70e3e6600009731",
-    "phoenix_engine.h": "82d1b768cf34714b340b688b1ea67cb9bf27c38e18eb1ff6c9be676d17c0a492",
+    "phoenix_engine.h": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
     "phoenix_numerals.cpp": "3a7824cc5b5ce818b7538a6e5cffee50afd9d7d86629afed9cd8556fe341f33a",
     "phoenix_numerals.h": "4f25d3dd2a67ce371c9d03b33b7798d03e6ed8dad0f67fd5fc04a84a1f547fa2",
     "phoenix_random.cpp": "5c7d988e8ea5e3ac137558ee673db8a882cb2cbc3fae05852db8ce3ba8765393",
@@ -164,7 +164,7 @@
     "spin_award_timing.h": "d0c2f9dae63eed4d75d2a1aea2b2cab63e2655efce1f04c4f9cae4783f743a93",
     "static_grand.h": "3e745b3d0d70a6fd6283a9f76c87ade4bcec413c922c0fe733082249af8293ff",
     "static_grand_legacy.h": "2f98397c1be3c3107dfcd5e3e06fd71613194380478f8f09131e22f10e2db5f0",
-    "static_grand_table.h": "b847b28bfc77e382208c37d7876b9286b336e71876206dd3c1e28a4e5b3c7dd3",
+    "static_grand_table.h": "806c7c828a8e533f9925314bb21bbe7c60a3530312ac13dc11ed2388f97bc3bf",
     "third_party/dr_mp3.h": "7a6cc38b0afdb55cfc9eec991d9169d67beb8fd910be2995121510cdaa99c356",
     "ticket_font142.h": "62da234ce37e2765c79e485ff45c0b005c2acf22bd1555d39495f35ac937aab9",
     "twin_free_scope89.inc": "42834a2043a38ca856f30873a76cbe9ea9e7ddb5c32507ea75091529c0a87604",
@@ -172,7 +172,7 @@
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "08a4ff06356c1bf6a5b1afa962784e017b7eb1fbd4de6cca0304bd1b0ef4bc9d",
+    "ui.cpp": "9d9e2ecdb6bd57d3a356369917155e95e55f6584a0e800866cc00f10398ebedf",
     "ui.h": "63dd39dd10d134be292f9e046cc76b877216ccad22e1090dab9266f64b2b6493",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -188,15 +188,15 @@
     "wisdom_free_caption29.inc": "7e54425d7ac004b84194e3f1cc0cc9bd95fd339a99e86c85804c5f383e099bf7",
     "wisdom_lower_win88.h": "8808489a9a09700b55d32a729c9c14ec08d48eff29e4f2afdb517efa21764dec"
   },
-  "source_acceptance_sha256": "a817d85163c27a9375f4e6a804285dadd6dad2c1645069e5515beacaa5135415",
-  "capture_receipt_sha256": "ff289f80872482558267abbd63a03b6c625f8d929e814ce598323d421b081665",
+  "source_acceptance_sha256": "f939a11290e6a77823a93ee155d6da827a4c98dda19d988e55c9e1de46e59104",
+  "capture_receipt_sha256": "0611a52db55522d40dc7a7249f53d7f88540d36ee7cd6e710a4cd66b357e4f06",
   "source_limitations": "Source-derived lettering with reconstructed perspective, masks and native scaling; not original vendor alpha or a complete pixel-perfect asset bank.",
   "images": [
     {
       "file": "media/development/settings.png",
       "kind": "settings",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "7f5d53d255d6d24ef43ce68dcb8367fd6e5262c876b661d090f0e9702a77259c",
       "bytes": 11510,
       "dimensions": [
@@ -218,8 +218,8 @@
     {
       "file": "media/development/paylines.png",
       "kind": "paylines-current",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "d8444e5d95f851611c4e0237dea91f596efc975f3e856269c24fa0da786d9c05",
       "bytes": 11903,
       "dimensions": [
@@ -241,8 +241,8 @@
     {
       "file": "media/development/paylines-all.png",
       "kind": "paylines-all",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "f9882ec2dda9c1bc0df14d83fd1101e307895a2daa8e7cc38a6f405f4e81c699",
       "bytes": 11570,
       "dimensions": [
@@ -264,8 +264,8 @@
     {
       "file": "media/development/line22-jack3.png",
       "kind": "line22-jack3",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "50698cd71cf23a6e7ebf281bccf3415d2d79ca51ffbad060b4f4b8b89d6b5c1b",
       "bytes": 42345,
       "dimensions": [
@@ -287,8 +287,8 @@
     {
       "file": "media/development/pickup-flight.png",
       "kind": "pickup-flight",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "154322031f2751a2b39a7da7c5f68368069243ae9bd13e37b87fadad0a108a34",
       "bytes": 40259,
       "dimensions": [
@@ -310,8 +310,8 @@
     {
       "file": "media/development/cash25-burst.png",
       "kind": "cash25-burst",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "ba0d4ac01bdbcdd8bc105ef3aeebc772ba914491eadcccb8dafc7b6a4bfa5af4",
       "bytes": 45281,
       "dimensions": [
@@ -333,8 +333,8 @@
     {
       "file": "media/development/game.png",
       "kind": "game",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "994ed5213c08b3b4035546cbda0622231b254c1812b0db89ee9579ce491aec6c",
       "bytes": 43689,
       "dimensions": [
@@ -356,10 +356,10 @@
     {
       "file": "media/development/wagers.png",
       "kind": "wagers",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
-      "sha256": "093c1018728af7d10d384fbd353a862e9745be537a350fc00e4dc329da26d3b3",
-      "bytes": 60348,
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "sha256": "ae5b634fb7b9f8af2454816683aee4c334b244dcfeceffc8edd46d7e8334b819",
+      "bytes": 65460,
       "dimensions": [
         720,
         405
@@ -373,16 +373,16 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "d0a894ec00e0690f1bcbe5b9bbc9ed32f4f6fcea0de83e2a7afae717e2618666"
+        "767c8db3d46c8c5b3ba04e47ef47cc8cfc3fa03e4158966d99881b0929144d57"
       ]
     },
     {
       "file": "media/development/menu.png",
       "kind": "menu",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
-      "sha256": "676eaca5f76d7ca3ef3ececbefa39ddc7b4372f19eaef0d6be8341f6d222f672",
-      "bytes": 14481,
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "sha256": "c581ef1a24cb521eb8686ff94b7daab937863b7f0b78df5de28986cfe2f0c083",
+      "bytes": 14520,
       "dimensions": [
         720,
         405
@@ -396,14 +396,14 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "35ab25d8b049ebb67bb3bd7baf7e283fca8760832f2a9bd49f2ee76d1bdd7979"
+        "64cf993bd6aa6871e614bf27e0b8828d8806f46da7bf2e31aff58a35aa8dc44a"
       ]
     },
     {
       "file": "media/development/sound.png",
       "kind": "sound",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "2effd4a28e2fd6db037da4574c02b88e94ced56067069caddc8582f7758a170e",
       "bytes": 15910,
       "dimensions": [
@@ -425,8 +425,8 @@
     {
       "file": "media/development/volume.png",
       "kind": "volume",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "27660fc524153206063dbd3b71e2336d499879c8e346f8d2b16368fda53ff6b3",
       "bytes": 10911,
       "dimensions": [
@@ -448,8 +448,8 @@
     {
       "file": "media/development/wisdom-entry.png",
       "kind": "wisdom-entry",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "36015d971d0f620ada3947c41e7d9dc82543f915b3a9d3615d19d5f9778daf1e",
       "bytes": 45612,
       "dimensions": [
@@ -471,8 +471,8 @@
     {
       "file": "media/development/hold.png",
       "kind": "hold",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "d9904b74cb27225ee4c0ecfcfb4ae2b66348980b59ca30147b834b474d870e83",
       "bytes": 52556,
       "dimensions": [
@@ -494,8 +494,8 @@
     {
       "file": "media/development/collection.png",
       "kind": "collection",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "3297196ea23da301920f2225c509bf198e38b1616f79a2ba323fd181eeec89bc",
       "bytes": 55113,
       "dimensions": [
@@ -517,8 +517,8 @@
     {
       "file": "media/development/symbols.png",
       "kind": "symbols",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "1b289940b5376cf1d9a65f9516da2c0442bb2679bc499a0f2c86cf80f31911be",
       "bytes": 45593,
       "dimensions": [
@@ -540,8 +540,8 @@
     {
       "file": "media/development/credits.png",
       "kind": "credits",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "b127207c2f7035cb75e8b817945ae1228182a32a4ae3166f97a2bf9ed6f67722",
       "bytes": 14939,
       "dimensions": [
@@ -563,10 +563,10 @@
     {
       "file": "media/development/wagers-lines.png",
       "kind": "wagers-lines",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
-      "sha256": "bb11ce4cf063597bc7bdba67b1f2679cde01e716472534c4a7303b70ca21418b",
-      "bytes": 42792,
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "sha256": "39d61e37f5c2d6310f805fdf35a5410edc0417715b00f8c05064775f637e63db",
+      "bytes": 44345,
       "dimensions": [
         720,
         405
@@ -580,16 +580,16 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "151c64b7635db058b42ee92103f34c8af29607925e8e483bb8a1ebc5d30fdbbf"
+        "56f3ac93641e6848758457277fdad7c0255af1712a93e37c99bbc5c419264eb3"
       ]
     },
     {
       "file": "media/development/wagers-bets.png",
       "kind": "wagers-bets",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
-      "sha256": "09f298d288c7c34abfd378685a0f5f10045d70faf1822d2ebfad828594f82352",
-      "bytes": 42892,
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
+      "sha256": "205e7079fca4c1422f284504818d3c19cc9f38aa4897ca3683b5c5eb6db7700b",
+      "bytes": 44608,
       "dimensions": [
         720,
         405
@@ -603,14 +603,14 @@
       "financial_state_and_entropy_guards": true,
       "frames": 1,
       "input_sha256": [
-        "43dff858934ffdecf52f9baf1c47fdeda915a4793bc9b23567d818a42c1f401f"
+        "4b15a2fd9ef9edfdd4cfce687eb3ff2c596de7cd7ebcd2ed8dd94b915ac05d9d"
       ]
     },
     {
       "file": "media/development/nested-free.png",
       "kind": "nested-free",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "c130bceda5bbdd739d4ef7edc887f8f213995acd0671fe190713ff56ec506e0a",
       "bytes": 32530,
       "dimensions": [
@@ -632,8 +632,8 @@
     {
       "file": "media/development/nested-free-fire.png",
       "kind": "nested-free-fire",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "01e212a0d6c28eeca389830f179cb305bf5d8ad86f091e92dee01036b6451133",
       "bytes": 39868,
       "dimensions": [
@@ -655,8 +655,8 @@
     {
       "file": "media/development/pickup-flight.webp",
       "kind": "pickup-flight",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "5ca1ebd1a993bb64b73754f8eab69e61a8a203a3af11e482e89400239436dfe5",
       "bytes": 704846,
       "dimensions": [
@@ -731,8 +731,8 @@
     {
       "file": "media/development/cash25-burst.webp",
       "kind": "cash25-burst",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "e2d1da536fc3decad3d0973749c547c7f280730d3551c8c47eb54d50a4de9a10",
       "bytes": 1082546,
       "dimensions": [
@@ -817,8 +817,8 @@
     {
       "file": "media/development/wisdom.webp",
       "kind": "wisdom",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "9fddbfd05e83e56b5e4668c021b4829a0fbbebe18f42dde087c340fd034f8e44",
       "bytes": 228552,
       "dimensions": [
@@ -942,8 +942,8 @@
     {
       "file": "media/development/sage.webp",
       "kind": "sage",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "d05aaa870953987fd7fd3451e99c9555822d4807c7e7b6c395e4211d88bd18a8",
       "bytes": 149664,
       "dimensions": [
@@ -998,8 +998,8 @@
     {
       "file": "media/development/phoenix.webp",
       "kind": "phoenix",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "084f64f15487100f86890abc0eacc229d17806ec513c8e6c540930bfd04d81b3",
       "bytes": 251230,
       "dimensions": [
@@ -1083,8 +1083,8 @@
     {
       "file": "media/development/coins.webp",
       "kind": "coins",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "42d0e9e121e0bb2fb49169ad2a6814084a66bffa6c83a50baca1beffd950348b",
       "bytes": 954570,
       "dimensions": [
@@ -1184,8 +1184,8 @@
     {
       "file": "media/development/counter.webp",
       "kind": "counter",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "1ef21974b4c374cac1a4aaccf0cfdb3321857b20e0e1a4ecfccbd1627bf49622",
       "bytes": 241384,
       "dimensions": [
@@ -1249,8 +1249,8 @@
     {
       "file": "media/development/multiplied-mini101.webp",
       "kind": "multiplied-mini101",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "a2bfa1cb186aa502be6929df8896007b9e9fbc0ec72c343678cec1d6dcd0e4b5",
       "bytes": 980184,
       "dimensions": [
@@ -1335,8 +1335,8 @@
     {
       "file": "media/development/free-games-entry.png",
       "kind": "free-games-entry",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "35426e16c0c8a06ad2c8dd42f487845400464278f43ac9d46e47207c1f2ccd75",
       "bytes": 31196,
       "dimensions": [
@@ -1358,8 +1358,8 @@
     {
       "file": "media/development/grand-award.png",
       "kind": "grand-award",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "e297217cbe1888f40f1850d84d6d5b972e9ccfa5eb0aef8802db014ebf54ad85",
       "bytes": 61132,
       "dimensions": [
@@ -1381,8 +1381,8 @@
     {
       "file": "media/development/hold-entry.png",
       "kind": "hold-entry",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "71fc9f3b1fb1cd1af1b14b5b7aed2ecc0f50cab630254e637c13acbefc0b76a6",
       "bytes": 59618,
       "dimensions": [
@@ -1404,8 +1404,8 @@
     {
       "file": "media/development/hold-revival.png",
       "kind": "hold-revival",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "357fb2978255088814006e3efa57d4cc3cd181908766d18bb1a3574ea2351a63",
       "bytes": 51202,
       "dimensions": [
@@ -1427,8 +1427,8 @@
     {
       "file": "media/development/jackpots-custom.png",
       "kind": "jackpots-custom",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "477a4fec88150f5ef00e060136d0c2a120d728ff314a84b6b3e7b6d438673dfd",
       "bytes": 36097,
       "dimensions": [
@@ -1450,8 +1450,8 @@
     {
       "file": "media/development/jackpots.png",
       "kind": "jackpots",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "8f85cd9d921d1898122a7a74c2497c088e03c6fdd5ff8bf18e64561aa0ec8719",
       "bytes": 38159,
       "dimensions": [
@@ -1473,8 +1473,8 @@
     {
       "file": "media/development/jackpot-symbols-1x.png",
       "kind": "jackpot-symbols-1x",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "d2378fd43f264a28a99c2ec0ebaf5654d6a2c04710d4b1f2a6b8c47c7e353595",
       "bytes": 59764,
       "dimensions": [
@@ -1496,8 +1496,8 @@
     {
       "file": "media/development/jackpot-symbols-2x.png",
       "kind": "jackpot-symbols-2x",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "27616cfeab43f485e5a11835ea9f8f0f486a5b245f2b7eac1ba789c560142ab3",
       "bytes": 60098,
       "dimensions": [
@@ -1519,8 +1519,8 @@
     {
       "file": "media/development/jackpot-symbols-3x.png",
       "kind": "jackpot-symbols-3x",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "744882d613791f5fe89f6c277f3d3b67a29f9898c0f52eec9decfa0d26fe6e8c",
       "bytes": 60468,
       "dimensions": [
@@ -1542,8 +1542,8 @@
     {
       "file": "media/development/major-award.png",
       "kind": "major-award",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "cd83eea42be12b3da954536ddbe3483c1c094dfbda74cb4433f58de1c27f649a",
       "bytes": 36631,
       "dimensions": [
@@ -1565,8 +1565,8 @@
     {
       "file": "media/development/named-collection.png",
       "kind": "named-collection",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "6c9ac3df659d9521e16e32b2dbbc05669f6bc938d9281e363794c1916f2c5338",
       "bytes": 60952,
       "dimensions": [
@@ -1588,8 +1588,8 @@
     {
       "file": "media/development/jackpot-variants.png",
       "kind": "All nine named-prize symbols, crops from the current renderer",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "ce39df8d68411f89f0c39c7027d9c6f89f52bc5fbbe8ca6446c2986e360b688c",
       "bytes": 70449,
       "dimensions": [
@@ -1613,8 +1613,8 @@
     {
       "file": "media/development/jackpots-fire.webp",
       "kind": "Animated jackpot view",
-      "source_version": "0.2.157",
-      "runtime": "80a39a872b90236f2c91d0921bb6e86d9b651f9768e7a0b231a7d78ec2727c60",
+      "source_version": "0.2.159",
+      "runtime": "c4506c643946dd7059f3dfa94609db7d138c3c0a1ece691f12889b5183528677",
       "sha256": "b7ea715a7a7fe2865cb5ee485e0dcd3b491a5bfd7d5dabd4b54ccc87943a6cc8",
       "bytes": 842334,
       "dimensions": [
