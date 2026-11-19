@@ -19,15 +19,6 @@ A play-money recreation of **Phoenix Link — Confucius Say**, with five reels, 
 
 Gameplay pictures and clips in the gallery come from actual play. Individual symbol previews are crops of those captures. The gallery records what has been captured so far; a rare event without footage is described rather than illustrated with a staged result.
 
-## What to watch for
-
-- **Gold Confucius:** adjacent qualifying faces can join into a tall two- or three-row figure.
-- **Red Wisdom symbols:** three or more start six Twin Free Games.
-- **Phoenix symbols:** six or more can start Hold & Spin, where birds lock in place while the other positions respin.
-- **The green collection meter:** follows its own route to a free Hold & Spin feature.
-
-[Symbols and wins](docs/symbols-and-combinations.md) · [Twin Free Games](docs/free-games.md) · [Hold & Spin](docs/hold-and-spin.md) · [Collection meter](docs/collection-counter.md)
-
 ## Play on a StickS3
 
 The same game also runs offline on the **M5Stack StickS3** handheld. [Installation and updates](docs/build-and-flash.md) · [StickS3 controls](docs/controls.md)
