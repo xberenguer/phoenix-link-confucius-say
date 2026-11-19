@@ -19,16 +19,6 @@ A play-money recreation of **Phoenix Link — Confucius Say**, with five reels, 
 
 Gameplay pictures and clips in the gallery come from actual play. Individual symbol previews are crops of those captures. The gallery records what has been captured so far; a rare event without footage is described rather than illustrated with a staged result.
 
-## Your first spin
-
-1. **Choose your wager.** Grey moves through the choices; blue selects. Choose a denomination, a **PLAY LINES** option and a red **BET** button.
-2. **Add play credits.** At the reels, press blue to open the voucher. Grey moves between digits, blue changes a digit, and **INSERT CREDITS** adds your chosen amount.
-3. **Press blue to spin.** All credits and prizes are pretend money.
-
-On a computer, **Space** is blue and **Enter** or **→** is grey. On a phone or tablet, use the two buttons below the game. Hold blue for autoplay; hold grey for the game menu. [More controls →](docs/controls.md)
-
-Your progress stays in the current open game. **Reloading or opening a new game starts a fresh session.** [Browser help and sound tips →](docs/browser-play.md)
-
 ## What to watch for
 
 - **Gold Confucius:** adjacent qualifying faces can join into a tall two- or three-row figure.
