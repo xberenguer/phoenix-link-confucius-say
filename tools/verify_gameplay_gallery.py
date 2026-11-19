@@ -380,6 +380,16 @@ def verify(root):
     for path in (docs / "media/gameplay").rglob("*"):
         if path.is_file():
             require(path.resolve() in catalog, "Uncatalogued recorded media: " + path.relative_to(docs).as_posix())
+    # The user explicitly restored the original three-landing home showcase.
+    # It retains its historical scope; it is never relabeled as recorded play.
+    showcase = json.loads((docs / "showcase-hero.json").read_text())
+    showcase_path = (docs / showcase["image"]["file"]).resolve()
+    require(showcase["kind"] == "historical-engineering-showcase" and
+            showcase["source_tag"] == "v0.2.170" and
+            showcase["display_document"] == "README.md" and
+            showcase["image"]["file"] == "media/gameplay.webp" and
+            sha(showcase_path) == showcase["image"]["sha256"],
+            "Historical home showcase scope or original bytes differ")
     references = 0
     for document in public_markdown(root):
         # The changelog is historical release documentation, not the current
@@ -393,7 +403,7 @@ def verify(root):
                 require(False, "Uncatalogued remote documentation image: " + label)
                 continue
             path = (document.parent / unquote(parsed.path)).resolve()
-            require(path in catalog, "Current documentation embeds unrecorded/fixture media: " + label)
+            require(path in catalog or (document.relative_to(root).as_posix() == "README.md" and path == showcase_path), "Current documentation embeds unrecorded/fixture media: " + label)
             references += 1
     return {"status": "FAIL" if errors else "PASS", "version": manifest.get("version"),
             "checks": checks, "sessions": len(sessions),

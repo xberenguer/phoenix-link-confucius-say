@@ -120,6 +120,18 @@ def verify(root):
         require(list(dimensions(path)) == item["dimensions"],
                 "Image size mismatch: " + item["file"])
         catalog[path] = item
+    showcase = read("docs/showcase-hero.json")
+    showcase_item = showcase["image"]
+    showcase_path = (root / "docs" / showcase_item["file"]).resolve()
+    require(showcase["kind"] == "historical-engineering-showcase" and
+            showcase["source_tag"] == "v0.2.170" and
+            showcase["source_version"] == historical["version"] and
+            showcase["display_document"] == "README.md" and
+            showcase_item["file"] == "media/gameplay.webp", "Unexpected showcase scope")
+    require(sha(showcase_path) == showcase_item["sha256"] and
+            list(dimensions(showcase_path)) == showcase_item["dimensions"],
+            "Original showcase bytes or dimensions changed")
+    catalog[showcase_path] = showcase_item
     # Current player-facing media has an action journal and must come from
     # actual UI-driven play. Historical catalogs remain release provenance.
     recorded_catalog = {}
@@ -252,8 +264,8 @@ def verify(root):
             path = (document.parent / unquote(urlsplit(target).path)).resolve()
             require(path in catalog, "Untracked/stale documentation image: " + target)
             if gameplay_path.exists() and document.relative_to(root).as_posix() != "CHANGELOG.md":
-                require(path in recorded_catalog,
-                        "Current documentation embeds fixture media: " + target)
+                require(path in recorded_catalog or (document.relative_to(root).as_posix() == "README.md" and path == showcase_path),
+                        "Current documentation embeds fixture media outside the scoped historical showcase: " + target)
             if path.is_file():
                 item = recorded_catalog.get(path, {})
                 # An isolated symbol is an integer-scaled crop of a real

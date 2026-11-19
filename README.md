@@ -1,7 +1,5 @@
 # Confucius Say
 
-**Latest: 0.2.171** — the collection counter now reaches **1887**. [What changed](CHANGELOG.md#02171).
-
 A play-money recreation of **Phoenix Link — Confucius Say**, with five reels, animated symbols, Twin Free Games and Phoenix Hold & Spin.
 
 ## [▶ Play in your browser](https://xberenguer.github.io/phoenix-link-confucius-say/)
@@ -9,7 +7,7 @@ A play-money recreation of **Phoenix Link — Confucius Say**, with five reels, 
 **No installation, account or hardware needed.** Open the game on your phone, tablet or computer, then press **Play with sound**.
 
 <a href="https://xberenguer.github.io/phoenix-link-confucius-say/">
-  <img src="docs/media/gameplay/sessions/primary/action-000002-clip-001.webp" alt="A real gameplay session in Confucius Say; click to play in your browser" width="720" height="405">
+  <img src="docs/media/gameplay.webp" alt="Three-spin showcase: Confucius merges into gold, then Bell and Book wins; click to play" width="720" height="405">
 </a>
 
 ## Take a look around
