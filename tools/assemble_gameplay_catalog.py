@@ -238,8 +238,9 @@ def assemble(root, session_arguments, extras):
             item["session_id"] = session_id
             if "source_crop" in item:
                 item["crop"] = item.pop("source_crop")
-            if "context_file" in item:
-                item["context_file"] = game_path(item["context_file"])
+            for path_field in ("context_file", "preview_for", "preview_file", "poster_file", "poster_for"):
+                if path_field in item:
+                    item[path_field] = game_path(item[path_field])
             if "same_recorded_frames_as" in item:
                 item["same_recorded_frames_as"] = game_path(item["same_recorded_frames_as"])
             if "context_parts" in item:

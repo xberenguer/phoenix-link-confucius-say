@@ -1,5 +1,7 @@
 # Sounds, music and event order
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 Sounds are triggered by reel and feature events. The game includes reconstructed common cues, dedicated feature-entry material, a long Hold/award stream and a separate reconstructed Twin phrase. These are not a recovered original manufacturer soundbank, and acoustic identity has not been established.
 
 The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/audio_cues.cpp), [UI routing](../firmware/src/ui.cpp) and [music worker](../firmware/src/audio_music.cpp) are the implementation authority. A cue enum existing does not mean that it is registered or dispatched in every state.
@@ -48,6 +50,10 @@ Manual play and autoplay share those event routes. Backend queue acceptance prov
 Opening a menu pauses the current feature and its music. Returning to the game continues from that position. Sound-menu tests have their own playback context, so an audition does not rewind the paused feature tune. Short audio buffers already submitted to the output may finish as the pause begins.
 
 ## Settings and auditions
+
+<img src="media/gameplay/screens/menus/sound.png" alt="The actual Sound menu with the named feature-audition choices" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/volume.png" alt="The actual volume control" width="720" height="405" loading="lazy">
 
 Hold grey → Settings → Sound provides master sound, a stops/landings switch, fine volume and test playback. Master mute covers cues and feature music.
 

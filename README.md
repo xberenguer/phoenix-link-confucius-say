@@ -7,17 +7,15 @@ A play-money recreation of **Phoenix Link — Confucius Say**, with five reels, 
 **No installation, account or hardware needed.** Open the game on your phone, tablet or computer, then press **Play with sound**.
 
 <a href="https://xberenguer.github.io/phoenix-link-confucius-say/">
-  <img src="docs/media/gameplay/session.webp" alt="A real gameplay session in Confucius Say; click to play in your browser" width="720" height="405">
+  <img src="docs/media/gameplay/sessions/primary/action-000002-clip-001.webp" alt="A real gameplay session in Confucius Say; click to play in your browser" width="720" height="405">
 </a>
 
 ## Take a look around
 
 | What would you like to see? | Open |
 |---|---|
-| The game from setup through spins, wins and bonus features, with jackpots at the end | [Gameplay gallery](docs/graphics.md) |
-| Individual symbols, their animations, and the two- and three-row Confucius merges | [Symbols and animation gallery](docs/symbol-gallery.md) |
-| How to begin and what everything on screen means | [Your first game](docs/getting-started.md) |
-| The full player guide | [Browse the guide](docs/README.md) |
+| The game in playing order: screenshots, animated symbols, merges, bonus features, menus and jackpots | [Gallery](docs/graphics.md) |
+| How to start playing, understand the screen and explore every feature | [Full player guide](docs/README.md) |
 
 Gameplay pictures and clips in the gallery come from actual play. Individual symbol previews are crops of those captures. The gallery records what has been captured so far; a rare event without footage is described rather than illustrated with a staged result.
 

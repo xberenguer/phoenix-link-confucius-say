@@ -197,806 +197,6 @@
   "fresh_artwork_and_crypto_objects": true,
   "images": [
     {
-      "file": "media/gameplay/sessions/primary/action-000002-clip-001-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "a77c01136b9f9d017d2fd0864ffe7cdc098b5eb35f0d2a98196b00cf1719556f",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000002-clip-001",
-      "action_index": 15,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000003-clip-002-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "889707679a1be83a1682874e113aba9cf5076a9eadd91dce68ff87e808130792",
-      "frames": 246,
-      "duration_ms": 9840,
-      "event_id": "primary:action-000003-clip-002",
-      "action_index": 16,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000004-clip-003-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "f8b375bf15454ae87c15cfd7bb833bf61bc6e9a5e158b5fa00857cd1dc03263f",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000004-clip-003",
-      "action_index": 17,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000008-clip-004-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "6d59f1befc9437a900780bc63de691dd92da0338d287b183afcd2bc60d759c23",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000008-clip-004",
-      "action_index": 21,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000010-clip-005-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "5d74f3ec682180735c5374a3f1d84647733c1315357fa99b727926b148c31c66",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000010-clip-005",
-      "action_index": 23,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000010-clip-005-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "2cffa570a6161f2ea40ff0ed457779731cde024fbca74ffab4aa6f735606950e",
-      "frames": 262,
-      "duration_ms": 10480,
-      "event_id": "primary:action-000010-clip-005",
-      "action_index": 23,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000013-clip-006-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "20e7d15846e05799a2402379df4daeb1ed8e08ff6e3af51ebc899257bc27a195",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000013-clip-006",
-      "action_index": 27,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000013-clip-006-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "cb37e020e491e654fbda3d6daee4513186c7e8a0837bc8ea823dd6c1090a532e",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000013-clip-006",
-      "action_index": 27,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000013-clip-006-part03.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "806f63e095bf3f0ae5f9a71ef7c1add444aacd475ccb9ada5960da4eb8772ff4",
-      "frames": 43,
-      "duration_ms": 1720,
-      "event_id": "primary:action-000013-clip-006",
-      "action_index": 27,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000019-clip-007-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "d0fd61d7290cb74d46bdf9ff44bee8e8519ee54be6e43d5849aa52667e31005d",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000019-clip-007",
-      "action_index": 34,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000019-clip-007-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "4d5500c504539228a240cf9673fffd997086567ae597a725637fabaa7f1dada7",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000019-clip-007",
-      "action_index": 34,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000019-clip-007-part03.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "8c6d207e2c3823557c971b5e68973cc17752339590e5e48dacce524cfa8a1b21",
-      "frames": 215,
-      "duration_ms": 8600,
-      "event_id": "primary:action-000019-clip-007",
-      "action_index": 34,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000030-clip-008-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "6f334d9d2f0ba243d723c1b520184b094ccdb6a8a55d18aafc7141a87fa75323",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000030-clip-008",
-      "action_index": 45,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000056-clip-009-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "6e29d26654b615c15d7e8958fda4ea19f91a98519efab757f463ad6dff55647b",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000056-clip-009",
-      "action_index": 71,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000064-clip-010-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "bfa5ec18eb7c38fa7813aa7c32c812367e6071d2343f37c57d7e21577acf6324",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000064-clip-010",
-      "action_index": 79,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000064-clip-010-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "68a89fd615bccef0353afdd51910a552225e87787cc1434fb9fa886c733d8634",
-      "frames": 4,
-      "duration_ms": 160,
-      "event_id": "primary:action-000064-clip-010",
-      "action_index": 79,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000066-clip-011-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "64cc5740a16244b39f768eba9136e21cb4ab96706a999be113df8e06295a01ca",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000066-clip-011",
-      "action_index": 81,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000090-clip-012-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "53698166b177387af9d73b8899690dc752167af755b457774aef799b55266e71",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000090-clip-012",
-      "action_index": 105,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000090-clip-012-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "0e65f1cfad6e335f030e96497a37f8e48856f89e1e6ae28d72aa32149de9be4e",
-      "frames": 4,
-      "duration_ms": 160,
-      "event_id": "primary:action-000090-clip-012",
-      "action_index": 105,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000139-clip-013-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "a34932a1bce7de795925786b4d674b24e7b98bb53c5b5c6e5974964b275b7b36",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000139-clip-013",
-      "action_index": 155,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000139-clip-013-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "926ec22d8c8ec323a72ae662b5335b3a235dc437f65124d0e691fa276230a4b0",
-      "frames": 295,
-      "duration_ms": 11800,
-      "event_id": "primary:action-000139-clip-013",
-      "action_index": 155,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000145-clip-014-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "3a66c61f0b6a74806e1bd2ee6823c2cf0f997bafa9f25b3a5cb0ba9ab729b546",
-      "frames": 176,
-      "duration_ms": 7040,
-      "event_id": "primary:action-000145-clip-014",
-      "action_index": 162,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000161-clip-015-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "2b7206848b8b194ddc7ab8758251f4e96119b9cead4641bae3307609f6fa756a",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000161-clip-015",
-      "action_index": 178,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000161-clip-015-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "f7ed1addbc9c78c6f8246543ab6060d5ee986470890e138cd916eb6213ed98d1",
-      "frames": 4,
-      "duration_ms": 160,
-      "event_id": "primary:action-000161-clip-015",
-      "action_index": 178,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000470-clip-016-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "c72c05f734456d216ed2e0f02e2ab263b670ec9e691754e4363f70bf652b4da3",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000470-clip-016",
-      "action_index": 488,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000474-clip-017-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "b4092162750cc9bf73f9e0bffe97e69f467e225f98fd18612e0b8596fe6af154",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000474-clip-017",
-      "action_index": 492,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000474-clip-017-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "bfb2cab2b891a0b69490e02501fb81427916374a1c5343851669ee7e8b7c7acf",
-      "frames": 4,
-      "duration_ms": 160,
-      "event_id": "primary:action-000474-clip-017",
-      "action_index": 492,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000552-clip-018-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "c7b01754d8723e9f3576960e6b3760017273ed523b1f05bc7e062e7a1ea5a919",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000552-clip-018",
-      "action_index": 575,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000552-clip-018-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "72e08f78afffac255386c50329e83c4960eba182007db974a028fcafee501ebf",
-      "frames": 46,
-      "duration_ms": 1840,
-      "event_id": "primary:action-000552-clip-018",
-      "action_index": 575,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000714-clip-019-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "8c34ed883ef55f16ecdc288474d73c27e9fbcc9b9149cd74ba64b67d5cf10edb",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-000714-clip-019",
-      "action_index": 746,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-000714-clip-019-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "3bd479900b346444b35cb5f2472ce1e0817a3584d13fce160c0932dba153b76d",
-      "frames": 287,
-      "duration_ms": 11480,
-      "event_id": "primary:action-000714-clip-019",
-      "action_index": 746,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-001159-clip-020-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "eed8716cf4d645929ba91b54b46a9932fc08ca1459f9a5b4c92a71bb06dc0efb",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-001159-clip-020",
-      "action_index": 1198,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-001159-clip-020-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "8e8965ace285a5d550e26aa4c1b8a7f821331dd4f99c12e07088c70a4b5e28b5",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-001159-clip-020",
-      "action_index": 1198,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-001159-clip-020-part03.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "11c09bbc9c5be5e9c3ab30535041bf137b5d928148db873cf54f6facfa84a703",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-001159-clip-020",
-      "action_index": 1198,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-001159-clip-020-part04.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "28b6d9d08b81e8bab35e70e488b948410364080315f748ce7cd38cca14e770fc",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-001159-clip-020",
-      "action_index": 1198,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-001159-clip-020-part05.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "a8003526878776ef562a3fb3b6f7ae3f4c5ffa2d64918f80cbafef9ee2c49c50",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-001159-clip-020",
-      "action_index": 1198,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-001159-clip-020-part06.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "bb442da0baef1750068bedca2ed378ee7ab1ab7e4a5b9cba59cc3a0b6dc26dcc",
-      "frames": 162,
-      "duration_ms": 6480,
-      "event_id": "primary:action-001159-clip-020",
-      "action_index": 1198,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004325-clip-021-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "ceb0111a15df6c21407d680c415808635a574fb1c439d1a16871a3c5b8787111",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-004325-clip-021",
-      "action_index": 4499,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004325-clip-021-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "091f7ba889096675691e35e539dff33ccd63324840772efc9e5b1aadd45651d8",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-004325-clip-021",
-      "action_index": 4499,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004325-clip-021-part03.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "c27dab201c6c1929d5aa086f784fc02dde4b9109474f0ef4a5e3bb1a79d1e4f8",
-      "frames": 278,
-      "duration_ms": 11120,
-      "event_id": "primary:action-004325-clip-021",
-      "action_index": 4499,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004839-clip-022-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "c27af1e18970e60bd187bd784514b86c5b85157eccd0a12d22c12476575b1662",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-004839-clip-022",
-      "action_index": 5043,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004839-clip-022-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "da2a4d487cb8365f87845a00f53c3bc454e7f1940b4c35aed217cddebb4df6f9",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-004839-clip-022",
-      "action_index": 5043,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004839-clip-022-part03.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "b1c8fe4c305ff56e370c56c748ddd124919c095a2ac842b116192fabb99a38aa",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-004839-clip-022",
-      "action_index": 5043,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004839-clip-022-part04.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "ca26486d8292039aad137e49e35e3469f1f53c1ec4011b0fd4cce4437b23ffe1",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-004839-clip-022",
-      "action_index": 5043,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004839-clip-022-part05.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "e5f81faca7bf4c515c98db16df57179b0283fa5636440577e905fa947c70db86",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-004839-clip-022",
-      "action_index": 5043,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-004839-clip-022-part06.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "27aa838d1618c6a465880241127bb61ed85222f7d5f53e8a51be6c91587f2979",
-      "frames": 17,
-      "duration_ms": 680,
-      "event_id": "primary:action-004839-clip-022",
-      "action_index": 5043,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-005453-clip-023-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "f90000b29ad13d0a74e279dc5c8ddcc78c96577d8c23e84316a9f3ca77e3678c",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-005453-clip-023",
-      "action_index": 5670,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-005453-clip-023-part02.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "5f339900ab6800ddfb914e38a8d4ae9652c775b32e0ea64aa089697dacdbd06f",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "primary:action-005453-clip-023",
-      "action_index": 5670,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-005453-clip-023-part03.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "e6c79c82309047bbaf86f70966496fcdec38cccff27184d419ad73b0c4824917",
-      "frames": 248,
-      "duration_ms": 9920,
-      "event_id": "primary:action-005453-clip-023",
-      "action_index": 5670,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/primary/action-010000-clip-024-part01.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "3bbd31d7f832ac0f3bce6720d92b07421b3ee8c54740b3bffbbeb882167d2d88",
-      "frames": 125,
-      "duration_ms": 5000,
-      "event_id": "primary:action-010000-clip-024",
-      "action_index": 10368,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
       "file": "media/gameplay/screens/primary/base-collect.png",
       "kind": "screenshot",
       "session_id": "primary",
@@ -1052,7 +252,7 @@
         720,
         405
       ],
-      "sha256": "d3b03de11521d4522a598802081eb49ac3d160eca6ac178802b90a6760b37ffe",
+      "sha256": "c9b5022bf024677f2da90ce3f9e7ca74def34674fa1e834810af5944525fc379",
       "frames": 1,
       "duration_ms": 0,
       "event_id": "primary:action-000002-clip-001",
@@ -1164,7 +364,7 @@
         720,
         405
       ],
-      "sha256": "c273874124c194034fd99ba29f2cfcb0b58456001814f1d9eae78a2f5b3966ea",
+      "sha256": "ec07f4d91ba8beb7e3c456d9f5b0991b2a300b6c5c9668bc6a9013a9580410d9",
       "frames": 1,
       "duration_ms": 0,
       "event_id": "primary:action-000139-clip-013",
@@ -1468,7 +668,7 @@
         720,
         405
       ],
-      "sha256": "493aefd3afed6e2fe178dbac05476a3cba0dfa6dc7ee939b55b2205e897be294",
+      "sha256": "35e0bec1fe2c8f9b763ce90d06a66950c563bd50a62f96bcde9909776570c0ee",
       "frames": 1,
       "duration_ms": 0,
       "event_id": "primary:action-000714-clip-019",
@@ -2381,264 +1581,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/primary/abacus-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "71e2a49d1fd50c833e5de35620bd73d06c518aeadec120fea7d3e74667ffd41a",
-      "frames": 61,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000161-clip-015",
-      "action_index": 178,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        51,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/bell-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "0b9414d947939aae770db067058a0e6ebb69b720ec62f818a2b3b868a5bf7e2f",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000066-clip-011",
-      "action_index": 81,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        86,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/book-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "7196b07535a3d561e6a7a061e227da755459d43e0e3935567fa6fd36b05761c4",
-      "frames": 148,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000470-clip-016",
-      "action_index": 488,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        16,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/candle-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "4226c6f6b8b542c928d9159c8f30eb5f56e346c6e29c9de4e91d48fe109db9e0",
-      "frames": 48,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000003-clip-002",
-      "action_index": 16,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        16,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/confucius-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "e6397f05546fe2f63bf703ab3334b58c12d8b665c2b26b714631a727f8dde722",
-      "frames": 37,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000161-clip-015",
-      "action_index": 178,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        16,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/nine-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "15c0e216ab0664fe6df2710f26d11f3b2a79e44b2fc5aae8e4cf2efa924f5af4",
-      "frames": 25,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000004-clip-003",
-      "action_index": 17,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        51,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/phoenix-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "36ba35533d1e1bdd959a55dce3349b6016591dac34463cd096a44c870daf827b",
-      "frames": 145,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000002-clip-001",
-      "action_index": 15,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        51,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/ten-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "7f4cc5ccc2dc9ab32a711de4e8f0d36d7630d4a7b60bdaf29cfe44ddcf617b6b",
-      "frames": 146,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000002-clip-001",
-      "action_index": 15,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        16,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/wisdom-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "488d483766b8f067a1630d8e0439aeeae20921a3e4175bad0efc5b33d03b3ddc",
-      "frames": 140,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000139-clip-013",
-      "action_index": 155,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        51,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/session.webp",
-      "kind": "animation",
-      "session_id": "primary",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "df0ffce9a575c515a1f096c26f9dcec5b5df481612ec77669d05584239f8891b",
-      "frames": 261,
-      "duration_ms": 10440,
-      "event_id": "primary:action-000002-clip-001",
-      "action_index": 15,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/symbols/primary/confucius-2-row-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        444
-      ],
-      "sha256": "57a36c37db3940016c8ffd79a9f4ee7f4abeec813b896de65c95777b8426759c",
-      "frames": 44,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000064-clip-010",
-      "action_index": 79,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        12,
-        47,
-        74
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/primary/confucius-3-row-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "primary",
-      "dimensions": [
-        282,
-        654
-      ],
-      "sha256": "73287cb38cd576718ee771792f780d21c79c26a30f106d349c87375438785602",
-      "frames": 44,
-      "duration_ms": 6000,
-      "event_id": "primary:action-000090-clip-012",
-      "action_index": 105,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        12,
-        47,
-        109
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/primary/phoenix-full.png",
       "kind": "symbol-crop",
       "session_id": "primary",
@@ -2661,6 +1603,632 @@
       ]
     },
     {
+      "file": "media/gameplay/sessions/primary/action-000002-clip-001.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "bee1420725803074d336544c7d7723e382a9eaf90348dee1ea498d51cc4448d5",
+      "frames": 261,
+      "duration_ms": 12040,
+      "event_id": "primary:action-000002-clip-001",
+      "action_index": 15,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000003-clip-002.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "66901398685da109725b903914514ca92bce3acf4ef900980089662b82262eec",
+      "frames": 246,
+      "duration_ms": 11440,
+      "event_id": "primary:action-000003-clip-002",
+      "action_index": 16,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000004-clip-003.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "76126c311e66774096699c4c6a8ca80fc3fa70c98cf05166baa8c03f4b8a68eb",
+      "frames": 261,
+      "duration_ms": 12040,
+      "event_id": "primary:action-000004-clip-003",
+      "action_index": 17,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000008-clip-004.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "bf6859c4de71dc63e3032fa119d3200fce6da4318b85fe43892454449e8b446e",
+      "frames": 261,
+      "duration_ms": 12040,
+      "event_id": "primary:action-000008-clip-004",
+      "action_index": 21,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000010-clip-005.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "f1843ffaa3bbe5f6a060176de60bf188d2df8b1f797c58f5c414ae2525ecd694",
+      "frames": 562,
+      "duration_ms": 24080,
+      "event_id": "primary:action-000010-clip-005",
+      "action_index": 23,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000013-clip-006.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "c3d857e554700726ce2eb9e52ab9047a6c14d68376fa8ef82088a51c77578fad",
+      "frames": 643,
+      "duration_ms": 27320,
+      "event_id": "primary:action-000013-clip-006",
+      "action_index": 27,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000019-clip-007.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "cfe38685cefcdcf57538aaca43ae5694fefc1926c1dbdd5dcbea186fcecee193",
+      "frames": 815,
+      "duration_ms": 34200,
+      "event_id": "primary:action-000019-clip-007",
+      "action_index": 34,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000030-clip-008.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "1b45388fa6b31f31648ada7c2c7604ae0cbef27cb33c594360397cabae6cbcca",
+      "frames": 261,
+      "duration_ms": 12040,
+      "event_id": "primary:action-000030-clip-008",
+      "action_index": 45,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000056-clip-009.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "72eb85de6d9ece916e70b45d82c50cfeeb2550a56f9c3f49fcea050791e75612",
+      "frames": 261,
+      "duration_ms": 12040,
+      "event_id": "primary:action-000056-clip-009",
+      "action_index": 71,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000064-clip-010.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "c1a6562d60c6353d476b888b00d55c4a18a03b3d0319da666f1898ccbcb0e7fe",
+      "frames": 304,
+      "duration_ms": 13760,
+      "event_id": "primary:action-000064-clip-010",
+      "action_index": 79,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000066-clip-011.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "ba4d8df53ac36ee90d027a26d27b0aba4a5c49115e2beaafa42b58ed0d974a02",
+      "frames": 261,
+      "duration_ms": 12040,
+      "event_id": "primary:action-000066-clip-011",
+      "action_index": 81,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000090-clip-012.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "7e7b9ee76378b2527dab53b7a77a95cef9e1d28ff7df635e9415b91bdf187ae6",
+      "frames": 304,
+      "duration_ms": 13760,
+      "event_id": "primary:action-000090-clip-012",
+      "action_index": 105,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000139-clip-013.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "e6b3bcfd2fa5903728c0e3dec13870b7e95a9156f6056b8eb9aefb17a6208dc0",
+      "frames": 595,
+      "duration_ms": 25400,
+      "event_id": "primary:action-000139-clip-013",
+      "action_index": 155,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000145-clip-014.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "7208bc9be1143c82809ce5cc8c42e4772cf995d8efa92e4cd2a4190858737b21",
+      "frames": 176,
+      "duration_ms": 8640,
+      "event_id": "primary:action-000145-clip-014",
+      "action_index": 162,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000161-clip-015.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "8873478279b27ccfd465ca3f03f3d6b54953ab091a021128ae021be3857f1d9d",
+      "frames": 304,
+      "duration_ms": 13760,
+      "event_id": "primary:action-000161-clip-015",
+      "action_index": 178,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000470-clip-016.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "2127940298e615005b7679c0b4c3997116087acc5ee6be2611d9d8aef10e9398",
+      "frames": 261,
+      "duration_ms": 12040,
+      "event_id": "primary:action-000470-clip-016",
+      "action_index": 488,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000474-clip-017.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "95597cf1d878293b62d9dd49564bd8a7b32e9ac5d1fc73cb03ded51599998515",
+      "frames": 304,
+      "duration_ms": 13760,
+      "event_id": "primary:action-000474-clip-017",
+      "action_index": 492,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000552-clip-018.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "7b05367ccf1bea533ec0604e15b9994692900d9507402d180876f5d16d972b0e",
+      "frames": 346,
+      "duration_ms": 15440,
+      "event_id": "primary:action-000552-clip-018",
+      "action_index": 575,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-000714-clip-019.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "01df1afb57a132e0a96cffd30a3bc6fe0bf8aa929192cdf8c355b35551706aa1",
+      "frames": 587,
+      "duration_ms": 25080,
+      "event_id": "primary:action-000714-clip-019",
+      "action_index": 746,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-001159-clip-020.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "a729c45e34696271de5c5585523bc49169c904d37236da2e4207b1b0a7fe3773",
+      "frames": 1662,
+      "duration_ms": 68080,
+      "event_id": "primary:action-001159-clip-020",
+      "action_index": 1198,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-004325-clip-021.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "0163322901a150d2db3588e899b486cb295689ee39b736a8d2ada071857a7e34",
+      "frames": 878,
+      "duration_ms": 36720,
+      "event_id": "primary:action-004325-clip-021",
+      "action_index": 4499,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-004839-clip-022.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "db4bc265911889d92a8b1b2487996c3d4f892012e216cfbca0f927c0111ceb58",
+      "frames": 1517,
+      "duration_ms": 62280,
+      "event_id": "primary:action-004839-clip-022",
+      "action_index": 5043,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-005453-clip-023.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "d0a6d5e59631e02f6a8fbe48f4402d3d983c9e24f0f0ab69cc9fb528512a6d66",
+      "frames": 848,
+      "duration_ms": 35520,
+      "event_id": "primary:action-005453-clip-023",
+      "action_index": 5670,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/primary/action-010000-clip-024.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "eb6e2b582bb97906ac6b5b79f827e2195f1749ac07e42240447c0e46eb7e9312",
+      "frames": 125,
+      "duration_ms": 6600,
+      "event_id": "primary:action-010000-clip-024",
+      "action_index": 10368,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/symbols/primary/abacus-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "bcbbf6d1e1e82598d2d8c3c42ce3cb54ffb49c518bbd1d1ff577cabb0cc9d453",
+      "frames": 41,
+      "duration_ms": 4000,
+      "event_id": "primary:action-000161-clip-015",
+      "action_index": 178,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        2,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/bell-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "9e33f39811d06abd5be67df0d043d226c78757ec55bec94a7df1e8594609cb79",
+      "frames": 96,
+      "duration_ms": 4000,
+      "event_id": "primary:action-000066-clip-011",
+      "action_index": 81,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        2,
+        86,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/book-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "2b29d35ccbcc3221ab8fe84e52970a2e77f09d7011f19fcfcb7d1160e392e080",
+      "frames": 68,
+      "duration_ms": 3000,
+      "event_id": "primary:action-000470-clip-016",
+      "action_index": 488,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        96,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/candle-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "48e0e7e37de045980838abb7286862f49f62a7fe0cfdd27fd529850a0e2007ad",
+      "frames": 16,
+      "duration_ms": 2000,
+      "event_id": "primary:action-000003-clip-002",
+      "action_index": 16,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        16,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/confucius-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "f1595535acbb745f219da01e696ce844ecb052c100938cf1c4133053a50253e8",
+      "frames": 37,
+      "duration_ms": 6000,
+      "event_id": "primary:action-000161-clip-015",
+      "action_index": 178,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        16,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/nine-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "837bb541ee75314a45148d235ace104e99997a02176f9cb7f29e95387cc2b292",
+      "frames": 22,
+      "duration_ms": 5000,
+      "event_id": "primary:action-000004-clip-003",
+      "action_index": 17,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        2,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/phoenix-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "c6341e7a75cfc91c278201fe05e3538e2a8c84fe984733d61399802e7d46785a",
+      "frames": 121,
+      "duration_ms": 5000,
+      "event_id": "primary:action-000002-clip-001",
+      "action_index": 15,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        2,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/ten-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "f71f2f337054bdb76e7a6dd452e102e5ea292049c54143346ecca45641b1047f",
+      "frames": 17,
+      "duration_ms": 2000,
+      "event_id": "primary:action-000002-clip-001",
+      "action_index": 15,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        16,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/wisdom-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "6b7a52a6d20f59582c5cab343a2f265b902a8ba10227821288ce3323458b97b8",
+      "frames": 100,
+      "duration_ms": 4000,
+      "event_id": "primary:action-000139-clip-013",
+      "action_index": 155,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/confucius-2-row-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        444
+      ],
+      "sha256": "6da93bc239124e51d15ff89b725bdb61477f14ba618b8a9eb4bd46e3913bf820",
+      "frames": 55,
+      "duration_ms": 8240,
+      "event_id": "primary:action-000064-clip-010",
+      "action_index": 79,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        12,
+        47,
+        74
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/confucius-3-row-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        654
+      ],
+      "sha256": "798295fc4eafa2e4c6cc0b0b0db4974eabedd2c2997e07e8a4454add3d2c0233",
+      "frames": 55,
+      "duration_ms": 8240,
+      "event_id": "primary:action-000090-clip-012",
+      "action_index": 105,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        12,
+        47,
+        109
+      ]
+    },
+    {
       "file": "media/gameplay/symbols/primary/phoenix-motion-full.webp",
       "kind": "symbol-animation",
       "session_id": "primary",
@@ -2668,9 +2236,9 @@
         324,
         258
       ],
-      "sha256": "ee9d602c5de0b7c789d146991423366a7ce45a1ee851a757a667a3b4dc73a95a",
-      "frames": 146,
-      "duration_ms": 6000,
+      "sha256": "e59c69be3c196846177ba783fd1f60ab0744e1ca7fe86cefbb85444070186e31",
+      "frames": 122,
+      "duration_ms": 5000,
       "event_id": "primary:action-000002-clip-001",
       "action_index": 15,
       "scale": 6,
@@ -2681,6 +2249,616 @@
         54,
         43
       ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/candle-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "48e0e7e37de045980838abb7286862f49f62a7fe0cfdd27fd529850a0e2007ad",
+      "frames": 16,
+      "duration_ms": 2000,
+      "event_id": "primary:action-000003-clip-002",
+      "action_index": 16,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        16,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/confucius-2-row.png",
+      "kind": "symbol-crop",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        444
+      ],
+      "sha256": "238e33264aed0585b887f7532ae6d76085f73f6df5a39cbfc88a1e5749bf7200",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "primary:action-000064-clip-010",
+      "action_index": 79,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        12,
+        47,
+        74
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/primary/confucius-3-row.png",
+      "kind": "symbol-crop",
+      "session_id": "primary",
+      "dimensions": [
+        282,
+        654
+      ],
+      "sha256": "343039a418122e942e18b35fd08d31a8be7edea17653cddf38e7a92d0b2811ca",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "primary:action-000090-clip-012",
+      "action_index": 105,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        12,
+        47,
+        109
+      ]
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-collect.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "884c1b4bfbd0eae46791dcc4b1b7824c2e52ad8972efc921fe4e5bf49a30e190",
+      "frames": 506,
+      "duration_ms": 21840,
+      "event_id": "primary:action-005453-clip-023",
+      "action_index": 5670,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-feature-end.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "43d810bab55037a375ca06d0fb6c99a7a4994f237f69ca5c8cc164ccf9160f17",
+      "frames": 16,
+      "duration_ms": 2240,
+      "event_id": "primary:action-000145-clip-014",
+      "action_index": 162,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-landing.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "e30fc376f3dc5bdf4429ec167680cda0ab34035a315ec088665ddc972dd38e24",
+      "frames": 45,
+      "duration_ms": 3400,
+      "event_id": "primary:action-000002-clip-001",
+      "action_index": 15,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-ready.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "b55d2dd265469f9c918c4c61939bce67efc9d225a63922557bb1724fe11385d9",
+      "frames": 157,
+      "duration_ms": 7880,
+      "event_id": "primary:action-000002-clip-001",
+      "action_index": 15,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-return-fire.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "cd4375a89e484e2b1948fa5bc6f9408cd5fe36b581d30c3d9d9c895d67dcb94c",
+      "frames": 65,
+      "duration_ms": 4200,
+      "event_id": "primary:action-000019-clip-007",
+      "action_index": 34,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-sage-expansion.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "ac33539c046460abfe429f7faf8d6d65c317126c348e12eca4eb4fd2af3ad760",
+      "frames": 88,
+      "duration_ms": 5120,
+      "event_id": "primary:action-000064-clip-010",
+      "action_index": 79,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-spinning.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "c5623eaed5d40bfb28fc56fdbf0fbcb2d40a4521955d0c8c58442a3948581999",
+      "frames": 107,
+      "duration_ms": 5880,
+      "event_id": "primary:action-000002-clip-001",
+      "action_index": 15,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/base-win-transfer.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "9fa143beb03f2c8a24f328e27245b7f0d8dfe99ce7eb79d532ffa2e53e28762a",
+      "frames": 154,
+      "duration_ms": 7760,
+      "event_id": "primary:action-000552-clip-018",
+      "action_index": 575,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-collect.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "edbc298fe91234b5971f0d1808687129b08d8f1a310885a75465c71f8499985b",
+      "frames": 506,
+      "duration_ms": 21840,
+      "event_id": "primary:action-004325-clip-021",
+      "action_index": 4499,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-free-counter.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "4e518e66bc57b72fbf8a3a6ec9bf90067e31ca2572f21ad01efdbf0d89250360",
+      "frames": 24,
+      "duration_ms": 2560,
+      "event_id": "primary:action-001159-clip-020",
+      "action_index": 1198,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-free-intro.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "2f5332847dc76b013d7730981c3a02320098eebc1f5f172f60c2f600b4603ad7",
+      "frames": 243,
+      "duration_ms": 11320,
+      "event_id": "primary:action-000139-clip-013",
+      "action_index": 155,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-landing.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "614c7c0cc5e8a9131f6aa6e3e41f6892cdf02fadf8bbe2c7173ea5fe1c6f19f6",
+      "frames": 29,
+      "duration_ms": 2760,
+      "event_id": "primary:action-004325-clip-021",
+      "action_index": 4499,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-ready.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "680f45e8bf9d8b269a8a7ce8f365d9836f7711d3472b64086a0ffde262973d64",
+      "frames": 33,
+      "duration_ms": 2920,
+      "event_id": "primary:action-001159-clip-020",
+      "action_index": 1198,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-return-fire.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "f93bb60d71ac648833f39dff1af55512b70941b192b0eadd41f3fd2dc7c42898",
+      "frames": 63,
+      "duration_ms": 4120,
+      "event_id": "primary:action-004325-clip-021",
+      "action_index": 4499,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-sage-expansion.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "5ce8eae0e0b0c7b5c52b76eb95b0f6e3e4ebd74b0c6c3e4c864201834b0eeda0",
+      "frames": 79,
+      "duration_ms": 4760,
+      "event_id": "primary:action-004325-clip-021",
+      "action_index": 4499,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-spin-award-settle.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "4e66a77f18bc38766b9dcb6a965014be547f69c2832eafa815ca3fdce69c6489",
+      "frames": 30,
+      "duration_ms": 2800,
+      "event_id": "primary:action-001159-clip-020",
+      "action_index": 1198,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-spin-award.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "6673d28a02ca8654d186a9afc54baf80e47d4def12d811bb87035b3f4a34f465",
+      "frames": 1491,
+      "duration_ms": 61240,
+      "event_id": "primary:action-001159-clip-020",
+      "action_index": 1198,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-spinning.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "f0646255de978150d963040d1637d61c445a8fd9b741a24d82267ece1aae7dd8",
+      "frames": 153,
+      "duration_ms": 7720,
+      "event_id": "primary:action-000139-clip-013",
+      "action_index": 155,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/free-win-transfer.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "90e807f81a8f097aa0ca91d27f54c0c0738b34798ddf16a52abce49a54ceddfd",
+      "frames": 157,
+      "duration_ms": 7880,
+      "event_id": "primary:action-004325-clip-021",
+      "action_index": 4499,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/grand-award-intro.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "f8a25d43cf20f79bf40f6691c01fca236d4a0eb780814324edec7bea5913cf0d",
+      "frames": 137,
+      "duration_ms": 7080,
+      "event_id": "primary:action-004839-clip-022",
+      "action_index": 5043,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/grand-collect.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "05610fe4b03d2ccae1b493caedb9e5cf116338f45a2692868f4d1922fb74edb0",
+      "frames": 553,
+      "duration_ms": 23720,
+      "event_id": "primary:action-004839-clip-022",
+      "action_index": 5043,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/grand-jackpot-award.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "4db1f9705997279858abe9a7a353c63a928b83a78ebca027819e7336b918b9da",
+      "frames": 480,
+      "duration_ms": 20800,
+      "event_id": "primary:action-004839-clip-022",
+      "action_index": 5043,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/grand-ready.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "3474e6b1edd604b18e9186143c5f8a5957d26806fa37a2b27af1c8f92e216ae1",
+      "frames": 164,
+      "duration_ms": 8160,
+      "event_id": "primary:action-004839-clip-022",
+      "action_index": 5043,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/grand-return-fire.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "4e5700895cbc40062258a4fc00d4bd2dabb59a65c975ef6b60a43e63dff42f71",
+      "frames": 103,
+      "duration_ms": 5720,
+      "event_id": "primary:action-004839-clip-022",
+      "action_index": 5043,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/grand-win-transfer.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "9104d21f1ea0e18caca34733d0ded4fcaa2dd790fea33e1c184295c055230c00",
+      "frames": 170,
+      "duration_ms": 8400,
+      "event_id": "primary:action-004839-clip-022",
+      "action_index": 5043,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/hold-hold-fire.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "984d060e5017f506d6edeb465e9a0a48faa4239241d199af1598f30c41bb2f08",
+      "frames": 278,
+      "duration_ms": 12720,
+      "event_id": "primary:action-000010-clip-005",
+      "action_index": 23,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/hold-hold-intro.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "4357c7cfdaf9497b3484ec012b3e50a3e4262b19caf315ce3344bf0f40fb3dd3",
+      "frames": 243,
+      "duration_ms": 11320,
+      "event_id": "primary:action-000010-clip-005",
+      "action_index": 23,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/hold-landing.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "65f49caca5958d8d440e46273fc1ef5cb6f22a45a75ea56b4f42731cdef12ca7",
+      "frames": 322,
+      "duration_ms": 14480,
+      "event_id": "primary:action-000714-clip-019",
+      "action_index": 746,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/hold-phoenix-revival.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "a3793ff0a14b3845dd2d6c1b77b3a59ae1b6c636db41057ffb5b20f0922fa4a1",
+      "frames": 430,
+      "duration_ms": 18800,
+      "event_id": "primary:action-000013-clip-006",
+      "action_index": 27,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/hold-ready.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "3a5d7ed5b0b689515fc33261bfe37b8e4272e9079fdd871aac3477914c33406a",
+      "frames": 56,
+      "duration_ms": 3840,
+      "event_id": "primary:action-000714-clip-019",
+      "action_index": 746,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/hold-spinning.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "d1d80366e49c8b05f2758a6593729b1023535b8fd492558c6143e64923abb853",
+      "frames": 434,
+      "duration_ms": 18960,
+      "event_id": "primary:action-000714-clip-019",
+      "action_index": 746,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/ordinary-collect.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "8dadd8c8ca620eb14498d32b4c817d1a135165eb7a873839696bcfee58d701b8",
+      "frames": 473,
+      "duration_ms": 20520,
+      "event_id": "primary:action-000019-clip-007",
+      "action_index": 34,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/ordinary-return-fire.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "cd4375a89e484e2b1948fa5bc6f9408cd5fe36b581d30c3d9d9c895d67dcb94c",
+      "frames": 65,
+      "duration_ms": 4200,
+      "event_id": "primary:action-000019-clip-007",
+      "action_index": 34,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/primary/ordinary-win-transfer.webp",
+      "kind": "animation",
+      "session_id": "primary",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "4384ca8080257d58b4e6a86ce80b77669ed31059acb7abb70ed4ef5ac9922093",
+      "frames": 157,
+      "duration_ms": 7880,
+      "event_id": "primary:action-000019-clip-007",
+      "action_index": 34,
+      "scale": 3,
+      "source_version": "0.2.170"
     },
     {
       "file": "media/gameplay/artwork/primary/confucius-and-temple.png",
@@ -2705,28 +2883,6 @@
       ]
     },
     {
-      "file": "media/gameplay/artwork/primary/header.png",
-      "session_id": "primary",
-      "kind": "symbol-crop",
-      "dimensions": [
-        720,
-        48
-      ],
-      "sha256": "c0a4810c8a3b102828ae0f857a095b5357f3ece408ee380be7c2766bbc4adc96",
-      "frames": 1,
-      "duration_ms": 0,
-      "scale": 3,
-      "event_id": "primary:still-funded-reels",
-      "action_index": 14,
-      "source_version": "0.2.170",
-      "crop": [
-        0,
-        0,
-        240,
-        16
-      ]
-    },
-    {
       "file": "media/gameplay/artwork/primary/footer.png",
       "session_id": "primary",
       "kind": "symbol-crop",
@@ -2746,28 +2902,6 @@
         121,
         240,
         14
-      ]
-    },
-    {
-      "file": "media/gameplay/artwork/primary/collection-meter.png",
-      "session_id": "primary",
-      "kind": "symbol-crop",
-      "dimensions": [
-        312,
-        90
-      ],
-      "sha256": "96fdbe72408b13b485435758d8cfdb104c8a5a74883ebaa42e9541a66b7fced9",
-      "frames": 1,
-      "duration_ms": 0,
-      "scale": 6,
-      "event_id": "primary:still-funded-reels",
-      "action_index": 14,
-      "source_version": "0.2.170",
-      "crop": [
-        188,
-        0,
-        52,
-        15
       ]
     },
     {
@@ -2816,86 +2950,6 @@
       "scale": 3,
       "event_id": "primary:action-000019-clip-007",
       "action_index": 34,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/major/action-061121-clip-027-part01.webp",
-      "kind": "animation",
-      "session_id": "major",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "292fd05e5cd9ed8ba9396a1da222729a9a6a27390fe2fbd8bf4feefa96dd669b",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "major:action-061121-clip-027",
-      "action_index": 73502,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/major/action-061121-clip-027-part02.webp",
-      "kind": "animation",
-      "session_id": "major",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "c7f7d977e488c62dfa695fdba8bea75557ec3e40e65a7ed8a58fae1c575851c8",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "major:action-061121-clip-027",
-      "action_index": 73502,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/major/action-061121-clip-027-part03.webp",
-      "kind": "animation",
-      "session_id": "major",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "8b311824d31106e4d48b22cf4df09f83662b8ff6765cde33bbedffc923dea258",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "major:action-061121-clip-027",
-      "action_index": 73502,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/major/action-061121-clip-027-part04.webp",
-      "kind": "animation",
-      "session_id": "major",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "75fec75e45eac25763867902eb17db76e959cb674bd929efa5d41f3124429f04",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "major:action-061121-clip-027",
-      "action_index": 73502,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/major/action-061121-clip-027-part05.webp",
-      "kind": "animation",
-      "session_id": "major",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "10f333684fc91f1b0d7a8bb97f78b2c75d947643658f244460a1dd8512ba7edf",
-      "frames": 184,
-      "duration_ms": 7360,
-      "event_id": "major:action-061121-clip-027",
-      "action_index": 73502,
-      "scale": 3,
       "source_version": "0.2.170"
     },
     {
@@ -2954,7 +3008,7 @@
         720,
         405
       ],
-      "sha256": "cc5419ce3bfdb9bd4ed2e88c1c65833077d37c302ae393dce99d1809224aadd8",
+      "sha256": "bc138655d90ed7483153f9d3774ea572e4174cca0b1e74f14b9665dfda8e5498",
       "frames": 1,
       "duration_ms": 0,
       "event_id": "major:action-061121-clip-027",
@@ -3039,28 +3093,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/major/phoenix-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "major",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "81219789dbb6f427716372c341a02df75e69f7c64897c969690aeaf3b08c1e8d",
-      "frames": 150,
-      "duration_ms": 6000,
-      "event_id": "major:action-061121-clip-027",
-      "action_index": 73502,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        16,
-        47,
-        35
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/major/phoenix-full.png",
       "kind": "symbol-crop",
       "session_id": "major",
@@ -3083,6 +3115,44 @@
       ]
     },
     {
+      "file": "media/gameplay/sessions/major/action-061121-clip-027.webp",
+      "kind": "animation",
+      "session_id": "major",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "e343558ab8cf59a53e57ecdf1dec667d5d09c771f94bc283e724216daf21fcba",
+      "frames": 1384,
+      "duration_ms": 56960,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/symbols/major/phoenix-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "major",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "712dcd8067b0ce7a464b8c9bac17d18a5b6bb34a991aa255cd79016e7d9ccf2e",
+      "frames": 125,
+      "duration_ms": 5000,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        2,
+        16,
+        47,
+        35
+      ]
+    },
+    {
       "file": "media/gameplay/symbols/major/phoenix-motion-full.webp",
       "kind": "symbol-animation",
       "session_id": "major",
@@ -3090,9 +3160,9 @@
         324,
         258
       ],
-      "sha256": "03840ed92535b5671c35ed020daa75e18ada80d2f1a468ee56f96d9fd31d6509",
-      "frames": 150,
-      "duration_ms": 6000,
+      "sha256": "a613b94747f94e9c319a86f24dc665dcdd951558ac7e8f16b2c584014b01cf84",
+      "frames": 125,
+      "duration_ms": 5000,
       "event_id": "major:action-061121-clip-027",
       "action_index": 73502,
       "scale": 6,
@@ -3105,162 +3175,120 @@
       ]
     },
     {
-      "file": "media/gameplay/sessions/prizes/action-000029-clip-001-part01.webp",
+      "file": "media/gameplay/symbols/prizes/prize-major-1x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "major",
+      "dimensions": [
+        342,
+        258
+      ],
+      "sha256": "dc2cfe2b1253367730af23d6c56a6e2471f7c93af456a2dcba12cfffce94d32c",
+      "frames": 125,
+      "duration_ms": 5000,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        91,
+        47,
+        57,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/previews/major/major-award-intro.webp",
       "kind": "animation",
-      "session_id": "prizes",
+      "session_id": "major",
       "dimensions": [
         720,
         405
       ],
-      "sha256": "f9c181f2b82ec11a17893d0bcd1e25df42af22d68ca6a05b3b1ab6f0b99b9799",
-      "frames": 188,
-      "duration_ms": 7520,
-      "event_id": "prizes:action-000029-clip-001",
-      "action_index": 113758,
+      "sha256": "7e3e07a9bf16daf317b628fc60940f9bbeb2a9c7c44d955381c1435221005775",
+      "frames": 137,
+      "duration_ms": 7080,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
       "scale": 3,
       "source_version": "0.2.170"
     },
     {
-      "file": "media/gameplay/sessions/prizes/action-000209-clip-002-part01.webp",
+      "file": "media/gameplay/previews/major/major-collect.webp",
       "kind": "animation",
-      "session_id": "prizes",
+      "session_id": "major",
       "dimensions": [
         720,
         405
       ],
-      "sha256": "744662ba8f1845dacf4197156e36f7e2072f6c6a138c59235a28a354a59facb1",
-      "frames": 173,
-      "duration_ms": 6920,
-      "event_id": "prizes:action-000209-clip-002",
-      "action_index": 113945,
+      "sha256": "2432ad6e72132cd70f68ed19012620d997e0eac8eae1f9aeedd31adc42b3cc38",
+      "frames": 420,
+      "duration_ms": 18400,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
       "scale": 3,
       "source_version": "0.2.170"
     },
     {
-      "file": "media/gameplay/sessions/prizes/action-001048-clip-003-part01.webp",
+      "file": "media/gameplay/previews/major/major-jackpot-award.webp",
       "kind": "animation",
-      "session_id": "prizes",
+      "session_id": "major",
       "dimensions": [
         720,
         405
       ],
-      "sha256": "5657282befb0144acbfbba78c78f75c1d77a30b20a0b4733f3d2e730fa7be2d3",
-      "frames": 173,
-      "duration_ms": 6920,
-      "event_id": "prizes:action-001048-clip-003",
-      "action_index": 114799,
+      "sha256": "01a9302bf9dc005f9938754ed6550117a8a278f0119ad81a1e443ba48dd169c5",
+      "frames": 480,
+      "duration_ms": 20800,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
       "scale": 3,
       "source_version": "0.2.170"
     },
     {
-      "file": "media/gameplay/sessions/prizes/action-003331-clip-004-part01.webp",
+      "file": "media/gameplay/previews/major/major-ready.webp",
       "kind": "animation",
-      "session_id": "prizes",
+      "session_id": "major",
       "dimensions": [
         720,
         405
       ],
-      "sha256": "4a4e59840f85d913420788abbedfaf40d42d08cfcaefefbdfac6cf671a844455",
-      "frames": 173,
-      "duration_ms": 6920,
-      "event_id": "prizes:action-003331-clip-004",
-      "action_index": 117120,
+      "sha256": "2f460e1f0c35d75eddfd9cb151a33ff22aa6f325095c8d2e716a3f68f9e37985",
+      "frames": 164,
+      "duration_ms": 8160,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
       "scale": 3,
       "source_version": "0.2.170"
     },
     {
-      "file": "media/gameplay/sessions/prizes/action-006248-clip-005-part01.webp",
+      "file": "media/gameplay/previews/major/major-return-fire.webp",
       "kind": "animation",
-      "session_id": "prizes",
+      "session_id": "major",
       "dimensions": [
         720,
         405
       ],
-      "sha256": "21063b8b9e0abc0c985cc27a2c1d51bace6e2af76e325558825eabfe9b33b639",
-      "frames": 228,
-      "duration_ms": 9120,
-      "event_id": "prizes:action-006248-clip-005",
-      "action_index": 120088,
+      "sha256": "2b9577ea668921d874a5c91aceb522ac286b337fa5795e607bd3d833308d6c50",
+      "frames": 103,
+      "duration_ms": 5720,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
       "scale": 3,
       "source_version": "0.2.170"
     },
     {
-      "file": "media/gameplay/sessions/prizes/action-025425-clip-006-part01.webp",
+      "file": "media/gameplay/previews/major/major-win-transfer.webp",
       "kind": "animation",
-      "session_id": "prizes",
+      "session_id": "major",
       "dimensions": [
         720,
         405
       ],
-      "sha256": "c4180636fd55de14808428faaec6da3fd60ef47f0a067910cd34c7776ff07ecd",
-      "frames": 173,
-      "duration_ms": 6920,
-      "event_id": "prizes:action-025425-clip-006",
-      "action_index": 139686,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/prizes/action-041877-clip-007-part01.webp",
-      "kind": "animation",
-      "session_id": "prizes",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "7811011947099f0b25a90a44c3629a229077c6c593ffa32997fe168aabeec383",
-      "frames": 300,
-      "duration_ms": 12000,
-      "event_id": "prizes:action-041877-clip-007",
-      "action_index": 156460,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/prizes/action-041877-clip-007-part02.webp",
-      "kind": "animation",
-      "session_id": "prizes",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "33972335f34414e7b31c0963eb206a617ad8656a287a4905cc3c1ec7a8195911",
-      "frames": 144,
-      "duration_ms": 5760,
-      "event_id": "prizes:action-041877-clip-007",
-      "action_index": 156460,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/prizes/action-103071-clip-008-part01.webp",
-      "kind": "animation",
-      "session_id": "prizes",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "2214fd8116b8e0df7e9527f2c677fd9849cc58a7189ffa308e78e8c74bf9b89d",
-      "frames": 173,
-      "duration_ms": 6920,
-      "event_id": "prizes:action-103071-clip-008",
-      "action_index": 218952,
-      "scale": 3,
-      "source_version": "0.2.170"
-    },
-    {
-      "file": "media/gameplay/sessions/prizes/action-294721-clip-009-part01.webp",
-      "kind": "animation",
-      "session_id": "prizes",
-      "dimensions": [
-        720,
-        405
-      ],
-      "sha256": "5c61b5681e9a82c0f45f0ebc35f9ff368751db484aa97b6ea0aea32e24eda0d4",
-      "frames": 173,
-      "duration_ms": 6920,
-      "event_id": "prizes:action-294721-clip-009",
-      "action_index": 414629,
+      "sha256": "1742712bd533bfacdb8c34fad86c11b06c7f64129f58173f717eee456bcf4681",
+      "frames": 170,
+      "duration_ms": 8400,
+      "event_id": "major:action-061121-clip-027",
+      "action_index": 73502,
       "scale": 3,
       "source_version": "0.2.170"
     },
@@ -3336,7 +3364,7 @@
         720,
         405
       ],
-      "sha256": "c5e3be15a55a924251400cdf5bdff9dc790baa333db8a39e4275f21aef02140b",
+      "sha256": "5b6d398335a6106d13bad9f0290cdb06ad59a326c3c2812ec9f44297d9b156fc",
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:action-006248-clip-005",
@@ -3603,50 +3631,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/candle-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "e2545472c8e304d236a261d2ee929a8f030d4b4a15c46294cf26e2c66488f1c4",
-      "frames": 147,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-025425-clip-006",
-      "action_index": 139686,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        16,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/phoenix-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "e32029695d1705550c79099fcff677424ba00bee82c981fb3941d2b20139e131",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-000029-clip-001",
-      "action_index": 113758,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        190,
-        86,
-        47,
-        35
-      ]
-    },
-    {
       "file": "media/gameplay/screens/prizes/prize-minor-1x.png",
       "kind": "screenshot",
       "session_id": "prizes",
@@ -3813,28 +3797,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-minor-1x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "e32029695d1705550c79099fcff677424ba00bee82c981fb3941d2b20139e131",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-000029-clip-001",
-      "action_index": 113758,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        190,
-        86,
-        47,
-        35
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-mini-1x.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -3846,28 +3808,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-mini-1x",
-      "action_index": 113945,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        96,
-        16,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-mini-1x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "893a118d49f53b54dd948eb43188ef7e4782f6eab175a398585ae6a0ad510233",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-000209-clip-002",
       "action_index": 113945,
       "scale": 6,
       "source_version": "0.2.170",
@@ -3901,28 +3841,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-mini-2x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "6aa827daef776f3d0e9c2d123229d4a848d8402083f2ce7d24c1a3951b2eeb85",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-001048-clip-003",
-      "action_index": 114799,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        16,
-        47,
-        35
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-mini-3x.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -3934,28 +3852,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-mini-3x",
-      "action_index": 117120,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        51,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-mini-3x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "7aa5412e07696fd5f8860cdd6cae50b113792ffcb8037fbb7d07153afc438076",
-      "frames": 149,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-003331-clip-004",
       "action_index": 117120,
       "scale": 6,
       "source_version": "0.2.170",
@@ -3989,28 +3885,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-major-1x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "3ce75f80612d99e1bc2f988e8ad30dbbe07ebdad18fc10cc5db75bc09209f7a9",
-      "frames": 149,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-006248-clip-005",
-      "action_index": 120088,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        96,
-        86,
-        47,
-        35
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-minor-2x.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -4022,28 +3896,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-minor-2x",
-      "action_index": 139686,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        96,
-        51,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-minor-2x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "9f768e05a56f2aa9e2059cd8ec317b4001b927db851139c8fab7f9bf8e455764",
-      "frames": 149,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-025425-clip-006",
       "action_index": 139686,
       "scale": 6,
       "source_version": "0.2.170",
@@ -4077,28 +3929,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-minor-3x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "cc4d96f44e19ae485098f1e216cf007405d66c1dca0a1cf03dc661182b78a582",
-      "frames": 146,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-041877-clip-007",
-      "action_index": 156460,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        49,
-        16,
-        47,
-        35
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-major-2x.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -4110,28 +3940,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-major-2x",
-      "action_index": 218952,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        2,
-        51,
-        47,
-        35
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-major-2x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "2cfb3b61d09610b569549ff3fc344752a010d5be21d56346e8840a4ea2ad7152",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-103071-clip-008",
       "action_index": 218952,
       "scale": 6,
       "source_version": "0.2.170",
@@ -4165,28 +3973,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-major-3x-motion.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        282,
-        210
-      ],
-      "sha256": "c6f69884d285ed09af48cbaa508d3466b693d98d24d3119c67bf8dfe1746d9bc",
-      "frames": 149,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-294721-clip-009",
-      "action_index": 414629,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        190,
-        51,
-        47,
-        35
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/phoenix-full.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -4197,28 +3983,6 @@
       "sha256": "9b65db30c1511a9d0cb67b249f0ac7ceb74d4434c4379d83cbf069ef0321879f",
       "frames": 1,
       "duration_ms": 0,
-      "event_id": "prizes:action-000029-clip-001",
-      "action_index": 113758,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        185,
-        82,
-        55,
-        43
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/phoenix-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        330,
-        258
-      ],
-      "sha256": "353b8a66fb38fcdaaf8feb03e8af102a772b80d1e11eb191b3bbb288e7d845d0",
-      "frames": 144,
-      "duration_ms": 6000,
       "event_id": "prizes:action-000029-clip-001",
       "action_index": 113758,
       "scale": 6,
@@ -4253,28 +4017,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-minor-1x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        330,
-        258
-      ],
-      "sha256": "353b8a66fb38fcdaaf8feb03e8af102a772b80d1e11eb191b3bbb288e7d845d0",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-000029-clip-001",
-      "action_index": 113758,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        185,
-        82,
-        55,
-        43
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-mini-1x-full.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -4286,28 +4028,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-mini-1x",
-      "action_index": 113945,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        91,
-        12,
-        57,
-        43
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-mini-1x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        342,
-        258
-      ],
-      "sha256": "3e67b1ff2ec70fb92ca3cc682d99c254de832f410be2d25bf6f0db9a6e9c7a19",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-000209-clip-002",
       "action_index": 113945,
       "scale": 6,
       "source_version": "0.2.170",
@@ -4341,28 +4061,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-mini-2x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        324,
-        258
-      ],
-      "sha256": "a245dee09b4ba2294f1fa4551e9d5e18e73841be136ce973c670a2a465be4bb8",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-001048-clip-003",
-      "action_index": 114799,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        0,
-        12,
-        54,
-        43
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-mini-3x-full.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -4374,28 +4072,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-mini-3x",
-      "action_index": 117120,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        44,
-        47,
-        57,
-        43
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-mini-3x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        342,
-        258
-      ],
-      "sha256": "7d91995b68e59d2e84e800ba885582c1b20c27759403795ccf911da142b3d5ff",
-      "frames": 150,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-003331-clip-004",
       "action_index": 117120,
       "scale": 6,
       "source_version": "0.2.170",
@@ -4429,28 +4105,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-major-1x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        342,
-        258
-      ],
-      "sha256": "b6dda766f0e95254f730cdd87ff8ecc7093bdba1ef7fde96a2cea4c4222edba4",
-      "frames": 150,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-006248-clip-005",
-      "action_index": 120088,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        91,
-        82,
-        57,
-        43
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-minor-2x-full.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -4462,28 +4116,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-minor-2x",
-      "action_index": 139686,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        91,
-        47,
-        57,
-        43
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-minor-2x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        342,
-        258
-      ],
-      "sha256": "73a2554b6ed742a1693a73ad43933898b5999d44988966edec3681c9f0c5f35b",
-      "frames": 150,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-025425-clip-006",
       "action_index": 139686,
       "scale": 6,
       "source_version": "0.2.170",
@@ -4517,28 +4149,6 @@
       ]
     },
     {
-      "file": "media/gameplay/symbols/prizes/prize-minor-3x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        342,
-        258
-      ],
-      "sha256": "021dd83f5d2b145e238ae52595c7e022698d14bfa502f944db82a7faa0417941",
-      "frames": 150,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-041877-clip-007",
-      "action_index": 156460,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        44,
-        12,
-        57,
-        43
-      ]
-    },
-    {
       "file": "media/gameplay/symbols/prizes/prize-major-2x-full.png",
       "kind": "symbol-crop",
       "session_id": "prizes",
@@ -4550,28 +4160,6 @@
       "frames": 1,
       "duration_ms": 0,
       "event_id": "prizes:still-prize-major-2x",
-      "action_index": 218952,
-      "scale": 6,
-      "source_version": "0.2.170",
-      "crop": [
-        0,
-        47,
-        54,
-        43
-      ]
-    },
-    {
-      "file": "media/gameplay/symbols/prizes/prize-major-2x-motion-full.webp",
-      "kind": "symbol-animation",
-      "session_id": "prizes",
-      "dimensions": [
-        324,
-        258
-      ],
-      "sha256": "20506a7bb2b2451b2034d33333cbee404e6f2133c0e8e874447852d05307b79f",
-      "frames": 144,
-      "duration_ms": 6000,
-      "event_id": "prizes:action-103071-clip-008",
       "action_index": 218952,
       "scale": 6,
       "source_version": "0.2.170",
@@ -4605,6 +4193,546 @@
       ]
     },
     {
+      "file": "media/gameplay/sessions/prizes/action-000029-clip-001.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "8a3d65eee5b1b76ae3ec40b2d0504cc42f7b4fdc6a4379d9ce5726b83adb7f1c",
+      "frames": 188,
+      "duration_ms": 9120,
+      "event_id": "prizes:action-000029-clip-001",
+      "action_index": 113758,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-000209-clip-002.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "6a12d64281a43431483482a428324fa0029eb1d473312573b0ee2069d8449c94",
+      "frames": 173,
+      "duration_ms": 8520,
+      "event_id": "prizes:action-000209-clip-002",
+      "action_index": 113945,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-001048-clip-003.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "ee14e810efe280d316d87156a149e3b473a2593c785a0ffe7ef52c0cdb34428e",
+      "frames": 173,
+      "duration_ms": 8520,
+      "event_id": "prizes:action-001048-clip-003",
+      "action_index": 114799,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-003331-clip-004.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "cd8e6b1f8f10ac0ecc71a6b2b009486b530c387b15a3b8527ab8074688020e31",
+      "frames": 173,
+      "duration_ms": 8520,
+      "event_id": "prizes:action-003331-clip-004",
+      "action_index": 117120,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-006248-clip-005.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "e53d1e191b239138ba007daf2f9d370f97a2fbea3cae755b379f3b66c2b2ffc3",
+      "frames": 228,
+      "duration_ms": 10720,
+      "event_id": "prizes:action-006248-clip-005",
+      "action_index": 120088,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-025425-clip-006.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "79c6fc5692d869005e34bdced50ca2a1c96722edc54f884306398a76c8b2da01",
+      "frames": 173,
+      "duration_ms": 8520,
+      "event_id": "prizes:action-025425-clip-006",
+      "action_index": 139686,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-041877-clip-007.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "137e2abd908e79237861cf1166af5dd4573e7f035bed2be75c668fdb0f20f17a",
+      "frames": 444,
+      "duration_ms": 19360,
+      "event_id": "prizes:action-041877-clip-007",
+      "action_index": 156460,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-103071-clip-008.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "ad391265bb8eec0b6ece496c1577103ff5137fafb75e8833e84e5a9e6d08aa26",
+      "frames": 173,
+      "duration_ms": 8520,
+      "event_id": "prizes:action-103071-clip-008",
+      "action_index": 218952,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/prizes/action-294721-clip-009.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "940c149645740448dc18cf81d9cb7b1689fd52a6e9a7980dddea76a065d0a566",
+      "frames": 173,
+      "duration_ms": 8520,
+      "event_id": "prizes:action-294721-clip-009",
+      "action_index": 414629,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/phoenix-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "a42fef0534a61d8668175f444c141f726941f30b487320cd2e1004139f275050",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-000029-clip-001",
+      "action_index": 113758,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        190,
+        86,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-minor-1x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "a42fef0534a61d8668175f444c141f726941f30b487320cd2e1004139f275050",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-000029-clip-001",
+      "action_index": 113758,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        190,
+        86,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-mini-1x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "78eec61f87d9fd1445da2fa26a19fb853cf81f56095438c4a27646f9cb43fe53",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-000209-clip-002",
+      "action_index": 113945,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        96,
+        16,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-mini-2x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "7314ef1eaa2c3dc55a70388c36dbe4df7bd2fb29ac84c9f5273afd30dc1e879e",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-001048-clip-003",
+      "action_index": 114799,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        2,
+        16,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-mini-3x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "0dbb94c0db22a5d88bf032da5fec7662a6ab2b09d776e191d8b37b40a44db7ed",
+      "frames": 124,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-003331-clip-004",
+      "action_index": 117120,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-major-1x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "45cc84c704298a4d0e96eacfb4861cfbbf6dbce07eb417aec73ca4cc95987241",
+      "frames": 124,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-006248-clip-005",
+      "action_index": 120088,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        96,
+        86,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-minor-2x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "971aad9b5e12a36a3574ae65057c73872e940377e2348dd2f128609ea83c01d2",
+      "frames": 124,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-025425-clip-006",
+      "action_index": 139686,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        96,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-minor-3x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "0d1f496bbfab3947b487a4e68c439efc0f79f189905eed483edbec516cc88db8",
+      "frames": 121,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-041877-clip-007",
+      "action_index": 156460,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        49,
+        16,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-major-2x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "5078c12f11c9ec63565ec0d32ef164996b8d05b2a6119d9812aefb2e2c6b68fc",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-103071-clip-008",
+      "action_index": 218952,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        2,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-major-3x-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        282,
+        210
+      ],
+      "sha256": "070c2680b01babe3f601a0f0f02bc1e5e1646d80a42e880dce11ae0b2bf4c010",
+      "frames": 124,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-294721-clip-009",
+      "action_index": 414629,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        190,
+        51,
+        47,
+        35
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/phoenix-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        330,
+        258
+      ],
+      "sha256": "f48021a5009e0a264adbdcbec2daf05f51e1f8717e3a5e30fbc2cf0c5e65f295",
+      "frames": 60,
+      "duration_ms": 2480,
+      "event_id": "prizes:action-000029-clip-001",
+      "action_index": 113758,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        185,
+        82,
+        55,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-minor-1x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        330,
+        258
+      ],
+      "sha256": "f48021a5009e0a264adbdcbec2daf05f51e1f8717e3a5e30fbc2cf0c5e65f295",
+      "frames": 60,
+      "duration_ms": 2480,
+      "event_id": "prizes:action-000029-clip-001",
+      "action_index": 113758,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        185,
+        82,
+        55,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-mini-1x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        342,
+        258
+      ],
+      "sha256": "9977ff3cd0c43d7701cfaed070d9111ff44253f79f2c8dfa3aeea43611fcfb5f",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-000209-clip-002",
+      "action_index": 113945,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        91,
+        12,
+        57,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-mini-2x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        324,
+        258
+      ],
+      "sha256": "c2403b5704766562ba54a74a8ea48881ec00ed0c8d08067dcfc997ea3ee48d22",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-001048-clip-003",
+      "action_index": 114799,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        0,
+        12,
+        54,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-mini-3x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        342,
+        258
+      ],
+      "sha256": "dd77ad42f6175656dc3bd44ebf743f269200e7854e56c400eff4f87715f15760",
+      "frames": 125,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-003331-clip-004",
+      "action_index": 117120,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        44,
+        47,
+        57,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-minor-2x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        342,
+        258
+      ],
+      "sha256": "d1bfa1bd6604764a1c3998c1b6c6b4606445c55520eed1de89851c3ead234736",
+      "frames": 125,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-025425-clip-006",
+      "action_index": 139686,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        91,
+        47,
+        57,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-minor-3x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        342,
+        258
+      ],
+      "sha256": "3dd8037d742bdf498db0f1341ec919db0728f8b7c55d05fcb2d1412a41fa387c",
+      "frames": 125,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-041877-clip-007",
+      "action_index": 156460,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        44,
+        12,
+        57,
+        43
+      ]
+    },
+    {
+      "file": "media/gameplay/symbols/prizes/prize-major-2x-motion-full.webp",
+      "kind": "symbol-animation",
+      "session_id": "prizes",
+      "dimensions": [
+        324,
+        258
+      ],
+      "sha256": "7c75669fd92348ef39c383e8aa07ed734f44d58aa9ee14d190ab4b9c33bb8039",
+      "frames": 120,
+      "duration_ms": 5000,
+      "event_id": "prizes:action-103071-clip-008",
+      "action_index": 218952,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        0,
+        47,
+        54,
+        43
+      ]
+    },
+    {
       "file": "media/gameplay/symbols/prizes/prize-major-3x-motion-full.webp",
       "kind": "symbol-animation",
       "session_id": "prizes",
@@ -4612,9 +4740,9 @@
         330,
         258
       ],
-      "sha256": "2861fe76755e5eca2b39074b3591283929c598d34a0091523d1b9c790f6afeb3",
-      "frames": 150,
-      "duration_ms": 6000,
+      "sha256": "39b47e9050fcabb16af727e5089528bc920218f85146b2e8097ccac89e336a67",
+      "frames": 125,
+      "duration_ms": 5000,
       "event_id": "prizes:action-294721-clip-009",
       "action_index": 414629,
       "scale": 6,
@@ -4625,6 +4753,102 @@
         55,
         43
       ]
+    },
+    {
+      "file": "media/gameplay/previews/prizes/base-landing.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "e5afe3034d440537c9229c3eeec47eb9ed92e2806d5bb17e36af35790ce87700",
+      "frames": 34,
+      "duration_ms": 2960,
+      "event_id": "prizes:action-000029-clip-001",
+      "action_index": 113758,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/prizes/base-ready.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "5f8a753ff851d5549eee79dc9008224fbbcde7b27e20b63f47c5cbecc0e5d8c6",
+      "frames": 164,
+      "duration_ms": 8160,
+      "event_id": "prizes:action-000029-clip-001",
+      "action_index": 113758,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/prizes/hold-hold-intro.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "2d9973124096bf1d6584bcc9594acbcd1bae5ec13527dcc35cc65ed14c42bcf1",
+      "frames": 236,
+      "duration_ms": 11040,
+      "event_id": "prizes:action-041877-clip-007",
+      "action_index": 156460,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/prizes/hold-landing.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "4d844a0afb4654a54817b1bbc4d90c253b24eb60f478aaa6099ad96b4ac97755",
+      "frames": 30,
+      "duration_ms": 2800,
+      "event_id": "prizes:action-006248-clip-005",
+      "action_index": 120088,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/prizes/hold-ready.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "1e9405ce6f8016151c4d46697f1fa9991ab126cb17dbaa3b26485ebd739b131c",
+      "frames": 17,
+      "duration_ms": 2280,
+      "event_id": "prizes:action-006248-clip-005",
+      "action_index": 120088,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/previews/prizes/hold-spinning.webp",
+      "kind": "animation",
+      "session_id": "prizes",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "1b163642aced3cbb8a3db283ca5db6eef0b48f3c047b806de5e2d3695c85e3a5",
+      "frames": 112,
+      "duration_ms": 6080,
+      "event_id": "prizes:action-006248-clip-005",
+      "action_index": 120088,
+      "scale": 3,
+      "source_version": "0.2.170"
     },
     {
       "file": "media/gameplay/screens/menus/balance.png",
@@ -5729,11 +5953,163 @@
       "action_index": 414731,
       "scale": 3,
       "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/session.webp",
+      "kind": "animation",
+      "session_id": "loops",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "e4c02e5f74265c4bb6404e875ce00f45e4ab485849f2ed516fb82cbf43f49088",
+      "frames": 286,
+      "duration_ms": 13040,
+      "event_id": "loops:action-000004-clip-004",
+      "action_index": 414791,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/screens/loops/spin-result.png",
+      "kind": "screenshot",
+      "session_id": "loops",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "a7907274d088ff81c028f55d2dc6f141dd0489c55e018c2d7e552d451b31d5a6",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "loops:action-000004-clip-004",
+      "action_index": 414791,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/sessions/loops/action-000011-clip-011.webp",
+      "kind": "animation",
+      "session_id": "loops",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "1fc130defeeb4f41137495b5f6cc01caa023f486ad8ec040365e53655cc6a3a3",
+      "frames": 1710,
+      "duration_ms": 70000,
+      "event_id": "loops:action-000011-clip-011",
+      "action_index": 414812,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/screens/hud/ready-context.png",
+      "kind": "screenshot",
+      "session_id": "hud",
+      "dimensions": [
+        720,
+        405
+      ],
+      "sha256": "073ea8e3eefa4547c94342264cff98f7b2707ba3952cb1dc8aa726153f976c68",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "hud:action-000003-clip-001",
+      "action_index": 414897,
+      "scale": 3,
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/primary/collection-meter-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "hud",
+      "dimensions": [
+        312,
+        90
+      ],
+      "sha256": "c3e130e6af645c53b19f90d7107399e2e394496783858871c90c128572a6cd89",
+      "frames": 3100,
+      "duration_ms": 124000,
+      "event_id": "hud:action-000003-clip-001",
+      "action_index": 414897,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        188,
+        0,
+        52,
+        15
+      ]
+    },
+    {
+      "file": "media/gameplay/artwork/primary/collection-meter.png",
+      "kind": "symbol-crop",
+      "session_id": "hud",
+      "dimensions": [
+        312,
+        90
+      ],
+      "sha256": "3423e4e3d791d47c74af00480edba02d43eb15fb8dc6aa19e3c2b3402024e0a9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "hud:action-000003-clip-001",
+      "action_index": 414897,
+      "scale": 6,
+      "source_version": "0.2.170",
+      "crop": [
+        188,
+        0,
+        52,
+        15
+      ]
+    },
+    {
+      "file": "media/gameplay/artwork/primary/header-motion.webp",
+      "kind": "symbol-animation",
+      "session_id": "hud",
+      "dimensions": [
+        720,
+        42
+      ],
+      "sha256": "eafa619315211f87838a58c11da9b84387b77fc7047a777b22a646a54d3749d3",
+      "frames": 3100,
+      "duration_ms": 124000,
+      "event_id": "hud:action-000003-clip-001",
+      "action_index": 414897,
+      "scale": 3,
+      "source_version": "0.2.170",
+      "crop": [
+        0,
+        0,
+        240,
+        14
+      ]
+    },
+    {
+      "file": "media/gameplay/artwork/primary/header.png",
+      "kind": "symbol-crop",
+      "session_id": "hud",
+      "dimensions": [
+        720,
+        42
+      ],
+      "sha256": "a1fab92126e52149e8a773554b05823539e294da3273ef193aa04e242274d7f2",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "hud:action-000003-clip-001",
+      "action_index": 414897,
+      "scale": 3,
+      "source_version": "0.2.170",
+      "crop": [
+        0,
+        0,
+        240,
+        14
+      ]
     }
   ],
   "individual_asset_capture_sha256": "8aa366dfe3bffe85f502e1f7f447dd46c95ebc87d4f00ba3c079fb20ecdddb73",
   "menu_capture_sha256": "d214625045a8f81b7454ba7da42654d9d94ab0fd0a085900dfa1adb7e9106016",
   "kind": "recorded-gameplay-summary",
   "capture_manifest": "gameplay-media.json",
-  "capture_manifest_sha256": "0743e2e12adaac4a95541600b09ec9070b1bb80bf59865e7a6336a1318e2d74c"
+  "capture_manifest_sha256": "bdf8d5d0215a0f300ea16e349b331f5640cb45866b617f8fe8302219472c1959"
 }

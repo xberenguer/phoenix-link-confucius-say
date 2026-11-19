@@ -1,5 +1,7 @@
 # Troubleshooting
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 Match Game Menu's version to the current [release identity](../RELEASE.json). [Controls](controls.md), [audio](audio.md) and [fresh-session rules](saving.md) describe the intended behavior.
 
 ## Progress disappeared after restart
@@ -25,6 +27,10 @@ Host randomness tests do not establish physical entropy quality. The supported n
 <a id="audio"></a>
 
 ## No sound or crackle
+
+<img src="media/gameplay/screens/menus/sound.png" alt="The actual Sound settings page to check when a game is silent" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/volume.png" alt="The actual fine-volume screen" width="720" height="405" loading="lazy">
 
 Use Settings → Sound's master sound, stops/landings, fine volume and test entries. Browsers may require an initial gesture. A missing required music file is different from a muted channel. Browser and Stick speakers/mixing have different timing and acoustic behavior.
 

@@ -1,5 +1,7 @@
 # Denominations, line counts and bets
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 The current wager menu offers these denomination, line and multiplier choices. Most controls follow a recorded Confucius Say cabinet; the $1/10-line paid row uses the separately qualified family adaptation described below. The menu is narrower than every configuration the internal evaluator can represent.
 
 | Denomination | Line controls | Bet multipliers offered |
@@ -27,6 +29,10 @@ The exact implemented availability is defined by [cabinet_profile.h](../firmware
 
 ## Denomination and MIN BET
 
+<img src="media/gameplay/screens/menus/startup-standard.png" alt="The actual standard denomination chooser" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/startup-bet.png" alt="The actual line and bet choices after selecting a standard denomination" width="720" height="405" loading="lazy">
+
 The lower-right badge shows the value of a credit. For this source-qualified cabinet profile, MIN BET is the minimum **credit** wager associated with the denomination: 50 for 1¢/2¢, 25 for 5¢/10¢ and 5 for $1/$2. It is not simply the currently selected line count. Choosing 100 lines at 1¢ does not turn its source-profile MIN BET into 100.
 
 The caption is a tiny above/below adaptation for the 240 × 135 display; physical readability remains a limitation. Internal profiles outside the offered menu are not extra selectable controls. Code: [denomination badge rules](../firmware/src/denomination_minbet46.h).
@@ -38,6 +44,8 @@ Holding grey or choosing RETURN applies the selected denomination and lines with
 The [payout reference](payouts.md) exports the wider internal evaluator support with a selectable flag. Those internal rows must not be read as extra live cabinet buttons. See [controls](controls.md) for focus/navigation and [session rules](saving.md) for live feature/funding boundaries.
 
 ## High Limit
+
+<img src="media/gameplay/screens/menus/startup-high-limit.png" alt="The actual High Limit denomination menu reached through the startup controls" width="720" height="405" loading="lazy">
 
 Settings → High Limit changes the denomination chooser to $1, $2, $5, $10, $25, $50 and $100. The cash balance is unchanged when switching modes. The chooser starts at the first denomination; selecting a denomination opens the line and bet controls. Holding blue on the initial startup chooser also switches between standard and High Limit denominations. Hold grey there for the full Game Menu; closing it resumes setup. Hold grey returns to the reels without a paid spin. Turning High Limit off from a denomination unavailable in standard mode returns to $1.
 

@@ -1,10 +1,18 @@
 # The 1888 collection counter
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 The upper-right green number tracks collected Phoenixes for the active wager context. It can award a free Hold & Spin before 1888; it is separate from the red Wisdom free-games trigger.
 
 The [manufacturer](https://www.aristocratgaming.com/us/games/us-phoenix-link) identifies this mystery feature. The [operator rules, page 2](https://casinos.lotoquebec.com/dam/jcr:4add9be1-336a-4efc-b4c9-e41696b876b2/Phoenix%20Link%20Confucius%20Say.pdf) describe the wager-specific counters and a reset in 100–1500. Exact original trigger and reset probabilities are not published there.
 
 ## What changes the number
+
+<img src="media/gameplay/screens/primary/base-ready.png" alt="An actual settled Base result, with the current green counter in the top-right corner" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/base-ready.webp" alt="Recorded gameplay animation showing an actual settled Base result, with the current green counter in the top-right corner" width="720" height="405" loading="lazy">
 
 In the current [Engine](../firmware/src/phoenix_engine.h):
 
@@ -33,6 +41,8 @@ Adding credits, clearing the balance and using automatic refill do not reset col
 Opening a menu does not reset the meter. Each boot or page reload starts fresh meter state with a new game; no prior record is loaded. See [fresh sessions](saving.md).
 
 ## Setting the counter
+
+<img src="media/gameplay/screens/menus/counter-editor-unmodified.png" alt="The actual counter editor opened for inspection; no counter value was changed for the captures" width="720" height="405" loading="lazy">
 
 **Game Menu → Counter & Jackpots → Set Feature Counter** accepts **0 through 1886**. Apply changes only the current wager's bucket and returns to regular play. Other buckets, credits and statistics remain unchanged. Editing requires a completed Base round with no owed feature. The leading digit cycles between 0 and 1. Later digits stay within the allowed prefix, so every draft remains between 0 and 1886. Changing a higher digit may shorten the remaining value to fit the ceiling.
 

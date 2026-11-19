@@ -1,5 +1,7 @@
 # Symbols, winning combinations and payouts
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 The complete implemented lookup tables are exported from the included C++ evaluator. They contain source-observed corrections and local fallback values; they are not recovered casino PAR sheets.
 
 ## Symbol roles
@@ -13,6 +15,12 @@ The complete implemented lookup tables are exported from the included C++ evalua
 | Phoenix | Carries a cash or named-prize value, contributes to the active collection counter and can trigger Hold & Spin |
 
 ## Line wins
+
+<img src="media/gameplay/screens/menus/rules-3.png" alt="The actual Base Symbol Pays page for the captured configuration" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/rules-4.png" alt="The corresponding actual Free Symbol Pays page" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/rules-5.png" alt="The actual Win Units page explaining credits, multiplier and denomination" width="720" height="405" loading="lazy">
 
 A line win starts on the leftmost reel and continues through adjacent reels on a selected active path. Wilds substitute for regular symbols. Phoenix and Wisdom do not act as regular line-pay substitutes. The highest compatible award pays once on a line; awards on different lines are added.
 

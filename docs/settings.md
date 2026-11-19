@@ -1,5 +1,7 @@
 # Settings and play-money funding
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 Hold the large grey button during gameplay for Game Menu. Grey moves and blue selects. The small power key is separate. On the startup denomination page, hold-grey opens the full Game Menu. Closing it returns to setup; on the initial line/bet page, hold-grey goes back to denominations. In the normal wager panel, it returns directly to Game.
 
 ## Rules and wagers
@@ -10,17 +12,29 @@ Short-grey during play opens the cabinet panel. Browsing/cancelling does not sta
 
 ## Settings menu
 
+<img src="media/gameplay/screens/menus/settings.png" alt="The actual Settings menu reached from Game Menu" width="720" height="405" loading="lazy">
+
 **Game Menu → Settings** contains Sound, Display and Back to Menu. Hold grey in Sound or Display to return to Settings; hold grey in Settings to return to Game Menu.
 
 ## Display
+
+<img src="media/gameplay/screens/menus/display.png" alt="The actual Display settings page" width="720" height="405" loading="lazy">
 
 Brightness cycles the implemented levels. Amount Units switches between cash and denomination credits without changing the money balance. Flip Screen rotates 180 degrees. Open **Settings → Display** for these controls. Double-grey in gameplay opens the live Jackpots board. A new session starts with its default display state.
 
 ## Sound
 
+<img src="media/gameplay/screens/menus/sound.png" alt="The actual Sound settings page" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/volume.png" alt="The actual fine-volume control" width="720" height="405" loading="lazy">
+
 Open **Settings → Sound**. Master sound and stops/landings have separate controls. Volume adjusts the level; Test Free-Games Intro, Test Hold Music and Test Award Jingle play their named programs. See [audio](audio.md) for current routing and acoustic limits.
 
 ## Balance
+
+<img src="media/gameplay/screens/menus/balance.png" alt="The actual Balance menu" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/primary/credit-voucher-filled.png" alt="A voucher filled through the actual controls before inserting play credits" width="720" height="405" loading="lazy">
 
 Startup opens denomination and wager selection at **$0**. From the unfunded reels, blue opens Custom Amount directly. Game Menu → BALANCE also offers:
 
@@ -42,6 +56,10 @@ Custom Amount is the first Balance choice. It opens a Stardust voucher. Grey mov
 
 ## Feature counter and jackpot amounts
 
+<img src="media/gameplay/screens/menus/game-values.png" alt="The actual Counter and Jackpots menu" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/jackpot-picker.png" alt="The actual jackpot-value chooser; the recorded menu visit left its values unchanged" width="720" height="405" loading="lazy">
+
 Open **Game Menu → Counter & Jackpots**. **Set Feature Counter** edits the active wager's counter from **0 to 1886**. **Jackpot Amounts** lets you select Mini, Minor, Major or Grand and enter an amount from **$0.01 to $30,000,000.00**.
 
 Grey moves between digits, Apply and Cancel; blue changes the selected digit or confirms the selected action. Counter digits wrap within the legal range; the leading digit alternates between 0 and 1. Hold grey to go back without applying. A successful Apply returns to the regular game with autoplay off. The balance and statistics are unchanged. Finish any current spin or owed feature before editing.
@@ -57,6 +75,8 @@ The counter ceiling is the simulator’s closed-state limit, derived from its hi
 Battery percentage is not shown. See the [M5Unified implementation](https://github.com/m5stack/M5Unified/blob/96576a14247ddc935149145aa6b51943464120f1/src/utility/Power_Class.inl) and [StickS3 battery example](https://docs.m5stack.com/en/arduino/m5sticks3/battery).
 
 ## Simulator Return
+
+<img src="media/gameplay/screens/menus/simulator-return-list.png" alt="The actual Simulator Return list opened without applying a different option" width="720" height="405" loading="lazy">
 
 SIMULATOR RETURN shows six options for the current profile; **Option 3 is the default**. Review the ideal-model return range, complementary edge range and future Grand, then press blue to apply or grey to go back. Context includes denomination, lines, multiplier and prize-cap profile.
 

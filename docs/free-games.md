@@ -1,8 +1,16 @@
 # Wisdom free games and Twin Spins
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 The initial red-Wisdom feature is distinct from the Phoenix counter's free Hold & Spin. The [manufacturer's Confucius description](https://www.aristocratgaming.com/us/games/us-phoenix-link) identifies Twin Spins; the [regional rulebook, page 3](https://casinos.lotoquebec.com/dam/jcr:4add9be1-336a-4efc-b4c9-e41696b876b2/Phoenix%20Link%20Confucius%20Say.pdf) describes the paired outer reels. The following details describe the current [simulator](../firmware/src/phoenix_engine.h).
 
 ## Trigger and entry
+
+<img src="media/gameplay/screens/primary/free-free-intro.png" alt="A genuine Wisdom trigger with three red tiles and varied surrounding reel symbols" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/free-free-intro.webp" alt="Recorded gameplay animation showing a genuine Wisdom trigger with three red tiles and varied surrounding reel symbols" width="720" height="405" loading="lazy">
 
 Three or more Wisdom scatters in Base award six free games in the current model. The scatter award and any line awards from the triggering spin also count; the free games are an additional result.
 
@@ -13,6 +21,12 @@ See the [gameplay gallery](graphics.md) for captured Wisdom and Free Games seque
 The first free-game caption can count from 1 OF 1 to 1 OF 6 as a presentation. The Engine has already awarded six games; the caption does not generate them one at a time. Source-timed entry work is based on identified three-Wisdom sequences, including [5BUJOWxIBN4 near 10:10](https://www.youtube.com/watch?v=5BUJOWxIBN4&t=610s), rather than a universal timer for every scatter count.
 
 ## What Twin means
+
+<img src="media/gameplay/screens/primary/free-ready.png" alt="A settled actual Twin result, with the first two and last two reels paired" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/free-ready.webp" alt="Recorded gameplay animation showing a settled actual Twin result, with the first two and last two reels paired" width="720" height="405" loading="lazy">
 
 | Columns | Behavior during these free games |
 |---|---|
@@ -25,6 +39,12 @@ Matching Phoenix symbol positions do **not** require identical Phoenix amounts o
 Free spins use their own paytable. Confucius may occur only on columns 3–5 in the current model, compared with columns 2–5 in Base. The selected line count, denomination and multiplier remain those of the triggering paid round.
 
 ## Retriggers and nested Hold features
+
+<img src="media/gameplay/screens/primary/hold-ready.png" alt="A real Hold inside Free Games, retaining the Free Games progress above the reels" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/hold-ready.webp" alt="Recorded gameplay animation showing a real Hold inside Free Games, retaining the Free Games progress above the reels" width="720" height="405" loading="lazy">
 
 The simulator awards **three additional free games** for three or more Wisdoms during Free. This follows the targeted US observations. The Québec program specifies six additional games instead.
 

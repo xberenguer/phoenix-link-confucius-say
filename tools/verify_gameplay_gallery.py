@@ -33,6 +33,7 @@ def image_info(path):
         offset = 12
         dimensions = None
         frames = duration = 0
+        loop_count = None
         while offset + 8 <= len(data):
             kind = data[offset:offset + 4]
             size = int.from_bytes(data[offset + 4:offset + 8], "little")
@@ -46,13 +47,15 @@ def image_info(path):
                 packed = int.from_bytes(payload[1:5], "little")
                 dimensions = [1 + (packed & 16383),
                               1 + ((packed >> 14) & 16383)]
+            elif kind == b"ANIM" and len(payload) >= 6:
+                loop_count = int.from_bytes(payload[4:6], "little")
             elif kind == b"ANMF" and len(payload) >= 16:
                 frames += 1
                 duration += int.from_bytes(payload[12:15], "little")
             offset += 8 + size + (size & 1)
         if dimensions:
             return {"dimensions": dimensions, "frames": frames or 1,
-                    "duration_ms": duration}
+                    "duration_ms": duration, "loop_count": loop_count}
     raise ValueError("Expected a PNG or lossless/extended WebP")
 
 
@@ -313,6 +316,35 @@ def verify(root):
             require((info["frames"] > 1 and info["duration_ms"] > 0) if is_animation else
                     (info["frames"] == 1 and info["duration_ms"] == 0),
                     "Image/animation evidence kind differs from content: " + name)
+            if is_animation:
+                require(info["loop_count"] == 0, "Animation must repeat indefinitely: " + name)
+                require(bool(item.get("loop_policy")), "Animation has no reviewed replay boundary: " + name)
+                source_frames = item.get("source_frames")
+                require(type(source_frames) is int and source_frames > 1,
+                        "Animation has no recorded frame span: " + name)
+                if type(source_frames) is int:
+                    require(item.get("source_frame_end_exclusive", 0) - item.get("source_frame", 0) == source_frames,
+                            "Recorded animation interval differs from its frame count: " + name)
+                    require(item.get("source_duration_ms") == source_frames * 40,
+                            "Recorded animation timing differs from 25 fps: " + name)
+                    holds = [item.get("intro_hold_ms", 0), item.get("replay_pause_ms", 0)]
+                    valid_holds = all(type(value) is int and 0 <= value <= 10000 for value in holds)
+                    require(valid_holds, "Invalid declared review pause: " + name)
+                    if valid_holds:
+                        require(info["duration_ms"] == source_frames * 40 + sum(holds),
+                                "Animation playback timing differs from recorded frames and declared pauses: " + name)
+                boundary = item.get("loop_boundary", {})
+                if boundary.get("exact_source_continuation_match"):
+                    require(boundary.get("first_crop_sha256") == boundary.get("actual_continuation_crop_sha256"),
+                            "Seamless-loop boundary does not match the actual continuation: " + name)
+                    require(boundary.get("boundary_pixel_difference_fraction") == 0,
+                            "Seamless loop has a changed boundary: " + name)
+            tool_name = item.get("processing_tool")
+            if tool_name:
+                tool_path = local_file(root, tool_name, root / "tools", "media processing tool")
+                if tool_path:
+                    require(sha(tool_path) == item.get("processing_tool_sha256"),
+                            "Media processing tool hash differs: " + name)
             animation_count += int(is_animation)
         except (OSError, ValueError, struct.error) as exc:
             require(False, "Cannot inspect recorded image " + name + ": " + str(exc))

@@ -1,5 +1,7 @@
 # Jackpot values and configurations
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 Double-grey opens the jackpot board. It reads the same future-prize amounts used by the Engine; it does not maintain a second display-only jackpot bank. Already landed prizes retain their committed values.
 
 ## Casino configurations
@@ -26,3 +28,15 @@ Default amounts are fixed-session values; play on other cabinets is not emulated
 Counter & Jackpots lets you enter exact cash amounts. They remain fixed across wager changes until restored or the session restarts. Editing a jackpot does not change its hit probability; the preset return display is consequently locked until defaults are restored. Credit funding is separate and does not change jackpot values or the random generator.
 
 See [settings](settings.md#feature-counter-and-jackpot-amounts), [Hold & Spin](hold-and-spin.md) and [math and evidence](math-and-evidence.md).
+
+## The board and a captured award
+
+<img src="media/gameplay/screens/primary/jackpot-board.png" alt="The actual jackpot board opened from the live recorded session" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/major/major-jackpot-award.png" alt="An actual Major award reached through continued play" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/major/major-jackpot-award.webp" alt="Recorded gameplay animation showing an actual Major award reached through continued play" width="720" height="405" loading="lazy">
+
+[Every captured named Phoenix and its animation →](graphics.md#named-phoenix-prizes)

@@ -1,5 +1,11 @@
 # Release notes
 
+## Unified visual gallery and complete replays — 18 November 2026
+
+Combined gameplay, symbols, animations and menus into one [Gallery](docs/graphics.md), with screenshots beside inline recorded motion and jackpots at the bottom. The [full player guide](docs/README.md) now includes the first-game walkthrough and a visual symbol key.
+
+Replaced fixed-length animation parts with complete recorded actions and declared replay pauses, closed periodic symbol loops on matching real frames, and selected fully visible win screenshots. The playable game and its runtime assets are unchanged.
+
 ## Player gallery update — 18 November 2026
 
 - Replaced staged preview boards with recorded play from the unchanged 0.2.170 game.
@@ -7,7 +13,7 @@
 - Put jackpot pictures and award sequences at the bottom of the galleries.
 - Added capture journals, source bindings and media verification. The game source, rules, runtime assets and playable browser bundle are unchanged.
 
-[Browse current gameplay](docs/graphics.md) · [Symbols and animation](docs/symbol-gallery.md) · [Menus and line charts](docs/menu-gallery.md)
+[Browse current gameplay](docs/graphics.md) · [Symbols and animation](docs/graphics.md) · [Menus and line charts](docs/menu-gallery.md)
 
 Historical validation results below describe their tagged releases.
 

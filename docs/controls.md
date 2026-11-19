@@ -1,5 +1,7 @@
 # Controls and menus
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 ## During play
 
 | Input | Action |
@@ -18,6 +20,8 @@ The implemented long-press threshold is 850 ms. In normal game view, grey's sing
 
 ## Wager-selection screen
 
+<img src="media/gameplay/screens/primary/startup-lines-and-bet.png" alt="The actual PLAY LINES and red BET controls reached after choosing a denomination" width="720" height="405" loading="lazy">
+
 Short grey presses move focus; blue selects. Startup opens the denomination chooser. Hold blue on this initial page to switch between standard and High Limit denominations. Choose a denomination, then PLAY LINES and a red BET button. Focus starts at the first choice in each section; the existing selection stays marked until changed.
 
 The reels open with a **$0 balance**. Blue opens the editable Stardust voucher when the selected wager is unaffordable. Insert Credits adds the entered cash amount and returns to the game with the same denomination, lines and multiplier. Cancelling returns without funding or spinning.
@@ -27,6 +31,8 @@ On the initial denomination page, hold-grey or Escape opens the full Game Menu. 
 An unavailable row cannot start a paid spin. Owed features protect their existing wager; opening the screen does not change the paid round that is already in progress.
 
 ## Game Menu
+
+<img src="media/gameplay/screens/menus/menu.png" alt="The actual Game Menu opened by holding grey" width="720" height="405" loading="lazy">
 
 | Entry | Purpose |
 |---|---|
@@ -50,6 +56,8 @@ The bottom-right version mark appears in Game Menu. See [settings](settings.md) 
 
 ## Balance and funding
 
+<img src="media/gameplay/screens/menus/balance.png" alt="The actual Balance menu with fixed additions and the custom voucher choice" width="720" height="405" loading="lazy">
+
 The funding page lists **Custom Amount**, **Add $1,000**, **Add $10,000**, **Add $100,000**, **Clear Balance**, Auto Refill and Back to Menu, in that order. Custom Amount opens the editable voucher at the **thousands digit**, displaying **$0,000.00**; grey moves right, short blue changes a digit, hold blue moves left, and Insert Credits funds the game. Add choices increase the current balance. Clear Balance sets it to zero. Successful funding or clearing returns to Game during play, or to denomination setup when opened from the startup menu, with autoplay off; neither resets the live meter buckets, wager or statistics. Clearing leaves the Auto Refill preference in place.
 
 Automatic refill uses the last successful addition, including a custom voucher amount when another spin is unaffordable. If the selected wager exceeds that amount, it restores enough to fund the wager. Funding changes the money balance without resetting this session’s meter buckets, wager or statistics. Unfinished features and source/capacity faults can block funding. See [session rules](saving.md).
@@ -67,5 +75,11 @@ Implementation: [button timing/dispatch](../firmware/src/main.cpp), [single/doub
 On StickS3, a small loading panel remains over the actual game while startup preparation finishes. Its bar advances as the game, audio and effects become ready. The regular game is exposed when setup finishes and button polling can begin. This indicates preparation; it does not add an artificial delay.
 
 ## Finish the Phoenix tally
+
+<img src="media/gameplay/screens/primary/ordinary-collect.png" alt="An actual ordinary Phoenix tally, where blue can collect the remaining shown values" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/ordinary-collect.webp" alt="Recorded gameplay animation showing an actual ordinary Phoenix tally, where blue can collect the remaining shown values" width="720" height="405" loading="lazy">
 
 During the final Phoenix count-up, press blue once to display all remaining collectible amounts immediately. The final-total hold, win transfer and applicable coin fountain/jingle continue. This also stops autoplay; that press never starts another spin or changes a prize.

@@ -1,16 +1,26 @@
 # Playing in a browser
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 [Play the browser game](https://xberenguer.github.io/phoenix-link-confucius-say/). The build adapter is in `browser/` and the current hosted bundle is in `demo/`. You can also run `python3 -m http.server --directory demo 8080` from the repository root and open the local page.
 
 The browser compiles the C++ Engine, UI and audio programs to WebAssembly. Its buttons represent the Stick controls around the 240 × 135 game. No connected Stick, account or game server is needed.
 
 ## Controls
 
+<img src="media/gameplay/screens/menus/rules-1.png" alt="The actual in-game How to Play page, opened through Game Rules" width="720" height="405" loading="lazy">
+
+On a computer, **Space** is blue, **Enter** or **→** is grey, and **Escape** opens or backs out of the menu. The on-screen buttons work by touch too.
+
 Blue spins/selects; holding blue toggles autoplay. Grey opens the wager panel or moves menu focus. Holding grey returns from the wager panel to the game, and opens Game Menu from gameplay. Double-grey opens the live Jackpots board. Rotation is in Settings → Display → Flip Screen. See [controls](controls.md).
 
 A click or tap may be required before browser sound can start. The Sound menu controls master sound, stops/landings and volume. Opening a menu pauses the current feature and its music; returning resumes their existing positions. Sound-menu auditions preserve the paused tune. Hiding a tab pauses presentation/audio; returning to that still-open page continues its live session.
 
 ## Fresh sessions
+
+<img src="media/gameplay/screens/primary/startup-denomination.png" alt="The actual denomination screen shown at the start of a fresh session" width="720" height="405" loading="lazy">
+
+The [first-game walkthrough](README.md#your-first-game) shows the denomination, wager and voucher steps together.
 
 Each reload, new page instance or new build opens the denomination chooser with **zero balance**. Select a wager, then press blue at the reels to enter a custom voucher amount. Progress is held in that live page only. There is no saved-game upload, download or restore and no shared bank with a Stick or another tab.
 

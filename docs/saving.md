@@ -1,8 +1,14 @@
 # Fresh sessions, funding and action safety
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 Progress is **session-only**. Every device boot, browser reload and firmware flash opens the denomination chooser with a **$0 balance**. Choose denomination, lines and bet, then use the editable voucher to fund the game. Autoplay starts off. Credits, collection-meter buckets, statistics, settings and unfinished features are not loaded from a prior game.
 
 ## Balance and meters
+
+<img src="media/gameplay/screens/primary/funded-reels.png" alt="The actual captured session after its voucher was inserted" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/menus/balance.png" alt="The actual Balance menu for adding play credits within the open session" width="720" height="405" loading="lazy">
 
 During a live session, the Balance menu offers Custom Amount through an editable voucher, plus $1,000, $10,000 or $100,000 additions to the money balance. A successful addition returns to manual gameplay during play, or to denomination setup if opened from the startup menu. It does not reset that session's wager, meters or statistics. CLEAR BALANCE sets the money balance to zero at a safe closed Base boundary and returns to manual play. It preserves the live wager, meter buckets and statistics, and leaves Auto Refill unchanged. Auto Refill uses the last successful addition amount, including Custom Amount; see [settings](settings.md#balance).
 

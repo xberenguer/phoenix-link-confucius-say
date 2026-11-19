@@ -1,8 +1,22 @@
 # Phoenix Hold & Spin, revival and jackpots
 
+[← Full player guide](README.md) · [Gallery](graphics.md)
+
 The simulator can enter this feature from a natural Phoenix result or the session’s collection meter. Those routes can occur together, so more than one Hold may be owed. The official [US description](https://www.aristocratgaming.com/us/games/us-phoenix-link) identifies Hold & Spin and the separate mystery counter; the [operator rules, pages 1–3](https://casinos.lotoquebec.com/dam/jcr:4add9be1-336a-4efc-b4c9-e41696b876b2/Phoenix%20Link%20Confucius%20Say.pdf) supply the regional lock/reset/revival rules. Current financial behavior is in the [Engine](../firmware/src/phoenix_engine.h).
 
 ## Natural entry and respins
+
+<img src="media/gameplay/screens/primary/hold-hold-intro.png" alt="The actual six-Phoenix Hold entry from the recorded session" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/hold-hold-intro.webp" alt="Recorded gameplay animation showing the actual six-Phoenix Hold entry from the recorded session" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/primary/hold-spinning.png" alt="An actual respin with existing Phoenixes locked while the remaining positions move" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/hold-spinning.webp" alt="Recorded gameplay animation showing an actual respin with existing Phoenixes locked while the remaining positions move" width="720" height="405" loading="lazy">
 
 Six through fourteen Phoenixes on a Base or Free result enter Hold & Spin. Their positions and displayed values lock. Each empty position becomes an individual bonus cell; the feature begins with three respins.
 
@@ -17,6 +31,12 @@ Browse the [gameplay gallery](graphics.md) to see captured feature sequences.
 If the Hold is inside Wisdom Free Games, the header also retains the current Free game and total. That caption persists through the fire; it does not replace the remaining-respins or collected-count fields.
 
 ## Revival
+
+<img src="media/gameplay/screens/primary/hold-phoenix-revival.png" alt="The actual revival presentation after the opening Hold respins found no new Phoenixes" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/hold-phoenix-revival.webp" alt="Recorded gameplay animation showing the actual revival presentation after the opening Hold respins found no new Phoenixes" width="720" height="405" loading="lazy">
 
 If the initial three respins produce **zero new Phoenixes**, the simulator restores three respins. The initial locked symbols do not satisfy this condition. Once at least one new Phoenix has arrived, a later three-spin drought ends the feature normally.
 
@@ -53,7 +73,7 @@ These are exact-law calculations rounded for display, **not a natural-video samp
 | Double / Triple named prize | Apply 2× / 3× to that named Mini, Minor or Major |
 | Grand from a full board | Add Grand to all Phoenix prizes; it does not replace them |
 
-See the [symbol gallery](symbol-gallery.md) for captured named-prize artwork and the [gameplay gallery](graphics.md) for its reel context.
+See the [symbol gallery](graphics.md#reel-symbols) for captured named-prize artwork and the [gameplay gallery](graphics.md) for its reel context.
 
 Do not multiply a shown Phoenix cash value by the stake again. Internally generated ordinary prizes use total-bet multiples, but the displayed number already represents the prize. Ordinary credit prizes do not receive the named-prize 2×/3× multiplier in this model.
 
@@ -72,6 +92,18 @@ All fifteen occupied positions award Grand **plus** all fifteen values. A full f
 The Grand sequence uses one continuous **WINNER** count combining Grand, the Major base component and collected cash values. The announcement remains WINNER throughout. This is an adaptation for one LCD, rather than an exact reproduction of the original multi-screen Grand sequence. Animation adds no extra payment. A full board being possible does not establish its casino probability: the model's landing chance and prize weights are local assumptions.
 
 ## Count-up and ending order
+
+<img src="media/gameplay/screens/primary/ordinary-collect.png" alt="A real nine-Phoenix ordinary collection, shown with its running total" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/ordinary-collect.webp" alt="Recorded gameplay animation showing a real nine-Phoenix ordinary collection, shown with its running total" width="720" height="405" loading="lazy">
+
+<img src="media/gameplay/screens/primary/ordinary-return-fire.png" alt="The actual return-fire transition after that same ordinary collection" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/ordinary-return-fire.webp" alt="Recorded gameplay animation showing the actual return-fire transition after that same ordinary collection" width="720" height="405" loading="lazy">
 
 The collection bird follows a broad reconstructed curl to the centered amount. Middle/bottom routes delay the destination offset until the final approach so their body stays visible in the reel viewport. This display adaptation changes no award, pickup commit, respin, music or phase clock. [Browse collection footage](graphics.md).
 
@@ -96,3 +128,11 @@ Code: [award director](../firmware/src/feature_award_director.h), [collection fl
 ## Fast collection
 
 At the ending tally, blue collects the remaining displayed amounts at once, then continues the normal ending effects. It consumes that press and stops autoplay, without changing the settled payout or buying another spin.
+
+## Captured Grand finale
+
+<img src="media/gameplay/screens/primary/grand-jackpot-award.png" alt="An actual full fifteen-Phoenix result and its Grand-inclusive award display" width="720" height="405" loading="lazy">
+
+**Watch the captured sequence:**
+
+<img src="media/gameplay/previews/primary/grand-jackpot-award.webp" alt="Recorded gameplay animation showing an actual full fifteen-Phoenix result and its Grand-inclusive award display" width="720" height="405" loading="lazy">
