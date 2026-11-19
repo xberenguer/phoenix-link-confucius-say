@@ -46,8 +46,6 @@ Opening a menu pauses the current feature and its music. Returning to Game resum
 
 Hold grey to return to the parent menu. Balance and Counter & Jackpots return to their selected Game Menu entry. Sound and Display return to Settings; Settings returns to its selected Game Menu entry. Editors return to their parent without applying. The wager screen returns directly to play; closing the jackpot board also returns to play without spinning.
 
-<img src="media/menu.png" alt="Game Menu with separate Balance and Counter & Jackpots entries" width="720">
-
 The bottom-right version mark appears in Game Menu. See [settings](settings.md) for the full option list and [troubleshooting](troubleshooting.md) for apparent input delays.
 
 ## Balance and funding
@@ -67,8 +65,6 @@ Implementation: [button timing/dispatch](../firmware/src/main.cpp), [single/doub
 ## Startup
 
 On StickS3, a small loading panel remains over the actual game while startup preparation finishes. Its bar advances as the game, audio and effects become ready. The regular game is exposed when setup finishes and button polling can begin. This indicates preparation; it does not add an artificial delay.
-
-<img src="media/loading.png" alt="Startup loading progress" width="720">
 
 ## Finish the Phoenix tally
 

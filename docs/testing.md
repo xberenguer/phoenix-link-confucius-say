@@ -26,9 +26,11 @@ The production crypto build excludes deterministic self-test/input helpers. Thos
 
 Use [the exporter command](payouts.md#regenerating-the-reference) against the current source. Verify its source version, input hashes and dataset hashes. The internal evaluator includes more profiles than the 77 offered wager choices.
 
-## Visual and audio fixtures
+## Gameplay captures and engineering fixtures
 
-The [gallery](graphics.md) uses synthetic states from the renderer. Inspect its [provenance](gallery-manifest.json) with the included assets. A short loop illustrates presentation and does not measure full-game FPS, casino frequency or physical audio identity.
+The player-facing [gallery](graphics.md) is reserved for captures reached by playing the unchanged game. Do not substitute a forced board, chosen random result or isolated rendering fixture for gameplay. Symbol close-ups must retain a link to the gameplay frame or sequence they were cropped from. Capture provenance belongs beside the published media, including source identity, session/action references and any scaling or cropping.
+
+Synthetic renderer fixtures remain useful for engineering comparisons, but cannot establish what occurred during play. A selected gameplay clip also does not measure event frequency, full-game FPS, physical display performance or speaker output. Review the gallery's documented capture coverage before assuming that every possible event or animation has been recorded.
 
 Menu checks pause real feature presentations, keep the phase, money, meter and outcome-generator state fixed while browsing, and resume the existing music context. Browser checks also cover a real Hold respin, Sound auditions and automatic cached-build upgrades followed by offline play.
 
@@ -54,4 +56,4 @@ Additional cases continue complete rounds and queued features, check accounting-
 
 Run `python3 tools/verify_release.py` before publishing. CI runs the same check. It rejects mismatched release/data/demo versions, changed or stale gallery source pins, missing or altered images, unreadably small image files, broken local links and private development paths. The gallery and showcase media are catalogued with current source versions and SHA-256 hashes.
 
-This catches synchronization errors; it does not establish original-machine fidelity. Review the new renders, animation timing and guide wording as well.
+This catches synchronization errors; it does not establish original-machine fidelity or prove natural-play provenance by itself. Review the capture records, visible reel continuity, animation timing and guide wording as well.

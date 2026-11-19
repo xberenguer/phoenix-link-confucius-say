@@ -12,7 +12,7 @@ The simulator generates a fresh result for **each initiated respin**, then anima
 
 The large top-of-cabinet information is adapted to the small screen: a live collected count appears above the reels, and collection WINNER/currency announcements can occupy the center. The count includes existing locks and new symbols whose visual impact has occurred, rather than revealing every precommitted landing at the start of motion.
 
-<img src="media/hold.png" alt="Scripted Hold scene with synthetic demonstration credits" width="720">
+Browse the [gameplay gallery](graphics.md) to see captured feature sequences.
 
 If the Hold is inside Wisdom Free Games, the header also retains the current Free game and total. That caption persists through the fire; it does not replace the remaining-respins or collected-count fields.
 
@@ -53,7 +53,7 @@ These are exact-law calculations rounded for display, **not a natural-video samp
 | Double / Triple named prize | Apply 2× / 3× to that named Mini, Minor or Major |
 | Grand from a full board | Add Grand to all Phoenix prizes; it does not replace them |
 
-See [all nine named-prize labels and their reel screenshots](graphics.md#single-double-and-triple-jackpot-symbols), including Double and Triple Major.
+See the [symbol gallery](symbol-gallery.md) for captured named-prize artwork and the [gameplay gallery](graphics.md) for its reel context.
 
 Do not multiply a shown Phoenix cash value by the stake again. Internally generated ordinary prizes use total-bet multiples, but the displayed number already represents the prize. Ordinary credit prizes do not receive the named-prize 2×/3× multiplier in this model.
 
@@ -65,8 +65,6 @@ Mini/Minor values and restrictions on named/high-cash combinations are configura
 
 Double and Triple Mini/Minor prizes collect in separate visible increments, with a new Phoenix flight from the same physical cell for each unit. The stacked label stays intact. The payout is already settled once; these graphical steps add no extra Engine payment. Audio plays once per physical cell. The fitted interval between units is 1067 ms; normal between-cell timing remains 1333 ms. Those are local presentation fits, not recovered universal manufacturer timing or named-prize audio.
 
-<img src="media/multiplied-mini.webp" alt="TripleMini repeated pickups, current renderer in a synthetic state" width="720">
-
 ## Fifteen Phoenixes and Grand
 
 All fifteen occupied positions award Grand **plus** all fifteen values. A full fifteen-Phoenix ordinary result settles directly; a Hold settles when it becomes full or exhausts its respins after the revival condition has been satisfied.
@@ -75,7 +73,7 @@ The Grand sequence uses one continuous **WINNER** count combining Grand, the Maj
 
 ## Count-up and ending order
 
-The collection bird follows a broad reconstructed curl to the centered amount. Middle/bottom routes delay the destination offset until the final approach so their body stays visible in the reel viewport. This display adaptation changes no award, pickup commit, respin, music or phase clock. [See the current flight](graphics.md#collection-flight-visibility).
+The collection bird follows a broad reconstructed curl to the centered amount. Middle/bottom routes delay the destination offset until the final approach so their body stays visible in the reel viewport. This display adaptation changes no award, pickup commit, respin, music or phase clock. [Browse collection footage](graphics.md).
 
 The source-inspired sequence includes a collected announcement, fire/bird effects, collection of eligible individual values, a WIN transfer and return fire. Major/Grand, ordinary cash and large cash can take different branches. The centered WINNER field reads the existing collection amount; it does not add earlier line wins or a separate named award again.
 
@@ -83,9 +81,7 @@ Coins launch upward from below the screen, spread, then fall. Numeric-only Hold 
 
 The positive reference is [3pfZnZUWGhI near 23:12](https://www.youtube.com/watch?v=3pfZnZUWGhI&t=1392s): eleven numeric Phoenixes pay $125 on a $5 stake at 5¢/50 lines/2×, following a two-seed meter feature. Its visible VENETIAN REWARDS cabinet branding supports a Las Vegas property inference; the [property's own description](https://www.venetianlasvegas.com/venetian-rewards.html) identifies that loyalty program. The exact software program remains unknown. One positive 25× event does not establish a universal casino cutoff or prove all settings share that threshold.
 
-The short route adds no new Big-award jingle. Coin visibility and music eligibility are separate; existing collection audio remains. Particle shapes, count-up timing and the original event table remain reconstructed. The animation below is a synthetic current-renderer example, not footage or a frequency sample.
-
-<img src="media/cash25-burst.png" alt="Current 25x numeric-only Hold coin burst, synthetic example" width="720">
+The short route adds no new Big-award jingle. Coin visibility and music eligibility are separate; existing collection audio remains. Particle shapes, count-up timing and the original event table remain reconstructed.
 
 Autoplay and manual play use the same award-event routing. Muting, a skipped presentation or a different award branch can affect what is heard; autoplay is not intended to remove an otherwise eligible jingle. See [audio](audio.md) for cue order and outstanding limits.
 

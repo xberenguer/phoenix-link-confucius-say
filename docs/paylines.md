@@ -2,8 +2,6 @@
 
 Hold grey to open **Game Menu**, then select **Paylines**. Each page shows up to six routes for the displayed line count. Grey advances to the next page; blue switches between the 5-, 10-, 15-, 25-, 50- and 100-line layouts. Hold grey to return to Game Menu. Your active layout opens first and is labelled **CURRENT**. Browsing does not change your bet. Blue visits the other layouts in ascending order after CURRENT, then returns to CURRENT.
 
-<img src="media/paylines.png" alt="In-game Paylines viewer" width="720">
-
 Each route selects one position on each of the five reels. A line win starts on reel one and follows that route from left to right. Different winning lines add together.
 
 [Download every implemented route](data/implemented-paylines.csv). The CSV uses 0 for the top row, 1 for the middle and 2 for the bottom. Its evidence column identifies observed geometry that matches the implementation and provisional local routes. It describes the simulator; the complete original charts and program variants have not been recovered.
@@ -25,91 +23,15 @@ Evidence labels are attached to the actual count, numbered ID and vector. A50-li
 
 ## All in-game chart pages
 
-These are the implemented layouts; the source-evidence coverage above remains separate.
+Open **Game Menu → Paylines** to inspect these layouts directly. The viewer shows up to six routes on each page. Grey advances a page, and blue changes the layout without changing your wager.
 
-### 5 lines
+| Layout | Pages in the viewer |
+|---|---:|
+| 5 lines | 1 |
+| 10 lines | 2 |
+| 15 lines | 3 |
+| 25 lines | 5 |
+| 50 lines | 9 |
+| 100 lines | 17 |
 
-<img src="media/routes-5-1.png" alt="5-line chart page 1" width="720">
-
-### 10 lines
-
-<img src="media/routes-10-1.png" alt="10-line chart page 1" width="720">
-
-<img src="media/routes-10-2.png" alt="10-line chart page 2" width="720">
-
-### 15 lines
-
-<img src="media/routes-15-1.png" alt="15-line chart page 1" width="720">
-
-<img src="media/routes-15-2.png" alt="15-line chart page 2" width="720">
-
-<img src="media/routes-15-3.png" alt="15-line chart page 3" width="720">
-
-### 25 lines
-
-<img src="media/routes-25-1.png" alt="25-line chart page 1" width="720">
-
-<img src="media/routes-25-2.png" alt="25-line chart page 2" width="720">
-
-<img src="media/routes-25-3.png" alt="25-line chart page 3" width="720">
-
-<img src="media/routes-25-4.png" alt="25-line chart page 4" width="720">
-
-<img src="media/routes-25-5.png" alt="25-line chart page 5" width="720">
-
-### 50 lines
-
-<img src="media/routes-50-1.png" alt="50-line chart page 1" width="720">
-
-<img src="media/routes-50-2.png" alt="50-line chart page 2" width="720">
-
-<img src="media/routes-50-3.png" alt="50-line chart page 3" width="720">
-
-<img src="media/routes-50-4.png" alt="50-line chart page 4" width="720">
-
-<img src="media/routes-50-5.png" alt="50-line chart page 5" width="720">
-
-<img src="media/routes-50-6.png" alt="50-line chart page 6" width="720">
-
-<img src="media/routes-50-7.png" alt="50-line chart page 7" width="720">
-
-<img src="media/routes-50-8.png" alt="50-line chart page 8" width="720">
-
-<img src="media/routes-50-9.png" alt="50-line chart page 9" width="720">
-
-### 100 lines
-
-<img src="media/routes-100-1.png" alt="100-line chart page 1" width="720">
-
-<img src="media/routes-100-2.png" alt="100-line chart page 2" width="720">
-
-<img src="media/routes-100-3.png" alt="100-line chart page 3" width="720">
-
-<img src="media/routes-100-4.png" alt="100-line chart page 4" width="720">
-
-<img src="media/routes-100-5.png" alt="100-line chart page 5" width="720">
-
-<img src="media/routes-100-6.png" alt="100-line chart page 6" width="720">
-
-<img src="media/routes-100-7.png" alt="100-line chart page 7" width="720">
-
-<img src="media/routes-100-8.png" alt="100-line chart page 8" width="720">
-
-<img src="media/routes-100-9.png" alt="100-line chart page 9" width="720">
-
-<img src="media/routes-100-10.png" alt="100-line chart page 10" width="720">
-
-<img src="media/routes-100-11.png" alt="100-line chart page 11" width="720">
-
-<img src="media/routes-100-12.png" alt="100-line chart page 12" width="720">
-
-<img src="media/routes-100-13.png" alt="100-line chart page 13" width="720">
-
-<img src="media/routes-100-14.png" alt="100-line chart page 14" width="720">
-
-<img src="media/routes-100-15.png" alt="100-line chart page 15" width="720">
-
-<img src="media/routes-100-16.png" alt="100-line chart page 16" width="720">
-
-<img src="media/routes-100-17.png" alt="100-line chart page 17" width="720">
-
+The [route CSV](data/implemented-paylines.csv) contains the row position for every route. The [gameplay gallery](graphics.md) shows captured play; the evidence coverage above describes which implemented routes have documented source geometry.

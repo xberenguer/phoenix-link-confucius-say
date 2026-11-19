@@ -2,8 +2,6 @@
 
 Hold the large grey button during gameplay for Game Menu. Grey moves and blue selects. The small power key is separate. On the startup denomination page, hold-grey opens the full Game Menu. Closing it returns to setup; on the initial line/bet page, hold-grey goes back to denominations. In the normal wager panel, it returns directly to Game.
 
-<img src="media/menu.png" alt="Game Menu" width="720">
-
 ## Rules and wagers
 
 Game Rules has six pages covering play, features, Base pays, Free pays, units and Phoenix awards. Pay pages use the current configuration and show unit credits before the bet multiplier. See [payouts](payouts.md).
@@ -21,8 +19,6 @@ Brightness cycles the implemented levels. Amount Units switches between cash and
 ## Sound
 
 Open **Settings → Sound**. Master sound and stops/landings have separate controls. Volume adjusts the level; Test Free-Games Intro, Test Hold Music and Test Award Jingle play their named programs. See [audio](audio.md) for current routing and acoustic limits.
-
-<img src="media/sound.png" alt="Sound menu" width="720">
 
 ## Balance
 
@@ -42,11 +38,7 @@ When Balance is opened from the startup menu, funding returns to denomination se
 
 Auto Refill uses the last successful addition amount for this session; its initial default is $10,000. It sets an unaffordable balance to that amount or the current full stake, whichever is larger. The manual Add choices are additive. Clear Balance is available with a nonzero balance at a closed Ready/Base boundary; unfinished Free/Hold/queued work and service or selector faults block it. It preserves the live wager, meter buckets and statistics, and does not change the Auto Refill preference. A later unaffordable paid spin can therefore refill the balance if that option is on. There is no fixed $1 million button; Custom Amount accepts $0.01–$9,999,999.99.
 
-<img src="media/credits.png" alt="Balance menu with balance and automatic refill controls" width="720">
-
 Custom Amount is the first Balance choice. It opens a Stardust voucher. Grey moves right through digits, Insert Credits and Cancel; short blue changes a digit. **Hold blue moves one digit left**, revealing a leading place without cycling around the form. Hold grey cancels. Insert Credits adds the amount once with the cash-in sound. It returns to Game during regular play, or back to denomination setup if opened from the startup menu. New vouchers open at **$0,000.00**, focused on the thousands zero. Unused leading zeros disappear as you move right: one dollar displays as **$1.00**. Hold blue to reveal a larger place again. The amount in words follows the editable cash value. The matching barcode and validation identifiers are decorative, remain fixed during editing and change for each newly opened voucher. The issue stamp uses the release date and session time, not a synchronized casino clock.
-
-<img src="media/credit-voucher.png" alt="Editable custom credit voucher" width="720">
 
 ## Feature counter and jackpot amounts
 
@@ -54,13 +46,7 @@ Open **Game Menu → Counter & Jackpots**. **Set Feature Counter** edits the act
 
 Grey moves between digits, Apply and Cancel; blue changes the selected digit or confirms the selected action. Counter digits wrap within the legal range; the leading digit alternates between 0 and 1. Hold grey to go back without applying. A successful Apply returns to the regular game with autoplay off. The balance and statistics are unchanged. Finish any current spin or owed feature before editing.
 
-<img src="media/game-values.png" alt="Counter and jackpot settings" width="720">
-
-<img src="media/counter-editor.png" alt="Feature counter digit editor" width="720">
-
 Jackpot amounts are absolute cash values: changing denomination or wager does not rescale an edited amount. They apply to future prizes; already landed prizes retain their values. **Restore Default Jackpots** restores all four tiers for the current configuration, including the selected return option's Grand. Boot or reload starts fresh defaults.
-
-<img src="media/jackpot-editor.png" alt="Jackpot cash amount editor" width="720">
 
 Double-grey during gameplay opens the jackpot board. Blue or grey closes it without spinning. It shows the amounts available for future prizes at the current configuration. See [jackpot values and configurations](jackpot-values.md) for the denomination rules, observed prices and local assumptions.
 

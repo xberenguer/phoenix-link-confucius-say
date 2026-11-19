@@ -1,210 +1,518 @@
-# Graphics, animation and native gallery
+# Gameplay gallery
 
-Screens and animations from the current game. The native display is 240 × 135 pixels; previews are enlarged to 720 × 405 with nearest-neighbor scaling.
+[▶ Play the game](https://xberenguer.github.io/phoenix-link-confucius-say/) · [Symbols and animations](symbol-gallery.md) · [Menus and every line chart](menu-gallery.md)
 
-See the [individual symbols, animations, fusions and artwork](symbol-gallery.md). The [menu gallery](menu-gallery.md) includes every rules page, display/return controls, wager panels and safety messages. [All payline chart pages](paylines.md#all-in-game-chart-pages) are also shown.
+Follow the game from choosing a wager to spins, wins, Free Games and Hold & Spin. **Jackpots are at the bottom.** Every picture and clip comes from the unchanged game actually being played. Tap a picture to open it full size; expand a **▶** row to watch its recorded sequence.
 
-Jump to [all nine jackpot symbols](#single-double-and-triple-jackpot-symbols), [rare award screens](#rare-award-and-feature-screens), [symbol motion](#every-symbols-implemented-motion) or [feature effects](#feature-effects). Detail sheets combine enlarged crops from the rendered screens. Demonstration boards show the artwork without requiring a rare natural outcome; they are not probability samples.
+Close-ups in the [symbol gallery](symbol-gallery.md) show all twelve symbols, their implemented motion, both Confucius merges, visible cabinet artwork and all nine named Phoenix prizes. [How these recordings were made](gallery-recording.md).
 
-## Starting a game
+## 1. Choose a denomination and a wager
 
-Choose the denomination, lines and bet, then fund the reels with the editable voucher. Holding blue on the startup chooser switches denomination sets.
+The game opens with play credits at zero. Choose a coin value, a PLAY LINES option and a red BET button.
 
-<img src="media/startup-standard.png" alt="Startup standard denomination chooser" width="720">
 
-<img src="media/startup-high-limit.png" alt="Startup High Limit denomination chooser" width="720">
+<a href="media/gameplay/screens/primary/startup-denomination.png"><img src="media/gameplay/screens/primary/startup-denomination.png" alt="Startup denomination" width="720" height="405" loading="lazy"></a>
 
-<img src="media/empty-game.png" alt="Chosen wager with zero balance before funding" width="720">
+<a href="media/gameplay/screens/primary/startup-lines-and-bet.png"><img src="media/gameplay/screens/primary/startup-lines-and-bet.png" alt="Startup lines and bet" width="720" height="405" loading="lazy"></a>
 
-<img src="media/startup-voucher.png" alt="Stardust cash voucher opened from the unfunded game" width="720">
 
-## Startup menu
+## 2. Insert play credits
 
-<img src="media/startup-menu.png" alt="Full Game Menu before choosing a denomination" width="720">
+Open the voucher, enter an amount and select INSERT CREDITS. The screen then shows the funded game.
 
-<img src="media/startup-settings.png" alt="Sound, display and High Limit settings before play" width="720">
 
-## Screen layout
+<a href="media/gameplay/screens/primary/credit-voucher.png"><img src="media/gameplay/screens/primary/credit-voucher.png" alt="Credit voucher" width="720" height="405" loading="lazy"></a>
 
-<img src="media/game.png" alt="Regular game, synthetic demo state" width="720">
+<a href="media/gameplay/screens/primary/credit-voucher-filled.png"><img src="media/gameplay/screens/primary/credit-voucher-filled.png" alt="Credit voucher filled" width="720" height="405" loading="lazy"></a>
 
-The reel area uses five 47 × 35 symbol cells across three rows. A compact top strip carries title/feature information and the aligned meter; the footer carries CREDIT, BET, WIN and denomination. The side LEDs and cabinet surround are intentionally omitted. Larger second-display events are retargeted over the reels.
+<a href="media/gameplay/screens/primary/funded-reels.png"><img src="media/gameplay/screens/primary/funded-reels.png" alt="Funded reels" width="720" height="405" loading="lazy"></a>
 
-The denomination page shows the original Confucius portrait and curved temple roof. Selecting a denomination opens the PLAY LINES and red BET controls on the next page. The full roof comes from the manufacturer’s original character card, uniformly scaled for the landscape screen. The [wager guide](wagers.md) distinguishes actual observed choices from internal compatibility settings.
 
-<img src="media/wagers.png" alt="Cabinet wager selection" width="720">
+## 3. Spin, land and see a win
 
-Double-press the large grey button to open the jackpot board. The Phoenix Link wordmark, animated Phoenix tier badges and separate red, green, blue and orange amount panels adapt the cabinet's upper display to the Stick screen. Cash amounts are grouped for readability and retain their exact cents.
+These are results reached during play, with the symbols that actually landed. Reels move, settle and highlight their winning positions.
 
-<img src="media/jackpots.png" alt="Phoenix Link jackpot board" width="720">
 
-## Single, double and triple jackpot symbols
+<a href="media/gameplay/screens/primary/base-spinning.png"><img src="media/gameplay/screens/primary/base-spinning.png" alt="Base spinning" width="720" height="405" loading="lazy"></a>
 
-Mini, Minor and Major each have single, double and triple versions. Repeated names on one symbol mean **1×, 2× or 3× that prize**. A Triple Major is one Phoenix carrying three Major units, not three separate occupied cells. These labels can appear on the Base reels, in Free Games or during Hold & Spin; payment follows the feature's collection rules.
+<a href="media/gameplay/screens/primary/base-landing.png"><img src="media/gameplay/screens/primary/base-landing.png" alt="Base landing" width="720" height="405" loading="lazy"></a>
 
-Columns below are **Mini, Minor, Major**. Rows are **single, double, triple**. These are magnified crops of the actual current renderer, with no smoothing or replacement lettering.
+<a href="media/gameplay/screens/primary/base-ready.png"><img src="media/gameplay/screens/primary/base-ready.png" alt="Base ready" width="720" height="405" loading="lazy"></a>
 
-<img src="media/jackpot-variants.png" alt="All nine current jackpot labels: single, double and triple Mini, Minor and Major" width="720">
 
-### Single prizes in the reel grid
+<details>
+<summary>▶ A complete opening spin — 1 continuous clip</summary>
 
-<img src="media/jackpot-symbols-1x.png" alt="Current Hold grid with single Mini, Minor and Major symbols on the top row" width="720">
+**Part 1 of 1**
 
-### Double prizes in the reel grid
+<a href="media/gameplay/sessions/primary/action-000002-clip-001-part01.webp"><img src="media/gameplay/sessions/primary/action-000002-clip-001-part01.webp" alt="A complete opening spin" width="720" height="405" loading="lazy"></a>
 
-<img src="media/jackpot-symbols-2x.png" alt="Current Hold grid with Double Mini, Double Minor and Double Major symbols on the top row" width="720">
+</details>
 
-### Triple prizes in the reel grid
 
-<img src="media/jackpot-symbols-3x.png" alt="Current Hold grid with Triple Mini, Triple Minor and Triple Major symbols on the top row" width="720">
+## 4. Confucius joins into gold
 
-The three boards are separate presentation examples. Each contains one Major symbol, matching the current model's single-Major restriction. Their appearance does not establish original cabinet frequencies. See [prizes and collection](hold-and-spin.md#phoenix-values-and-named-prizes).
+Qualifying adjacent faces join into a two-row or three-row gold Confucius. Watch the original faces, the joining effect and the resulting figure in the same recorded sequence. Separate close-ups are in the [symbol gallery](symbol-gallery.md#confucius-merges).
 
-## Rare award and feature screens
 
-The Major title, full-board Grand, running collection amount and revival use different presentation paths.
+<details>
+<summary>▶ Two-row Confucius merge — 2 continuous clips</summary>
 
-**Major award:** its original letter shapes use the WINNER gold treatment over the held reels, with the named amount below.
+**Part 1 of 2**
 
-<img src="media/major-award.png" alt="Major award with original letter shapes and clearer native outlines" width="720">
+<a href="media/gameplay/sessions/primary/action-000064-clip-010-part01.webp"><img src="media/gameplay/sessions/primary/action-000064-clip-010-part01.webp" alt="Two-row Confucius merge" width="720" height="405" loading="lazy"></a>
 
-<img src="media/major-fire.webp" alt="Animated Major title and fiery amount border" width="720">
+<details>
+<summary>Continue: part 2 of 2</summary>
 
-**Full-board Grand:** the continuous WINNER display includes the Grand contribution; it does not add a second plain Grand popup.
+<a href="media/gameplay/sessions/primary/action-000064-clip-010-part02.webp"><img src="media/gameplay/sessions/primary/action-000064-clip-010-part02.webp" alt="Two-row Confucius merge" width="720" height="405" loading="lazy"></a>
 
-<img src="media/grand-award.png" alt="Full fifteen-Phoenix board with the centered Grand-inclusive WINNER amount" width="720">
+</details>
 
-**Named-prize collection:** the running amount and flying Phoenix continue after the named-award stage.
+</details>
 
-<img src="media/named-collection.png" alt="Current collection phase after a Triple Major award" width="720">
 
-**Hold entry and revival:** the feature prompt is distinct from a renewed set of respins after an initial drought.
+<details>
+<summary>▶ Three-row Confucius merge — 2 continuous clips</summary>
 
-<img src="media/hold-entry.png" alt="Phoenix Hold feature entry prompt with named prizes locked in the grid" width="720">
+**Part 1 of 2**
 
-<img src="media/hold-revival.png" alt="Current Phoenix revival fire and restored feature prompt" width="720">
+<a href="media/gameplay/sessions/primary/action-000090-clip-012-part01.webp"><img src="media/gameplay/sessions/primary/action-000090-clip-012-part01.webp" alt="Three-row Confucius merge" width="720" height="405" loading="lazy"></a>
 
-**Wisdom Free Games entry:** the announcement uses the current game's actual transition artwork.
+<details>
+<summary>Continue: part 2 of 2</summary>
 
-<img src="media/free-games-entry.png" alt="Current three-Wisdom Free Games entry announcement" width="720">
+<a href="media/gameplay/sessions/primary/action-000090-clip-012-part02.webp"><img src="media/gameplay/sessions/primary/action-000090-clip-012-part02.webp" alt="Three-row Confucius merge" width="720" height="405" loading="lazy"></a>
 
-**A Hold inside Free Games:** the Free-game progress stays visible both during the fire transition and on the held board.
+</details>
 
-<img src="media/nested-free-fire.png" alt="Hold-entry fire with the ongoing Free-game progress retained" width="720">
+</details>
 
-<img src="media/nested-free.png" alt="Phoenix Hold inside an ongoing Free Games session" width="720">
 
-**Three-row gold Confucius:** awarded adjacent faces join into the tall figure.
+## 5. Wisdom starts Twin Free Games
 
-<img src="media/confucius-merged.png" alt="Current three-row merged gold Confucius in a winning line" width="720">
+The first picture shows three red Wisdom symbols that landed in a real spin. The second shows a later Free Game with the paired outer reels. Expand the sequence to follow the trigger and entry continuously.
 
-## Every symbol's implemented motion
 
-| Symbol | Current animation path |
-|---|---|
-| 9 | Ten-frame whole-glyph win blink |
-| 10 | Eight-frame win cycle, including uniform fade/blank states |
-| J, Q, K | Static symbol sprites with the surrounding win/highlight presentation |
-| Bell | Dedicated winning-frame sequence |
-| Abacus | 32-frame winning cycle |
-| Book | 102-frame winning sequence |
-| Candle | Continuous 16-frame flame cycle |
-| Confucius | Winning-face treatment and separate two-/three-row gold joining sequence |
-| Wisdom | Initial hold followed by a 100-frame erase/write/gold cycle |
-| Phoenix | 60-frame animated asset, independently phased for visible positions |
+<a href="media/gameplay/screens/primary/free-free-intro.png"><img src="media/gameplay/screens/primary/free-free-intro.png" alt="Three Wisdom symbols naturally trigger six Free Games among mixed reel symbols" width="720" height="405" loading="lazy"></a>
 
-Animation frames are selected by [generated assets](../firmware/src/generated_assets.cpp) and [Phoenix artwork](../firmware/src/phoenix_art.cpp).
+<a href="media/gameplay/screens/primary/free-ready.png"><img src="media/gameplay/screens/primary/free-ready.png" alt="A later Free Game shows the paired outer reels" width="720" height="405" loading="lazy"></a>
 
-<img src="media/symbols.png" alt="All twelve current symbol types in a display fixture" width="720">
 
-<img src="media/wisdom.webp" alt="Wisdom animation display fixture" width="720">
+<details>
+<summary>▶ Wisdom trigger and entry into Free Games — 2 continuous clips</summary>
 
-<img src="media/sage.webp" alt="Awarded adjacent Sage demonstration" width="720">
+**Part 1 of 2**
 
-A joined Sage fills the qualifying two- or three-position region, including its internal seams. It does not stretch a non-Wild into a Wild. Unawarded or separated faces stay separate under the current [joining policy](symbols-and-combinations.md#the-tall-gold-confucius).
+<a href="media/gameplay/sessions/primary/action-000139-clip-013-part01.webp"><img src="media/gameplay/sessions/primary/action-000139-clip-013-part01.webp" alt="Wisdom trigger and entry into Free Games" width="720" height="405" loading="lazy"></a>
 
-## Reel movement and landings
+<details>
+<summary>Continue: part 2 of 2</summary>
 
-Base, Twin and individual Hold strips move downward, overrun their final position, then recoil upward into rest. That recoil is not a second random result. The target cells are fixed for the action, so the final moving icon should be the same one that settles.
+<a href="media/gameplay/sessions/primary/action-000139-clip-013-part02.webp"><img src="media/gameplay/sessions/primary/action-000139-clip-013-part02.webp" alt="Wisdom trigger and entry into Free Games" width="720" height="405" loading="lazy"></a>
 
-Ordinary artwork stays clipped to its reel viewport. Phoenix flame/wing effects can cross cell edges where their oversized treatment requires it; the grid is drawn with its own layer priority. Twin pairs share a larger opening during the feature and keep it on the completed board. Hold restores the individual-cell grid.
+</details>
 
-Reel recoil and stagger are reconstructed from footage. Code: [reel motion](../firmware/src/reel_motion.h), [UI draw/phase flow](../firmware/src/ui.cpp).
+</details>
 
-## Fast Phoenix tally
 
-Unfilled Hold positions retain subdued background symbols behind the held Phoenixes.
+## 6. Phoenix Hold & Spin begins
 
-<img src="media/collection-fast-total.png" alt="Remaining Phoenix amounts collected with one blue press" width="720">
+The fire transition introduces Hold & Spin. Phoenix symbols lock in place while the remaining positions respin.
 
-## Feature effects
 
-| Effect | Implementation and purpose |
-|---|---|
-| Three-Wisdom entry | Clean text/art above the reels, source-timed announcement and first-game caption |
-| 1888 entry | Bird/ribbon trajectory from the meter followed by a full-playfield fire reveal |
-| Hold revival | Visible revival state before the respin count resumes |
-| Collected announcement | Center adaptation of information shown on the cabinet's larger display |
-| Phoenix collection | A flying bird/trail visits values and targets the centered running amount |
-| Center WINNER | Larger clean wordmark and outlined collection currency, only in its intended collection phase |
-| Major/Grand | Winner/amount presentation; Grand uses one continuous WINNER total combining Grand, Major base and cash |
-| Coins | Deterministic upward fountain; a separate short numeric-only 25–49× Hold burst precedes the return crest |
-| Return fire | Separate exit/reveal geometry returning to Free or Base |
-| Nested Free progress | Actual Free game/total in the condition-text slot, visible during Hold and over fire |
-| Counter border | Calm four-second moving gold rim around the small number box; green digits and padding are independent |
+<a href="media/gameplay/screens/primary/hold-hold-fire.png"><img src="media/gameplay/screens/primary/hold-hold-fire.png" alt="Hold hold fire" width="720" height="405" loading="lazy"></a>
 
-<img src="media/phoenix.webp" alt="Phoenix animation display fixture" width="720">
+<a href="media/gameplay/screens/primary/hold-hold-intro.png"><img src="media/gameplay/screens/primary/hold-hold-intro.png" alt="Hold hold intro" width="720" height="405" loading="lazy"></a>
 
-<img src="media/coins.webp" alt="Coin fountain display fixture" width="720">
+<a href="media/gameplay/screens/primary/hold-ready.png"><img src="media/gameplay/screens/primary/hold-ready.png" alt="Hold ready" width="720" height="405" loading="lazy"></a>
 
-<img src="media/cash25-burst.webp" alt="Current cash-only 25x Hold ending excerpt, synthetic demonstration" width="720">
 
-The short burst and return crest use the actual presentation clocks. The 25× recording supports visible coins for that event; the broader 25–49× display band is a local policy, not recovered casino odds or a universal trigger threshold. Individual particle artwork and timing remain approximations.
+<details>
+<summary>▶ Hold & Spin entry and respins — 2 continuous clips</summary>
 
-Particle paths and visual phase offsets do not draw from the game’s outcome service. Replaying a display frame cannot change the next financial outcome.
+**Part 1 of 2**
 
-Confucius topknots extend into the grey header during reel motion, landings and joined wins. Hold keeps its individual-cell presentation.
+<a href="media/gameplay/sessions/primary/action-000010-clip-005-part01.webp"><img src="media/gameplay/sessions/primary/action-000010-clip-005-part01.webp" alt="Hold & Spin entry and respins" width="720" height="405" loading="lazy"></a>
 
-The Grand sequence keeps one continuous WINNER display for its combined amount. It is adapted to a single LCD; the original multi-screen sequence and pixel geometry are not claimed as exact matches.
+<details>
+<summary>Continue: part 2 of 2</summary>
 
-## What remains approximate
+<a href="media/gameplay/sessions/primary/action-000010-clip-005-part02.webp"><img src="media/gameplay/sessions/primary/action-000010-clip-005-part02.webp" alt="Hold & Spin entry and respins" width="720" height="405" loading="lazy"></a>
 
-The original complete artwork, font and animation banks are unrecovered. The current game mixes authored shapes, vector rerenders, reconstructed/restored symbol material, deterministic effects and a compact digital portrait treatment. The latest named-prize lettering uses original gameplay and manufacturer footage, with reconstructed masks and native scaling. Some other artwork and effects remain authored approximations.
+</details>
 
-Camera-fitted timings, flame geometry, wing contours, exact symbol placement, palette, source-dependent screen lighting and unobserved transition branches remain areas for comparison.
+</details>
 
-The [gallery manifest](gallery-manifest.json) records dimensions, fixture identity, source version and content hashes. See [testing](testing.md) for pixel comparisons versus source-fidelity evidence, and [attribution](attribution.md) for third-party material.
 
-## Repeated named-prize flights
+## 7. Revival brings more respins
 
-<img src="media/multiplied-mini.webp" alt="Three pickups from one TripleMini cell in the current renderer" width="720">
+This recording reached a revival during Hold & Spin. The effect plays before the feature continues.
 
-The outgoing flight and ribbon finish behind the next same-cell flight. Each named unit belongs to the Engine’s single settlement; its visual pickups are separate presentation steps.
 
-## Collection-flight visibility
+<a href="media/gameplay/screens/primary/hold-phoenix-revival.png"><img src="media/gameplay/screens/primary/hold-phoenix-revival.png" alt="Hold phoenix revival" width="720" height="405" loading="lazy"></a>
 
-Middle and bottom Phoenix pickups keep their broad reconstructed ribbon curl inside the playfield while approaching the centered amount. Their destination offset is applied during the last 200 ms of the existing 700 ms approach. Top-row and original upper-HUD routes retain their existing motion. The amount commit, fading body, sibling pickup overlaps, audio and game result use the same clocks.
 
-<img src="media/pickup-flight.png" alt="Current middle-row Phoenix remains visible before reaching the collection amount" width="720">
+<details>
+<summary>▶ Revival and the following respins — 3 continuous clips</summary>
 
-<img src="media/pickup-flight.webp" alt="Current Phoenix pickup and ribbon curl approaching the centered amount" width="720">
+**Part 1 of 3**
 
-This is a small-screen viewport adaptation. It does not recover the original factory trajectory, feather artwork or pose bank. The bird and ribbons can pass in front of the amount during arrival; that foreground layering is intentional.
+<a href="media/gameplay/sessions/primary/action-000013-clip-006-part01.webp"><img src="media/gameplay/sessions/primary/action-000013-clip-006-part01.webp" alt="Revival and the following respins" width="720" height="405" loading="lazy"></a>
 
-## Jackpot board and credit voucher
+<details>
+<summary>Continue: part 2 of 3</summary>
 
-The jackpot board uses flat dark amount fields and animated fire attached to the stationary Phoenix Link title. The title fringe is a local reconstruction of the filmed effect; original animation frames remain unavailable.
+<a href="media/gameplay/sessions/primary/action-000013-clip-006-part02.webp"><img src="media/gameplay/sessions/primary/action-000013-clip-006-part02.webp" alt="Revival and the following respins" width="720" height="405" loading="lazy"></a>
 
-<img src="media/jackpots-fire.webp" alt="Animated jackpot title fire" width="720">
+</details>
 
-Custom credit funding uses a code-rendered Stardust voucher with amount words, matching decorative validation numbers and insertion text.
+<details>
+<summary>Continue: part 3 of 3</summary>
 
-<img src="media/credit-voucher.png" alt="Custom credit voucher" width="720">
+<a href="media/gameplay/sessions/primary/action-000013-clip-006-part03.webp"><img src="media/gameplay/sessions/primary/action-000013-clip-006-part03.webp" alt="Revival and the following respins" width="720" height="405" loading="lazy"></a>
 
-## Denomination and wager views
+</details>
 
-The denomination view gives the character, temple and title more room. Selecting a coin opens the separate line and bet controls.
+</details>
 
-<img src="media/wagers.png" alt="Confucius Say denomination chooser" width="720">
 
-<img src="media/high-limit-fifty.png" alt="$5 denomination with PLAY25 and PLAY50 controls" width="720">
+## 8. Collect the Phoenix values and return
+
+Follow the flying Phoenix, running total and return fire in a recorded collection.
+
+
+<a href="media/gameplay/screens/primary/ordinary-collect.png"><img src="media/gameplay/screens/primary/ordinary-collect.png" alt="Ordinary collect" width="720" height="405" loading="lazy"></a>
+
+<a href="media/gameplay/screens/primary/ordinary-win-transfer.png"><img src="media/gameplay/screens/primary/ordinary-win-transfer.png" alt="Ordinary win transfer" width="720" height="405" loading="lazy"></a>
+
+<a href="media/gameplay/screens/primary/ordinary-return-fire.png"><img src="media/gameplay/screens/primary/ordinary-return-fire.png" alt="Ordinary return fire" width="720" height="405" loading="lazy"></a>
+
+
+<details>
+<summary>▶ Phoenix collection, transfer and return — 3 continuous clips</summary>
+
+**Part 1 of 3**
+
+<a href="media/gameplay/sessions/primary/action-000019-clip-007-part01.webp"><img src="media/gameplay/sessions/primary/action-000019-clip-007-part01.webp" alt="Phoenix collection, transfer and return" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 3</summary>
+
+<a href="media/gameplay/sessions/primary/action-000019-clip-007-part02.webp"><img src="media/gameplay/sessions/primary/action-000019-clip-007-part02.webp" alt="Phoenix collection, transfer and return" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 3 of 3</summary>
+
+<a href="media/gameplay/sessions/primary/action-000019-clip-007-part03.webp"><img src="media/gameplay/sessions/primary/action-000019-clip-007-part03.webp" alt="Phoenix collection, transfer and return" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>
+
+
+## 9. A Hold feature inside Free Games
+
+The ongoing Free Games session remains visible while Hold & Spin runs.
+
+
+<details>
+<summary>▶ Hold & Spin during Free Games — 2 continuous clips</summary>
+
+**Part 1 of 2**
+
+<a href="media/gameplay/sessions/primary/action-000714-clip-019-part01.webp"><img src="media/gameplay/sessions/primary/action-000714-clip-019-part01.webp" alt="Hold & Spin during Free Games" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 2</summary>
+
+<a href="media/gameplay/sessions/primary/action-000714-clip-019-part02.webp"><img src="media/gameplay/sessions/primary/action-000714-clip-019-part02.webp" alt="Hold & Spin during Free Games" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>
+
+
+## 10. Free-game counters, wins and coin effects
+
+These sequences show the game continuing through its feature counters, win presentations, coin celebration and feature ending.
+
+
+<a href="media/gameplay/screens/primary/free-free-counter.png"><img src="media/gameplay/screens/primary/free-free-counter.png" alt="Free free counter" width="720" height="405" loading="lazy"></a>
+
+<a href="media/gameplay/screens/primary/free-spin-award.png"><img src="media/gameplay/screens/primary/free-spin-award.png" alt="Free spin award" width="720" height="405" loading="lazy"></a>
+
+<a href="media/gameplay/screens/primary/free-spin-award-settle.png"><img src="media/gameplay/screens/primary/free-spin-award-settle.png" alt="Free spin award settle" width="720" height="405" loading="lazy"></a>
+
+
+<details>
+<summary>▶ Free-game counter and win presentations — 6 continuous clips</summary>
+
+**Part 1 of 6**
+
+<a href="media/gameplay/sessions/primary/action-001159-clip-020-part01.webp"><img src="media/gameplay/sessions/primary/action-001159-clip-020-part01.webp" alt="Free-game counter and win presentations" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-001159-clip-020-part02.webp"><img src="media/gameplay/sessions/primary/action-001159-clip-020-part02.webp" alt="Free-game counter and win presentations" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 3 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-001159-clip-020-part03.webp"><img src="media/gameplay/sessions/primary/action-001159-clip-020-part03.webp" alt="Free-game counter and win presentations" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 4 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-001159-clip-020-part04.webp"><img src="media/gameplay/sessions/primary/action-001159-clip-020-part04.webp" alt="Free-game counter and win presentations" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 5 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-001159-clip-020-part05.webp"><img src="media/gameplay/sessions/primary/action-001159-clip-020-part05.webp" alt="Free-game counter and win presentations" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 6 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-001159-clip-020-part06.webp"><img src="media/gameplay/sessions/primary/action-001159-clip-020-part06.webp" alt="Free-game counter and win presentations" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>
+
+
+<details>
+<summary>▶ Coin celebration — 2 continuous clips</summary>
+
+**Part 1 of 2**
+
+<a href="media/gameplay/sessions/primary/action-000552-clip-018-part01.webp"><img src="media/gameplay/sessions/primary/action-000552-clip-018-part01.webp" alt="Coin celebration" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 2</summary>
+
+<a href="media/gameplay/sessions/primary/action-000552-clip-018-part02.webp"><img src="media/gameplay/sessions/primary/action-000552-clip-018-part02.webp" alt="Coin celebration" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>
+
+
+<details>
+<summary>▶ Feature ending — 1 continuous clip</summary>
+
+**Part 1 of 1**
+
+<a href="media/gameplay/sessions/primary/action-000145-clip-014-part01.webp"><img src="media/gameplay/sessions/primary/action-000145-clip-014-part01.webp" alt="Feature ending" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+
+## 11. Explore the menus and artwork
+
+Browse the actual [menu screens, rules, settings and every payline chart](menu-gallery.md). The [artwork close-ups](symbol-gallery.md#visible-cabinet-artwork) show the temple scene, game header, footer and collection meter separately.
+
+
+<a href="media/gameplay/screens/primary/game-menu.png"><img src="media/gameplay/screens/primary/game-menu.png" alt="Game menu" width="720" height="405" loading="lazy"></a>
+
+<a href="media/gameplay/screens/primary/settings-menu.png"><img src="media/gameplay/screens/primary/settings-menu.png" alt="Settings menu" width="720" height="405" loading="lazy"></a>
+
+
+## 12. Jackpots
+
+All jackpot pictures and award sequences are collected here at the end. The information board shows the configured prizes; the award clips below show prizes actually reached through play.
+
+
+<a href="media/gameplay/screens/primary/jackpot-board.png"><img src="media/gameplay/screens/primary/jackpot-board.png" alt="Jackpot board" width="720" height="405" loading="lazy"></a>
+
+
+<details>
+<summary>▶ Animated jackpot information board — 1 continuous clip</summary>
+
+**Part 1 of 1**
+
+<a href="media/gameplay/sessions/primary/action-010000-clip-024-part01.webp"><img src="media/gameplay/sessions/primary/action-010000-clip-024-part01.webp" alt="Animated jackpot information board" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+
+### Single, double and triple Phoenix prizes
+
+Every Mini, Minor and Major variant has now appeared during the recorded sessions. Open the [individual prize gallery](symbol-gallery.md#named-phoenix-prizes) for separate pictures, motion and the full board behind each close-up.
+
+
+| 1× Mini<br><a href="media/gameplay/symbols/prizes/prize-mini-1x-full.png"><img src="media/gameplay/symbols/prizes/prize-mini-1x-full.png" alt="prize-mini-1x" width="210" height="158" loading="lazy"></a> | 2× Mini<br><a href="media/gameplay/symbols/prizes/prize-mini-2x-full.png"><img src="media/gameplay/symbols/prizes/prize-mini-2x-full.png" alt="prize-mini-2x" width="210" height="167" loading="lazy"></a> | 3× Mini<br><a href="media/gameplay/symbols/prizes/prize-mini-3x-full.png"><img src="media/gameplay/symbols/prizes/prize-mini-3x-full.png" alt="prize-mini-3x" width="210" height="158" loading="lazy"></a> |
+|---|---|---|
+
+
+| 1× Minor<br><a href="media/gameplay/symbols/prizes/prize-minor-1x-full.png"><img src="media/gameplay/symbols/prizes/prize-minor-1x-full.png" alt="prize-minor-1x" width="210" height="164" loading="lazy"></a> | 2× Minor<br><a href="media/gameplay/symbols/prizes/prize-minor-2x-full.png"><img src="media/gameplay/symbols/prizes/prize-minor-2x-full.png" alt="prize-minor-2x" width="210" height="158" loading="lazy"></a> | 3× Minor<br><a href="media/gameplay/symbols/prizes/prize-minor-3x-full.png"><img src="media/gameplay/symbols/prizes/prize-minor-3x-full.png" alt="prize-minor-3x" width="210" height="158" loading="lazy"></a> |
+|---|---|---|
+
+
+| 1× Major<br><a href="media/gameplay/symbols/prizes/prize-major-1x-full.png"><img src="media/gameplay/symbols/prizes/prize-major-1x-full.png" alt="prize-major-1x" width="210" height="158" loading="lazy"></a> | 2× Major<br><a href="media/gameplay/symbols/prizes/prize-major-2x-full.png"><img src="media/gameplay/symbols/prizes/prize-major-2x-full.png" alt="prize-major-2x" width="210" height="167" loading="lazy"></a> | 3× Major<br><a href="media/gameplay/symbols/prizes/prize-major-3x-full.png"><img src="media/gameplay/symbols/prizes/prize-major-3x-full.png" alt="prize-major-3x" width="210" height="164" loading="lazy"></a> |
+|---|---|---|
+
+
+### Mini and Minor collection
+
+
+<details>
+<summary>▶ Mini award and collection — 3 continuous clips</summary>
+
+**Part 1 of 3**
+
+<a href="media/gameplay/sessions/primary/action-005453-clip-023-part01.webp"><img src="media/gameplay/sessions/primary/action-005453-clip-023-part01.webp" alt="Mini award and collection" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 3</summary>
+
+<a href="media/gameplay/sessions/primary/action-005453-clip-023-part02.webp"><img src="media/gameplay/sessions/primary/action-005453-clip-023-part02.webp" alt="Mini award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 3 of 3</summary>
+
+<a href="media/gameplay/sessions/primary/action-005453-clip-023-part03.webp"><img src="media/gameplay/sessions/primary/action-005453-clip-023-part03.webp" alt="Mini award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>
+
+
+<details>
+<summary>▶ Minor award and collection — 3 continuous clips</summary>
+
+**Part 1 of 3**
+
+<a href="media/gameplay/sessions/primary/action-004325-clip-021-part01.webp"><img src="media/gameplay/sessions/primary/action-004325-clip-021-part01.webp" alt="Minor award and collection" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 3</summary>
+
+<a href="media/gameplay/sessions/primary/action-004325-clip-021-part02.webp"><img src="media/gameplay/sessions/primary/action-004325-clip-021-part02.webp" alt="Minor award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 3 of 3</summary>
+
+<a href="media/gameplay/sessions/primary/action-004325-clip-021-part03.webp"><img src="media/gameplay/sessions/primary/action-004325-clip-021-part03.webp" alt="Minor award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>
+
+
+### Major award
+
+This Major award occurred during the longer recorded session.
+
+
+<a href="media/gameplay/screens/major/major-jackpot-award.png"><img src="media/gameplay/screens/major/major-jackpot-award.png" alt="Major jackpot award" width="720" height="405" loading="lazy"></a>
+
+
+<details>
+<summary>▶ Major award and collection — 5 continuous clips</summary>
+
+**Part 1 of 5**
+
+<a href="media/gameplay/sessions/major/action-061121-clip-027-part01.webp"><img src="media/gameplay/sessions/major/action-061121-clip-027-part01.webp" alt="Major award and collection" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 5</summary>
+
+<a href="media/gameplay/sessions/major/action-061121-clip-027-part02.webp"><img src="media/gameplay/sessions/major/action-061121-clip-027-part02.webp" alt="Major award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 3 of 5</summary>
+
+<a href="media/gameplay/sessions/major/action-061121-clip-027-part03.webp"><img src="media/gameplay/sessions/major/action-061121-clip-027-part03.webp" alt="Major award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 4 of 5</summary>
+
+<a href="media/gameplay/sessions/major/action-061121-clip-027-part04.webp"><img src="media/gameplay/sessions/major/action-061121-clip-027-part04.webp" alt="Major award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 5 of 5</summary>
+
+<a href="media/gameplay/sessions/major/action-061121-clip-027-part05.webp"><img src="media/gameplay/sessions/major/action-061121-clip-027-part05.webp" alt="Major award and collection" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>
+
+
+### Full-board Grand
+
+The game reached the full-board Grand during play. Watch its award and collection through to the return.
+
+
+<a href="media/gameplay/screens/primary/grand-jackpot-award.png"><img src="media/gameplay/screens/primary/grand-jackpot-award.png" alt="Grand jackpot award" width="720" height="405" loading="lazy"></a>
+
+<a href="media/gameplay/screens/primary/grand-collect.png"><img src="media/gameplay/screens/primary/grand-collect.png" alt="Grand collect" width="720" height="405" loading="lazy"></a>
+
+<a href="media/gameplay/screens/primary/grand-win-transfer.png"><img src="media/gameplay/screens/primary/grand-win-transfer.png" alt="Grand win transfer" width="720" height="405" loading="lazy"></a>
+
+
+<details>
+<summary>▶ Grand award, collection and return — 6 continuous clips</summary>
+
+**Part 1 of 6**
+
+<a href="media/gameplay/sessions/primary/action-004839-clip-022-part01.webp"><img src="media/gameplay/sessions/primary/action-004839-clip-022-part01.webp" alt="Grand award, collection and return" width="720" height="405" loading="lazy"></a>
+
+<details>
+<summary>Continue: part 2 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-004839-clip-022-part02.webp"><img src="media/gameplay/sessions/primary/action-004839-clip-022-part02.webp" alt="Grand award, collection and return" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 3 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-004839-clip-022-part03.webp"><img src="media/gameplay/sessions/primary/action-004839-clip-022-part03.webp" alt="Grand award, collection and return" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 4 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-004839-clip-022-part04.webp"><img src="media/gameplay/sessions/primary/action-004839-clip-022-part04.webp" alt="Grand award, collection and return" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 5 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-004839-clip-022-part05.webp"><img src="media/gameplay/sessions/primary/action-004839-clip-022-part05.webp" alt="Grand award, collection and return" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+<details>
+<summary>Continue: part 6 of 6</summary>
+
+<a href="media/gameplay/sessions/primary/action-004839-clip-022-part06.webp"><img src="media/gameplay/sessions/primary/action-004839-clip-022-part06.webp" alt="Grand award, collection and return" width="720" height="405" loading="lazy"></a>
+
+</details>
+
+</details>

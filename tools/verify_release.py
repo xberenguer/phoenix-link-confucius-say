@@ -110,6 +110,20 @@ def verify(root):
         require(list(dimensions(path)) == item["dimensions"],
                 "Image size mismatch: " + item["file"])
         catalog[path] = item
+    # Current player-facing media has an action journal and must come from
+    # actual UI-driven play. Historical catalogs remain release provenance.
+    recorded_catalog = {}
+    gameplay_path = root / "docs/gameplay-media.json"
+    if gameplay_path.exists():
+        gameplay = read("docs/gameplay-media.json")
+        for item in gameplay.get("images", []):
+            path = (root / "docs" / item["file"]).resolve()
+            recorded_catalog[path] = item
+            catalog[path] = item
+        from verify_gameplay_gallery import verify as verify_recorded_gallery
+        recorded = verify_recorded_gallery(root)
+        require(recorded["status"] == "PASS",
+                "Recorded gameplay gallery failed: " + "; ".join(recorded["errors"]))
     # Documentation may preview a separately pinned development renderer while
     # source, playable demo and tagged firmware retain the stable release.
     # Keep all stable-release checks above; preview images have their own scope.
@@ -226,8 +240,15 @@ def verify(root):
                 continue
             path = (document.parent / unquote(urlsplit(target).path)).resolve()
             require(path in catalog, "Untracked/stale documentation image: " + target)
+            if gameplay_path.exists() and document.relative_to(root).as_posix() != "CHANGELOG.md":
+                require(path in recorded_catalog,
+                        "Current documentation embeds fixture media: " + target)
             if path.is_file():
-                require(dimensions(path)[0] >= 720, "Small documentation image: " + target)
+                item = recorded_catalog.get(path, {})
+                # An isolated symbol is an integer-scaled crop of a real
+                # frame, so its honest dimensions can be smaller than 720px.
+                if item.get("kind") not in {"symbol-crop", "symbol-animation"}:
+                    require(dimensions(path)[0] >= 720, "Small documentation image: " + target)
             images += 1
     for path in sorted((root / "docs/media").iterdir()):
         if path.is_file():

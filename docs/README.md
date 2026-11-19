@@ -1,50 +1,56 @@
-# Game guide
+# Explore Confucius Say
 
-The screen contains five reels with three visible positions per reel. Regular symbols can pay along selected lines. Wisdom symbols start the Free Games feature, and Phoenix symbols carry values into Hold & Spin. The collection meter can award a separate feature during the live session.
+[**▶ Play now**](https://xberenguer.github.io/phoenix-link-confucius-say/) · [Back to the project](../README.md)
 
-The top bar shows the game title, selected line/bet information and active collection meter. The bottom bar shows credit, bet, win and denomination. Larger cabinet announcements are adapted to the middle of the small display where needed.
+Start with the pictures, learn as you play, or look up a particular feature below.
 
-## Choose what to read
+## See the game
 
-| Topic | Reference |
+| Gallery | What is inside |
 |---|---|
-| Buttons, autoplay, settings and screen rotation | [Controls](controls.md) |
-| Hardware-free play, browser controls and fresh sessions | [Browser play](browser-play.md) |
-| First spin, reading the display and recognizing feature routes | [Getting started](getting-started.md) |
-| Actual offered denomination, line and multiplier combinations | [Wagers](wagers.md) |
-| All twelve symbols, Wild substitution and combination categories | [Symbols and combinations](symbols-and-combinations.md) |
-| All implemented line-pay entries and their evidence scopes | [Payouts](payouts.md) |
-| Browse every line layout and distinguish observed geometry from fallbacks | [Paylines](paylines.md) |
-| Wisdom trigger, Twin outer pairs, retriggers and nested bonuses | [Free games](free-games.md) |
-| Locked Phoenix values, respin reset, revival and 15-cell Grand | [Hold & Spin](hold-and-spin.md) |
-| Which meter is active, what increments it and its live-session buckets | [Collection counter](collection-counter.md) |
-| Every symbol, animated state and screen transition | [Graphics](graphics.md) |
-| Landing cues, feature music, collection and volume controls | [Audio](audio.md) |
-| Hardware entropy, secure random choices and what they control | [How randomness works](randomness.md) |
-| Current model, measurements, return assumptions and unknowns | [Math and evidence](math-and-evidence.md) |
-| Fresh starting credits, live-round safety and restart behavior | [Fresh sessions](saving.md) |
-| Building, installing and updating offline | [Build and flash](build-and-flash.md) |
-| Funding, fine volume, display and Simulator Return choices | [Settings](settings.md) |
-| Architecture, source modules and change boundaries | [Developer reference](developer-reference.md) |
-| Validation methods and what each can prove | [Testing](testing.md) |
-| Missing sound, unavailable wagers, random-source errors or USB trouble | [Troubleshooting](troubleshooting.md) |
-| Short definitions of meter, Free, Hold, RTP and other terms | [Glossary](glossary.md) |
-| Public references and their configuration limits | [Sources](sources.md) |
-| Third-party art, audio, code and licenses | [Attribution](attribution.md) |
-| Current release status | [Release notes](../CHANGELOG.md) |
+| [Gameplay gallery](graphics.md) | Setup, reel movement, wins, merges, Free Games and Hold & Spin in gameplay order; jackpots come last |
+| [Symbols and animations](symbol-gallery.md) | Separately viewable symbols and animation crops from real gameplay captures |
+| [Menus and rules](menu-gallery.md) | A reference to the game's on-screen menus and help pages |
+| [Paylines](paylines.md) | Line diagrams and an explanation of how to read them |
 
-## Evidence labels
+The gameplay galleries use captured play rather than staged reel boards. Check each gallery's coverage notes for events that have not yet been captured.
 
-**Source-observed** means the behavior or number was read in identified footage or operator material. **Configuration-specific** restricts that observation to its visible denomination, line count, bet multiplier and program context. **Simulator rule** describes what this source actually does. **Unresolved** means the original value or behavior has not been established.
+## New to the game?
 
-The documentation keeps those distinctions next to the relevant rules and numbers. An animation match does not prove a probability match.
+1. [**Your first game**](getting-started.md) — choose a wager, add play credits and make your first spin.
+2. [**Controls**](controls.md) — the blue and grey buttons, autoplay and menus.
+3. [**Browser play**](browser-play.md) — keyboard controls, sound and what happens when you reload.
+4. [**Glossary**](glossary.md) — short explanations of unfamiliar words.
 
-## Two meanings of “free feature”
+## Understand the reels and features
 
-Wisdom gives a **Twin free-games session**. The Phoenix counter gives a **free Hold & Spin**. A Twin session can contain a natural Hold, and another meter Hold can be queued during it. These obligations all belong to their existing round; the captions and feature music do not charge another normal wager.
+| Topic | Read |
+|---|---|
+| The twelve symbols, Wilds and joined gold Confucius figures | [Symbols and combinations](symbols-and-combinations.md) |
+| Coin value, number of lines and bet choices | [Wagers and denominations](wagers.md) |
+| Winning combinations and their payouts | [Payouts](payouts.md) |
+| Red Wisdom symbols, Twin reels and retriggers | [Free Games](free-games.md) |
+| Locked Phoenixes, respins, revival and collection | [Phoenix Hold & Spin](hold-and-spin.md) |
+| The green number and the 1888 collection feature | [Collection counter](collection-counter.md) |
+| Mini, Minor, Major and Grand values | [Jackpot values](jackpot-values.md) |
+| Music, symbol sounds and feature cues | [Sounds and music](audio.md) |
 
-## Version and completeness
+Wisdom starts a **Twin Free Games session**. The collection meter can award a **free Hold & Spin**. A Free Games session can also contain Hold & Spin, so the two features can appear together.
 
-This guide describes the current published game. Its tables and gallery are generated from the included source. The [browser guide](browser-play.md) describes the same session-only financial rules with browser-specific input, entropy and audio. See [current release notes](../CHANGELOG.md) for validation status.
+## Adjust your game or get help
 
-The exhaustive table export documents **implemented** values, including local fallbacks and internal evaluator profiles. It does not make the original casino odds known. Unrecovered original strips, probabilities, font/asset banks and universal event timing remain explicit [math](math-and-evidence.md) and [graphics](graphics.md) limits.
+| I want to… | Read |
+|---|---|
+| Change sound, volume, display or other options | [Settings](settings.md) |
+| Add credits or understand when progress resets | [Credits and fresh sessions](saving.md) |
+| Install or update the handheld version | [Build and flash](build-and-flash.md) |
+| Fix missing sound or understand a delayed button response | [Troubleshooting](troubleshooting.md) |
+
+## About this recreation
+
+The guide describes the game included in this repository. Some graphics and rules reconstruct observed behavior; the original complete artwork banks and casino probabilities are not available. The reference pages identify what was observed, what is specific to a configuration, and what is a local simulator rule.
+
+- [Sources](sources.md) · [Attribution](attribution.md) · [Release notes](../CHANGELOG.md)
+- [Math and evidence](math-and-evidence.md) · [Counter-entry estimates](counter-entry.md)
+- [How randomness works](randomness.md) · [Testing](testing.md)
+- [Developer reference](developer-reference.md) · [Browser build](../browser/README.md)

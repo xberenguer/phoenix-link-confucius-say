@@ -1,6 +1,6 @@
 # Your first game
 
-This guide describes the current simulator. Images are deterministic demonstrations of the current game.
+This guide describes the current simulator. Open the [gameplay gallery](graphics.md) for a visual tour or [play in your browser](https://xberenguer.github.io/phoenix-link-confucius-say/) to try it yourself.
 
 Startup opens denomination selection at zero balance. Once installed, the Stick needs no Wi-Fi, phone or computer. Choose a wager, then add a custom play-money voucher to begin. Progress lasts for the live session. Adding credits or clearing the balance leaves that session’s collection meter intact.
 

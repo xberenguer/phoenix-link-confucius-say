@@ -2,7 +2,7 @@
 
 This is the complete symbol inventory in the current [Engine](../firmware/src/phoenix_engine.h). The numeric payouts are in the separate [compiled payout reference](payouts.md); this page explains how to interpret them.
 
-<img src="media/symbols.png" alt="Deterministic display fixture containing all twelve symbol types" width="720">
+Open the [symbol and animation gallery](symbol-gallery.md) for close-up views, with the [gameplay gallery](graphics.md) showing the surrounding reels.
 
 ## The twelve symbols
 
@@ -23,9 +23,7 @@ This is the complete symbol inventory in the current [Engine](../firmware/src/ph
 
 ## Named Phoenix prizes
 
-Mini, Minor and Major each have **single, double and triple** artwork. Repeated names on one Phoenix represent multiples of that prize. View all nine labels below, or see [their full reel-grid screenshots and award screens](graphics.md#single-double-and-triple-jackpot-symbols).
-
-<img src="media/jackpot-variants.png" alt="Single, double and triple Mini, Minor and Major artwork from the current game" width="720">
+Mini, Minor and Major each have **single, double and triple** artwork. Repeated names on one Phoenix represent multiples of that prize. The [symbol gallery](symbol-gallery.md) identifies the captured variants; the [gameplay gallery](graphics.md) shows named prizes in play.
 
 ## Regular line wins
 

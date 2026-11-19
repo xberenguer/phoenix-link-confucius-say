@@ -1,17 +1,23 @@
 # Release notes
 
+## Player gallery update — 18 November 2026
+
+- Replaced staged preview boards with recorded play from the unchanged 0.2.170 game.
+- Added chronological gameplay, individual symbols and their real motion, both Confucius merges, all nine named-prize variants, actual menu screens and every payline chart page.
+- Put jackpot pictures and award sequences at the bottom of the galleries.
+- Added capture journals, source bindings and media verification. The game source, rules, runtime assets and playable browser bundle are unchanged.
+
+[Browse current gameplay](docs/graphics.md) · [Symbols and animation](docs/symbol-gallery.md) · [Menus and line charts](docs/menu-gallery.md)
+
+Historical validation results below describe their tagged releases.
+
+
 ## 0.2.170
 
 - Major uses WINNER-style gold lettering and a yellow amount over the held reels, replacing the opaque blue backdrop.
 - Custom Amount starts at the thousands digit with **$0,000.00**. Default sound volume is **10%**.
 - Expanded graphics gallery: individual symbols and their available animations, two-/three-row Confucius fusions, named-prize variants, feature effects, menus and cabinet artwork.
 - Firmware, browser demo, game guide, gallery and signed flasher are synchronized to this release. Gameplay probability weights are unchanged.
-
-<img src="docs/media/major-award.png" alt="Gold Major title over visible Phoenix reels" width="720">
-
-<img src="docs/media/major-fire.webp" alt="Animated gold Major overlay" width="720">
-
-<img src="docs/media/startup-voucher.png" alt="Voucher starts at the thousands digit" width="720">
 
 ### Validation
 
@@ -27,14 +33,6 @@ Complete firmware/assets readback and 18 fresh-start checks passed on the origin
 - Jackpot labels and award lettering use source-derived shapes with clearer outlines. The Grand ending uses the centered WINNER display instead of a separate invented title screen.
 - Recorded 1¢ / 50-line / 5× Mini and Minor prices are $10 and $50. The affected return and counter-entry calculations are repriced; probability weights remain unchanged.
 - Gallery screens, animations, the three-spin showcase, browser demo and numeric references are regenerated from this source.
-
-<img src="docs/media/startup-standard.png" alt="Initial denomination chooser with original portrait and curved temple" width="720">
-
-<img src="docs/media/startup-menu.png" alt="Full menu available during startup" width="720">
-
-<img src="docs/media/jackpot-variants.png" alt="Single, double and triple named-prize symbols" width="720">
-
-<img src="docs/media/collection-fast-total.png" alt="Phoenix tally completed with one button press" width="720">
 
 ### Validation
 
@@ -68,12 +66,6 @@ All 77 wager choices pass actual Main/UI startup and funding checks. Manual/auto
 - Jackpot amounts, outcome weights and CSPRNG provider are unchanged.
 
 
-<img src="docs/media/credit-voucher.png" alt="Custom credit voucher" width="720">
-
-<img src="docs/media/wagers.png" alt="Wager selector with temple courtyard" width="720">
-
-<img src="docs/media/jackpots-fire.webp" alt="Animated jackpot title fire" width="720">
-
 ## 0.2.141
 
 - Opening a menu pauses the feature and its music. Returning to play continues the tune from its paused position instead of replaying the opening bells.
@@ -98,8 +90,6 @@ Current source, browser, firmware and media identities are recorded in [release 
 - New sessions open on freshly sampled reels. The opening display does not place a bet, pay a win, advance the counter, record a spin or start a bonus. Credits still start at 1,000 and autoplay starts off.
 - Counter editing stays within 0–1886 throughout. The first digit alternates 0/1; subsequent digits follow the selected prefix. When a larger prefix makes the old remainder invalid, the editor fits it within the ceiling. Apply and Cancel retain their existing behavior; jackpot amount editing is unchanged.
 - The browser game, player guide, gallery and signed firmware package describe the same final source.
-
-<img src="docs/media/counter-editor.webp" alt="Counter digits wrap within the valid range" width="720">
 
 ### 0.2.130 validation
 

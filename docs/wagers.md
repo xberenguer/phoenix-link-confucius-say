@@ -33,8 +33,6 @@ The caption is a tiny above/below adaptation for the 240 × 135 display; physica
 
 Focus starts at the first denomination, first PLAY LINES choice and first offered BET button, in that order. Existing choices stay marked until changed. Selecting lines updates the red credit amounts without spending credits. At startup, selecting BET opens the reels with no balance; blue then opens the voucher. During funded play, a red BET starts a spin.
 
-<img src="media/wagers-lines.png" alt="Denomination selected with focus on a real PLAY LINES control" width="720">
-
 Holding grey or choosing RETURN applies the selected denomination and lines without spending credits or starting a spin. The current multiplier is retained when offered; otherwise the first supported multiplier is selected. The green counter changes to that wager's existing bank. An unaffordable red BET still selects its wager and counter, then follows the normal insufficient-funds path. A new session starts at its default wager; no previous game is imported.
 
 The [payout reference](payouts.md) exports the wider internal evaluator support with a selectable flag. Those internal rows must not be read as extra live cabinet buttons. See [controls](controls.md) for focus/navigation and [session rules](saving.md) for live feature/funding boundaries.
@@ -50,8 +48,6 @@ The filmed high-limit General Tso cabinet directly shows all seven denominations
 The extra denominations retain the existing local model in credit units. Their reference return enclosures are transported from the $10 local credit law; this does not identify casino probabilities, jackpot seeds or linked progressive contributions. Default jackpot values remain local simulator values. Use Counter & Jackpots to match displayed cash amounts for practice; custom amounts do not retain the default return qualification.
 
 References: [General Tso high-limit play](https://www.youtube.com/watch?v=FbBUqjjzN08), [Confucius Say $750 play](https://www.youtube.com/watch?v=5BUJOWxIBN4).
-
-![High-limit $5, 50-line selection](media/high-limit-fifty.png)
 
 ## Reel display when switching
 
