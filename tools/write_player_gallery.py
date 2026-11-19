@@ -211,6 +211,13 @@ class Gallery:
             ("startup-lines-and-bet", "Choose the lines and bet", "primary"),
         ]:
             text += self.screen(name, title, session=session, moving=False)
+        text += ("### What does PLAY LINES mean?\n\n"
+                 "A **line** is a fixed path across the five reel columns, using one symbol from each column. "
+                 "Some paths go straight across; others move between the top, middle and bottom rows. "
+                 "The picture below shows five different paths. **5 lines means the game checks all five paths on the same spin.**\n\n"
+                 "[Follow a line step by step, with real examples](paylines.md).\n\n")
+        text += self.image(PREFIX + "screens/menus/paylines-5-1.png",
+                           "Five actual payline paths, each crossing the same five-column, three-row reel grid") + "\n\n"
         text += self.section("2. Add play credits",
                              "Open the voucher, enter an amount and select INSERT CREDITS. All credits are pretend money.")
         for name, title in [

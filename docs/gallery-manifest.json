@@ -5955,6 +5955,116 @@
       "source_version": "0.2.170"
     },
     {
+      "file": "media/gameplay/artwork/paylines/line-1.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "08d7952f478ae6f23d6fea33a6a88b1d47cfe8e8c109a0439bd8189aac7c7ae5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/line-2.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50126cadceb766d9fb7c75a94bb74cde82639353c98f16d1daa063a1f9de47c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/line-3.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7a57a10fdc99583526931c353c2d046e66c042d7706312a901ffd4ead7976e4b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/line-4.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "433686e3483013bb335fa36e1dac77c8c72dddcdf17c3e7f2a0ce2043ff71436",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/line-5.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6be362e15175a94481dfe6e9ede97d7604d0d017ff70ee742a060e8633b78d85",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
       "file": "media/gameplay/session.webp",
       "kind": "animation",
       "session_id": "loops",
@@ -6111,5 +6221,5 @@
   "menu_capture_sha256": "d214625045a8f81b7454ba7da42654d9d94ab0fd0a085900dfa1adb7e9106016",
   "kind": "recorded-gameplay-summary",
   "capture_manifest": "gameplay-media.json",
-  "capture_manifest_sha256": "bdf8d5d0215a0f300ea16e349b331f5640cb45866b617f8fe8302219472c1959"
+  "capture_manifest_sha256": "2bd43e00a652a752b77d6868a3ed65b469beba9bcd17c68dbd30d636ae13cf6b"
 }

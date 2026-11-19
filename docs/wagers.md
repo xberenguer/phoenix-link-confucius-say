@@ -2,6 +2,8 @@
 
 [← Full player guide](README.md) · [Gallery](graphics.md)
 
+**New to PLAY LINES?** Each line is a fixed route that reads one symbol from each of the five columns. Selecting more lines makes the game check more routes through the same result from one spin. [See the actual charts and follow a winning line step by step →](paylines.md)
+
 The current wager menu offers these denomination, line and multiplier choices. Most controls follow a recorded Confucius Say cabinet; the $1/10-line paid row uses the separately qualified family adaptation described below. The menu is narrower than every configuration the internal evaluator can represent.
 
 | Denomination | Line controls | Bet multipliers offered |
@@ -20,6 +22,8 @@ The standard menu has 55 selectable denomination/line/multiplier combinations. P
 **Stake in money = stake in credits × denomination.**
 
 For example, 1¢ × 50 lines × multiplier 3 costs 150 credits, or $1.50. Selecting 100 lines with the same multiplier changes the red amount to 300 credits and costs $3.00. At $1 × 5 lines × multiplier 2, the stake is 10 credits, or $10.
+
+Changing the line count changes the stake when the denomination and multiplier stay fixed. The game still spins once. More lines do not guarantee a win or a profit.
 
 The menu evidence is cabinet-specific. It does not establish a universal denomination deck, a recovered pay program, or identical odds across all offered settings.
 

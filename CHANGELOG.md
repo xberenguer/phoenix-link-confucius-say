@@ -4,6 +4,8 @@
 
 Combined gameplay, symbols, animations and menus into one [Gallery](docs/graphics.md), with screenshots beside inline recorded motion and jackpots at the bottom. The [full player guide](docs/README.md) now includes the first-game walkthrough and a visual symbol key.
 
+Added a [beginner's payline walkthrough](docs/paylines.md) with actual chart photos, enlarged individual routes, a real three-Tens winning example, bet-cost calculations and all 37 chart pages. The guide explains lines before the first wager selection.
+
 Replaced fixed-length animation parts with complete recorded actions and declared replay pauses, closed periodic symbol loops on matching real frames, and selected fully visible win screenshots. The playable game and its runtime assets are unchanged.
 
 ## Player gallery update — 18 November 2026

@@ -24,6 +24,14 @@ Choose a coin value, a PLAY LINES option and a red BET button.
 
 <a href="media/gameplay/screens/primary/startup-lines-and-bet.png"><img src="media/gameplay/screens/primary/startup-lines-and-bet.png" alt="Choose the lines and bet" width="720" height="405" loading="lazy"></a>
 
+### What does PLAY LINES mean?
+
+A **line** is a fixed path across the five reel columns, using one symbol from each column. Some paths go straight across; others move between the top, middle and bottom rows. The picture below shows five different paths. **5 lines means the game checks all five paths on the same spin.**
+
+[Follow a line step by step, with real examples](paylines.md).
+
+<a href="media/gameplay/screens/menus/paylines-5-1.png"><img src="media/gameplay/screens/menus/paylines-5-1.png" alt="Five actual payline paths, each crossing the same five-column, three-row reel grid" width="720" height="405" loading="lazy"></a>
+
 ## 2. Add play credits
 
 Open the voucher, enter an amount and select INSERT CREDITS. All credits are pretend money.

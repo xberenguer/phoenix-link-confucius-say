@@ -37,6 +37,14 @@ Hold blue on this first screen to switch to **High Limit**. It changes the avail
 
 ### 3. Choose lines and a bet
 
+**What does PLAY LINES mean?** A “reel” is one vertical column. The five columns each show three symbols. A line is a fixed route that picks one position in each column, from left to right. Some routes go straight across a row; others bend between the rows.
+
+<img src="media/gameplay/screens/menus/paylines-5-1.png" alt="Actual five-line chart showing three straight routes and two routes that bend between rows" width="720" height="405" loading="lazy">
+
+In this chart, **line 1** reads the middle position in every column. **Line 4** reads **top → middle → bottom → middle → top**. Selecting 25 lines means the game checks 25 routes through the **same 15 symbols from one spin**. It still spins once, and you do not need to identify the wins yourself.
+
+Matching regular symbols must start at the leftmost column and continue along a selected route. Confucius can help as a Wild; Wisdom and Phoenix have separate feature rules. [Follow an actual winning line, picture by picture →](paylines.md)
+
 Choose a **PLAY LINES** option, then one of the red **BET** buttons. Grey moves the highlight; blue confirms it. The red number is the full bet in credits.
 
 <img src="media/gameplay/screens/primary/startup-lines-and-bet.png" alt="Actual line and bet chooser after selecting a denomination" width="720" height="405" loading="lazy">
