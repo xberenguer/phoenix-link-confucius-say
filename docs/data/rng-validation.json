@@ -24,25 +24,15 @@
   "source_tests": {
     "command": "python3 tools/test_rng.py --sanitize",
     "scope": "Known-answer, bounded-draw, entropy/reentry/exhaustion and Engine failure tests; deterministic entropy injection enabled only for tests.",
-    "checks": 47905,
+    "checks": 47931,
     "ASAN_UBSAN": true
   },
   "native_validation": {
     "target_build": true,
-    "flash_readback": true,
-    "healthy_startup": true,
-    "fresh_credits": 0,
-    "autoplay_off_at_boot": true,
-    "atlas_frames_verified": 60,
-    "startup_entropy_captures": 2,
-    "user_confirmed_animations_and_buttons": false,
-    "live_USB_spin_probe_verified": false,
+    "flash_readback": false,
+    "healthy_startup": false,
     "physical_entropy_strength_measured": false,
-    "validation_scope": "Current public-project target build, full original-device firmware/assets readback and healthy fresh startup passed. Source/API, browser and menu tests have their own scope; physical entropy quality and factory equivalence are not claimed.",
-    "loop_stack_high_water_mark": 4048,
-    "native_boot_checks": 18,
-    "live_USB_menu_probe_verified": false,
-    "audio_volume_percent": 10
+    "validation_scope": "0.2.171 compiled target and browser/software checks passed. No physical installation of this release has been observed."
   },
   "casino_calibrated": false,
   "Nevada_approved": false,
@@ -55,5 +45,22 @@
     "initial_display_unpaid": true,
     "scope": "Deterministic software equivalence regression; not casino frequency, entropy-strength or RTP measurement."
   },
-  "qualification_note_0_2_171": "RNG primitive/service unchanged. Historical NIST study is not a new study of0.2.171; current Engine boundary tests are recorded separately."
+  "qualification_note_0_2_171": "RNG primitive/service unchanged. Historical NIST study is not a new study of0.2.171; current Engine boundary tests are recorded separately.",
+  "historical_native_validation_0_2_170": {
+    "target_build": true,
+    "flash_readback": true,
+    "healthy_startup": true,
+    "fresh_credits": 0,
+    "autoplay_off_at_boot": true,
+    "atlas_frames_verified": 60,
+    "startup_entropy_captures": 2,
+    "user_confirmed_animations_and_buttons": false,
+    "live_USB_spin_probe_verified": false,
+    "physical_entropy_strength_measured": false,
+    "validation_scope": "Historical0.2.170 device checks; not a physical test of0.2.171.",
+    "loop_stack_high_water_mark": 4048,
+    "native_boot_checks": 18,
+    "live_USB_menu_probe_verified": false,
+    "audio_volume_percent": 10
+  }
 }
