@@ -46,7 +46,7 @@ An unavailable row cannot start a paid spin. Owed features protect their existin
 
 In **Paylines**, grey advances through six diagrams per page, blue switches line layouts, and holding grey returns to Game Menu. Browsing leaves your bet unchanged. See [all line layouts](paylines.md).
 
-On menu pages, grey moves and blue selects. Simulator Return offers six local-model options at a qualified closed Base boundary. Applying a choice changes future Grand only for this live session. Displayed ranges are ideal-model references. See [Simulator Return](settings.md#simulator-return).
+On menu pages, grey moves and blue selects. Simulator Return offers six local-model options at a qualified closed Base boundary. Applying a choice changes future Grand only for this live session. The current counter law has no calculated return range; the retained Grand amount remains selectable. See [Simulator Return](settings.md#simulator-return).
 
 Opening a menu pauses the current feature and its music. Returning to Game resumes them; paid autoplay remains stopped.
 

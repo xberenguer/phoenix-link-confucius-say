@@ -44,7 +44,7 @@ Opening a menu does not reset the meter. Each boot or page reload starts fresh m
 
 <img src="media/gameplay/screens/menus/counter-editor-unmodified.png" alt="The actual counter editor opened for inspection; no counter value was changed for the captures" width="720" height="405" loading="lazy">
 
-**Game Menu → Counter & Jackpots → Set Feature Counter** accepts **0 through 1886**. Apply changes only the current wager's bucket and returns to regular play. Other buckets, credits and statistics remain unchanged. Editing requires a completed Base round with no owed feature. The leading digit cycles between 0 and 1. Later digits stay within the allowed prefix, so every draft remains between 0 and 1886. Changing a higher digit may shorten the remaining value to fit the ceiling.
+**Game Menu → Counter & Jackpots → Set Feature Counter** accepts **0 through 1887**. Apply changes only the current wager's bucket and returns to regular play. Other buckets, credits and statistics remain unchanged. Editing requires a completed Base round with no owed feature. The leading digit cycles between 0 and 1. Later digits stay within the allowed prefix, so every draft remains between 0 and 1887. Changing a higher digit may shorten the remaining value to fit the ceiling.
 
 Changing the count also draws a new hidden threshold above that count using the local model below. Applying the same count leaves the existing threshold untouched. This is a simulator control; it does not recover a real cabinet's hidden threshold or expected return. See [the editor controls](settings.md#feature-counter-and-jackpot-amounts).
 
@@ -52,13 +52,13 @@ Changing the count also draws a new hidden threshold above that count using the 
 
 ## Local meter model
 
-After a hit, the simulator chooses a reset uniformly from 100 through 1500. It then chooses its hidden threshold uniformly from the next count through 1887. The **support** of the reset and must-hit limit has regional rulebook support; the **uniform distributions do not**. On later arrivals the stored threshold stays in force until the bucket hits.
+After a hit, the simulator chooses a reset uniformly from 100 through 1500. It then chooses its hidden threshold uniformly from the next count through 1888 (the arrival that awards and resets, never an idle display). The **support** of the reset and must-hit limit has regional rulebook support; the **uniform distributions do not**. On later arrivals the stored threshold stays in force until the bucket hits.
 
-The current Core increments, awards and resets before recording the arrival’s displayed counter. With hidden threshold at most 1887 and a valid counter strictly below it, the editor accepts at most 1886. This is a local state/display policy, not proof that a factory screen cannot show 1887. A single still cannot establish whether such a value is idle or already awaiting a triggered feature.
+The Core increments, awards and resets before recording the arrival’s displayed counter. Its hidden award-arrival can be as late as 1888, allowing **1887** to remain on screen. The next collected Phoenix then awards and resets before 1888 can appear. This corrects the earlier off-by-one; the supplied General Tso cabinet photo confirms a displayed 1887. The factory trigger distribution is still unknown.
 
 That local mechanism can make late-meter play more valuable conditionally, but it does not identify the casino's hazard curve or a profitable entry point. Published AP thresholds, selected bonus videos and aggregate casino returns are not a replacement for original distributions. No particular counter value on this simulator proves positive expected value on a real machine.
 
-See [counter-entry return](counter-entry.md) for the current model's calculated thresholds, payout exclusions and the measurements needed for better calibration.
+See [counter-entry return](counter-entry.md) for historical 0.2.170 thresholds (not recalculated for the corrected boundary), payout exclusions and the measurements needed for better calibration.
 
 ## Entry and queueing
 

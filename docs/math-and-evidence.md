@@ -57,19 +57,17 @@ Readable continuous recordings can expose a rule, shape or price mismatch. Edite
 
 ## Return and house edge
 
-The [counter-entry reference](counter-entry.md) gives conditional return calculations for the current model and explains why they are not validated casino entry thresholds.
+Version **0.2.171** corrects the collection counter so **1887** can remain visible. That changes the local counter transition law. The old return and house-edge calculations have **not** been recalculated for this law, so the game withholds those numeric ranges. No current full-cycle return enclosure is claimed.
 
-SIMULATOR RETURN offers six options. Applying an option at a closed Ready/Base boundary changes **future Grand only**. It does not change reel weights, hit probabilities, ordinary prices or other prizes.
+SIMULATOR RETURN retains six selectable **Grand price options**. Applying an option at a closed Ready/Base boundary changes **future Grand only**. The Grand amounts are exactly those in 0.2.170; ordinary prices, reel weights and the other prize settings are unchanged. The menu lists each option's Grand amount and explains that return is not calculated. The [retained schedule identity](data/retained-grand-schedule.json) records the prior source and the current price-only family.
 
-The displayed return/edge ranges are **ideal-reference-only** enclosures under a fixed profile, fixed option, always-funded play and no Lucky Chance. They assume ideal uniform draws in the unchanged local stochastic game. They do not include every source/runtime fault, restart rule, adaptive wager strategy or short-session fluctuation. Finite draw caps have nonzero failure mass and fail closed; their implementation is not silently equated with unlimited sampling.
+The [counter-entry reference](counter-entry.md) is an explicitly historical 0.2.170 calculation. Its thresholds, return percentages and old maximum of1886 must not be used as estimates for the corrected version. Keeping a Grand amount does not preserve a return bound when the probability law changes.
 
-These ranges require the default prize schedule. Edited jackpot amounts change payments while leaving arrival probabilities unchanged, so the return selector hides and locks its preset ranges until defaults are restored. Setting the feature counter changes the starting condition; the fixed-profile full-cycle range is not an estimate of the next spin's conditional value or repeated manual counter edits.
+The historical return/edge enclosures assumed a fixed profile and option, default jackpots, always-funded play, no Lucky Chance and ideal uniform draws. They did not establish original casino PAR probabilities, physical entropy quality, arbitrary wager switching or infinite-horizon CSPRNG return. Finite draw caps have nonzero failure mass and fail closed.
 
-Use the range shown for the selected denomination, lines, multiplier, option and prize-cap context. Its reference calculation covers the complete local paid-round process, including triggered Free/Hold/meter/Grand continuations, under the stated ideal-uniform assumptions. It is not a casino measurement or just a Base-line estimate. The tiny display rounds the enclosure outward. A short sample can exceed 100% because rare awards fluctuate.
+Edited jackpots and manual counter changes retain their existing behavior. Editing requires a completed Base round with no owed feature. The UI asks for credits when a paid wager is unaffordable; the Engine's separately callable Lucky Chance rule is not offered as ordinary custom-schedule play.
 
-The current UI asks for added credits when a paid wager is unaffordable. The Engine's separately callable Lucky Chance rule is outside the return-reference scope and is not offered as ordinary custom-schedule play.
-
-RTP is expected paid amount divided by expected stake under a specified process and policy. A short observed return, an EV conditional on a high counter and a fixed-profile long-run reference are different quantities. County denomination averages do not identify this game's pay program. Grand amounts are local schedules, not live casino progressive values.
+RTP is expected payout divided by expected stake under a specified process and policy. A short observed return, an EV conditional on a high counter and a fixed-profile long-run reference are different quantities. Grand amounts are local schedules, not live casino progressive values.
 
 Visible line captions and named-prize increments constrain individual prices at their filmed configurations. Numbered line markers constrain geometry. Neither type of observation identifies outcome frequencies. A price, route or probability-law change requires fresh return calculations for every affected profile; unchanged Grand amounts alone do not preserve a return bound. The [payout guide](payouts.md) separates observed prices, partial chart coverage and local fallbacks.
 

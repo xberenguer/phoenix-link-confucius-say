@@ -1,5 +1,7 @@
 # Gallery
 
+These recorded images come from **0.2.170**. Version **0.2.171** corrects the counter ceiling to **1887** and labels return estimates as pending recalculation; the recordings retain their original source provenance.
+
 [▶ Play the game](https://xberenguer.github.io/phoenix-link-confucius-say/) · [Full player guide](README.md)
 
 Explore the game in playing order: choose a wager, spin the reels, meet every symbol, and follow the bonus features. **Jackpots come last, with Grand at the very bottom.** Click any still or animation to open it separately.

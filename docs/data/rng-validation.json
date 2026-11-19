@@ -1,6 +1,6 @@
 {
-  "version": "0.2.170",
-  "runtime_fingerprint": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+  "version": "0.2.171",
+  "runtime_fingerprint": "a078117e74a871c8d5afc12e18e68e64d53351b27510ca1e59955f29580e43a1",
   "algorithm": "AES-256 CTR-DRBG",
   "backend": "Mbed TLS3.6.7 minimal private-symbol subset",
   "prediction_resistance": true,
@@ -54,5 +54,6 @@
     "next_reservoir_words_per_tape": 256,
     "initial_display_unpaid": true,
     "scope": "Deterministic software equivalence regression; not casino frequency, entropy-strength or RTP measurement."
-  }
+  },
+  "qualification_note_0_2_171": "RNG primitive/service unchanged. Historical NIST study is not a new study of0.2.171; current Engine boundary tests are recorded separately."
 }

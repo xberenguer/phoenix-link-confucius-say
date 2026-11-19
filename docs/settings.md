@@ -60,7 +60,7 @@ Custom Amount is the first Balance choice. It opens a Stardust voucher. Grey mov
 
 <img src="media/gameplay/screens/menus/jackpot-picker.png" alt="The actual jackpot-value chooser; the recorded menu visit left its values unchanged" width="720" height="405" loading="lazy">
 
-Open **Game Menu → Counter & Jackpots**. **Set Feature Counter** edits the active wager's counter from **0 to 1886**. **Jackpot Amounts** lets you select Mini, Minor, Major or Grand and enter an amount from **$0.01 to $30,000,000.00**.
+Open **Game Menu → Counter & Jackpots**. **Set Feature Counter** edits the active wager's counter from **0 to 1887**. **Jackpot Amounts** lets you select Mini, Minor, Major or Grand and enter an amount from **$0.01 to $30,000,000.00**.
 
 Grey moves between digits, Apply and Cancel; blue changes the selected digit or confirms the selected action. Counter digits wrap within the legal range; the leading digit alternates between 0 and 1. Hold grey to go back without applying. A successful Apply returns to the regular game with autoplay off. The balance and statistics are unchanged. Finish any current spin or owed feature before editing.
 
@@ -78,15 +78,11 @@ Battery percentage is not shown. See the [M5Unified implementation](https://gith
 
 <img src="media/gameplay/screens/menus/simulator-return-list.png" alt="The actual Simulator Return list opened without applying a different option" width="720" height="405" loading="lazy">
 
-SIMULATOR RETURN shows six options for the current profile; **Option 3 is the default**. Review the ideal-model return range, complementary edge range and future Grand, then press blue to apply or grey to go back. Context includes denomination, lines, multiplier and prize-cap profile.
+SIMULATOR RETURN shows six retained Grand schedules for the current profile; **Option 3 is the default**. Review the future Grand amount, then press blue to apply or grey to go back. Context includes denomination, lines, multiplier and prize-cap profile.
 
-Applying a choice changes future Grand only. Reel/hit probabilities, ordinary prices and other prizes do not change. The ranges are ideal-reference-only under fixed-profile, fixed-option, always-funded, no-Lucky play. They do not establish original casino RTP or cover arbitrary wager switching, faults or short-session results. See [math](math-and-evidence.md#return-and-house-edge).
+Applying a choice changes future Grand only. The amounts are retained from 0.2.170. Because 0.2.171 corrects the counter boundary, its return and edge are **not calculated**; old numerical ranges are not presented as current. See [math](math-and-evidence.md#return-and-house-edge).
 
-Custom jackpot amounts lock this page and hide its preset return ranges. Restore Default Jackpots to use the preset choices again. Editing amounts changes payouts without changing their arrival probabilities.
-
-A closed Ready/Base boundary is required. Free/Hold/queued work and service/capacity faults lock the choice. Browsing/help/cancellation do not alter the live round. Applied choices belong to this session; boot or reload starts fresh.
-
-Implementation: [UI](../firmware/src/ui.cpp), [selector](../firmware/src/return_selector86.h), [native startup](../firmware/src/main.cpp).
+Custom jackpot amounts lock this page. Restore Default Jackpots to use the preset choices again. Editing amounts changes payouts without changing their arrival probabilities.
 
 ## High Limit
 

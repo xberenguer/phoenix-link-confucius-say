@@ -329,9 +329,31 @@ static void positiveControls(const std::vector<Offer>&all){
  }
  CHECK(counts.freeBoardDifferences>0);
 }
+// Applying retained prices must remain usable without silently treating old
+// return bounds as evidence for the corrected counter law.
+static void retainedPriceQualification(){
+ group="retained-price-qualification";
+ CHECK(static_grand_table::family.engineModel==local::modelId);
+ CHECK(std::size(static_grand_table::entries)==9360);
+ for(const auto&row:static_grand_table::entries){
+  CHECK(row.proof==static_grand::Proof::RetainedSchedule);
+  CHECK(static_grand::qualified(row)&&!static_grand::hasQualifiedReturn(row));
+  CHECK(row.lowReturnPpm==0&&row.estimateReturnPpm==0&&row.highReturnPpm==0&&row.evidence==0);
+  const static_grand::Entry* resolved=nullptr;
+  CHECK(static_grand::resolve(static_grand_table::family,static_grand::retained(static_grand_table::family,row.slot),row.profile,resolved)==static_grand::Result::Applied);
+  CHECK(resolved==&row);
+ }
+ auto bad=static_grand_table::entries[0];bad.evidence=3;CHECK(!static_grand::qualified(bad));
+ bad=static_grand_table::entries[0];bad.highReturnPpm=1;CHECK(!static_grand::qualified(bad));
+ bad=static_grand_table::entries[0];bad.grandCredits=0;CHECK(!static_grand::qualified(bad));
+ // A retained entry cannot acquire numeric qualification just by setting bits.
+ bad=static_grand_table::entries[0];bad.evidence=3;bad.lowReturnPpm=900000;bad.estimateReturnPpm=910000;bad.highReturnPpm=920000;
+ CHECK(!static_grand::hasQualifiedReturn(bad)&&!static_grand::qualified(bad));
+}
 int main(){
  static_assert(!std::is_copy_constructible<random::Service>::value,"Services must be independent owners");
  CHECK(static_grand_table::rootAccepted&&!static_grand_table::hostTrial);
+ retainedPriceQualification();
  const auto all=offers();matrix(all);naturalRounds(all);owedContinuations(all);capacity(all);positiveControls(all);
  CHECK(counts.traces==all.size()*432&&counts.naturalRounds==all.size()*32);
  CHECK(counts.capacityRefusals==all.size()*31&&counts.capacityBoundaries==all.size()*3);

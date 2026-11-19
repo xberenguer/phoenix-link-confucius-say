@@ -53,7 +53,7 @@ struct Cell {
 
 namespace local {
 // Version identifies this local, deliberately approximate math configuration.
-constexpr uint32_t modelId = 0x0002001fu;
+constexpr uint32_t modelId = 0x00020020u;
 // Historical price-version identifiers for analytic/reference includes only.
 // No backward-compatible game restore or saved-bank import is implemented.
 constexpr uint32_t previousGPriceModelId = 0x00020010u;
@@ -497,7 +497,10 @@ constexpr bool meterCountsPhoenixMultiplier = false;  // LOCAL unknown scope.
 constexpr bool meterSharedAcrossWagers = false;
 constexpr uint16_t meterMustHitBefore = 1888;  // supplied screen observation.
 constexpr uint16_t meterThresholdMinimum = 1;  // LOCAL uniform prior; no claimed lower bound.
-constexpr uint16_t meterThresholdMaximum = meterMustHitBefore - 1;
+// Threshold is the arrival that awards/resets, not an idle display value.
+// The real cabinet can show1887. A hit on arrival1888 resets before the HUD
+// commits that arrival, so1888 is never displayed as the collected counter.
+constexpr uint16_t meterThresholdMaximum = meterMustHitBefore;
 // Operator1.01-69279 p2: reset support100..1500. No weights are supplied.
 constexpr uint16_t meterResetMinimum = 100, meterResetMaximum = 1500;
 // The support above is documented. Uniform reset/threshold weights are STILL

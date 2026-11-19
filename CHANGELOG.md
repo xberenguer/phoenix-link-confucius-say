@@ -1,5 +1,16 @@
 # Release notes
 
+## 0.2.171
+
+- The collection counter can now reach **1887**, matching the supplied General Tso cabinet photograph. The next collected Phoenix awards and resets before an idle **1888** can appear.
+- Set Feature Counter now accepts **0–1887**, including its digit editor, wager buckets and boundary validation.
+- The browser game uses the same corrected counter rule. Existing graphics/audio and retained Grand amounts are unchanged.
+- Previous numerical return and counter-entry estimates are explicitly historical; the corrected boundary needs new calculations. The six local schedule choices remain playable.
+
+### Validation
+
+The sanitized boundary suite passed 47,931 checks; the outcome suite passed 102,877,481 checks across 77 wagers and six Grand schedules. Target firmware/assets and source-bound browser builds pass. Release/media/source checks pass. A fresh physical installation of this version has not yet been observed. Historical galleries retain their original 0.2.170 capture provenance.
+
 ## Unified visual gallery and complete replays — 18 November 2026
 
 Combined gameplay, symbols, animations and menus into one [Gallery](docs/graphics.md), with screenshots beside inline recorded motion and jackpots at the bottom. The [full player guide](docs/README.md) now includes the first-game walkthrough and a visual symbol key.

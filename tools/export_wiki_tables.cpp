@@ -3,6 +3,7 @@
 // Run: /tmp/export-wiki docs/data
 #include "phoenix_engine.h"
 #include "cabinet_profile.h"
+#include "static_grand_table.h"
 #include <array>
 #include <filesystem>
 #include <fstream>
@@ -148,8 +149,18 @@ int main(int argc,char**argv){
   return true;
  };
  if(!writeDeck(cabinet_profile::coins,"standard")||!writeDeck(cabinet_profile::highLimitCoins,"high_limit"))return 4;
- pays.close();paths.close();deck.close();if(!pays||!paths||!deck)return 3;
- std::cout<<"{\"engine_model\":"<<phoenix::local::modelId<<",\"line_pay_rows\":"<<payRows<<",\"active_line_paths\":"<<pathRows<<",\"offered_wagers\":"<<offered<<"}\n";
+ // These are selectable prices only. No old numeric return/edge enclosure is
+ // exported as current after the1887 counter-law correction.
+ std::ofstream grand(output/"retained-grand-prices.csv");
+ grand<<"denomination_minor,selected_lines,bet_multiplier,prize_cap,internal_slot,grand_credits,current_return_qualified\n";
+ unsigned grandRows=0;
+ for(const auto& row:static_grand_table::entries){
+  if(!static_grand::qualified(row)||static_grand::hasQualifiedReturn(row))return 5;
+  grand<<row.profile.coinMinor<<','<<unsigned(row.profile.lines)<<','<<unsigned(row.profile.multiplier)<<','
+   <<(row.profile.cap==phoenix::PrizeCapProfile::HighCashOnly?"cash":"named")<<','<<unsigned(row.slot)<<','<<row.grandCredits<<",false\n";++grandRows;
+ }
+ pays.close();paths.close();deck.close();grand.close();if(!pays||!paths||!deck||!grand||grandRows!=std::size(static_grand_table::entries))return 3;
+ std::cout<<"{\"engine_model\":"<<phoenix::local::modelId<<",\"line_pay_rows\":"<<payRows<<",\"active_line_paths\":"<<pathRows<<",\"offered_wagers\":"<<offered<<",\"retained_grand_price_rows\":"<<grandRows<<",\"current_return_qualified\":false}\n";
  unsigned expectedPaths=0;for(auto lines:phoenix::local::lineOptions)expectedPaths+=lines;
  const size_t expectedPays=std::size(phoenix::local::denominations)*std::size(phoenix::local::lineOptions)*std::size(phoenix::local::betMultipliers)*2*symbols.size()*4;
  return payRows==expectedPays&&pathRows==expectedPaths&&menuOffered==lookupOffered&&offered==menuOffered.size()?0:4;

@@ -27,5 +27,9 @@
   "source_version": "0.2.170",
   "runtime_fingerprint": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
   "basis_sha256": "264721861fd81c9b5f019373d16939b5e911bac4b42608306689fe7a406c9c42",
-  "price_revaluation_sha256": "44a1409d56781e4537fa85f116ae8354de4fbca16f13d462eed5e8f9ace43a88"
+  "price_revaluation_sha256": "44a1409d56781e4537fa85f116ae8354de4fbca16f13d462eed5e8f9ace43a88",
+  "status": "historical_reference",
+  "current_return_qualified": false,
+  "superseded_by_version": "0.2.171",
+  "supersession_reason": "Corrected counter allows displayed1887. Changed threshold support invalidates use of these0.2.170 entry calculations as current estimates; original source identities and dataset hashes are retained."
 }

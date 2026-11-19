@@ -18,7 +18,7 @@ constexpr uint8_t analyticalBound=1,independentValidation=2;
 constexpr bool idealReferenceOnly=true;
 enum class Mode:uint8_t { RetainedStaticGrand=1 };
 enum class Wire:uint8_t { Legacy1=1,Neutral2=2 };
-enum class Proof:uint8_t { LocalAnalyticEnclosure=1 };
+enum class Proof:uint8_t { LocalAnalyticEnclosure=1, RetainedSchedule=2 };
 struct Entry {
  Profile profile;uint8_t slot=4;int64_t grandCredits=0;
  uint32_t lowReturnPpm=0,estimateReturnPpm=0,highReturnPpm=1000000;
@@ -30,11 +30,20 @@ struct Preference {Wire wire=Wire::Neutral2;Selection neutral{};legacy_static_gr
 inline bool same(const Selection&a,const Selection&b){return a.mode==b.mode&&a.slot==b.slot&&a.family==b.family;}
 inline Selection retained(const Family&f,uint8_t slot){return {Mode::RetainedStaticGrand,slot,f.fingerprint};}
 inline Preference current(const Selection&s){Preference p;p.neutral=s;return p;}
-inline bool qualified(const Entry&e){
+// Numeric evidence is separate from eligibility to apply a retained Grand price.
+inline bool hasQualifiedReturn(const Entry&e){
  return e.slot<6&&e.proof==Proof::LocalAnalyticEnclosure&&
   (e.evidence&(analyticalBound|independentValidation))==(analyticalBound|independentValidation)&&
   e.grandCredits>0&&e.grandCredits<=phoenix::local::maximumCreditPrize&&
   e.lowReturnPpm<=e.estimateReturnPpm&&e.estimateReturnPpm<=e.highReturnPpm&&e.highReturnPpm<1000000;
+}
+// RetainedSchedule is an explicit price-only entry. Zero return fields cannot
+// accidentally become a claim of zero-percent return or a fabricated bound.
+inline bool qualified(const Entry&e){
+ if(e.proof==Proof::RetainedSchedule)return e.slot<6&&e.grandCredits>0&&
+  e.grandCredits<=phoenix::local::maximumCreditPrize&&e.evidence==0&&
+  e.lowReturnPpm==0&&e.estimateReturnPpm==0&&e.highReturnPpm==0;
+ return hasQualifiedReturn(e);
 }
 inline Result resolve(const Family&f,const Selection&s,const Profile&p,const Entry*&out){
  out=nullptr;

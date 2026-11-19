@@ -233,7 +233,7 @@ bool returnDetail86(unsigned option,return_selector86::Detail&out){
  const auto selected=static_grand::retained(*mathFamily,return_selector86::optionToSlot[option]);
  const static_grand::Entry* row=nullptr;
  if(static_grand::resolve(*mathFamily,selected,static_grand::profile(engine),row)!=static_grand::Result::Applied)return false;
- out={row->profile,mathFamily->fingerprint,row->grandCredits,row->lowReturnPpm,row->estimateReturnPpm,row->highReturnPpm,uint8_t(option),true};return true;
+ out={row->profile,mathFamily->fingerprint,row->grandCredits,row->lowReturnPpm,row->estimateReturnPpm,row->highReturnPpm,uint8_t(option),true,static_grand::hasQualifiedReturn(*row)};return true;
 }
 void openReturnSelector86(){
  returnSelector86={};const auto selected=effectiveMathChoice();const int saved=selected.family!=static_grand::Fingerprint{}?return_selector86::optionFor(selected.slot):-1;
@@ -1869,17 +1869,22 @@ void drawMath(){
  }
  if(returnSelector86.page==Page::Help){
   text("CHANGES FUTURE GRAND ONLY",120,44,7,BRIGHT,1);text("REELS / HITS / OTHER PAYS SAME",120,57,7,WHITE,1);
-  text("KEEP BET AND OPTION FIXED",120,70,7,WHITE,1);text("FUNDED PLAY WITHOUT LUCKY",120,83,7,WHITE,1);
-  text("AVERAGE OVER MANY ROUNDS",120,96,7,WHITE,1);text("ORIGINAL CASINO RTP UNKNOWN",120,109,7,BRIGHT,1);
+  text("GRAND PRICES RETAINED",120,70,7,WHITE,1);text("1887 COUNTER LAW UPDATED",120,83,7,WHITE,1);
+  text("RETURN NOT RECALCULATED",120,96,7,WHITE,1);text("ORIGINAL CASINO RTP UNKNOWN",120,109,7,BRIGHT,1);
   text("BLUE OR GREY: BACK",120,121,6,WHITE,1);return;
  }
  if(returnSelector86.page==Page::Detail){
   const auto&d=returnSelector86.detail;char heading[32],range[32],edge[32];
   snprintf(heading,sizeof(heading),"RETURN OPTION %u",unsigned(d.option)+1);panel(heading);
-  return_selector86::range(d.low,d.high,range,sizeof(range));return_selector86::edge(d.low,d.high,edge,sizeof(edge));
-  text("LONG-RUN MODEL RETURN",120,42,7,WHITE,1);text(range,120,52,12,BRIGHT,1);
-  text("FIXED BET + OPTION / FUNDED / NO LUCKY",120,68,6,WHITE,1);
-  text("MODEL HOUSE EDGE",120,81,7,WHITE,1);text(edge,120,90,10,BRIGHT,1);
+  if(d.returnQualified){
+   return_selector86::range(d.low,d.high,range,sizeof(range));return_selector86::edge(d.low,d.high,edge,sizeof(edge));
+   text("LONG-RUN MODEL RETURN",120,42,7,WHITE,1);text(range,120,52,12,BRIGHT,1);
+   text("FIXED BET + OPTION / FUNDED / NO LUCKY",120,68,6,WHITE,1);
+   text("MODEL HOUSE EDGE",120,81,7,WHITE,1);text(edge,120,90,10,BRIGHT,1);
+  }else{
+   text("MODEL RETURN / HOUSE EDGE",120,42,7,WHITE,1);text("NOT CALCULATED",120,54,10,BRIGHT,1);
+   text("1887 COUNTER LAW UPDATED",120,76,7,WHITE,1);text("PRIOR RTP RANGES WITHHELD",120,90,7,WHITE,1);
+  }
   const auto grand=money(d.grand*d.profile.coinMinor);text(("FUTURE GRAND "+grand).c_str(),120,105,8,WHITE,1);
   text(returnSelector86.contextChanged?"VALUES CHANGED - REVIEW AGAIN":statusLine[0]?statusLine:"BLUE: APPLY   GREY: BACK",120,121,7,BRIGHT,1);return;
  }
@@ -1890,11 +1895,11 @@ void drawMath(){
   if(focused)fill(16,y-1,208,9,0x2a86);
   if(i<6){char label[24],range[32];snprintf(label,sizeof(label),"%u%s",i+1,i==return_selector86::defaultOption?" DEFAULT":"");
    if(int(i)==saved)text("*",18,y,8,BRIGHT);text(label,24,y,8,focused?BRIGHT:WHITE);
-   return_selector86::Detail d;if(returnDetail86(i,d))return_selector86::range(d.low,d.high,range,sizeof(range));else snprintf(range,sizeof(range),"UNAVAILABLE");
+   return_selector86::Detail d;if(returnDetail86(i,d)){if(d.returnQualified)return_selector86::range(d.low,d.high,range,sizeof(range));else snprintf(range,sizeof(range),"GRAND %s",money(d.grand*d.profile.coinMinor).c_str());}else snprintf(range,sizeof(range),"UNAVAILABLE");
    text(range,214,y,8,focused?BRIGHT:WHITE,2);
   }else text(i==6?"ABOUT MODEL RETURN":"BACK",24,y,8,focused?BRIGHT:WHITE);
  }
- text("* SESSION; LOCAL MODEL; CASINO RTP UNKNOWN",120,113,6,BRIGHT,1);text("GREY: NEXT  BLUE: SELECT  HOLD GREY: BACK",120,121,6,WHITE,1);
+ text("* SESSION; GRAND PRICES; RTP UNCALCULATED",120,113,6,BRIGHT,1);text("GREY: NEXT  BLUE: SELECT  HOLD GREY: BACK",120,121,6,WHITE,1);
 }
 void drawService(){
  if(amountFailureShown190){fill(8,30,224,72,0x0000);text("AMOUNT DATA INVALID",120,48,10,WHITE,1);text("GAME STOPPED",120,70,8,WHITE,1);return;}
@@ -3266,12 +3271,12 @@ String uiMathDiagnostic(){
  out+=String(",\"neutralScheduleSlot\":")+(selected.family!=static_grand::Fingerprint{}?String(selected.slot):String("null"));
  out+=String(",\"currentCachedGrandCredits\":")+(engine.state.jackpotUnits[3]==phoenix::money::Unit::Credits?integer(engine.state.jackpotCoins[3]).c_str():"null");
  int64_t grandMinor190=0;out+=String(",\"currentCachedGrandMinor\":")+(engine.jackpotAmountMinor(3,grandMinor190)?integer(grandMinor190).c_str():"null");
- out+=",\"proofKind\":\"localAnalyticEnclosure\",\"proofScope\":\"fixedProfileFundedNoLuckyIdealDraws\"";
- out+=String(",\"futureEnclosureQualified\":")+(status==static_grand::Result::Applied?"true":"false");
- if(row){out+=String(",\"futureChosenGrandCredits\":")+integer(row->grandCredits).c_str();out+=String(",\"futureLocalLowerPpm\":")+row->lowReturnPpm+",\"futureLocalNumericalPointPpm\":"+row->estimateReturnPpm+",\"futureLocalUpperPpm\":"+row->highReturnPpm;}
+ out+=row&&static_grand::hasQualifiedReturn(*row)?",\"proofKind\":\"localAnalyticEnclosure\",\"proofScope\":\"fixedProfileFundedNoLuckyIdealDraws\"":",\"proofKind\":\"retainedGrandSchedule\",\"proofScope\":\"pricesOnlyNoCurrentReturnProof\"";
+ out+=String(",\"futureEnclosureQualified\":")+(status==static_grand::Result::Applied&&row&&static_grand::hasQualifiedReturn(*row)?"true":"false");
+ if(row){out+=String(",\"futureChosenGrandCredits\":")+integer(row->grandCredits).c_str();if(static_grand::hasQualifiedReturn(*row))out+=String(",\"futureLocalLowerPpm\":")+row->lowReturnPpm+",\"futureLocalNumericalPointPpm\":"+row->estimateReturnPpm+",\"futureLocalUpperPpm\":"+row->highReturnPpm;}
  if(mathSelection.wire==static_grand::Wire::Legacy1){out+=String(",\"legacySelectorProvenanceOnly\":true,\"legacySelectorBps\":")+mathSelection.legacy.requestedBps+",\"legacySelectorWasCeiling\":"+(mathSelection.legacy.setting==legacy_static_grand::Setting::UpperCeiling?"true":"false");}
  out+=String(",\"capacityService\":")+(capacityService.active()?"true":"false")+",\"capacityMask\":"+capacityService.reasonMask()+",\"checkpointBlocked\":"+(checkpointBlocked?"true":"false");
- out+=",\"mathFamily\":\"";out+=math_runtime_identity::mathematicalFamily;out+="\",\"runtimeFingerprint\":\"";out+=math_runtime_identity::fingerprint;out+="\",\"runtimeAccepted\":";out+=math_runtime_identity::accepted?"true":"false";out+=",\"returnEvidence\":\"ideal-uniform-local-model-only\",\"actualCSPRNGInfiniteHorizonReturnQualified\":false,\"originalCasinoCalibration\":false}";return out;
+ out+=",\"mathFamily\":\"";out+=math_runtime_identity::mathematicalFamily;out+="\",\"runtimeFingerprint\":\"";out+=math_runtime_identity::fingerprint;out+="\",\"runtimeAccepted\":";out+=math_runtime_identity::accepted?"true":"false";out+=",\"returnEvidence\":\"retained-prices-only-current-return-unqualified\",\"actualCSPRNGInfiniteHorizonReturnQualified\":false,\"originalCasinoCalibration\":false}";return out;
 }
 
 bool uiReturnSelectionInputFenced(){return returnSelector86.pending||returnSelector86.recoveryFence;}

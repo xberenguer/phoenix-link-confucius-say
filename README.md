@@ -1,5 +1,7 @@
 # Confucius Say
 
+**Latest: 0.2.171** — the collection counter now reaches **1887**. [What changed](CHANGELOG.md#02171).
+
 A play-money recreation of **Phoenix Link — Confucius Say**, with five reels, animated symbols, Twin Free Games and Phoenix Hold & Spin.
 
 ## [▶ Play in your browser](https://xberenguer.github.io/phoenix-link-confucius-say/)

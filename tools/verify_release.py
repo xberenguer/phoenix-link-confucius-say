@@ -65,6 +65,8 @@ def verify(root):
             if parts[:2] in {("browser", "build"), ("browser", "dist"),
                               ("firmware", "release")}:
                 continue
+            if parts[0] == "browser" and path.name.startswith("BUILD"):
+                continue  # ignored local compiler commands/logs, never packaged
             if path.is_file():
                 yield path
 
@@ -89,15 +91,23 @@ def verify(root):
             "Runtime fingerprint does not match the actual source bodies")
     require(len(bodies) == release["source_body_files"] and
             len(pins) == release["source_total_files"], "Release source counts are stale")
+    # Recordings retain the source that actually produced them. A new firmware
+    # release must not relabel old captures or numerical estimates as new proof.
+    historical = read(release["historical_evidence"]["file"])
+    require(sha(root / release["historical_evidence"]["file"]) == release["historical_evidence"]["sha256"],
+            "Historical evidence binding changed")
+    historical_pins = historical["sourcePins"]
+    require(historical["version"] == "0.2.170" and historical["tag"] == "v0.2.170",
+            "Unexpected historical evidence scope")
     gallery = read("docs/gallery-manifest.json")
-    require(gallery["describes_version"] == version, "Gallery version is stale")
-    require(gallery["runtime"] == runtime, "Gallery runtime is stale")
-    require(gallery["source_files_sha256"] == pins,
+    require(gallery["describes_version"] == historical["version"], "Gallery version is stale")
+    require(gallery["runtime"] == historical["runtime"], "Gallery runtime is stale")
+    require(gallery["source_files_sha256"] == historical_pins,
             "Gallery was not regenerated/bound to the current source")
-    require(gallery["renderer_sha256"] == pins["ui.cpp"], "Gallery renderer is stale")
+    require(gallery["renderer_sha256"] == historical_pins["ui.cpp"], "Gallery renderer is stale")
     media = read("docs/changelog-media.json")
-    require(media["version"] == version, "Media version is stale")
-    require(media["runtime_fingerprint"] == runtime, "Media runtime is stale")
+    require(media["version"] == historical["version"], "Media version is stale")
+    require(media["runtime_fingerprint"] == historical["runtime"], "Media runtime is stale")
     catalog = {}
     for item in [*gallery["images"], *media["images"]]:
         path = (root / "docs" / item["file"]).resolve()
@@ -105,7 +115,7 @@ def verify(root):
                 "Missing/unsafe catalog image: " + item["file"])
         if not path.is_file():
             continue
-        require(item["source_version"] == version, "Stale image source: " + item["file"])
+        require(item["source_version"] == historical["version"], "Stale image source: " + item["file"])
         require(sha(path) == item["sha256"], "Image hash mismatch: " + item["file"])
         require(list(dimensions(path)) == item["dimensions"],
                 "Image size mismatch: " + item["file"])
@@ -174,7 +184,7 @@ def verify(root):
     model = re.search(r"modelId\s*=\s*(0x[0-9a-fA-F]+)",
                       (source / "phoenix_engine.h").read_text())[1]
     require(int(reference["engine_model"], 16) == int(model, 16) ==
-            int(release["local_model"], 16) == int(gallery["model"], 16),
+            int(release["local_model"], 16) and int(historical["model"], 16) == int(gallery["model"], 16),
             "Published model labels differ from the current Engine")
     with (root / "docs/data/offered-wagers.csv").open(newline="") as stream:
         offers = list(csv.DictReader(stream))
@@ -196,8 +206,9 @@ def verify(root):
     entry_path = root / "docs/data/counter-entry-metadata.json"
     if entry_path.exists():
         entry = read("docs/data/counter-entry-metadata.json")
-        require(entry["engine_sha256"] == pins["phoenix_engine.h"] and
-                entry["mathematical_family"] == family,
+        require(entry["engine_sha256"] == historical_pins["phoenix_engine.h"] and
+                entry["mathematical_family"] == historical["mathFamily"] and
+                entry.get("current_return_qualified") is False,
                 "Counter-entry estimates belong to another mathematical source")
         for name, item in entry["files"].items():
             path = (root / "docs/data" / name).resolve()

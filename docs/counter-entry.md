@@ -1,6 +1,8 @@
-# Counter-entry return
+# Historical counter-entry return — 0.2.170
 
-The simulator's counter-entry curve is **not calibrated to the real Phoenix Link machine**. Its rules include recorded observations, but its reel, prize, Hold-arrival and hidden-trigger probabilities remain modeled. These calculations describe practice within this game; they do not establish a casino entry point.
+**Historical reference only.** Version **0.2.171** allows a displayed counter of **1887**, correcting the old maximum of1886. This changes the modeled transition law. The numbers and CSV files below remain bound to **0.2.170** and have not been recalculated for the corrected game. The current game shows Grand price options without a numeric return/house-edge claim.
+
+The 0.2.170 simulator's counter-entry curve is **not calibrated to the real Phoenix Link machine**. Its rules include recorded observations, but its reel, prize, Hold-arrival and hidden-trigger probabilities remain modeled. These calculations describe practice within this game; they do not establish a casino entry point.
 
 ## What an entry return measures
 
@@ -10,7 +12,7 @@ Entry return is **expected payout divided by expected paid stakes** over repeate
 
 A high starting counter can have positive conditional value while continuous play has a house edge. Paying to build the counter yourself includes the earlier costs. An expected return above 100% does not guarantee a winning session.
 
-## Current calculated thresholds
+## Historical 0.2.170 calculated thresholds
 
 | Wager | Long-run full return | First counter above 110%, all payouts | First above 110%, excluding Minor, Major and Grand |
 |---|---:|---:|---:|
@@ -23,11 +25,11 @@ The excluded-prize column values **all** Minor, Major and Grand payments at zero
 
 Rare jackpots make a large contribution to the full-return curve. At the default wager's 1,283 entry, expected Grand payments contribute about $869 of the approximately $1,681 expected total payout. That dependence, and the nearly identical thresholds across bet multipliers, remain important calibration gaps.
 
-## Source-priced wager
+## Historical source-priced wager
 
 At **1¢ / 50 lines / 5×**, Mini is **$10** and Minor is **$50**, matching the retained recording. Under this local probability model, long-run full return is **94.68%**; the first full-payout 110% entry is **1,265**, or **1,779** when all Minor, Major and Grand payments are excluded. This price evidence does not calibrate the counter curve to casino results. See the [recorded prize evidence](sources.md#recorded-mini-and-minor-prices).
 
-## What the model still assumes
+## What the historical model assumes
 
 - The original virtual reel strips and stop frequencies are unrecovered; symbol weights and stacking are local choices.
 - Each empty Hold cell currently has a 9.5% landing chance per respin. That figure is not a measured casino estimate.
@@ -35,7 +37,7 @@ At **1¢ / 50 lines / 5×**, Mini is **$10** and Minor is **$50**, matching the 
 - Reset values are uniform from 100 through 1,500; the hidden threshold is then uniform above that value through 1,887. Regional rules document limits, not those uniform distributions or their US applicability.
 - A secure random generator supplies the draws. It does not authenticate the probabilities assigned to outcomes.
 
-The [Engine](../firmware/src/phoenix_engine.h) defines these choices. The [counter guide](collection-counter.md) explains grouping, progress and queueing. [Math and evidence](math-and-evidence.md) distinguishes recovered observations from assumptions.
+The [0.2.170 Engine](https://github.com/xberenguer/phoenix-link-confucius-say/blob/v0.2.170/firmware/src/phoenix_engine.h) defines those historical choices. The [counter guide](collection-counter.md) explains grouping, progress and queueing. [Math and evidence](math-and-evidence.md) distinguishes recovered observations from assumptions.
 
 ## What would improve real-machine fidelity
 

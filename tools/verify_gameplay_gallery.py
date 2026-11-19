@@ -112,11 +112,15 @@ def verify(root):
         require(False, "Cannot read gallery/release metadata: " + str(exc))
         return {"status": "FAIL", "checks": checks, "errors": errors}
     require(manifest.get("kind") == "recorded-gameplay", "Gallery is not recorded-play evidence")
-    require(manifest.get("version") == release["version"], "Recorded gallery version is stale")
-    require(manifest.get("runtime") == release["runtime_fingerprint"], "Recorded gallery runtime is stale")
+    archive_path = root / release["historical_evidence"]["file"]
+    require(sha(archive_path) == release["historical_evidence"]["sha256"], "Historical capture binding differs")
+    archive = json.loads(archive_path.read_text())
+    require(manifest.get("version") == archive["version"], "Recorded gallery version is stale")
+    require(manifest.get("runtime") == archive["runtime"], "Recorded gallery runtime is stale")
     source = root / "firmware/src"
     pins = {p.relative_to(source).as_posix(): sha(p)
             for p in sorted(source.rglob("*")) if p.is_file()}
+    pins = archive["sourcePins"]
     require(manifest.get("source_files_sha256") == pins,
             "Recorded gallery does not bind the unchanged current source")
     capture = manifest.get("capture", {})

@@ -21,7 +21,12 @@ identity = (original / 'math_runtime_identity.h').read_text()
 table = (original / 'static_grand_table.h').read_text()
 assert re.search(r'\baccepted\s*=\s*true\s*;', identity)
 assert 'rootAccepted=true' in table and 'hostTrial=false' in table
-assert all(v == '3' for v in re.findall(r'Proof::[A-Za-z0-9_]+,(\d+)}', table))
+proofs = re.findall(r'Proof::([A-Za-z0-9_]+),(\d+)}', table)
+assert proofs and all((kind, evidence) in {('LocalAnalyticEnclosure', '3'), ('RetainedSchedule', '0')} for kind, evidence in proofs)
+# Price-only retained entries must never acquire numeric return claims.
+for row in table.splitlines():
+    if 'Proof::RetainedSchedule' in row:
+        assert re.search(r'LL,0,0,0,static_grand::Proof::RetainedSchedule,0}', row)
 runtime = re.search(r'fingerprint="([^"]+)"', identity)[1]
 family = re.search(r'mathematicalFamily="([^"]+)"', identity)[1]
 assert runtime == binding['runtime'] and family == binding['mathFamily']

@@ -1,10 +1,10 @@
 {
-  "version": "0.2.170",
-  "runtime": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
+  "version": "0.2.171",
+  "runtime": "a078117e74a871c8d5afc12e18e68e64d53351b27510ca1e59955f29580e43a1",
   "artifacts": {
     "PROVENANCE.json": {
-      "bytes": 20152,
-      "sha256": "e1258aea2c19194cfe1652c10891c4b1699c2b7c5f01f7ff0eb572b1bd08ee0f"
+      "bytes": 20165,
+      "sha256": "b79bb778750c0aab8a910adc8f97dda38640a84f7187730c731262f7e1a43832"
     },
     "THIRD_PARTY_LICENSES.txt": {
       "bytes": 37000,
@@ -31,12 +31,12 @@
       "sha256": "dfa25ab2bb40cca0edfea669dd13f729b196d5fa782434baf9ad0e313ff9113f"
     },
     "phoenix.wasm": {
-      "bytes": 5787317,
-      "sha256": "e7f97305b5551ca9eb22a9b0b80e028fc07ff0c6788f0625945bdb2aadd5ae80"
+      "bytes": 5697967,
+      "sha256": "99679ec37c08fc584614d7fc245d9b359a02f07b069e175f377ed9177356d79e"
     },
     "source-config.js": {
       "bytes": 220,
-      "sha256": "93b494e2339db47a5f351fd7433ea9f98f931035b4d1f5ab698df5b068ffd8ac"
+      "sha256": "95313e862672ea978710a62f0368f521cdc4ae73424cde8fccf35d1b10593a46"
     },
     "style.css": {
       "bytes": 3835,
@@ -44,7 +44,7 @@
     },
     "sw.js": {
       "bytes": 1742,
-      "sha256": "a4cf3f4be7d3fc87e5fd9b3582e65e303c6156b576074cfa30ebdfe88d8f298d"
+      "sha256": "b15f083af86cd893b703c62f8b35aab45f7a82e59ad3a67a186a74b0ddc73743"
     }
   },
   "note": "This manifest excludes itself to avoid a circular digest. The deployment gate verifies all other bundle files and source/adapter pins."

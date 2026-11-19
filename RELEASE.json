@@ -1,8 +1,8 @@
 {
-  "version": "0.2.170",
-  "runtime_fingerprint": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
-  "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
-  "local_model": "0x0002001f",
+  "version": "0.2.171",
+  "runtime_fingerprint": "a078117e74a871c8d5afc12e18e68e64d53351b27510ca1e59955f29580e43a1",
+  "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
+  "local_model": "0x00020020",
   "source_body_files": 176,
   "source_total_files": 179,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
@@ -22,18 +22,17 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Original Stick: complete firmware/assets readback and18healthy fresh-start checks passed. Host/Main and browser checks qualify controls and render cases separately.",
-  "browser_version": "0.2.170",
-  "native_status_version": "0.2.170",
+  "native_validation": "Not yet physically installed or tested. Host boundary/Engine and compiled target checks are separate.",
+  "browser_version": "0.2.171",
+  "native_status_version": "0.2.171",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Final source-bound release",
+  "status": "Source-bound counter boundary correction",
   "changes": [
-    "Gold Major title and yellow amount over visible held reels, matching the WINNER treatment",
-    "Custom Amount starts at the thousands digit with $0,000.00",
-    "Default native and browser sound volume is10%",
-    "Expanded individual-symbol, animation, fusion, prize, feature, menu and artwork gallery",
-    "Synchronized final firmware, browser game, guide and signed flasher"
+    "Counter reaches1887 and resets/awards on following Phoenix before idle1888 can appear",
+    "Counter editor accepts0\u20131887; wager buckets preserve1887",
+    "Browser and firmware share corrected law",
+    "Prior numerical returns explicitly historical; Grand prices retained"
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -41,47 +40,27 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 6475120,
-      "sha256": "02e932ddb57abf63b71d55fb678017809ecd7d577431b5a520e2de61d348908d"
+      "bytes": 6475712,
+      "sha256": "8d573ed9824e1b8d996db20d75a673729c32d1bf51523c434f8b98c510ced8df"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 6409584,
-      "sha256": "629af11e3253e8fb0f039454e85138307d25cd8dc7219c0f767dd28eea502736"
+      "bytes": 6410176,
+      "sha256": "289677a8a6a8b868dbf75dcea5cb3fd14eef4ac6ec78b980c3453001a0773bc1"
     }
   },
   "validation": {
-    "startup_UI_sanitizer_cases": 77,
-    "voucher_money_navigation_checks": true,
-    "jackpot_read_only_and_word_boundary_checks": 105,
-    "full_native_readback": true,
-    "fresh_native_startup": true,
-    "original_machine_fidelity_certified": false,
-    "counter_bank_and_insufficient_funds_navigation": true,
-    "voucher_ID_and_left_hold_checks": true,
-    "local_browser_controls": 26,
-    "feature_pause_and_input_regressions": 13,
-    "standard_offers_checked": 55,
-    "high_limit_offers_checked": 22,
-    "independence_paired_actions": 143487,
-    "current_source_hero_frames": 494,
-    "voucher_leading_zero_actual_navigation_ASAN_UBSAN": true,
-    "startup_UI_assertions": 51522,
-    "collection_skip_cases": 30,
-    "collection_skip_assertions": 887,
-    "browser_startup_navigation_checks": 103,
-    "native_boot_checks": 18,
-    "current_source_gallery_images": 183,
-    "live_USB_menu_probe_verified": false,
-    "individual_asset_render_frames": 621,
-    "individual_symbols": 12,
-    "animated_symbols": 9,
-    "fusion_sequences": 2,
-    "individual_prize_variants": 9,
-    "major_native_browser_pixel_cases": 12,
-    "major_transparent_backdrop_pixels_preserved": 8480,
-    "rule_pages": 6,
-    "payline_chart_pages": 37,
-    "wager_gallery_panels": 19,
-    "safety_gallery_screens": 4
+    "physical_flash_verified": false,
+    "current_return_qualified": false,
+    "counter_boundary_sanitizer_checks": 47931,
+    "outcome_integrity_sanitizer_checks": 102877481,
+    "paired_actions": 143448,
+    "wagers": 77,
+    "grand_schedules": 6,
+    "retained_price_rows": 9360,
+    "target_build": true
+  },
+  "historical_evidence": {
+    "file": "docs/data/source-0.2.170.json",
+    "sha256": "66cafde2acb75b5dff626ebb1f3879016088a71d07b4addeabda66a4e9415081"
   }
 }

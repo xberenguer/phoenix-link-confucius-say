@@ -3,6 +3,7 @@
 #endif
 #define PHOENIX_ENGINE_TESTING
 #include "phoenix_engine.h"
+#include "bounded_decimal_editor121.h"
 #include "phoenix_crypto124/prefix.h"
 #include "phoenix_crypto124/mbedtls/aes.h"
 #include "phoenix_crypto124/mbedtls/ctr_drbg.h"
@@ -82,6 +83,32 @@ int main() {
   static_assert(!std::is_copy_constructible<random::Service>::value,"opaque service not copyable");
   static_assert(!std::is_move_constructible<random::Service>::value,"opaque service not movable");
   verify(mbedtls_aes_self_test(0)==0);verify(mbedtls_ctr_drbg_self_test(0)==0);
+  {
+    // A complete visible arrival must be able to stop at1887. The following
+    // arrival awards once and resets; neither the HUD trace nor state says1888.
+    Engine e;random::Service source;Tape tape;init(e,source,tape);
+    verify(e.setPracticeMeter(1887));
+    verify(e.state.meter==1887 && e.state.meterThreshold==1888);
+    verify(e.snapshot().length>0);
+    Engine unchanged=e;verify(!e.setPracticeMeter(1888));verify(same(e,unchanged));
+    verify(bounded_decimal_editor::next(1886,3,4,local::meterThresholdMaximum-1)==1887);
+    verify(bounded_decimal_editor::next(1887,3,4,local::meterThresholdMaximum-1)==1880);
+    // Moving to another wager and back retains the final legal counter.
+    verify(e.setWager(10,25,1));verify(e.setWager(100,5,2));
+    verify(e.state.meter==1887 && e.state.meterThreshold==1888);
+    for(auto& bank:e.state.meterBanks)if(bank.counter==1887&&bank.threshold==1888)bank.counter=1886;
+    e.state.meter=1886;
+    Cell board[kCells];for(auto& c:board)c.symbol=Symbol::Nine;
+    board[0].symbol=Symbol::Phoenix;board[0].prize=10;
+    verify(e.testActionWithResult(board));verify(!e.presentation.meterTriggered);
+    verify(e.state.meter==1887 && e.presentation.meterAfterCell[0]==1887);
+    verify(e.snapshot().length>0);
+    const auto awards=e.state.stats.meterAwards;
+    verify(e.testActionWithResult(board));verify(e.presentation.meterTriggered);
+    verify(e.presentation.meterAwardsCount==1 && e.state.stats.meterAwards==awards+1);
+    verify(e.state.meter>=100 && e.state.meter<=1500);
+    verify(e.presentation.meterAfterCell[0]==e.state.meter && e.state.meter<1888);
+  }
   for(unsigned when: {1u,2u})for(unsigned method=0;method<4;++method) {
     random::Service s;Reentry r{{},&s,when,method,true};
     const bool seeded=s.initialize(Reentry::get,&r);

@@ -20,7 +20,7 @@ struct Detail {
  int64_t grand=0;
  uint32_t low=0,point=0,high=0;
  uint8_t option=defaultOption;
- bool valid=false;
+ bool valid=false,returnQualified=false;
 };
 struct State {
  Page page=Page::List;
@@ -29,7 +29,7 @@ struct State {
  bool pending=false,recoveryFence=false,contextChanged=false;
 };
 static_assert(std::is_trivially_copyable<State>::value,"Whole volatile selector state participates in UI QA backup");
-inline bool same(const Detail&a,const Detail&b){return a.valid&&b.valid&&a.option==b.option&&
+inline bool same(const Detail&a,const Detail&b){return a.valid&&b.valid&&a.returnQualified==b.returnQualified&&a.option==b.option&&
  legacy_static_grand::same(a.profile,b.profile)&&a.family==b.family&&a.grand==b.grand&&a.low==b.low&&a.point==b.point&&a.high==b.high;}
 inline void hundredths(uint32_t value,char*out,size_t n){std::snprintf(out,n,"%u.%02u",value/100,value%100);}
 inline void range(uint32_t lowPpm,uint32_t highPpm,char*out,size_t n){

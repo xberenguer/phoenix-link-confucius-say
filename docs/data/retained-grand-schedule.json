@@ -1,0 +1,16 @@
+{
+  "identity": {
+    "engine_model": "0x00020020",
+    "counter_threshold_maximum": 1888,
+    "maximum_displayed_counter": 1887,
+    "retained_price_source_version": "0.2.170",
+    "retained_price_rows_sha256": "15048f1bebb351fcdf79f2292060febabeb6c57890fa731ad2d0d69b9be4d432",
+    "current_return_qualified": false
+  },
+  "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
+  "identity_derivation": "SHA256 of canonical sorted compact JSON identity",
+  "rows": 9360,
+  "historical_table_sha256": "806c7c828a8e533f9925314bb21bbe7c60a3530312ac13dc11ed2388f97bc3bf",
+  "historical_source": "https://github.com/xberenguer/phoenix-link-confucius-say/blob/v0.2.170/firmware/src/static_grand_table.h",
+  "scope": "Current selectable Grand prices only. All9360 prices retained exactly. The changed counter law has no current return/house-edge enclosure; historical0.2.170 calculations must not be relabeled."
+}

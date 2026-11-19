@@ -1,20 +1,21 @@
 {
-  "source_version": "0.2.170",
-  "engine_model": "0x0002001f",
-  "model_label": "V",
-  "source_engine_sha256": "d97a0df8c2ab1527710b165e48c250a3891f1214e3178204a7f4c74eb5d50354",
+  "source_version": "0.2.171",
+  "engine_model": "0x00020020",
+  "model_label": "W:1887 boundary / retained Grand prices",
+  "source_engine_sha256": "0b07784e0bad56f30b2f3fa0a8c50ab36a35f0be364818c95829eebe46a22ff2",
   "source_cabinet_profile_sha256": "af3599df21043ef3fcd1b2c88a1bae41bd9a30de6f629fdabab8cf211da1b6e0",
-  "source_build_version_sha256": "a97412b80d4d35ff86787fce08e79ed731ab125b6325177e719cbc38fba49442",
-  "source_runtime_identity_sha256": "3591b2a0f90c6c80969878efbe18fcbeb552a49f756b01213d673aa970163590",
-  "source_static_grand_table_sha256": "806c7c828a8e533f9925314bb21bbe7c60a3530312ac13dc11ed2388f97bc3bf",
-  "exporter_sha256": "dffd235b134771b1002991c0a4ad198651d08d2878b9aa3d56f11c63bc785e5d",
+  "source_build_version_sha256": "ae73ec09c3f00ddfd014269f5dda160f0596dc20e0b1fa5ddcb4c60ed9bea307",
+  "source_runtime_identity_sha256": "077f929934819317296bccae6759213cb3751f774b78f26944a19cbe1e0ec565",
+  "source_static_grand_table_sha256": "1af0666d0d46a54580d866799be660f0e75c0c386a3b61fd4f63a9c8c9deaef6",
+  "exporter_sha256": "d29582df3e5d5f6e93edb76e77e28008488926801fcb2ebcb14dbbc1761c5300",
   "scope": "Current compiled local simulator reference, not recovered casino PAR. 780 internal evaluator profiles, 55 standard menu offers and22 high-limit offers. Price and geometry observations retain their scoped evidence; unobserved profiles remain local.",
   "rows": {
     "line_pay_entries": 62400,
     "selected_line_paths": 205,
     "offered_wagers": 77,
     "standard_offered_wagers": 55,
-    "high_limit_offered_wagers": 22
+    "high_limit_offered_wagers": 22,
+    "retained_grand_prices": 9360
   },
   "datasets": {
     "implemented-line-pays.csv": {
@@ -28,14 +29,18 @@
     "offered-wagers.csv": {
       "bytes": 2119,
       "sha256": "e96a7ed3abe608108160b976f6e3a9a362ffe44184aadd6002df6791535d3577"
+    },
+    "retained-grand-prices.csv": {
+      "bytes": 268490,
+      "sha256": "15e9450bff09ee2c20c5f1d11d9f16c151a07e851a41f8148dce3b40563624b9"
     }
   },
   "row_numbering": "top0,middle1,bottom2",
   "status": "Current compiled implementation; Engine-derived datasets include both exposed menu decks.",
   "no_personal_state_or_device_identifiers": true,
   "source_qualification": "Engineering source binding; ideal-uniform fixed-profile/default-jackpot/funded/no-Lucky full-cycle references are separate from casino calibration, physical entropy quality and finite runtime/source failure.",
-  "runtime_fingerprint": "8341a8485b778e8e4071d890378ddd006d94e329d2d6fff380f7e501c1f5296d",
-  "mathematical_family": "6e9967a8df8c8e05472c5818c4e1a1fe6687717872b7437a9838fc71602c807f",
+  "runtime_fingerprint": "a078117e74a871c8d5afc12e18e68e64d53351b27510ca1e59955f29580e43a1",
+  "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
   "geometry_matches_by_line_count": {
     "5": 1,
     "10": 0,
@@ -46,5 +51,6 @@
   },
   "geometry_scope": "50-line: 42 of 45 documented IDs match; observed IDs 42, 44 and 50 remain deferred; IDs 31, 33, 39, 45 and 48 are unrecovered. 100-line: 13 of 17 documented IDs match; IDs 15, 36, 37 and 43 remain deferred, and 83 IDs are unobserved. Legacy 5/15-line records remain incomplete; the 25-line reconstruction retains its original scope. Common-chart transport across modes, wagers and programs is conditional.",
   "local_return_rows": 9360,
-  "original_casino_calibration": false
+  "original_casino_calibration": false,
+  "current_return_qualified": false
 }

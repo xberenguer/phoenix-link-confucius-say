@@ -1,5 +1,7 @@
 # Full player guide
 
+Version **0.2.171** lets the collection counter reach **1887**. The screenshots retain their original **0.2.170** capture provenance; counter editor limits and return qualification have since changed.
+
 [**▶ Play Confucius Say**](https://xberenguer.github.io/phoenix-link-confucius-say/) · [**Browse the Gallery**](graphics.md) · [Back to the project](../README.md)
 
 Everything you need to start playing, recognize the symbols and follow the bonus features. The pictures below are captured from the actual game and its menus. Click a picture to see it at full size; the [Gallery](graphics.md) also has the moving sequences and individual symbol close-ups.

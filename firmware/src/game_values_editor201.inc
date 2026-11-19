@@ -185,7 +185,7 @@ void drawValues201(){
   for(unsigned i=0;i<count;++i){const int x=isMoney?44+int(i)*14+(i>=8?8:0):88+int(i)*16;
    if(i==editFocus201)fill(x-1,54,14,24,0x2a86);char glyph[2]={digits[i],0};cashText(glyph,x+cashWidth(glyph,20),56,20,i==editFocus201?BRIGHT:isMoney&&i<firstMoneyDigit?0x7bef:WHITE);}
   if(isMoney)cashText(".",159,56,20,WHITE);
-  text(isMoney?"$0.01 TO $30,000,000.00":"0 TO 1886; ACTIVE WAGER COUNTER",120,84,7,WHITE,1);
+  text(isMoney?"$0.01 TO $30,000,000.00":"0 TO 1887; ACTIVE WAGER COUNTER",120,84,7,WHITE,1);
   const unsigned focus=editFocus201;
   if(focus==count)fill(28,96,78,12,0x2a86);if(focus==count+1)fill(134,96,78,12,0x2a86);
   text("APPLY",67,98,8,focus==count?BRIGHT:WHITE,1);text("CANCEL",173,98,8,focus==count+1?BRIGHT:WHITE,1);
