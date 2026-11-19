@@ -318,7 +318,7 @@ class Gallery:
             text += f"**Rules page {page}**\n\n" + self.image(
                 PREFIX + f"screens/menus/rules-{page}.png", f"Rules page {page}"
             ) + "\n\n"
-        text += "### Every payline chart\n\nAll 37 chart pages are grouped by line setting. [How paylines work](paylines.md).\n\n"
+        text += "### Every payline chart\n\nAll 37 chart pages are grouped by line setting. [See all 205 numbered lines, individually enlarged and explained](paylines.md#every-line), or [start with how paylines work](paylines.md).\n\n"
         for lines, pages in [(5, 1), (10, 2), (15, 3), (25, 5), (50, 9), (100, 17)]:
             text += f"<details>\n<summary>{lines} lines — {pages} chart {'page' if pages == 1 else 'pages'}</summary>\n\n"
             for page in range(1, pages + 1):

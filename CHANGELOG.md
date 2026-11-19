@@ -6,6 +6,8 @@ Combined gameplay, symbols, animations and menus into one [Gallery](docs/graphic
 
 Added a [beginner's payline walkthrough](docs/paylines.md) with actual chart photos, enlarged individual routes, a real three-Tens winning example, bet-cost calculations and all 37 chart pages. The guide explains lines before the first wager selection.
 
+The [complete payline reference](docs/paylines.md#every-line) shows every implemented line individually: all 205 numbered entries across the 5-, 10-, 15-, 25-, 50- and 100-line layouts. Each diagram is enlarged from an actual menu capture and its five dot positions are checked against the game's route data.
+
 Replaced fixed-length animation parts with complete recorded actions and declared replay pauses, closed periodic symbol loops on matching real frames, and selected fully visible win screenshots. The playable game and its runtime assets are unchanged.
 
 ## Player gallery update — 18 November 2026

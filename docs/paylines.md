@@ -4,6 +4,10 @@
 
 **A line is a fixed route through the symbols from one spin.** It tells the game which positions to read across the screen when checking for a win. You choose how many routes to play; the game checks them for you.
 
+<!-- COMPLETE PAYLINE NAVIGATION -->
+
+**[See every line](#every-line):** [5 lines](#layout-5) · [10 lines](#layout-10) · [15 lines](#layout-15) · [25 lines](#layout-25) · [50 lines](#layout-50) · [100 lines](#layout-100) — 205 numbered entries, all enlarged below.
+
 ## Start with the screen: five columns, three rows
 
 Each vertical column is called a **reel**. There are five reels, each showing three symbols: one at the **top**, one in the **middle** and one at the **bottom**. That gives you 15 visible symbols after a spin.
@@ -125,6 +129,2130 @@ When the denomination and multiplier stay the same, selecting more lines increas
 <a href="media/gameplay/screens/primary/startup-lines-and-bet.png"><img src="media/gameplay/screens/primary/startup-lines-and-bet.png" alt="Actual PLAY LINES and red BET choices; changing the line selection changes the total credit amounts on the bet buttons" width="720" height="405" loading="lazy"></a>
 
 More routes can qualify for line awards, and they cost more when the per-line stake stays fixed. A larger line count does not guarantee a win or a profit. [All offered bet choices and denominations →](wagers.md)
+
+<!-- BEGIN COMPLETE PAYLINE REFERENCE -->
+
+<a id="every-line"></a>
+
+## Every line, individually
+
+**All 205 numbered entries across the six implemented layouts are shown below.** Each enlarged diagram is cropped from the actual in-game chart, with its route written out from left to right. Some routes repeat between layouts; use the numbers for the layout you are playing.
+
+[5 lines](#layout-5) · [10 lines](#layout-10) · [15 lines](#layout-15) · [25 lines](#layout-25) · [50 lines](#layout-50) · [100 lines](#layout-100)
+
+[Download the complete row-by-row route list](data/implemented-paylines.csv). The original full-screen chart photos follow this reference.
+
+<a id="layout-5"></a>
+
+### 5-line layout — every line from 1 to 5
+
+5 routes, shown on 1 original chart pages. Every diagram below is visible directly on this page.
+
+Jump to line: [1](#layout-5-line-1) · [5](#layout-5-line-5)
+
+<a id="layout-5-line-1"></a>
+
+#### Line 1
+
+**Middle → Middle → Middle → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/5-lines/line-001.png"><img src="media/gameplay/artwork/paylines/5-lines/line-001.png" alt="5-line layout, line 1: Middle → Middle → Middle → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 1](media/gameplay/screens/menus/paylines-5-1.png).
+
+<a id="layout-5-line-2"></a>
+
+#### Line 2
+
+**Top → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/5-lines/line-002.png"><img src="media/gameplay/artwork/paylines/5-lines/line-002.png" alt="5-line layout, line 2: Top → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 1](media/gameplay/screens/menus/paylines-5-1.png).
+
+<a id="layout-5-line-3"></a>
+
+#### Line 3
+
+**Bottom → Bottom → Bottom → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/5-lines/line-003.png"><img src="media/gameplay/artwork/paylines/5-lines/line-003.png" alt="5-line layout, line 3: Bottom → Bottom → Bottom → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 1](media/gameplay/screens/menus/paylines-5-1.png).
+
+<a id="layout-5-line-4"></a>
+
+#### Line 4
+
+**Top → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/5-lines/line-004.png"><img src="media/gameplay/artwork/paylines/5-lines/line-004.png" alt="5-line layout, line 4: Top → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 1](media/gameplay/screens/menus/paylines-5-1.png).
+
+<a id="layout-5-line-5"></a>
+
+#### Line 5
+
+**Bottom → Middle → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/5-lines/line-005.png"><img src="media/gameplay/artwork/paylines/5-lines/line-005.png" alt="5-line layout, line 5: Bottom → Middle → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 1](media/gameplay/screens/menus/paylines-5-1.png).
+
+[Back to the layout list](#every-line)
+
+<a id="layout-10"></a>
+
+### 10-line layout — every line from 1 to 10
+
+10 routes, shown on 2 original chart pages. Every diagram below is visible directly on this page.
+
+Jump to line: [1](#layout-10-line-1) · [5](#layout-10-line-5) · [10](#layout-10-line-10)
+
+<a id="layout-10-line-1"></a>
+
+#### Line 1
+
+**Middle → Middle → Middle → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-001.png"><img src="media/gameplay/artwork/paylines/10-lines/line-001.png" alt="10-line layout, line 1: Middle → Middle → Middle → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 2](media/gameplay/screens/menus/paylines-10-1.png).
+
+<a id="layout-10-line-2"></a>
+
+#### Line 2
+
+**Top → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-002.png"><img src="media/gameplay/artwork/paylines/10-lines/line-002.png" alt="10-line layout, line 2: Top → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 2](media/gameplay/screens/menus/paylines-10-1.png).
+
+<a id="layout-10-line-3"></a>
+
+#### Line 3
+
+**Bottom → Bottom → Bottom → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-003.png"><img src="media/gameplay/artwork/paylines/10-lines/line-003.png" alt="10-line layout, line 3: Bottom → Bottom → Bottom → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 2](media/gameplay/screens/menus/paylines-10-1.png).
+
+<a id="layout-10-line-4"></a>
+
+#### Line 4
+
+**Top → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-004.png"><img src="media/gameplay/artwork/paylines/10-lines/line-004.png" alt="10-line layout, line 4: Top → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 2](media/gameplay/screens/menus/paylines-10-1.png).
+
+<a id="layout-10-line-5"></a>
+
+#### Line 5
+
+**Bottom → Middle → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-005.png"><img src="media/gameplay/artwork/paylines/10-lines/line-005.png" alt="10-line layout, line 5: Bottom → Middle → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 2](media/gameplay/screens/menus/paylines-10-1.png).
+
+<a id="layout-10-line-6"></a>
+
+#### Line 6
+
+**Top → Top → Middle → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-006.png"><img src="media/gameplay/artwork/paylines/10-lines/line-006.png" alt="10-line layout, line 6: Top → Top → Middle → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 2](media/gameplay/screens/menus/paylines-10-1.png).
+
+<a id="layout-10-line-7"></a>
+
+#### Line 7
+
+**Bottom → Bottom → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-007.png"><img src="media/gameplay/artwork/paylines/10-lines/line-007.png" alt="10-line layout, line 7: Bottom → Bottom → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 2](media/gameplay/screens/menus/paylines-10-2.png).
+
+<a id="layout-10-line-8"></a>
+
+#### Line 8
+
+**Middle → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-008.png"><img src="media/gameplay/artwork/paylines/10-lines/line-008.png" alt="10-line layout, line 8: Middle → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 2](media/gameplay/screens/menus/paylines-10-2.png).
+
+<a id="layout-10-line-9"></a>
+
+#### Line 9
+
+**Middle → Bottom → Bottom → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-009.png"><img src="media/gameplay/artwork/paylines/10-lines/line-009.png" alt="10-line layout, line 9: Middle → Bottom → Bottom → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 2](media/gameplay/screens/menus/paylines-10-2.png).
+
+<a id="layout-10-line-10"></a>
+
+#### Line 10
+
+**Top → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/10-lines/line-010.png"><img src="media/gameplay/artwork/paylines/10-lines/line-010.png" alt="10-line layout, line 10: Top → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 2](media/gameplay/screens/menus/paylines-10-2.png).
+
+[Back to the layout list](#every-line)
+
+<a id="layout-15"></a>
+
+### 15-line layout — every line from 1 to 15
+
+15 routes, shown on 3 original chart pages. Every diagram below is visible directly on this page.
+
+Jump to line: [1](#layout-15-line-1) · [5](#layout-15-line-5) · [10](#layout-15-line-10) · [15](#layout-15-line-15)
+
+<a id="layout-15-line-1"></a>
+
+#### Line 1
+
+**Middle → Middle → Middle → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-001.png"><img src="media/gameplay/artwork/paylines/15-lines/line-001.png" alt="15-line layout, line 1: Middle → Middle → Middle → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 3](media/gameplay/screens/menus/paylines-15-1.png).
+
+<a id="layout-15-line-2"></a>
+
+#### Line 2
+
+**Top → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-002.png"><img src="media/gameplay/artwork/paylines/15-lines/line-002.png" alt="15-line layout, line 2: Top → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 3](media/gameplay/screens/menus/paylines-15-1.png).
+
+<a id="layout-15-line-3"></a>
+
+#### Line 3
+
+**Bottom → Bottom → Bottom → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-003.png"><img src="media/gameplay/artwork/paylines/15-lines/line-003.png" alt="15-line layout, line 3: Bottom → Bottom → Bottom → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 3](media/gameplay/screens/menus/paylines-15-1.png).
+
+<a id="layout-15-line-4"></a>
+
+#### Line 4
+
+**Top → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-004.png"><img src="media/gameplay/artwork/paylines/15-lines/line-004.png" alt="15-line layout, line 4: Top → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 3](media/gameplay/screens/menus/paylines-15-1.png).
+
+<a id="layout-15-line-5"></a>
+
+#### Line 5
+
+**Bottom → Middle → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-005.png"><img src="media/gameplay/artwork/paylines/15-lines/line-005.png" alt="15-line layout, line 5: Bottom → Middle → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 3](media/gameplay/screens/menus/paylines-15-1.png).
+
+<a id="layout-15-line-6"></a>
+
+#### Line 6
+
+**Top → Top → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-006.png"><img src="media/gameplay/artwork/paylines/15-lines/line-006.png" alt="15-line layout, line 6: Top → Top → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 3](media/gameplay/screens/menus/paylines-15-1.png).
+
+<a id="layout-15-line-7"></a>
+
+#### Line 7
+
+**Bottom → Bottom → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-007.png"><img src="media/gameplay/artwork/paylines/15-lines/line-007.png" alt="15-line layout, line 7: Bottom → Bottom → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 3](media/gameplay/screens/menus/paylines-15-2.png).
+
+<a id="layout-15-line-8"></a>
+
+#### Line 8
+
+**Middle → Bottom → Bottom → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-008.png"><img src="media/gameplay/artwork/paylines/15-lines/line-008.png" alt="15-line layout, line 8: Middle → Bottom → Bottom → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 3](media/gameplay/screens/menus/paylines-15-2.png).
+
+<a id="layout-15-line-9"></a>
+
+#### Line 9
+
+**Middle → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-009.png"><img src="media/gameplay/artwork/paylines/15-lines/line-009.png" alt="15-line layout, line 9: Middle → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 3](media/gameplay/screens/menus/paylines-15-2.png).
+
+<a id="layout-15-line-10"></a>
+
+#### Line 10
+
+**Top → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-010.png"><img src="media/gameplay/artwork/paylines/15-lines/line-010.png" alt="15-line layout, line 10: Top → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 3](media/gameplay/screens/menus/paylines-15-2.png).
+
+<a id="layout-15-line-11"></a>
+
+#### Line 11
+
+**Bottom → Middle → Middle → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-011.png"><img src="media/gameplay/artwork/paylines/15-lines/line-011.png" alt="15-line layout, line 11: Bottom → Middle → Middle → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 3](media/gameplay/screens/menus/paylines-15-2.png).
+
+<a id="layout-15-line-12"></a>
+
+#### Line 12
+
+**Middle → Top → Middle → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-012.png"><img src="media/gameplay/artwork/paylines/15-lines/line-012.png" alt="15-line layout, line 12: Middle → Top → Middle → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 3](media/gameplay/screens/menus/paylines-15-2.png).
+
+<a id="layout-15-line-13"></a>
+
+#### Line 13
+
+**Middle → Bottom → Middle → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-013.png"><img src="media/gameplay/artwork/paylines/15-lines/line-013.png" alt="15-line layout, line 13: Middle → Bottom → Middle → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 3](media/gameplay/screens/menus/paylines-15-3.png).
+
+<a id="layout-15-line-14"></a>
+
+#### Line 14
+
+**Top → Middle → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-014.png"><img src="media/gameplay/artwork/paylines/15-lines/line-014.png" alt="15-line layout, line 14: Top → Middle → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 3](media/gameplay/screens/menus/paylines-15-3.png).
+
+<a id="layout-15-line-15"></a>
+
+#### Line 15
+
+**Bottom → Middle → Bottom → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/15-lines/line-015.png"><img src="media/gameplay/artwork/paylines/15-lines/line-015.png" alt="15-line layout, line 15: Bottom → Middle → Bottom → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 3](media/gameplay/screens/menus/paylines-15-3.png).
+
+[Back to the layout list](#every-line)
+
+<a id="layout-25"></a>
+
+### 25-line layout — every line from 1 to 25
+
+25 routes, shown on 5 original chart pages. Every diagram below is visible directly on this page.
+
+Jump to line: [1](#layout-25-line-1) · [5](#layout-25-line-5) · [10](#layout-25-line-10) · [15](#layout-25-line-15) · [20](#layout-25-line-20) · [25](#layout-25-line-25)
+
+<a id="layout-25-line-1"></a>
+
+#### Line 1
+
+**Middle → Middle → Middle → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-001.png"><img src="media/gameplay/artwork/paylines/25-lines/line-001.png" alt="25-line layout, line 1: Middle → Middle → Middle → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 5](media/gameplay/screens/menus/paylines-25-1.png).
+
+<a id="layout-25-line-2"></a>
+
+#### Line 2
+
+**Top → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-002.png"><img src="media/gameplay/artwork/paylines/25-lines/line-002.png" alt="25-line layout, line 2: Top → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 5](media/gameplay/screens/menus/paylines-25-1.png).
+
+<a id="layout-25-line-3"></a>
+
+#### Line 3
+
+**Bottom → Bottom → Bottom → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-003.png"><img src="media/gameplay/artwork/paylines/25-lines/line-003.png" alt="25-line layout, line 3: Bottom → Bottom → Bottom → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 5](media/gameplay/screens/menus/paylines-25-1.png).
+
+<a id="layout-25-line-4"></a>
+
+#### Line 4
+
+**Top → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-004.png"><img src="media/gameplay/artwork/paylines/25-lines/line-004.png" alt="25-line layout, line 4: Top → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 5](media/gameplay/screens/menus/paylines-25-1.png).
+
+<a id="layout-25-line-5"></a>
+
+#### Line 5
+
+**Bottom → Middle → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-005.png"><img src="media/gameplay/artwork/paylines/25-lines/line-005.png" alt="25-line layout, line 5: Bottom → Middle → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 5](media/gameplay/screens/menus/paylines-25-1.png).
+
+<a id="layout-25-line-6"></a>
+
+#### Line 6
+
+**Top → Top → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-006.png"><img src="media/gameplay/artwork/paylines/25-lines/line-006.png" alt="25-line layout, line 6: Top → Top → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 5](media/gameplay/screens/menus/paylines-25-1.png).
+
+<a id="layout-25-line-7"></a>
+
+#### Line 7
+
+**Bottom → Bottom → Middle → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-007.png"><img src="media/gameplay/artwork/paylines/25-lines/line-007.png" alt="25-line layout, line 7: Bottom → Bottom → Middle → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 5](media/gameplay/screens/menus/paylines-25-2.png).
+
+<a id="layout-25-line-8"></a>
+
+#### Line 8
+
+**Middle → Bottom → Bottom → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-008.png"><img src="media/gameplay/artwork/paylines/25-lines/line-008.png" alt="25-line layout, line 8: Middle → Bottom → Bottom → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 5](media/gameplay/screens/menus/paylines-25-2.png).
+
+<a id="layout-25-line-9"></a>
+
+#### Line 9
+
+**Middle → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-009.png"><img src="media/gameplay/artwork/paylines/25-lines/line-009.png" alt="25-line layout, line 9: Middle → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 5](media/gameplay/screens/menus/paylines-25-2.png).
+
+<a id="layout-25-line-10"></a>
+
+#### Line 10
+
+**Top → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-010.png"><img src="media/gameplay/artwork/paylines/25-lines/line-010.png" alt="25-line layout, line 10: Top → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 5](media/gameplay/screens/menus/paylines-25-2.png).
+
+<a id="layout-25-line-11"></a>
+
+#### Line 11
+
+**Bottom → Middle → Middle → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-011.png"><img src="media/gameplay/artwork/paylines/25-lines/line-011.png" alt="25-line layout, line 11: Bottom → Middle → Middle → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 5](media/gameplay/screens/menus/paylines-25-2.png).
+
+<a id="layout-25-line-12"></a>
+
+#### Line 12
+
+**Top → Middle → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-012.png"><img src="media/gameplay/artwork/paylines/25-lines/line-012.png" alt="25-line layout, line 12: Top → Middle → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 5](media/gameplay/screens/menus/paylines-25-2.png).
+
+<a id="layout-25-line-13"></a>
+
+#### Line 13
+
+**Bottom → Middle → Bottom → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-013.png"><img src="media/gameplay/artwork/paylines/25-lines/line-013.png" alt="25-line layout, line 13: Bottom → Middle → Bottom → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 5](media/gameplay/screens/menus/paylines-25-3.png).
+
+<a id="layout-25-line-14"></a>
+
+#### Line 14
+
+**Middle → Top → Middle → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-014.png"><img src="media/gameplay/artwork/paylines/25-lines/line-014.png" alt="25-line layout, line 14: Middle → Top → Middle → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 5](media/gameplay/screens/menus/paylines-25-3.png).
+
+<a id="layout-25-line-15"></a>
+
+#### Line 15
+
+**Middle → Bottom → Middle → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-015.png"><img src="media/gameplay/artwork/paylines/25-lines/line-015.png" alt="25-line layout, line 15: Middle → Bottom → Middle → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 5](media/gameplay/screens/menus/paylines-25-3.png).
+
+<a id="layout-25-line-16"></a>
+
+#### Line 16
+
+**Middle → Middle → Top → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-016.png"><img src="media/gameplay/artwork/paylines/25-lines/line-016.png" alt="25-line layout, line 16: Middle → Middle → Top → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 5](media/gameplay/screens/menus/paylines-25-3.png).
+
+<a id="layout-25-line-17"></a>
+
+#### Line 17
+
+**Middle → Middle → Bottom → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-017.png"><img src="media/gameplay/artwork/paylines/25-lines/line-017.png" alt="25-line layout, line 17: Middle → Middle → Bottom → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 5](media/gameplay/screens/menus/paylines-25-3.png).
+
+<a id="layout-25-line-18"></a>
+
+#### Line 18
+
+**Top → Bottom → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-018.png"><img src="media/gameplay/artwork/paylines/25-lines/line-018.png" alt="25-line layout, line 18: Top → Bottom → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 5](media/gameplay/screens/menus/paylines-25-3.png).
+
+<a id="layout-25-line-19"></a>
+
+#### Line 19
+
+**Bottom → Top → Bottom → Top → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-019.png"><img src="media/gameplay/artwork/paylines/25-lines/line-019.png" alt="25-line layout, line 19: Bottom → Top → Bottom → Top → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 5](media/gameplay/screens/menus/paylines-25-4.png).
+
+<a id="layout-25-line-20"></a>
+
+#### Line 20
+
+**Middle → Top → Bottom → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-020.png"><img src="media/gameplay/artwork/paylines/25-lines/line-020.png" alt="25-line layout, line 20: Middle → Top → Bottom → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 5](media/gameplay/screens/menus/paylines-25-4.png).
+
+<a id="layout-25-line-21"></a>
+
+#### Line 21
+
+**Middle → Bottom → Top → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-021.png"><img src="media/gameplay/artwork/paylines/25-lines/line-021.png" alt="25-line layout, line 21: Middle → Bottom → Top → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 5](media/gameplay/screens/menus/paylines-25-4.png).
+
+<a id="layout-25-line-22"></a>
+
+#### Line 22
+
+**Top → Top → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-022.png"><img src="media/gameplay/artwork/paylines/25-lines/line-022.png" alt="25-line layout, line 22: Top → Top → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 5](media/gameplay/screens/menus/paylines-25-4.png).
+
+<a id="layout-25-line-23"></a>
+
+#### Line 23
+
+**Bottom → Bottom → Top → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-023.png"><img src="media/gameplay/artwork/paylines/25-lines/line-023.png" alt="25-line layout, line 23: Bottom → Bottom → Top → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 5](media/gameplay/screens/menus/paylines-25-4.png).
+
+<a id="layout-25-line-24"></a>
+
+#### Line 24
+
+**Top → Bottom → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-024.png"><img src="media/gameplay/artwork/paylines/25-lines/line-024.png" alt="25-line layout, line 24: Top → Bottom → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 5](media/gameplay/screens/menus/paylines-25-4.png).
+
+<a id="layout-25-line-25"></a>
+
+#### Line 25
+
+**Bottom → Top → Top → Top → Bottom**
+
+<a href="media/gameplay/artwork/paylines/25-lines/line-025.png"><img src="media/gameplay/artwork/paylines/25-lines/line-025.png" alt="25-line layout, line 25: Bottom → Top → Top → Top → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 5](media/gameplay/screens/menus/paylines-25-5.png).
+
+[Back to the layout list](#every-line)
+
+<a id="layout-50"></a>
+
+### 50-line layout — every line from 1 to 50
+
+50 routes, shown on 9 original chart pages. Every diagram below is visible directly on this page.
+
+Jump to line: [1](#layout-50-line-1) · [10](#layout-50-line-10) · [20](#layout-50-line-20) · [30](#layout-50-line-30) · [40](#layout-50-line-40) · [50](#layout-50-line-50)
+
+<a id="layout-50-line-1"></a>
+
+#### Line 1
+
+**Middle → Middle → Middle → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-001.png"><img src="media/gameplay/artwork/paylines/50-lines/line-001.png" alt="50-line layout, line 1: Middle → Middle → Middle → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 9](media/gameplay/screens/menus/paylines-50-1.png).
+
+<a id="layout-50-line-2"></a>
+
+#### Line 2
+
+**Top → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-002.png"><img src="media/gameplay/artwork/paylines/50-lines/line-002.png" alt="50-line layout, line 2: Top → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 9](media/gameplay/screens/menus/paylines-50-1.png).
+
+<a id="layout-50-line-3"></a>
+
+#### Line 3
+
+**Bottom → Bottom → Bottom → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-003.png"><img src="media/gameplay/artwork/paylines/50-lines/line-003.png" alt="50-line layout, line 3: Bottom → Bottom → Bottom → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 9](media/gameplay/screens/menus/paylines-50-1.png).
+
+<a id="layout-50-line-4"></a>
+
+#### Line 4
+
+**Top → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-004.png"><img src="media/gameplay/artwork/paylines/50-lines/line-004.png" alt="50-line layout, line 4: Top → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 9](media/gameplay/screens/menus/paylines-50-1.png).
+
+<a id="layout-50-line-5"></a>
+
+#### Line 5
+
+**Bottom → Middle → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-005.png"><img src="media/gameplay/artwork/paylines/50-lines/line-005.png" alt="50-line layout, line 5: Bottom → Middle → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 9](media/gameplay/screens/menus/paylines-50-1.png).
+
+<a id="layout-50-line-6"></a>
+
+#### Line 6
+
+**Top → Top → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-006.png"><img src="media/gameplay/artwork/paylines/50-lines/line-006.png" alt="50-line layout, line 6: Top → Top → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 9](media/gameplay/screens/menus/paylines-50-1.png).
+
+<a id="layout-50-line-7"></a>
+
+#### Line 7
+
+**Bottom → Bottom → Middle → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-007.png"><img src="media/gameplay/artwork/paylines/50-lines/line-007.png" alt="50-line layout, line 7: Bottom → Bottom → Middle → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 9](media/gameplay/screens/menus/paylines-50-2.png).
+
+<a id="layout-50-line-8"></a>
+
+#### Line 8
+
+**Middle → Bottom → Bottom → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-008.png"><img src="media/gameplay/artwork/paylines/50-lines/line-008.png" alt="50-line layout, line 8: Middle → Bottom → Bottom → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 9](media/gameplay/screens/menus/paylines-50-2.png).
+
+<a id="layout-50-line-9"></a>
+
+#### Line 9
+
+**Middle → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-009.png"><img src="media/gameplay/artwork/paylines/50-lines/line-009.png" alt="50-line layout, line 9: Middle → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 9](media/gameplay/screens/menus/paylines-50-2.png).
+
+<a id="layout-50-line-10"></a>
+
+#### Line 10
+
+**Top → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-010.png"><img src="media/gameplay/artwork/paylines/50-lines/line-010.png" alt="50-line layout, line 10: Top → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 9](media/gameplay/screens/menus/paylines-50-2.png).
+
+<a id="layout-50-line-11"></a>
+
+#### Line 11
+
+**Bottom → Middle → Middle → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-011.png"><img src="media/gameplay/artwork/paylines/50-lines/line-011.png" alt="50-line layout, line 11: Bottom → Middle → Middle → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 9](media/gameplay/screens/menus/paylines-50-2.png).
+
+<a id="layout-50-line-12"></a>
+
+#### Line 12
+
+**Top → Middle → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-012.png"><img src="media/gameplay/artwork/paylines/50-lines/line-012.png" alt="50-line layout, line 12: Top → Middle → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 9](media/gameplay/screens/menus/paylines-50-2.png).
+
+<a id="layout-50-line-13"></a>
+
+#### Line 13
+
+**Bottom → Middle → Bottom → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-013.png"><img src="media/gameplay/artwork/paylines/50-lines/line-013.png" alt="50-line layout, line 13: Bottom → Middle → Bottom → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 9](media/gameplay/screens/menus/paylines-50-3.png).
+
+<a id="layout-50-line-14"></a>
+
+#### Line 14
+
+**Middle → Top → Middle → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-014.png"><img src="media/gameplay/artwork/paylines/50-lines/line-014.png" alt="50-line layout, line 14: Middle → Top → Middle → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 9](media/gameplay/screens/menus/paylines-50-3.png).
+
+<a id="layout-50-line-15"></a>
+
+#### Line 15
+
+**Middle → Bottom → Middle → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-015.png"><img src="media/gameplay/artwork/paylines/50-lines/line-015.png" alt="50-line layout, line 15: Middle → Bottom → Middle → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 9](media/gameplay/screens/menus/paylines-50-3.png).
+
+<a id="layout-50-line-16"></a>
+
+#### Line 16
+
+**Middle → Middle → Top → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-016.png"><img src="media/gameplay/artwork/paylines/50-lines/line-016.png" alt="50-line layout, line 16: Middle → Middle → Top → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 9](media/gameplay/screens/menus/paylines-50-3.png).
+
+<a id="layout-50-line-17"></a>
+
+#### Line 17
+
+**Middle → Middle → Bottom → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-017.png"><img src="media/gameplay/artwork/paylines/50-lines/line-017.png" alt="50-line layout, line 17: Middle → Middle → Bottom → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 9](media/gameplay/screens/menus/paylines-50-3.png).
+
+<a id="layout-50-line-18"></a>
+
+#### Line 18
+
+**Top → Bottom → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-018.png"><img src="media/gameplay/artwork/paylines/50-lines/line-018.png" alt="50-line layout, line 18: Top → Bottom → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 9](media/gameplay/screens/menus/paylines-50-3.png).
+
+<a id="layout-50-line-19"></a>
+
+#### Line 19
+
+**Bottom → Top → Bottom → Top → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-019.png"><img src="media/gameplay/artwork/paylines/50-lines/line-019.png" alt="50-line layout, line 19: Bottom → Top → Bottom → Top → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 9](media/gameplay/screens/menus/paylines-50-4.png).
+
+<a id="layout-50-line-20"></a>
+
+#### Line 20
+
+**Middle → Top → Bottom → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-020.png"><img src="media/gameplay/artwork/paylines/50-lines/line-020.png" alt="50-line layout, line 20: Middle → Top → Bottom → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 9](media/gameplay/screens/menus/paylines-50-4.png).
+
+<a id="layout-50-line-21"></a>
+
+#### Line 21
+
+**Middle → Bottom → Top → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-021.png"><img src="media/gameplay/artwork/paylines/50-lines/line-021.png" alt="50-line layout, line 21: Middle → Bottom → Top → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 9](media/gameplay/screens/menus/paylines-50-4.png).
+
+<a id="layout-50-line-22"></a>
+
+#### Line 22
+
+**Top → Top → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-022.png"><img src="media/gameplay/artwork/paylines/50-lines/line-022.png" alt="50-line layout, line 22: Top → Top → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 9](media/gameplay/screens/menus/paylines-50-4.png).
+
+<a id="layout-50-line-23"></a>
+
+#### Line 23
+
+**Bottom → Bottom → Top → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-023.png"><img src="media/gameplay/artwork/paylines/50-lines/line-023.png" alt="50-line layout, line 23: Bottom → Bottom → Top → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 9](media/gameplay/screens/menus/paylines-50-4.png).
+
+<a id="layout-50-line-24"></a>
+
+#### Line 24
+
+**Top → Bottom → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-024.png"><img src="media/gameplay/artwork/paylines/50-lines/line-024.png" alt="50-line layout, line 24: Top → Bottom → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 9](media/gameplay/screens/menus/paylines-50-4.png).
+
+<a id="layout-50-line-25"></a>
+
+#### Line 25
+
+**Bottom → Top → Top → Top → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-025.png"><img src="media/gameplay/artwork/paylines/50-lines/line-025.png" alt="50-line layout, line 25: Bottom → Top → Top → Top → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 9](media/gameplay/screens/menus/paylines-50-5.png).
+
+<a id="layout-50-line-26"></a>
+
+#### Line 26
+
+**Top → Bottom → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-026.png"><img src="media/gameplay/artwork/paylines/50-lines/line-026.png" alt="50-line layout, line 26: Top → Bottom → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 9](media/gameplay/screens/menus/paylines-50-5.png).
+
+<a id="layout-50-line-27"></a>
+
+#### Line 27
+
+**Bottom → Top → Middle → Top → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-027.png"><img src="media/gameplay/artwork/paylines/50-lines/line-027.png" alt="50-line layout, line 27: Bottom → Top → Middle → Top → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 9](media/gameplay/screens/menus/paylines-50-5.png).
+
+<a id="layout-50-line-28"></a>
+
+#### Line 28
+
+**Middle → Middle → Middle → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-028.png"><img src="media/gameplay/artwork/paylines/50-lines/line-028.png" alt="50-line layout, line 28: Middle → Middle → Middle → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 9](media/gameplay/screens/menus/paylines-50-5.png).
+
+<a id="layout-50-line-29"></a>
+
+#### Line 29
+
+**Top → Top → Middle → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-029.png"><img src="media/gameplay/artwork/paylines/50-lines/line-029.png" alt="50-line layout, line 29: Top → Top → Middle → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 9](media/gameplay/screens/menus/paylines-50-5.png).
+
+<a id="layout-50-line-30"></a>
+
+#### Line 30
+
+**Bottom → Bottom → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-030.png"><img src="media/gameplay/artwork/paylines/50-lines/line-030.png" alt="50-line layout, line 30: Bottom → Bottom → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 9](media/gameplay/screens/menus/paylines-50-5.png).
+
+<a id="layout-50-line-31"></a>
+
+#### Line 31
+
+**Top → Bottom → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-031.png"><img src="media/gameplay/artwork/paylines/50-lines/line-031.png" alt="50-line layout, line 31: Top → Bottom → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 9](media/gameplay/screens/menus/paylines-50-6.png).
+
+<a id="layout-50-line-32"></a>
+
+#### Line 32
+
+**Bottom → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-032.png"><img src="media/gameplay/artwork/paylines/50-lines/line-032.png" alt="50-line layout, line 32: Bottom → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 9](media/gameplay/screens/menus/paylines-50-6.png).
+
+<a id="layout-50-line-33"></a>
+
+#### Line 33
+
+**Bottom → Bottom → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-033.png"><img src="media/gameplay/artwork/paylines/50-lines/line-033.png" alt="50-line layout, line 33: Bottom → Bottom → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 9](media/gameplay/screens/menus/paylines-50-6.png).
+
+<a id="layout-50-line-34"></a>
+
+#### Line 34
+
+**Bottom → Middle → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-034.png"><img src="media/gameplay/artwork/paylines/50-lines/line-034.png" alt="50-line layout, line 34: Bottom → Middle → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 9](media/gameplay/screens/menus/paylines-50-6.png).
+
+<a id="layout-50-line-35"></a>
+
+#### Line 35
+
+**Top → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-035.png"><img src="media/gameplay/artwork/paylines/50-lines/line-035.png" alt="50-line layout, line 35: Top → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 9](media/gameplay/screens/menus/paylines-50-6.png).
+
+<a id="layout-50-line-36"></a>
+
+#### Line 36
+
+**Bottom → Bottom → Bottom → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-036.png"><img src="media/gameplay/artwork/paylines/50-lines/line-036.png" alt="50-line layout, line 36: Bottom → Bottom → Bottom → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 9](media/gameplay/screens/menus/paylines-50-6.png).
+
+<a id="layout-50-line-37"></a>
+
+#### Line 37
+
+**Top → Middle → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-037.png"><img src="media/gameplay/artwork/paylines/50-lines/line-037.png" alt="50-line layout, line 37: Top → Middle → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 9](media/gameplay/screens/menus/paylines-50-7.png).
+
+<a id="layout-50-line-38"></a>
+
+#### Line 38
+
+**Bottom → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-038.png"><img src="media/gameplay/artwork/paylines/50-lines/line-038.png" alt="50-line layout, line 38: Bottom → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 9](media/gameplay/screens/menus/paylines-50-7.png).
+
+<a id="layout-50-line-39"></a>
+
+#### Line 39
+
+**Bottom → Middle → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-039.png"><img src="media/gameplay/artwork/paylines/50-lines/line-039.png" alt="50-line layout, line 39: Bottom → Middle → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 9](media/gameplay/screens/menus/paylines-50-7.png).
+
+<a id="layout-50-line-40"></a>
+
+#### Line 40
+
+**Middle → Bottom → Middle → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-040.png"><img src="media/gameplay/artwork/paylines/50-lines/line-040.png" alt="50-line layout, line 40: Middle → Bottom → Middle → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 9](media/gameplay/screens/menus/paylines-50-7.png).
+
+<a id="layout-50-line-41"></a>
+
+#### Line 41
+
+**Middle → Middle → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-041.png"><img src="media/gameplay/artwork/paylines/50-lines/line-041.png" alt="50-line layout, line 41: Middle → Middle → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 9](media/gameplay/screens/menus/paylines-50-7.png).
+
+<a id="layout-50-line-42"></a>
+
+#### Line 42
+
+**Middle → Top → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-042.png"><img src="media/gameplay/artwork/paylines/50-lines/line-042.png" alt="50-line layout, line 42: Middle → Top → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 9](media/gameplay/screens/menus/paylines-50-7.png).
+
+<a id="layout-50-line-43"></a>
+
+#### Line 43
+
+**Middle → Top → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-043.png"><img src="media/gameplay/artwork/paylines/50-lines/line-043.png" alt="50-line layout, line 43: Middle → Top → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 9](media/gameplay/screens/menus/paylines-50-8.png).
+
+<a id="layout-50-line-44"></a>
+
+#### Line 44
+
+**Top → Middle → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-044.png"><img src="media/gameplay/artwork/paylines/50-lines/line-044.png" alt="50-line layout, line 44: Top → Middle → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 9](media/gameplay/screens/menus/paylines-50-8.png).
+
+<a id="layout-50-line-45"></a>
+
+#### Line 45
+
+**Middle → Middle → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-045.png"><img src="media/gameplay/artwork/paylines/50-lines/line-045.png" alt="50-line layout, line 45: Middle → Middle → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 9](media/gameplay/screens/menus/paylines-50-8.png).
+
+<a id="layout-50-line-46"></a>
+
+#### Line 46
+
+**Middle → Bottom → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-046.png"><img src="media/gameplay/artwork/paylines/50-lines/line-046.png" alt="50-line layout, line 46: Middle → Bottom → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 9](media/gameplay/screens/menus/paylines-50-8.png).
+
+<a id="layout-50-line-47"></a>
+
+#### Line 47
+
+**Bottom → Middle → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-047.png"><img src="media/gameplay/artwork/paylines/50-lines/line-047.png" alt="50-line layout, line 47: Bottom → Middle → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 9](media/gameplay/screens/menus/paylines-50-8.png).
+
+<a id="layout-50-line-48"></a>
+
+#### Line 48
+
+**Middle → Bottom → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-048.png"><img src="media/gameplay/artwork/paylines/50-lines/line-048.png" alt="50-line layout, line 48: Middle → Bottom → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 9](media/gameplay/screens/menus/paylines-50-8.png).
+
+<a id="layout-50-line-49"></a>
+
+#### Line 49
+
+**Top → Top → Middle → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-049.png"><img src="media/gameplay/artwork/paylines/50-lines/line-049.png" alt="50-line layout, line 49: Top → Top → Middle → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 9](media/gameplay/screens/menus/paylines-50-9.png).
+
+<a id="layout-50-line-50"></a>
+
+#### Line 50
+
+**Top → Top → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/50-lines/line-050.png"><img src="media/gameplay/artwork/paylines/50-lines/line-050.png" alt="50-line layout, line 50: Top → Top → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 9](media/gameplay/screens/menus/paylines-50-9.png).
+
+[Back to the layout list](#every-line)
+
+<a id="layout-100"></a>
+
+### 100-line layout — every line from 1 to 100
+
+100 routes, shown on 17 original chart pages. Every diagram below is visible directly on this page.
+
+Jump to line: [1](#layout-100-line-1) · [10](#layout-100-line-10) · [20](#layout-100-line-20) · [30](#layout-100-line-30) · [40](#layout-100-line-40) · [50](#layout-100-line-50) · [60](#layout-100-line-60) · [70](#layout-100-line-70) · [80](#layout-100-line-80) · [90](#layout-100-line-90) · [100](#layout-100-line-100)
+
+<a id="layout-100-line-1"></a>
+
+#### Line 1
+
+**Middle → Middle → Middle → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-001.png"><img src="media/gameplay/artwork/paylines/100-lines/line-001.png" alt="100-line layout, line 1: Middle → Middle → Middle → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 17](media/gameplay/screens/menus/paylines-100-1.png).
+
+<a id="layout-100-line-2"></a>
+
+#### Line 2
+
+**Top → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-002.png"><img src="media/gameplay/artwork/paylines/100-lines/line-002.png" alt="100-line layout, line 2: Top → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 17](media/gameplay/screens/menus/paylines-100-1.png).
+
+<a id="layout-100-line-3"></a>
+
+#### Line 3
+
+**Bottom → Bottom → Bottom → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-003.png"><img src="media/gameplay/artwork/paylines/100-lines/line-003.png" alt="100-line layout, line 3: Bottom → Bottom → Bottom → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 17](media/gameplay/screens/menus/paylines-100-1.png).
+
+<a id="layout-100-line-4"></a>
+
+#### Line 4
+
+**Top → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-004.png"><img src="media/gameplay/artwork/paylines/100-lines/line-004.png" alt="100-line layout, line 4: Top → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 17](media/gameplay/screens/menus/paylines-100-1.png).
+
+<a id="layout-100-line-5"></a>
+
+#### Line 5
+
+**Bottom → Middle → Top → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-005.png"><img src="media/gameplay/artwork/paylines/100-lines/line-005.png" alt="100-line layout, line 5: Bottom → Middle → Top → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 17](media/gameplay/screens/menus/paylines-100-1.png).
+
+<a id="layout-100-line-6"></a>
+
+#### Line 6
+
+**Top → Top → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-006.png"><img src="media/gameplay/artwork/paylines/100-lines/line-006.png" alt="100-line layout, line 6: Top → Top → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 1 of 17](media/gameplay/screens/menus/paylines-100-1.png).
+
+<a id="layout-100-line-7"></a>
+
+#### Line 7
+
+**Bottom → Bottom → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-007.png"><img src="media/gameplay/artwork/paylines/100-lines/line-007.png" alt="100-line layout, line 7: Bottom → Bottom → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 17](media/gameplay/screens/menus/paylines-100-2.png).
+
+<a id="layout-100-line-8"></a>
+
+#### Line 8
+
+**Middle → Bottom → Bottom → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-008.png"><img src="media/gameplay/artwork/paylines/100-lines/line-008.png" alt="100-line layout, line 8: Middle → Bottom → Bottom → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 17](media/gameplay/screens/menus/paylines-100-2.png).
+
+<a id="layout-100-line-9"></a>
+
+#### Line 9
+
+**Middle → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-009.png"><img src="media/gameplay/artwork/paylines/100-lines/line-009.png" alt="100-line layout, line 9: Middle → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 17](media/gameplay/screens/menus/paylines-100-2.png).
+
+<a id="layout-100-line-10"></a>
+
+#### Line 10
+
+**Top → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-010.png"><img src="media/gameplay/artwork/paylines/100-lines/line-010.png" alt="100-line layout, line 10: Top → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 17](media/gameplay/screens/menus/paylines-100-2.png).
+
+<a id="layout-100-line-11"></a>
+
+#### Line 11
+
+**Bottom → Middle → Middle → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-011.png"><img src="media/gameplay/artwork/paylines/100-lines/line-011.png" alt="100-line layout, line 11: Bottom → Middle → Middle → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 17](media/gameplay/screens/menus/paylines-100-2.png).
+
+<a id="layout-100-line-12"></a>
+
+#### Line 12
+
+**Top → Middle → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-012.png"><img src="media/gameplay/artwork/paylines/100-lines/line-012.png" alt="100-line layout, line 12: Top → Middle → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 2 of 17](media/gameplay/screens/menus/paylines-100-2.png).
+
+<a id="layout-100-line-13"></a>
+
+#### Line 13
+
+**Middle → Bottom → Middle → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-013.png"><img src="media/gameplay/artwork/paylines/100-lines/line-013.png" alt="100-line layout, line 13: Middle → Bottom → Middle → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 17](media/gameplay/screens/menus/paylines-100-3.png).
+
+<a id="layout-100-line-14"></a>
+
+#### Line 14
+
+**Middle → Top → Middle → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-014.png"><img src="media/gameplay/artwork/paylines/100-lines/line-014.png" alt="100-line layout, line 14: Middle → Top → Middle → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 17](media/gameplay/screens/menus/paylines-100-3.png).
+
+<a id="layout-100-line-15"></a>
+
+#### Line 15
+
+**Bottom → Middle → Bottom → Middle → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-015.png"><img src="media/gameplay/artwork/paylines/100-lines/line-015.png" alt="100-line layout, line 15: Bottom → Middle → Bottom → Middle → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 17](media/gameplay/screens/menus/paylines-100-3.png).
+
+<a id="layout-100-line-16"></a>
+
+#### Line 16
+
+**Middle → Middle → Top → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-016.png"><img src="media/gameplay/artwork/paylines/100-lines/line-016.png" alt="100-line layout, line 16: Middle → Middle → Top → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 17](media/gameplay/screens/menus/paylines-100-3.png).
+
+<a id="layout-100-line-17"></a>
+
+#### Line 17
+
+**Middle → Middle → Bottom → Middle → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-017.png"><img src="media/gameplay/artwork/paylines/100-lines/line-017.png" alt="100-line layout, line 17: Middle → Middle → Bottom → Middle → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 17](media/gameplay/screens/menus/paylines-100-3.png).
+
+<a id="layout-100-line-18"></a>
+
+#### Line 18
+
+**Top → Bottom → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-018.png"><img src="media/gameplay/artwork/paylines/100-lines/line-018.png" alt="100-line layout, line 18: Top → Bottom → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 3 of 17](media/gameplay/screens/menus/paylines-100-3.png).
+
+<a id="layout-100-line-19"></a>
+
+#### Line 19
+
+**Middle → Bottom → Top → Bottom → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-019.png"><img src="media/gameplay/artwork/paylines/100-lines/line-019.png" alt="100-line layout, line 19: Middle → Bottom → Top → Bottom → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 17](media/gameplay/screens/menus/paylines-100-4.png).
+
+<a id="layout-100-line-20"></a>
+
+#### Line 20
+
+**Top → Bottom → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-020.png"><img src="media/gameplay/artwork/paylines/100-lines/line-020.png" alt="100-line layout, line 20: Top → Bottom → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 17](media/gameplay/screens/menus/paylines-100-4.png).
+
+<a id="layout-100-line-21"></a>
+
+#### Line 21
+
+**Bottom → Top → Bottom → Top → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-021.png"><img src="media/gameplay/artwork/paylines/100-lines/line-021.png" alt="100-line layout, line 21: Bottom → Top → Bottom → Top → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 17](media/gameplay/screens/menus/paylines-100-4.png).
+
+<a id="layout-100-line-22"></a>
+
+#### Line 22
+
+**Middle → Top → Bottom → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-022.png"><img src="media/gameplay/artwork/paylines/100-lines/line-022.png" alt="100-line layout, line 22: Middle → Top → Bottom → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 17](media/gameplay/screens/menus/paylines-100-4.png).
+
+<a id="layout-100-line-23"></a>
+
+#### Line 23
+
+**Bottom → Bottom → Top → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-023.png"><img src="media/gameplay/artwork/paylines/100-lines/line-023.png" alt="100-line layout, line 23: Bottom → Bottom → Top → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 17](media/gameplay/screens/menus/paylines-100-4.png).
+
+<a id="layout-100-line-24"></a>
+
+#### Line 24
+
+**Top → Top → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-024.png"><img src="media/gameplay/artwork/paylines/100-lines/line-024.png" alt="100-line layout, line 24: Top → Top → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 4 of 17](media/gameplay/screens/menus/paylines-100-4.png).
+
+<a id="layout-100-line-25"></a>
+
+#### Line 25
+
+**Bottom → Top → Top → Top → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-025.png"><img src="media/gameplay/artwork/paylines/100-lines/line-025.png" alt="100-line layout, line 25: Bottom → Top → Top → Top → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 17](media/gameplay/screens/menus/paylines-100-5.png).
+
+<a id="layout-100-line-26"></a>
+
+#### Line 26
+
+**Middle → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-026.png"><img src="media/gameplay/artwork/paylines/100-lines/line-026.png" alt="100-line layout, line 26: Middle → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 17](media/gameplay/screens/menus/paylines-100-5.png).
+
+<a id="layout-100-line-27"></a>
+
+#### Line 27
+
+**Bottom → Top → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-027.png"><img src="media/gameplay/artwork/paylines/100-lines/line-027.png" alt="100-line layout, line 27: Bottom → Top → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 17](media/gameplay/screens/menus/paylines-100-5.png).
+
+<a id="layout-100-line-28"></a>
+
+#### Line 28
+
+**Top → Middle → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-028.png"><img src="media/gameplay/artwork/paylines/100-lines/line-028.png" alt="100-line layout, line 28: Top → Middle → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 17](media/gameplay/screens/menus/paylines-100-5.png).
+
+<a id="layout-100-line-29"></a>
+
+#### Line 29
+
+**Middle → Middle → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-029.png"><img src="media/gameplay/artwork/paylines/100-lines/line-029.png" alt="100-line layout, line 29: Middle → Middle → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 17](media/gameplay/screens/menus/paylines-100-5.png).
+
+<a id="layout-100-line-30"></a>
+
+#### Line 30
+
+**Bottom → Middle → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-030.png"><img src="media/gameplay/artwork/paylines/100-lines/line-030.png" alt="100-line layout, line 30: Bottom → Middle → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 5 of 17](media/gameplay/screens/menus/paylines-100-5.png).
+
+<a id="layout-100-line-31"></a>
+
+#### Line 31
+
+**Top → Bottom → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-031.png"><img src="media/gameplay/artwork/paylines/100-lines/line-031.png" alt="100-line layout, line 31: Top → Bottom → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 17](media/gameplay/screens/menus/paylines-100-6.png).
+
+<a id="layout-100-line-32"></a>
+
+#### Line 32
+
+**Middle → Bottom → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-032.png"><img src="media/gameplay/artwork/paylines/100-lines/line-032.png" alt="100-line layout, line 32: Middle → Bottom → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 17](media/gameplay/screens/menus/paylines-100-6.png).
+
+<a id="layout-100-line-33"></a>
+
+#### Line 33
+
+**Bottom → Bottom → Top → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-033.png"><img src="media/gameplay/artwork/paylines/100-lines/line-033.png" alt="100-line layout, line 33: Bottom → Bottom → Top → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 17](media/gameplay/screens/menus/paylines-100-6.png).
+
+<a id="layout-100-line-34"></a>
+
+#### Line 34
+
+**Top → Top → Middle → Bottom → Bottom**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-034.png"><img src="media/gameplay/artwork/paylines/100-lines/line-034.png" alt="100-line layout, line 34: Top → Top → Middle → Bottom → Bottom" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 17](media/gameplay/screens/menus/paylines-100-6.png).
+
+<a id="layout-100-line-35"></a>
+
+#### Line 35
+
+**Middle → Top → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-035.png"><img src="media/gameplay/artwork/paylines/100-lines/line-035.png" alt="100-line layout, line 35: Middle → Top → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 17](media/gameplay/screens/menus/paylines-100-6.png).
+
+<a id="layout-100-line-36"></a>
+
+#### Line 36
+
+**Bottom → Top → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-036.png"><img src="media/gameplay/artwork/paylines/100-lines/line-036.png" alt="100-line layout, line 36: Bottom → Top → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 6 of 17](media/gameplay/screens/menus/paylines-100-6.png).
+
+<a id="layout-100-line-37"></a>
+
+#### Line 37
+
+**Top → Middle → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-037.png"><img src="media/gameplay/artwork/paylines/100-lines/line-037.png" alt="100-line layout, line 37: Top → Middle → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 17](media/gameplay/screens/menus/paylines-100-7.png).
+
+<a id="layout-100-line-38"></a>
+
+#### Line 38
+
+**Middle → Middle → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-038.png"><img src="media/gameplay/artwork/paylines/100-lines/line-038.png" alt="100-line layout, line 38: Middle → Middle → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 17](media/gameplay/screens/menus/paylines-100-7.png).
+
+<a id="layout-100-line-39"></a>
+
+#### Line 39
+
+**Bottom → Middle → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-039.png"><img src="media/gameplay/artwork/paylines/100-lines/line-039.png" alt="100-line layout, line 39: Bottom → Middle → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 17](media/gameplay/screens/menus/paylines-100-7.png).
+
+<a id="layout-100-line-40"></a>
+
+#### Line 40
+
+**Top → Bottom → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-040.png"><img src="media/gameplay/artwork/paylines/100-lines/line-040.png" alt="100-line layout, line 40: Top → Bottom → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 17](media/gameplay/screens/menus/paylines-100-7.png).
+
+<a id="layout-100-line-41"></a>
+
+#### Line 41
+
+**Middle → Bottom → Middle → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-041.png"><img src="media/gameplay/artwork/paylines/100-lines/line-041.png" alt="100-line layout, line 41: Middle → Bottom → Middle → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 17](media/gameplay/screens/menus/paylines-100-7.png).
+
+<a id="layout-100-line-42"></a>
+
+#### Line 42
+
+**Middle → Top → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-042.png"><img src="media/gameplay/artwork/paylines/100-lines/line-042.png" alt="100-line layout, line 42: Middle → Top → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 7 of 17](media/gameplay/screens/menus/paylines-100-7.png).
+
+<a id="layout-100-line-43"></a>
+
+#### Line 43
+
+**Bottom → Top → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-043.png"><img src="media/gameplay/artwork/paylines/100-lines/line-043.png" alt="100-line layout, line 43: Bottom → Top → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 17](media/gameplay/screens/menus/paylines-100-8.png).
+
+<a id="layout-100-line-44"></a>
+
+#### Line 44
+
+**Top → Middle → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-044.png"><img src="media/gameplay/artwork/paylines/100-lines/line-044.png" alt="100-line layout, line 44: Top → Middle → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 17](media/gameplay/screens/menus/paylines-100-8.png).
+
+<a id="layout-100-line-45"></a>
+
+#### Line 45
+
+**Middle → Middle → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-045.png"><img src="media/gameplay/artwork/paylines/100-lines/line-045.png" alt="100-line layout, line 45: Middle → Middle → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 17](media/gameplay/screens/menus/paylines-100-8.png).
+
+<a id="layout-100-line-46"></a>
+
+#### Line 46
+
+**Bottom → Middle → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-046.png"><img src="media/gameplay/artwork/paylines/100-lines/line-046.png" alt="100-line layout, line 46: Bottom → Middle → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 17](media/gameplay/screens/menus/paylines-100-8.png).
+
+<a id="layout-100-line-47"></a>
+
+#### Line 47
+
+**Top → Bottom → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-047.png"><img src="media/gameplay/artwork/paylines/100-lines/line-047.png" alt="100-line layout, line 47: Top → Bottom → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 17](media/gameplay/screens/menus/paylines-100-8.png).
+
+<a id="layout-100-line-48"></a>
+
+#### Line 48
+
+**Middle → Bottom → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-048.png"><img src="media/gameplay/artwork/paylines/100-lines/line-048.png" alt="100-line layout, line 48: Middle → Bottom → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 8 of 17](media/gameplay/screens/menus/paylines-100-8.png).
+
+<a id="layout-100-line-49"></a>
+
+#### Line 49
+
+**Bottom → Bottom → Bottom → Top → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-049.png"><img src="media/gameplay/artwork/paylines/100-lines/line-049.png" alt="100-line layout, line 49: Bottom → Bottom → Bottom → Top → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 17](media/gameplay/screens/menus/paylines-100-9.png).
+
+<a id="layout-100-line-50"></a>
+
+#### Line 50
+
+**Top → Top → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-050.png"><img src="media/gameplay/artwork/paylines/100-lines/line-050.png" alt="100-line layout, line 50: Top → Top → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 17](media/gameplay/screens/menus/paylines-100-9.png).
+
+<a id="layout-100-line-51"></a>
+
+#### Line 51
+
+**Middle → Top → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-051.png"><img src="media/gameplay/artwork/paylines/100-lines/line-051.png" alt="100-line layout, line 51: Middle → Top → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 17](media/gameplay/screens/menus/paylines-100-9.png).
+
+<a id="layout-100-line-52"></a>
+
+#### Line 52
+
+**Bottom → Top → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-052.png"><img src="media/gameplay/artwork/paylines/100-lines/line-052.png" alt="100-line layout, line 52: Bottom → Top → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 17](media/gameplay/screens/menus/paylines-100-9.png).
+
+<a id="layout-100-line-53"></a>
+
+#### Line 53
+
+**Middle → Middle → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-053.png"><img src="media/gameplay/artwork/paylines/100-lines/line-053.png" alt="100-line layout, line 53: Middle → Middle → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 17](media/gameplay/screens/menus/paylines-100-9.png).
+
+<a id="layout-100-line-54"></a>
+
+#### Line 54
+
+**Bottom → Middle → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-054.png"><img src="media/gameplay/artwork/paylines/100-lines/line-054.png" alt="100-line layout, line 54: Bottom → Middle → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 9 of 17](media/gameplay/screens/menus/paylines-100-9.png).
+
+<a id="layout-100-line-55"></a>
+
+#### Line 55
+
+**Top → Bottom → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-055.png"><img src="media/gameplay/artwork/paylines/100-lines/line-055.png" alt="100-line layout, line 55: Top → Bottom → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 10 of 17](media/gameplay/screens/menus/paylines-100-10.png).
+
+<a id="layout-100-line-56"></a>
+
+#### Line 56
+
+**Middle → Bottom → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-056.png"><img src="media/gameplay/artwork/paylines/100-lines/line-056.png" alt="100-line layout, line 56: Middle → Bottom → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 10 of 17](media/gameplay/screens/menus/paylines-100-10.png).
+
+<a id="layout-100-line-57"></a>
+
+#### Line 57
+
+**Bottom → Bottom → Top → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-057.png"><img src="media/gameplay/artwork/paylines/100-lines/line-057.png" alt="100-line layout, line 57: Bottom → Bottom → Top → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 10 of 17](media/gameplay/screens/menus/paylines-100-10.png).
+
+<a id="layout-100-line-58"></a>
+
+#### Line 58
+
+**Top → Top → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-058.png"><img src="media/gameplay/artwork/paylines/100-lines/line-058.png" alt="100-line layout, line 58: Top → Top → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 10 of 17](media/gameplay/screens/menus/paylines-100-10.png).
+
+<a id="layout-100-line-59"></a>
+
+#### Line 59
+
+**Middle → Top → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-059.png"><img src="media/gameplay/artwork/paylines/100-lines/line-059.png" alt="100-line layout, line 59: Middle → Top → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 10 of 17](media/gameplay/screens/menus/paylines-100-10.png).
+
+<a id="layout-100-line-60"></a>
+
+#### Line 60
+
+**Bottom → Top → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-060.png"><img src="media/gameplay/artwork/paylines/100-lines/line-060.png" alt="100-line layout, line 60: Bottom → Top → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 10 of 17](media/gameplay/screens/menus/paylines-100-10.png).
+
+<a id="layout-100-line-61"></a>
+
+#### Line 61
+
+**Middle → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-061.png"><img src="media/gameplay/artwork/paylines/100-lines/line-061.png" alt="100-line layout, line 61: Middle → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 11 of 17](media/gameplay/screens/menus/paylines-100-11.png).
+
+<a id="layout-100-line-62"></a>
+
+#### Line 62
+
+**Bottom → Middle → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-062.png"><img src="media/gameplay/artwork/paylines/100-lines/line-062.png" alt="100-line layout, line 62: Bottom → Middle → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 11 of 17](media/gameplay/screens/menus/paylines-100-11.png).
+
+<a id="layout-100-line-63"></a>
+
+#### Line 63
+
+**Top → Bottom → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-063.png"><img src="media/gameplay/artwork/paylines/100-lines/line-063.png" alt="100-line layout, line 63: Top → Bottom → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 11 of 17](media/gameplay/screens/menus/paylines-100-11.png).
+
+<a id="layout-100-line-64"></a>
+
+#### Line 64
+
+**Middle → Bottom → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-064.png"><img src="media/gameplay/artwork/paylines/100-lines/line-064.png" alt="100-line layout, line 64: Middle → Bottom → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 11 of 17](media/gameplay/screens/menus/paylines-100-11.png).
+
+<a id="layout-100-line-65"></a>
+
+#### Line 65
+
+**Bottom → Bottom → Middle → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-065.png"><img src="media/gameplay/artwork/paylines/100-lines/line-065.png" alt="100-line layout, line 65: Bottom → Bottom → Middle → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 11 of 17](media/gameplay/screens/menus/paylines-100-11.png).
+
+<a id="layout-100-line-66"></a>
+
+#### Line 66
+
+**Top → Top → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-066.png"><img src="media/gameplay/artwork/paylines/100-lines/line-066.png" alt="100-line layout, line 66: Top → Top → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 11 of 17](media/gameplay/screens/menus/paylines-100-11.png).
+
+<a id="layout-100-line-67"></a>
+
+#### Line 67
+
+**Middle → Top → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-067.png"><img src="media/gameplay/artwork/paylines/100-lines/line-067.png" alt="100-line layout, line 67: Middle → Top → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 12 of 17](media/gameplay/screens/menus/paylines-100-12.png).
+
+<a id="layout-100-line-68"></a>
+
+#### Line 68
+
+**Bottom → Top → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-068.png"><img src="media/gameplay/artwork/paylines/100-lines/line-068.png" alt="100-line layout, line 68: Bottom → Top → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 12 of 17](media/gameplay/screens/menus/paylines-100-12.png).
+
+<a id="layout-100-line-69"></a>
+
+#### Line 69
+
+**Middle → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-069.png"><img src="media/gameplay/artwork/paylines/100-lines/line-069.png" alt="100-line layout, line 69: Middle → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 12 of 17](media/gameplay/screens/menus/paylines-100-12.png).
+
+<a id="layout-100-line-70"></a>
+
+#### Line 70
+
+**Bottom → Middle → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-070.png"><img src="media/gameplay/artwork/paylines/100-lines/line-070.png" alt="100-line layout, line 70: Bottom → Middle → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 12 of 17](media/gameplay/screens/menus/paylines-100-12.png).
+
+<a id="layout-100-line-71"></a>
+
+#### Line 71
+
+**Top → Bottom → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-071.png"><img src="media/gameplay/artwork/paylines/100-lines/line-071.png" alt="100-line layout, line 71: Top → Bottom → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 12 of 17](media/gameplay/screens/menus/paylines-100-12.png).
+
+<a id="layout-100-line-72"></a>
+
+#### Line 72
+
+**Middle → Bottom → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-072.png"><img src="media/gameplay/artwork/paylines/100-lines/line-072.png" alt="100-line layout, line 72: Middle → Bottom → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 12 of 17](media/gameplay/screens/menus/paylines-100-12.png).
+
+<a id="layout-100-line-73"></a>
+
+#### Line 73
+
+**Bottom → Bottom → Bottom → Middle → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-073.png"><img src="media/gameplay/artwork/paylines/100-lines/line-073.png" alt="100-line layout, line 73: Bottom → Bottom → Bottom → Middle → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 13 of 17](media/gameplay/screens/menus/paylines-100-13.png).
+
+<a id="layout-100-line-74"></a>
+
+#### Line 74
+
+**Top → Top → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-074.png"><img src="media/gameplay/artwork/paylines/100-lines/line-074.png" alt="100-line layout, line 74: Top → Top → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 13 of 17](media/gameplay/screens/menus/paylines-100-13.png).
+
+<a id="layout-100-line-75"></a>
+
+#### Line 75
+
+**Middle → Top → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-075.png"><img src="media/gameplay/artwork/paylines/100-lines/line-075.png" alt="100-line layout, line 75: Middle → Top → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 13 of 17](media/gameplay/screens/menus/paylines-100-13.png).
+
+<a id="layout-100-line-76"></a>
+
+#### Line 76
+
+**Bottom → Top → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-076.png"><img src="media/gameplay/artwork/paylines/100-lines/line-076.png" alt="100-line layout, line 76: Bottom → Top → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 13 of 17](media/gameplay/screens/menus/paylines-100-13.png).
+
+<a id="layout-100-line-77"></a>
+
+#### Line 77
+
+**Top → Middle → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-077.png"><img src="media/gameplay/artwork/paylines/100-lines/line-077.png" alt="100-line layout, line 77: Top → Middle → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 13 of 17](media/gameplay/screens/menus/paylines-100-13.png).
+
+<a id="layout-100-line-78"></a>
+
+#### Line 78
+
+**Middle → Middle → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-078.png"><img src="media/gameplay/artwork/paylines/100-lines/line-078.png" alt="100-line layout, line 78: Middle → Middle → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 13 of 17](media/gameplay/screens/menus/paylines-100-13.png).
+
+<a id="layout-100-line-79"></a>
+
+#### Line 79
+
+**Bottom → Middle → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-079.png"><img src="media/gameplay/artwork/paylines/100-lines/line-079.png" alt="100-line layout, line 79: Bottom → Middle → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 14 of 17](media/gameplay/screens/menus/paylines-100-14.png).
+
+<a id="layout-100-line-80"></a>
+
+#### Line 80
+
+**Middle → Bottom → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-080.png"><img src="media/gameplay/artwork/paylines/100-lines/line-080.png" alt="100-line layout, line 80: Middle → Bottom → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 14 of 17](media/gameplay/screens/menus/paylines-100-14.png).
+
+<a id="layout-100-line-81"></a>
+
+#### Line 81
+
+**Bottom → Bottom → Top → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-081.png"><img src="media/gameplay/artwork/paylines/100-lines/line-081.png" alt="100-line layout, line 81: Bottom → Bottom → Top → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 14 of 17](media/gameplay/screens/menus/paylines-100-14.png).
+
+<a id="layout-100-line-82"></a>
+
+#### Line 82
+
+**Top → Top → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-082.png"><img src="media/gameplay/artwork/paylines/100-lines/line-082.png" alt="100-line layout, line 82: Top → Top → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 14 of 17](media/gameplay/screens/menus/paylines-100-14.png).
+
+<a id="layout-100-line-83"></a>
+
+#### Line 83
+
+**Middle → Top → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-083.png"><img src="media/gameplay/artwork/paylines/100-lines/line-083.png" alt="100-line layout, line 83: Middle → Top → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 14 of 17](media/gameplay/screens/menus/paylines-100-14.png).
+
+<a id="layout-100-line-84"></a>
+
+#### Line 84
+
+**Bottom → Top → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-084.png"><img src="media/gameplay/artwork/paylines/100-lines/line-084.png" alt="100-line layout, line 84: Bottom → Top → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 14 of 17](media/gameplay/screens/menus/paylines-100-14.png).
+
+<a id="layout-100-line-85"></a>
+
+#### Line 85
+
+**Top → Middle → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-085.png"><img src="media/gameplay/artwork/paylines/100-lines/line-085.png" alt="100-line layout, line 85: Top → Middle → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 15 of 17](media/gameplay/screens/menus/paylines-100-15.png).
+
+<a id="layout-100-line-86"></a>
+
+#### Line 86
+
+**Middle → Middle → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-086.png"><img src="media/gameplay/artwork/paylines/100-lines/line-086.png" alt="100-line layout, line 86: Middle → Middle → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 15 of 17](media/gameplay/screens/menus/paylines-100-15.png).
+
+<a id="layout-100-line-87"></a>
+
+#### Line 87
+
+**Bottom → Middle → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-087.png"><img src="media/gameplay/artwork/paylines/100-lines/line-087.png" alt="100-line layout, line 87: Bottom → Middle → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 15 of 17](media/gameplay/screens/menus/paylines-100-15.png).
+
+<a id="layout-100-line-88"></a>
+
+#### Line 88
+
+**Top → Bottom → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-088.png"><img src="media/gameplay/artwork/paylines/100-lines/line-088.png" alt="100-line layout, line 88: Top → Bottom → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 15 of 17](media/gameplay/screens/menus/paylines-100-15.png).
+
+<a id="layout-100-line-89"></a>
+
+#### Line 89
+
+**Middle → Bottom → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-089.png"><img src="media/gameplay/artwork/paylines/100-lines/line-089.png" alt="100-line layout, line 89: Middle → Bottom → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 15 of 17](media/gameplay/screens/menus/paylines-100-15.png).
+
+<a id="layout-100-line-90"></a>
+
+#### Line 90
+
+**Bottom → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-090.png"><img src="media/gameplay/artwork/paylines/100-lines/line-090.png" alt="100-line layout, line 90: Bottom → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 15 of 17](media/gameplay/screens/menus/paylines-100-15.png).
+
+<a id="layout-100-line-91"></a>
+
+#### Line 91
+
+**Top → Top → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-091.png"><img src="media/gameplay/artwork/paylines/100-lines/line-091.png" alt="100-line layout, line 91: Top → Top → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 16 of 17](media/gameplay/screens/menus/paylines-100-16.png).
+
+<a id="layout-100-line-92"></a>
+
+#### Line 92
+
+**Middle → Top → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-092.png"><img src="media/gameplay/artwork/paylines/100-lines/line-092.png" alt="100-line layout, line 92: Middle → Top → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 16 of 17](media/gameplay/screens/menus/paylines-100-16.png).
+
+<a id="layout-100-line-93"></a>
+
+#### Line 93
+
+**Bottom → Top → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-093.png"><img src="media/gameplay/artwork/paylines/100-lines/line-093.png" alt="100-line layout, line 93: Bottom → Top → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 16 of 17](media/gameplay/screens/menus/paylines-100-16.png).
+
+<a id="layout-100-line-94"></a>
+
+#### Line 94
+
+**Top → Middle → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-094.png"><img src="media/gameplay/artwork/paylines/100-lines/line-094.png" alt="100-line layout, line 94: Top → Middle → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 16 of 17](media/gameplay/screens/menus/paylines-100-16.png).
+
+<a id="layout-100-line-95"></a>
+
+#### Line 95
+
+**Middle → Middle → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-095.png"><img src="media/gameplay/artwork/paylines/100-lines/line-095.png" alt="100-line layout, line 95: Middle → Middle → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 16 of 17](media/gameplay/screens/menus/paylines-100-16.png).
+
+<a id="layout-100-line-96"></a>
+
+#### Line 96
+
+**Bottom → Middle → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-096.png"><img src="media/gameplay/artwork/paylines/100-lines/line-096.png" alt="100-line layout, line 96: Bottom → Middle → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 16 of 17](media/gameplay/screens/menus/paylines-100-16.png).
+
+<a id="layout-100-line-97"></a>
+
+#### Line 97
+
+**Middle → Bottom → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-097.png"><img src="media/gameplay/artwork/paylines/100-lines/line-097.png" alt="100-line layout, line 97: Middle → Bottom → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 17 of 17](media/gameplay/screens/menus/paylines-100-17.png).
+
+<a id="layout-100-line-98"></a>
+
+#### Line 98
+
+**Bottom → Bottom → Bottom → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-098.png"><img src="media/gameplay/artwork/paylines/100-lines/line-098.png" alt="100-line layout, line 98: Bottom → Bottom → Bottom → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 17 of 17](media/gameplay/screens/menus/paylines-100-17.png).
+
+<a id="layout-100-line-99"></a>
+
+#### Line 99
+
+**Top → Top → Top → Top → Middle**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-099.png"><img src="media/gameplay/artwork/paylines/100-lines/line-099.png" alt="100-line layout, line 99: Top → Top → Top → Top → Middle" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 17 of 17](media/gameplay/screens/menus/paylines-100-17.png).
+
+<a id="layout-100-line-100"></a>
+
+#### Line 100
+
+**Bottom → Bottom → Middle → Bottom → Top**
+
+<a href="media/gameplay/artwork/paylines/100-lines/line-100.png"><img src="media/gameplay/artwork/paylines/100-lines/line-100.png" alt="100-line layout, line 100: Bottom → Bottom → Middle → Bottom → Top" width="600" height="108" loading="lazy"></a>
+
+[View the original chart, page 17 of 17](media/gameplay/screens/menus/paylines-100-17.png).
+
+[Back to the layout list](#every-line)
+
+<!-- END COMPLETE PAYLINE REFERENCE -->
 
 ## Open the charts while playing
 

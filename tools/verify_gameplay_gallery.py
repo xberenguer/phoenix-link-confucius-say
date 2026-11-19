@@ -6,6 +6,7 @@ original-casino frequencies or prove that every possible event was captured.
 The recorder itself and the selected footage still need human review.
 """
 import argparse
+import csv
 import hashlib
 import html
 import json
@@ -350,6 +351,28 @@ def verify(root):
             require(False, "Cannot inspect recorded image " + name + ": " + str(exc))
         image_count += 1
     require(bool(catalog), "Gallery has no captured images")
+    # The public line atlas must cover the complete current route list. Check
+    # layout-specific IDs: a numbered route can differ between line settings.
+    with (docs / "data/implemented-paylines.csv").open(newline="") as stream:
+        expected_routes = {(int(row["line_selection"]), int(row["line_number"])):
+                           [int(row[f"reel_{column}_row"]) for column in range(1, 6)]
+                           for row in csv.DictReader(stream)}
+    route_images = [item for item in manifest["images"] if item.get("role") == "payline-reference"]
+    route_keys = [(item.get("line_layout"), item.get("line_number")) for item in route_images]
+    require(len(route_keys) == len(set(route_keys)), "Duplicate line in the complete payline atlas")
+    require(set(route_keys) == set(expected_routes), "Payline atlas is missing or inventing a numbered route")
+    route_text = (docs / "paylines.md").read_text()
+    route_sha = sha(docs / "data/implemented-paylines.csv")
+    for item in route_images:
+        key = item["line_layout"], item["line_number"]
+        label = f"{key[0]}-line layout, line {key[1]}"
+        require(item.get("row_path") == expected_routes.get(key), "Written route differs from game data: " + label)
+        require(item.get("source_route_csv_sha256") == route_sha, "Route data binding is stale: " + label)
+        require(item.get("captured_route_dots_verified") is True, "Recorded route dots were not checked: " + label)
+        require('src="' + item["file"] + '"' in route_text, "Route is not visible on the paylines page: " + label)
+        page = (key[1] - 1) // 6 + 1
+        require(item.get("context_file") == f"media/gameplay/screens/menus/paylines-{key[0]}-{page}.png",
+                "Route links to the wrong original chart page: " + label)
     for path in (docs / "media/gameplay").rglob("*"):
         if path.is_file():
             require(path.resolve() in catalog, "Uncatalogued recorded media: " + path.relative_to(docs).as_posix())

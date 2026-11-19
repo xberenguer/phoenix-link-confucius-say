@@ -489,7 +489,7 @@ The menus are shown as they appeared during actual navigation. Editor screens re
 
 ### Every payline chart
 
-All 37 chart pages are grouped by line setting. [How paylines work](paylines.md).
+All 37 chart pages are grouped by line setting. [See all 205 numbered lines, individually enlarged and explained](paylines.md#every-line), or [start with how paylines work](paylines.md).
 
 <details>
 <summary>5 lines — 1 chart page</summary>

@@ -6065,6 +6065,4516 @@
       "source_version": "0.2.170"
     },
     {
+      "file": "media/gameplay/artwork/paylines/5-lines/line-001.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "08d7952f478ae6f23d6fea33a6a88b1d47cfe8e8c109a0439bd8189aac7c7ae5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/5-lines/line-002.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50126cadceb766d9fb7c75a94bb74cde82639353c98f16d1daa063a1f9de47c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/5-lines/line-003.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7a57a10fdc99583526931c353c2d046e66c042d7706312a901ffd4ead7976e4b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/5-lines/line-004.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "433686e3483013bb335fa36e1dac77c8c72dddcdf17c3e7f2a0ce2043ff71436",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/5-lines/line-005.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6be362e15175a94481dfe6e9ede97d7604d0d017ff70ee742a060e8633b78d85",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-5-1",
+      "action_index": 414671,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-001.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "08d7952f478ae6f23d6fea33a6a88b1d47cfe8e8c109a0439bd8189aac7c7ae5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-1",
+      "action_index": 414673,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-002.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50126cadceb766d9fb7c75a94bb74cde82639353c98f16d1daa063a1f9de47c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-1",
+      "action_index": 414673,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-003.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7a57a10fdc99583526931c353c2d046e66c042d7706312a901ffd4ead7976e4b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-1",
+      "action_index": 414673,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-004.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "433686e3483013bb335fa36e1dac77c8c72dddcdf17c3e7f2a0ce2043ff71436",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-1",
+      "action_index": 414673,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-005.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6be362e15175a94481dfe6e9ede97d7604d0d017ff70ee742a060e8633b78d85",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-1",
+      "action_index": 414673,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-006.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "84ace2ba486b6bca267d1794b137791a9bad48d11ff7a1b1016ce32a8ee168ea",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-1",
+      "action_index": 414673,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-007.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "575f94a691b9531356914c3c53b5a4978e0a7c3d674bc75bb1988159ccc405db",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-2",
+      "action_index": 414674,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-008.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "175affdb793c236367f59b90cd4329fa59f13ac022ce6d4c2cfda4f43e87c9ff",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-2",
+      "action_index": 414674,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-009.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "edd03fe72c79cd02ebfb35423b5b1ae9e822cee05d1cd320a6fe7893f1d50c4c",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-2",
+      "action_index": 414674,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/10-lines/line-010.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "74875786f02eee3c371609f28b1515cdc010e370cfca62271a9634a35430396f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-10-2",
+      "action_index": 414674,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-001.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "08d7952f478ae6f23d6fea33a6a88b1d47cfe8e8c109a0439bd8189aac7c7ae5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-1",
+      "action_index": 414676,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-002.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50126cadceb766d9fb7c75a94bb74cde82639353c98f16d1daa063a1f9de47c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-1",
+      "action_index": 414676,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-003.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7a57a10fdc99583526931c353c2d046e66c042d7706312a901ffd4ead7976e4b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-1",
+      "action_index": 414676,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-004.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "433686e3483013bb335fa36e1dac77c8c72dddcdf17c3e7f2a0ce2043ff71436",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-1",
+      "action_index": 414676,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-005.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6be362e15175a94481dfe6e9ede97d7604d0d017ff70ee742a060e8633b78d85",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-1",
+      "action_index": 414676,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-006.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "22b2e4615f4ec584058f9a0d124f005f4b7e8d817c24e552c7e4d48261d8b85b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-1",
+      "action_index": 414676,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-007.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "575f94a691b9531356914c3c53b5a4978e0a7c3d674bc75bb1988159ccc405db",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-2",
+      "action_index": 414677,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-008.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e5ad4dcc073253c102c7e943a2e4fc52173041ed93e84ee3a1da5af55971081e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-2",
+      "action_index": 414677,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-009.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "87cf566d6702b446cc36f5d34b155c9efefd0a952a20db6fee63e6ddfe05f3ff",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-2",
+      "action_index": 414677,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-010.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "74875786f02eee3c371609f28b1515cdc010e370cfca62271a9634a35430396f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-2",
+      "action_index": 414677,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-011.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "2dd27d58697b321447e696c46bf7c624d5dc05ad9f5d39d29c3a7fcca32bba91",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-2",
+      "action_index": 414677,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-012.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "8d462123d7ac9b23bcbcd9625d9cbe42510fc73d456d000fe8f473f63236b1fd",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-2",
+      "action_index": 414677,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-013.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "4b042a32a00f8b692b0bb1478d52d0a348f757922febcda9b3528cc009fbf1d8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-3",
+      "action_index": 414678,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-014.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "85417c951113e0471eaaf2ebebdfca5ad354e474646ad531d9975c4a622725f8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-3",
+      "action_index": 414678,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/15-lines/line-015.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "2dab85869af19ed893f01622a5d7455e1c23cf23cdfb5c74295cff8ff1bc83f9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-15-3",
+      "action_index": 414678,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-001.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "08d7952f478ae6f23d6fea33a6a88b1d47cfe8e8c109a0439bd8189aac7c7ae5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-1",
+      "action_index": 414680,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-002.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50126cadceb766d9fb7c75a94bb74cde82639353c98f16d1daa063a1f9de47c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-1",
+      "action_index": 414680,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-003.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7a57a10fdc99583526931c353c2d046e66c042d7706312a901ffd4ead7976e4b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-1",
+      "action_index": 414680,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-004.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "433686e3483013bb335fa36e1dac77c8c72dddcdf17c3e7f2a0ce2043ff71436",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-1",
+      "action_index": 414680,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-005.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6be362e15175a94481dfe6e9ede97d7604d0d017ff70ee742a060e8633b78d85",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-1",
+      "action_index": 414680,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-006.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "22b2e4615f4ec584058f9a0d124f005f4b7e8d817c24e552c7e4d48261d8b85b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-1",
+      "action_index": 414680,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-007.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "49042e77728ca42d273194c92a936613b3213f90ec2900147a02174c24675122",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-2",
+      "action_index": 414681,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-008.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e5ad4dcc073253c102c7e943a2e4fc52173041ed93e84ee3a1da5af55971081e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-2",
+      "action_index": 414681,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-009.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "87cf566d6702b446cc36f5d34b155c9efefd0a952a20db6fee63e6ddfe05f3ff",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-2",
+      "action_index": 414681,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-010.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "74875786f02eee3c371609f28b1515cdc010e370cfca62271a9634a35430396f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-2",
+      "action_index": 414681,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-011.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "2dd27d58697b321447e696c46bf7c624d5dc05ad9f5d39d29c3a7fcca32bba91",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-2",
+      "action_index": 414681,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-012.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "66c1174de5f622f11155d40579e6fad98853480a482649c638dc95912880996c",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-2",
+      "action_index": 414681,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-013.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "43afaf7814111995a27122894b1c93518f58e87b8356cf933ac5932416af4985",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-3",
+      "action_index": 414682,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-014.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "212e623596272ff29a455a0f390d2215a00bfc2ca530171fdbcbd247b60a7dae",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-3",
+      "action_index": 414682,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-015.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "39b6728703fc2213a8a45615c1f5623a551fdc8c312b7e22c4ce1869f505c324",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-3",
+      "action_index": 414682,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-016.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50e65dabce8ca31fd5e6d0fec60a3daecaa9fc0e52c4259bdb3af21d500c7ba8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-3",
+      "action_index": 414682,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-017.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "aa376ce7958fe65ab8192d9decb75584d880b545d9db662da8cda3c1a6c2bc3f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-3",
+      "action_index": 414682,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-018.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "9dee2f0ac402d8f2119616224ed0c6a3d89e02983a10e847ad3b724b5f3eb78f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-3",
+      "action_index": 414682,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-019.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "35789abbfc8af86b0e3fbb718ec8be4273762bdafaa4f38030900c7df76531f7",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-4",
+      "action_index": 414683,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-020.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "4af39e359c2ec8268228fdc88383d8d2be762788b62dc2f41373df1c6851b208",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-4",
+      "action_index": 414683,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-021.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "950e09dff2bb914dbff1b1e60ffaa5d56e9ff5eb2b2fc8cfc9247dad54bf1f79",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-4",
+      "action_index": 414683,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-022.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "4531b52010fde27c6ea936e9ede6e3444c0f6cff2c97b1278d898ecf54ab09ef",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-4",
+      "action_index": 414683,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-023.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "ea778b73786f6ebc6dc65fae3030dd38be7ba4e9116fd8db678371f2be9d80f3",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-4",
+      "action_index": 414683,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-024.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d6ed65cd2a0ca69a14be1fc6c0279e4e39d56ff7e195429be89d3f9161370352",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-4",
+      "action_index": 414683,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/25-lines/line-025.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "918349e0800e2ae5320ce75b4849dbd6d34c7e361dae750bb9ff5a6b8c6432d1",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-25-5",
+      "action_index": 414684,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-001.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "08d7952f478ae6f23d6fea33a6a88b1d47cfe8e8c109a0439bd8189aac7c7ae5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-1",
+      "action_index": 414661,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-002.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50126cadceb766d9fb7c75a94bb74cde82639353c98f16d1daa063a1f9de47c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-1",
+      "action_index": 414661,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-003.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7a57a10fdc99583526931c353c2d046e66c042d7706312a901ffd4ead7976e4b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-1",
+      "action_index": 414661,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-004.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "433686e3483013bb335fa36e1dac77c8c72dddcdf17c3e7f2a0ce2043ff71436",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-1",
+      "action_index": 414661,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-005.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6be362e15175a94481dfe6e9ede97d7604d0d017ff70ee742a060e8633b78d85",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-1",
+      "action_index": 414661,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-006.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "22b2e4615f4ec584058f9a0d124f005f4b7e8d817c24e552c7e4d48261d8b85b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-1",
+      "action_index": 414661,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-007.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "49042e77728ca42d273194c92a936613b3213f90ec2900147a02174c24675122",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-2",
+      "action_index": 414662,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-008.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e5ad4dcc073253c102c7e943a2e4fc52173041ed93e84ee3a1da5af55971081e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-2",
+      "action_index": 414662,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-009.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "87cf566d6702b446cc36f5d34b155c9efefd0a952a20db6fee63e6ddfe05f3ff",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-2",
+      "action_index": 414662,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-010.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "74875786f02eee3c371609f28b1515cdc010e370cfca62271a9634a35430396f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-2",
+      "action_index": 414662,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-011.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "2dd27d58697b321447e696c46bf7c624d5dc05ad9f5d39d29c3a7fcca32bba91",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-2",
+      "action_index": 414662,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-012.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "372f33b7b3317cf36d56be5b425dbd78b54e0ce171f71a0fb811e4e3cbf7791b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-2",
+      "action_index": 414662,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-013.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "43afaf7814111995a27122894b1c93518f58e87b8356cf933ac5932416af4985",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-3",
+      "action_index": 414663,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-014.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "212e623596272ff29a455a0f390d2215a00bfc2ca530171fdbcbd247b60a7dae",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-3",
+      "action_index": 414663,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-015.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5fd0b1155c2b6099fe71f34757f61b302fb45a192b5b2b788632b421790c1dde",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-3",
+      "action_index": 414663,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-016.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50e65dabce8ca31fd5e6d0fec60a3daecaa9fc0e52c4259bdb3af21d500c7ba8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-3",
+      "action_index": 414663,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-017.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "aa376ce7958fe65ab8192d9decb75584d880b545d9db662da8cda3c1a6c2bc3f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-3",
+      "action_index": 414663,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-018.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "9dee2f0ac402d8f2119616224ed0c6a3d89e02983a10e847ad3b724b5f3eb78f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-3",
+      "action_index": 414663,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-019.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "35789abbfc8af86b0e3fbb718ec8be4273762bdafaa4f38030900c7df76531f7",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-4",
+      "action_index": 414664,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-020.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "4af39e359c2ec8268228fdc88383d8d2be762788b62dc2f41373df1c6851b208",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-4",
+      "action_index": 414664,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-021.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "950e09dff2bb914dbff1b1e60ffaa5d56e9ff5eb2b2fc8cfc9247dad54bf1f79",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-4",
+      "action_index": 414664,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-022.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "4531b52010fde27c6ea936e9ede6e3444c0f6cff2c97b1278d898ecf54ab09ef",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-4",
+      "action_index": 414664,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-023.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "ea778b73786f6ebc6dc65fae3030dd38be7ba4e9116fd8db678371f2be9d80f3",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-4",
+      "action_index": 414664,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-024.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d6ed65cd2a0ca69a14be1fc6c0279e4e39d56ff7e195429be89d3f9161370352",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-4",
+      "action_index": 414664,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-025.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "918349e0800e2ae5320ce75b4849dbd6d34c7e361dae750bb9ff5a6b8c6432d1",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-5",
+      "action_index": 414665,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-026.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "4390993e4c29d2a8bf49662fe980c28267ff0549f95aaf38c32090d5779dc430",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-5",
+      "action_index": 414665,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-027.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "793153df3c2e4c1ee794eceeefeb8c464915c434b1d5f030200734ce00cb73d4",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-5",
+      "action_index": 414665,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-028.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "40bfb95b2501a6190a3450467e7e4bc73586891e2a9b8bd669a6869d184dce31",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-5",
+      "action_index": 414665,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-029.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "0f500637a63975747059088336dca0732e3e1e18cc0a16e7f836b6b6c0067691",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-5",
+      "action_index": 414665,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-030.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "19e1408454eb39838b5292eeb039b58f29f120e0ce54869eb2dccb79772e9149",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-5",
+      "action_index": 414665,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-031.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7e35e3bab19b9b9a634bf15107f08a10c01f66017f5cbc03b6486937bc61180b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-6",
+      "action_index": 414666,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-032.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7e9631cc31d803b536ce292fa047343844ed08ac5ab8bf8c3b9aebe328943c70",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-6",
+      "action_index": 414666,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-033.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e1ca2dc5470c287ce8a1de4c49a2b73e6bb0ee48a823c5f86946ffb24b62c1ca",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-6",
+      "action_index": 414666,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-034.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "28759e83f737d8bc8cfaa3446b76dd74747ebc65e635e6d06dbfb45ab531260a",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-6",
+      "action_index": 414666,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-035.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "1bfed514197d1ccac9d2feec3c3f1dae1209dc680df4acf3061fb20a95eb8ad5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-6",
+      "action_index": 414666,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-036.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "9fc80080e7256ce9129b6d7d2f23e39f058501d8669bb2027bf7ee4d482eab27",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-6",
+      "action_index": 414666,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-037.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "35fed1a9e7a50919f59a4194d8e4875c4eed44e6170761ca38aaf8c712ef0d48",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-7",
+      "action_index": 414667,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-038.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "932dcc291ce12a5c51902444e76617206b78abdd4757f1c9854347106cdea039",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-7",
+      "action_index": 414667,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-039.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "a36075419fbb2c36610b44ecd18251c01dccbffb8b14d7aeedcdb0cb6eeb6c93",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-7",
+      "action_index": 414667,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-040.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "a05f5481300e887c0b396f33e4e55de3a64f38baeee310ac5ffb929e0a5e57b6",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-7",
+      "action_index": 414667,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-041.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "78fda7491268028fbd7a2e11825dbf9eaa40770b677f2d9e4b2327fcd0dfddde",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-7",
+      "action_index": 414667,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-042.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "afa7a8069f7506b04633f93ca9c4c04d7139992f9dfcc5f794c431807a64d8d7",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-7",
+      "action_index": 414667,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-043.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5f45ddc8cca91c3645bfa3e8445f3f7a70c57cfb17dfb4e3698e82d2eee6302f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-8",
+      "action_index": 414668,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-044.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d433957f16f3297086e88b2953e0ed974ac07d9e3cfd3cc594186d51f504676c",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-8",
+      "action_index": 414668,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-045.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "0d1bb605920b6448afd4c9086c5b240dd87c34182cb5b48b1b1596191f590139",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-8",
+      "action_index": 414668,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-046.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "786887873a57e8136d6e8526ae6a40dc26f35167c6771465134049c2ceb9cc80",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-8",
+      "action_index": 414668,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-047.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "cd512ab0f22da9ffba2baebadd9a2ae891fb8f83c81f43371a8eadf922bdee41",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-8",
+      "action_index": 414668,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-048.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5d71a73a73709835220eba866273e4326b5b6439ab69dbde297c97511908e850",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-8",
+      "action_index": 414668,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-049.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "74b4afbebda8463966bb1874b099cdf1d947f5b4ddbc5ce84fb9868360bd9a95",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-9",
+      "action_index": 414669,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/50-lines/line-050.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "06aee0eeb996af815526fd22b742ac422d3da483a335e2273d9a824c9af52a1f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-50-9",
+      "action_index": 414669,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-001.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "08d7952f478ae6f23d6fea33a6a88b1d47cfe8e8c109a0439bd8189aac7c7ae5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-1",
+      "action_index": 414686,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-002.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50126cadceb766d9fb7c75a94bb74cde82639353c98f16d1daa063a1f9de47c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-1",
+      "action_index": 414686,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-003.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7a57a10fdc99583526931c353c2d046e66c042d7706312a901ffd4ead7976e4b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-1",
+      "action_index": 414686,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-004.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "433686e3483013bb335fa36e1dac77c8c72dddcdf17c3e7f2a0ce2043ff71436",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-1",
+      "action_index": 414686,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-005.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6be362e15175a94481dfe6e9ede97d7604d0d017ff70ee742a060e8633b78d85",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-1",
+      "action_index": 414686,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-006.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "22b2e4615f4ec584058f9a0d124f005f4b7e8d817c24e552c7e4d48261d8b85b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-1",
+      "action_index": 414686,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-007.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "575f94a691b9531356914c3c53b5a4978e0a7c3d674bc75bb1988159ccc405db",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-2",
+      "action_index": 414687,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-008.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e5ad4dcc073253c102c7e943a2e4fc52173041ed93e84ee3a1da5af55971081e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-2",
+      "action_index": 414687,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-009.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "87cf566d6702b446cc36f5d34b155c9efefd0a952a20db6fee63e6ddfe05f3ff",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-2",
+      "action_index": 414687,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-010.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "74875786f02eee3c371609f28b1515cdc010e370cfca62271a9634a35430396f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-2",
+      "action_index": 414687,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-011.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "2dd27d58697b321447e696c46bf7c624d5dc05ad9f5d39d29c3a7fcca32bba91",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-2",
+      "action_index": 414687,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-012.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "372f33b7b3317cf36d56be5b425dbd78b54e0ce171f71a0fb811e4e3cbf7791b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-2",
+      "action_index": 414687,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-013.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "4b042a32a00f8b692b0bb1478d52d0a348f757922febcda9b3528cc009fbf1d8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-3",
+      "action_index": 414688,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-014.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "f7f100dd733763a8d48d74657389a8a982eaed8d246ce3ee227e7a0048f19f8e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-3",
+      "action_index": 414688,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-015.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "2dab85869af19ed893f01622a5d7455e1c23cf23cdfb5c74295cff8ff1bc83f9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-3",
+      "action_index": 414688,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-016.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "50e65dabce8ca31fd5e6d0fec60a3daecaa9fc0e52c4259bdb3af21d500c7ba8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-3",
+      "action_index": 414688,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-017.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "aa376ce7958fe65ab8192d9decb75584d880b545d9db662da8cda3c1a6c2bc3f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-3",
+      "action_index": 414688,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-018.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "9dee2f0ac402d8f2119616224ed0c6a3d89e02983a10e847ad3b724b5f3eb78f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-3",
+      "action_index": 414688,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-019.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "faef35d72c34eea4c152d63521fe213c863ccba6ab396e6fa85a17f9536e69c9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-4",
+      "action_index": 414689,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-020.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "bd078f90cc309c6f5e203c1c63cdf424fd1a4cab8f148f7afa9479041cc24fdd",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-4",
+      "action_index": 414689,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-021.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "b9c6fabfd7616961313f6f4e39d08512bc79bf09efc6f3079f20beab2fd07e16",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-4",
+      "action_index": 414689,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-022.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "3ede23f2db6ad36a589d30073e59448865b91b4c2a02220b65ee3378fbad2698",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-4",
+      "action_index": 414689,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-023.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "ea778b73786f6ebc6dc65fae3030dd38be7ba4e9116fd8db678371f2be9d80f3",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-4",
+      "action_index": 414689,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-024.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "30506d6c0b7371b08a2b112e0d01f9f003565e4e46c754c646ab91fe21cc9a6f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-4",
+      "action_index": 414689,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-025.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "918349e0800e2ae5320ce75b4849dbd6d34c7e361dae750bb9ff5a6b8c6432d1",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-5",
+      "action_index": 414690,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-026.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e8975319c7665db722899602d64293eeb7426ecf7f462dbae146a5a42714368c",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-5",
+      "action_index": 414690,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-027.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e7fa60c946fc905b000546b07078a5283c601e67ab5d8353671a12d48c94f397",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-5",
+      "action_index": 414690,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-028.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "0797d5418c3c3cdd8af7a8634c8d67d4ea95842de58c5646cb0dfb3d8bcc0d39",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-5",
+      "action_index": 414690,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-029.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "f9dea1df1f38fff98d1364cd6743fa97808a0fefb4478a4792300cde5f90b743",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-5",
+      "action_index": 414690,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-030.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5c9bd4bdca6a723bc26d2b20710cc6343c61b35c3eecbf175539efd55ab7fed7",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-5",
+      "action_index": 414690,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-031.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7e35e3bab19b9b9a634bf15107f08a10c01f66017f5cbc03b6486937bc61180b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-6",
+      "action_index": 414691,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-032.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "71873d190be9cc2506ca6e7f27461995d5b44ee54d2930333347a36d6a57eaec",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-6",
+      "action_index": 414691,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-033.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e1ca2dc5470c287ce8a1de4c49a2b73e6bb0ee48a823c5f86946ffb24b62c1ca",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-6",
+      "action_index": 414691,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-034.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "bb902e08116a891f7aebf8f3de54f019ae100f1023a0ab470dfa7093829801a3",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-6",
+      "action_index": 414691,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-035.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7d76cf48bdfac4285c22881174912fefdf1e271dfe2c1fde56741a908b3a9ff1",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-6",
+      "action_index": 414691,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-036.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "239b5377d95319ae17a9a51cc299f27126049e7f69ce8596c6e18c47bce1b3f5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-6",
+      "action_index": 414691,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-037.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d5e15dd747dfc3c884ebf3bfc3c043067d66dbdaff5cb01a2a19945715da8da8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-7",
+      "action_index": 414692,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-038.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "8ce0927fabb6e4cd6a4623f996c88e966d50610729653038df055414cdf0ee96",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-7",
+      "action_index": 414692,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-039.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "a36075419fbb2c36610b44ecd18251c01dccbffb8b14d7aeedcdb0cb6eeb6c93",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-7",
+      "action_index": 414692,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-040.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5458a165eb81405b0c6ea6888951dea372a0cd97b5a4875dd159ef2a9ef5ccb8",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-7",
+      "action_index": 414692,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-041.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d00ba42ef5cb819f9d28e6aa5949655256675396bfd4c630cb256f248dccd5d1",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-7",
+      "action_index": 414692,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-042.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "afa7a8069f7506b04633f93ca9c4c04d7139992f9dfcc5f794c431807a64d8d7",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-7",
+      "action_index": 414692,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-043.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e81dc47234fd50f9d77ad91089fa010885b31dbf42ed33235730f260d532cdb4",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-8",
+      "action_index": 414693,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-044.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d433957f16f3297086e88b2953e0ed974ac07d9e3cfd3cc594186d51f504676c",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-8",
+      "action_index": 414693,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-045.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "0d1bb605920b6448afd4c9086c5b240dd87c34182cb5b48b1b1596191f590139",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-8",
+      "action_index": 414693,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-046.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d5af5f0f64746257f3d446326f2e1b8a8c8e892294c4d6dc117873846337f93b",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-8",
+      "action_index": 414693,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-047.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "111274d2332050943868c32c040d1b0adeb0967d449b0598f1d7f1b164055182",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-8",
+      "action_index": 414693,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-048.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5d71a73a73709835220eba866273e4326b5b6439ab69dbde297c97511908e850",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-8",
+      "action_index": 414693,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-049.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5a89347f436e7cf8329b4a99100d1b21a7673febac346890d8f5db0b87988cb0",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-9",
+      "action_index": 414694,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-050.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d0a67faca7273325be46aa612ed4fe97800484e74e7b0bb21605a250e0f454d3",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-9",
+      "action_index": 414694,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-051.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e5ae4c241364060654a08f2538196b56f3ff9e9fc15def7e9be7a70ed6f5baaa",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-9",
+      "action_index": 414694,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-052.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5acdd6f292516079327317f5a9ccf634c0925a31095bfe7859f0bbc4346570c6",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-9",
+      "action_index": 414694,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-053.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "9d2f97db59cb1979567ddb9df4b8d69ed3342b82bfcb413f91625822d0736986",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-9",
+      "action_index": 414694,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-054.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "bb2eaf22a11b4d0dda101adbc52b2ffe3eacd55fa40aecedd5c98f227c3faa8e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-9",
+      "action_index": 414694,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-055.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "7692323fde08a9f8cd9a8df9da242cf34f6010772bb7988794013e019525fd2d",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-10",
+      "action_index": 414695,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-056.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "94e1072621d79d78d8e8f9d8a825b875155c5ae5ea3b6c1b9b16d094c9a77173",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-10",
+      "action_index": 414695,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-057.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "a22f929ea4867f39b67bc6670b818e6a786bb42feea6cafdb7614fc464497753",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-10",
+      "action_index": 414695,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-058.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5be1d4b568efbdd25e145ad7b24dcc90fbe9341732731405940a903ee2973617",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-10",
+      "action_index": 414695,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-059.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d2b36ff4618f0e526d320f9b9cd29b2d8674dcf8001a277d04647c2e84822d71",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-10",
+      "action_index": 414695,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-060.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "c4c8a11290271b0eb3444d45b7798b7848465a19b185f2f8e4b2109c90ea820e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-10",
+      "action_index": 414695,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-061.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d432f465a7d69251a8d548d2b064643782859e3e12d047b511708f3cf5f09cae",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-11",
+      "action_index": 414696,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-062.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "901d5300f20e316ef75d08dead7101f080cbe28ada97ad7edc566b2b5b7e4b5e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-11",
+      "action_index": 414696,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-063.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "add4930ccf34962e66512bf54f4b869cf3ed0d543c8ed03b64be72af776d1160",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-11",
+      "action_index": 414696,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-064.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "67b799cbc8edb84f5499a4e0a69f10384c69f056cb82aa9e5b65ce6979f48eef",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-11",
+      "action_index": 414696,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-065.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "195acda1b707b4e7cc719e39aedb48e0a3805608e6c3e68c1756bd14882a977a",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-11",
+      "action_index": 414696,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-066.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "dc962df36e7afa746e637f0f32e789c95af9eaa3b876e63786d5f5875edaac34",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-11",
+      "action_index": 414696,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-067.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "12f15a2b399cc9fc6fbc3cdea1035abace941adfb17ec602c522c141a86486b3",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-12",
+      "action_index": 414697,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-068.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "b44529c6e8bae180003550f39ed83498a34508a5847da211ca6c7a2161d58339",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-12",
+      "action_index": 414697,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-069.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "1fcfe986afff2ba3a68a59fa34d7be86ad49d9763b5ed5864f6b5853a7be35e2",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-12",
+      "action_index": 414697,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-070.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "2faf8ee2dfed71e133f85696d06bf8c73d77e8f28b75efe66fe44a93f00f72da",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-12",
+      "action_index": 414697,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-071.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "f72d901a5050474a9a84ccde3f37bea4b7072f39e752fd7f2890480a8b20ad36",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-12",
+      "action_index": 414697,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-072.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "911a40fb3df447297ac6d0da47125e7227cfd71f77c758596c069081f02e0973",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-12",
+      "action_index": 414697,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-073.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "fec4d77e87de22c5c21e291a2763edc74128ec0033d8687d6f084a7074c4f69e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-13",
+      "action_index": 414698,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-074.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "f2c2d6c1e8b2f7f52648ccbae0626593a68ec98f0d0e82b92fa58ad59a9c25c5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-13",
+      "action_index": 414698,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-075.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "ce62e34fbce35f385504435d1d056b1fbdfabacfa06369c7a8ef0a02f18e7044",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-13",
+      "action_index": 414698,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-076.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "ae8dda1e819b7badd17f644255652667c54e9dc8b943f64663d6ec5f42da7f09",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-13",
+      "action_index": 414698,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-077.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "0a15071027fb9bb48de61f8d2178f5be593d26628f90ce30b2620692d3e4a19f",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-13",
+      "action_index": 414698,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-078.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d9ab862c0c0b8952fc869b07be27070c4bf88dc4cebd5ef849c068a57770676c",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-13",
+      "action_index": 414698,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-079.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "c406a8307a8d834e129a215859cce5d4a09984b5b51b4d924143cb090e3975a1",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-14",
+      "action_index": 414699,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-080.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "fdf520838c2e685c79209d10eb5fa52b876bad578a79bb75d2dd0a51878e7062",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-14",
+      "action_index": 414699,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-081.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "61f3892888daf1d144d625b8c44cea3168e7e40d4ac2dd0568bfbcc99a0cae5e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-14",
+      "action_index": 414699,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-082.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "6a117978da37214fdde0eac2fe7a3ddd71dc7941c01cb1ba2e0dc5328a580269",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-14",
+      "action_index": 414699,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-083.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "9c34fdf20d537a31d7791c5d93217c44d169aabe566da79adf5c117c62662d72",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-14",
+      "action_index": 414699,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-084.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "bd8456053279f4ac2ea7f5a08c0ca2e5c9ce8182936b4982fc489e876979ce75",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-14",
+      "action_index": 414699,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-085.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "eb52cba443f1df8fb75fcca4f0938ab09d730f7b78bca8ef8730a29e05d5daf5",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-15",
+      "action_index": 414700,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-086.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "f5fa94545a452efa3993fda88440ab1d352abd23369cfa4d6e2bed07dc7e6fbd",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-15",
+      "action_index": 414700,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-087.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "8b56d5ba220ff627e0e4f9d0a4dfb215ba4a3c80cb2c989913072b6eba3bbccf",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-15",
+      "action_index": 414700,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-088.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "db2085fe6854e89a1c8263eec25492b4b5baf9712bf7a00169fad701620290f3",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-15",
+      "action_index": 414700,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-089.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "8bbcd39856a18c20f9ac1de4ec999ec54cf75eb15b5ccf0f0c132e8993b6562d",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-15",
+      "action_index": 414700,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-090.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "ec9ec599ea610a5dc05748eeab3121dcd98be236dc582ede1e6f58a5c1c2bbd9",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-15",
+      "action_index": 414700,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-091.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "d0d89ef903f1cb3060279ed06bc8271daf884786b0ded9739a3c33628ad9678c",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-16",
+      "action_index": 414701,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-092.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "5a187d7daf55827d9fe637dfbeb5e7a25fd5d63b9a3c64231e2920035c2f87c1",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-16",
+      "action_index": 414701,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-093.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "42b964714570110d0f231dd0e9ad96423c1938472c91ac8cfb8f9e9b1fcae681",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-16",
+      "action_index": 414701,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-094.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "910db5a2c65f70e4b69a2e5c49142e96d80cb268ca087b8131ba3e182d021b95",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-16",
+      "action_index": 414701,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-095.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "c7804147e8ed02c8af0b7af8cbcdd587bd8e2c1a9d249b648848e2cb981cf5f4",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-16",
+      "action_index": 414701,
+      "scale": 6,
+      "crop": [
+        12,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-096.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "327017b360b593359a1ac13f98f5b43d6b0b42aaf83cf5926bae1b2fed562ddf",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-16",
+      "action_index": 414701,
+      "scale": 6,
+      "crop": [
+        122,
+        94,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-097.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "8d4c47e6bc9a12372d35ce68b59d315f52a509d63581f256a8ce3887149ac6e4",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-17",
+      "action_index": 414702,
+      "scale": 6,
+      "crop": [
+        12,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-098.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "793845cfe0af755ee430e618bac55a7924836ac884b87027742858e6103f6c3e",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-17",
+      "action_index": 414702,
+      "scale": 6,
+      "crop": [
+        122,
+        50,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-099.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "e4fe4e7986d8e27c94c73835b439d20d874bc34a0bd8f90d3fc07db48d773857",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-17",
+      "action_index": 414702,
+      "scale": 6,
+      "crop": [
+        12,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
+      "file": "media/gameplay/artwork/paylines/100-lines/line-100.png",
+      "kind": "symbol-crop",
+      "session_id": "menus",
+      "dimensions": [
+        600,
+        108
+      ],
+      "sha256": "b4c92fc61c7dae2b4d58cdccbcbea9c5950609127591142e5a6cdbd7956fb543",
+      "frames": 1,
+      "duration_ms": 0,
+      "event_id": "menus:still-paylines-100-17",
+      "action_index": 414702,
+      "scale": 6,
+      "crop": [
+        122,
+        72,
+        100,
+        18
+      ],
+      "source_version": "0.2.170"
+    },
+    {
       "file": "media/gameplay/session.webp",
       "kind": "animation",
       "session_id": "loops",
@@ -6221,5 +10731,5 @@
   "menu_capture_sha256": "d214625045a8f81b7454ba7da42654d9d94ab0fd0a085900dfa1adb7e9106016",
   "kind": "recorded-gameplay-summary",
   "capture_manifest": "gameplay-media.json",
-  "capture_manifest_sha256": "2bd43e00a652a752b77d6868a3ed65b469beba9bcd17c68dbd30d636ae13cf6b"
+  "capture_manifest_sha256": "fa36a6d4577712ab5f21217b89cb5582a16faa20c3a9ec6b743a07927773fe31"
 }
