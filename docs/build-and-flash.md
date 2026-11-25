@@ -4,6 +4,8 @@ Build the current firmware and its required asset filesystem. Browser instructio
 
 ## Install the prebuilt game
 
+The signed M5 flasher installs the verified stable release on a StickS3. [Open the Phoenix Link flasher](https://xn--sg8hhb.ws/flasher/?project=phoenix)
+
 Download `phoenix-confucius-sticks3.bin`, `feature-assets.bin` and `SHA256SUMS.txt` from the [current GitHub release](https://github.com/xberenguer/phoenix-link-confucius-say/releases/latest). These are the game image and its required offline graphics/music filesystem; no previous installation is required.
 
 Install esptool in a Python environment (`python3 -m pip install esptool==4.9.0`), enter download mode as described below, then run from the download directory:

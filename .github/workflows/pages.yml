@@ -1,30 +1,137 @@
-name: Publish source-bound playable demo
+name: Publish latest stable playable release
 on:
-  push:
-    branches: [main]
+  release:
+    types: [published, edited]
   workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-concurrency:
-  group: pages
-  cancel-in-progress: true
+  schedule:
+    - cron: '23,53 * * * *'
+
+permissions: {}
+
 jobs:
-  deploy:
+  request-deploy:
+    # Release events run on the tag. Forward the event to main so the Pages
+    # environment can keep its existing main-only deployment rule.
+    if: github.event_name == 'release' && !github.event.release.draft && !github.event.release.prerelease
     runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Request Pages deployment on main
+        run: gh workflow run pages.yml --repo "$GITHUB_REPOSITORY" --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+  deploy:
+    if: github.event_name != 'release' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.pages.outputs.base_url }}
     steps:
+      - name: Resolve latest stable release commit
+        id: latest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import re
+          from urllib.request import Request, urlopen
+
+          api = f"{os.environ['GITHUB_API_URL']}/repos/{os.environ['GITHUB_REPOSITORY']}"
+
+          def get(path):
+              request = Request(api + path, headers={"Accept": "application/vnd.github+json"})
+              request.add_unredirected_header("Authorization", f"Bearer {os.environ['GH_TOKEN']}")
+              with urlopen(request, timeout=20) as response:
+                  return json.load(response)
+
+          release = get("/releases/latest")
+          tag = release["tag_name"]
+          if release["draft"] or release["prerelease"] or not re.fullmatch(r"v(?:0|[1-9][0-9]*)(?:[.](?:0|[1-9][0-9]*)){2}", tag):
+              raise SystemExit(f"Expected a published stable release with a vMAJOR.MINOR.PATCH tag, got {tag!r}")
+
+          target = get(f"/git/ref/tags/{tag}")["object"]
+          seen = set()
+          while True:
+              sha = target["sha"]
+              if not re.fullmatch(r"[0-9a-f]{40}", sha) or sha in seen:
+                  raise SystemExit(f"Invalid Git object for {tag}")
+              if target["type"] == "commit":
+                  break
+              if target["type"] != "tag":
+                  raise SystemExit(f"{tag} does not resolve to a commit")
+              seen.add(sha)
+              target = get(f"/git/tags/{sha}")["object"]
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as outputs:
+              print(f"tag={tag}", f"sha={sha}", sep="\n", file=outputs)
+          print(f"Latest stable release is {tag} at {sha}")
+          PY
       - uses: actions/checkout@v6
-      # Reject stale WASM, code, runtime assets or adapter before upload.
-      # The pinned source binding changes only with a reviewed release.
-      - name: Verify accepted source and browser provenance
-        run: python3 browser/verify_bundle.py --source firmware/src --assets firmware/data --bundle demo
+        with:
+          ref: ${{ steps.latest.outputs.sha }}
+          persist-credentials: false
+      - name: Verify tag identity and source-bound playable bundle
+        env:
+          RELEASE_TAG: ${{ steps.latest.outputs.tag }}
+          RELEASE_SHA: ${{ steps.latest.outputs.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$RELEASE_SHA"
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          tag = os.environ["RELEASE_TAG"]
+          release = json.loads(Path("RELEASE.json").read_text())
+          provenance = json.loads(Path("demo/PROVENANCE.json").read_text())
+          if tag != f"v{release['version']}" or release["version"] != provenance["version"]:
+              raise SystemExit("The release tag, RELEASE.json and demo version must match")
+          if release["runtime_fingerprint"] != provenance["runtime"]:
+              raise SystemExit("The release runtime fingerprint and demo provenance must match")
+          PY
+          python3 browser/verify_bundle.py --source firmware/src --assets firmware/data --bundle demo
       - uses: actions/configure-pages@v5
+        id: pages
+      - name: Compare the published demo bundle
+        id: live
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          from urllib.error import URLError
+          from urllib.request import Request, urlopen
+
+          expected = Path("demo/BUNDLE_MANIFEST.json").read_bytes()
+          base = os.environ["PAGES_BASE_URL"].rstrip("/")
+          revision = f"{os.environ['GITHUB_RUN_ID']}-{os.environ['GITHUB_RUN_ATTEMPT']}"
+          request = Request(f"{base}/BUNDLE_MANIFEST.json?run={revision}", headers={"Cache-Control": "no-cache"})
+          try:
+              with urlopen(request, timeout=15) as response:
+                  matches = response.read(len(expected) + 1) == expected
+          except (URLError, TimeoutError):
+              matches = False
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as outputs:
+              print(f"matches={str(matches).lower()}", file=outputs)
+          if matches:
+              print("The exact release bundle is already live")
+          PY
       - uses: actions/upload-pages-artifact@v4
+        if: steps.live.outputs.matches != 'true'
         with:
           path: demo
       - uses: actions/deploy-pages@v4
+        if: steps.live.outputs.matches != 'true'
         id: deployment

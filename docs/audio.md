@@ -58,7 +58,7 @@ Opening a menu pauses the current feature and its music. Returning to the game c
 
 Hold grey → Settings → Sound provides master sound, a stops/landings switch, fine volume and test playback. Master mute covers cues and feature music.
 
-Sound starts at **10%**. On the first StickS3 denomination screen, hold grey to toggle between 10% and 100%. The shortcut briefly shows the percentage and plays the denomination click at the same level in both directions. Game audio uses the selected volume. In the separate volume menu, blue raises the volume and grey lowers it. The menu uses 1% steps through 10% and 5% steps above that, with limits at 0% and 100%.
+Sound starts at **10%**. On the first denomination screen on StickS3 or in the browser, hold grey to toggle between 10% and 100%. The shortcut briefly shows the percentage and plays the denomination click at the same level in both directions. Game audio uses the selected volume. In the separate volume menu, blue raises the volume and grey lowers it. The menu uses 1% steps through 10% and 5% steps above that, with limits at 0% and 100%.
 
 TEST FREE-GAMES INTRO auditions the Wisdom entry; TEST HOLD MUSIC auditions the Hold program; TEST AWARD JINGLE auditions the award program. An audition does not stake money or change the counter or outcome generator. Twin music also has a developer audition API.
 

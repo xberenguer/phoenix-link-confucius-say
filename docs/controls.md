@@ -26,7 +26,7 @@ Short grey presses move focus; blue selects. Startup opens the denomination choo
 
 The reels open with a **$0 balance**. Blue opens the editable Stardust voucher when the selected wager is unaffordable. Insert Credits adds the entered cash amount and returns to the game with the same denomination, lines and multiplier. Cancelling returns without funding or spinning.
 
-On the first StickS3 denomination screen, hold grey to switch between the default 10% sound level and 100%. The shortcut ends when you leave that screen. From the startup line and bet screen, hold grey to go back to denominations. Hold grey again to open Game Menu. In the browser, holding the on-screen grey button or pressing Escape on the denomination page opens Game Menu. After setup, short grey reopens the wager panel. Holding grey there applies the draft denomination and lines and returns to the game. Selecting a funded red BET commits its wager and starts a spin.
+On the first denomination screen on StickS3 or in the browser, hold grey to switch between the default 10% sound level and 100%. The shortcut ends when you leave that screen. From the startup line and bet screen, hold grey to go back to denominations. Hold grey again to open Game Menu. In the browser, Escape also opens Game Menu from the denomination screen. After setup, short grey reopens the wager panel. Holding grey there applies the draft denomination and lines and returns to the game. Selecting a funded red BET commits its wager and starts a spin.
 
 An unavailable row cannot start a paid spin. Owed features protect their existing wager; opening the screen does not change the paid round that is already in progress.
 

@@ -51,7 +51,7 @@ The [payout reference](payouts.md) exports the wider internal evaluator support 
 
 <img src="media/gameplay/screens/menus/startup-high-limit.png" alt="The actual High Limit denomination menu reached through the startup controls" width="720" height="405" loading="lazy">
 
-Settings → High Limit changes the denomination chooser to $1, $2, $5, $10, $25, $50 and $100. The cash balance is unchanged when switching modes. The chooser starts at the first denomination. Holding blue on the startup chooser switches between standard and High Limit denominations. On the first StickS3 chooser screen, holding grey toggles the volume. After you select a denomination, holding grey returns to the chooser and another hold opens Game Menu. Turning High Limit off from a denomination unavailable in standard mode returns to $1.
+Settings → High Limit changes the denomination chooser to $1, $2, $5, $10, $25, $50 and $100. The cash balance is unchanged when switching modes. The chooser starts at the first denomination. Holding blue on the startup chooser switches between standard and High Limit denominations. On the first chooser screen on StickS3 or in the browser, holding grey toggles the volume. After you select a denomination, holding grey returns to the chooser and another hold opens Game Menu. Turning High Limit off from a denomination unavailable in standard mode returns to $1.
 
 The shared practice row uses 25 lines and bet multipliers 1, 2 and 3, giving 25, 50 and 75 credits. At $5, PLAY50 also offers the directly observed 3× wager: 150 credits, or $750. At $100, the middle button places a $5,000 wager. These are simulator choices, not a complete recovered factory high-limit deck.
 

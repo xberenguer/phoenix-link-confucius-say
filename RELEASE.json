@@ -1,6 +1,6 @@
 {
-  "version": "0.2.173",
-  "runtime_fingerprint": "a22ae6d783c46c286e9d57fd000301d29e6ef08a27f62b436fd464b0ad90ec53",
+  "version": "0.2.174",
+  "runtime_fingerprint": "3518218ab8a29131feb4483b2c96633ca1199ad5532a8eb9348dd8cccaaa2ef9",
   "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
   "local_model": "0x00020020",
   "source_body_files": 176,
@@ -23,15 +23,15 @@
     "phoenix_atlas.zlib"
   ],
   "native_validation": "StickS3 firmware compiled and setup audio passed the host harness. Device flash and physical speaker output remain unverified for this build.",
-  "browser_version": "0.2.173",
-  "native_status_version": "0.2.173",
+  "browser_version": "0.2.174",
+  "native_status_version": "0.2.174",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "StickS3 setup audio and startup volume feedback",
+  "status": "Browser startup volume and synchronized stable distribution",
   "changes": [
-    "Added the shared confirmation click to denomination, play lines, bet confirmation and voucher digit edits.",
-    "Added a first-screen StickS3 grey-button hold to switch between 10% and 100%, with a brief percentage indicator and equal click gain in both directions.",
-    "Kept the existing credit-in sound for actual credit insertion."
+    "Enabled the first-screen grey-button volume shortcut in the browser. It uses the same 10% and 100% levels, audible confirmation, and brief indicator as StickS3.",
+    "Tied the hosted playable game to the latest stable GitHub release, which also supplies firmware to the signed flasher.",
+    "Packaged the sharper denomination, wager and voucher selection feedback introduced in 0.2.173 for the flasher."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -40,11 +40,11 @@
     },
     "phoenix-confucius-sticks3.bin": {
       "bytes": 6477392,
-      "sha256": "b518a376d30eb09c74ff0420e3fc11dd1eac9e9f55f69df33ece809238c9d231"
+      "sha256": "0fed16e12da1acb6a9adeb632354d5d168d1089bd19cc0417356d154529c7675"
     },
     "phoenix-confucius-app.bin": {
       "bytes": 6411856,
-      "sha256": "ab3beea17f79ed303e73d727b23bc9260960710f4b540286a0e1b77a008c7e08"
+      "sha256": "30d6a2849040886c0047398cedb5a05d5bada5a9091728d69cacdb6bfa5c2139"
     }
   },
   "validation": {

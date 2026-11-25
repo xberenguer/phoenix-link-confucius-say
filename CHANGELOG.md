@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.2.174
+
+- Enabled the first-screen grey-button volume shortcut in the browser. It uses the same 10% and 100% levels, audible confirmation, and brief indicator as StickS3.
+- Tied the hosted playable game to the latest stable GitHub release, which also supplies firmware to the signed flasher.
+- Packaged the sharper denomination, wager and voucher selection feedback introduced in 0.2.173 for the flasher.
+
 ## 0.2.173
 
 - Added the shared confirmation click to denomination, play lines, bet confirmation and voucher digit edits.

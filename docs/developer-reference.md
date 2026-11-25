@@ -47,4 +47,4 @@ See [testing](testing.md), [build](build-and-flash.md), [sources](sources.md) an
 
 ## Documentation and releases
 
-Documentation, screenshots and research findings may be updated between tagged releases. Tagged releases follow ten-version milestones. The [release verifier](../tools/verify_release.py) checks the current source, browser bundle, numeric references and gallery together.
+Documentation, screenshots and research findings may be updated between tagged releases. Stable GitHub releases drive the signed StickS3 flasher and the playable demo. Publish a release with the matching firmware images, manifest, and checksums when an update should reach players. The [release verifier](../tools/verify_release.py) checks the current source, browser bundle, numeric references and gallery together.

@@ -1,9 +1,9 @@
 {
-  "version": "0.2.173",
-  "runtime": "a22ae6d783c46c286e9d57fd000301d29e6ef08a27f62b436fd464b0ad90ec53",
+  "version": "0.2.174",
+  "runtime": "3518218ab8a29131feb4483b2c96633ca1199ad5532a8eb9348dd8cccaaa2ef9",
   "mathFamily": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
   "engineeringAccepted": true,
-  "acceptanceMeaning": "Source-bound StickS3 setup audio and volume update. Host and compiled target checks do not establish physical speaker output.",
+  "acceptanceMeaning": "Source-bound browser and StickS3 startup volume update. Host and compiled target checks do not establish physical speaker output.",
   "sourcePins": {
     "arrival_scene_qa.h": "f5db802fa3c78b7ce57765137b8c5a4dea97531122a46b0785d8fc0fd12bf542",
     "audio.cpp": "93ad88d7b087bb5ab649e5ea84d3cd010b820fde0fc933f69a5770ed9f3b747d",
@@ -24,7 +24,7 @@
     "award_music_seek.h": "27619c08cb605f02fe7fe0503fe0de3452a7f7e6473e2d9d34e7a7466ce5eac4",
     "bell_art.h": "c7d1be6d968f3eba54d11113b2849c8a45151debfa5a0871b9de200e46bf4d34",
     "bounded_decimal_editor121.h": "1c477b5355b62a71f2b8751b4ee2d40b11fd33b189013e252cdd29d0bbcc9821",
-    "build_version.h": "5c3a054c7724910cf963b340940e4720a8916e6eab2a2d34741da27ea2795859",
+    "build_version.h": "5ac2457776ec9635f0efe815d0582aaaea71111e8ef60fb7298abb1e9b204723",
     "cabinet_profile.h": "af3599df21043ef3fcd1b2c88a1bae41bd9a30de6f629fdabab8cf211da1b6e0",
     "cabinet_sage_cg.h": "b791203f4bdcef06c21b21c7f3e08b2bfd586f940fb0964e831a3b597fce0a0b",
     "cabinet_scene145.h": "999a9fd5d09757a93884748951c945512b6c72186289a02ef253c67bb3513a3f",
@@ -91,7 +91,7 @@
     "major_material153.h": "ce371e119af6a89ad797687243769c71502e54f7723bd2c97232c67f08ced062",
     "major_material153_data.h": "d2975b76c7b73cc44e1b3da46192f420d251ac719b5bb63d2f136bf3e5806310",
     "major_title112_data.h": "e75772a92c3acd0e7efe4d7a28a74779c8de9e93df0d44acfa2bb62d2dc4a68e",
-    "math_runtime_identity.h": "f279a58758863c8c137be3010e10c3e9c0eeba4f4b31a592bef0daae4c2dd693",
+    "math_runtime_identity.h": "bfbe7b7537533a278b8de010e7ba1fec668767e88882c914cd2fb3ad1741f354",
     "meter_font.h": "d357ced3c07dbda3ed0621afed5615686fcb82c7541200ab1fa2c808489ed1a4",
     "money_math.h": "af304bc8f1b6586e88ca6c0771a921278d5ce69d710bcb4b7b7aa6c490236c0a",
     "mp3_fp_policy.h": "c078ad98bad27e340aed58132bc4325d7e817b8581bb8fa330ef207823909210",
@@ -169,7 +169,7 @@
     "twin_music42.h": "d5ae17cc5939241adcbc7a61379d8503b1d3697f0d9a7729de0f7f8bafc20bbf",
     "twin_music42_generated.inc": "1aadf9c5bf35cbc81cd7487df8bfda5b19480f10a0af73370b36d9aaf6fcfb42",
     "twin_music_bank39.h": "23cb775b14370b6b3428dbef8b2dd6c1efa3a33edb6296f595d78d451e7975c8",
-    "ui.cpp": "a9103bc6cae9303c2f272d761fabf76eccde455f9321d9f975a11fad01d073e5",
+    "ui.cpp": "21de7a6aec28224a4869ea9ba2a825d5b677c9c6e49b3f8b1b1f94537a8d5667",
     "ui.h": "63dd39dd10d134be292f9e046cc76b877216ccad22e1090dab9266f64b2b6493",
     "ui_font.h": "b0da937e8fcd796c2ea58252c082b471e826960a7963603f06baa83f843db931",
     "upper_win.h": "aeec4cfe68b72626bebbc5fc160d643aca6106c0e6c6b0383c5c74c2485739be",
@@ -186,7 +186,7 @@
     "wisdom_lower_win88.h": "8808489a9a09700b55d32a729c9c14ec08d48eff29e4f2afdb517efa21764dec"
   },
   "sourceBodyFiles": 176,
-  "sourceAcceptanceReceiptSHA256": "74bf7b01c6dc6155cd91d832bef1345d6e6e8413d1a8146e54d015ecc6c2dd05",
+  "sourceAcceptanceReceiptSHA256": "86e3871b977b9f969b94f279602b6ed9ab89da1a7ddf29612446adeab06ae7db",
   "assets": {
     "feature_music.mp3": {
       "sha256": "ff6fb76c36e0b08779a1fa864ac1495cf43c19cada1bb5c70f8bdef85ea5ad01",
