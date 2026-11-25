@@ -1,5 +1,5 @@
 const PREFIX = 'phoenix-cpp-demo:' + self.registration.scope + ':';
-const CACHE = PREFIX + "f2b647ac1b57bd076ed8";
+const CACHE = PREFIX + "d27116451a4644bcc648";
 const FILES = ["./", "./index.html", "./app.js", "./style.css", "./control-config.js", "./source-config.js", "./phoenix.js", "./phoenix.wasm", "./phoenix.data", "./PROVENANCE.json", "./BUNDLE_MANIFEST.json", "./THIRD_PARTY_LICENSES.txt"];
 self.addEventListener('install', event => {
   event.waitUntil((async () => {

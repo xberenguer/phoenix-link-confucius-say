@@ -17,7 +17,7 @@ The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/
 | Awarded Confucius/Sage win | Scoped win cue; no generic flourish on every winning or stopped reel |
 | Cash added | Dedicated cash-in cue |
 | A Phoenix amount is collected | Collection/count-up cue tied to the pickup event |
-| Three-Wisdom initial entry | Dedicated measured 7.12-second announcement cue |
+| Three-Wisdom initial entry | Original synthesized 7.12-second announcement, in two sections |
 
 The Phoenix families are **not** a random rising scale and not simply one note for every Phoenix. Current selection examines which presented reel group contains arrivals, how many Phoenixes have already appeared and whether the natural trigger remains possible. The Third-family branch is limited to separately presented ordinary columns; quick-stop/coalesced, Twin and Hold cases retain their scoped behavior. This logic remains a partial reconstruction, not a recovered original event table. See [landing_cues.h](../firmware/src/landing_cues.h).
 
@@ -66,7 +66,7 @@ TEST FREE-GAMES INTRO auditions the Wisdom entry; TEST HOLD MUSIC auditions the 
 
 The initial Phoenix arrival cues are synthesized from analytic recipes. Backend tests check that landing sounds finish playing. MP3 completion/award music and Twin PCM have separate cache and decoder checks.
 
-Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation.
+The [Three-Wisdom announcement generator](../tools/generate_wisdom_intro.py) renders two original sections from oscillators. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation.
 
 ## Remaining work
 

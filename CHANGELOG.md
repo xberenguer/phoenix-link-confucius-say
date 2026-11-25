@@ -1,5 +1,10 @@
 # Release notes
 
+## 0.2.175
+
+- Replaced both sections of the Three-Wisdom announcement with clean original synthesis.
+- Kept the 7.12-second duration, reel timing and feature-entry sequence.
+
 ## 0.2.174
 
 - Enabled the first-screen grey-button volume shortcut in the browser. It uses the same 10% and 100% levels, audible confirmation, and brief indicator as StickS3.

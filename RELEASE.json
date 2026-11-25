@@ -1,6 +1,6 @@
 {
-  "version": "0.2.174",
-  "runtime_fingerprint": "3518218ab8a29131feb4483b2c96633ca1199ad5532a8eb9348dd8cccaaa2ef9",
+  "version": "0.2.175",
+  "runtime_fingerprint": "95d1ffaa1dd911a82b4c57e0185f706d662ceee178127963df9e2028d837ab46",
   "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
   "local_model": "0x00020020",
   "source_body_files": 176,
@@ -23,15 +23,14 @@
     "phoenix_atlas.zlib"
   ],
   "native_validation": "StickS3 firmware compiled and setup audio passed the host harness. Device flash and physical speaker output remain unverified for this build.",
-  "browser_version": "0.2.174",
-  "native_status_version": "0.2.174",
+  "browser_version": "0.2.175",
+  "native_status_version": "0.2.175",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Browser startup volume and synchronized stable distribution",
+  "status": "Clean synthesized Three-Wisdom announcement",
   "changes": [
-    "Enabled the first-screen grey-button volume shortcut in the browser. It uses the same 10% and 100% levels, audible confirmation, and brief indicator as StickS3.",
-    "Tied the hosted playable game to the latest stable GitHub release, which also supplies firmware to the signed flasher.",
-    "Packaged the sharper denomination, wager and voucher selection feedback introduced in 0.2.173 for the flasher."
+    "Replaced both sections of the Three-Wisdom announcement with clean original synthesis.",
+    "Kept the 7.12-second duration, reel timing and feature-entry sequence."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -40,11 +39,11 @@
     },
     "phoenix-confucius-sticks3.bin": {
       "bytes": 6477392,
-      "sha256": "0fed16e12da1acb6a9adeb632354d5d168d1089bd19cc0417356d154529c7675"
+      "sha256": "c6bfc6013e8c4b12a744e35dcb0f26c771119dd933f61b1679dd4f8b42d600b7"
     },
     "phoenix-confucius-app.bin": {
       "bytes": 6411856,
-      "sha256": "30d6a2849040886c0047398cedb5a05d5bada5a9091728d69cacdb6bfa5c2139"
+      "sha256": "a40905f526581f6816173a54d2210c1eb37b559b4e0e2456824c5d2bc18e3c7f"
     }
   },
   "validation": {
