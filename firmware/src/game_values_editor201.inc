@@ -64,10 +64,11 @@ void valuesSelect201(){
    if(!editedValue201){valuesNotice201("ENTER AN AMOUNT ABOVE ZERO");return;}
    if(editedValue201>999999999||!uiAddCredits(uint32_t(editedValue201))){valuesNotice201("CREDIT ADDITION UNAVAILABLE");return;}
    creditsPanel201=Page::Credits;voucherFromGame160=false;view=View::Game;autoPlay=false;statusLine[0]=0;
-  }else if(editFocus201==10)valuesBack201();
+  }else if(editFocus201==10){valuesBack201();cueButton();}
   else{uint64_t place=1;for(unsigned i=editFocus201+1;i<9;++i)place*=10;
    const unsigned digit=unsigned(editedValue201/place%10);
-   editedValue201=editedValue201-uint64_t(digit)*place+uint64_t((digit+1)%10)*place;statusLine[0]=0;}
+   editedValue201=editedValue201-uint64_t(digit)*place+uint64_t((digit+1)%10)*place;statusLine[0]=0;
+   cueSelection();}
  }else if(creditsPanel201==Page::GameValues){
   if(valuesItem201==3){valuesBack201();return;}
   if(!valuesAvailable201()){valuesNotice201("FINISH CURRENT PLAY FIRST");return;}

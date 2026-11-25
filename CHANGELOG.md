@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.2.173
+
+- Added the shared confirmation click to denomination, play lines, bet confirmation and voucher digit edits.
+- Added a first-screen StickS3 grey-button hold to switch between 10% and 100%, with a brief percentage indicator and equal click gain in both directions.
+- Kept the existing credit-in sound for actual credit insertion.
+
 ## 0.2.171
 
 - The collection counter can now reach **1887**, matching the supplied General Tso cabinet photograph. The next collected Phoenix awards and resets before an idle **1888** can appear.

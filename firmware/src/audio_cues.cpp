@@ -1,8 +1,10 @@
 // Entire SFX bank is procedural. See assets/audio/manifest.json.
 #include "audio_cues.h"
 #include "audio.h"
+#include <algorithm>
+#include <array>
 namespace {
-alignas(4) const int16_t k_reel_stop[]={
+alignas(4) constexpr int16_t k_reel_stop[]={
 0,0,0,0,0,-1,-1,1,4,2,-1,-5,-8,-5,5,9,5,2,2,2,
 3,5,-4,-17,-20,-13,-7,5,21,25,13,5,4,0,-4,-7,-19,-29,-19,3,
 14,17,19,14,-1,-12,-16,-14,1,28,36,12,-14,-25,-34,-36,-14,12,16,19,
@@ -23558,9 +23560,31 @@ alignas(4) const int16_t k_coin_rain[]={
 #include "audio_third_generated.inc"
 #include "audio_cash_in_generated.inc"
 #include "audio_free_start_generated.inc"
+// Keep the first impact's attack and taper both cuts to zero. The longer
+// reel-stop clip retains its natural lead-in and decay.
+constexpr size_t kSelectionStart=715;
+constexpr size_t kSelectionEnd=1160;
+constexpr size_t kSelectionAttack=12;
+constexpr size_t kSelectionRelease=96;
+alignas(4) constexpr auto k_selection=[]{
+  std::array<int16_t,kSelectionEnd-kSelectionStart> samples{};
+  for(size_t i=0;i<samples.size();++i){
+    int value=int(k_reel_stop[kSelectionStart+i])*3;
+    const size_t remaining=samples.size()-1-i;
+    if(i<kSelectionAttack)value=value*int(i)/int(kSelectionAttack);
+    else if(remaining<kSelectionRelease)value=value*int(remaining)/int(kSelectionRelease);
+    samples[i]=int16_t(std::clamp(value,-32768,32767));
+  }
+  return samples;
+}();
+static_assert(k_selection.front()==0&&k_selection.back()==0);
 }
 size_t audioRegisterReferenceCues(){size_t count=0;
-count+=audioRegister(AudioCue::ReelStop,k_reel_stop,8158,22050);
+constexpr size_t reelStopFrames=sizeof(k_reel_stop)/sizeof(k_reel_stop[0]);
+constexpr uint32_t reelStopRate=22050;
+count+=audioRegister(AudioCue::ReelStop,k_reel_stop,reelStopFrames,reelStopRate);
+count+=audioRegister(AudioCue::VolumePreview,k_selection.data(),k_selection.size(),reelStopRate);
+count+=audioRegister(AudioCue::Selection,k_selection.data(),k_selection.size(),reelStopRate);
 count+=audioRegister(AudioCue::PhoenixLand,k_phoenix_land,12128,22050);
 count+=audioRegister(AudioCue::PhoenixFollow,k_phoenix_follow,12128,22050);
 count+=audioRegister(AudioCue::PhoenixThird,k_phoenix_third,22050,22050);

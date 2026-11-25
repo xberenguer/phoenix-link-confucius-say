@@ -1,6 +1,6 @@
 {
-  "version": "0.2.171",
-  "runtime_fingerprint": "a078117e74a871c8d5afc12e18e68e64d53351b27510ca1e59955f29580e43a1",
+  "version": "0.2.173",
+  "runtime_fingerprint": "a22ae6d783c46c286e9d57fd000301d29e6ef08a27f62b436fd464b0ad90ec53",
   "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
   "local_model": "0x00020020",
   "source_body_files": 176,
@@ -22,17 +22,16 @@
     "feature_music.mp3",
     "phoenix_atlas.zlib"
   ],
-  "native_validation": "Not yet physically installed or tested. Host boundary/Engine and compiled target checks are separate.",
-  "browser_version": "0.2.171",
-  "native_status_version": "0.2.171",
+  "native_validation": "StickS3 firmware compiled and setup audio passed the host harness. Device flash and physical speaker output remain unverified for this build.",
+  "browser_version": "0.2.173",
+  "native_status_version": "0.2.173",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Source-bound counter boundary correction",
+  "status": "StickS3 setup audio and startup volume feedback",
   "changes": [
-    "Counter reaches1887 and resets/awards on following Phoenix before idle1888 can appear",
-    "Counter editor accepts0\u20131887; wager buckets preserve1887",
-    "Browser and firmware share corrected law",
-    "Prior numerical returns explicitly historical; Grand prices retained"
+    "Added the shared confirmation click to denomination, play lines, bet confirmation and voucher digit edits.",
+    "Added a first-screen StickS3 grey-button hold to switch between 10% and 100%, with a brief percentage indicator and equal click gain in both directions.",
+    "Kept the existing credit-in sound for actual credit insertion."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -40,12 +39,12 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 6475712,
-      "sha256": "8d573ed9824e1b8d996db20d75a673729c32d1bf51523c434f8b98c510ced8df"
+      "bytes": 6477392,
+      "sha256": "b518a376d30eb09c74ff0420e3fc11dd1eac9e9f55f69df33ece809238c9d231"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 6410176,
-      "sha256": "289677a8a6a8b868dbf75dcea5cb3fd14eef4ac6ec78b980c3453001a0773bc1"
+      "bytes": 6411856,
+      "sha256": "ab3beea17f79ed303e73d727b23bc9260960710f4b540286a0e1b77a008c7e08"
     }
   },
   "validation": {
@@ -57,7 +56,8 @@
     "wagers": 77,
     "grand_schedules": 6,
     "retained_price_rows": 9360,
-    "target_build": true
+    "target_build": true,
+    "setup_audio_host_checks": 129
   },
   "historical_evidence": {
     "file": "docs/data/source-0.2.170.json",

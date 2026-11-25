@@ -14,6 +14,8 @@ Clip clips[kCueCount];
 bool muted = false, available = false,gameplayPaused141=false;
 bool landingsEnabled = true;
 uint8_t volume = 26;
+constexpr uint8_t kVolumePreviewChannel = 0;
+bool volumePreviewActive = false;
 uint8_t gainMagnification = 0;
 AudioDiagnostics diagnostics = {0, 0, 0, AudioCue::Count, AudioResult::None, 0, 0, 0, 0};
 constexpr size_t kPendingCapacity=4;
@@ -43,11 +45,35 @@ bool completionFencePending=false;uint32_t completionFenceTicket=0,completionClo
 void clearLandings(){diagnostics.pending-=landingPendingCount;landingPendingCount=0;landingHasPlayed=false;}
 void clearPending(){pendingCount[0]=pendingCount[1]=0;landingPendingCount=0;landingHasPlayed=false;diagnostics.pending=0;}
 
+void applyOutputVolume() {
+  M5.Speaker.setVolume(muted ? 0 : volumePreviewActive ? 255 : volume);
+}
+
+void finishVolumePreview() {
+  if (!volumePreviewActive) return;
+  volumePreviewActive = false;
+  applyOutputVolume();
+  if (M5.Speaker.isPlaying(kVolumePreviewChannel)) M5.Speaker.stop(kVolumePreviewChannel);
+}
+
+void interruptCuePlayback() {
+  // The visual window still owns the completion. Its next update can resume
+  // from the current offset after mute or an audition interrupts the speaker.
+  completionDelivered = false;
+  completionFencePending = false;
+  finishVolumePreview();
+  clearPending();
+  if (available) for (uint8_t channel = 0; channel < 8; ++channel) {
+    if (channel != 6) M5.Speaker.stop(channel);
+  }
+}
 
 uint8_t channelFor(AudioCue cue) {
   switch (cue) {
     case AudioCue::SpinClick:
-    case AudioCue::ReelSpin: return 0;
+    case AudioCue::ReelSpin:
+    case AudioCue::Selection: return 0;
+    case AudioCue::VolumePreview: return kVolumePreviewChannel;
     case AudioCue::ReelStop:
     case AudioCue::PhoenixLand:
     case AudioCue::PhoenixFollow:
@@ -99,12 +125,37 @@ bool queueNative(AudioCue cue,uint32_t repeat,bool replace,uint32_t offset=0) {
   // Match the previous180/255 streamed-lane level without changing the
   // original PCM. Other protected stingers retain their full channel gain.
   if(channel==4)M5.Speaker.setChannelVolume(4,cue==AudioCue::CollectedComplete?180:255);
+  const bool preview=cue==AudioCue::VolumePreview;
+  if(preview){
+    // The startup click uses fixed loudness. Never boost a voice already
+    // playing on another channel when an audition is active.
+    for(uint8_t other=1;other<8;++other){
+      if(M5.Speaker.isPlaying(other)){finishVolumePreview();return false;}
+    }
+    volumePreviewActive=true;
+    applyOutputVolume();
+  }else finishVolumePreview();
   const uint32_t submittedAt=micros();
   const bool queued=M5.Speaker.playRaw(samples,count,clip.rate,false,repeat,channel,replace);
+  if(preview&&!queued)finishVolumePreview();
   if(isLanding(cue))landingTiming.maxSubmitUs=std::max(landingTiming.maxSubmitUs,uint32_t(micros()-submittedAt));
   if(queued)++diagnostics.hardwareQueued;
   return queued;
 }
+
+void pumpProtectedCue(uint8_t queue, bool cashInOnly = false) {
+  if (!pendingCount[queue] || M5.Speaker.isPlaying(queue + 3)) return;
+  auto* const first = pending[queue];
+  auto* const end = first + pendingCount[queue];
+  auto* const next = cashInOnly
+      ? std::find_if(first, end, [](const Pending& entry) { return entry.cue == AudioCue::CashIn; })
+      : first;
+  if (next == end || !queueNative(next->cue, 1, false, next->offset)) return;
+  std::move(next + 1, end, next);
+  --pendingCount[queue];
+  --diagnostics.pending;
+}
+
 void pumpExclusiveCompletion(uint32_t nowMs);
 void pumpLandings(uint32_t nowMs){
  if(!available||muted||!landingPendingCount||
@@ -161,6 +212,7 @@ void pumpExclusiveCompletion(uint32_t nowMs){
 }
 
 void audioInit(bool value) {
+  finishVolumePreview();
   muted = value;gameplayPaused141=false;
   landingTiming={};
   completionActive=completionDelivered=false;completionElapsed=0;completionFencePending=false;completionClock=clockMs;
@@ -177,12 +229,13 @@ void audioInit(bool value) {
     M5.Speaker.config(config);
   }
   gainMagnification = config.magnification;
-  M5.Speaker.setVolume(muted ? 0 : volume);
+  applyOutputVolume();
   available = M5.Speaker.begin();
   // M5Unified squares both master and channel settings. The former160/255
   // landing gain attenuated Phoenix notes by8.1dB relative to feature stingers.
   // All four interchangeable landing voices now have equal full gain; cue
   // PCM envelopes determine their relative dynamics.
+  M5.Speaker.setChannelVolume(0, 255);
   M5.Speaker.setChannelVolume(1, 255);
   M5.Speaker.setChannelVolume(2, 255);
   M5.Speaker.setChannelVolume(3, 255);
@@ -193,13 +246,13 @@ void audioInit(bool value) {
 }
 void audioSetMuted(bool value) {
   muted = value;
-  M5.Speaker.setVolume(muted ? 0 : volume);
-  if(muted){clearPending();if(available)for(uint8_t channel=0;channel<8;++channel)if(channel!=6)M5.Speaker.stop(channel);}
+  applyOutputVolume();
+  if(muted)interruptCuePlayback();
   audioMusicRoute(musicTesting?musicTestPart:featureMusicScope,muted||(gameplayPaused141&&!musicTesting),musicTesting);
 }
 void audioSetGameplayPaused(bool paused){
  gameplayPaused141=paused;
- if(!paused){musicTesting=false;musicSuppressed=false;}
+ if(!paused){finishVolumePreview();musicTesting=false;musicSuppressed=false;}
  audioMusicRoute(musicTesting?musicTestPart:featureMusicScope,muted||(paused&&!musicTesting),musicTesting);
 }
 bool audioMuted() { return muted; }
@@ -221,7 +274,7 @@ void audioSetLandingsEnabled(bool value) {
 bool audioLandingsEnabled() { return landingsEnabled; }
 void audioSetVolume(uint8_t value) {
   volume = value;
-  M5.Speaker.setVolume(muted ? 0 : volume);
+  applyOutputVolume();
 }
 uint8_t audioVolume() { return volume; }
 uint8_t audioMusicOutputLevel(){return musicLevel;}
@@ -243,14 +296,14 @@ const char* audioResultName(AudioResult result) {
   }
   return "unknown";
 }
-void stopAuditionVoices141(){clearPending();if(available)for(uint8_t channel=0;channel<8;++channel)if(channel!=6)M5.Speaker.stop(channel);}
 bool audioTestJingle() {
-  stopAuditionVoices141();musicTesting=false;
+  interruptCuePlayback();musicTesting=false;
   musicSuppressUntil=clockMs+audioCueDurationMs(AudioCue::WisdomThreeStart)+500;
   musicSuppressed=true;
   return audioPlay(AudioCue::WisdomThreeStart);
 }
 void audioSetFeatureMusic(FeatureMusicPart part,bool beginAward){
+ if(part!=FeatureMusicPart::Off)finishVolumePreview();
  featureMusicScope=part;
  if(available&&!muted&&!gameplayPaused141&&!musicSuppressed&&!musicTesting&&!completionFencePending&&part!=FeatureMusicPart::Off){
   // Both programs begin with a scored attack. Preserve that opening and
@@ -275,8 +328,9 @@ void audioSetCompletionCue(bool active,uint32_t elapsed,bool finishHoldMusic){
  if(!completionActive||elapsed<completionElapsed){completionDelivered=false;completionFencePending=false;}
  completionActive=true;completionElapsed=elapsed;
  if(completionDelivered||!available||muted||gameplayPaused141||musicSuppressed||!audioCompletionReady())return;
- const auto& timedClip=clips[static_cast<size_t>(AudioCue::CollectedComplete)];
- if(uint64_t(elapsed)*timedClip.rate/1000>=timedClip.count){completionDelivered=true;completionFencePending=false;return;}
+ const auto& clip=clips[static_cast<size_t>(AudioCue::CollectedComplete)];
+ const uint64_t offset=uint64_t(elapsed)*clip.rate/1000;
+ if(offset>=clip.count){completionDelivered=true;completionFencePending=false;return;}
  // An already-triggered finite award keeps its existing protected tail.
  if(finishHoldMusic&&(completionFencePending||!audioMusicDiagnostics().finiteDraining)){
   if(!completionFencePending){
@@ -287,13 +341,14 @@ void audioSetCompletionCue(bool active,uint32_t elapsed,bool finishHoldMusic){
   completionClock=clockMs;completionFenceElapsed=elapsed;
   pumpExclusiveCompletion(clockMs);return;
  }
- const auto& clip=clips[static_cast<size_t>(AudioCue::CollectedComplete)];const uint64_t offset=uint64_t(elapsed)*clip.rate/1000;
- if(offset>=clip.count){completionDelivered=true;return;}
+ // Recheck the current visual offset on the next update if a stinger owns
+ // this voice. A deferred FIFO entry would retain an outdated offset.
+ if(M5.Speaker.isPlaying(4)||pendingCount[1])return;
  if(play(AudioCue::CollectedComplete,1,false,uint32_t(offset)))completionDelivered=true;
 }
-bool audioTestFeatureMusic(){if(!available||muted||!audioMusicDiagnostics().ready)return false;musicTestPart=FeatureMusicPart::Hold;musicTestUntil=clockMs+15000;musicTesting=true;musicSuppressed=false;return true;}
-bool audioTestTwinMusic(){if(!available||muted||!audioMusicDiagnostics().twinSourceReady)return false;stopAuditionVoices141();musicTestPart=FeatureMusicPart::TwinFree;musicTestUntil=clockMs+29000;musicTesting=true;musicSuppressed=false;return true;}
-bool audioTestAwardMusic(){if(!available||muted||!audioMusicDiagnostics().awardSourceReady)return false;stopAuditionVoices141();musicTestPart=FeatureMusicPart::BigAward;musicTestUntil=clockMs+8000;musicTesting=true;musicSuppressed=false;return true;}
+bool audioTestFeatureMusic(){if(!available||muted||!audioMusicDiagnostics().ready)return false;finishVolumePreview();musicTestPart=FeatureMusicPart::Hold;musicTestUntil=clockMs+15000;musicTesting=true;musicSuppressed=false;return true;}
+bool audioTestTwinMusic(){if(!available||muted||!audioMusicDiagnostics().twinSourceReady)return false;interruptCuePlayback();musicTestPart=FeatureMusicPart::TwinFree;musicTestUntil=clockMs+29000;musicTesting=true;musicSuppressed=false;return true;}
+bool audioTestAwardMusic(){if(!available||muted||!audioMusicDiagnostics().awardSourceReady)return false;interruptCuePlayback();musicTestPart=FeatureMusicPart::BigAward;musicTestUntil=clockMs+8000;musicTesting=true;musicSuppressed=false;return true;}
 size_t audioConfiguredCount() {
   size_t count = 0;
   for (const Clip& clip : clips) count += clip.samples && clip.count;
@@ -328,6 +383,7 @@ bool audioStartReels() {
 void audioStopReels() {}
 void audioUpdate(uint32_t nowMs) {
   clockMs=nowMs;
+  if(volumePreviewActive&&!M5.Speaker.isPlaying(kVolumePreviewChannel))finishVolumePreview();
   const uint32_t elapsed=nowMs-musicClock;musicClock=nowMs;
   if(musicTesting&&int32_t(nowMs-musicTestUntil)>=0)musicTesting=false;
   if(musicSuppressed&&int32_t(nowMs-musicSuppressUntil)>=0)musicSuppressed=false;
@@ -340,24 +396,22 @@ void audioUpdate(uint32_t nowMs) {
   audioMusicVolume(musicLevel);
   const bool paused=muted||(gameplayPaused141&&!musicTesting);
   audioMusicRoute(paused?featureMusicScope:wants?part:FeatureMusicPart::Off,paused,musicTesting);
-  if(gameplayPaused141&&!musicTesting)return;
   if(!available||muted)return;
+  if(gameplayPaused141&&!musicTesting){
+    // Funding can finish on a menu or the startup chooser. Let it confirm
+    // as soon as voice 4 is free while gameplay stingers stay paused.
+    pumpProtectedCue(1, true);
+    return;
+  }
   pumpExclusiveCompletion(nowMs);
   pumpLandings(nowMs);
-  for(uint8_t q=0;q<2;++q){
-    const uint8_t channel=q+3;
-    if(!pendingCount[q]||M5.Speaker.isPlaying(channel))continue;
-    const AudioCue cue=pending[q][0].cue;
-    // One producer, no occupied slot: native queue call cannot wait behind an
-    // infinite request. Retry this readied event next tick on transient fail.
-    if(!queueNative(cue,1,false,pending[q][0].offset))continue;
-    for(uint8_t n=1;n<pendingCount[q];++n)pending[q][n-1]=pending[q][n];
-    --pendingCount[q];--diagnostics.pending;
-  }
+  pumpProtectedCue(0);
+  pumpProtectedCue(1);
 }
 void audioStopCue(AudioCue cue) {
   if (available && static_cast<size_t>(cue) < kCueCount) {
     const auto channel=channelFor(cue);
+    if(channel==kVolumePreviewChannel&&volumePreviewActive){finishVolumePreview();return;}
     if(cue==AudioCue::CollectedComplete){completionFencePending=false;completionDelivered=true;}
     if(isLanding(cue)){clearLandings();for(uint8_t c:{1,2,5,7})M5.Speaker.stop(c);return;}
     if(channel==3||channel==4){diagnostics.pending-=pendingCount[channel-3];pendingCount[channel-3]=0;}
@@ -365,6 +419,7 @@ void audioStopCue(AudioCue cue) {
   }
 }
 void audioStop() {
+  finishVolumePreview();
   featureMusicScope=FeatureMusicPart::Off;
   completionDelivered=false;completionFencePending=false;
   audioMusicStop();musicTesting=false;musicLevel=0;musicGainQ8=0;audioMusicVolume(0); clearPending();if (available) M5.Speaker.stop(); }

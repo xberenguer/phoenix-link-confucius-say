@@ -9,7 +9,8 @@ enum class AudioCue : uint8_t {
   SpinClick, ReelSpin, ReelStop, Button, Win, PhoenixLand,
   FeatureStart, FeatureEnd, FeatureAnticipation,
   CountUp, MeterTrigger, FreeStart, HoldStart, BigWin, FreeEnd, CoinRain,
-  PhoenixFollow, CollectedComplete, PhoenixThird, CashIn, WisdomThreeStart, Count
+  PhoenixFollow, CollectedComplete, PhoenixThird, CashIn, WisdomThreeStart,
+  VolumePreview, Selection, Count
 };
 
 enum class AudioResult : uint8_t {
@@ -99,7 +100,7 @@ bool audioQueueLanding(AudioCue cue);
 // UI already controls their spacing. Busy voices retain the finite FIFO.
 bool audioQueueLanding(AudioCue cue,uint32_t nowMs);
 bool audioQueueLanding(AudioCue cue,uint32_t nowMs,uint32_t impactMs);
-// Stops1/2; Phoenix arrivals5/7; menu2; wins/countup3;
+// Volume preview/selection0; stops1/2; Phoenix arrivals5/7; menu2; wins/countup3;
 // bonus stingers4; independent full feature stream6.
 // Starts an action's landing scope; no continuous reel sound is submitted.
 bool audioStartReels();

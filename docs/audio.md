@@ -10,6 +10,7 @@ The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/
 
 | Event | Current routing |
 |---|---|
+| Denomination, line count, BET and voucher digit confirmed | Uses the first click from the existing reel-stop clip as selection feedback |
 | Reel motion | No reel-bed effect |
 | A reel/group impacts | Finite reel-stop or selected Phoenix-arrival family, with ordered pending tails |
 | Phoenix anticipation/arrival | Initial, Follow or Third family where the current landing selector qualifies it |
@@ -57,7 +58,7 @@ Opening a menu pauses the current feature and its music. Returning to the game c
 
 Hold grey → Settings → Sound provides master sound, a stops/landings switch, fine volume and test playback. Master mute covers cues and feature music.
 
-Sound starts at **10%**. Volume moves in 1% steps through the quiet 0–10% range, then 5% steps. It clamps at either end instead of wrapping a quiet setting to full volume. In the volume page, blue raises and grey lowers it.
+Sound starts at **10%**. On the first StickS3 denomination screen, hold grey to toggle between 10% and 100%. The shortcut briefly shows the percentage and plays the denomination click at the same level in both directions. Game audio uses the selected volume. In the separate volume menu, blue raises the volume and grey lowers it. The menu uses 1% steps through 10% and 5% steps above that, with limits at 0% and 100%.
 
 TEST FREE-GAMES INTRO auditions the Wisdom entry; TEST HOLD MUSIC auditions the Hold program; TEST AWARD JINGLE auditions the award program. An audition does not stake money or change the counter or outcome generator. Twin music also has a developer audition API.
 

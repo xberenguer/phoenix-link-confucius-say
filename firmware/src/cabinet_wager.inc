@@ -97,6 +97,11 @@ void drawCabinetWager(const CabinetWagerArtDeck&deck){
  fill(0,0,W,H,BLACK);
  if(cabinetDenominationPage146){
   image(cabinet_selection146::denomination,0,0);
+  if(bootVolumeShortcut&&bootVolumeIndicatorAt){
+   const auto level=integer(volumePercent())+"%";
+   text(level.c_str(),W-3,5,9,BLACK,2);
+   text(level.c_str(),W-4,4,9,WHITE,2);
+  }
   if(!startupWager160){cabinetButtonFace(184,4,50,16,false,false);cabinetCaption("RETURN",209,8,8,WHITE);}
   fill(3,103,234,31,0x1800);rect(3,103,234,31,GOLD);rect(4,104,232,29,0xb341);
   for(int y=105;y<132;++y)for(int x=5;x<235;++x)if(((x+y)%8)==0)dot(x,y,0x4800);
