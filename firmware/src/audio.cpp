@@ -72,8 +72,7 @@ uint8_t channelFor(AudioCue cue) {
   switch (cue) {
     case AudioCue::SpinClick:
     case AudioCue::ReelSpin:
-    case AudioCue::Selection:
-    case AudioCue::WisdomGong: return 0;
+    case AudioCue::Selection: return 0;
     case AudioCue::VolumePreview: return kVolumePreviewChannel;
     case AudioCue::ReelStop:
     case AudioCue::PhoenixLand:
@@ -301,8 +300,6 @@ bool audioTestJingle() {
   interruptCuePlayback();musicTesting=false;
   musicSuppressUntil=clockMs+audioCueDurationMs(AudioCue::WisdomThreeStart)+500;
   musicSuppressed=true;
-  // The announcement has a silent lead; play the gong on its own voice.
-  audioPlay(AudioCue::WisdomGong);
   return audioPlay(AudioCue::WisdomThreeStart);
 }
 void audioSetFeatureMusic(FeatureMusicPart part,bool beginAward){

@@ -1,11 +1,11 @@
 {
-  "source_version": "0.2.176",
+  "source_version": "0.2.177",
   "engine_model": "0x00020020",
   "model_label": "W:1887 boundary / retained Grand prices",
   "source_engine_sha256": "0b07784e0bad56f30b2f3fa0a8c50ab36a35f0be364818c95829eebe46a22ff2",
   "source_cabinet_profile_sha256": "af3599df21043ef3fcd1b2c88a1bae41bd9a30de6f629fdabab8cf211da1b6e0",
-  "source_build_version_sha256": "a406e224dddb3c3c9e37ad60a1035019b582aaf1e954a6a4df2f142464211a01",
-  "source_runtime_identity_sha256": "429ab800cd6f90ba2ffdc9eab550cc24f723a41590d28c4f03f2bf9a4251a038",
+  "source_build_version_sha256": "520a6f365a5de04e5466552b78eec93dd072deff265afeb6e1e53618f496c537",
+  "source_runtime_identity_sha256": "4aebc7a48a560154ca67269a1197ee6c3d770c3b6d98cb27bbd744a37793e419",
   "source_static_grand_table_sha256": "1af0666d0d46a54580d866799be660f0e75c0c386a3b61fd4f63a9c8c9deaef6",
   "exporter_sha256": "d29582df3e5d5f6e93edb76e77e28008488926801fcb2ebcb14dbbc1761c5300",
   "scope": "Current compiled local simulator reference, not recovered casino PAR. 780 internal evaluator profiles, 55 standard menu offers and22 high-limit offers. Price and geometry observations retain their scoped evidence; unobserved profiles remain local.",
@@ -39,7 +39,7 @@
   "status": "Current compiled implementation; Engine-derived datasets include both exposed menu decks.",
   "no_personal_state_or_device_identifiers": true,
   "source_qualification": "Engineering source binding; ideal-uniform fixed-profile/default-jackpot/funded/no-Lucky full-cycle references are separate from casino calibration, physical entropy quality and finite runtime/source failure.",
-  "runtime_fingerprint": "1d03bbb3f1278474d99a2e5be162da91eff94c3e55d27a540800dd5778d2fe74",
+  "runtime_fingerprint": "76ea8278bc779b663fd1dea1ef23654de3e64a27ab3ec3e995dea54a13c3fe2a",
   "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
   "geometry_matches_by_line_count": {
     "5": 1,

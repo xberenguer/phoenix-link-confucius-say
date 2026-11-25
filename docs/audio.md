@@ -17,8 +17,7 @@ The [audio API](../firmware/src/audio.h), [registered cue bank](../firmware/src/
 | Awarded Confucius/Sage win | Scoped win cue; no generic flourish on every winning or stopped reel |
 | Cash added | Dedicated cash-in cue |
 | A Phoenix amount is collected | Collection/count-up cue tied to the pickup event |
-| Third Wisdom lands on an initial Free Games trigger | Synthesized gong as the reel with the third Wisdom settles |
-| Three-Wisdom initial entry | Original 7.12-second fanfare after the last reel settles |
+| Three-Wisdom initial entry | Dedicated measured 7.12-second announcement cue |
 
 The Phoenix families are **not** a random rising scale and not simply one note for every Phoenix. Current selection examines which presented reel group contains arrivals, how many Phoenixes have already appeared and whether the natural trigger remains possible. The Third-family branch is limited to separately presented ordinary columns; quick-stop/coalesced, Twin and Hold cases retain their scoped behavior. This logic remains a partial reconstruction, not a recovered original event table. See [landing_cues.h](../firmware/src/landing_cues.h).
 
@@ -61,13 +60,13 @@ Hold grey → Settings → Sound provides master sound, a stops/landings switch,
 
 Sound starts at **10%**. On the first denomination screen on StickS3 or in the browser, hold grey to toggle between 10% and 100%. The shortcut briefly shows the percentage and plays the denomination click at the same level in both directions. Game audio uses the selected volume. In the separate volume menu, blue raises the volume and grey lowers it. The menu uses 1% steps through 10% and 5% steps above that, with limits at 0% and 100%.
 
-TEST FREE-GAMES INTRO auditions the Wisdom gong and fanfare; TEST HOLD MUSIC auditions the Hold program; TEST AWARD JINGLE auditions the award program. An audition does not stake money or change the counter or outcome generator. Twin music also has a developer audition API.
+TEST FREE-GAMES INTRO auditions the Wisdom entry; TEST HOLD MUSIC auditions the Hold program; TEST AWARD JINGLE auditions the award program. An audition does not stake money or change the counter or outcome generator. Twin music also has a developer audition API.
 
 ## Bank and playback checks
 
 The initial Phoenix arrival cues are synthesized from analytic recipes. Backend tests check that landing sounds finish playing. MP3 completion/award music and Twin PCM have separate cache and decoder checks.
 
-The [Three-Wisdom announcement generator](../tools/generate_wisdom_intro.py) renders the gong and fanfare from oscillators. The fanfare has a short silent lead so the gong is heard first even after a quick-stop. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation.
+Initial three-Wisdom entry uses its dedicated cue. Some retrigger/delayed-Free branches use a separate reconstructed FreeStart; their exact original melody and timing remain under investigation.
 
 ## Remaining work
 

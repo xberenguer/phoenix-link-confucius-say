@@ -2194,26 +2194,6 @@ bool initialWisdomAward30(){
  return p.valid&&p.hasSpinResult&&p.paidSpin&&!p.freeSpin&&p.freeAwarded&&p.freeAwardedCount==6&&p.scatterCount==3&&
         pendingFree&&!pendingHold&&!p.holdEntered&&!p.holdSettled&&!p.grandAwarded&&!p.revived&&engine.state.mode!=Mode::Hold&&!spinAward.pending;
 }
-void scheduleWisdomGong30(unsigned first, unsigned last, uint32_t impact) {
- if(!initialWisdomAward30())return;
- const unsigned scatters=engine.presentation.scatterMask;
- const unsigned before=(1u<<(first*3))-1;
- const unsigned through=(1u<<((last+1)*3))-1;
- // The last Wisdom is in this group only if it reveals a scatter and
- // leaves none hidden. Earlier reels have a brief recoil before the strike.
- if((scatters&(through^before))&&!(scatters&~through)){
-  constexpr uint32_t earlyReelSettlingMs=180;
-  wisdomEntry30.gongAt=impact+(last<4?earlyReelSettlingMs:0);
-  wisdomEntry30.gongPending=true;
- }
-}
-void updateWisdomGong30(uint32_t now) {
- if(!wisdomEntry30.gongPending||(!spinQuickStopped&&int32_t(now-wisdomEntry30.gongAt)<0))return;
- wisdomEntry30.gongPending=false;
-#if !defined(UI_HOST_TEST) || defined(UI_WISDOM_BACKEND_TEST)
- if(audioLandingsEnabled())audioPlay(AudioCue::WisdomGong);
-#endif
-}
 bool playWisdomStart87(uint32_t now){
  if(wisdomEntry30.cueStarted)return true;
 #if !defined(UI_HOST_TEST) || defined(UI_WISDOM_BACKEND_TEST)
@@ -2974,12 +2954,10 @@ void uiFrame(){if(initialized&&startupWager160&&view==View::Game&&phase==Phase::
    else if(tone==landing_cues::Tone::Follow)cuePhoenix(true,impact);
    else if(tone==landing_cues::Tone::Third)cuePhoenix(tone,impact);
    else if(tone==landing_cues::Tone::Stop)cueStop(impact);
-   scheduleWisdomGong30(first,last,impact);
    dirty=true; // present the corresponding stop in this same frame
    lastArrived=last;first=last+1;
   }
  }
-  updateWisdomGong30(now);
   updateWisdomStart87(now);
   if(winCuePending&&!landingAudioBusy()){winCuePending=false;cueWin();}
   if(phase!=Phase::Ready&&phase!=Phase::SpinAward&&now-phaseAt>=phaseMs&&

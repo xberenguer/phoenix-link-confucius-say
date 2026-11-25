@@ -1,5 +1,10 @@
 # Release notes
 
+## 0.2.177
+
+- Restored the original project Three-Wisdom cue and trigger timing from 0.2.174.
+- Removed the later synthesized gong and fanfare from that sequence.
+
 ## 0.2.176
 
 - Added a synthesized gong to the reel landing that reveals the third Wisdom on an initial Free Games trigger.
