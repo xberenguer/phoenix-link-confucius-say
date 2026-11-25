@@ -1,10 +1,10 @@
 {
-  "version": "0.2.175",
-  "runtime_fingerprint": "95d1ffaa1dd911a82b4c57e0185f706d662ceee178127963df9e2028d837ab46",
+  "version": "0.2.176",
+  "runtime_fingerprint": "1d03bbb3f1278474d99a2e5be162da91eff94c3e55d27a540800dd5778d2fe74",
   "mathematical_family": "d49b86d78a20752cfe5093920be00d8ed862c6ccad56a6620d142c76caae4737",
   "local_model": "0x00020020",
-  "source_body_files": 176,
-  "source_total_files": 179,
+  "source_body_files": 177,
+  "source_total_files": 180,
   "source_acceptance": "Engineering qualification; no gaming-laboratory or Nevada approval",
   "original_casino_calibration": false,
   "actual_CSPRNG_infinite_horizon_return_qualified": false,
@@ -23,14 +23,15 @@
     "phoenix_atlas.zlib"
   ],
   "native_validation": "StickS3 firmware compiled and setup audio passed the host harness. Device flash and physical speaker output remain unverified for this build.",
-  "browser_version": "0.2.175",
-  "native_status_version": "0.2.175",
+  "browser_version": "0.2.176",
+  "native_status_version": "0.2.176",
   "repository": "https://github.com/xberenguer/phoenix-link-confucius-say",
   "browser_url": "https://xberenguer.github.io/phoenix-link-confucius-say/",
-  "status": "Clean synthesized Three-Wisdom announcement",
+  "status": "Three-Wisdom gong and clean fanfare",
   "changes": [
-    "Replaced both sections of the Three-Wisdom announcement with clean original synthesis.",
-    "Kept the 7.12-second duration, reel timing and feature-entry sequence."
+    "Added a synthesized gong to the reel landing that reveals the third Wisdom on an initial Free Games trigger.",
+    "Added an original plucked-string and reed fanfare after the last reel. Its silent lead lets the gong be heard first even on a quick-stop.",
+    "The Sound menu auditions both parts together."
   ],
   "native_images": {
     "feature-assets.bin": {
@@ -38,12 +39,12 @@
       "sha256": "acffb4e8b392321bf4767b679ed6a9a6fed95a41777524fa29bf510c92564181"
     },
     "phoenix-confucius-sticks3.bin": {
-      "bytes": 6477392,
-      "sha256": "c6bfc6013e8c4b12a744e35dcb0f26c771119dd933f61b1679dd4f8b42d600b7"
+      "bytes": 6521648,
+      "sha256": "1e8d50206f6e759e04cd02e5869bbe04a5e286b5384ba5f34e113e0f594da1db"
     },
     "phoenix-confucius-app.bin": {
-      "bytes": 6411856,
-      "sha256": "a40905f526581f6816173a54d2210c1eb37b559b4e0e2456824c5d2bc18e3c7f"
+      "bytes": 6456112,
+      "sha256": "26ec383a32b24a3e1c282cc8276f486caff88fb095ec2abca211182b960ba79a"
     }
   },
   "validation": {

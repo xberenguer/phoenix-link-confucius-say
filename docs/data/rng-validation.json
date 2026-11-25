@@ -1,6 +1,6 @@
 {
-  "version": "0.2.175",
-  "runtime_fingerprint": "95d1ffaa1dd911a82b4c57e0185f706d662ceee178127963df9e2028d837ab46",
+  "version": "0.2.176",
+  "runtime_fingerprint": "1d03bbb3f1278474d99a2e5be162da91eff94c3e55d27a540800dd5778d2fe74",
   "algorithm": "AES-256 CTR-DRBG",
   "backend": "Mbed TLS3.6.7 minimal private-symbol subset",
   "prediction_resistance": true,
@@ -32,7 +32,7 @@
     "flash_readback": false,
     "healthy_startup": false,
     "physical_entropy_strength_measured": false,
-    "validation_scope": "0.2.175 passed the StickS3 target build and software checks. Physical-device entropy and speaker output were not tested on this build."
+    "validation_scope": "0.2.176 passed the StickS3 target build and software checks. Physical-device entropy and speaker output were not tested on this build."
   },
   "casino_calibrated": false,
   "Nevada_approved": false,

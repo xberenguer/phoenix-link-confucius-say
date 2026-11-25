@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.2.176
+
+- Added a synthesized gong to the reel landing that reveals the third Wisdom on an initial Free Games trigger.
+- Added an original plucked-string and reed fanfare after the last reel. Its silent lead lets the gong be heard first even on a quick-stop.
+- The Sound menu auditions both parts together.
+
 ## 0.2.175
 
 - Replaced both sections of the Three-Wisdom announcement with clean original synthesis.

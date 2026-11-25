@@ -23559,6 +23559,7 @@ alignas(4) const int16_t k_coin_rain[]={
 };
 #include "audio_third_generated.inc"
 #include "audio_cash_in_generated.inc"
+#include "audio_wisdom_gong_generated.inc"
 #include "audio_wisdom_three_start_generated.inc"
 // Keep the first impact's attack and taper both cuts to zero. The longer
 // reel-stop clip retains its natural lead-in and decay.
@@ -23597,6 +23598,8 @@ count+=audioRegister(AudioCue::BigWin,k_big_win,44100,22050);
 count+=audioRegister(AudioCue::FreeEnd,k_free_end,52920,22050);
 count+=audioRegister(AudioCue::CoinRain,k_coin_rain,18742,22050);
 count+=audioRegister(AudioCue::CashIn,k_cash_in,15876,22050);
+static_assert(std::size(k_wisdom_gong)==22050);
+count+=audioRegister(AudioCue::WisdomGong,k_wisdom_gong,std::size(k_wisdom_gong),22050);
 static_assert(std::size(k_wisdom_three_start)==156996);
 count+=audioRegister(AudioCue::WisdomThreeStart,k_wisdom_three_start,std::size(k_wisdom_three_start),22050);
 return count;}
