@@ -26,9 +26,12 @@ jobs:
     if: github.event_name != 'release' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
+      actions: read
       contents: read
       pages: write
       id-token: write
+    env:
+      PAGES_ARTIFACT_NAME: github-pages-${{ github.run_attempt }}
     concurrency:
       group: pages
       cancel-in-progress: false
@@ -130,8 +133,31 @@ jobs:
           PY
       - uses: actions/upload-pages-artifact@v4
         if: steps.live.outputs.matches != 'true'
+        id: upload
         with:
+          name: ${{ env.PAGES_ARTIFACT_NAME }}
           path: demo
+      - name: Wait for Pages artifact registration
+        if: steps.live.outputs.matches != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_ARTIFACT_ID: ${{ steps.upload.outputs.artifact_id }}
+        run: |
+          test -n "$EXPECTED_ARTIFACT_ID"
+          endpoint="repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts?name=$PAGES_ARTIFACT_NAME"
+          for attempt in {1..12}; do
+            if artifact_id=$(gh api "$endpoint" --jq '.artifacts[] | select(.expired == false) | .id') &&
+                [ "$artifact_id" = "$EXPECTED_ARTIFACT_ID" ]; then
+              # Pages looks up artifacts through a separate API.
+              sleep 5
+              exit 0
+            fi
+            sleep 3
+          done
+          echo 'GitHub did not register the uploaded Pages artifact in time.' >&2
+          exit 1
       - uses: actions/deploy-pages@v4
         if: steps.live.outputs.matches != 'true'
         id: deployment
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}
